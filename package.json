@@ -1,0 +1,27 @@
+{
+  "name": "zeelib",
+  "description": "My own little micro library thing.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Zac Anger",
+    "email": "zac@zacanger.com",
+    "url": "http://zacanger.com"
+  },
+  "license": "WTFPL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "homepage": "https://github.com/zacanger/zeelib#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/zeelib.git"
+  },
+  "bugs": "https://github.com/zacanger/zeelib/issues",
+  "keywords": [
+    "library",
+    "utils"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
