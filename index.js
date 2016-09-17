@@ -2,14 +2,14 @@
 // just a bunch of utils really
 // some stuff that's basically polyfills-ish
 // needs node (there's fs stuff, etc.)
-// forked/yoinked/modified from gh:nervgh/yum.js,
-// gh:shapeshed/stringbean (cleaned up & modernized)
-// and also a fair few of my own.
-const
-  fs   = require('fs')
-, util = require('util')
-, os   = require('os')
-, { execFile } = require('child_process')
+// some is modded stuff from:
+// gh:nervgh/yum.js,
+// gh:shapeshed/stringbean
+
+const fs = require('fs')
+const util = require('util')
+const os = require('os')
+const { execFile } = require('child_process')
 
 // returns true if val is NaN
 export const isNaN = Number.isNaN
