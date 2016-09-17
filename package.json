@@ -8,9 +8,9 @@
     "url": "http://zacanger.com"
   },
   "license": "WTFPL",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index"
+    "prepublish": "babel --presets babel-preset-es2017 src/index.js --out-file dist/index.js"
   },
   "homepage": "https://github.com/zacanger/zeelib#readme",
   "repository": {
@@ -23,5 +23,9 @@
     "utils"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2017": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0"
+  }
 }

@@ -6,10 +6,10 @@
 // gh:nervgh/yum.js,
 // gh:shapeshed/stringbean
 
-const fs = require('fs')
-const util = require('util')
-const os = require('os')
-const { execFile } = require('child_process')
+import fs from 'fs'
+import util from 'util'
+import os from 'os'
+import { execFile } from 'child_process'
 
 // returns true if val is NaN
 export const isNaN = Number.isNaN
@@ -269,7 +269,7 @@ export const trimSpaces = color =>
 
 // takes string colour, returns bool
 export const isHexBased = color =>
-hex.text(color)
+  hex.text(color)
 
 // takes string colour, returns bool
 export const isValidHex = color =>
