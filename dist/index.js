@@ -1,6 +1,11 @@
-var _this = this;
+'use strict';
 
-// a little kinda lib thingy idk
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.withInfo = exports.throwError = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.Po2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
 // just a bunch of utils really
 // some stuff that's basically polyfills-ish
 // needs node (there's fs stuff, etc.)
@@ -8,37 +13,65 @@ var _this = this;
 // gh:nervgh/yum.js,
 // gh:shapeshed/stringbean
 
-import fs from 'fs';
-import util from 'util';
-import os from 'os';
-import { execFile } from 'child_process';
+exports.greatestCommonDivisor = greatestCommonDivisor;
+exports.leastCommonMultiple = leastCommonMultiple;
+exports.rot13 = rot13;
+exports.isType = isType;
+exports.tryExecNTimes = tryExecNTimes;
+exports.logWithTimestamp = logWithTimestamp;
+
+var _fs = require('fs');
+
+var _fs2 = _interopRequireDefault(_fs);
+
+var _util = require('util');
+
+var _util2 = _interopRequireDefault(_util);
+
+var _os = require('os');
+
+var _os2 = _interopRequireDefault(_os);
+
+var _child_process = require('child_process');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 // returns true if val is NaN
-export const isNaN = Number.isNaN;
+var isNaN = exports.isNaN = Number.isNaN;
 
 // returns true if val is num
-export const isNumber = v => typeof v === 'number' && isNaN(v);
+var isNumber = exports.isNumber = function isNumber(v) {
+  return typeof v === 'number' && isNaN(v);
+};
 
 // returns true if num is int
-export const isInteger = Number.isInteger || function (n) {
+var isInteger = exports.isInteger = Number.isInteger || function (n) {
   return (n | 0) === n;
 };
 
 // returns true if num is float
-export const isFloat = n => (n | 0) !== n;
+var isFloat = exports.isFloat = function isFloat(n) {
+  return (n | 0) !== n;
+};
 
 // returns true if num is odd
-export const isOdd = n => (n & 1) !== 0;
+var isOdd = exports.isOdd = function isOdd(n) {
+  return (n & 1) !== 0;
+};
 
 // returns true if num is even
-export const isEven = n => (n & 1) === 0;
+var isEven = exports.isEven = function isEven(n) {
+  return (n & 1) === 0;
+};
 
 // returns greatest common divisor
-export function greatestCommonDivisor() {
-  let i = arguments.length;
-  let a = arguments[--i];
+function greatestCommonDivisor() {
+  var i = arguments.length;
+  var a = arguments[--i];
   while (a && i) {
-    let b = arguments[--i];
+    var b = arguments[--i];
     while (b) {
       var c = a % b;
       a = b;
@@ -49,24 +82,26 @@ export function greatestCommonDivisor() {
 }
 
 // returns least common multiple
-export function leastCommonMultiple() {
-  let i = arguments.length;
-  let a = arguments[--i];
+function leastCommonMultiple() {
+  var i = arguments.length;
+  var a = arguments[--i];
   while (a && i) {
-    let b = arguments[--i];
+    var b = arguments[--i];
     a = a * b / greatestCommonDivisor(a, b);
   }
   return a;
 }
 
 // returns true if val is obj
-export const isObject = v => objToString.call(v) === '[object Object]';
+var isObject = exports.isObject = function isObject(v) {
+  return objToString.call(v) === '[object Object]';
+};
 
 // toString
-export const objToString = Object.prototype.toString;
+var objToString = exports.objToString = Object.prototype.toString;
 
 // compares params by val
-export const isEqualObj = (a, b) => {
+var isEqualObj = exports.isEqualObj = function isEqualObj(a, b) {
   if (a === b) {
     return true;
   }
@@ -74,9 +109,9 @@ export const isEqualObj = (a, b) => {
 };
 
 // clones object
-export const objClone = obj => {
+var objClone = exports.objClone = function objClone(obj) {
   // Number, String, Boolean, Function, null, undefined
-  if (obj === null || typeof obj !== 'object') {
+  if (obj === null || (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object') {
     return obj;
   }
 
@@ -85,19 +120,19 @@ export const objClone = obj => {
     return new obj.constructor(obj);
     // Array and Object
   } else {
-    let copy = isArray(obj) ? [] : Object.create(Object.getPrototypeOf(obj));
-    for (let key in obj) {
+    var _copy = isArray(obj) ? [] : Object.create(Object.getPrototypeOf(obj));
+    for (var key in obj) {
       if (obj.hasOwnProperty(key)) {
-        copy[key] = _this.clone(obj[key]);
+        _copy[key] = undefined.clone(obj[key]);
       }
     }
-    return copy;
+    return _copy;
   }
 };
 
 // copy vals of all enumerable own properties from source obj to target obj
-export const objAssign = Object.assign || function (target, source) {
-  for (let key in source) {
+var objAssign = exports.objAssign = Object.assign || function (target, source) {
+  for (var key in source) {
     if (source.hasOwnProperty(key)) {
       target[key] = source[key];
     }
@@ -106,10 +141,10 @@ export const objAssign = Object.assign || function (target, source) {
 };
 
 // inherits target by source
-export const objInherit = (target, source) => {
+var objInherit = exports.objInherit = function objInherit(target, source) {
   target.super_ = source;
   target.prototype = Object.create(target.super_.prototype);
-  let descriptor = objClone(target.super_.descriptor) || {};
+  var descriptor = objClone(target.super_.descriptor) || {};
   descriptor.constructor = {
     value: target,
     enumerable: false,
@@ -120,153 +155,203 @@ export const objInherit = (target, source) => {
 };
 
 // returns true if val is bool
-export const isBoolean = v => typeof v === 'boolean';
+var isBoolean = exports.isBoolean = function isBoolean(v) {
+  return typeof v === 'boolean';
+};
 
 // returns true if val is str
-export const isString = v => typeof v === 'string';
+var isString = exports.isString = function isString(v) {
+  return typeof v === 'string';
+};
 
 // returns true if val is date
-export const isDate = v => objToString.call(v) === '[object Date]';
+var isDate = exports.isDate = function isDate(v) {
+  return objToString.call(v) === '[object Date]';
+};
 
 // returns true if val is regex
-export const isRegExp = v => objToString.call(v) === '[object RegExp]';
+var isRegExp = exports.isRegExp = function isRegExp(v) {
+  return objToString.call(v) === '[object RegExp]';
+};
 
 // returns true if val is arr
-export const isArray = Array.isArray || function (v) {
+var isArray = exports.isArray = Array.isArray || function (v) {
   return objToString.call(v) === '[object Array]';
 };
 
-export const isArrayLike = v => v && isNumber(v.length);
+var isArrayLike = exports.isArrayLike = function isArrayLike(v) {
+  return v && isNumber(v.length);
+};
 
 // returns true if val is fn
-export const isFunction = v => typeof v === 'function';
+var isFunction = exports.isFunction = function isFunction(v) {
+  return typeof v === 'function';
+};
 
 // these don't go extending stuff
 
 // deepcopy obj
-export const deepCopy = o => {
-  let newObj;
-  if (!o || typeof o !== 'object') {
+var deepCopy = exports.deepCopy = function deepCopy(o) {
+  var newObj = void 0;
+  if (!o || (typeof o === 'undefined' ? 'undefined' : _typeof(o)) !== 'object') {
     return o;
   }
   if (isArray(o)) {
-    return o.map(it => deepCopy(it));
+    return o.map(function (it) {
+      return deepCopy(it);
+    });
   }
   newObj = {};
-  Object.keys(o).forEach(prop => {
+  Object.keys(o).forEach(function (prop) {
     newObj[prop] = deepCopy(o[prop]);
   });
   return newObj;
 };
 
 // shallow copy (top level)
-export const shallowCopy = o => {
-  let newObj;
-  if (!o || typeof o !== 'object') {
+var shallowCopy = exports.shallowCopy = function shallowCopy(o) {
+  var newObj = void 0;
+  if (!o || (typeof o === 'undefined' ? 'undefined' : _typeof(o)) !== 'object') {
     return o;
   }
   if (isArray(o)) {
     return o.slice(0);
   }
   newObj = {};
-  Object.keys(o).forEach(prop => {
+  Object.keys(o).forEach(function (prop) {
     newObj[prop] = o[prop];
   });
   return newObj;
 };
 
 // copy obj, either shallow or deep
-export const copy = (o, shallow) => {
-  let copyfn = shallow ? shallowCopy : deepCopy;
+var copy = exports.copy = function copy(o, shallow) {
+  var copyfn = shallow ? shallowCopy : deepCopy;
   return copyfn(o);
 };
 // returns true if val is primitive
-export const isPrimitive = v => {
+var isPrimitive = exports.isPrimitive = function isPrimitive(v) {
   if (v === null) {
     return true;
   }
-  const t = typeof v;
+  var t = typeof v === 'undefined' ? 'undefined' : _typeof(v);
   return t !== 'object' && t !== 'function';
 };
 
 // returns true if val is null
-export const isNull = v => v === null;
+var isNull = exports.isNull = function isNull(v) {
+  return v === null;
+};
 
 // returns true if val is undefined
-export const isUndefined = v => v === undefined;
+var isUndefined = exports.isUndefined = function isUndefined(v) {
+  return v === undefined;
+};
 
 // returns true if val is defined
-export const isDefined = v => v !== undefined;
+var isDefined = exports.isDefined = function isDefined(v) {
+  return v !== undefined;
+};
 
 // returns true if val is DOM el
-export const isElement = v => objToString.call(v).slice(8, 12) === 'HTML';
+var isElement = exports.isElement = function isElement(v) {
+  return objToString.call(v).slice(8, 12) === 'HTML';
+};
 
 // escapes html
-export const escapeHTML = str => str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+var escapeHTML = exports.escapeHTML = function escapeHTML(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
 
 // unescapes escaped html
-export const unescapeHTML = str => str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+var unescapeHTML = exports.unescapeHTML = function unescapeHTML(str) {
+  return str.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+};
 
 // removes non-alphabetic chars
-export const removeAlpha = str => str.replace(/[^A-Za-z ]+/g, '');
+var removeAlpha = exports.removeAlpha = function removeAlpha(str) {
+  return str.replace(/[^A-Za-z ]+/g, '');
+};
 
 // removes non-alpha-numeric chars
-export const removeNonAlphanumeric = str => str.replace(/[^A-Za-z0-9 ]+/g, '');
+var removeNonAlphanumeric = exports.removeNonAlphanumeric = function removeNonAlphanumeric(str) {
+  return str.replace(/[^A-Za-z0-9 ]+/g, '');
+};
 
 // removes non-numeric chars
-export const removeNonNumeric = str => str.replace(/[^0-9-.]/g, '');
+var removeNonNumeric = exports.removeNonNumeric = function removeNonNumeric(str) {
+  return str.replace(/[^0-9-.]/g, '');
+};
 
 // removes numeric chars
-export const removeNumeric = str => str.replace(/[0-9]/g, '');
+var removeNumeric = exports.removeNumeric = function removeNumeric(str) {
+  return str.replace(/[0-9]/g, '');
+};
 
 // base64 encodes
-export const base64Encode = str => new Buffer(str).toString('base64');
+var base64Encode = exports.base64Encode = function base64Encode(str) {
+  return new Buffer(str).toString('base64');
+};
 
 // base64 decodes
-export const base64Decode = str => new Buffer(str, 'base64').toString('utf8');
+var base64Decode = exports.base64Decode = function base64Decode(str) {
+  return new Buffer(str, 'base64').toString('utf8');
+};
 
 // capitalizes first char
-export const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+var capitalize = exports.capitalize = function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
 // colour utilities
-export const hex = /^#?[a-f0-9]{3}|[a-f0-9]{6}$/i;
+var hex = exports.hex = /^#?[a-f0-9]{3}|[a-f0-9]{6}$/i;
 
 // takes string colour, returns string
-export const trimHash = color => typeof color === 'string' ? color.replace('#', '') : color;
+var trimHash = exports.trimHash = function trimHash(color) {
+  return typeof color === 'string' ? color.replace('#', '') : color;
+};
 
 // takes string colour, returns string
-export const trimSpaces = color => typeof color === 'string' ? color.replace(/\s/g, '') : color;
+var trimSpaces = exports.trimSpaces = function trimSpaces(color) {
+  return typeof color === 'string' ? color.replace(/\s/g, '') : color;
+};
 
 // takes string colour, returns bool
-export const isHexBased = color => hex.text(color);
+var isHexBased = exports.isHexBased = function isHexBased(color) {
+  return hex.text(color);
+};
 
 // takes string colour, returns bool
-export const isValidHex = color => isHexBased(trimSpaces(color));
+var isValidHex = exports.isValidHex = function isValidHex(color) {
+  return isHexBased(trimSpaces(color));
+};
 
 // takes string colour, returns either string or null
-export const normalizeColor = color => {
-  let nextColor = trimSpaces(color);
+var normalizeColor = exports.normalizeColor = function normalizeColor(color) {
+  var nextColor = trimSpaces(color);
   if (!isHexBased(color)) {
     return null;
   }
   nextColor = trimHash(nextColor);
   if (nextColor.length === 3) {
-    nextColor = nextColor.replace(/./g, d => d + d);
+    nextColor = nextColor.replace(/./g, function (d) {
+      return d + d;
+    });
   }
   return nextColor.toUpperCase();
 };
 
 // gives you a random colour
-export const randomCol = () => {
-  const hex = Math.floor(Math.random() * 16777215).toString(16);
-  const pad = '000000';
+var randomCol = exports.randomCol = function randomCol() {
+  var hex = Math.floor(Math.random() * 16777215).toString(16);
+  var pad = '000000';
   return '#' + (pad + hex).slice(-pad.length);
 };
 
 // json utils (mostly node ones)
 
 // checks if is json
-export const isJson = str => {
+var isJson = exports.isJson = function isJson(str) {
   try {
     JSON.parse(str);
   } catch (e) {
@@ -276,13 +361,13 @@ export const isJson = str => {
 };
 
 // read json file, parse it, call cb with obj or err
-export const readJson = (file, cb) => {
-  fs.readFile(file, 'utf8', (err, json) => {
+var readJson = exports.readJson = function readJson(file, cb) {
+  _fs2.default.readFile(file, 'utf8', function (err, json) {
     if (err) {
       cb(err);
       return;
     }
-    let data;
+    var data = void 0;
     try {
       data = JSON.parse(json);
     } catch (e) {
@@ -294,54 +379,65 @@ export const readJson = (file, cb) => {
 };
 
 // same as above, but sync
-export const readJsonSync = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+var readJsonSync = exports.readJsonSync = function readJsonSync(file) {
+  return JSON.parse(_fs2.default.readFileSync(file, 'utf8'));
+};
 
 // write with data
-export const writejson = (file, data, indent, cb) => {
+var writejson = exports.writejson = function writejson(file, data, indent, cb) {
   if (typeof cb !== 'function') {
     cb = indent;
     indent = 0;
   }
-  let json;
+  var json = void 0;
   try {
     json = JSON.stringify(data, null, indent);
   } catch (e) {
     cb(e);
     return;
   }
-  fs.writeFile(file, json, 'utf8', cb);
+  _fs2.default.writeFile(file, json, 'utf8', cb);
 };
 
 // write json with data, sync
-export const writeJsonSync = (file, data, indent) => {
+var writeJsonSync = exports.writeJsonSync = function writeJsonSync(file, data, indent) {
   if (typeof indent !== 'number') {
     indent = 0;
   }
-  fs.writeFileSync(file, JSON.stringify(data, null, indent), 'utf8');
+  _fs2.default.writeFileSync(file, JSON.stringify(data, null, indent), 'utf8');
 };
 
 // rot13
-export function rot13(s) {
-  return (s || this).split('').map(_ => {
+function rot13(s) {
+  return (s || this).split('').map(function (_) {
     if (!_.match(/[A-Za-z]/)) {
       return _;
     }
-    const c = Math.floor(_.charCodeAt(0) / 97);
-    const k = (_.toLowerCase().charCodeAt(0) - 83) % 26 || 26;
+    var c = Math.floor(_.charCodeAt(0) / 97);
+    var k = (_.toLowerCase().charCodeAt(0) - 83) % 26 || 26;
     return String.fromCharCode(k + (c === 0 ? 64 : 96));
   }).join('');
 }
 
 // generates short uid
-export const shortUid = () => ('0000' + (Math.random() * Math.pow(36, 4) << 0).toString(36)).slice(-4);
+var shortUid = exports.shortUid = function shortUid() {
+  return ('0000' + (Math.random() * Math.pow(36, 4) << 0).toString(36)).slice(-4);
+};
 
 // i don't know why
-export const otherShortUid = () => (Math.random().toString(36) + '00000000000000000').slice(2, 10);
+var otherShortUid = exports.otherShortUid = function otherShortUid() {
+  return (Math.random().toString(36) + '00000000000000000').slice(2, 10);
+};
 
-export const randomHex32 = (hexN = '') => hexN.length < 32 ? randomHex32(hexN + (Math.random() + Math.random()).toString(16).slice(2)) : hexN.slice(0, 32);
+var randomHex32 = exports.randomHex32 = function randomHex32() {
+  var hexN = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  return hexN.length < 32 ? randomHex32(hexN + (Math.random() + Math.random()).toString(16).slice(2)) : hexN.slice(0, 32);
+};
 
 // normalize text
-export const normText = text => text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ');
+var normText = exports.normText = function normText(text) {
+  return text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ');
+};
 
 // credit: texas toland
 // export const pipe = (x, ...s) =>
@@ -352,81 +448,159 @@ export const normText = text => text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-
 // fns.reduce((state, fn) => fn(state), initialValue)
 
 // convert camelCase to lisp-case
-export const camelCaseToLispCase = str => str.replace(/[A-Z]/g, match => '-' + match.toLowerCase()).toLowerCase();
+var camelCaseToLispCase = exports.camelCaseToLispCase = function camelCaseToLispCase(str) {
+  return str.replace(/[A-Z]/g, function (match) {
+    return '-' + match.toLowerCase();
+  }).toLowerCase();
+};
 
 // convert camelCase to snake_case
-export const cameCaseToSnakeCase = str => str.replace(/[A-Z]/g, match => '_' + match.toLowerCase()).toLowerCase();
+var cameCaseToSnakeCase = exports.cameCaseToSnakeCase = function cameCaseToSnakeCase(str) {
+  return str.replace(/[A-Z]/g, function (match) {
+    return '_' + match.toLowerCase();
+  }).toLowerCase();
+};
 
 // convert lisp-case to camelCase
-export const lispCaseToCamelCase = str => str.toLowerCase().replace(/-[a-z]/g, match => match.slice(1).toUpperCase());
+var lispCaseToCamelCase = exports.lispCaseToCamelCase = function lispCaseToCamelCase(str) {
+  return str.toLowerCase().replace(/-[a-z]/g, function (match) {
+    return match.slice(1).toUpperCase();
+  });
+};
 
 // convert snake_case to camelCase
-export const snakeCaseToCamelCase = str => str.replace(/(_\w)/g, match => match[1].toUpperCase());
+var snakeCaseToCamelCase = exports.snakeCaseToCamelCase = function snakeCaseToCamelCase(str) {
+  return str.replace(/(_\w)/g, function (match) {
+    return match[1].toUpperCase();
+  });
+};
 
 // use instead of `console.error()`; logs to file and stdout both
-const fn = process.argv[2] || process.env.ERR_FILE || 'err.log';
-const file = fs.createWriteStream(`${ __dirname }/${ fn }`, { flags: 'w' });
-export const err = d => {
-  file.write(util.format(d) + '\n');
-  process.stdout.write(util.format(d) + '\n');
+var fn = process.argv[2] || process.env.ERR_FILE || 'err.log';
+var file = _fs2.default.createWriteStream(__dirname + '/' + fn, { flags: 'w' });
+var err = exports.err = function err(d) {
+  file.write(_util2.default.format(d) + '\n');
+  process.stdout.write(_util2.default.format(d) + '\n');
 };
 
 // gh:artificerentertainment
-export const nco = (variable, defaultValue) => variable === null || typeof variable === 'undefined' ? defaultValue : variable;
+var nco = exports.nco = function nco(variable, defaultValue) {
+  return variable === null || typeof variable === 'undefined' ? defaultValue : variable;
+};
 
-export const niceDate = `[${ Date(Date.now() * 1000).match(/(\d{2}:\d{2}:\d{2})/)[1] }]`;
+var niceDate = exports.niceDate = '[' + Date(Date.now() * 1000).match(/(\d{2}:\d{2}:\d{2})/)[1] + ']';
 
 // usage: // isType(1, 'number', 'string') ; isType([], 'array') ; etc.
-export function isType(a) {
-  let types = Array.prototype.slice.call(arguments, 1);
+function isType(a) {
+  var types = Array.prototype.slice.call(arguments, 1);
 
-  for (let i = 0, len = types.length; i < len; i++) {
-    let type = String(types[i]).toLowerCase();
+  for (var i = 0, len = types.length; i < len; i++) {
+    var type = String(types[i]).toLowerCase();
 
-    if (type === 'null' && a === null || type === typeof a || type === 'object' && a === Object(a) || type === 'array' && isArray && isArray(a) || Object.prototype.toString.call(a).slice(8, -1).toLowerCase() === type) {
+    if (type === 'null' && a === null || type === (typeof a === 'undefined' ? 'undefined' : _typeof(a)) || type === 'object' && a === Object(a) || type === 'array' && isArray && isArray(a) || Object.prototype.toString.call(a).slice(8, -1).toLowerCase() === type) {
       return true;
     }
   }
   return false;
 }
 
-export const xor = (a, b) => !a !== !b;
+var xor = exports.xor = function xor(a, b) {
+  return !a !== !b;
+};
 
-export const lesser = (a, b) => a < b ? a : b;
+var lesser = exports.lesser = function lesser(a, b) {
+  return a < b ? a : b;
+};
 
 // cred : gh:texastoland
 // {key, ...clone} = source
-export const cloneWithout = (source, ...keys) => exports.copyWithout({}, source, ...keys);
-// {key, ...copy} = {...target, ...source}
-export const copyWithout = (target, source, ...keys) => {
-  const copy = objAssign(target, source);
-  for (const key of keys) {
-    delete copy[key];
+var cloneWithout = exports.cloneWithout = function cloneWithout(source) {
+  var _exports;
+
+  for (var _len = arguments.length, keys = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    keys[_key - 1] = arguments[_key];
   }
+
+  return (_exports = exports).copyWithout.apply(_exports, [{}, source].concat(keys));
+};
+// {key, ...copy} = {...target, ...source}
+var copyWithout = exports.copyWithout = function copyWithout(target, source) {
+  for (var _len2 = arguments.length, keys = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+    keys[_key2 - 2] = arguments[_key2];
+  }
+
+  var copy = objAssign(target, source);
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = keys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var key = _step.value;
+
+      delete copy[key];
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
   return copy;
 };
 
 // left-pad (yes, really)
-export const leftpad = (str, len, pd = ' ') => Array(len > str.length ? 1 + len - str.length : 0).join(pd) + str;
+var leftpad = exports.leftpad = function leftpad(str, len) {
+  var pd = arguments.length <= 2 || arguments[2] === undefined ? ' ' : arguments[2];
+  return Array(len > str.length ? 1 + len - str.length : 0).join(pd) + str;
+};
 
 // positive/negative nums with type checking
-export const isPositive = x => +x === x && x > 0;
-export const isNegative = x => +x === x && x < 0;
+var isPositive = exports.isPositive = function isPositive(x) {
+  return +x === x && x > 0;
+};
+var isNegative = exports.isNegative = function isNegative(x) {
+  return +x === x && x < 0;
+};
 
 // transpose a 2-dimensional matrix like [[1,2,3],[4,5,6],[7,8,9]]
-export const transpose = m => m.map((r, ri) => r.map((c, ci) => m[ci][ri]));
+var transpose = exports.transpose = function transpose(m) {
+  return m.map(function (r, ri) {
+    return r.map(function (c, ci) {
+      return m[ci][ri];
+    });
+  });
+};
 
 // transpose a flat matrix like [1,2,3,4,5,6,7,8,9]
-export const transposeFlat = (m, l = Math.sqrt(m.length) | 0) => m.map((c, i) => m[i % l * l + i / l | 0]);
+var transposeFlat = exports.transposeFlat = function transposeFlat(m) {
+  var l = arguments.length <= 1 || arguments[1] === undefined ? Math.sqrt(m.length) | 0 : arguments[1];
+  return m.map(function (c, i) {
+    return m[i % l * l + i / l | 0];
+  });
+};
 
 // reverse digits with correct sign handling
-export const revNum = n => Math.sign(n) * ('' + Math.abs(n)).split('').reverse().join('') || 0;
+var revNum = exports.revNum = function revNum(n) {
+  return Math.sign(n) * ('' + Math.abs(n)).split('').reverse().join('') || 0;
+};
 
 // is num power of two
-export const Po2 = n => 1 << n.toString(2).length - 1 === n;
+var Po2 = exports.Po2 = function Po2(n) {
+  return 1 << n.toString(2).length - 1 === n;
+};
 
 // not sure which of these is better
-export const userHome = process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME'];
+var userHome = exports.userHome = process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME'];
 // export const userHome = process.env.HOME ||
 //   process.env.HOMEPATH ||
 //   process.env.USERPROFILE
@@ -436,8 +610,8 @@ export const userHome = process.env[process.platform === 'win32' ? 'USERPROFILE'
 // run fn n times
 // return 0 on success
 // return code of last failed if no more tries left
-export function tryExecNTimes(funcToRetry, retriesLeft, onEveryError) {
-  const exitCode = funcToRetry();
+function tryExecNTimes(funcToRetry, retriesLeft, onEveryError) {
+  var exitCode = funcToRetry();
   if (exitCode === 0) {
     return exitCode;
   } else {
@@ -445,7 +619,7 @@ export function tryExecNTimes(funcToRetry, retriesLeft, onEveryError) {
       onEveryError();
     }
     retriesLeft--;
-    console.log(`Command failed, ${ retriesLeft } retries left`);
+    console.log('Command failed, ' + retriesLeft + ' retries left');
     if (retriesLeft === 0) {
       return exitCode;
     } else {
@@ -455,54 +629,71 @@ export function tryExecNTimes(funcToRetry, retriesLeft, onEveryError) {
 }
 
 // check if a terminal supports colour
-const isWin = () => process.platform === 'win32';
-const isColour = () => {
-  const termColour = /^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;
+var isWin = function isWin() {
+  return process.platform === 'win32';
+};
+var isColour = function isColour() {
+  var termColour = /^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;
   return !!process.env.COLORTERM || termColour.test(process.env.TERM);
 };
-export const hasColour = isWin() || isColour();
+var hasColour = exports.hasColour = isWin() || isColour();
 
 // i know this is pointless but i think it's cute
-export const sleep = ms => {
-  const start = new Date().getTime();
+var sleep = exports.sleep = function sleep(ms) {
+  var start = new Date().getTime();
   while (new Date().getTime() - start < ms) {}
 };
 
 // some dom things
-export const scrollTop = () => global.scrollTo(0, 0);
+var scrollTop = exports.scrollTop = function scrollTop() {
+  return global.scrollTo(0, 0);
+};
 
-export const getWidth = () => global.innerWidth || global.document.documentElement.clientWidth;
+var getWidth = exports.getWidth = function getWidth() {
+  return global.innerWidth || global.document.documentElement.clientWidth;
+};
 
-export const getHeight = () => global.innerHeight || global.document.documentElement.clientHeight;
+var getHeight = exports.getHeight = function getHeight() {
+  return global.innerHeight || global.document.documentElement.clientHeight;
+};
 
-export const getScrollBarWidth = () => global.innerWidth - global.document.documentElement.clientWidth;
+var getScrollBarWidth = exports.getScrollBarWidth = function getScrollBarWidth() {
+  return global.innerWidth - global.document.documentElement.clientWidth;
+};
 
 // logging things
-export const throwError = err => {
+var throwError = exports.throwError = function throwError(err) {
   throw new Error(err);
 };
 
-export function logWithTimestamp() {
-  const date = new Date();
-  const timestamp = date.getDate() + '/' + date.getMonth() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '.' + date.getMilliseconds();
-  const message = Array.prototype.slice.call(arguments);
+function logWithTimestamp() {
+  var date = new Date();
+  var timestamp = date.getDate() + '/' + date.getMonth() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '.' + date.getMilliseconds();
+  var message = Array.prototype.slice.call(arguments);
   message.unshift('--');
   message.unshift(timestamp);
   console.log.apply(console, message);
 }
 
-export const withInfo = (str = '') => `${ str }:${ os.hostname() }:${ process.pid }`;
+var withInfo = exports.withInfo = function withInfo() {
+  var str = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  return str + ':' + _os2.default.hostname() + ':' + process.pid;
+};
 
-export const logWithInfo = (str = '') => console.log(withInfo(str));
+var logWithInfo = exports.logWithInfo = function logWithInfo() {
+  var str = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  return console.log(withInfo(str));
+};
 
 // this is a tiny router. hence the name.
-export const tinyRouter = (pathname, response) => {
-  let html, filePath;
+var tinyRouter = exports.tinyRouter = function tinyRouter(pathname, response) {
+  var html = void 0,
+      filePath = void 0;
   if (pathname !== '/favicon.ico') {
     try {
       filePath = './' + pathname;
       console.log('loading ' + filePath);
-      html = fs.readFileSync(filePath);
+      html = _fs2.default.readFileSync(filePath);
       response.write(html);
       response.end();
     } catch (err) {
@@ -526,21 +717,23 @@ export const tinyRouter = (pathname, response) => {
 // console.log(ii)
 // return ++ii > 22
 // }, console.log)
-export const invoker = (limit, interval) => (fn, cb) => {
-  let current = 0;
-  let _fn = () => {
-    current++;
-    let result = fn();
-    if (result) {
-      cb(null, result);
-    } else if (current < limit) {
-      setTimeout(_fn, interval);
-    } else {
-      cb(new Error('Limit exceeded!'), null);
-      cb = () => {};
-    }
+var invoker = exports.invoker = function invoker(limit, interval) {
+  return function (fn, cb) {
+    var current = 0;
+    var _fn = function _fn() {
+      current++;
+      var result = fn();
+      if (result) {
+        cb(null, result);
+      } else if (current < limit) {
+        setTimeout(_fn, interval);
+      } else {
+        cb(new Error('Limit exceeded!'), null);
+        cb = function cb() {};
+      }
+    };
+    _fn();
   };
-  _fn();
 };
 
 // run only once
@@ -573,12 +766,13 @@ export const invoker = (limit, interval) => (fn, cb) => {
 // export const isEmail = email =>
 //   /^([\w-\.]*(\+[a-z0-9-]+)?@([\w-]+\.)+[\w-]{2,10})?$/.test(email)
 
-export const transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-export const brokenImg = 'data:;base64,iVBORwOKGO==';
+var transparentGif = exports.transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+var brokenImg = exports.brokenImg = 'data:;base64,iVBORwOKGO==';
 
-export const memoizeSimple = fn => {
-  let cachedArg, cachedRes;
-  return arg => {
+var memoizeSimple = exports.memoizeSimple = function memoizeSimple(fn) {
+  var cachedArg = void 0,
+      cachedRes = void 0;
+  return function (arg) {
     if (cachedArg === arg) {
       return cachedRes;
     }
@@ -588,14 +782,16 @@ export const memoizeSimple = fn => {
   };
 };
 
-export const memoizeWithCache = fn => (arg, memoCache) => {
-  if (memoCache.arg === arg) {
-    return memoCache.res;
-  }
-  const res = fn(arg);
-  memoCache.arg = arg;
-  memoCache.res = res;
-  return res;
+var memoizeWithCache = exports.memoizeWithCache = function memoizeWithCache(fn) {
+  return function (arg, memoCache) {
+    if (memoCache.arg === arg) {
+      return memoCache.res;
+    }
+    var res = fn(arg);
+    memoCache.arg = arg;
+    memoCache.res = res;
+    return res;
+  };
 };
 
 // export function memoize = function(fn) {
@@ -627,24 +823,37 @@ export const memoizeWithCache = fn => (arg, memoCache) => {
 // }
 
 // see: gh:egoist/switchy
-export const noSwitch = (conds = {}) => c => {
-  if (typeof conds[c] === 'function') {
-    return conds[c]();
-  } else if (typeof conds.default === 'function') {
-    return conds.default();
-  }
+var noSwitch = exports.noSwitch = function noSwitch() {
+  var conds = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  return function (c) {
+    if (typeof conds[c] === 'function') {
+      return conds[c]();
+    } else if (typeof conds.default === 'function') {
+      return conds.default();
+    }
+  };
 };
 
-export const newlinesToSpaces = str => str.replace(/\s+/g, ' ').trim();
+var newlinesToSpaces = exports.newlinesToSpaces = function newlinesToSpaces(str) {
+  return str.replace(/\s+/g, ' ').trim();
+};
 
-export const newlineRemove = str => str.replace(/(\r\n|\n|\r)/gm, '');
+var newlineRemove = exports.newlineRemove = function newlineRemove(str) {
+  return str.replace(/(\r\n|\n|\r)/gm, '');
+};
 
-export const removeAllWhitespace = str => str.replace(/^\s+|\s+$/, '');
+var removeAllWhitespace = exports.removeAllWhitespace = function removeAllWhitespace(str) {
+  return str.replace(/^\s+|\s+$/, '');
+};
 
 // add \n to every line
-export const addNewlines = s => s.split('\t').join('  ').split('\n').map((e, i, a) => e + '\n');
+var addNewlines = exports.addNewlines = function addNewlines(s) {
+  return s.split('\t').join('  ').split('\n').map(function (e, i, a) {
+    return e + '\n';
+  });
+};
 
-export const isEmptyStr = str => {
+var isEmptyStr = exports.isEmptyStr = function isEmptyStr(str) {
   if (str === undefined || str === null) {
     return true;
   }
@@ -652,26 +861,36 @@ export const isEmptyStr = str => {
   );
 };
 
-export const isAlphanumeric = str => /[0-9a-zA-Z]+/.test(str);
+var isAlphanumeric = exports.isAlphanumeric = function isAlphanumeric(str) {
+  return (/[0-9a-zA-Z]+/.test(str)
+  );
+};
 
-export const inlineString = str => {
+var inlineString = exports.inlineString = function inlineString(str) {
   str = str.replace(/(\r\n|\n|\r)/gm, ' ');
   return str.replace(/[\s]+/gm, ' ');
 };
 
 //
-export const getNodeModules = () => {
-  const nodeModules = {};
-  fs.readdirSync('node_modules').filter(a => ['.bin'].indexOf(a) === -1).forEach(b => {
+var getNodeModules = exports.getNodeModules = function getNodeModules() {
+  var nodeModules = {};
+  _fs2.default.readdirSync('node_modules').filter(function (a) {
+    return ['.bin'].indexOf(a) === -1;
+  }).forEach(function (b) {
     nodeModules[b] = 'commonjs ' + b;
   });
   return nodeModules;
 };
 
-export const minify = str => str.replace(/\n/g, '').replace(/\s\s+/g, ' ');
+var minify = exports.minify = function minify(str) {
+  return str.replace(/\n/g, '').replace(/\s\s+/g, ' ');
+};
 
 // this is really long. i didn't write this. geez.
-export const isMobileOrTablet = device => /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(device) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(device.substr(0, 4));
+var isMobileOrTablet = exports.isMobileOrTablet = function isMobileOrTablet(device) {
+  return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(device) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(device.substr(0, 4))
+  );
+};
 
 // export const curry = fn => {
 // const length = fn.length
@@ -682,10 +901,10 @@ export const isMobileOrTablet = device => /(android|bb\d+|meego).+mobile|avantgo
 // return acc
 // }
 
-export const open = (args, opts, cb) => {
+var open = exports.open = function open(args, opts, cb) {
   args = [args];
-  const cmd = process.platform === 'win32' ? 'cmd' : process.platform === 'darwin' ? 'open' : 'xdg-open';
-  return execFile(cmd, args, opts, cb);
+  var cmd = process.platform === 'win32' ? 'cmd' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+  return (0, _child_process.execFile)(cmd, args, opts, cb);
 };
 
 // options:
@@ -694,26 +913,28 @@ export const open = (args, opts, cb) => {
 // usage:
 // const c = require('./color')
 // console.log(c.bold(c.blue('foo')))
-const colorize = (color, text) => {
-  const codes = util.inspect.colors[color];
-  return `\x1b[${ codes[0] }m${ text }\x1b[${ codes[1] }m`;
+var colorize = function colorize(color, text) {
+  var codes = _util2.default.inspect.colors[color];
+  return '\u001b[' + codes[0] + 'm' + text + '\u001b[' + codes[1] + 'm';
 };
-const colors = () => {
-  const val = {};
-  Object.keys(util.inspect.colors).forEach(color => {
-    val[color] = text => colorize(color, text);
+var colors = function colors() {
+  var val = {};
+  Object.keys(_util2.default.inspect.colors).forEach(function (color) {
+    val[color] = function (text) {
+      return colorize(color, text);
+    };
   });
   return val;
 };
-export const clr = colors();
+var clr = exports.clr = colors();
 
 // usage :
 // lighten
 // var NewColor = LightenDarkenColor('#F06D06', 20)
 // darken
 // var NewColor = LightenDarkenColor('#F06D06', -20)
-export const LightenDarkenColor = (col, amt) => {
-  let usePound = false,
+var LightenDarkenColor = exports.LightenDarkenColor = function LightenDarkenColor(col, amt) {
+  var usePound = false,
       num = parseInt(col, 16),
       r = (num >> 16) + amt,
       b = (num >> 8 & 0x00FF) + amt,
@@ -742,26 +963,28 @@ export const LightenDarkenColor = (col, amt) => {
 };
 
 // takes input in format #rrggbb (hex)
-export const complimentaryCols = s => '#' + (1e5 + (Math.pow(8, 8) + ~('0x' + s.slice(1))).toString(16)).slice(-6);
+var complimentaryCols = exports.complimentaryCols = function complimentaryCols(s) {
+  return '#' + (1e5 + (Math.pow(8, 8) + ~('0x' + s.slice(1))).toString(16)).slice(-6);
+};
 // or
 // c=>c.replace(/\w/g,x=>(15-`0x${x}`).toString(16))
 
-export const objectFromEntries = entries => {
-  const res = {};
-  const len = entries.length;
-  for (let i = 0; i < len; ++i) {
-    const ent = entries[i];
-    const key = ent[0];
-    const val = ent[1];
+var objectFromEntries = exports.objectFromEntries = function objectFromEntries(entries) {
+  var res = {};
+  var len = entries.length;
+  for (var i = 0; i < len; ++i) {
+    var ent = entries[i];
+    var key = ent[0];
+    var val = ent[1];
     res[key] = val;
   }
   return res;
 };
 
 // credit: gh:spicydonuts
-export const findWhere = (fn, array) => {
-  let found = null;
-  array.some((item, i) => {
+var findWhere = exports.findWhere = function findWhere(fn, array) {
+  var found = null;
+  array.some(function (item, i) {
     if (fn(item, i)) {
       found = item;
       return true;
@@ -772,9 +995,9 @@ export const findWhere = (fn, array) => {
 };
 
 // credit: gh:spicydonuts
-export const dropWhere = (fn, array) => {
-  const keepers = [];
-  array.forEach((item, i) => {
+var dropWhere = exports.dropWhere = function dropWhere(fn, array) {
+  var keepers = [];
+  array.forEach(function (item, i) {
     if (!fn(item, i)) {
       keepers.push(item);
     }
@@ -786,96 +1009,141 @@ export const dropWhere = (fn, array) => {
 };
 
 // close-to-complete email validation
-export const isEmail = email => /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/.test(email);
+var isEmail = exports.isEmail = function isEmail(email) {
+  return (/^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/.test(email)
+  );
+};
 
-export const curry = function (fn) {
-  const originalArguments = getFunctionArguments(fn) || [];
+var curry = exports.curry = function curry(fn) {
+  var originalArguments = getFunctionArguments(fn) || [];
 
-  const makeCurriedFunc = function () {
-    const givenArguments = arguments || [];
+  var makeCurriedFunc = function makeCurriedFunc() {
+    var givenArguments = arguments || [];
     if (givenArguments.length < originalArguments.length) {
-      return function (...rest) {
-        return makeCurriedFunc(...givenArguments, ...rest);
+      return function () {
+        for (var _len3 = arguments.length, rest = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          rest[_key3] = arguments[_key3];
+        }
+
+        return makeCurriedFunc.apply(undefined, _toConsumableArray(givenArguments).concat(rest));
       };
     } else {
-      return fn(...givenArguments);
+      return fn.apply(undefined, _toConsumableArray(givenArguments));
     }
   };
 
   return function () {
-    return makeCurriedFunc(...arguments);
+    return makeCurriedFunc.apply(undefined, arguments);
   };
 };
 
-export const getFunctionArguments = function (fn) {
+var getFunctionArguments = exports.getFunctionArguments = function getFunctionArguments(fn) {
   if (typeof fn !== 'function') {
     throw new Error('Not a function');
   }
 
-  const functionAsString = fn.toString();
+  var functionAsString = fn.toString();
 
-  const args = functionAsString.match(/\(.*?\)/)[0] // match everything between brackets
+  var args = functionAsString.match(/\(.*?\)/)[0] // match everything between brackets
   .replace(/[()]/gi, '') // remove brackets
   .replace(/\s/gi, '') // remove all whitespace
   .split(','); // split on the commas
 
-  return args.filter(x => x); // remove possible empty string from the result
+  return args.filter(function (x) {
+    return x;
+  }); // remove possible empty string from the result
 };
 
 // returns true if all items pass predicate fn
-export const all = curry((predicate, list) => !!list.reduce && typeof predicate === 'function' && list.reduce((result, current) => !result ? false : !!predicate(current), true));
+var all = exports.all = curry(function (predicate, list) {
+  return !!list.reduce && typeof predicate === 'function' && list.reduce(function (result, current) {
+    return !result ? false : !!predicate(current);
+  }, true);
+});
 
 // r->l composition
-export const compose = (...fns) => pipe(...reverse(fns));
+var compose = exports.compose = function compose() {
+  for (var _len4 = arguments.length, fns = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+    fns[_key4] = arguments[_key4];
+  }
+
+  return pipe.apply(undefined, _toConsumableArray(reverse(fns)));
+};
 
 // export const compose = (f, g) =>
 //   x =>
 //     f(g(x))
 
-export const identity = x => x;
+var identity = exports.identity = function identity(x) {
+  return x;
+};
 
-export const memoize = fn => {
-  const results = new Map();
-  return (...args) => {
-    const key = args.toString();
+var memoize = exports.memoize = function memoize(fn) {
+  var results = new Map();
+  return function () {
+    for (var _len5 = arguments.length, args = Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+      args[_key5] = arguments[_key5];
+    }
+
+    var key = args.toString();
     if (!results.get(key)) {
-      results.set(key, fn(...args));
+      results.set(key, fn.apply(undefined, args));
     }
     return results.get(key);
   };
 };
 
 // returns true if current obj has prop that equals given val
-export const propEq = curry((prop, value, data) => data[prop] !== undefined && data[prop] === value);
+var propEq = exports.propEq = curry(function (prop, value, data) {
+  return data[prop] !== undefined && data[prop] === value;
+});
 
 // reduces data to single val
-export const reduce = curry((fn, initialValue, data) => {
-  let reducedValue = initialValue;
-  for (let i = 0; i < data.length; i++) {
+var reduce = exports.reduce = curry(function (fn, initialValue, data) {
+  var reducedValue = initialValue;
+  for (var i = 0; i < data.length; i++) {
     reducedValue = fn(reducedValue, data[i]);
   }
   return reducedValue;
 });
 
 // reverses array
-export const reverse = items => {
-  let result = [];
-  for (let i = items.length - 1; i >= 0; i--) {
+var reverse = exports.reverse = function reverse(items) {
+  var result = [];
+  for (var i = items.length - 1; i >= 0; i--) {
     result.push(items[i]);
   }
   return result;
 };
 
 // l->r composition
-export const pipe = (...fns) => data => reduce((v, fn) => fn(v), data)(fns);
+var pipe = exports.pipe = function pipe() {
+  for (var _len6 = arguments.length, fns = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+    fns[_key6] = arguments[_key6];
+  }
+
+  return function (data) {
+    return reduce(function (v, fn) {
+      return fn(v);
+    }, data)(fns);
+  };
+};
 
 // only calls fn once; subsequent calls just return first val
-export const once = fn => {
-  let returnValue;
-  return (...args) => {
+var once = exports.once = function once(fn) {
+  var returnValue = void 0;
+  return function () {
     if (!returnValue) {
-      returnValue = fn(...args);
+      returnValue = fn.apply(undefined, arguments);
     }
     return returnValue;
   };
+};
+
+var unfold = exports.unfold = function unfold(fn, seed) {
+  var r = fn(seed);
+  if (!Array.isArray(r)) {
+    return [];
+  }
+  return [r[0]].concat(unfold(fn, r[1]));
 };

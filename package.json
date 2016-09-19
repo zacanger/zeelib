@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "My own little micro library thing.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -24,8 +24,5 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-es2017": "^6.14.0",
-    "babel-preset-stage-2": "^6.13.0"
   }
 }
