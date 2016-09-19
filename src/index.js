@@ -992,3 +992,22 @@ export const unfold = (fn, seed) => {
   }
   return [r[0]].concat(unfold(fn, r[1]))
 }
+
+export const getTerminalCols = () =>
+  process.stdout.columns
+
+export const getTerminalRows = () =>
+  process.stdout.rows
+
+export const getTerminalSize = () => ({
+  cols : process.stdout.columns
+, rows : process.stdout.rows
+})
+
+export function toType (val) {
+  const argLen = arguments.length
+  if (argLen !== 1) {
+    throw new Error('Please only pass one argument')
+  }
+  return ({}).toString.call(val).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+}
