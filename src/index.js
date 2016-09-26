@@ -1011,3 +1011,11 @@ export function toType (val) {
   }
   return ({}).toString.call(val).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 }
+
+// from MDN's parseFloat docs
+export const filterFloat = value => {
+  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value)) {
+    return Number(value)
+  }
+  return NaN
+}
