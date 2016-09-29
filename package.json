@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "My own little micro library thing.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -10,7 +10,7 @@
   "license": "WTFPL",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo 'nope, sry'"
+    "build": "babel src/index.js -o dist/index.js"
   },
   "homepage": "https://github.com/zacanger/zeelib#readme",
   "repository": {
@@ -23,5 +23,9 @@
     "utils"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-preset-latest": "^6.16.0"
+  }
 }

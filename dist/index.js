@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.filterFloat = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalCols = exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.withInfo = exports.throwError = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.Po2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
 // just a bunch of utils really
 // some stuff that's basically polyfills-ish
 // needs node (there's fs stuff, etc.)
@@ -431,7 +431,7 @@ var otherShortUid = exports.otherShortUid = function otherShortUid() {
 };
 
 var randomHex32 = exports.randomHex32 = function randomHex32() {
-  var hexN = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  var hexN = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return hexN.length < 32 ? randomHex32(hexN + (Math.random() + Math.random()).toString(16).slice(2)) : hexN.slice(0, 32);
 };
 
@@ -561,7 +561,7 @@ var copyWithout = exports.copyWithout = function copyWithout(target, source) {
 
 // left-pad (yes, really)
 var leftpad = exports.leftpad = function leftpad(str, len) {
-  var pd = arguments.length <= 2 || arguments[2] === undefined ? ' ' : arguments[2];
+  var pd = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
   return Array(len > str.length ? 1 + len - str.length : 0).join(pd) + str;
 };
 
@@ -584,7 +584,7 @@ var transpose = exports.transpose = function transpose(m) {
 
 // transpose a flat matrix like [1,2,3,4,5,6,7,8,9]
 var transposeFlat = exports.transposeFlat = function transposeFlat(m) {
-  var l = arguments.length <= 1 || arguments[1] === undefined ? Math.sqrt(m.length) | 0 : arguments[1];
+  var l = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Math.sqrt(m.length) | 0;
   return m.map(function (c, i) {
     return m[i % l * l + i / l | 0];
   });
@@ -677,12 +677,12 @@ function logWithTimestamp() {
 }
 
 var withInfo = exports.withInfo = function withInfo() {
-  var str = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return str + ':' + _os2.default.hostname() + ':' + process.pid;
 };
 
 var logWithInfo = exports.logWithInfo = function logWithInfo() {
-  var str = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return console.log(withInfo(str));
 };
 
@@ -825,7 +825,7 @@ var memoizeWithCache = exports.memoizeWithCache = function memoizeWithCache(fn) 
 
 // see: gh:egoist/switchy
 var noSwitch = exports.noSwitch = function noSwitch() {
-  var conds = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  var conds = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   return function (c) {
     if (typeof conds[c] === 'function') {
       return conds[c]();
@@ -916,7 +916,7 @@ var open = exports.open = function open(args, opts, cb) {
 // console.log(c.bold(c.blue('foo')))
 var colorize = function colorize(color, text) {
   var codes = _util2.default.inspect.colors[color];
-  return '\u001b[' + codes[0] + 'm' + text + '\u001b[' + codes[1] + 'm';
+  return '\x1B[' + codes[0] + 'm' + text + '\x1B[' + codes[1] + 'm';
 };
 var colors = function colors() {
   var val = {};
