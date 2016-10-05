@@ -1019,3 +1019,6 @@ export const filterFloat = value => {
   }
   return NaN
 }
+
+export const isObjectEmpty = obj =>
+  obj.constructor === Object && Object.keys(obj).length === 0
