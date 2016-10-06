@@ -1022,3 +1022,15 @@ export const filterFloat = value => {
 
 export const isObjectEmpty = obj =>
   obj.constructor === Object && Object.keys(obj).length === 0
+
+export const splitStringOn = (str, spl) => {
+  if (!str || typeof str !== 'string') {
+    console.warn('Please pass a string as first param.')
+  }
+  spl = spl || ''
+  const idx = str.indexOf(spl)
+  return idx === -1 ? null : [
+    str.substr(0, idx)
+  , str.substr(idx + spl.length)
+  ]
+}
