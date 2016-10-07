@@ -725,6 +725,17 @@ export const newlineRemove = str =>
 export const removeAllWhitespace = str =>
   str.replace(/^\s+|\s+$/, '')
 
+// replaces newlines with spaces, for use in classNames
+// also can take array of classnames, convert to string
+// returns arg as string if it's not an array or a string
+export const normalizeClassname = (arg) => {
+  const replaceNewlines = (a) => a.replace(/\s+/g, ' ').trim()
+  const replaceArr = (a) => a.map((i) => `${i}`).join(' ')
+  if (Array.isArray(arg)) return replaceNewlines(replaceArr(arg))
+  if (typeof arg === 'string') return replaceNewlines(arg)
+  return replaceNewlines(`${arg}`)
+}
+
 // add \n to every line
 export const addNewlines = s =>
   s.split('\t').join('  ').split('\n').map((e, i, a) => e + '\n')

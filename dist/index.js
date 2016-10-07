@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.splitStringOn = exports.isObjectEmpty = exports.filterFloat = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalCols = exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.withInfo = exports.throwError = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.Po2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
+exports.splitStringOn = exports.isObjectEmpty = exports.filterFloat = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalCols = exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.normalizeClassname = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.withInfo = exports.throwError = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.Po2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
 // just a bunch of utils really
@@ -845,6 +845,23 @@ var newlineRemove = exports.newlineRemove = function newlineRemove(str) {
 
 var removeAllWhitespace = exports.removeAllWhitespace = function removeAllWhitespace(str) {
   return str.replace(/^\s+|\s+$/, '');
+};
+
+// replaces newlines with spaces, for use in classNames
+// also can take array of classnames, convert to string
+// returns arg as string if it's not an array or a string
+var normalizeClassname = exports.normalizeClassname = function normalizeClassname(arg) {
+  var replaceNewlines = function replaceNewlines(a) {
+    return a.replace(/\s+/g, ' ').trim();
+  };
+  var replaceArr = function replaceArr(a) {
+    return a.map(function (i) {
+      return '' + i;
+    }).join(' ');
+  };
+  if (Array.isArray(arg)) return replaceNewlines(replaceArr(arg));
+  if (typeof arg === 'string') return replaceNewlines(arg);
+  return replaceNewlines('' + arg);
 };
 
 // add \n to every line
