@@ -1045,3 +1045,10 @@ export const splitStringOn = (str, spl) => {
   , str.substr(idx + spl.length)
   ]
 }
+
+export const timeTest = (n, cb) => {
+  console.time('time')
+  const r = cb(n)
+  console.timeEnd('time')
+  return r
+}
