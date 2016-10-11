@@ -437,9 +437,9 @@ export function isType (a) {
   for (let i = 0, len = types.length; i < len; i++) {
     let type = String(types[i]).toLowerCase()
 
-    if ((type === 'null' && a === null)        ||
-        (type === typeof a)                    ||
-        (type === 'object' && a === Object(a)) ||
+    if ((type === 'null' && a === null)             ||
+        (type === typeof a)                         ||
+        (type === 'object' && a === Object(a))      ||
         (type === 'array' && isArray && isArray(a)) ||
         Object.prototype.toString.call(a).slice(8, -1).toLowerCase() === type) {
       return true
@@ -492,7 +492,7 @@ export const revNum = (n) =>
   Math.sign(n) * ('' + Math.abs(n)).split('').reverse().join('') || 0
 
 // is num power of two
-export const Po2 = (n) =>
+export const isPow2 = (n) =>
   1 << (n.toString(2).length - 1) === n
 
 // not sure which of these is better
@@ -554,7 +554,7 @@ export const getScrollBarWidth = () =>
   global.innerWidth - global.document.documentElement.clientWidth
 
 // logging things
-export const throwError = err => {
+export const throwErr = err => {
   throw new Error(err)
 }
 
@@ -568,7 +568,7 @@ export function logWithTimestamp () {
   console.log.apply(console, message)
 }
 
-export const withInfo = (str = '') =>
+const withInfo = (str = '') =>
   `${str}:${os.hostname()}:${process.pid}`
 
 export const logWithInfo = (str = '') =>
