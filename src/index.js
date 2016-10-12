@@ -1052,3 +1052,6 @@ export const timeTest = (n, cb) => {
   console.timeEnd('time')
   return r
 }
+
+export const removeTags = str =>
+  str.replace(/(<([^>]+)>)/ig, '')
