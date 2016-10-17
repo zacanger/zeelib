@@ -1081,3 +1081,6 @@ export const termPrompt = (question, isYesDefault) => {
     })
   })
 }
+
+export const stripPunctuation = str =>
+  str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ')
