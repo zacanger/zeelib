@@ -3,9 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.alphaNumericOnly = exports.stripPunctuation = exports.termPrompt = exports.removeTags = exports.timeTest = exports.splitStringOn = exports.isObjectEmpty = exports.filterFloat = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalCols = exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.normalizeClassname = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.throwErr = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.isPow2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
+exports.findPort = exports.alphaNumericOnly = exports.stripPunctuation = exports.termPrompt = exports.removeTags = exports.timeTest = exports.splitStringOn = exports.isObjectEmpty = exports.filterFloat = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalCols = exports.unfold = exports.once = exports.pipe = exports.reverse = exports.reduce = exports.propEq = exports.memoize = exports.identity = exports.compose = exports.all = exports.getFunctionArguments = exports.curry = exports.isEmail = exports.dropWhere = exports.findWhere = exports.objectFromEntries = exports.complimentaryCols = exports.LightenDarkenColor = exports.clr = exports.open = exports.isMobileOrTablet = exports.minify = exports.getNodeModules = exports.inlineString = exports.isAlphanumeric = exports.isEmptyStr = exports.addNewlines = exports.normalizeClassname = exports.removeAllWhitespace = exports.newlineRemove = exports.newlinesToSpaces = exports.noSwitch = exports.memoizeWithCache = exports.memoizeSimple = exports.brokenImg = exports.transparentGif = exports.invoker = exports.tinyRouter = exports.logWithInfo = exports.throwErr = exports.getScrollBarWidth = exports.getHeight = exports.getWidth = exports.scrollTop = exports.sleep = exports.hasColour = exports.userHome = exports.isPow2 = exports.revNum = exports.transposeFlat = exports.transpose = exports.isNegative = exports.isPositive = exports.leftpad = exports.copyWithout = exports.cloneWithout = exports.lesser = exports.xor = exports.niceDate = exports.nco = exports.err = exports.snakeCaseToCamelCase = exports.lispCaseToCamelCase = exports.cameCaseToSnakeCase = exports.camelCaseToLispCase = exports.normText = exports.randomHex32 = exports.otherShortUid = exports.shortUid = exports.writeJsonSync = exports.writejson = exports.readJsonSync = exports.readJson = exports.isJson = exports.randomCol = exports.normalizeColor = exports.isValidHex = exports.isHexBased = exports.trimSpaces = exports.trimHash = exports.hex = exports.capitalize = exports.base64Decode = exports.base64Encode = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAlphanumeric = exports.removeAlpha = exports.unescapeHTML = exports.escapeHTML = exports.isElement = exports.isDefined = exports.isUndefined = exports.isNull = exports.isPrimitive = exports.copy = exports.shallowCopy = exports.deepCopy = exports.isFunction = exports.isArrayLike = exports.isArray = exports.isRegExp = exports.isDate = exports.isString = exports.isBoolean = exports.objInherit = exports.objAssign = exports.objClone = exports.isEqualObj = exports.objToString = exports.isObject = exports.isEven = exports.isOdd = exports.isFloat = exports.isInteger = exports.isNumber = exports.isNaN = undefined;
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; // a little kinda lib thingy idk
 // just a bunch of utils really
 // some stuff that's basically polyfills-ish
 // needs node (there's fs stuff, etc.)
@@ -36,6 +36,8 @@ var _os2 = _interopRequireDefault(_os);
 var _child_process = require('child_process');
 
 var _readline = require('readline');
+
+var _net = require('net');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -935,7 +937,7 @@ var open = exports.open = function open(args, opts, cb) {
 // console.log(c.bold(c.blue('foo')))
 var colorize = function colorize(color, text) {
   var codes = _util2.default.inspect.colors[color];
-  return '\u001b[' + codes[0] + 'm' + text + '\u001b[' + codes[1] + 'm';
+  return '\x1B[' + codes[0] + 'm' + text + '\x1B[' + codes[1] + 'm';
 };
 var colors = function colors() {
   var val = {};
@@ -1254,4 +1256,25 @@ var stripPunctuation = exports.stripPunctuation = function stripPunctuation(str)
 
 var alphaNumericOnly = exports.alphaNumericOnly = function alphaNumericOnly(str) {
   return str.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
+};
+
+// find next open port
+// findPort(8000, (err, port) => {})
+var findPort = exports.findPort = function findPort(port, cb) {
+  var server = (0, _net.createServer)(function () {});
+  var onListen = function onListen() {
+    server.removeListener('error', onError);
+    server.close();
+    cb(null, port);
+  };
+  var onError = function onError(err) {
+    server.removeListener('listening', onListen);
+    if (err.code !== ('EADDRINUSE' || 'EACCESS')) {
+      return cb(err);
+    }
+    findPort(port + 1, cb);
+  };
+  server.once('error', onError);
+  server.once('listening', onListen);
+  server.listen(port);
 };

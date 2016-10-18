@@ -11,6 +11,7 @@ import util from 'util'
 import os from 'os'
 import { execFile } from 'child_process'
 import { createInterface } from 'readline'
+import { createServer } from 'net'
 
 // returns true if val is NaN
 export const isNaN = Number.isNaN
@@ -1087,3 +1088,24 @@ export const stripPunctuation = str =>
 
 export const alphaNumericOnly = (str) =>
   str.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ')
+
+// find next open port
+// findPort(8000, (err, port) => {})
+export const findPort = (port, cb) => {
+  const server = createServer(() => {})
+  const onListen = () => {
+    server.removeListener('error', onError)
+    server.close()
+    cb(null, port)
+  }
+  const onError = err => {
+    server.removeListener('listening', onListen)
+    if (err.code !== ('EADDRINUSE' || 'EACCESS')) {
+      return cb(err)
+    }
+    findPort(port + 1, cb)
+  }
+  server.once('error', onError)
+  server.once('listening', onListen)
+  server.listen(port)
+}
