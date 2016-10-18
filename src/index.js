@@ -1112,4 +1112,4 @@ export const findPort = (port, cb) => {
 
 // [Str] -> Str -> Bool
 export const isStringSomewhereInArray = (arr, el) =>
-  arr.some(a => el.toLowerCase().includes(a.toLowerCase()))
+  arr.some(a => el.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(el.toLowerCase()))

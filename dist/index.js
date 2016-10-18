@@ -1282,6 +1282,6 @@ var findPort = exports.findPort = function findPort(port, cb) {
 // [Str] -> Str -> Bool
 var isStringSomewhereInArray = exports.isStringSomewhereInArray = function isStringSomewhereInArray(arr, el) {
   return arr.some(function (a) {
-    return el.toLowerCase().includes(a.toLowerCase());
+    return el.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(el.toLowerCase());
   });
 };
