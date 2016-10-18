@@ -1109,3 +1109,7 @@ export const findPort = (port, cb) => {
   server.once('listening', onListen)
   server.listen(port)
 }
+
+// [Str] -> Str -> Bool
+export const isStringSomewhereInArray = (arr, el) =>
+  arr.some(a => el.toLowerCase().includes(a.toLowerCase()))
