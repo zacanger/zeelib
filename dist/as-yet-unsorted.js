@@ -198,3 +198,8 @@ var timeTest = exports.timeTest = function timeTest(n, cb) {
   console.timeEnd('time');
   return r;
 };
+
+var chunk = exports.chunk = function chunk(arr, n) {
+  if (!arr.length || n) return [];
+  return [arr.slice(0, n)].concat(chunk(arr.slice(n), n));
+};

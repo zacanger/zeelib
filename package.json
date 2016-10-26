@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "My own little micro library thing.",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -24,8 +24,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-preset-latest": "^6.16.0"
   }
 }

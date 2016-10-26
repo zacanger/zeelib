@@ -188,3 +188,8 @@ export const timeTest = (n, cb) => {
   console.timeEnd('time')
   return r
 }
+
+export const chunk = (arr, n) => {
+  if (!arr.length || n) return []
+  return [ arr.slice(0, n) ].concat(chunk(arr.slice(n), n))
+}
