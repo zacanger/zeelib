@@ -175,3 +175,7 @@ export const unfold = (fn, seed) => {
 // more verbosely
 // const pipe = (initialValue, ...fns) =>
 // fns.reduce((state, fn) => fn(state), initialValue)
+
+export const not = (a) =>
+  (b) =>
+    a !== b
