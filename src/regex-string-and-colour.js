@@ -238,3 +238,7 @@ export const LightenDarkenColor = (col, amt) => {
   }
   return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16)
 }
+
+// [RegExp] -> RegExp
+export const combineRegex = (rs, opts) =>
+  new RegExp(rs.map(r => r.source).join(''), opts)

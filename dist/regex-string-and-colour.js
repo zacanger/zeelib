@@ -284,3 +284,10 @@ var LightenDarkenColor = exports.LightenDarkenColor = function LightenDarkenColo
   }
   return (usePound ? '#' : '') + (g | b << 8 | r << 16).toString(16);
 };
+
+// [RegExp] -> RegExp
+var combineRegex = exports.combineRegex = function combineRegex(rs, opts) {
+  return new RegExp(rs.map(function (r) {
+    return r.source;
+  }).join(''), opts);
+};
