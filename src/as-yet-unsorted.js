@@ -161,7 +161,7 @@ export const dropWhere = (fn, array) => {
 
 // from MDN's parseFloat docs
 export const filterFloat = value => {
-  if (/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value)) {
+  if (/^(-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value)) {
     return Number(value)
   }
   return NaN
@@ -193,3 +193,22 @@ export const chunk = (arr, n) => {
   if (!arr.length || n) return []
   return [ arr.slice(0, n) ].concat(chunk(arr.slice(n), n))
 }
+
+export const unless = (cond, fn) =>
+  !cond ? fn() : null
+
+/*
+export function unless () {
+  let test = true
+  const args = [...arguments]
+  const conds = args.splice(args.length)
+  const fn = args[args.length - 1]
+  if (typeof fn !== 'function') {
+    return console.warn('Last argument must be a function.')
+  }
+  conds.forEach(cond => {
+    if (!cond) test = false
+  })
+  if (test) return fn()
+}
+*/
