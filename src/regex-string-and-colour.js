@@ -204,6 +204,9 @@ export const randomHex32 = (hexN = '') =>
 export const normText = text =>
   text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ')
 
+export const randomString = (n = 8) =>
+  Math.random().toString(36).substring(n)
+
 // usage :
 // lighten
 // var NewColor = LightenDarkenColor('#F06D06', 20)

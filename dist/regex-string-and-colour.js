@@ -251,6 +251,11 @@ var normText = exports.normText = function normText(text) {
   return text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ');
 };
 
+var randomString = exports.randomString = function randomString() {
+  var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;
+  return Math.random().toString(36).substring(n);
+};
+
 // usage :
 // lighten
 // var NewColor = LightenDarkenColor('#F06D06', 20)
