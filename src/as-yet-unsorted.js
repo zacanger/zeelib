@@ -212,3 +212,9 @@ export function unless () {
   if (test) return fn()
 }
 */
+
+export const doubleUntil = (minSize = 0) =>
+  function double (arr) {
+    if (arr.length >= minSize) return arr
+    return double([...arr, ...arr])
+  }

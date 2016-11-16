@@ -5,6 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.tryExecNTimes = tryExecNTimes;
 exports.logWithTimestamp = logWithTimestamp;
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 // gh:artificerentertainment
 var nco = exports.nco = function nco(variable, defaultValue) {
   return variable === null || typeof variable === 'undefined' ? defaultValue : variable;
@@ -223,3 +226,11 @@ export function unless () {
   if (test) return fn()
 }
 */
+
+var doubleUntil = exports.doubleUntil = function doubleUntil() {
+  var minSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  return function double(arr) {
+    if (arr.length >= minSize) return arr;
+    return double([].concat(_toConsumableArray(arr), _toConsumableArray(arr)));
+  };
+};
