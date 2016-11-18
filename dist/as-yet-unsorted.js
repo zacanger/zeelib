@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.tryExecNTimes = tryExecNTimes;
 exports.logWithTimestamp = logWithTimestamp;
+exports.maybeArgs = maybeArgs;
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -234,3 +235,15 @@ var doubleUntil = exports.doubleUntil = function doubleUntil() {
     return double([].concat(_toConsumableArray(arr), _toConsumableArray(arr)));
   };
 };
+
+function maybeArgs(fn) {
+  return function () {
+    var args = Array.prototype.slice.all(arguments);
+    var invalid = args.some(function (arg) {
+      return arg === null;
+    });
+    if (invalid) return;
+    var result = fn.apply(this, args);
+    return typeof result === 'function' ? maybeArgs(result) : result;
+  };
+}
