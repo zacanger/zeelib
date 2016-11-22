@@ -228,6 +228,7 @@ export function unless () {
 }
 */
 
+// doubleUntil(10)(['hi'])
 var doubleUntil = exports.doubleUntil = function doubleUntil() {
   var minSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
   return function double(arr) {

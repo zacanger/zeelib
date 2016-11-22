@@ -213,6 +213,7 @@ export function unless () {
 }
 */
 
+// doubleUntil(10)(['hi'])
 export const doubleUntil = (minSize = 0) =>
   function double (arr) {
     if (arr.length >= minSize) return arr

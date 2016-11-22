@@ -22,6 +22,19 @@ export const memoizeWithCache = fn => (arg, memoCache) => {
   return res
 }
 
+// const memoize = f => {
+  // const cache = new Map()
+  // return a => {
+    // if (cache.has(a)) {
+      // return cache.get(a)
+    // } else {
+      // const res = f(a)
+      // cache.set(a, res)
+      // return res
+    // }
+  // }
+// }
+//
 // export function memoize = function(fn) {
 // const cache = {}
 // const fnVal = function(val) {
