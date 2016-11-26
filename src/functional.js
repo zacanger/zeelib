@@ -192,3 +192,22 @@ export const unfold = (fn, seed) => {
 export const not = (a) =>
   (b) =>
     a !== b
+
+export const pair = (f, s) =>
+  [f, s]
+
+export const map = (fn, xs) =>
+  xs.map(fn)
+
+export const zip = (xs, l) =>
+  map((x, i) => pair(x, l[i]), xs)
+
+export const zipWith = (fn, xs, arr) =>
+  map((x, i) => fn.apply(fn, pair(x, arr[i])), xs)
+
+export const invoke = (fn, ...args) =>
+  fn(...args)
+
+export const zipThen = (after, xs) =>
+  (...list) =>
+    after.apply(after, zipWith(invoke, xs, list))

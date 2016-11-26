@@ -228,3 +228,41 @@ var not = exports.not = function not(a) {
     return a !== b;
   };
 };
+
+var pair = exports.pair = function pair(f, s) {
+  return [f, s];
+};
+
+var map = exports.map = function map(fn, xs) {
+  return xs.map(fn);
+};
+
+var zip = exports.zip = function zip(xs, l) {
+  return map(function (x, i) {
+    return pair(x, l[i]);
+  }, xs);
+};
+
+var zipWith = exports.zipWith = function zipWith(fn, xs, arr) {
+  return map(function (x, i) {
+    return fn.apply(fn, pair(x, arr[i]));
+  }, xs);
+};
+
+var invoke = exports.invoke = function invoke(fn) {
+  for (var _len5 = arguments.length, args = Array(_len5 > 1 ? _len5 - 1 : 0), _key5 = 1; _key5 < _len5; _key5++) {
+    args[_key5 - 1] = arguments[_key5];
+  }
+
+  return fn.apply(undefined, args);
+};
+
+var zipThen = exports.zipThen = function zipThen(after, xs) {
+  return function () {
+    for (var _len6 = arguments.length, list = Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {
+      list[_key6] = arguments[_key6];
+    }
+
+    return after.apply(after, zipWith(invoke, xs, list));
+  };
+};
