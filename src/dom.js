@@ -12,4 +12,3 @@ export const getHeight = () =>
 
 export const getScrollBarWidth = () =>
   global.innerWidth - global.document.documentElement.clientWidth
-

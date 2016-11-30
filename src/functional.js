@@ -118,10 +118,6 @@ export const all = curry((predicate, list) =>
 export const compose = (...fns) =>
   pipe(...reverse(fns))
 
-// export const compose = (f, g) =>
-//   x =>
-//     f(g(x))
-
 export const identity = x => x
 
 export const memoize = (fn) => {
@@ -180,14 +176,6 @@ export const unfold = (fn, seed) => {
   }
   return [r[0]].concat(unfold(fn, r[1]))
 }
-
-// credit: texas toland
-// export const pipe = (x, ...s) =>
-// s.reduce((y, f) =>
-// f(y), x)
-// more verbosely
-// const pipe = (initialValue, ...fns) =>
-// fns.reduce((state, fn) => fn(state), initialValue)
 
 export const not = (a) =>
   (b) =>

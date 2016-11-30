@@ -98,16 +98,6 @@ export const invoker = (limit, interval) => (fn, cb) => {
 // return f
 // }
 
-// you should never rely on something like this to validate an email.
-// email validation is basically impossible, so find some stable library
-// to do it for you.
-// export const isEmail = email =>
-//   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
-// export const isEmail = email =>
-//   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)
-// export const isEmail = email =>
-//   /^([\w-\.]*(\+[a-z0-9-]+)?@([\w-]+\.)+[\w-]{2,10})?$/.test(email)
-
 export const transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 export const brokenImg = 'data:;base64,iVBORwOKGO=='
 
@@ -196,22 +186,6 @@ export const chunk = (arr, n) => {
 
 export const unless = (cond, fn) =>
   !cond ? fn() : null
-
-/*
-export function unless () {
-  let test = true
-  const args = [...arguments]
-  const conds = args.splice(args.length)
-  const fn = args[args.length - 1]
-  if (typeof fn !== 'function') {
-    return console.warn('Last argument must be a function.')
-  }
-  conds.forEach(cond => {
-    if (!cond) test = false
-  })
-  if (test) return fn()
-}
-*/
 
 // doubleUntil(10)(['hi'])
 export const doubleUntil = (minSize = 0) =>

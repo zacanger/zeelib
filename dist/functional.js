@@ -137,10 +137,6 @@ var compose = exports.compose = function compose() {
   return pipe.apply(undefined, _toConsumableArray(reverse(fns)));
 };
 
-// export const compose = (f, g) =>
-//   x =>
-//     f(g(x))
-
 var identity = exports.identity = function identity(x) {
   return x;
 };
@@ -214,14 +210,6 @@ var unfold = exports.unfold = function unfold(fn, seed) {
   }
   return [r[0]].concat(unfold(fn, r[1]));
 };
-
-// credit: texas toland
-// export const pipe = (x, ...s) =>
-// s.reduce((y, f) =>
-// f(y), x)
-// more verbosely
-// const pipe = (initialValue, ...fns) =>
-// fns.reduce((state, fn) => fn(state), initialValue)
 
 var not = exports.not = function not(a) {
   return function (b) {
