@@ -16,6 +16,10 @@ var _functional = require('./functional');
 
 var fp = _interopRequireWildcard(_functional);
 
+var _keycodes = require('./keycodes');
+
+var keycodes = _interopRequireWildcard(_keycodes);
+
 var _asYetUnsorted = require('./as-yet-unsorted');
 
 var misc = _interopRequireWildcard(_asYetUnsorted);
@@ -30,18 +34,18 @@ var util = _interopRequireWildcard(_typesAndMisc);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-// a little kinda lib thingy idk
+exports.default = {
+  dom: dom,
+  forNode: forNode,
+  fp: fp,
+  keycodes: keycodes,
+  misc: misc,
+  str: str,
+  util: util
+}; // a little kinda lib thingy idk
 // just a bunch of utils really
 // some stuff that's basically polyfills-ish
 // needs node (there's fs stuff, etc.)
 // some is modded stuff from:
 // gh:nervgh/yum.js,
 // gh:shapeshed/stringbean
-exports.default = {
-  dom: dom,
-  forNode: forNode,
-  fp: fp,
-  misc: misc,
-  str: str,
-  util: util
-};

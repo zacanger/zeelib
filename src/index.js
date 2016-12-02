@@ -8,6 +8,7 @@
 import * as dom from './dom'
 import * as forNode from './node'
 import * as fp from './functional'
+import * as keycodes from './keycodes'
 import * as misc from './as-yet-unsorted'
 import * as str from './regex-string-and-colour'
 import * as util from './types-and-misc'
@@ -16,6 +17,7 @@ export default {
   dom
 , forNode
 , fp
+, keycodes
 , misc
 , str
 , util
