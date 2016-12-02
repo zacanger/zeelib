@@ -296,3 +296,11 @@ var combineRegex = exports.combineRegex = function combineRegex(rs, opts) {
     return r.source;
   }).join(''), opts);
 };
+
+// gh:sindresorhus/slash
+var windowsSlashes = exports.windowsSlashes = function windowsSlashes(str) {
+  var isExtendedLengthPath = /^\\\\\?\\/.test(str);
+  var hasNonAscii = /[^\x00-\x80]+/.test(str);
+  if (isExtendedLengthPath || hasNonAscii) return str;
+  return str.replace(/\\/g, '/');
+};

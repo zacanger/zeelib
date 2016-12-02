@@ -245,3 +245,11 @@ export const LightenDarkenColor = (col, amt) => {
 // [RegExp] -> RegExp
 export const combineRegex = (rs, opts) =>
   new RegExp(rs.map(r => r.source).join(''), opts)
+
+// gh:sindresorhus/slash
+export const windowsSlashes = str => {
+  const isExtendedLengthPath = /^\\\\\?\\/.test(str)
+  const hasNonAscii = /[^\x00-\x80]+/.test(str)
+  if (isExtendedLengthPath || hasNonAscii) return str
+  return str.replace(/\\/g, '/')
+}
