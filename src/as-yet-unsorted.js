@@ -78,26 +78,6 @@ export const invoker = (limit, interval) => (fn, cb) => {
   _fn()
 }
 
-// run only once
-// usage:
-// function foo (cb) {
-// cb = once(cb)
-// if (!cb.called) {
-// // do things
-// }
-// }
-// export function once (fn) {
-// let f = function () {
-// if (f.called) {
-// return f.value
-// }
-// f.called = true
-// return f.value = fn.apply(this, arguments)
-// }
-// f.called = false
-// return f
-// }
-
 export const transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 export const brokenImg = 'data:;base64,iVBORwOKGO=='
 

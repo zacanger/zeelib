@@ -1,77 +1,3 @@
-export const memoizeSimple = fn => {
-  let
-    cachedArg
-  , cachedRes
-  return arg => {
-    if (cachedArg === arg) {
-      return cachedRes
-    }
-    cachedArg = arg
-    cachedRes = fn(arg)
-    return cachedRes
-  }
-}
-
-export const memoizeWithCache = fn => (arg, memoCache) => {
-  if (memoCache.arg === arg) {
-    return memoCache.res
-  }
-  const res = fn(arg)
-  memoCache.arg = arg
-  memoCache.res = res
-  return res
-}
-
-// const memoize = f => {
-  // const cache = new Map()
-  // return a => {
-    // if (cache.has(a)) {
-      // return cache.get(a)
-    // } else {
-      // const res = f(a)
-      // cache.set(a, res)
-      // return res
-    // }
-  // }
-// }
-//
-// export function memoize = function(fn) {
-// const cache = {}
-// const fnVal = function(val) {
-// return val
-// }
-// return function() {
-// const key = fnVal.apply(this, arguments)
-// if (key in cache) {
-// return cache[key]
-// } else {
-// const v = fn.apply(this, arguments)
-// cache[key] = v
-// return v
-// }
-// }
-// }
-//
-// function memoize (fn) {
-// var cache = {}
-// return function (n) {
-// var key = JSON.stringify([].slice.call(arguments))
-// if (!(key in cache)) {
-// cache[key] = fn.apply(null, arguments)
-// }
-// return cache[key]
-// }
-// }
-
-// export const curry = fn => {
-// const length = fn.length
-// const acc = (...args) => {
-// if (args.length === length) return fn(...args)
-// return (...args) => acc(...args.concat(args))
-// }
-// return acc
-// }
-
 export const curry = function (fn) {
   const originalArguments = getFunctionArguments(fn) || []
 
@@ -114,6 +40,15 @@ export const all = curry((predicate, list) =>
   , true)
 )
 
+// reverses array
+export const reverse = (items) => {
+  let result = []
+  for (let i = items.length - 1; i >= 0; i--) {
+    result.push(items[i])
+  }
+  return result
+}
+
 // r->l composition
 export const compose = (...fns) =>
   pipe(...reverse(fns))
@@ -144,15 +79,6 @@ export const reduce = curry((fn, initialValue, data) => {
   }
   return reducedValue
 })
-
-// reverses array
-export const reverse = (items) => {
-  let result = []
-  for (let i = items.length - 1; i >= 0; i--) {
-    result.push(items[i])
-  }
-  return result
-}
 
 // l->r composition
 export const pipe = (...fns) =>

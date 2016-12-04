@@ -167,12 +167,12 @@ export const findPort = (port, cb) => {
   server.listen(port)
 }
 
-// not sure which of these is better
-export const userHome = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']
-// export const userHome = process.env.HOME ||
-//   process.env.HOMEPATH ||
-//   process.env.USERPROFILE
-// export const userHome = os.homedir()
+export const userHome =
+  process.env.HOME ||
+  process.env.HOMEPATH ||
+  process.env.USERPROFILE ||
+  os.homedir() ||
+  process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']
 
 // check if a terminal supports colour
 const isWin = () => process.platform === 'win32'

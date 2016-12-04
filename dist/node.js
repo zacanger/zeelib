@@ -191,12 +191,7 @@ var findPort = exports.findPort = function findPort(port, cb) {
   server.listen(port);
 };
 
-// not sure which of these is better
-var userHome = exports.userHome = process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME'];
-// export const userHome = process.env.HOME ||
-//   process.env.HOMEPATH ||
-//   process.env.USERPROFILE
-// export const userHome = os.homedir()
+var userHome = exports.userHome = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE || _os2.default.homedir() || process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME'];
 
 // check if a terminal supports colour
 var isWin = function isWin() {

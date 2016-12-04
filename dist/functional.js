@@ -6,81 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-var memoizeSimple = exports.memoizeSimple = function memoizeSimple(fn) {
-  var cachedArg = void 0,
-      cachedRes = void 0;
-  return function (arg) {
-    if (cachedArg === arg) {
-      return cachedRes;
-    }
-    cachedArg = arg;
-    cachedRes = fn(arg);
-    return cachedRes;
-  };
-};
-
-var memoizeWithCache = exports.memoizeWithCache = function memoizeWithCache(fn) {
-  return function (arg, memoCache) {
-    if (memoCache.arg === arg) {
-      return memoCache.res;
-    }
-    var res = fn(arg);
-    memoCache.arg = arg;
-    memoCache.res = res;
-    return res;
-  };
-};
-
-// const memoize = f => {
-// const cache = new Map()
-// return a => {
-// if (cache.has(a)) {
-// return cache.get(a)
-// } else {
-// const res = f(a)
-// cache.set(a, res)
-// return res
-// }
-// }
-// }
-//
-// export function memoize = function(fn) {
-// const cache = {}
-// const fnVal = function(val) {
-// return val
-// }
-// return function() {
-// const key = fnVal.apply(this, arguments)
-// if (key in cache) {
-// return cache[key]
-// } else {
-// const v = fn.apply(this, arguments)
-// cache[key] = v
-// return v
-// }
-// }
-// }
-//
-// function memoize (fn) {
-// var cache = {}
-// return function (n) {
-// var key = JSON.stringify([].slice.call(arguments))
-// if (!(key in cache)) {
-// cache[key] = fn.apply(null, arguments)
-// }
-// return cache[key]
-// }
-// }
-
-// export const curry = fn => {
-// const length = fn.length
-// const acc = (...args) => {
-// if (args.length === length) return fn(...args)
-// return (...args) => acc(...args.concat(args))
-// }
-// return acc
-// }
-
 var curry = exports.curry = function curry(fn) {
   var originalArguments = getFunctionArguments(fn) || [];
 
@@ -128,6 +53,15 @@ var all = exports.all = curry(function (predicate, list) {
   }, true);
 });
 
+// reverses array
+var reverse = exports.reverse = function reverse(items) {
+  var result = [];
+  for (var i = items.length - 1; i >= 0; i--) {
+    result.push(items[i]);
+  }
+  return result;
+};
+
 // r->l composition
 var compose = exports.compose = function compose() {
   for (var _len2 = arguments.length, fns = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
@@ -169,15 +103,6 @@ var reduce = exports.reduce = curry(function (fn, initialValue, data) {
   }
   return reducedValue;
 });
-
-// reverses array
-var reverse = exports.reverse = function reverse(items) {
-  var result = [];
-  for (var i = items.length - 1; i >= 0; i--) {
-    result.push(items[i]);
-  }
-  return result;
-};
 
 // l->r composition
 var pipe = exports.pipe = function pipe() {

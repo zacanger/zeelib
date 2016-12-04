@@ -91,26 +91,6 @@ var invoker = exports.invoker = function invoker(limit, interval) {
   };
 };
 
-// run only once
-// usage:
-// function foo (cb) {
-// cb = once(cb)
-// if (!cb.called) {
-// // do things
-// }
-// }
-// export function once (fn) {
-// let f = function () {
-// if (f.called) {
-// return f.value
-// }
-// f.called = true
-// return f.value = fn.apply(this, arguments)
-// }
-// f.called = false
-// return f
-// }
-
 var transparentGif = exports.transparentGif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 var brokenImg = exports.brokenImg = 'data:;base64,iVBORwOKGO==';
 
