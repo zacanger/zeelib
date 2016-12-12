@@ -202,3 +202,10 @@ function maybeArgs(fn) {
     return typeof result === 'function' ? maybeArgs(result) : result;
   };
 }
+
+// getKeyByValue({ foo: 'bar' }, 'bar')
+var getKeyByValue = exports.getKeyByValue = function getKeyByValue(object, value) {
+  return Object.keys(object).find(function (key) {
+    return object[key] === value;
+  });
+};

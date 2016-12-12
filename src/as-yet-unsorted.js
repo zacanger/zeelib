@@ -183,3 +183,7 @@ export function maybeArgs (fn) {
     return typeof result === 'function' ? maybeArgs(result) : result
   }
 }
+
+// getKeyByValue({ foo: 'bar' }, 'bar')
+export const getKeyByValue = (object, value) =>
+  Object.keys(object).find(key => object[key] === value)
