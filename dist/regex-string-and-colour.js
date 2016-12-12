@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.rot13 = rot13;
+/* eslint-disable no-useless-escape */
+
 // removes html-like tags
 var removeTags = exports.removeTags = function removeTags(str) {
   return str.replace(/(<([^>]+)>)/ig, '');
@@ -303,4 +305,8 @@ var windowsSlashes = exports.windowsSlashes = function windowsSlashes(str) {
   var hasNonAscii = /[^\x00-\x80]+/.test(str);
   if (isExtendedLengthPath || hasNonAscii) return str;
   return str.replace(/\\/g, '/');
+};
+
+var cssToJson = exports.cssToJson = function cssToJson(str) {
+  return str.replace(/(\w*:)/g, '$1"').replace(/[;]/g, '";').replace(/(\'{2,})/g, '"').replace(/;/g, ',').replace(/(['"])?([a-zA-Z0-9_-]+)(['"])?:/g, '"$2": ').replace(/,\s*\}/, '}').trim();
 };
