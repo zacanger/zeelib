@@ -283,3 +283,6 @@ export function toType (val) {
   }
   return ({}).toString.call(val).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 }
+
+export const isPromise = (a) =>
+  a && typeof a.then === 'function'
