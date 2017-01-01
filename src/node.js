@@ -171,8 +171,7 @@ export const userHome =
   process.env.HOME ||
   process.env.HOMEPATH ||
   process.env.USERPROFILE ||
-  os.homedir() ||
-  process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']
+  os.homedir()
 
 // check if a terminal supports colour
 const isWin = () => process.platform === 'win32'
