@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+
 // returns true if val is NaN
 export const isNaN = Number.isNaN
 
@@ -198,6 +200,16 @@ export const isDefined = v =>
 // returns true if val is DOM el
 export const isElement = v =>
   objToString.call(v).slice(8, 12) === 'HTML'
+
+export const isNodeList = v =>
+  isArrayLike(v) && /^\[object (HTMLCollection|NodeList)\]$/.test(v + '')
+
+export const isEmpty = v => {
+  if (isString(v)) return /^\s*$/.test(v)
+  if (isArrayLike(v)) return !v.length
+  if (isObject(v)) return !Object.keys(v).length
+  return !v
+}
 
 // json utils (mostly node ones)
 
