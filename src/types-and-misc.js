@@ -297,3 +297,8 @@ export const typeOf = (a) => {
   }
   return typeof a
 }
+
+export const tap = (msg) => (a) => {
+  console.log(msg, a)
+  return a
+}
