@@ -1,14 +1,32 @@
 // some dom things
 export const scrollTop = () =>
-  global.scrollTo(0, 0)
+  window.scrollTo(0, 0)
 
 export const getWidth = () =>
-  global.innerWidth ||
-  global.document.documentElement.clientWidth
+  window.innerWidth ||
+  window.document.documentElement.clientWidth
 
 export const getHeight = () =>
-  global.innerHeight ||
-  global.document.documentElement.clientHeight
+  window.innerHeight ||
+  window.document.documentElement.clientHeight
 
 export const getScrollBarWidth = () =>
-  global.innerWidth - global.document.documentElement.clientWidth
+  window.innerWidth - window.document.documentElement.clientWidth
+
+export const getReferrer = () =>
+  document.referrer
+
+export const getIsBrowser = () =>
+  typeof window !== 'undefined' && !!process.browser
+
+export const getScrollPosition = () =>
+  ({ scrollX: window.scrollX, scrollY: window.scrollY })
+
+export const restoreScrollPosition = ({ scrollX, scrollY }) =>
+  window.scrollTo(scrollX, scrollY)
+
+export const getCookie = (name) => {
+  const value = '; ' + document.cookie
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
