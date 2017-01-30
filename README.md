@@ -1,24 +1,21 @@
-Right now, this is just a crapton of little functions all in one file.
-One day, maybe something else. Probably not. Who knows.
+Changes:
 
-For now, documentation is mostly in the comments. Sorry.
+* `0.2.0` -- *breaking* -- all functions now in top level
+  * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`).
 
-Usage (sorta):
+Just a load of small utilities.
+
+For now, documentation is mostly in the comments, or function names.
+Sorry.
+
+Usage:
 
 ```javascript
-import { dom, fp, str, forNode, misc, util } from 'zeelib'
+import z from 'zeelib'
 
-forNode.open('http://zacanger.co')
-
-console.log(dom.getScrollBarWidth())
-
-document.write(misc.transparentGif)
-
-fp.identity('something')
-
-if (util.isEven(2)) // do things
-
-str.camelCaseToLispCase('thisString')
+z.open('http://zacanger.com')
+if (z.isEven(process.argv[2])) // do things
+z.camelCaseToLispCase('thisString')
 ```
 
 Skimming the source or browsing in the Node REPL would probably be a good
