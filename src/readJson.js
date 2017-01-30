@@ -1,0 +1,21 @@
+import { readFile } from 'fs'
+
+// read json file, parse it, call cb with obj or err
+const readJson = (file, cb) => {
+  readFile(file, 'utf8', (err, json) => {
+    if (err) {
+      cb(err)
+      return
+    }
+    let data
+    try {
+      data = JSON.parse(json)
+    } catch (e) {
+      cb(e)
+      return
+    }
+    cb(null, data)
+  })
+}
+
+export default readJson
