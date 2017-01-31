@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var hexRegex=/^#?[a-f0-9]{3}|[a-f0-9]{6}$/i;exports.default=hexRegex;

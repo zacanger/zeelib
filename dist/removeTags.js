@@ -1,0 +1,2 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});// removes html-like tags
+var removeTags=function removeTags(str){return str.replace(/(<([^>]+)>)/ig,'')};exports.default=removeTags;

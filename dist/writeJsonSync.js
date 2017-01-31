@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var _fs=require('fs');var writeJsonSync=function writeJsonSync(file,data,indent){if(typeof indent!=='number'){indent=0}(0,_fs.writeFileSync)(file,JSON.stringify(data,null,indent),'utf8')};exports.default=writeJsonSync;

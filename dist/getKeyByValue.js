@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});// getKeyByValue({ foo: 'bar' }, 'bar')
+var getKeyByValue=function getKeyByValue(object,value){return Object.keys(object).find(function(key){return object[key]===value})};exports.default=getKeyByValue;

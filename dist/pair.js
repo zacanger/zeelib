@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var pair=function pair(f,s){return[f,s]};exports.default=pair;

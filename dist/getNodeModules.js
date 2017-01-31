@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var _fs=require('fs');var getNodeModules=function getNodeModules(){var nodeModules={};(0,_fs.readdirSync)('node_modules').filter(function(a){return['.bin'].indexOf(a)===-1}).forEach(function(b){nodeModules[b]='commonjs '+b});return nodeModules};exports.default=getNodeModules;

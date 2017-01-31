@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var _os=require('os');var getUserHome=function getUserHome(){return process.env.HOME||process.env.HOMEPATH||process.env.USERPROFILE||(0,_os.homedir)()};exports.default=getUserHome;

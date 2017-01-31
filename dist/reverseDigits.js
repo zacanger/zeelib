@@ -1,0 +1,2 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});// reverse digits with correct sign handling
+var reverseDigits=function reverseDigits(n){return Math.sign(n)*(''+Math.abs(n)).split('').reverse().join('')||0};exports.default=reverseDigits;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isInteger=Number.isInteger||function(n){return(n|0)===n};exports.default=isInteger;

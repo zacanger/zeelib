@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var unfold=function unfold(fn,seed){var r=fn(seed);if(!Array.isArray(r)){return[]}return[r[0]].concat(unfold(fn,r[1]))};exports.default=unfold;

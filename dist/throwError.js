@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var throwError=function throwError(err){throw new Error(err)};exports.default=throwError;

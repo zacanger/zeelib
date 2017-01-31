@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var removeWhitespace=function removeWhitespace(str){return str.replace(/^\s+|\s+$/,'')};exports.default=removeWhitespace;

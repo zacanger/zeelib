@@ -1,0 +1,2 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var _deepCopy=require('./deepCopy');var _deepCopy2=_interopRequireDefault(_deepCopy);var _shallowCopy=require('./shallowCopy');var _shallowCopy2=_interopRequireDefault(_shallowCopy);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}// copy obj, either shallow or deep
+var copy=function copy(o,shallow){var copyfn=shallow?_shallowCopy2.default:_deepCopy2.default;return copyfn(o)};exports.default=copy;

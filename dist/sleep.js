@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});// i know this is pointless but i think it's cute
+var sleep=function sleep(ms){var start=new Date().getTime();while(new Date().getTime()-start<ms){}};exports.default=sleep;

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var minifyString=function minifyString(str){return str.replace(/\n/g,'').replace(/\s\s+/g,' ')};exports.default=minifyString;

@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});// [Str] -> Str -> Bool
+var isStringSomewhereInArray=function isStringSomewhereInArray(arr,el){return arr.some(function(a){return el.toLowerCase().includes(a.toLowerCase())||a.toLowerCase().includes(el.toLowerCase())})};exports.default=isStringSomewhereInArray;

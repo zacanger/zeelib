@@ -1,0 +1,2 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});// gh:artificerentertainment
+var nco=function nco(variable,defaultValue){return variable===null||typeof variable==='undefined'?defaultValue:variable};exports.default=nco;
