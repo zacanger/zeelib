@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});/* eslint-disable no-useless-escape */var unescapeHtml=function unescapeHtml(str){return str.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"')};exports.default=unescapeHtml;
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var unescapeHtml=function unescapeHtml(str){return str.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"')};exports.default=unescapeHtml;

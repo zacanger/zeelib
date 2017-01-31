@@ -1,2 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});// transpose a 2-dimensional matrix like [[1,2,3],[4,5,6],[7,8,9]]
-var transpose=function transpose(m){return m.map(function(r,ri){return r.map(function(c,ci){return m[ci][ri]})})};exports.default=transpose;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var transpose=function transpose(m){return m.map(function(r,ri){return r.map(function(c,ci){return m[ci][ri]})})};exports.default=transpose;
