@@ -60,6 +60,7 @@ import unescapeHtml from './unescapeHtml'
 import base64BufferDec from './base64BufferDec'
 import base64BufferEnc from './base64BufferEnc'
 import colorize from './colorize'
+import dir from './dir'
 import findPort from './findPort'
 import getNodeModules from './getNodeModules'
 import getTerminalColumns from './getTerminalColumns'
@@ -235,6 +236,7 @@ export default {
 , base64BufferDec
 , base64BufferEnc
 , colorize
+, dir
 , findPort
 , getNodeModules
 , getTerminalColumns

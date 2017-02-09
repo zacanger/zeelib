@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var dir=function dir(obj){return console.dir(obj,{colors:true})};exports.default=dir;
