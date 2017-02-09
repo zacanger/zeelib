@@ -80,11 +80,14 @@ import writeJsonSync from './writeJsonSync'
 import all from './all'
 import compose from './compose'
 import curry from './curry'
+import each from './each'
+import filter from './filter'
 import getFunctionArguments from './getFunctionArguments'
 import id from './id'
 import invoke from './invoke'
 import map from './map'
 import memoize from './memoize'
+import mix from './mix'
 import not from './not'
 import once from './once'
 import pair from './pair'
@@ -252,11 +255,14 @@ export default {
 , all
 , compose
 , curry
+, each
+, filter
 , getFunctionArguments
 , id
 , invoke
 , map
 , memoize
+, mix
 , not
 , once
 , pair
