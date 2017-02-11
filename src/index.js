@@ -68,6 +68,7 @@ import getTerminalRows from './getTerminalRows'
 import getTerminalSize from './getTerminalSize'
 import getUserHome from './getUserHome'
 import hasColor from './hasColor'
+import isInstalled from './isInstalled'
 import logWithInfo from './logWithInfo'
 import open from './open'
 import readJson from './readJson'
@@ -244,6 +245,7 @@ export default {
 , getTerminalSize
 , getUserHome
 , hasColor
+, isInstalled
 , logWithInfo
 , open
 , readJson
