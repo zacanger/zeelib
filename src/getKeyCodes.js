@@ -1,3 +1,4 @@
+/* eslint-disable comma-style */
 const getKeyCodes = () => ({
   BACKSPACE: 8,
   TAB: 9,
@@ -16,7 +17,7 @@ const getKeyCodes = () => ({
   END: 35,
   HOME: 36,
 
-    // arrows
+  // arrows
   LEFT: 37,
   UP: 38,
   RIGHT: 39,
@@ -25,7 +26,7 @@ const getKeyCodes = () => ({
   INSERT: 45,
   DELETE: 46,
 
-    // numbers
+  // numbers
   NUMBER_0: 48,
   NUMBER_1: 49,
   NUMBER_2: 50,
@@ -37,7 +38,7 @@ const getKeyCodes = () => ({
   NUMBER_8: 56,
   NUMBER_9: 57,
 
-    // letters
+  // letters
   A: 65,
   B: 66,
   C: 67,
@@ -96,7 +97,7 @@ const getKeyCodes = () => ({
   RIGHT_WINDOW_KEY: 92,
   SELECT_KEY: 93,
 
-    // number pad
+  // number pad
   NUMPAD_0: 96,
   NUMPAD_1: 97,
   NUMPAD_2: 98,
@@ -114,7 +115,7 @@ const getKeyCodes = () => ({
   NUMPAD_DECIMAL: 110,
   NUMPAD_DIVIDE: 111,
 
-    // function keys
+  // function keys
   F1: 112,
   F2: 113,
   F3: 114,
@@ -134,7 +135,7 @@ const getKeyCodes = () => ({
   NUM_LOCK: 144,
   SCROLL_LOCK: 145,
 
-    // punctuation
+  // punctuation
   SEMICOLON: 186,
   EQUAL: 187,
   COMMA: 188,
