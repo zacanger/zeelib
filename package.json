@@ -10,9 +10,11 @@
   "license": "WTFPL",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel --minified src/ -d dist/",
+    "build": "babel --minified --ignore \"src/*.test.js\" src/ -d dist/",
     "clean": "rm -rf dist/ && mkdir -p dist/",
-    "prebuild": "npm run clean"
+    "prebuild": "npm run clean",
+    "prepublish": "npm run test",
+    "test": "babel-tape-runner src/*.test.js"
   },
   "homepage": "https://github.com/zacanger/zeelib#readme",
   "repository": {
@@ -28,6 +30,8 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
-    "babel-preset-latest": "^6.22.0"
+    "babel-preset-latest": "^6.22.0",
+    "babel-tape-runner": "^2.0.1",
+    "tape": "^4.6.3"
   }
 }
