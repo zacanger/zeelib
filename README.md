@@ -1,3 +1,7 @@
+## zeelib
+
+A small lib of FP, Node, and DOM utils.
+
 Changes:
 
 * `0.2.0` -- *breaking* -- all functions now in top level

@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
-  "description": "My own little micro library thing.",
-  "version": "0.3.8",
+  "description": "A small lib of FP, Node, and DOM utils.",
+  "version": "0.3.9",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -25,7 +25,11 @@
   },
   "bugs": "https://github.com/zacanger/zeelib/issues",
   "keywords": [
+    "dom",
+    "fp",
+    "lib",
     "library",
+    "node",
     "utils"
   ],
   "dependencies": {},
