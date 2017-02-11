@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "My own little micro library thing.",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -11,7 +11,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel --minified src/ -d dist/",
-    "clean": "rm -rf dist/ && mkdir -p dist/"
+    "clean": "rm -rf dist/ && mkdir -p dist/",
+    "prebuild": "npm run clean"
   },
   "homepage": "https://github.com/zacanger/zeelib#readme",
   "repository": {
