@@ -94,6 +94,7 @@ import not from './not'
 import once from './once'
 import pair from './pair'
 import pipe from './pipe'
+import pluck from './pluck'
 import propEq from './propEq'
 import reduce from './reduce'
 import reverse from './reverse'
@@ -271,6 +272,7 @@ export default {
 , once
 , pair
 , pipe
+, pluck
 , propEq
 , reduce
 , reverse
