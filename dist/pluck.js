@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var pluck=function pluck(arr,key){return arr.map(function(obj){return obj[key]})};exports.default=pluck;

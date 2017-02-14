@@ -22,6 +22,8 @@ if (z.isEven(process.argv[2])) // do things
 z.camelCaseToLispCase('thisString')
 ```
 
+If you're using `require` you'll need to do `require('zeelib').default`.
+
 Skimming the source or browsing in the Node REPL would probably be a good
 way to find out what all is in here.
 
