@@ -9,8 +9,9 @@ Changes:
 
 Just a load of small utilities.
 
-For now, documentation is mostly in the comments, or function names.
-Sorry.
+There's a full list at the bottom of this file.
+
+Documentation is mostly just function names. Sorry.
 
 Usage:
 
@@ -24,7 +25,207 @@ z.camelCaseToLispCase('thisString')
 
 If you're using `require` you'll need to do `require('zeelib').default`.
 
-Skimming the source or browsing in the Node REPL would probably be a good
-way to find out what all is in here.
+## License
 
-License: WTFPL
+[WTFPL](./LICENSE.md)
+
+## Contributing
+
+* Please run `npm test`.
+* If you can, please _add_ a test.
+* Please add your thing in these places:
+  * `src/index.js` in the appropriate place
+  * The full list below
+* Make sure you run `npm run build`
+
+## Full list:
+
+### dom
+
+* getCookie
+* getHeight
+* getIsBrowser
+* getReferrer
+* getScrollBarWidth
+* getWidth
+* restoreScrollPosition
+* scrollTop
+
+### keycodes
+
+* getKeyCodes
+
+### regex, string utils, etc.
+
+* addNewlines
+* alphaNumericOnly
+* camelCaseToLispCase
+* camelCaseToSnakeCase
+* capitalizeFirstChar
+* collapseWhitespace
+* combineRegex
+* cssToJson
+* escapeHtml
+* fixWindowsSlashes
+* getComplimentaryColors
+* getRandomHex32
+* getRandomString
+* getUid4
+* getUid8
+* hexRegex
+* inlineString
+* isAlphaNumeric
+* isEmoji
+* isEmptyString
+* isHexBased
+* isMobileOrTablet
+* isStringSomewhereInArray
+* isValidEmail
+* isValidHex
+* lightenOrDarken
+* lispCaseToCamelCase
+* minifyString
+* newlinesToSpaces
+* normalizeClassname
+* normalizeColor
+* normalizeText
+* randomColor
+* removeNewlines
+* removeNonAlpha
+* removeNonAlphaNumeric
+* removeNonNumeric
+* removeNumeric
+* removeTags
+* removeWhitespace
+* rot13
+* snakeCaseToCamelCase
+* stripPunctuation
+* trimHash
+* trimSpaces
+* unescapeHtml
+
+### node
+
+* base64BufferDec
+* base64BufferEnc
+* colorize
+* dir
+* findPort
+* getNodeModules
+* getTerminalColumns
+* getTerminalRows
+* getTerminalSize
+* getUserHome
+* hasColor
+* isInstalled
+* logWithInfo
+* open
+* readJson
+* readJsonSync
+* termPrompt
+* tinyRouter
+* writeError
+* writeJson
+* writeJsonSync
+
+### fp utils
+
+* all
+* compose
+* curry
+* each
+* filter
+* getFunctionArguments
+* id
+* invoke
+* map
+* memoize
+* mix
+* not
+* once
+* pair
+* pipe
+* pluck
+* propEq
+* reduce
+* reverse
+* unfold
+* zip
+* zipThen
+* zipWith
+
+### types
+
+* isArray
+* isArrayLike
+* isBoolean
+* isDate
+* isDefined
+* isDomElement
+* isEmpty
+* isEven
+* isFloat
+* isFunction
+* isInteger
+* isJson
+* isNan
+* isNegative
+* isNodeList
+* isNull
+* isNumber
+* isObject
+* isObjectEqual
+* isOdd
+* isPositive
+* isPow2
+* isPrimitive
+* isPromise
+* isRegExp
+* isString
+* isType
+* isUndefined
+* objectToString
+* toType
+* typeOf
+
+### misc
+
+* chunk
+* cloneWithout
+* copy
+* copyWithout
+* deepCopy
+* doubleUntil
+* dropWhere
+* filterFloat
+* findWhere
+* getBrokenImage
+* getKeyByValue
+* getNiceDate
+* getTransparentGif
+* greatestCommonDivisor
+* invoker
+* isObjectEmpty
+* leastCommonMultiple
+* leftPad
+* lesser
+* logWithTimestamp
+* maybeArgs
+* nco
+* noSwitch
+* objectAssign
+* objectClone
+* objectFromEntries
+* objectInherit
+* reverseDigits
+* shallowCopy
+* sleep
+* splitStringOn
+* tap
+* throwError
+* timeTest
+* transpose
+* transposeFlat
+* tryExecNTimes
+* unless
+* xor
