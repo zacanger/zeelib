@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var elem=function elem(el,a){for(var i in a){if(el===a[i]){return true}}return false};exports.default=elem;

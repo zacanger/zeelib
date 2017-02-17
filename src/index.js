@@ -83,6 +83,7 @@ import all from './all'
 import compose from './compose'
 import curry from './curry'
 import each from './each'
+import elem from './elem'
 import filter from './filter'
 import getFunctionArguments from './getFunctionArguments'
 import head from './head'
@@ -96,6 +97,7 @@ import map from './map'
 import memoize from './memoize'
 import mix from './mix'
 import not from './not'
+import notElem from './notElem'
 import once from './once'
 import pair from './pair'
 import pipe from './pipe'
@@ -103,14 +105,20 @@ import pluck from './pluck'
 import propEq from './propEq'
 import reduce from './reduce'
 import reverse from './reverse'
+import span from './span'
 import tail from './tail'
+import takeWhile from './takeWhile'
 import unfold from './unfold'
 import unlines from './unlines'
 import unwords from './unwords'
+import unzip from './unzip'
+import unzip3 from './unzip3'
 import words from './words'
 import zip from './zip'
+import zip3 from './zip3'
 import zipThen from './zipThen'
 import zipWith from './zipWith'
+import zipWith3 from './zipWith3'
 // types
 import isArray from './isArray'
 import isArrayLike from './isArrayLike'
@@ -271,6 +279,7 @@ export default {
 , compose
 , curry
 , each
+, elem
 , filter
 , getFunctionArguments
 , head
@@ -284,6 +293,7 @@ export default {
 , memoize
 , mix
 , not
+, notElem
 , once
 , pair
 , pipe
@@ -291,14 +301,20 @@ export default {
 , propEq
 , reduce
 , reverse
+, span
 , tail
+, takeWhile
 , unfold
 , unlines
 , unwords
+, unzip
+, unzip3
 , words
 , zip
+, zip3
 , zipThen
 , zipWith
+, zipWith3
 // types
 , isArray
 , isArrayLike

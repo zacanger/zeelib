@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var takeWhile=function takeWhile(pred,a){var a1=[];for(var i in a){var c=a[i];if(pred(c)){a1.push(c)}else{return a1}}return a1};exports.default=takeWhile;

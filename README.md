@@ -134,6 +134,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * compose
 * curry
 * each
+* elem
 * filter
 * getFunctionArguments
 * head
@@ -147,6 +148,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * memoize
 * mix
 * not
+* notElem
 * once
 * pair
 * pipe
@@ -154,14 +156,20 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * propEq
 * reduce
 * reverse
+* span
 * tail
+* takeWhile
 * unfold
 * unlines
 * unwords
+* unzip
+* unzip3
 * words
 * zip
+* zip3
 * zipThen
 * zipWith
+* zipWith3
 
 ### types
 
