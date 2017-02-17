@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var replicate=function replicate(i,e){var a=[];for(var x=0;x<i;x++){a.push(e)}return a};exports.default=replicate;

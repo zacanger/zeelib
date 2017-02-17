@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var sum=function sum(a){var s=0;for(var i in a){s+=a[i]}return s};exports.default=sum;

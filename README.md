@@ -132,6 +132,8 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 
 * all
 * compose
+* concat
+* concatMap
 * curry
 * drop
 * each
@@ -156,6 +158,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * pluck
 * propEq
 * reduce
+* replicate
 * reverse
 * span
 * splitAt
@@ -228,20 +231,24 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * isObjectEmpty
 * leastCommonMultiple
 * leftPad
-* lexSort
 * lesser
+* lexSort
 * logWithTimestamp
+* maximum
 * maybeArgs
+* minimum
 * nco
 * noSwitch
 * objectAssign
 * objectClone
 * objectFromEntries
 * objectInherit
+* product
 * reverseDigits
 * shallowCopy
 * sleep
 * splitStringOn
+* sum
 * tap
 * throwError
 * timeTest

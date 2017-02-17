@@ -81,6 +81,8 @@ import writeJsonSync from './writeJsonSync'
 // fp utils
 import all from './all'
 import compose from './compose'
+import concat from './concat'
+import concatMap from './concatMap'
 import curry from './curry'
 import drop from './drop'
 import each from './each'
@@ -105,6 +107,7 @@ import pipe from './pipe'
 import pluck from './pluck'
 import propEq from './propEq'
 import reduce from './reduce'
+import replicate from './replicate'
 import reverse from './reverse'
 import span from './span'
 import splitAt from './splitAt'
@@ -176,17 +179,21 @@ import leftPad from './leftPad'
 import lesser from './lesser'
 import lexSort from './lexSort'
 import logWithTimestamp from './logWithTimestamp'
+import maximum from './maximum'
 import maybeArgs from './maybeArgs'
+import minimum from './minimum'
 import nco from './nco'
 import noSwitch from './noSwitch'
 import objectAssign from './objectAssign'
 import objectClone from './objectClone'
 import objectFromEntries from './objectFromEntries'
 import objectInherit from './objectInherit'
+import product from './product'
 import reverseDigits from './reverseDigits'
 import shallowCopy from './shallowCopy'
 import sleep from './sleep'
 import splitStringOn from './splitStringOn'
+import sum from './sum'
 import tap from './tap'
 import throwError from './throwError'
 import timeTest from './timeTest'
@@ -280,6 +287,8 @@ export default {
 // fp utils
 , all
 , compose
+, concat
+, concatMap
 , curry
 , drop
 , each
@@ -304,6 +313,7 @@ export default {
 , pluck
 , propEq
 , reduce
+, replicate
 , reverse
 , span
 , splitAt
@@ -375,17 +385,21 @@ export default {
 , lesser
 , lexSort
 , logWithTimestamp
+, maximum
 , maybeArgs
+, minimum
 , nco
 , noSwitch
 , objectAssign
 , objectClone
 , objectFromEntries
 , objectInherit
+, product
 , reverseDigits
 , shallowCopy
 , sleep
 , splitStringOn
+, sum
 , tap
 , throwError
 , timeTest
