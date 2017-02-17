@@ -163,6 +163,7 @@ import isObjectEmpty from './isObjectEmpty'
 import leastCommonMultiple from './leastCommonMultiple'
 import leftPad from './leftPad'
 import lesser from './lesser'
+import lexSort from './lexSort'
 import logWithTimestamp from './logWithTimestamp'
 import maybeArgs from './maybeArgs'
 import nco from './nco'
@@ -350,6 +351,7 @@ export default {
 , leastCommonMultiple
 , leftPad
 , lesser
+, lexSort
 , logWithTimestamp
 , maybeArgs
 , nco

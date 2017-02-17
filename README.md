@@ -217,6 +217,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * isObjectEmpty
 * leastCommonMultiple
 * leftPad
+* lexSort
 * lesser
 * logWithTimestamp
 * maybeArgs
