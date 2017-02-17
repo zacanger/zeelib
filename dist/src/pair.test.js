@@ -1,0 +1,1 @@
+'use strict';var _tape=require('tape');var _tape2=_interopRequireDefault(_tape);var _pair=require('./pair');var _pair2=_interopRequireDefault(_pair);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj}}(0,_tape2.default)('pair',function(t){t.plan(1);t.deepEqual((0,_pair2.default)('a','b'),['a','b'],'puts things in a pair')});

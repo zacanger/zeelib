@@ -80,3 +80,4 @@ public/lib
 src/
 src/.webpack.js
 x/
+dist/*.test.js

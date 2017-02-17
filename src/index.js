@@ -85,8 +85,13 @@ import curry from './curry'
 import each from './each'
 import filter from './filter'
 import getFunctionArguments from './getFunctionArguments'
+import head from './head'
 import id from './id'
+import init from './init'
 import invoke from './invoke'
+import last from './last'
+import length from './length'
+import lines from './lines'
 import map from './map'
 import memoize from './memoize'
 import mix from './mix'
@@ -98,7 +103,11 @@ import pluck from './pluck'
 import propEq from './propEq'
 import reduce from './reduce'
 import reverse from './reverse'
+import tail from './tail'
 import unfold from './unfold'
+import unlines from './unlines'
+import unwords from './unwords'
+import words from './words'
 import zip from './zip'
 import zipThen from './zipThen'
 import zipWith from './zipWith'
@@ -263,8 +272,13 @@ export default {
 , each
 , filter
 , getFunctionArguments
+, head
 , id
+, init
 , invoke
+, last
+, length
+, lines
 , map
 , memoize
 , mix
@@ -276,7 +290,11 @@ export default {
 , propEq
 , reduce
 , reverse
+, tail
 , unfold
+, unlines
+, unwords
+, words
 , zip
 , zipThen
 , zipWith
