@@ -133,6 +133,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * all
 * compose
 * curry
+* drop
 * each
 * elem
 * filter
@@ -157,7 +158,9 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * reduce
 * reverse
 * span
+* splitAt
 * tail
+* take
 * takeWhile
 * unfold
 * unlines

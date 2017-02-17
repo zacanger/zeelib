@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var drop=function drop(n,a){var alen=a.length;if(n<1)return a;if(n>alen)return[];var a1=[];for(var i=n;i<alen;i++){a1.push(a[i])}return a1};exports.default=drop;

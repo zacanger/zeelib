@@ -82,6 +82,7 @@ import writeJsonSync from './writeJsonSync'
 import all from './all'
 import compose from './compose'
 import curry from './curry'
+import drop from './drop'
 import each from './each'
 import elem from './elem'
 import filter from './filter'
@@ -106,7 +107,9 @@ import propEq from './propEq'
 import reduce from './reduce'
 import reverse from './reverse'
 import span from './span'
+import splitAt from './splitAt'
 import tail from './tail'
+import take from './take'
 import takeWhile from './takeWhile'
 import unfold from './unfold'
 import unlines from './unlines'
@@ -278,6 +281,7 @@ export default {
 , all
 , compose
 , curry
+, drop
 , each
 , elem
 , filter
@@ -302,7 +306,9 @@ export default {
 , reduce
 , reverse
 , span
+, splitAt
 , tail
+, take
 , takeWhile
 , unfold
 , unlines

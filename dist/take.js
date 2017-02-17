@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var take=function take(n,a){var alen=a.length;if(n>alen)return a;var a1=[];for(var i=0;i<n&&i<alen;i++){a1.push(a[i])}return a1};exports.default=take;
