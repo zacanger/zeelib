@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var apply=function apply(f,x){return f(x)};exports.default=apply;

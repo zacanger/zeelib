@@ -82,10 +82,14 @@ import writeJsonSync from './writeJsonSync'
 import all from './all'
 import and from './and'
 import any from './any'
+import apply from './apply'
 import compose from './compose'
 import concat from './concat'
 import concatMap from './concatMap'
 import curry from './curry'
+import curry2 from './curry2'
+import curry3 from './curry3'
+import curry4 from './curry4'
 import drop from './drop'
 import each from './each'
 import elem from './elem'
@@ -295,10 +299,14 @@ export default {
 , all
 , and
 , any
+, apply
 , compose
 , concat
 , concatMap
 , curry
+, curry2
+, curry3
+, curry4
 , drop
 , each
 , elem

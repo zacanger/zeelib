@@ -133,10 +133,14 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * all
 * and
 * any
+* apply
 * compose
 * concat
 * concatMap
 * curry
+* curry2
+* curry3
+* curry4
 * drop
 * each
 * elem
