@@ -80,6 +80,8 @@ import writeJson from './writeJson'
 import writeJsonSync from './writeJsonSync'
 // fp utils
 import all from './all'
+import and from './and'
+import any from './any'
 import compose from './compose'
 import concat from './concat'
 import concatMap from './concatMap'
@@ -102,6 +104,7 @@ import mix from './mix'
 import not from './not'
 import notElem from './notElem'
 import once from './once'
+import or from './or'
 import pair from './pair'
 import pipe from './pipe'
 import pluck from './pluck'
@@ -286,6 +289,8 @@ export default {
 , writeJsonSync
 // fp utils
 , all
+, and
+, any
 , compose
 , concat
 , concatMap
@@ -308,6 +313,7 @@ export default {
 , not
 , notElem
 , once
+, or
 , pair
 , pipe
 , pluck

@@ -131,6 +131,8 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 ### fp utils
 
 * all
+* and
+* any
 * compose
 * concat
 * concatMap
@@ -153,6 +155,7 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * not
 * notElem
 * once
+* or
 * pair
 * pipe
 * pluck

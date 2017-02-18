@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var or=function or(a){for(var i in a){if(a[i]===true){return true}}return false};exports.default=or;
