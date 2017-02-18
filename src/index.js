@@ -90,6 +90,10 @@ import drop from './drop'
 import each from './each'
 import elem from './elem'
 import filter from './filter'
+import foldl from './foldl'
+import foldl1 from './foldl1'
+import foldr from './foldr'
+import foldr1 from './foldr1'
 import getFunctionArguments from './getFunctionArguments'
 import head from './head'
 import id from './id'
@@ -299,6 +303,10 @@ export default {
 , each
 , elem
 , filter
+, foldl
+, foldl1
+, foldr
+, foldr1
 , getFunctionArguments
 , head
 , id

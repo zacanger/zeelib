@@ -141,6 +141,10 @@ If you're using `require` you'll need to do `require('zeelib').default`.
 * each
 * elem
 * filter
+* foldl
+* foldl1
+* foldr
+* foldr1
 * getFunctionArguments
 * head
 * id

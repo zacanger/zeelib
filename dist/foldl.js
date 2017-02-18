@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var foldl=function foldl(f,s,a){for(var i in a){s=f(s,a[i])}return s};exports.default=foldl;
