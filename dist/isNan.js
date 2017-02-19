@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isNan=Number.isNaN;exports.default=isNan;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNan=Number.isNaN;exports.default=isNan;

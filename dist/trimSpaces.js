@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var trimSpaces=function trimSpaces(str){return typeof str==='string'?str.replace(/\s/g,''):str};exports.default=trimSpaces;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var trimSpaces=function(a){return'string'==typeof a?a.replace(/\s/g,''):a};exports.default=trimSpaces;

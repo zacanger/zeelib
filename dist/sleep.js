@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var sleep=function sleep(ms){var start=new Date().getTime();while(new Date().getTime()-start<ms){}};exports.default=sleep;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var sleep=function(a){for(var b=new Date().getTime();new Date().getTime()-b<a;);};exports.default=sleep;

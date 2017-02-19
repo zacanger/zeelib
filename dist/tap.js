@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var tap=function tap(msg){return function(a){console.log(msg,a);return a}};exports.default=tap;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var tap=function(b){return function(c){return console.log(b,c),c}};exports.default=tap;

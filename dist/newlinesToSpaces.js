@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var newlinesToSpaces=function newlinesToSpaces(str){return str.replace(/\s+/g,' ').trim()};exports.default=newlinesToSpaces;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var newlinesToSpaces=function(a){return a.replace(/\s+/g,' ').trim()};exports.default=newlinesToSpaces;

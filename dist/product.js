@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var product=function product(a){var s=1;for(var i in a){s*=a[i]}return s};exports.default=product;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var product=function(b){var c=1;for(var d in b)c*=b[d];return c};exports.default=product;

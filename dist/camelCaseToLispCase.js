@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var camelCaseToLispCase=function camelCaseToLispCase(str){return str.replace(/[A-Z]/g,function(match){return'-'+match.toLowerCase()}).toLowerCase()};exports.default=camelCaseToLispCase;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var camelCaseToLispCase=function(a){return a.replace(/[A-Z]/g,function(b){return'-'+b.toLowerCase()}).toLowerCase()};exports.default=camelCaseToLispCase;

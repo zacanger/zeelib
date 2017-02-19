@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var normalizeText=function normalizeText(text){return text.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ')};exports.default=normalizeText;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var normalizeText=function(a){return a.toLowerCase().match(/[a-z0-9]([a-z0-9.]*[a-z0-9])?/ig).join(' ')};exports.default=normalizeText;

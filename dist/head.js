@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var head=function head(arr){return arr[0]};exports.default=head;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var head=function(a){return a[0]};exports.default=head;

@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var getIsBrowser=function getIsBrowser(){return typeof window!=='undefined'&&!!process.browser};exports.default=getIsBrowser;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getIsBrowser=function(){return'undefined'!=typeof window&&!!process.browser};exports.default=getIsBrowser;

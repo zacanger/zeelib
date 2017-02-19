@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isObjectEmpty=function isObjectEmpty(obj){return obj.constructor===Object&&Object.keys(obj).length===0};exports.default=isObjectEmpty;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isObjectEmpty=function(a){return a.constructor===Object&&0===Object.keys(a).length};exports.default=isObjectEmpty;

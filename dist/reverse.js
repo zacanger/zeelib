@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var reverse=function reverse(items){var result=[];for(var i=items.length-1;i>=0;i--){result.push(items[i])}return result};exports.default=reverse;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var reverse=function(a){for(var b=[],c=a.length-1;0<=c;c--)b.push(a[c]);return b};exports.default=reverse;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var last=function last(arr){return arr[arr.length-1]};exports.default=last;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var last=function(a){return a[a.length-1]};exports.default=last;

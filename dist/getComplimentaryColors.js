@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var getComplimentaryColors=function getComplimentaryColors(s){return'#'+(1e5+(Math.pow(8,8)+~('0x'+s.slice(1))).toString(16)).slice(-6)};exports.default=getComplimentaryColors;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getComplimentaryColors=function(a){return'#'+(1e5+(Math.pow(8,8)+~('0x'+a.slice(1))).toString(16)).slice(-6)};exports.default=getComplimentaryColors;

@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var isBoolean=function isBoolean(v){return typeof v==='boolean'};exports.default=isBoolean;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isBoolean=function(a){return'boolean'==typeof a};exports.default=isBoolean;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isNull=function isNull(v){return v===null};exports.default=isNull;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNull=function(a){return null===a};exports.default=isNull;

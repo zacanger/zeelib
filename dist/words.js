@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var words=function words(s){return s.split(' ')};exports.default=words;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var words=function(a){return a.split(' ')};exports.default=words;

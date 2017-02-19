@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var unwords=function unwords(arr){return arr.join(' ')};exports.default=unwords;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var unwords=function(a){return a.join(' ')};exports.default=unwords;

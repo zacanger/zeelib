@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isEmptyString=function isEmptyString(str){if(str===undefined||str===null){return true}return /^[ \t\s]*$/.test(str)};exports.default=isEmptyString;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isEmptyString=function(a){return void 0===a||null===a||/^[ \t\s]*$/.test(a)};exports.default=isEmptyString;

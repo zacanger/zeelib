@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isStringSomewhereInArray=function isStringSomewhereInArray(arr,el){return arr.some(function(a){return el.toLowerCase().includes(a.toLowerCase())||a.toLowerCase().includes(el.toLowerCase())})};exports.default=isStringSomewhereInArray;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isStringSomewhereInArray=function(b,c){return b.some(function(d){return c.toLowerCase().includes(d.toLowerCase())||d.toLowerCase().includes(c.toLowerCase())})};exports.default=isStringSomewhereInArray;

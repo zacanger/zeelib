@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var lines=function lines(s){return s.split('\n')};exports.default=lines;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lines=function(a){return a.split('\n')};exports.default=lines;

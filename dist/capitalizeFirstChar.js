@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var capitalizeFirstChar=function capitalizeFirstChar(str){return str.charAt(0).toUpperCase()+str.slice(1)};exports.default=capitalizeFirstChar;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var capitalizeFirstChar=function(a){return a.charAt(0).toUpperCase()+a.slice(1)};exports.default=capitalizeFirstChar;

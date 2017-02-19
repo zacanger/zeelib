@@ -1,433 +1,215 @@
 // dom
-import getCookie from './getCookie'
-import getHeight from './getHeight'
-import getIsBrowser from './getIsBrowser'
-import getReferrer from './getReferrer'
-import getScrollBarWidth from './getScrollBarWidth'
-import getWidth from './getWidth'
-import restoreScrollPosition from './restoreScrollPosition'
-import scrollTop from './scrollTop'
+export getCookie from './getCookie'
+export getHeight from './getHeight'
+export getIsBrowser from './getIsBrowser'
+export getReferrer from './getReferrer'
+export getScrollBarWidth from './getScrollBarWidth'
+export getWidth from './getWidth'
+export restoreScrollPosition from './restoreScrollPosition'
+export scrollTop from './scrollTop'
 // keycodes
-import getKeyCodes from './getKeyCodes'
+export getKeyCodes from './getKeyCodes'
 // regex, string utils, etc.
-import addNewlines from './addNewlines'
-import alphaNumericOnly from './alphaNumericOnly'
-import camelCaseToLispCase from './camelCaseToLispCase'
-import camelCaseToSnakeCase from './camelCaseToSnakeCase'
-import capitalizeFirstChar from './capitalizeFirstChar'
-import collapseWhitespace from './collapseWhitespace'
-import combineRegex from './combineRegex'
-import cssToJson from './cssToJson'
-import escapeHtml from './escapeHtml'
-import fixWindowsSlashes from './fixWindowsSlashes'
-import getComplimentaryColors from './getComplimentaryColors'
-import getRandomHex32 from './getRandomHex32'
-import getRandomString from './getRandomString'
-import getUid4 from './getUid4'
-import getUid8 from './getUid8'
-import hexRegex from './hexRegex'
-import inlineString from './inlineString'
-import isAlphaNumeric from './isAlphaNumeric'
-import isEmoji from './isEmoji'
-import isEmptyString from './isEmptyString'
-import isHexBased from './isHexBased'
-import isMobileOrTablet from './isMobileOrTablet'
-import isStringSomewhereInArray from './isStringSomewhereInArray'
-import isValidEmail from './isValidEmail'
-import isValidHex from './isValidHex'
-import lightenOrDarken from './lightenOrDarken'
-import lispCaseToCamelCase from './lispCaseToCamelCase'
-import minifyString from './minifyString'
-import newlinesToSpaces from './newlinesToSpaces'
-import normalizeClassname from './normalizeClassname'
-import normalizeColor from './normalizeColor'
-import normalizeText from './normalizeText'
-import randomColor from './randomColor'
-import removeNewlines from './removeNewlines'
-import removeNonAlpha from './removeNonAlpha'
-import removeNonAlphaNumeric from './removeNonAlphaNumeric'
-import removeNonNumeric from './removeNonNumeric'
-import removeNumeric from './removeNumeric'
-import removeTags from './removeTags'
-import removeWhitespace from './removeWhitespace'
-import rot13 from './rot13'
-import snakeCaseToCamelCase from './snakeCaseToCamelCase'
-import stripPunctuation from './stripPunctuation'
-import trimHash from './trimHash'
-import trimSpaces from './trimSpaces'
-import unescapeHtml from './unescapeHtml'
+export addNewlines from './addNewlines'
+export alphaNumericOnly from './alphaNumericOnly'
+export camelCaseToLispCase from './camelCaseToLispCase'
+export camelCaseToSnakeCase from './camelCaseToSnakeCase'
+export capitalizeFirstChar from './capitalizeFirstChar'
+export collapseWhitespace from './collapseWhitespace'
+export combineRegex from './combineRegex'
+export cssToJson from './cssToJson'
+export escapeHtml from './escapeHtml'
+export fixWindowsSlashes from './fixWindowsSlashes'
+export getComplimentaryColors from './getComplimentaryColors'
+export getRandomHex32 from './getRandomHex32'
+export getRandomString from './getRandomString'
+export getUid4 from './getUid4'
+export getUid8 from './getUid8'
+export hexRegex from './hexRegex'
+export inlineString from './inlineString'
+export isAlphaNumeric from './isAlphaNumeric'
+export isEmoji from './isEmoji'
+export isEmptyString from './isEmptyString'
+export isHexBased from './isHexBased'
+export isMobileOrTablet from './isMobileOrTablet'
+export isStringSomewhereInArray from './isStringSomewhereInArray'
+export isValidEmail from './isValidEmail'
+export isValidHex from './isValidHex'
+export lightenOrDarken from './lightenOrDarken'
+export lispCaseToCamelCase from './lispCaseToCamelCase'
+export minifyString from './minifyString'
+export newlinesToSpaces from './newlinesToSpaces'
+export normalizeClassname from './normalizeClassname'
+export normalizeColor from './normalizeColor'
+export normalizeText from './normalizeText'
+export randomColor from './randomColor'
+export removeNewlines from './removeNewlines'
+export removeNonAlpha from './removeNonAlpha'
+export removeNonAlphaNumeric from './removeNonAlphaNumeric'
+export removeNonNumeric from './removeNonNumeric'
+export removeNumeric from './removeNumeric'
+export removeTags from './removeTags'
+export removeWhitespace from './removeWhitespace'
+export rot13 from './rot13'
+export snakeCaseToCamelCase from './snakeCaseToCamelCase'
+export stripPunctuation from './stripPunctuation'
+export trimHash from './trimHash'
+export trimSpaces from './trimSpaces'
+export unescapeHtml from './unescapeHtml'
 // node
-import base64BufferDec from './base64BufferDec'
-import base64BufferEnc from './base64BufferEnc'
-import colorize from './colorize'
-import dir from './dir'
-import findPort from './findPort'
-import getNodeModules from './getNodeModules'
-import getTerminalColumns from './getTerminalColumns'
-import getTerminalRows from './getTerminalRows'
-import getTerminalSize from './getTerminalSize'
-import getUserHome from './getUserHome'
-import hasColor from './hasColor'
-import isInstalled from './isInstalled'
-import logWithInfo from './logWithInfo'
-import open from './open'
-import readJson from './readJson'
-import readJsonSync from './readJsonSync'
-import termPrompt from './termPrompt'
-import tinyRouter from './tinyRouter'
-import writeError from './writeError'
-import writeJson from './writeJson'
-import writeJsonSync from './writeJsonSync'
+export base64BufferDec from './base64BufferDec'
+export base64BufferEnc from './base64BufferEnc'
+export colorize from './colorize'
+export dir from './dir'
+export findPort from './findPort'
+export getNodeModules from './getNodeModules'
+export getTerminalColumns from './getTerminalColumns'
+export getTerminalRows from './getTerminalRows'
+export getTerminalSize from './getTerminalSize'
+export getUserHome from './getUserHome'
+export hasColor from './hasColor'
+export isInstalled from './isInstalled'
+export logWithInfo from './logWithInfo'
+export open from './open'
+export readJson from './readJson'
+export readJsonSync from './readJsonSync'
+export termPrompt from './termPrompt'
+export tinyRouter from './tinyRouter'
+export writeError from './writeError'
+export writeJson from './writeJson'
+export writeJsonSync from './writeJsonSync'
 // fp utils
-import all from './all'
-import and from './and'
-import any from './any'
-import apply from './apply'
-import compose from './compose'
-import concat from './concat'
-import concatMap from './concatMap'
-import curry from './curry'
-import curry2 from './curry2'
-import curry3 from './curry3'
-import curry4 from './curry4'
-import drop from './drop'
-import each from './each'
-import elem from './elem'
-import filter from './filter'
-import foldl from './foldl'
-import foldl1 from './foldl1'
-import foldr from './foldr'
-import foldr1 from './foldr1'
-import getFunctionArguments from './getFunctionArguments'
-import head from './head'
-import id from './id'
-import init from './init'
-import invoke from './invoke'
-import last from './last'
-import length from './length'
-import lines from './lines'
-import map from './map'
-import memoize from './memoize'
-import mix from './mix'
-import not from './not'
-import notElem from './notElem'
-import once from './once'
-import or from './or'
-import pair from './pair'
-import pipe from './pipe'
-import pluck from './pluck'
-import propEq from './propEq'
-import reduce from './reduce'
-import replicate from './replicate'
-import reverse from './reverse'
-import span from './span'
-import splitAt from './splitAt'
-import tail from './tail'
-import take from './take'
-import takeWhile from './takeWhile'
-import unfold from './unfold'
-import unlines from './unlines'
-import unwords from './unwords'
-import unzip from './unzip'
-import unzip3 from './unzip3'
-import words from './words'
-import zip from './zip'
-import zip3 from './zip3'
-import zipThen from './zipThen'
-import zipWith from './zipWith'
-import zipWith3 from './zipWith3'
+export all from './all'
+export and from './and'
+export any from './any'
+export apply from './apply'
+export compose from './compose'
+export concat from './concat'
+export concatMap from './concatMap'
+export curry from './curry'
+export curry2 from './curry2'
+export curry3 from './curry3'
+export curry4 from './curry4'
+export drop from './drop'
+export each from './each'
+export elem from './elem'
+export filter from './filter'
+export foldl from './foldl'
+export foldl1 from './foldl1'
+export foldr from './foldr'
+export foldr1 from './foldr1'
+export getFunctionArguments from './getFunctionArguments'
+export head from './head'
+export id from './id'
+export init from './init'
+export invoke from './invoke'
+export last from './last'
+export length from './length'
+export lines from './lines'
+export map from './map'
+export memoize from './memoize'
+export mix from './mix'
+export not from './not'
+export notElem from './notElem'
+export once from './once'
+export or from './or'
+export pair from './pair'
+export pipe from './pipe'
+export pluck from './pluck'
+export propEq from './propEq'
+export reduce from './reduce'
+export replicate from './replicate'
+export reverse from './reverse'
+export span from './span'
+export splitAt from './splitAt'
+export tail from './tail'
+export take from './take'
+export takeWhile from './takeWhile'
+export unfold from './unfold'
+export unlines from './unlines'
+export unwords from './unwords'
+export unzip from './unzip'
+export unzip3 from './unzip3'
+export words from './words'
+export zip from './zip'
+export zip3 from './zip3'
+export zipThen from './zipThen'
+export zipWith from './zipWith'
+export zipWith3 from './zipWith3'
 // types
-import isArray from './isArray'
-import isArrayLike from './isArrayLike'
-import isBoolean from './isBoolean'
-import isDate from './isDate'
-import isDefined from './isDefined'
-import isDomElement from './isDomElement'
-import isEmpty from './isEmpty'
-import isEven from './isEven'
-import isFloat from './isFloat'
-import isFunction from './isFunction'
-import isInteger from './isInteger'
-import isJson from './isJson'
-import isNan from './isNan'
-import isNegative from './isNegative'
-import isNodeList from './isNodeList'
-import isNull from './isNull'
-import isNumber from './isNumber'
-import isObject from './isObject'
-import isObjectEqual from './isObjectEqual'
-import isOdd from './isOdd'
-import isPositive from './isPositive'
-import isPow2 from './isPow2'
-import isPrimitive from './isPrimitive'
-import isPromise from './isPromise'
-import isRegExp from './isRegExp'
-import isString from './isString'
-import isType from './isType'
-import isUndefined from './isUndefined'
-import objectToString from './objectToString'
-import toType from './toType'
-import typeOf from './typeOf'
+export isArray from './isArray'
+export isArrayLike from './isArrayLike'
+export isBoolean from './isBoolean'
+export isDate from './isDate'
+export isDefined from './isDefined'
+export isDomElement from './isDomElement'
+export isEmpty from './isEmpty'
+export isEven from './isEven'
+export isFloat from './isFloat'
+export isFunction from './isFunction'
+export isInteger from './isInteger'
+export isJson from './isJson'
+export isNan from './isNan'
+export isNegative from './isNegative'
+export isNodeList from './isNodeList'
+export isNull from './isNull'
+export isNumber from './isNumber'
+export isObject from './isObject'
+export isObjectEqual from './isObjectEqual'
+export isOdd from './isOdd'
+export isPositive from './isPositive'
+export isPow2 from './isPow2'
+export isPrimitive from './isPrimitive'
+export isPromise from './isPromise'
+export isRegExp from './isRegExp'
+export isString from './isString'
+export isType from './isType'
+export isUndefined from './isUndefined'
+export objectToString from './objectToString'
+export toType from './toType'
+export typeOf from './typeOf'
 // misc
-import chunk from './chunk'
-import cloneWithout from './cloneWithout'
-import copy from './copy'
-import copyWithout from './copyWithout'
-import deepCopy from './deepCopy'
-import doubleUntil from './doubleUntil'
-import dropWhere from './dropWhere'
-import filterFloat from './filterFloat'
-import findWhere from './findWhere'
-import getBrokenImage from './getBrokenImage'
-import getKeyByValue from './getKeyByValue'
-import getNiceDate from './getNiceDate'
-import getTransparentGif from './getTransparentGif'
-import greatestCommonDivisor from './greatestCommonDivisor'
-import invoker from './invoker'
-import isObjectEmpty from './isObjectEmpty'
-import leastCommonMultiple from './leastCommonMultiple'
-import leftPad from './leftPad'
-import lesser from './lesser'
-import lexSort from './lexSort'
-import logWithTimestamp from './logWithTimestamp'
-import maximum from './maximum'
-import maybeArgs from './maybeArgs'
-import minimum from './minimum'
-import nco from './nco'
-import noSwitch from './noSwitch'
-import objectAssign from './objectAssign'
-import objectClone from './objectClone'
-import objectFromEntries from './objectFromEntries'
-import objectInherit from './objectInherit'
-import product from './product'
-import reverseDigits from './reverseDigits'
-import shallowCopy from './shallowCopy'
-import sleep from './sleep'
-import splitStringOn from './splitStringOn'
-import sum from './sum'
-import tap from './tap'
-import throwError from './throwError'
-import timeTest from './timeTest'
-import transpose from './transpose'
-import transposeFlat from './transposeFlat'
-import tryExecNTimes from './tryExecNTimes'
-import unless from './unless'
-import xor from './xor'
-
-export default {
-  // dom
-  getCookie
-, getHeight
-, getIsBrowser
-, getReferrer
-, getScrollBarWidth
-, getWidth
-, restoreScrollPosition
-, scrollTop
-// keycodes
-, getKeyCodes
-// regex, string utils, etc.
-, addNewlines
-, alphaNumericOnly
-, camelCaseToLispCase
-, camelCaseToSnakeCase
-, capitalizeFirstChar
-, collapseWhitespace
-, combineRegex
-, cssToJson
-, escapeHtml
-, fixWindowsSlashes
-, getComplimentaryColors
-, getRandomHex32
-, getRandomString
-, getUid4
-, getUid8
-, hexRegex
-, inlineString
-, isAlphaNumeric
-, isEmoji
-, isEmptyString
-, isHexBased
-, isMobileOrTablet
-, isStringSomewhereInArray
-, isValidEmail
-, isValidHex
-, lightenOrDarken
-, lispCaseToCamelCase
-, minifyString
-, newlinesToSpaces
-, normalizeClassname
-, normalizeColor
-, normalizeText
-, randomColor
-, removeNewlines
-, removeNonAlpha
-, removeNonAlphaNumeric
-, removeNonNumeric
-, removeNumeric
-, removeTags
-, removeWhitespace
-, rot13
-, snakeCaseToCamelCase
-, stripPunctuation
-, trimHash
-, trimSpaces
-, unescapeHtml
-// node
-, base64BufferDec
-, base64BufferEnc
-, colorize
-, dir
-, findPort
-, getNodeModules
-, getTerminalColumns
-, getTerminalRows
-, getTerminalSize
-, getUserHome
-, hasColor
-, isInstalled
-, logWithInfo
-, open
-, readJson
-, readJsonSync
-, termPrompt
-, tinyRouter
-, writeError
-, writeJson
-, writeJsonSync
-// fp utils
-, all
-, and
-, any
-, apply
-, compose
-, concat
-, concatMap
-, curry
-, curry2
-, curry3
-, curry4
-, drop
-, each
-, elem
-, filter
-, foldl
-, foldl1
-, foldr
-, foldr1
-, getFunctionArguments
-, head
-, id
-, init
-, invoke
-, last
-, length
-, lines
-, map
-, memoize
-, mix
-, not
-, notElem
-, once
-, or
-, pair
-, pipe
-, pluck
-, propEq
-, reduce
-, replicate
-, reverse
-, span
-, splitAt
-, tail
-, take
-, takeWhile
-, unfold
-, unlines
-, unwords
-, unzip
-, unzip3
-, words
-, zip
-, zip3
-, zipThen
-, zipWith
-, zipWith3
-// types
-, isArray
-, isArrayLike
-, isBoolean
-, isDate
-, isDefined
-, isDomElement
-, isEmpty
-, isEven
-, isFloat
-, isFunction
-, isInteger
-, isJson
-, isNan
-, isNegative
-, isNodeList
-, isNull
-, isNumber
-, isObject
-, isObjectEqual
-, isOdd
-, isPositive
-, isPow2
-, isPrimitive
-, isPromise
-, isRegExp
-, isString
-, isType
-, isUndefined
-, objectToString
-, toType
-, typeOf
-// misc
-, chunk
-, cloneWithout
-, copy
-, copyWithout
-, deepCopy
-, doubleUntil
-, dropWhere
-, filterFloat
-, findWhere
-, getBrokenImage
-, getKeyByValue
-, getNiceDate
-, getTransparentGif
-, greatestCommonDivisor
-, invoker
-, isObjectEmpty
-, leastCommonMultiple
-, leftPad
-, lesser
-, lexSort
-, logWithTimestamp
-, maximum
-, maybeArgs
-, minimum
-, nco
-, noSwitch
-, objectAssign
-, objectClone
-, objectFromEntries
-, objectInherit
-, product
-, reverseDigits
-, shallowCopy
-, sleep
-, splitStringOn
-, sum
-, tap
-, throwError
-, timeTest
-, transpose
-, transposeFlat
-, tryExecNTimes
-, unless
-, xor
-}
+export chunk from './chunk'
+export cloneWithout from './cloneWithout'
+export copy from './copy'
+export copyWithout from './copyWithout'
+export deepCopy from './deepCopy'
+export doubleUntil from './doubleUntil'
+export dropWhere from './dropWhere'
+export filterFloat from './filterFloat'
+export findWhere from './findWhere'
+export getBrokenImage from './getBrokenImage'
+export getKeyByValue from './getKeyByValue'
+export getNiceDate from './getNiceDate'
+export getTransparentGif from './getTransparentGif'
+export greatestCommonDivisor from './greatestCommonDivisor'
+export invoker from './invoker'
+export isObjectEmpty from './isObjectEmpty'
+export leastCommonMultiple from './leastCommonMultiple'
+export leftPad from './leftPad'
+export lesser from './lesser'
+export lexSort from './lexSort'
+export logWithTimestamp from './logWithTimestamp'
+export maximum from './maximum'
+export maybeArgs from './maybeArgs'
+export minimum from './minimum'
+export nco from './nco'
+export noSwitch from './noSwitch'
+export objectAssign from './objectAssign'
+export objectClone from './objectClone'
+export objectFromEntries from './objectFromEntries'
+export objectInherit from './objectInherit'
+export product from './product'
+export reverseDigits from './reverseDigits'
+export shallowCopy from './shallowCopy'
+export sleep from './sleep'
+export splitStringOn from './splitStringOn'
+export sum from './sum'
+export tap from './tap'
+export throwError from './throwError'
+export timeTest from './timeTest'
+export transpose from './transpose'
+export transposeFlat from './transposeFlat'
+export tryExecNTimes from './tryExecNTimes'
+export unless from './unless'
+export xor from './xor'

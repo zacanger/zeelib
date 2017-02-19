@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var unzip3=function unzip3(a1){var a2=[];var a3=[];var a4=[];for(var i in a1){a2.push(a1[i][0]);a3.push(a1[i][1]);a4.push(a1[i][2])}return[a2,a3,a4]};exports.default=unzip3;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var unzip3=function(a){var b=[],c=[],d=[];for(var e in a)b.push(a[e][0]),c.push(a[e][1]),d.push(a[e][2]);return[b,c,d]};exports.default=unzip3;

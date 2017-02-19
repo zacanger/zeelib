@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var isInstalled=function isInstalled(pkgName){try{require.resolve(pkgName);return true}catch(e){return false}};exports.default=isInstalled;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isInstalled=function(a){try{return require.resolve(a),!0}catch(b){return!1}};exports.default=isInstalled;

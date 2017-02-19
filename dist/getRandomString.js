@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var getRandomString=function getRandomString(){var n=arguments.length>0&&arguments[0]!==undefined?arguments[0]:8;return Math.random().toString(36).substring(n)};exports.default=getRandomString;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getRandomString=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:8;return Math.random().toString(36).substring(a)};exports.default=getRandomString;

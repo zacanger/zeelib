@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var dropWhere=function dropWhere(fn,array){var keepers=[];array.forEach(function(item,i){if(!fn(item,i)){keepers.push(item)}});if(array.length===keepers.length){return array}return keepers};exports.default=dropWhere;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dropWhere=function(a,b){var c=[];return b.forEach(function(d,e){a(d,e)||c.push(d)}),b.length===c.length?b:c};exports.default=dropWhere;

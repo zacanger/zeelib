@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var transposeFlat=function transposeFlat(m){var l=arguments.length>1&&arguments[1]!==undefined?arguments[1]:Math.sqrt(m.length)|0;return m.map(function(c,i){return m[i%l*l+i/l|0]})};exports.default=transposeFlat;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var transposeFlat=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:0|Math.sqrt(a.length);return a.map(function(d,e){return a[0|e%b*b+e/b]})};exports.default=transposeFlat;

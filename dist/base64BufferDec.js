@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var base64BufferDec=function base64BufferDec(str){return new Buffer(str,'base64').toString('utf8')};exports.default=base64BufferDec;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var base64BufferDec=function(a){return new Buffer(a,'base64').toString('utf8')};exports.default=base64BufferDec;

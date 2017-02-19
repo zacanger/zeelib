@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var getScrollBarWidth=function getScrollBarWidth(){return window.innerWidth-window.document.documentElement.clientWidth};exports.default=getScrollBarWidth;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getScrollBarWidth=function(){return window.innerWidth-window.document.documentElement.clientWidth};exports.default=getScrollBarWidth;

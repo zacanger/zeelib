@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var replicate=function replicate(i,e){var a=[];for(var x=0;x<i;x++){a.push(e)}return a};exports.default=replicate;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var replicate=function(b,c){for(var d=[],f=0;f<b;f++)d.push(c);return d};exports.default=replicate;

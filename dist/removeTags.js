@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var removeTags=function removeTags(str){return str.replace(/(<([^>]+)>)/ig,'')};exports.default=removeTags;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var removeTags=function(a){return a.replace(/(<([^>]+)>)/ig,'')};exports.default=removeTags;

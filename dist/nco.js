@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var nco=function nco(variable,defaultValue){return variable===null||typeof variable==='undefined'?defaultValue:variable};exports.default=nco;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var nco=function(a,b){return null===a||'undefined'==typeof a?b:a};exports.default=nco;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var length=function length(arr){return arr.length};exports.default=length;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var length=function(a){return a.length};exports.default=length;

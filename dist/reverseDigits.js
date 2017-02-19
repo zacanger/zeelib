@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var reverseDigits=function reverseDigits(n){return Math.sign(n)*(''+Math.abs(n)).split('').reverse().join('')||0};exports.default=reverseDigits;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var reverseDigits=function(a){return Math.sign(a)*(''+Math.abs(a)).split('').reverse().join('')||0};exports.default=reverseDigits;

@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var trimHash=function trimHash(str){return typeof str==='string'?str.replace('#',''):str};exports.default=trimHash;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var trimHash=function(a){return'string'==typeof a?a.replace('#',''):a};exports.default=trimHash;

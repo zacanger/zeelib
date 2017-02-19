@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var getKeyByValue=function getKeyByValue(object,value){return Object.keys(object).find(function(key){return object[key]===value})};exports.default=getKeyByValue;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getKeyByValue=function(a,b){return Object.keys(a).find(function(c){return a[c]===b})};exports.default=getKeyByValue;

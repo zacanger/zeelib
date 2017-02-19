@@ -4,6 +4,7 @@ A small lib of FP, Node, and DOM utils.
 
 Changes:
 
+* `0.4.0` -- *breaking* -- no longer `require('zeelib').default`, just `require('zeelib')`
 * `0.2.0` -- *breaking* -- all functions now in top level
   * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`).
 
@@ -22,8 +23,6 @@ z.open('http://zacanger.com')
 if (z.isEven(process.argv[2])) // do things
 z.camelCaseToLispCase('thisString')
 ```
-
-If you're using `require` you'll need to do `require('zeelib').default`.
 
 ## License
 

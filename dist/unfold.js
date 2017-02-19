@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var unfold=function unfold(fn,seed){var r=fn(seed);if(!Array.isArray(r)){return[]}return[r[0]].concat(unfold(fn,r[1]))};exports.default=unfold;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var unfold=function(a,b){var c=a(b);return Array.isArray(c)?[c[0]].concat(unfold(a,c[1])):[]};exports.default=unfold;

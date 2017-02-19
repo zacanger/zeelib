@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var randomColor=function randomColor(){var hex=Math.floor(Math.random()*16777215).toString(16);var pad='000000';return'#'+(pad+hex).slice(-pad.length)};exports.default=randomColor;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var randomColor=function(){var a=Math.floor(16777215*Math.random()).toString(16),b='000000';return'#'+(b+a).slice(-b.length)};exports.default=randomColor;

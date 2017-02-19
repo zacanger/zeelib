@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var getCookie=function getCookie(name){var value='; '+document.cookie;var parts=value.split('; '+name+'=');if(parts.length===2)return parts.pop().split(';').shift()};exports.default=getCookie;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getCookie=function(a){var b='; '+document.cookie,c=b.split('; '+a+'=');if(2===c.length)return c.pop().split(';').shift()};exports.default=getCookie;

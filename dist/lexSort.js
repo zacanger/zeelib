@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var lexSort=function lexSort(a,b){return a===b?0:a>b?1:-1};exports.default=lexSort;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lexSort=function(c,d){return c===d?0:c>d?1:-1};exports.default=lexSort;

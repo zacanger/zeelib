@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});var zipWith3=function zipWith3(f,a1,a2,a3){var a4=[];var a2len=a2.length,a3len=a3.length;for(var i in a1){if(i>=a2len||i>=a3len){return a4}a4.push(f(a1[i],a2[i],a3[i]))}return a4};exports.default=zipWith3;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var zipWith3=function(a,b,c,d){var e=[],g=c.length,h=d.length;for(var j in b){if(j>=g||j>=h)return e;e.push(a(b[j],c[j],d[j]))}return e};exports.default=zipWith3;

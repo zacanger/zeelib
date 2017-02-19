@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});function curry2(f){function curried(a,b){switch(arguments.length){case 0:return curried;case 1:return function(b){return f(a,b)};default:return f(a,b);}}return curried}exports.default=curry2;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function curry2(c){function d(e,g){switch(arguments.length){case 0:return d;case 1:return function(h){return c(e,h)};default:return c(e,g);}}return d}exports.default=curry2;

@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});var inlineString=function inlineString(str){str=str.replace(/(\r\n|\n|\r)/gm,' ');return str.replace(/[\s]+/gm,' ')};exports.default=inlineString;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var inlineString=function(a){return a=a.replace(/(\r\n|\n|\r)/gm,' '),a.replace(/[\s]+/gm,' ')};exports.default=inlineString;
