@@ -147,6 +147,8 @@ const c = require('zeelib/dist/colorize').default
 * and
 * any
 * apply
+* car
+* cdr
 * compose
 * concat
 * concatMap
