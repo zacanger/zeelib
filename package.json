@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -12,8 +12,7 @@
   "scripts": {
     "build": "babel --ignore \"src/*.test.js\" src/ -d dist/",
     "clean": "rm -rf dist/ && mkdir -p dist/",
-    "postbuild": "npm run test && fixpack",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run test && fixpack",
     "test": "npm run test:lint && npm run test:tape && npm run test:flow",
     "test:flow": "flow",
     "test:lint": "eslint -c .eslintrc.json src",
