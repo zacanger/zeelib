@@ -158,10 +158,13 @@ const c = require('zeelib/dist/colorize').default
 * curry3
 * curry4
 * drop
+* dropWhere
+* dropWhile
 * each
 * elem
 * filter
 * findIndex
+* findWhere
 * foldl
 * foldl1
 * foldr
@@ -247,9 +250,7 @@ const c = require('zeelib/dist/colorize').default
 * copyWithout
 * deepCopy
 * doubleUntil
-* dropWhere
 * filterFloat
-* findWhere
 * getBrokenImage
 * getKeyByValue
 * getNiceDate
