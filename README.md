@@ -150,6 +150,7 @@ const c = require('zeelib/dist/colorize').default
 * compose
 * concat
 * concatMap
+* cons
 * curry
 * curry2
 * curry3
@@ -158,6 +159,7 @@ const c = require('zeelib/dist/colorize').default
 * each
 * elem
 * filter
+* findIndex
 * foldl
 * foldl1
 * foldr
