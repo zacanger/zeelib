@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-escape */
-const cssToJson = (str) =>
+// @flow
+
+const cssToJson = (str: string) : string =>
   str
     .replace(/(\w*:)/g, '$1"')
     .replace(/[;]/g, '";')

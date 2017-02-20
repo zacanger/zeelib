@@ -44,12 +44,14 @@ const c = require('zeelib/dist/colorize').default
 
 ## Contributing
 
+* This project uses Flow.
 * Please run `npm test`.
 * If you can, please _add_ a test.
 * Please add your thing in these places:
   * `src/index.js` in the appropriate place
   * The full list below
 * Make sure you run `npm run build`
+  * (This also runs `test`, which also runs `flow` and `eslint`)
 
 ## Full list:
 
