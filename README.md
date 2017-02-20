@@ -268,6 +268,7 @@ const c = require('zeelib/dist/colorize').default
 * objectFromEntries
 * objectInherit
 * product
+* range
 * reverseDigits
 * shallowCopy
 * sleep
