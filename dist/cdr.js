@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var cdr=function(a){return a.slice(1)};exports.default=cdr;

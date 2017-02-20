@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dropWhile=function(b,c){for(var d in c)if(!b(c[d]))return c.slice(d);return[]};exports.default=dropWhile;
