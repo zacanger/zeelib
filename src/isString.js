@@ -1,2 +1,6 @@
-const isString = (v) => typeof v === 'string'
+// @flow
+
+const isString = (v: any) : bool =>
+  typeof v === 'string'
+
 export default isString

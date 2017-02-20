@@ -1,4 +1,6 @@
-const take = (n, a) => {
+// @flow
+
+const take = (n: number, a: any[]) : any[] => {
   const alen = a.length
   if (n > alen) return a
   const a1 = []

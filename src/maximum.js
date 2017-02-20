@@ -1,2 +1,6 @@
-const maximum = (a) => Math.max.apply(Math, a)
+// @flow
+
+const maximum = (a: number[]) : number =>
+  Math.max.apply(Math, a)
+
 export default maximum

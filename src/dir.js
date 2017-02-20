@@ -1,2 +1,6 @@
-const dir = (obj) => console.dir(obj, { colors: true })
+// @flow
+
+const dir = (obj: Object) : void =>
+  console.dir(obj, { colors: true })
+
 export default dir

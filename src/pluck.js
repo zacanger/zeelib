@@ -1,2 +1,6 @@
-const pluck = (arr, key) => arr.map((obj) => obj[key])
+// @flow
+
+const pluck = (arr: any[], key: string) : any[] =>
+  arr.map((obj) => obj[key])
+
 export default pluck

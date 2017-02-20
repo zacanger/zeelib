@@ -1,2 +1,6 @@
-const removeWhitespace = (str) => str.replace(/^\s+|\s+$/, '')
+// @flow
+
+const removeWhitespace = (str: string) : string =>
+  str.replace(/^\s+|\s+$/, '')
+
 export default removeWhitespace

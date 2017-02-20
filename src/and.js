@@ -1,6 +1,6 @@
 // @flow
 
-const and = (a: any) : bool => {
+const and = (a: Object) : bool => {
   for (let i in a) {
     if (a[i] === false) {
       return false

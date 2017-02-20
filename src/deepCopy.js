@@ -1,6 +1,8 @@
+// @flow
+
 import isArray from './isArray'
 
-const deepCopy = (o) => {
+const deepCopy = (o: Object) : any => {
   let newObj
   if (!o || typeof o !== 'object') {
     return o

@@ -1,7 +1,9 @@
+// @flow
+
 import greatestCommonDivisor from './greatestCommonDivisor'
 
 // returns least common multiple
-function leastCommonMultiple () {
+function leastCommonMultiple () : number {
   let i = arguments.length
   let a = arguments[--i]
   while (a && i) {

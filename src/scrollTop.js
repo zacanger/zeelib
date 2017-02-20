@@ -1,2 +1,6 @@
-const scrollTop = () => window.scrollTo(0, 0)
+// @flow
+
+const scrollTop = () : void =>
+  window.scrollTo(0, 0)
+
 export default scrollTop

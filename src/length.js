@@ -1,2 +1,6 @@
-const length = (arr) => arr.length
+// @flow
+
+const length = (arr: any[]) : number =>
+  arr.length
+
 export default length

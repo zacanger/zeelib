@@ -1,4 +1,4 @@
-const objectFromEntries = (entries) => {
+const objectFromEntries = (entries: any[]) : Object => {
   const res = {}
   const len = entries.length
   for (let i = 0; i < len; ++i) {

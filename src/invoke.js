@@ -1,2 +1,6 @@
-const invoke = (fn, ...args) => fn(...args)
+// @flow
+
+const invoke = (fn: any, ...args: any) : any =>
+  fn(...args)
+
 export default invoke

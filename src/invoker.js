@@ -1,3 +1,5 @@
+// @ flow
+
 // invokes until function returns truthily
 // examples:
 // Succeeds after 15 calls
@@ -12,21 +14,23 @@
 // console.log(ii)
 // return ++ii > 22
 // }, console.log)
-const invoker = (limit, interval) => (fn, cb) => {
-  let current = 0
-  let _fn = () => {
-    current++
-    let result = fn()
-    if (result) {
-      cb(null, result)
-    } else if (current < limit) {
-      setTimeout(_fn, interval)
-    } else {
-      cb(new Error('Limit exceeded!'), null)
-      cb = () => {}
+
+const invoker = (limit: number, interval: number) : void =>
+  (fn: any, cb: any) : void => {
+    let current = 0
+    let _fn = () => {
+      current++
+      let result = fn()
+      if (result) {
+        cb(null, result)
+      } else if (current < limit) {
+        setTimeout(_fn, interval)
+      } else {
+        cb(new Error('Limit exceeded!'), null)
+        cb = () => {}
+      }
     }
+    _fn()
   }
-  _fn()
-}
 
 export default invoker

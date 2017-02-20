@@ -1,4 +1,6 @@
-function rot13 (s) {
+// @flow
+
+function rot13 (s: string) : string {
   return (s || this).split('').map((_) => {
     if (!_.match(/[A-Za-z]/)) {
       return _
@@ -8,4 +10,5 @@ function rot13 (s) {
     return String.fromCharCode(k + ((c === 0) ? 64 : 96))
   }).join('')
 }
+
 export default rot13

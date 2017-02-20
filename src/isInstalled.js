@@ -1,4 +1,6 @@
-const isInstalled = (pkgName) => {
+// @flow
+
+const isInstalled = (pkgName: string) : bool => {
   try {
     require.resolve(pkgName)
     return true
@@ -6,4 +8,5 @@ const isInstalled = (pkgName) => {
     return false
   }
 }
+
 export default isInstalled

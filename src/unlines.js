@@ -1,2 +1,6 @@
-const unlines = (arr) => arr.join('\n')
+// @flow
+
+const unlines = (arr: string[]) : string =>
+  arr.join('\n')
+
 export default unlines

@@ -1,10 +1,12 @@
+// @flow
+
 import { createInterface } from 'readline'
 
 // adapted from create-react-app's prompt
 // prompt('Do the thing?') // with 'no' default
-// prompt('Do the thing?', 1) // with 'yes' default
-const termPrompt = (question, isYesDefault) =>
-  new Promise((resolve) => {
+// prompt('Do the thing?', true) // with 'yes' default
+const termPrompt = (question: string, isYesDefault: ?bool) =>
+  new Promise((resolve) : ?bool => {
     const rlInterface = createInterface({
       input  : process.stdin
     , output : process.stdout

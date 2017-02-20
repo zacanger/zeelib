@@ -1,7 +1,9 @@
+// @flow
+
 import { readFile } from 'fs'
 
 // read json file, parse it, call cb with obj or err
-const readJson = (file, cb) => {
+const readJson = (file: string, cb: any) : ?any => {
   readFile(file, 'utf8', (err, json) => {
     if (err) {
       cb(err)

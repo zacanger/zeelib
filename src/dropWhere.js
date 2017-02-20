@@ -1,5 +1,7 @@
+// @flow
+
 // credit: gh:spicydonuts
-const dropWhere = (fn, array) => {
+const dropWhere = (fn: any, array: any[]) : any[] => {
   const keepers = []
   array.forEach((item, i) => {
     if (!fn(item, i)) {

@@ -1,2 +1,6 @@
-const isBoolean = (v) => typeof v === 'boolean'
+// @flow
+
+const isBoolean = (v: any) : bool =>
+  typeof v === 'boolean'
+
 export default isBoolean

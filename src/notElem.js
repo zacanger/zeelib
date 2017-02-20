@@ -1,5 +1,8 @@
+// @flow
+
 import elem from './elem'
 
-const notElem = (el, a) => !elem(el, a)
+const notElem = (el: any, a: Object) : bool =>
+  !elem(el, a)
 
 export default notElem

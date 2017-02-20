@@ -1,2 +1,6 @@
-const isAlphaNumeric = (str) => (/[0-9a-zA-Z]+/).test(str)
+// @flow
+
+const isAlphaNumeric = (str: string) : bool =>
+  /[0-9a-zA-Z]+/.test(str)
+
 export default isAlphaNumeric

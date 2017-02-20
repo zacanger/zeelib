@@ -1,6 +1,6 @@
 {
   "extends": [ "standard" ],
-  "plugins": [ "babel" ],
+  "plugins": [ "babel", "flowtype" ],
   "parser": "babel-eslint",
   "rules": {
     "block-spacing": [0],

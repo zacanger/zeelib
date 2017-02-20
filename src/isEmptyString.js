@@ -1,4 +1,6 @@
-const isEmptyString = (str) => {
+// @flow
+
+const isEmptyString = (str: string) : bool => {
   if (str === undefined || str === null) {
     return true
   }

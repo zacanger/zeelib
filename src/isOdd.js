@@ -1,2 +1,6 @@
-const isOdd = (n) => (n & 1) !== 0
+// @flow
+
+const isOdd = (n: number) : bool =>
+  (n & 1) !== 0
+
 export default isOdd

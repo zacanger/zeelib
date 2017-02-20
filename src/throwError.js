@@ -1,4 +1,6 @@
-const throwError = (err) => {
+// @flow
+
+const throwError = (err: any) : Error => {
   throw new Error(err)
 }
 

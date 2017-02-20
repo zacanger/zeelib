@@ -1,4 +1,6 @@
-const typeOf = (a) => {
+// @flow
+
+const typeOf = (a: any) : string => {
   if (typeof a === 'object') {
     if (a === null) return 'null'
     if (a && a.nodeType === 1) return 'dom'

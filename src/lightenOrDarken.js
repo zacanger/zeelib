@@ -1,9 +1,11 @@
+// @flow
+
 // usage :
 // lighten
 // consty newCol = lightenOrDarken('#F06D06', 20)
 // darken
 // const newCol = lightenOrDarken('#F06D06', -20)
-const lightenOrDarken = (col, amt) => {
+const lightenOrDarken = (col : string, amt : number) : string => {
   let
     useHash = false
   , num      = parseInt(col, 16)

@@ -1,2 +1,6 @@
-const xor = (a, b) => !a !== !b
+// @flow
+
+const xor = (a: any, b: any) : bool =>
+  !a !== !b
+
 export default xor
