@@ -1,2 +1,2 @@
-const isFunction = v => typeof v === 'function'
+const isFunction = (v) => typeof v === 'function'
 export default isFunction

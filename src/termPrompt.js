@@ -3,8 +3,8 @@ import { createInterface } from 'readline'
 // adapted from create-react-app's prompt
 // prompt('Do the thing?') // with 'no' default
 // prompt('Do the thing?', 1) // with 'yes' default
-const termPrompt = (question, isYesDefault) => {
-  return new Promise(resolve => {
+const termPrompt = (question, isYesDefault) =>
+  new Promise((resolve) => {
     const rlInterface = createInterface({
       input  : process.stdin
     , output : process.stdout
@@ -13,7 +13,7 @@ const termPrompt = (question, isYesDefault) => {
     const hint = isYesDefault ? '[Y/n]' : '[y/N]'
     const message = `${question} ${hint}\n`
 
-    rlInterface.question(message, answer => {
+    rlInterface.question(message, (answer) => {
       rlInterface.close()
 
       const useDefault = answer.trim().length === 0
@@ -23,6 +23,5 @@ const termPrompt = (question, isYesDefault) => {
       return resolve(isYes)
     })
   })
-}
 
 export default termPrompt

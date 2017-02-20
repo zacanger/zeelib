@@ -1,4 +1,4 @@
-const throwError = err => {
+const throwError = (err) => {
   throw new Error(err)
 }
 

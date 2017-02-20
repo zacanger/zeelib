@@ -1,2 +1,2 @@
-const isBoolean = v => typeof v === 'boolean'
+const isBoolean = (v) => typeof v === 'boolean'
 export default isBoolean

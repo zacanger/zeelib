@@ -9,7 +9,7 @@ const findPort = (port, cb) => {
     server.close()
     cb(null, port)
   }
-  const onError = err => {
+  const onError = (err) => {
     server.removeListener('listening', onListen)
     if (err.code !== ('EADDRINUSE' || 'EACCESS')) {
       return cb(err)

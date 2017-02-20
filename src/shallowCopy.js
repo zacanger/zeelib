@@ -1,7 +1,7 @@
 import isArray from './isArray'
 
 // top level
-const shallowCopy = o => {
+const shallowCopy = (o) => {
   let newObj
   if (!o || typeof o !== 'object') {
     return o
@@ -10,7 +10,7 @@ const shallowCopy = o => {
     return o.slice(0)
   }
   newObj = {}
-  Object.keys(o).forEach(prop => {
+  Object.keys(o).forEach((prop) => {
     newObj[prop] = o[prop]
   })
   return newObj

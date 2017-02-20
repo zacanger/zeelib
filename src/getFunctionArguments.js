@@ -11,7 +11,7 @@ const getFunctionArguments = function (fn) {
     .replace(/\s/gi, '')     // remove all whitespace
     .split(',')              // split on the commas
 
-  return args.filter(x => x) // remove possible empty string from the result
+  return args.filter((x) => x) // remove possible empty string from the result
 }
 
 export default getFunctionArguments

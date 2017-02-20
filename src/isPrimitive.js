@@ -1,4 +1,4 @@
-const isPrimitive = v => {
+const isPrimitive = (v) => {
   if (v === null) {
     return true
   }

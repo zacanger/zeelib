@@ -1,2 +1,2 @@
-const id = a => a
+const id = (a) => a
 export default id

@@ -12,8 +12,8 @@ const colorize = (color, text) => {
 }
 const colors = () => {
   const val = {}
-  Object.keys(inspect.colors).forEach(color => {
-    val[color] = text => colorize(color, text)
+  Object.keys(inspect.colors).forEach((color) => {
+    val[color] = (text) => colorize(color, text)
   })
   return val
 }

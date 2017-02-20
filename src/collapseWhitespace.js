@@ -1,2 +1,2 @@
-const collapseWhitespace = str => str.replace(/\s+/g, ' ')
+const collapseWhitespace = (str) => str.replace(/\s+/g, ' ')
 export default collapseWhitespace

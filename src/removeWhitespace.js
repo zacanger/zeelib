@@ -1,2 +1,2 @@
-const removeWhitespace = str => str.replace(/^\s+|\s+$/, '')
+const removeWhitespace = (str) => str.replace(/^\s+|\s+$/, '')
 export default removeWhitespace

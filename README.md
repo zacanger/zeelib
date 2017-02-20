@@ -24,6 +24,20 @@ if (z.isEven(process.argv[2])) // do things
 z.camelCaseToLispCase('thisString')
 ```
 
+You can also import individual functions.
+
+```javascript
+import c from 'zeelib/dist/colorize'
+
+console.log(c.bold(c.blue('HELLO THERE')))
+```
+
+If you're using `require` with individual files you'll need to use `default`:
+
+```javascript
+const c = require('zeelib/dist/colorize').default
+```
+
 ## License
 
 [WTFPL](./LICENSE.md)

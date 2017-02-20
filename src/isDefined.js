@@ -1,2 +1,2 @@
-const isDefined = v => v !== undefined
+const isDefined = (v) => v !== undefined
 export default isDefined

@@ -1,4 +1,4 @@
-const inlineString = str => {
+const inlineString = (str) => {
   str = str.replace(/(\r\n|\n|\r)/gm, ' ')
   return str.replace(/[\s]+/gm, ' ')
 }

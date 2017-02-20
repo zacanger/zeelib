@@ -1,2 +1,2 @@
-const isUndefined = v => v === undefined
+const isUndefined = (v) => v === undefined
 export default isUndefined
