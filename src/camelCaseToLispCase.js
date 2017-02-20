@@ -1,4 +1,6 @@
-const camelCaseToLispCase = (str) =>
+// @flow
+
+const camelCaseToLispCase = (str: string): string =>
   str.replace(/[A-Z]/g, (match) =>
     '-' + match.toLowerCase()).toLowerCase()
 

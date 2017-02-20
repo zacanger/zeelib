@@ -1,4 +1,7 @@
+// @flow
+
 // add \n to every line
-const addNewlines = (s) =>
-  s.split('\t').join('  ').split('\n').map((e, i, a) => e + '\n')
+const addNewlines = (s: string) : string =>
+  s.split('\t').join('  ').split('\n').map((e) => e + '\n').join('')
+
 export default addNewlines

@@ -1,2 +1,6 @@
-const capitalizeFirstChar = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+// @flow
+
+const capitalizeFirstChar = (str: string) : string =>
+  str.charAt(0).toUpperCase() + str.slice(1)
+
 export default capitalizeFirstChar

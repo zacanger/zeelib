@@ -1,2 +1,6 @@
-const cdr = (arr) => arr.slice(1)
+// @flow
+
+const cdr = (arr: any[]) : any =>
+  arr.slice(1)
+
 export default cdr

@@ -1,3 +1,5 @@
+// @flow
+
 import { inspect } from 'util'
 
 // options:
@@ -6,14 +8,15 @@ import { inspect } from 'util'
 // usage:
 // const c = require('./color')
 // console.log(c.bold(c.blue('foo')))
-const colorize = (color, text) => {
+const colorize = (color: string, text: string) : string => {
   const codes = inspect.colors[color]
   return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
 }
-const colors = () => {
+
+const colors = () : any => {
   const val = {}
   Object.keys(inspect.colors).forEach((color) => {
-    val[color] = (text) => colorize(color, text)
+    val[color] = (text: string) => colorize(color, text)
   })
   return val
 }
