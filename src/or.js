@@ -1,6 +1,4 @@
-// @flow
-
-const or = (a: Object) : bool => {
+const or = (a) => {
   for (let i in a) {
     if (a[i] === true) {
       return true
