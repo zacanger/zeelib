@@ -1,2 +1,6 @@
-const head = (arr) => arr[0]
+// @flow
+
+const head = (arr: any[]) : any =>
+  arr[0]
+
 export default head

@@ -1,10 +1,11 @@
+// @flow
+
 import isArrayLike from './isArrayLike'
 import each from './each'
 
-function filter (list, fn) {
-  const
-    isArr    = isArrayLike(list)
-  , filtered = isArr ? [] : {}
+function filter (list: any[], fn: any) : Object | any[] {
+  const isArr = isArrayLike(list)
+  const filtered = isArr ? [] : {}
 
   each(list, (item, index) => {
     if (fn(item, index)) {

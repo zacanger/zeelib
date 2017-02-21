@@ -1,2 +1,6 @@
-const getReferrer = () => document.referrer
+// @flow
+
+const getReferrer = () : ?string =>
+  document.referrer
+
 export default getReferrer

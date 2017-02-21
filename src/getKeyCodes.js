@@ -1,5 +1,8 @@
 /* eslint-disable comma-style */
-const getKeyCodes = () => ({
+
+// @flow
+
+const getKeyCodes = () : Object => ({
   BACKSPACE: 8,
   TAB: 9,
   ENTER: 13,

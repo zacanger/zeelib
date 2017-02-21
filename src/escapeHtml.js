@@ -1,8 +1,12 @@
 /* eslint-disable no-useless-escape */
-const escapeHtml = (str) =>
-  str.replace(/&/g, '&amp;')
-  .replace(/</g, '&lt;')
-  .replace(/>/g, '&gt;')
-  .replace(/"/g, '&quot;')
+
+// @flow
+
+const escapeHtml = (str: string) : string =>
+  str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
 
 export default escapeHtml

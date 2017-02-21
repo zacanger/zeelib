@@ -1,4 +1,6 @@
-function greatestCommonDivisor () {
+// @flow
+
+function greatestCommonDivisor () : number {
   let i = arguments.length
   let a = arguments[--i]
   while (a && i) {

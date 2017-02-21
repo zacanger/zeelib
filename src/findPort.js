@@ -1,8 +1,10 @@
+// @flow
+
 import { createServer } from 'net'
 
 // find next open port
 // findPort(8000, (err, port) => {})
-const findPort = (port, cb) => {
+const findPort = (port: number, cb: any) : any => {
   const server = createServer(() => {})
   const onListen = () => {
     server.removeListener('error', onError)
