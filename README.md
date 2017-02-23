@@ -126,6 +126,7 @@ const c = require('zeelib/dist/colorize').default
 * colorize
 * dir
 * findPort
+* getArgs
 * getNodeModules
 * getTerminalColumns
 * getTerminalRows
