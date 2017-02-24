@@ -58,6 +58,7 @@ const c = require('zeelib/dist/colorize').default
 ### dom
 
 * getCookie
+* getElementPosition
 * getHeight
 * getIsBrowser
 * getReferrer

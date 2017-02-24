@@ -1,5 +1,6 @@
 // dom
 export getCookie from './getCookie'
+export getElementPosition from './getElementPosition'
 export getHeight from './getHeight'
 export getIsBrowser from './getIsBrowser'
 export getReferrer from './getReferrer'
