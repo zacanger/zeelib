@@ -61,6 +61,7 @@ const c = require('zeelib/dist/colorize').default
 * getElementPosition
 * getHeight
 * getIsBrowser
+* getLengthOfElements
 * getReferrer
 * getScrollBarWidth
 * getWidth
