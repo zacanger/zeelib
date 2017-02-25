@@ -68,10 +68,6 @@ const c = require('zeelib/dist/colorize').default
 * restoreScrollPosition
 * scrollTop
 
-### keycodes
-
-* getKeyCodes
-
 ### regex, string utils, etc.
 
 * addNewlines
@@ -259,6 +255,7 @@ const c = require('zeelib/dist/colorize').default
 * filterFloat
 * getBrokenImage
 * getKeyByValue
+* getKeyCodes
 * getNiceDate
 * getTransparentGif
 * greatestCommonDivisor
