@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dir=function(a){return console.dir(a,{colors:!0})};exports.default=dir;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _getIsNode=require('./getIsNode'),_getIsNode2=_interopRequireDefault(_getIsNode);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var dir=function(a){return(0,_getIsNode2.default)()?console.dir(a,{colors:!0}):console.log(a)};exports.default=dir;

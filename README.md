@@ -125,8 +125,8 @@ const c = require('zeelib/dist/colorize').default
 * base64BufferDec
 * base64BufferEnc
 * colorize
-* dir
 * findPort
+* getIsNode
 * getArgs
 * getNodeModules
 * getTerminalColumns
@@ -253,6 +253,7 @@ const c = require('zeelib/dist/colorize').default
 * copy
 * copyWithout
 * deepCopy
+* dir
 * doubleUntil
 * filterFloat
 * getBrokenImage
