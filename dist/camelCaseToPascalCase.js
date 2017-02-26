@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var camelCaseToPascalCase=function(a){return a.charAt(0).toUpperCase()+a.slice(1)};exports.default=camelCaseToPascalCase;

@@ -73,6 +73,7 @@ const c = require('zeelib/dist/colorize').default
 * addNewlines
 * alphaNumericOnly
 * camelCaseToLispCase
+* camelCaseToPascalCase
 * camelCaseToSnakeCase
 * capitalizeFirstChar
 * collapseWhitespace
@@ -97,11 +98,16 @@ const c = require('zeelib/dist/colorize').default
 * isValidHex
 * lightenOrDarken
 * lispCaseToCamelCase
+* lispCaseToPascalCase
+* lispCaseToSnakeCase
 * minifyString
 * newlinesToSpaces
 * normalizeClassname
 * normalizeColor
 * normalizeText
+* pascalCaseToCamelCase
+* pascalCaseToLispCase
+* pascalCaseToSnakeCase
 * randomColor
 * removeNewlines
 * removeNonAlpha
@@ -112,6 +118,8 @@ const c = require('zeelib/dist/colorize').default
 * removeWhitespace
 * rot13
 * snakeCaseToCamelCase
+* snakeCaseToLispCase
+* snakeCaseToPascalCase
 * stripPunctuation
 * trimHash
 * trimSpaces
