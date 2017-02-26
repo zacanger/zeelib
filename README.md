@@ -70,6 +70,7 @@ const c = require('zeelib/dist/colorize').default
 
 ### regex, string utils, etc.
 
+* abbrev
 * addNewlines
 * alphaNumericOnly
 * camelCaseToLispCase
@@ -101,6 +102,7 @@ const c = require('zeelib/dist/colorize').default
 * lispCaseToPascalCase
 * lispCaseToSnakeCase
 * minifyString
+* moustache
 * newlinesToSpaces
 * normalizeClassname
 * normalizeColor
@@ -112,6 +114,7 @@ const c = require('zeelib/dist/colorize').default
 * removeNewlines
 * removeNonAlpha
 * removeNonAlphaNumeric
+* removeNonAscii
 * removeNonNumeric
 * removeNumeric
 * removeTags
