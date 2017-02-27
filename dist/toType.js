@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function toType(a){var b=arguments.length;if(1!==b)throw new Error('Please only pass one argument');return{}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()}exports.default=toType;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var toType=function(a){return{}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()};exports.default=toType;

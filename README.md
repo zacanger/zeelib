@@ -263,6 +263,8 @@ const c = require('zeelib/dist/colorize').default
 * deepCopy
 * dir
 * doubleUntil
+* flatten
+* flattenAndUniq
 * filterFloat
 * getBrokenImage
 * getKeyByValue
