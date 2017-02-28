@@ -1,5 +1,5 @@
 // @flow
-//
+
 const getIsNode = () : bool =>
   process && !!process.version
 
