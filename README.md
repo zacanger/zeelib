@@ -225,10 +225,12 @@ const c = require('zeelib/dist/colorize').default
 * isArray
 * isArrayLike
 * isBoolean
+* isBuffer
 * isDate
 * isDefined
 * isDomElement
 * isEmpty
+* isError
 * isEven
 * isFloat
 * isFunction
@@ -238,6 +240,7 @@ const c = require('zeelib/dist/colorize').default
 * isNegative
 * isNodeList
 * isNull
+* isNullOrUndefined
 * isNumber
 * isObject
 * isObjectEqual
@@ -248,6 +251,7 @@ const c = require('zeelib/dist/colorize').default
 * isPromise
 * isRegExp
 * isString
+* isSymbol
 * isType
 * isUndefined
 * objectToString

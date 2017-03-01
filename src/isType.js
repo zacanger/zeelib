@@ -10,7 +10,7 @@ function isType (a: any, t: string) : bool {
   const type = String(t).toLowerCase()
 
   if ((type === 'null' && a === null)             ||
-      (type === typeof a)                         ||
+      (type === typeof a)                         || // eslint-disable-line
       (type === 'object' && a === Object(a))      ||
       (type === 'array' && isArray && isArray(a)) ||
       Object.prototype.toString.call(a).slice(8, -1).toLowerCase() === type) {
