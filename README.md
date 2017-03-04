@@ -146,6 +146,7 @@ const c = require('zeelib/dist/colorize').default
 * logWithInfo
 * notFound
 * open
+* readFileSync
 * readJson
 * readJsonSync
 * termPrompt

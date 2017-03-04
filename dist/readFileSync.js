@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),readFileS=function(a){try{return(0,_fs.readFileSync)((0,_path.resolve)(a),{encoding:'utf8'})}catch(b){}};exports.default=readFileS;
