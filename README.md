@@ -272,6 +272,7 @@ const c = require('zeelib/dist/colorize').default
 * cloneWithout
 * copy
 * copyWithout
+* countItemsInArray
 * deepCopy
 * dir
 * doubleUntil
