@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var toHttp=function(a){return a.replace(/^https/,'http')};exports.default=toHttp;

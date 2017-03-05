@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var stripHref=function(a){return a.replace(/(src|href)\s*=\s*(['"])/gi,'_$1=$2')};exports.default=stripHref;

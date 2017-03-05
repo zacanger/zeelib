@@ -71,6 +71,8 @@ const c = require('zeelib/dist/colorize').default
 ### regex, string utils, etc.
 
 * abbrev
+* abbrevNumber
+* addCommasToNumber
 * addNewlines
 * alphaNumericOnly
 * camelCaseToLispCase
@@ -82,6 +84,7 @@ const c = require('zeelib/dist/colorize').default
 * cssToJson
 * escapeHtml
 * fixWindowsSlashes
+* formatMs
 * getComplimentaryColors
 * getRandomHex32
 * getRandomString
@@ -123,7 +126,10 @@ const c = require('zeelib/dist/colorize').default
 * snakeCaseToCamelCase
 * snakeCaseToLispCase
 * snakeCaseToPascalCase
+* stripHref
 * stripPunctuation
+* toHttp
+* toHttps
 * trimHash
 * trimSpaces
 * unescapeHtml
@@ -269,9 +275,9 @@ const c = require('zeelib/dist/colorize').default
 * deepCopy
 * dir
 * doubleUntil
+* filterFloat
 * flatten
 * flattenAndUniq
-* filterFloat
 * getBrokenImage
 * getKeyByValue
 * getKeyCodes
@@ -297,7 +303,9 @@ const c = require('zeelib/dist/colorize').default
 * product
 * range
 * reverseDigits
+* scaleToFit
 * shallowCopy
+* shuffle
 * sleep
 * splitStringOn
 * sum

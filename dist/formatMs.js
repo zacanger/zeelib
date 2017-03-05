@@ -1,0 +1,1 @@
+'use strict';var _Mathfloor=Math.floor;Object.defineProperty(exports,'__esModule',{value:!0});var formatMs=function(a){var b=3.6e6,c=6e4,e=_Mathfloor(a/b),f=_Mathfloor((a-e*b)/c),g=Math.round((a-e*b-f*c)/1e3);e&&10>f&&(f='0'+f),10>g&&(g='0'+g);var h=f+':'+g;return e&&(h=e+':'+h),h};exports.default=formatMs;
