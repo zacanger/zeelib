@@ -283,6 +283,7 @@ const c = require('zeelib/dist/colorize').default
 * getKeyByValue
 * getKeyCodes
 * getNiceDate
+* getOrdinal
 * getTransparentGif
 * greatestCommonDivisor
 * invoker

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getOrdinal=function(a){var b=['th','st','nd','rd'],c=a%100;return a+(b[(c-20)%10]||b[c]||b[0])};exports.default=getOrdinal;
