@@ -147,6 +147,7 @@ const c = require('zeelib/dist/colorize').default
 * getTerminalRows
 * getTerminalSize
 * getUserHome
+* getUserShell
 * hasColor
 * isInstalled
 * logWithInfo
