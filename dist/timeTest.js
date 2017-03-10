@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var timeTest=function(a,b){console.time('time');var c=b(a);return console.timeEnd('time'),c};exports.default=timeTest;

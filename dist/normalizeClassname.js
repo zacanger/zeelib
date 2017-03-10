@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var normalizeClassname=function(b){var c=function replaceNewlines(e){return e.replace(/\s+/g,' ').trim()};return Array.isArray(b)?c(function replaceArr(e){return e.map(function(f){return''+f}).join(' ')}(b)):'string'==typeof b?c(b):c(''+b)};exports.default=normalizeClassname;

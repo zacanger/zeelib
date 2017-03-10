@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNullOrUndefined=function(a){return null==a};exports.default=isNullOrUndefined;

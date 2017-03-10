@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var product=function(b){return b.reduce(function(c,d){return c*d},1)};exports.default=product;

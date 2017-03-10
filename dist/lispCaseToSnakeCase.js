@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lispCaseToSnakeCase=function(a){return a.replace(/-/g,'_')};exports.default=lispCaseToSnakeCase;

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),readJsonSync=function(a){return JSON.parse((0,_fs.readFileSync)(a,'utf8'))};exports.default=readJsonSync;

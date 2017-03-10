@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var tap=function(b){return function(c){return console.log(b,c),c}};exports.default=tap;

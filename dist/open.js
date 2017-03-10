@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _child_process=require('child_process'),open=function(a,b,c){a=[a];var d='win32'===process.platform?'cmd':'darwin'===process.platform?'open':'xdg-open';return(0,_child_process.execFile)(d,a,b,c)};exports.default=open;

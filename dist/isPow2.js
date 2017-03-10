@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isPow2=function(a){return 1<<a.toString(2).length-1===a};exports.default=isPow2;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isStringSomewhereInArray=function(b,c){return b.some(function(d){return c.toLowerCase().includes(d.toLowerCase())||d.toLowerCase().includes(c.toLowerCase())})};exports.default=isStringSomewhereInArray;

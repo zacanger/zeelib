@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var trimSpaces=function(a){return'string'==typeof a?a.replace(/\s/g,''):a};exports.default=trimSpaces;

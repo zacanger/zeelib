@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var words=function(a){return a.split(' ')};exports.default=words;

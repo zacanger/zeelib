@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isOdd=function(a){return 0!=(1&a)};exports.default=isOdd;

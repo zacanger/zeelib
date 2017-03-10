@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var minimum=function(b){return Math.min.apply(Math,b)};exports.default=minimum;

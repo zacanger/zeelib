@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var invoker=function(a,b){return function(c,d){var e=0,f=function _fn(){e++;var g=c();g?d(null,g):e<a?setTimeout(f,b):(d(new Error('Limit exceeded!'),null),d=function cb(){})};f()}};exports.default=invoker;

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var noSwitch=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{};return function(b){if('function'==typeof a[b])return a[b]();return'function'==typeof a.default?a.default():void 0}};exports.default=noSwitch;

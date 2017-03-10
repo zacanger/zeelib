@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),writeJsonSync=function(a,b,c){'number'!=typeof c&&(c=0),(0,_fs.writeFileSync)(a,JSON.stringify(b,null,c),'utf8')};exports.default=writeJsonSync;

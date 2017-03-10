@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isFunction=function(a){return'function'==typeof a};exports.default=isFunction;

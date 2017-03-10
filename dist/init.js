@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var init=function(a){return a.slice(0,-1)};exports.default=init;

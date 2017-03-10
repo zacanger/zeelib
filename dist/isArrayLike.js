@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isNumber=require('./isNumber'),_isNumber2=_interopRequireDefault(_isNumber);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isArrayLike=function(a){return a&&(0,_isNumber2.default)(a.length)};exports.default=isArrayLike;

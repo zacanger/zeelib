@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var moustache=function(a,b,c){var d=/\{\{(\w+)\}\}/g;return a.replace(c||d,function f(g,h){return h in b?b[h]:''})};exports.default=moustache;

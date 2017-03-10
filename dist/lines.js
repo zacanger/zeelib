@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lines=function(a){return a.split('\n')};exports.default=lines;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var or=function(b){for(var c in b)if(!0===b[c])return!0;return!1};exports.default=or;

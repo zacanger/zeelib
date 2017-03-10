@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function maybeArgs(a){return function(){var b=Array.prototype.slice.all(arguments),c=b.some(function(e){return null===e});if(!c){var d=a.apply(this,b);return'function'==typeof d?maybeArgs(d):d}}}exports.default=maybeArgs;

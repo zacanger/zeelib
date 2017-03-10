@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _os=require('os'),withInfo=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:'';return a+':'+(0,_os.hostname)()+':'+process.pid},logWithInfo=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:'';return console.log(withInfo(a))};exports.default=logWithInfo;

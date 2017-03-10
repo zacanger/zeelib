@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _child_process=require('child_process'),getDiskUsage=function(){var a=(0,_child_process.execSync)('df -k /').toString().trim().split('\n'),b=a[a.length-1].replace(/[\s\n\r]+/g,' '),c=b.split(' '),d=1024*+c[1],e=1024*+c[3];return e/d/0.01};exports.default=getDiskUsage;

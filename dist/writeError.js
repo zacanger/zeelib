@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_util=require('util'),fn=process.argv[2]||process.env.ERR_FILE||'err.log',file=(0,_fs.createWriteStream)(__dirname+'/'+fn,{flags:'w'}),writeError=function(a){file.write((0,_util.format)(a)+'\n'),process.stdout.write((0,_util.format)(a)+'\n')};exports.default=writeError;

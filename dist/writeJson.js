@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),writeJson=function(a,b,c,d){'function'!=typeof d&&(d=c,c=0);var f;try{f=JSON.stringify(b,null,c)}catch(g){return void d(g)}(0,_fs.writeFile)(a,f,'utf8',d)};exports.default=writeJson;

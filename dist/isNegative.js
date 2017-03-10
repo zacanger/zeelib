@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNegative=function(a){return+a===a&&0>a};exports.default=isNegative;
