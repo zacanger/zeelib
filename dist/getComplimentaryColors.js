@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getComplimentaryColors=function(a){return'#'+(1e5+(16777216+~('0x'+a.slice(1))).toString(16)).slice(-6)};exports.default=getComplimentaryColors;

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var abbrev=function(a){return a.match(/\b([A-Z])/g)?a.match(/\b([A-Z])/g).join(''):a};exports.default=abbrev;

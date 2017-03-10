@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getBrokenImage=function(){return'data:;base64,iVBORwOKGO=='};exports.default=getBrokenImage;

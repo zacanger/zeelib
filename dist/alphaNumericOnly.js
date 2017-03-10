@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var alphaNumericOnly=function(a){return a.replace(/[^\w\s]|_/g,'').replace(/\s+/g,' ')};exports.default=alphaNumericOnly;

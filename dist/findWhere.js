@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var findWhere=function(a,b){var c=null;return b.some(function(d,e){return!!a(d,e)&&(c=d,!0)}),c};exports.default=findWhere;

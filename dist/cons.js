@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var cons=function(a,c){var d=c.length,e=Array(d+1);e[0]=a;for(var f=0;f<d;++f)e[f+1]=c[f];return e};exports.default=cons;

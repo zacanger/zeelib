@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var filterFloat=function(a){return /^(-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(a)?+a:NaN};exports.default=filterFloat;

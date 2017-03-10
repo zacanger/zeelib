@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var concat=function(b){var c=[];for(var d in b)c=c.concat(b[d]);return c};exports.default=concat;

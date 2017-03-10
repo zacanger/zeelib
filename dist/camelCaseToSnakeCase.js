@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var camelCaseToSnakeCase=function(a){return a.replace(/[A-Z]/g,function(b){return'_'+b.toLowerCase()}).toLowerCase()};exports.default=camelCaseToSnakeCase;

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getRandomString=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:8;return Math.random().toString(36).substring(a)};exports.default=getRandomString;

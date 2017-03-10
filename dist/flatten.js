@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function _toConsumableArray(b){if(Array.isArray(b)){for(var c=0,d=Array(b.length);c<b.length;c++)d[c]=b[c];return d}return Array.from(b)}var flatten=function(b){var c;return Array.isArray(b)?(c=[]).concat.apply(c,_toConsumableArray(b.map(flatten))):b};exports.default=flatten;
