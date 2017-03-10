@@ -3,7 +3,7 @@
 import isArrayLike from './isArrayLike'
 import each from './each'
 
-function filter (list: any[], fn: any) : Object | any[] {
+function filter (list: any[], fn: any): Object | any[] {
   const isArr = isArrayLike(list)
   const filtered = isArr ? [] : {}
 

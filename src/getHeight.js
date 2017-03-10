@@ -1,6 +1,6 @@
 // @flow
 
-const getHeight = () : number =>
+const getHeight = (): number =>
   window.innerHeight ||
   window.document.documentElement.clientHeight
 

@@ -1,6 +1,6 @@
 // @flow
 
-const getIsNode = () : bool =>
+const getIsNode = (): bool =>
   process && !!process.version
 
 export default getIsNode

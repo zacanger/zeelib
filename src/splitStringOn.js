@@ -1,6 +1,6 @@
 // @flow
 
-const splitStringOn = (str: string, spl: string = '') : string[] | null => {
+const splitStringOn = (str: string, spl: string = ''): string[] | null => {
   if (!str || typeof str !== 'string') {
     console.warn('Please pass a string as first param.')
   }

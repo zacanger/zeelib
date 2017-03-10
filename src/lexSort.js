@@ -1,6 +1,6 @@
 // @flow
 
-const lexSort = (a : string, b : string) : number =>
+const lexSort = (a: string, b: string): number =>
   a === b
     ? 0
     : a > b

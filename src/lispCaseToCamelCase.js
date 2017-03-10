@@ -1,6 +1,6 @@
 // @flow
 
-const lispCaseToCamelCase = (str: string) : string =>
+const lispCaseToCamelCase = (str: string): string =>
   str.toLowerCase().replace(/-[a-z]/g, (match) =>
     match.slice(1).toUpperCase())
 

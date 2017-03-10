@@ -1,6 +1,6 @@
 // @flow
 
-const isFunction = (v: any) : bool =>
+const isFunction = (v: any): bool =>
   typeof v === 'function'
 
 export default isFunction

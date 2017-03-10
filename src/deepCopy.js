@@ -2,7 +2,7 @@
 
 import isArray from './isArray'
 
-const deepCopy = (o: Object) : any => {
+const deepCopy = (o: Object): any => {
   let newObj
   if (!o || typeof o !== 'object') {
     return o

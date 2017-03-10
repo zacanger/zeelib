@@ -1,6 +1,6 @@
 // @flow
 
-const formatMs = (ms: number) : string => {
+const formatMs = (ms: number): string => {
   const hr = 3600000
   const min = 60000
   const sec = 1000

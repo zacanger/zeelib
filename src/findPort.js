@@ -4,7 +4,7 @@ import { createServer } from 'net'
 
 // find next open port
 // findPort(8000, (err, port) => {})
-const findPort = (port: number, cb: any) : any => {
+const findPort = (port: number, cb: any): any => {
   const server = createServer(() => {})
   const onListen = () => {
     server.removeListener('error', onError)

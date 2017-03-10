@@ -1,6 +1,6 @@
 // @flow
 
-const getLengthOfElements = (i: string, c: ?bool) : number =>
+const getLengthOfElements = (i: string, c: ?bool): number =>
   document &&
     c
       ? document.getElementsByClassName(i).length

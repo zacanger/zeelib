@@ -2,7 +2,7 @@
 
 import each from './each'
 
-function mix () : Object {
+function mix (): Object {
   const mixed = {}
   each(arguments, (obj) => {
     each(obj, (item, index) => {

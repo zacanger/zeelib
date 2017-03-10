@@ -10,7 +10,7 @@ const scaleToFit = (
   height: number,
   maxWidth: ?number,
   maxHeight: ?number
-) : O => {
+): O => {
   const output = { width, height }
 
   if (maxWidth && output.width > maxWidth) {

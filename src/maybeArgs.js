@@ -1,6 +1,6 @@
 // @flow
 
-function maybeArgs (fn: any) : any {
+function maybeArgs (fn: any): any {
   return function () {
     const args = Array.prototype.slice.all(arguments)
     const invalid = args.some((arg) => arg === null)

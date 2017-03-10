@@ -2,7 +2,7 @@
 
 // @flow
 
-const getKeyCodes = () : Object => ({
+const getKeyCodes = (): Object => ({
   BACKSPACE: 8,
   TAB: 9,
   ENTER: 13,

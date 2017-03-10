@@ -1,8 +1,6 @@
-/* eslint-disable no-useless-escape */
-
 // @flow
 
-const unescapeHtml = (str: string) : string =>
+const unescapeHtml = (str: string): string =>
   str
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')

@@ -15,8 +15,8 @@
 // return ++ii > 22
 // }, console.log)
 
-const invoker = (limit: number, interval: number) : void =>
-  (fn: any, cb: any) : void => {
+const invoker = (limit: number, interval: number): void =>
+  (fn: any, cb: any): void => {
     let current = 0
     let _fn = () => {
       current++

@@ -1,7 +1,7 @@
 // @flow
 
 const not = (a: any) =>
-  (b: any) : bool =>
+  (b: any): bool =>
     a !== b
 
 export default not

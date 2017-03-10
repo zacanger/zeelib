@@ -5,7 +5,7 @@ import isHexBased from './isHexBased'
 import trimHash from './trimHash'
 
 // takes string color, returns either string or null
-const normalizeColor = (color: string) : string | null => {
+const normalizeColor = (color: string): string | null => {
   let nextColor = trimSpaces(color)
   if (!isHexBased(color)) {
     return null

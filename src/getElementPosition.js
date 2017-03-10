@@ -5,7 +5,7 @@ type p = {
   y: number
 }
 
-const getElementPosition = (el: any) : p => {
+const getElementPosition = (el: any): p => {
   let x = 0
   let y = 0
 

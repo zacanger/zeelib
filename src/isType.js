@@ -6,7 +6,7 @@ import isArray from './isArray'
 // isType(el, type)
 // isType(1, 'number')
 // isType(thing.something, 'array')
-function isType (a: any, t: string) : bool {
+function isType (a: any, t: string): bool {
   const type = String(t).toLowerCase()
 
   if ((type === 'null' && a === null)             ||

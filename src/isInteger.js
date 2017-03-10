@@ -1,6 +1,6 @@
 // @flow
 
-const isInteger = Number.isInteger || function (n: number) : bool {
+const isInteger = Number.isInteger || function (n: number): bool {
   return (n | 0) === n
 }
 

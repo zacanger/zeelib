@@ -1,6 +1,6 @@
 // @flow
 
-const isInstalled = (pkgName: string) : bool => {
+const isInstalled = (pkgName: string): bool => {
   try {
     require.resolve(pkgName)
     return true

@@ -1,6 +1,6 @@
 // @flow
 
-const isDefined = (v: any) : bool =>
+const isDefined = (v: any): bool =>
   v !== undefined
 
 export default isDefined

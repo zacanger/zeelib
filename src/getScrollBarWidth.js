@@ -1,6 +1,6 @@
 // @flow
 
-const getScrollBarWidth = () : number =>
+const getScrollBarWidth = (): number =>
   window.innerWidth - window.document.documentElement.clientWidth
 
 export default getScrollBarWidth

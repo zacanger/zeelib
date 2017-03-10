@@ -1,6 +1,6 @@
 // @flow
 
-const getFunctionArguments = function (fn: any) : ?any[] {
+const getFunctionArguments = function (fn: any): ?any[] {
   if (typeof fn !== 'function') {
     throw new Error('Not a function')
   }

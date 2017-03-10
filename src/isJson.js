@@ -1,6 +1,6 @@
 // @flow
 
-const isJson = (str: string) : bool => {
+const isJson = (str: string): bool => {
   try {
     JSON.parse(str)
   } catch (e) {

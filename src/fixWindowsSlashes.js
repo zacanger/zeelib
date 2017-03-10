@@ -1,7 +1,7 @@
 // @flow
 
 // gh:sindresorhus/slash
-const fixWindowsSlashes = (str: string) : string => {
+const fixWindowsSlashes = (str: string): string => {
   const isExtendedLengthPath = /^\\\\\?\\/.test(str)
   const hasNonAscii = /[^\x00-\x80]+/.test(str)
   if (isExtendedLengthPath || hasNonAscii) return str

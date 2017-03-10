@@ -5,7 +5,7 @@ type S = {
   scrollY: number
 }
 
-const getScrollPosition = () : S =>
+const getScrollPosition = (): S =>
   ({ scrollX: window.scrollX, scrollY: window.scrollY })
 
 export default getScrollPosition

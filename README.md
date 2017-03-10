@@ -142,6 +142,7 @@ const c = require('zeelib/dist/colorize').default
 * findPort
 * getIsNode
 * getArgs
+* getDiskUsage
 * getNodeModules
 * getTerminalColumns
 * getTerminalRows
@@ -269,6 +270,7 @@ const c = require('zeelib/dist/colorize').default
 
 ### misc
 
+* average
 * chunk
 * cloneWithout
 * copy
@@ -286,6 +288,7 @@ const c = require('zeelib/dist/colorize').default
 * getNiceDate
 * getOrdinal
 * getTransparentGif
+* greater
 * greatestCommonDivisor
 * invoker
 * isObjectEmpty

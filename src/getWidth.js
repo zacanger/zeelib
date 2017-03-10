@@ -1,6 +1,6 @@
 // @flow
 
-const getWidth = () : number =>
+const getWidth = (): number =>
   window.innerWidth ||
   window.document.documentElement.clientWidth
 

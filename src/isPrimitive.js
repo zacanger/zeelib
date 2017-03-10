@@ -1,6 +1,6 @@
 // @flow
 
-const isPrimitive = (v: any) : bool => {
+const isPrimitive = (v: any): bool => {
   if (v === null) {
     return true
   }

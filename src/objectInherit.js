@@ -3,7 +3,7 @@
 import objectClone from './objectClone'
 
 // inherits target by source
-const objectInherit = (target: Object, source: Object) : void => {
+const objectInherit = (target: Object, source: Object): void => {
   target.super_ = source
   target.prototype = Object.create(target.super_.prototype)
   let descriptor = objectClone(target.super_.descriptor) || {}

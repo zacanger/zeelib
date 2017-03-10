@@ -1,2 +1,6 @@
-const isNegative = (x) => +x === x && x < 0
+// @flow
+
+const isNegative = (x: number): bool =>
+  +x === x && x < 0
+
 export default isNegative

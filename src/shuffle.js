@@ -1,6 +1,6 @@
 // @flow
 
-const shuffle = (a: any[]) : any[] => {
+const shuffle = (a: any[]): any[] => {
   for (let i = a.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1))
     let temp = a[i]
