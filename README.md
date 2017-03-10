@@ -140,9 +140,13 @@ const c = require('zeelib/dist/colorize').default
 * base64BufferEnc
 * colorize
 * findPort
-* getIsNode
 * getArgs
 * getDiskUsage
+* getFreeMemory
+* getHostname
+* getIsNode
+* getLoadAverage
+* getMemoryUsage
 * getNodeModules
 * getTerminalColumns
 * getTerminalRows

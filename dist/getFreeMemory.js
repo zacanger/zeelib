@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _os=require('os'),getFreeMemory=function(){return parseFloat(((0,_os.freemem)()/1024/1024).toFixed(2))};exports.default=getFreeMemory;
