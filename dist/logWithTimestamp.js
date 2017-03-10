@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function logWithTimestamp(){var a=new Date,b=a.getDate()+'/'+a.getMonth()+' '+a.getHours()+':'+a.getMinutes()+':'+a.getSeconds()+'.'+a.getMilliseconds(),c=Array.prototype.slice.call(arguments);c.unshift('--'),c.unshift(b),console.log.apply(console,c)}exports.default=logWithTimestamp;

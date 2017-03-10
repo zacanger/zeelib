@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getWidth=function(){return window.innerWidth||window.document.documentElement.clientWidth};exports.default=getWidth;

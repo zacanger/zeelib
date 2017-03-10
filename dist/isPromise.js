@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isPromise=function(b){return b&&'function'==typeof b.then};exports.default=isPromise;

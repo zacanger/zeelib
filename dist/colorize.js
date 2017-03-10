@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _util=require('util'),colorize=function(a,b){var c=_util.inspect.colors[a];return'\x1B['+c[0]+'m'+b+'\x1B['+c[1]+'m'},colors=function(){var a={};return Object.keys(_util.inspect.colors).forEach(function(b){a[b]=function(c){return colorize(b,c)}}),a};exports.default=colors();

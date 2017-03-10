@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getRandomHex32=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:'';return 32>a.length?getRandomHex32(a+(Math.random()+Math.random()).toString(16).slice(2)):a.slice(0,32)};exports.default=getRandomHex32;

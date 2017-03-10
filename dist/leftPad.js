@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var leftPad=function(a,b){var c=2<arguments.length&&arguments[2]!==void 0?arguments[2]:' ';return Array(b>a.length?1+b-a.length:0).join(c)+a};exports.default=leftPad;

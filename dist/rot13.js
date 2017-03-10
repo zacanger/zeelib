@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function rot13(a){return(a||this).split('').map(function(b){if(!b.match(/[A-Za-z]/))return b;var d=Math.floor(b.charCodeAt(0)/97),e=(b.toLowerCase().charCodeAt(0)-83)%26||26;return String.fromCharCode(e+(0===d?64:96))}).join('')}exports.default=rot13;

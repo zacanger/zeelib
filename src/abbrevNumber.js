@@ -1,6 +1,6 @@
 // @flow
 
-const abbrevNumber = (n : number) : string => {
+const abbrevNumber = (n: number): string => {
   if (n < 1000) return `${n}`
   if (n < 10000) return (Math.round(n / 100) / 10) + 'K'
   if (n < 1000000) return Math.round(n / 1000) + 'K'

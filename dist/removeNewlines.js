@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var removeNewlines=function(a){return a.replace(/(\r\n|\n|\r)/gm,'')};exports.default=removeNewlines;

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getScrollPosition=function(){return{scrollX:window.scrollX,scrollY:window.scrollY}};exports.default=getScrollPosition;

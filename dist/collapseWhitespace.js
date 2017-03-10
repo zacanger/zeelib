@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var collapseWhitespace=function(a){return a.replace(/\s+/g,' ')};exports.default=collapseWhitespace;

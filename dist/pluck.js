@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var pluck=function(a,b){return a.map(function(c){return c[b]})};exports.default=pluck;

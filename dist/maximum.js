@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var maximum=function(b){return Math.max.apply(Math,b)};exports.default=maximum;

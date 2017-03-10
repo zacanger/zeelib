@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _each=require('./each'),_each2=_interopRequireDefault(_each);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}function mix(){var a={};return(0,_each2.default)(arguments,function(b){(0,_each2.default)(b,function(c,d){a[d]=c})}),a}exports.default=mix;

@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _takeWhile=require('./takeWhile'),_takeWhile2=_interopRequireDefault(_takeWhile);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}var span=function(b,c){var d=(0,_takeWhile2.default)(b,c);return[d,c.slice(d.length)]};exports.default=span;

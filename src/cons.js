@@ -1,6 +1,6 @@
 // @flow
 
-const cons = (el: any, ar: any[]) : any[] => {
+const cons = (el: any, ar: any[]): any[] => {
   const l = ar.length
   const b = Array(l + 1)
   b[0] = el

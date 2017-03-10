@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var xor=function(c,d){return!c!=!d};exports.default=xor;

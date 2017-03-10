@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var unlines=function(a){return a.join('\n')};exports.default=unlines;

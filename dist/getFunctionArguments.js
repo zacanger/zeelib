@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getFunctionArguments=function(a){if('function'!=typeof a)throw new Error('Not a function');var b=a.toString(),c=b.match(/\(.*?\)/)[0].replace(/[()]/gi,'').replace(/\s/gi,'').split(',');return c.filter(function(d){return d})};exports.default=getFunctionArguments;

@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var unwords=function(a){return a.join(' ')};exports.default=unwords;

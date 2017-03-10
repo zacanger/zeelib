@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isEven=function(a){return 0==(1&a)};exports.default=isEven;

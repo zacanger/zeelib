@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var toType=function(a){return{}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()};exports.default=toType;

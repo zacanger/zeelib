@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var combineRegex=function(a,b){return new RegExp(a.map(function(c){return c.source}).join(''),b)};exports.default=combineRegex;

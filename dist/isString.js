@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isString=function(a){return'string'==typeof a};exports.default=isString;

@@ -8,12 +8,12 @@ import { inspect } from 'util'
 // usage:
 // const c = require('./color')
 // console.log(c.bold(c.blue('foo')))
-const colorize = (color: string, text: string) : string => {
+const colorize = (color: string, text: string): string => {
   const codes = inspect.colors[color]
   return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
 }
 
-const colors = () : any => {
+const colors = (): any => {
   const val = {}
   Object.keys(inspect.colors).forEach((color) => {
     val[color] = (text: string) => colorize(color, text)

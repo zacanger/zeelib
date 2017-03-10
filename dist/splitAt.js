@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _take=require('./take'),_take2=_interopRequireDefault(_take),_drop=require('./drop'),_drop2=_interopRequireDefault(_drop);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}var splitAt=function(b,c){return[(0,_take2.default)(b,c),(0,_drop2.default)(b,c)]};exports.default=splitAt;

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var drop=function(b,c){var d=c.length;if(1>b)return c;if(b>d)return[];for(var e=[],f=b;f<d;f++)e.push(c[f]);return e};exports.default=drop;

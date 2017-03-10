@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getReferrer=function(){return document.referrer};exports.default=getReferrer;

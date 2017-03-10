@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var map=function(a,b){return b.map(a)};exports.default=map;

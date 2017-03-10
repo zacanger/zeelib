@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),notFound=function(a){return function(d,e){e.writeHead(404,{'Content-Type':'text/html'}),(0,_fs.createReadStream)((0,_path.resolve)(a)).pipe(e)}};exports.default=notFound;

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getLengthOfElements=function(a,b){return document&&b?document.getElementsByClassName(a).length:document.getElementsByTagName(a).length};exports.default=getLengthOfElements;

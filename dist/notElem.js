@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _elem=require('./elem'),_elem2=_interopRequireDefault(_elem);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}var notElem=function(b,c){return!(0,_elem2.default)(b,c)};exports.default=notElem;

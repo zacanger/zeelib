@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getTerminalColumns=function(){return process.stdout.columns};exports.default=getTerminalColumns;

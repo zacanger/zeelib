@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var pascalCaseToLispCase=function(a){return a.charAt(0).toLowerCase()+'-'+a.slice(1).replace(/[A-Z]/g,function(b){return'-'+b.toLowerCase()}).toLowerCase()};exports.default=pascalCaseToLispCase;

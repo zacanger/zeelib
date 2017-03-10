@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getHeight=function(){return window.innerHeight||window.document.documentElement.clientHeight};exports.default=getHeight;

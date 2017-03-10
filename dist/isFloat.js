@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isFloat=function(a){return(0|a)!==a};exports.default=isFloat;

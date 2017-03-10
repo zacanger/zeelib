@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var transposeFlat=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:0|Math.sqrt(a.length);return a.map(function(d,e){return a[0|e%b*b+e/b]})};exports.default=transposeFlat;

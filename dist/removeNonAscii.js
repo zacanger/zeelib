@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var removeNonAscii=function(a){return a.replace(/[^\x20-\x7E]/g,'')};exports.default=removeNonAscii;

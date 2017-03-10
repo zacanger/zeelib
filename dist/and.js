@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var and=function(b){for(var c in b)if(!1===b[c])return!1;return!0};exports.default=and;

@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var scrollTop=function(){return window.scrollTo(0,0)};exports.default=scrollTop;

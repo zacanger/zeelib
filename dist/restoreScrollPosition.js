@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var restoreScrollPosition=function(a){var b=a.scrollX,c=a.scrollY;return window.scrollTo(b,c)};exports.default=restoreScrollPosition;
