@@ -1,8 +1,8 @@
 // @flow
 
-import hex from './hexRegex'
+import getHexRegex from './getHexRegex'
 
 const isHexBased = (color: string): bool =>
-  hex.test(color)
+  getHexRegex().test(color)
 
 export default isHexBased

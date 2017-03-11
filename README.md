@@ -86,11 +86,11 @@ const c = require('zeelib/dist/colorize').default
 * fixWindowsSlashes
 * formatMs
 * getComplimentaryColors
+* getHexRegex
 * getRandomHex32
 * getRandomString
 * getUid4
 * getUid8
-* hexRegex
 * inlineString
 * isAlphaNumeric
 * isEmoji
