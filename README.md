@@ -4,6 +4,7 @@ A small lib of FP, Node, and DOM utils.
 
 Changes:
 
+* `0.5.0` -- *breaking* -- `hexRegex` is now a function, `getHexRegex`
 * `0.4.0` -- *breaking* -- no longer `require('zeelib').default`, just `require('zeelib')`
 * `0.2.0` -- *breaking* -- all functions now in top level
   * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`).
