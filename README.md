@@ -133,6 +133,7 @@ const c = require('zeelib/dist/colorize').default
 * toHttps
 * trimHash
 * trimSpaces
+* truncate
 * unescapeHtml
 
 ### node

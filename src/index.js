@@ -72,6 +72,7 @@ export toHttp from './toHttp'
 export toHttps from './toHttps'
 export trimHash from './trimHash'
 export trimSpaces from './trimSpaces'
+export truncate from './truncate'
 export unescapeHtml from './unescapeHtml'
 // node
 export base64BufferDec from './base64BufferDec'

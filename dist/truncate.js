@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var truncate=function(a,b){var c=2<arguments.length&&arguments[2]!==void 0?arguments[2]:'\u2026';return a.length>b?(b-=c.length,''+a.substr(0,b)+c):a};exports.default=truncate;
