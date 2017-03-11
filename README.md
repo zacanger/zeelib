@@ -301,6 +301,7 @@ const c = require('zeelib/dist/colorize').default
 * leastCommonMultiple
 * leftPad
 * lesser
+* levenshteinDistance
 * lexSort
 * logWithTimestamp
 * maximum
