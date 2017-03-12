@@ -223,6 +223,7 @@ const c = require('zeelib/dist/colorize').default
 * splitAt
 * tail
 * take
+* takeLast
 * takeWhile
 * unfold
 * unlines
@@ -306,6 +307,7 @@ const c = require('zeelib/dist/colorize').default
 * logWithTimestamp
 * maximum
 * maybeArgs
+* merge
 * minimum
 * nco
 * noSwitch
@@ -328,5 +330,6 @@ const c = require('zeelib/dist/colorize').default
 * transpose
 * transposeFlat
 * tryExecNTimes
+* uniq
 * unless
 * xor

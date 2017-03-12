@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var takeLast=function(b,c){c=c.reverse();var d=c.length;if(b>d)return c;for(var e=[],f=0;f<b&&f<d;f++)e.push(c[f]);return e.reverse()};exports.default=takeLast;
