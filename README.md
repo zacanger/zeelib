@@ -213,6 +213,7 @@ const c = require('zeelib/dist/colorize').default
 * once
 * or
 * pair
+* pick
 * pipe
 * pluck
 * propEq
