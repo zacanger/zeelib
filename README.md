@@ -88,6 +88,7 @@ const c = require('zeelib/dist/colorize').default
 * formatMs
 * getComplimentaryColors
 * getHexRegex
+* getQueryFromSearch
 * getRandomHex32
 * getRandomString
 * getUid4
@@ -150,6 +151,7 @@ const c = require('zeelib/dist/colorize').default
 * getLoadAverage
 * getMemoryUsage
 * getNodeModules
+* getPlatform
 * getTerminalColumns
 * getTerminalRows
 * getTerminalSize
@@ -285,6 +287,7 @@ const c = require('zeelib/dist/colorize').default
 * copyWithout
 * countItemsInArray
 * deepCopy
+* diff
 * dir
 * doubleUntil
 * filterFloat
