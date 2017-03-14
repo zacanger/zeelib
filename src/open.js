@@ -1,6 +1,8 @@
+// @flow
+
 import { execFile } from 'child_process'
 
-const open = (args, opts, cb) => {
+const open = (args: any, opts: any, cb: any): any => {
   args = [args]
   const cmd = process.platform === 'win32'
   ? 'cmd'
