@@ -1,1 +1,0 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var base64BufferEnc=function(a){return new Buffer(a).toString('base64')};exports.default=base64BufferEnc;

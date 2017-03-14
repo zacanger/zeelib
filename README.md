@@ -4,10 +4,11 @@ A small lib of FP, Node, and DOM utils.
 
 Changes:
 
-* `0.5.0` -- *breaking* -- `hexRegex` is now a function, `getHexRegex`
-* `0.4.0` -- *breaking* -- no longer `require('zeelib').default`, just `require('zeelib')`
-* `0.2.0` -- *breaking* -- all functions now in top level
-  * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`).
+* `0.6.0` &mdash; *breaking* &mdash; `base64BufferDec` and `base64BufferEnc` are now `btoa` and `atob`
+* `0.5.0` &mdash; *breaking* &mdash; `hexRegex` is now a function, `getHexRegex`
+* `0.4.0` &mdash; *breaking* &mdash; no longer `require('zeelib').default`, just `require('zeelib')`
+* `0.2.0` &mdash; *breaking* &mdash; all functions now in top level
+  * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`)
 
 Just a load of small utilities.
 
@@ -139,8 +140,8 @@ const c = require('zeelib/dist/colorize').default
 
 ### node
 
-* base64BufferDec
-* base64BufferEnc
+* atob
+* btoa
 * colorize
 * findPort
 * getArgs
