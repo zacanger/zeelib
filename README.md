@@ -281,6 +281,7 @@ const c = require('zeelib/dist/colorize').default
 
 ### misc
 
+* ago
 * average
 * chunk
 * cloneWithout

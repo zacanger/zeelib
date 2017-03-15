@@ -211,6 +211,7 @@ export objectToString from './objectToString'
 export toType from './toType'
 export typeOf from './typeOf'
 // misc
+export ago from './ago'
 export average from './average'
 export chunk from './chunk'
 export cloneWithout from './cloneWithout'
