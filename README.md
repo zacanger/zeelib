@@ -300,6 +300,7 @@ const c = require('zeelib/dist/colorize').default
 * getKeyCodes
 * getNiceDate
 * getOrdinal
+* getTitle
 * getTransparentGif
 * greater
 * greatestCommonDivisor
@@ -325,6 +326,7 @@ const c = require('zeelib/dist/colorize').default
 * range
 * reverseDigits
 * scaleToFit
+* setTitle
 * shallowCopy
 * shuffle
 * sleep

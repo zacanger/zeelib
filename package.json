@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -40,7 +40,7 @@
     "babel-plugin-transform-export-extensions": "6.22.0",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-babili": "0.0.12",
-    "babel-preset-env": "1.2.1",
+    "babel-preset-env": "1.2.2",
     "babel-tape-runner": "2.0.1",
     "eslint": "3.17.1",
     "eslint-config-standard": "7.0.1",
