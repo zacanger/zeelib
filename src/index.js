@@ -78,6 +78,7 @@ export unescapeHtml from './unescapeHtml'
 // node
 export atob from './atob'
 export btoa from './btoa'
+export checkForFile from './checkForFile'
 export colorize from './colorize'
 export findPort from './findPort'
 export getArgs from './getArgs'

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),checkForFile=function(b){try{return(0,_fs.statSync)((0,_path.resolve)(b)),!0}catch(c){return!1}};exports.default=checkForFile;
