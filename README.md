@@ -131,6 +131,7 @@ const c = require('zeelib/dist/colorize').default
 * snakeCaseToPascalCase
 * stripHref
 * stripPunctuation
+* stripSubdomain
 * toHttp
 * toHttps
 * trimHash
