@@ -300,6 +300,8 @@ const c = require('zeelib/dist/colorize').default
 * getBrokenImage
 * getKeyByValue
 * getKeyCodes
+* getLengthOfCharactersInString
+* getLengthOfItemsInArray
 * getNiceDate
 * getOrdinal
 * getTitle
