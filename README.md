@@ -310,6 +310,7 @@ const c = require('zeelib/dist/colorize').default
 * greatestCommonDivisor
 * invoker
 * isObjectEmpty
+* keys
 * leastCommonMultiple
 * leftPad
 * lesser
