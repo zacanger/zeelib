@@ -308,6 +308,7 @@ const c = require('zeelib/dist/colorize').default
 * getTransparentGif
 * greater
 * greatestCommonDivisor
+* inherits
 * invoker
 * isObjectEmpty
 * keys
