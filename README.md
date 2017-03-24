@@ -285,8 +285,8 @@ const c = require('zeelib/dist/colorize').default
 
 * ago
 * average
-* both
 * chunk
+* intersection
 * cloneWithout
 * contains
 * copy

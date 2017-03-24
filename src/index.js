@@ -215,7 +215,7 @@ export typeOf from './typeOf'
 // misc
 export ago from './ago'
 export average from './average'
-export both from './both'
+export intersection from './intersection'
 export chunk from './chunk'
 export cloneWithout from './cloneWithout'
 export contains from './contains'
