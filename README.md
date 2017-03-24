@@ -84,6 +84,7 @@ const c = require('zeelib/dist/colorize').default
 * collapseWhitespace
 * combineRegex
 * cssToJson
+* escapeForXpath
 * escapeHtml
 * fixWindowsSlashes
 * formatMs
