@@ -285,8 +285,10 @@ const c = require('zeelib/dist/colorize').default
 
 * ago
 * average
+* both
 * chunk
 * cloneWithout
+* contains
 * copy
 * copyWithout
 * countItemsInArray

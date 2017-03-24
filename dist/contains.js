@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var contains=function(b,c){return'string'==typeof b?b.split('').includes(c):b.includes(c)};exports.default=contains;
