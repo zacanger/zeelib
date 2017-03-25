@@ -126,6 +126,7 @@ const c = require('zeelib/dist/colorize').default
 * removeNumeric
 * removeTags
 * removeWhitespace
+* rgbToHex
 * rot13
 * snakeCaseToCamelCase
 * snakeCaseToLispCase

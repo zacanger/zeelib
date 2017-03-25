@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var rgbToHex=function(a,c,d){return'#'+(16777216+(a<<16)+(c<<8)+d).toString(16).slice(1)};exports.default=rgbToHex;
