@@ -288,7 +288,6 @@ const c = require('zeelib/dist/colorize').default
 * ago
 * average
 * chunk
-* intersection
 * cloneWithout
 * contains
 * copy
@@ -313,6 +312,7 @@ const c = require('zeelib/dist/colorize').default
 * greater
 * greatestCommonDivisor
 * inherits
+* intersection
 * invoker
 * isObjectEmpty
 * keys
@@ -339,6 +339,7 @@ const c = require('zeelib/dist/colorize').default
 * setTitle
 * shallowCopy
 * shuffle
+* sizeOf
 * sleep
 * splitStringOn
 * sum
