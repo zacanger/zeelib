@@ -104,6 +104,7 @@ const c = require('zeelib/dist/colorize').default
 * isStringSomewhereInArray
 * isValidEmail
 * isValidHex
+* isValidRegex
 * lightenOrDarken
 * lispCaseToCamelCase
 * lispCaseToPascalCase
