@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _os=require('os'),_crypto=require('crypto'),getHashFromSystem=function(){var a=[(0,_os.hostname)(),process.pid,+new Date],b=(0,_crypto.createHash)('md5').update(a.join(''));return b.digest('hex')};exports.default=getHashFromSystem;

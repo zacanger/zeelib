@@ -152,6 +152,7 @@ const c = require('zeelib/dist/colorize').default
 * getArgs
 * getDiskUsage
 * getFreeMemory
+* getHashFromSystem
 * getHostname
 * getIsNode
 * getLoadAverage
@@ -172,6 +173,7 @@ const c = require('zeelib/dist/colorize').default
 * readJson
 * readJsonSync
 * termPrompt
+* timeRequire
 * tinyRouter
 * writeError
 * writeJson
@@ -324,6 +326,7 @@ const c = require('zeelib/dist/colorize').default
 * levenshteinDistance
 * lexSort
 * logWithTimestamp
+* makeThunk
 * maximum
 * maybeArgs
 * merge

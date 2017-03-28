@@ -1,0 +1,1 @@
+'use strict';var _fs=require('fs');require.extensions['.js']=function(a,b){var c=new Date,d=(0,_fs.readFileSync)(b,'utf8').toString(),e=a._compile(d,b),f=[],g=new Date-c+' : '+b;return f.push(g),console.log(f),e};
