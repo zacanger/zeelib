@@ -355,6 +355,7 @@ const c = require('zeelib/dist/colorize').default
 * tap
 * throwError
 * timeTest
+* toMap
 * transpose
 * transposeFlat
 * tryExecNTimes

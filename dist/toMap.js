@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var toMap=function(b){var c={};return b.forEach(function(d,f){d.index=f,c[d.name]=d}),c};exports.default=toMap;
