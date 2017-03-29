@@ -165,7 +165,10 @@ const c = require('zeelib/dist/colorize').default
 * getUserHome
 * getUserShell
 * hasColor
+* isDirectory
+* isFile
 * isInstalled
+* isSymLink
 * logWithInfo
 * notFound
 * open

@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isFile=function(b){return(0,_fs.statSync)(b).isFile()};exports.default=isFile;

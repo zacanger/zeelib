@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isDirectory=function(b){return(0,_fs.statSync)(b).isDirectory()};exports.default=isDirectory;
