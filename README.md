@@ -175,6 +175,7 @@ const c = require('zeelib/dist/colorize').default
 * termPrompt
 * timeRequire
 * tinyRouter
+* watch
 * writeError
 * writeJson
 * writeJsonSync
