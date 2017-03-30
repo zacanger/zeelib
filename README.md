@@ -337,6 +337,7 @@ const c = require('zeelib/dist/colorize').default
 * minimum
 * nco
 * noSwitch
+* noop
 * objectAssign
 * objectClone
 * objectFromEntries
