@@ -1,4 +1,6 @@
-const objectFromEntries = (entries: any[]) : Object => {
+// @flow
+
+const objectFromEntries = (entries: any[]): Object => {
   const res = {}
   const len = entries.length
   for (let i = 0; i < len; ++i) {

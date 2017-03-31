@@ -5,7 +5,7 @@
 // consty newCol = lightenOrDarken('#F06D06', 20)
 // darken
 // const newCol = lightenOrDarken('#F06D06', -20)
-const lightenOrDarken = (col : string, amt : number): string => {
+const lightenOrDarken = (col: string, amt: number): string => {
   let
     useHash = false
   , num      = parseInt(col, 16)
