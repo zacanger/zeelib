@@ -91,6 +91,7 @@ const c = require('zeelib/dist/colorize').default
 * getComplimentaryColors
 * getHexRegex
 * getQueryFromSearch
+* getRegexFlags
 * getRandomHex32
 * getRandomString
 * getUid4
@@ -309,6 +310,7 @@ const c = require('zeelib/dist/colorize').default
 * filterFloat
 * flatten
 * flattenAndUniq
+* generateSequence
 * getBrokenImage
 * getKeyByValue
 * getKeyCodes

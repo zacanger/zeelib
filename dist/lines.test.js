@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_lines=require('./lines'),_lines2=_interopRequireDefault(_lines);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('lines',function(a){a.plan(1),a.deepEqual((0,_lines2.default)('foo\nbar'),['foo','bar'],'makes arr split on newline')});

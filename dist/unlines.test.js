@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_unlines=require('./unlines'),_unlines2=_interopRequireDefault(_unlines);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('unlines',function(a){a.plan(1),a.equal((0,_unlines2.default)(['foo','bar']),'foo\nbar','makes string joined with newline')});

@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_id=require('./id'),_id2=_interopRequireDefault(_id);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('id',function(a){a.plan(1),a.deepEqual((0,_id2.default)({a:'a'}),{a:'a'},'is id fn')});

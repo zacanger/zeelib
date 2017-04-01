@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_words=require('./words'),_words2=_interopRequireDefault(_words);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('words',function(a){a.plan(1),a.deepEqual((0,_words2.default)('foo bar'),['foo','bar'],'makes arr split on space')});

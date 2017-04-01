@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_dropWhile=require('./dropWhile'),_dropWhile2=_interopRequireDefault(_dropWhile);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}(0,_tape2.default)('dropWhile',function(b){b.plan(1),b.deepEqual((0,_dropWhile2.default)(function(c){return 10>c},[3,6,9,12]),[12],'drops while')});

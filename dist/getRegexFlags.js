@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getRegexFlags=function(a){var b=[];return a.global&&b.push('g'),a.ignoreCase&&b.push('i'),a.multiline&&b.push('m'),a.unicode&&b.push('u'),a.sticky&&b.push('y'),b};exports.default=getRegexFlags;

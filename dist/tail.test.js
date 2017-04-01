@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_tail=require('./tail'),_tail2=_interopRequireDefault(_tail);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('tail',function(a){a.plan(1),a.deepEqual((0,_tail2.default)([1,2,3,4]),[2,3,4],'returns xs')});

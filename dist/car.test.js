@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_car=require('./car'),_car2=_interopRequireDefault(_car);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('car',function(a){a.plan(1),a.equal((0,_car2.default)([1,2,3]),1,'returns x')});

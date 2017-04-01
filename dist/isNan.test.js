@@ -1,1 +1,0 @@
-'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_isNan=require('./isNan'),_isNan2=_interopRequireDefault(_isNan);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('isNan',function(a){a.plan(2),a.false((0,_isNan2.default)(1),'returns false for not NaN'),a.true((0,_isNan2.default)(NaN),'returns true for NaN')});
