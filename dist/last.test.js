@@ -1,0 +1,1 @@
+'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_last=require('./last'),_last2=_interopRequireDefault(_last);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('last',function(a){a.plan(1),a.equal((0,_last2.default)([1,2,3]),3,'returns last el of arr')});

@@ -223,6 +223,7 @@ export toType from './toType'
 export typeOf from './typeOf'
 // misc
 export ago from './ago'
+export assert from './assert'
 export average from './average'
 export chunk from './chunk'
 export clamp from './clamp'

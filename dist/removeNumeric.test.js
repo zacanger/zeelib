@@ -1,0 +1,1 @@
+'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_removeNumeric=require('./removeNumeric'),_removeNumeric2=_interopRequireDefault(_removeNumeric);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('removeNumeric',function(a){a.plan(1),a.equal((0,_removeNumeric2.default)('123abc'),'abc','removes numbers')});

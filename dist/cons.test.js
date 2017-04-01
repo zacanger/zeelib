@@ -1,0 +1,1 @@
+'use strict';var _tape=require('tape'),_tape2=_interopRequireDefault(_tape),_cons=require('./cons'),_cons2=_interopRequireDefault(_cons);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}(0,_tape2.default)('cons',function(a){a.plan(1),a.deepEqual((0,_cons2.default)(1,[2,3,4]),[1,2,3,4],'conses things')});
