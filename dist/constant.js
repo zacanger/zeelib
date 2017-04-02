@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var constant=function(a){return function(){return a}};exports.default=constant;
