@@ -91,11 +91,12 @@ const c = require('zeelib/dist/colorize').default
 * getComplimentaryColors
 * getHexRegex
 * getQueryFromSearch
-* getRegexFlags
 * getRandomHex32
 * getRandomString
+* getRegexFlags
 * getUid4
 * getUid8
+* indenter
 * inlineString
 * isAlphaNumeric
 * isEmoji
