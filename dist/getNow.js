@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getNow=function(){return Date.now||function(){return new Date().getTime()}};exports.default=getNow;

@@ -321,6 +321,7 @@ const c = require('zeelib/dist/colorize').default
 * getLengthOfCharactersInString
 * getLengthOfItemsInArray
 * getNiceDate
+* getNow
 * getOrdinal
 * getTitle
 * getTransparentGif
