@@ -172,6 +172,7 @@ const c = require('zeelib/dist/colorize').default
 * isInstalled
 * isSymLink
 * logWithInfo
+* makeFileIfNoFile
 * notFound
 * open
 * readFileSync

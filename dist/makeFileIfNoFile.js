@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),makeFileIfNoFile=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:'',d=(0,_path.resolve)(a);try{(0,_fs.statSync)(d)}catch(e){(0,_fs.writeFileSync)(d,b)}};exports.default=makeFileIfNoFile;
