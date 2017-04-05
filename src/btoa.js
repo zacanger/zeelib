@@ -1,3 +1,4 @@
+/* eslint-disable node/no-deprecated-api */
 // @flow
 
 import getIsBrowser from './getIsBrowser'

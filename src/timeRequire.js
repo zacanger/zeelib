@@ -1,3 +1,4 @@
+/* eslint-disable node/no-deprecated-api */
 // just require this file to time requires into that file
 // based on gh:stefanpenner/node-require-timings
 

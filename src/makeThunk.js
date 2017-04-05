@@ -1,3 +1,4 @@
+/* eslint-disable standard/no-callback-literal */
 // general-ish utility for async, eager thunks
 // adapted from kyle simpson's blog
 
