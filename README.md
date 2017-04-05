@@ -4,6 +4,8 @@ A small lib of FP, Node, and DOM utils.
 
 Changes:
 
+* `0.7.0` &mdash; *important* &mdash; If you've installed in the past eight days (since `0.6.17`), you're probably
+  seeing a lot of annoying logs! I did something dumb. Please update!
 * `0.6.0` &mdash; *breaking* &mdash; `base64BufferDec` and `base64BufferEnc` are now `btoa` and `atob`
 * `0.5.0` &mdash; *breaking* &mdash; `hexRegex` is now a function, `getHexRegex`
 * `0.4.0` &mdash; *breaking* &mdash; no longer `require('zeelib').default`, just `require('zeelib')`
