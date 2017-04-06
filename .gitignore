@@ -73,3 +73,4 @@ Temporary Items
 .VolumeIcon.icns
 .vscode
 x/
+!yarn.lock
