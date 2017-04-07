@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function debounce(a,b){var c=2<arguments.length&&arguments[2]!==void 0&&arguments[2],d=null;return function(){var e=this,g=arguments,i=c&&!d;clearTimeout(d),d=setTimeout(function later(){d=null,c||a.apply(e,g)},b),i&&a.apply(e,g)}}exports.default=debounce;

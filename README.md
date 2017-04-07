@@ -310,6 +310,7 @@ const c = require('zeelib/dist/colorize').default
 * copy
 * copyWithout
 * countItemsInArray
+* debounce
 * deepCopy
 * diff
 * dir
