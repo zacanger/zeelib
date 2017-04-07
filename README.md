@@ -365,6 +365,7 @@ const c = require('zeelib/dist/colorize').default
 * splitStringOn
 * sum
 * tap
+* throttle
 * throwError
 * timeTest
 * toMap
