@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -34,9 +34,9 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "6.24.0",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "7.2.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "6.24.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-plugin-transform-export-extensions": "6.22.0",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-babili": "0.0.12",
