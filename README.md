@@ -83,6 +83,7 @@ const c = require('zeelib/dist/colorize').default
 * camelCaseToPascalCase
 * camelCaseToSnakeCase
 * capitalizeFirstChar
+* collapseNewlines
 * collapseWhitespace
 * combineRegex
 * cssToJson

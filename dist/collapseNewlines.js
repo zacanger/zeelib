@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var collapseNewlines=function(a){return a.replace(/\n\s*\n/g,'\n\n')};exports.default=collapseNewlines;
