@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var eq=function(c,d){return c===void 0||d===void 0?!1:JSON.stringify(c)===JSON.stringify(d)};exports.default=eq;

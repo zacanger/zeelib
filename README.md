@@ -196,6 +196,7 @@ const c = require('zeelib/dist/colorize').default
 * apply
 * car
 * cdr
+* clone
 * compose
 * concat
 * concatMap
@@ -210,6 +211,7 @@ const c = require('zeelib/dist/colorize').default
 * dropWhile
 * each
 * elem
+* eq
 * filter
 * findIndex
 * findWhere
@@ -253,6 +255,7 @@ const c = require('zeelib/dist/colorize').default
 * unwords
 * unzip
 * unzip3
+* where
 * words
 * zip
 * zip3

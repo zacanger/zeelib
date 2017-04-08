@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _filter=require('./filter'),_filter2=_interopRequireDefault(_filter);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var where=function(a,b){return(0,_filter2.default)(a,b)[0]||null};exports.default=where;

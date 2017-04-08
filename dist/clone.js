@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var clone=function(b){return JSON.parse(JSON.stringify(b))};exports.default=clone;
