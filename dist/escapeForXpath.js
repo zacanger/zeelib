@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var escapeForXpath=function(a){var b=a.match(/[^'"]+|['"]/g);return b=b.map(function(c){return'\''===c?'"\'"':'"'===c?'\'"\'':'\''+c+'\''}),'concat('+b.join(',')+')'};exports.default=escapeForXpath;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var escapeForXpath=function(a){var b=a.match(/[^'"]+|['"]/g);if(b)return b=b.map(function(c){return'\''===c?'"\'"':'"'===c?'\'"\'':'\''+c+'\''}),'concat('+b.join(',')+')'};exports.default=escapeForXpath;

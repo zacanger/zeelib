@@ -1,8 +1,10 @@
+// @flow
+
 function debounce (
-  f,
-  wait,
-  immediate = false
-) {
+  f: () => any,
+  wait: number,
+  immediate: bool = false
+): any {
   let timeout = null
   return function () {
     let ctx = this

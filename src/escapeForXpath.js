@@ -1,18 +1,22 @@
-const escapeForXpath = (s) => {
+// @flow
+
+const escapeForXpath = (s: string): ?string => {
   let parts = s.match(/[^'"]+|['"]/g)
-  parts = parts.map((part) => {
-    if (part === "'") {
-      return '"\'"'
-    }
+  if (parts) {
+    parts = parts.map((part) => {
+      if (part === "'") {
+        return '"\'"'
+      }
 
-    if (part === '"') {
-      return "'\"'"
-    }
+      if (part === '"') {
+        return "'\"'"
+      }
 
-    return `'${part}'`
-  })
+      return `'${part}'`
+    })
 
-  return 'concat(' + parts.join(',') + ')'
+    return 'concat(' + parts.join(',') + ')'
+  }
 }
 
 export default escapeForXpath
