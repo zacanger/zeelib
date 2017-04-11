@@ -153,6 +153,7 @@ const c = require('zeelib/dist/colorize').default
 * btoa
 * checkForFile
 * colorize
+* execute
 * findPort
 * getArgs
 * getDiskUsage
