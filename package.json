@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -52,7 +52,7 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "fixpack": "2.3.1",
-    "flow-bin": "0.43.1",
+    "flow-bin": "^0.44.0",
     "tap-spec": "4.1.1",
     "tape": "4.6.3"
   }

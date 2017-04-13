@@ -11,8 +11,15 @@ const getElementPosition = (el: any): p => {
 
   while (el) {
     if (el.tagName === 'BODY') {
-      const xScroll = el.scrollLeft || document && document.documentElement && document.documentElement.scrollLeft
-      const yScroll = el.scrollTop || document && document.documentElement && document.documentElement.scrollTop
+      const xScroll =
+        el.scrollLeft ||
+        (document && document.documentElement && document.documentElement.scrollLeft) ||
+        0
+
+      const yScroll =
+        el.scrollTop ||
+        (document && document.documentElement && document.documentElement.scrollTop) ||
+        0
 
       x += (el.offsetLeft - xScroll + el.clientLeft)
       y += (el.offsetTop - yScroll + el.clientTop)
