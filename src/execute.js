@@ -9,8 +9,7 @@ env.PATH = resolve('./node_modules/.bin') + SEPARATOR + env.PATH
 
 const execute = (cmd: string): void => {
   let output = execSync(cmd, { // eslint-disable-line no-unused-vars
-    cwd : process.cwd()
-  , env : env
+    cwd: process.cwd(), env
   })
 }
 
