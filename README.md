@@ -196,6 +196,8 @@ const c = require('zeelib/dist/colorize').default
 * and
 * any
 * apply
+* caar
+* cadr
 * car
 * cdr
 * clone
