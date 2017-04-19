@@ -18,7 +18,7 @@ There's a full list at the bottom of this file.
 
 Documentation is mostly just function names. Sorry.
 
-Usage:
+## Usage
 
 ```javascript
 import z from 'zeelib'
@@ -40,6 +40,20 @@ If you're using `require` with individual files you'll need to use `default`:
 
 ```javascript
 const c = require('zeelib/dist/colorize').default
+```
+
+If you get errors when using `zeelib` in a front-end build, you may need to use
+something like Webpack's [node](https://webpack.js.org/configuration/node/)
+option. Try:
+
+```javascript
+node: {
+  fs: 'empty',
+  net: 'empty',
+  tls: 'empty',
+  readline: 'empty',
+  child_process: 'empty'
+}
 ```
 
 ## License
