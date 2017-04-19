@@ -1,4 +1,4 @@
-// flow
+// @flow
 
 // cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
 

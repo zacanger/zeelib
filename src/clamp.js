@@ -1,3 +1,5 @@
+// @flow
+
 const clamp = (l: number) =>
   (h: number) =>
     (x: number): number =>

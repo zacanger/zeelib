@@ -1,5 +1,4 @@
 /* eslint-disable no-useless-escape */
-
 // @flow
 
 const stripPunctuation = (str: string): string =>

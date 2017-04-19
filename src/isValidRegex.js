@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-
 // @flow
 
 const isValidRegex = (a: any): bool =>

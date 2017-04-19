@@ -1,4 +1,4 @@
-// @ flow
+// @flow
 
 // invokes until function returns truthily
 // examples:
@@ -15,7 +15,7 @@
 // return ++ii > 22
 // }, console.log)
 
-const invoker = (limit: number, interval: number): void =>
+const invoker = (limit: number, interval: number) =>
   (fn: any, cb: any): void => {
     let current = 0
     let _fn = () => {

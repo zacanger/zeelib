@@ -1,5 +1,4 @@
 /* eslint-disable no-useless-escape */
-
 // @flow
 
 const isEmoji = (a: string): bool => // eslint-disable-next-line max-len

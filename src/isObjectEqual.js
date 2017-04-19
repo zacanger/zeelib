@@ -1,4 +1,4 @@
-// @ flow
+// @flow
 
 // compares params by val
 const isObjectEqual = (a: Object, b: Object): bool => {

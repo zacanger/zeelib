@@ -1,3 +1,4 @@
+// @flow
 // based on code by http://code.stephenmorley.org/ CC0 1.0 Universal
 
 const sizeOf = (object: Object): number => {

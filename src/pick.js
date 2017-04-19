@@ -1,5 +1,5 @@
-// as it is in rambda (not ramda), MIT gh:selfrefactor
 // @flow
+// as it is in rambda (not ramda), MIT gh:selfrefactor
 
 function pick (ks: any, o: Object): Object {
   if (o === undefined) {

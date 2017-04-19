@@ -1,5 +1,4 @@
 /* eslint-disable no-useless-escape */
-
 // @flow
 
 const alphaNumericOnly = (str: string): string =>

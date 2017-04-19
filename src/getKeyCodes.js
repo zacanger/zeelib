@@ -1,5 +1,4 @@
 /* eslint-disable comma-style */
-
 // @flow
 
 const getKeyCodes = (): Object => ({
