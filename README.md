@@ -56,6 +56,9 @@ node: {
 }
 ```
 
+Or, just import the functions you need (like
+`import words from 'zeelib/dist/words'`).
+
 ## License
 
 [WTFPL](./LICENSE.md)
