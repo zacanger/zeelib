@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "0.7.20",
+  "version": "0.7.21",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -47,7 +47,7 @@
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-babel": "4.1.1",
     "eslint-plugin-flowtype": "2.32.1",
-    "eslint-plugin-flowtype-errors": "3.0.3",
+    "eslint-plugin-flowtype-errors": "3.2.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-node": "4.2.2",
     "eslint-plugin-promise": "3.5.0",
