@@ -349,6 +349,7 @@ Or, just import the functions you need (like
 * getKeyCodes
 * getLengthOfCharactersInString
 * getLengthOfItemsInArray
+* getMethodsOf
 * getNiceDate
 * getNow
 * getOrdinal
