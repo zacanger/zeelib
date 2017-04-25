@@ -2,9 +2,11 @@
 
 const getMethodsOf = (o: Object): string[] => {
   const r = []
-  for (let m of o) {
-    if (typeof o[m] === 'function') {
-      r.push(m.name)
+  for (let m in o) {
+    if (o.hasOwnProperty(m)) {
+      if (typeof o[m] === 'function') {
+        r.push(o[m].name)
+      }
     }
   }
   return r
