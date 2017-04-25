@@ -80,6 +80,7 @@ Or, just import the functions you need (like
 
 * getCookie
 * getElementPosition
+* getElementText
 * getHeight
 * getIsBrowser
 * getLengthOfElements
