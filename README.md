@@ -87,8 +87,10 @@ Or, just import the functions you need (like
 * getReferrer
 * getScrollBarWidth
 * getWidth
+* removeAttribute
 * restoreScrollPosition
 * scrollTop
+* setAttribute
 
 ### regex, string utils, etc.
 
