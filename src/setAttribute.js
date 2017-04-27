@@ -1,6 +1,10 @@
 // @flow
 
-const setAttribute = (el: HTMLElement, a: string, v: string): void => {
+const setAttribute = (
+  el: HTMLElement,
+  a: string,
+  v: string
+): void => {
   el.setAttribute(a, v)
 }
 
