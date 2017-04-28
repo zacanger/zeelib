@@ -4,9 +4,9 @@
   "parser": "babel-eslint",
   "rules": {
     "block-spacing": [ 0 ],
-    "comma-style": [ 1, "first" ],
+    "comma-style": [ 1, "last" ],
     "key-spacing": [ 0 ],
-    "no-multi-spaces": [ 0 ],
+    "no-multi-spaces": [ 1 ],
     "object-curly-spacing": [ 1, "always" ],
     "one-var": [ 0 ],
     "arrow-parens": [ "warn", "always" ],

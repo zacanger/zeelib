@@ -6,12 +6,11 @@
 // darken
 // const newCol = lightenOrDarken('#F06D06', -20)
 const lightenOrDarken = (col: string, amt: number): string => {
-  let
-    useHash = false
-  , num      = parseInt(col, 16)
-  , r        = (num >> 16) + amt
-  , b        = ((num >> 8) & 0x00FF) + amt
-  , g        = (num & 0x0000FF) + amt
+  let useHash = false
+  let num = parseInt(col, 16)
+  let r = (num >> 16) + amt
+  let b = ((num >> 8) & 0x00FF) + amt
+  let g = (num & 0x0000FF) + amt
 
   if (col[0] === '#') {
     col = col.slice(1)

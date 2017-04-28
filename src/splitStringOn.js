@@ -6,8 +6,8 @@ const splitStringOn = (str: string, spl: string = ''): string[] | null => {
   }
   const idx = str.indexOf(spl)
   return idx === -1 ? null : [
-    str.substr(0, idx)
-  , str.substr(idx + spl.length)
+    str.substr(0, idx),
+    str.substr(idx + spl.length)
   ]
 }
 

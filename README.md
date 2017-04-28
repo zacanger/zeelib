@@ -392,6 +392,7 @@ Or, just import the functions you need (like
 * sizeOf
 * sleep
 * splitStringOn
+* store
 * sum
 * tap
 * throttle

@@ -8,8 +8,8 @@ import { createInterface } from 'readline'
 const termPrompt = (question: string, isYesDefault: ?bool) =>
   new Promise((resolve): ?bool => {
     const rlInterface = createInterface({
-      input  : process.stdin
-    , output : process.stdout
+      input : process.stdin,
+      output : process.stdout
     })
 
     const hint = isYesDefault ? '[Y/n]' : '[y/N]'

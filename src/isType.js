@@ -1,3 +1,5 @@
+/* eslint-disable no-multi-spaces */
+
 // @flow
 
 import isArray from './isArray'
