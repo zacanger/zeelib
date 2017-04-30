@@ -174,8 +174,10 @@ Or, just import the functions you need (like
 * checkForFile
 * colorize
 * execute
+* exit
 * findPort
 * getArgs
+* getBasename
 * getDiskUsage
 * getFreeMemory
 * getHashFromSystem
@@ -202,6 +204,7 @@ Or, just import the functions you need (like
 * readFileSync
 * readJson
 * readJsonSync
+* resolveFiles
 * termPrompt
 * timeRequire
 * tinyRouter
