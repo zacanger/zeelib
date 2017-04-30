@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var imul=Math.imul||function(c,d){var f=65535&c,g=65535&d>>>16;return 0|f*(65535&d)+((65535&c>>>16)*g+f*g<<16>>>0)};exports.default=imul;

@@ -359,6 +359,7 @@ Or, just import the functions you need (like
 * getTransparentGif
 * greater
 * greatestCommonDivisor
+* imul
 * inherits
 * intersection
 * invoker
