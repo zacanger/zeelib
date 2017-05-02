@@ -79,6 +79,7 @@ Or, just import the functions you need (like
 ### dom
 
 * getCookie
+* getElementOffset
 * getElementPosition
 * getElementText
 * getHeight

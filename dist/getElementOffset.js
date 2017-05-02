@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getElementOffset=function(a){var b=a.getBoundingClientRect(),c=document.documentElement,e=window,f=b.top+e.pageYOffset-(c&&c.clientTop||0),g=b.left+e.pageXOffset-(c&&c.clientLeft||0);return{top:f,left:g}};exports.default=getElementOffset;

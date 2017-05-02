@@ -1,5 +1,6 @@
 // dom
 export getCookie from './getCookie'
+export getElementOffset from './getElementOffset'
 export getElementPosition from './getElementPosition'
 export getElementText from './getElementText'
 export getHeight from './getHeight'
