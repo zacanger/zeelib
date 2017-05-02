@@ -180,6 +180,7 @@ Or, just import the functions you need (like
 * getBasename
 * getDiskUsage
 * getFreeMemory
+* getFileExt
 * getHashFromSystem
 * getHostname
 * getIsNode
