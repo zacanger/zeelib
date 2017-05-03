@@ -1,4 +1,5 @@
 // dom
+export eventOnce from './eventOnce'
 export getCookie from './getCookie'
 export getElementOffset from './getElementOffset'
 export getElementPosition from './getElementPosition'

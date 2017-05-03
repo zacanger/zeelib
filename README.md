@@ -78,6 +78,7 @@ Or, just import the functions you need (like
 
 ### dom
 
+* eventOnce
 * getCookie
 * getElementOffset
 * getElementPosition
