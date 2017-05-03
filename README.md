@@ -254,6 +254,7 @@ Or, just import the functions you need (like
 * id
 * init
 * invoke
+* juxt
 * last
 * length
 * lines
