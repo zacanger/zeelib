@@ -224,6 +224,8 @@ Or, just import the functions you need (like
 * caar
 * cadr
 * car
+* cdar
+* cddr
 * cdr
 * clone
 * compose
@@ -258,11 +260,13 @@ Or, just import the functions you need (like
 * last
 * length
 * lines
+* list
 * map
 * memoize
 * mix
 * not
 * notElem
+* nth
 * once
 * or
 * pair

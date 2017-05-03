@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function list(){return[].concat(Array.prototype.slice.call(arguments))}exports.default=list;
