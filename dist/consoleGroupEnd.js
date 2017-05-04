@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var GROUP_SHIFT='   ',groupPrefix='',consoleGroupEnd=function(){console.groupEnd?console.groupEnd():groupPrefix=groupPrefix.substr(0,groupPrefix.length-GROUP_SHIFT.length)};exports.default=consoleGroupEnd;

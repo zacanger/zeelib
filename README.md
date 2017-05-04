@@ -175,6 +175,8 @@ Or, just import the functions you need (like
 * btoa
 * checkForFile
 * colorize
+* consoleGroup
+* consoleGroupEnd
 * execute
 * exit
 * findPort
