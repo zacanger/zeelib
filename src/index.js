@@ -216,6 +216,8 @@ export zipThen from './zipThen'
 export zipWith from './zipWith'
 export zipWith3 from './zipWith3'
 // types
+export checkIs from './checkIs'
+export is from './is'
 export isArray from './isArray'
 export isArrayLike from './isArrayLike'
 export isBoolean from './isBoolean'

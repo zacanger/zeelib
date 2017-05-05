@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _is=require('./is'),_is2=_interopRequireDefault(_is);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var checkIs=function(a,b,c){if(!(0,_is2.default)(a,b))throw new TypeError((c||b.name||'')+' should be of type '+a+'!');return b};exports.default=checkIs;

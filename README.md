@@ -303,6 +303,8 @@ Or, just import the functions you need (like
 
 ### types
 
+* checkIs
+* is
 * isArray
 * isArrayLike
 * isBoolean
