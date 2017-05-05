@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function calc(a){return function(){return[].reduce.call(arguments,a)}}exports.default=calc;

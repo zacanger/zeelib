@@ -346,6 +346,7 @@ Or, just import the functions you need (like
 * ago
 * assert
 * average
+* calc
 * chunk
 * clamp
 * cloneWithout
@@ -408,6 +409,7 @@ Or, just import the functions you need (like
 * shuffle
 * sizeOf
 * sleep
+* slice
 * splitStringOn
 * store
 * sum
