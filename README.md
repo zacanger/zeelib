@@ -175,6 +175,7 @@ Or, just import the functions you need (like
 * btoa
 * checkForFile
 * colorize
+* consoleClear
 * consoleGroup
 * consoleGroupEnd
 * execute
