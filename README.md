@@ -193,6 +193,7 @@ Or, just import the functions you need (like
 * getMemoryUsage
 * getNodeModules
 * getPlatform
+* getRelativePath
 * getTerminalColumns
 * getTerminalRows
 * getTerminalSize
