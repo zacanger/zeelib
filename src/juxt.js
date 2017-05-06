@@ -1,11 +1,12 @@
 // @flow
 
 import curry from './curry'
-import map from './map'
 
 type F = () => any
 type FS = F[]
 type A = any
+
+const map = (f: any, a: any[]): any => a.map(f)
 
 const juxt = curry((fns: FS, a: A) =>
   map((f: F) =>

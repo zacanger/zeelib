@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var map=function(a,b){return b.map(a)};exports.default=map;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var map=function(a,b){if(b===void 0)return function(f){return map(a,f)};for(var c=-1,d=b&&b.length||0,e=Array(d);++c<d;)b&&(e[c]=a(b[c]));return e};exports.default=map;
