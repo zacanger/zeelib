@@ -339,6 +339,8 @@ Or, just import the functions you need (like
 * isType
 * isUndefined
 * objectToString
+* toBool
+* toBoolInverse
 * toType
 * typeOf
 

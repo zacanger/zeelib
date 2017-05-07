@@ -252,6 +252,8 @@ export isSymbol from './isSymbol'
 export isType from './isType'
 export isUndefined from './isUndefined'
 export objectToString from './objectToString'
+export toBool from './toBool'
+export toBoolInverse from './toBoolInverse'
 export toType from './toType'
 export typeOf from './typeOf'
 // misc

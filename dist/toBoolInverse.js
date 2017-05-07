@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _toBool=require('./toBool'),_toBool2=_interopRequireDefault(_toBool);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}var toBoolInverse=function(b){return!(0,_toBool2.default)(b)};exports.default=toBoolInverse;
