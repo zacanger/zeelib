@@ -406,6 +406,7 @@ Or, just import the functions you need (like
 * product
 * range
 * reverseDigits
+* reverseSign
 * scaleToFit
 * setTitle
 * shallowCopy
