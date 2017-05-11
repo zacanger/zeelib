@@ -233,6 +233,7 @@ Or, just import the functions you need (like
 * cddr
 * cdr
 * clone
+* collectBy
 * compose
 * concat
 * concatMap
