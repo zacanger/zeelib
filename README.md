@@ -408,6 +408,7 @@ Or, just import the functions you need (like
 * range
 * reverseDigits
 * reverseSign
+* safeGet
 * scaleToFit
 * setTitle
 * shallowCopy

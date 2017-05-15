@@ -1,5 +1,5 @@
 {
-  "presets": [ "env", "babili" ],
+  "presets": [ "stage-3", "env", "babili" ],
   "plugins": [
     "transform-flow-strip-types",
     "transform-export-extensions",
