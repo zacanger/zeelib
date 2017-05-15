@@ -342,6 +342,7 @@ Or, just import the functions you need (like
 * objectToString
 * toBool
 * toBoolInverse
+* toObject
 * toType
 * typeOf
 

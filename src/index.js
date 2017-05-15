@@ -255,6 +255,7 @@ export isUndefined from './isUndefined'
 export objectToString from './objectToString'
 export toBool from './toBool'
 export toBoolInverse from './toBoolInverse'
+export toObject from './toObject'
 export toType from './toType'
 export typeOf from './typeOf'
 // misc
