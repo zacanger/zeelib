@@ -2,7 +2,15 @@
 
 type res = void | Error
 
-const assert = (exp: () => bool, message: ?string = 'Assertion Failed:'): res => {
+/**
+ * Takes a value and an optional failure message
+ * and asserts truthiness
+ */
+
+const assert = (
+  exp: any,
+  message: ?string = 'Assertion Failed:'
+): res => {
   if (!exp) {
     throw new Error(message + exp.toString())
   }

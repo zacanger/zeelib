@@ -3,6 +3,10 @@
 
 import getIsBrowser from './getIsBrowser'
 
+/**
+ * `window.atob` for node and browser
+ */
+
 const atob = (s: string): string =>
   getIsBrowser()
     ? window.atob(s)

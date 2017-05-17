@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Gets the number in the middle
+ */
+
 const clamp = (l: number) =>
   (h: number) =>
     (x: number): number =>
