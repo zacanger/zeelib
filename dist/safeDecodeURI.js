@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var safeDecodeURI=function(a){try{return decodeURI(a)}catch(b){return a}};exports.default=safeDecodeURI;

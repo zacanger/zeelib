@@ -156,6 +156,8 @@ Or, just import the functions you need (like
 * removeWhitespace
 * rgbToHex
 * rot13
+* safeDecodeURI
+* safeDecodeURIComponent
 * snakeCaseToCamelCase
 * snakeCaseToLispCase
 * snakeCaseToPascalCase
