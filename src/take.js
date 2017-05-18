@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Like Haskell's `take`
+ */
+
 const take = (n: number, a: any[]): any[] => {
   const alen = a.length
   if (n > alen) return a

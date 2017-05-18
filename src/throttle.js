@@ -1,3 +1,12 @@
+/**
+ * Simple `throttle` implementation
+ * @param {function} fn to throttle
+ * @param {number} wait ms
+ * @param {boolean} lead optional, defaults to false
+ * @param {boolean} trail, optional, defaults to false
+ * @returns {any} result
+ */
+
 function throttle (
   f,
   wait,

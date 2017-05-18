@@ -2,8 +2,12 @@
 
 import objectAssign from './objectAssign'
 
-// cred : gh:texastoland
-// {key, ...copy} = {...target, ...source}
+/**
+ * Copy an object, leaving out specified keys
+ * cred : gh:texastoland
+ * {key, ...copy} = {...target, ...source}
+ */
+
 const copyWithout = (target: Object, source: Object, ...keys: any): any => {
   const copy = objectAssign(target, source)
   for (const key of keys) {

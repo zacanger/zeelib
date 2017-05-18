@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldl=function(b,c,d){for(var e in d)c=b(c,d[e]);return c};exports.default=foldl;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldl=function(b,c,d){return d.forEach(function(a){c=b(c,a)}),c};exports.default=foldl;

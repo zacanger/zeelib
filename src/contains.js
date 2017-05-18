@@ -1,8 +1,10 @@
 // @flow
 
+/**
+ * Check if a string or array contains an element
+ */
+
 const contains = (a: string | any[], el: any): bool =>
-  typeof a === 'string'
-    ? a.split('').includes(el)
-    : a.includes(el)
+  a.includes(el)
 
 export default contains

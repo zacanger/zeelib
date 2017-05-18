@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `Object.keys` polyfill
+ */
+
 const keys = Object.keys || function (obj: Object): any[] {
   const r = []
   for (let i in obj) {

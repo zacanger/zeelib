@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getNiceDate=function(){return"["+Date(1e3*Date.now()).match(/(\d{2}:\d{2}:\d{2})/)[1]+"]"};exports.default=getNiceDate;

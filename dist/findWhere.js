@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var findWhere=function(a,b){var c=null;return b.some(function(d,e){return!!a(d,e)&&(c=d,!0)}),c};exports.default=findWhere;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _filter=require('./filter'),_filter2=_interopRequireDefault(_filter);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var findWhere=function(a,b){return(0,_filter2.default)(b,a)[0]||null};exports.default=findWhere;

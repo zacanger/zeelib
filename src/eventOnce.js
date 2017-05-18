@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Runs an event handler once
+ */
+
 const eventOnce = (
   el: HTMLElement,
   t: string,

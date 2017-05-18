@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Returns the flags for a given regular expression
+ */
+
 const getRegexFlags = (r: RegExp): Array<string | null> => {
   let flags = []
   if (r.global) flags.push('g')

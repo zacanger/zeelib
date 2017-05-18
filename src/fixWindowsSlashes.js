@@ -1,6 +1,10 @@
 // @flow
 
-// gh:sindresorhus/slash
+/**
+ * Fix windows-style path sep
+ * cred: gh:sindresorhus/slash
+ */
+
 const fixWindowsSlashes = (str: string): string => {
   const isExtendedLengthPath = /^\\\\\?\\/.test(str)
   const hasNonAscii = /[^\x00-\x80]+/.test(str)

@@ -19,6 +19,15 @@ const iterateObject = (obj, fn) => {
   }
 }
 
+/**
+ * Takes a an array or object
+ * and a function, and runs the function
+ * on each element
+ * @param {array|object} list
+ * @param {function}
+ * @returns {any}
+ */
+
 const each = (list, fn) => {
   if (isArrayLike(list)) {
     return iterateArray(list, fn)

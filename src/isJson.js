@@ -1,12 +1,16 @@
 // @flow
 
+/**
+ * Returns true if the string is valid JSON
+ */
+
 const isJson = (str: string): bool => {
   try {
     JSON.parse(str)
-  } catch (e) {
+    return true
+  } catch (_) {
     return false
   }
-  return true
 }
 
 export default isJson

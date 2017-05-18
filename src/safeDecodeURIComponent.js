@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `decodeURIComponent`, but safe
+ */
+
 const safeDecodeURIComponent = (t: string): string => {
   try {
     return decodeURIComponent(t)

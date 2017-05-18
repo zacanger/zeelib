@@ -1,3 +1,9 @@
+/**
+ * Takes a select, textarea, or input and returns its contents
+ * @param {any} HTMLElement
+ * @returns {string} contents
+ */
+
 const getElementText = (el) => {
   const tg = el.tagName.toLowerCase()
   if (tg === 'select') {

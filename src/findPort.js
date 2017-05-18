@@ -2,8 +2,11 @@
 
 import { createServer } from 'net'
 
-// find next open port
-// findPort(8000, (err, port) => {})
+/**
+ * Find next open port
+ * `findPort(8000, (err, port) => {})`
+ */
+
 const findPort = (port: number, cb: any): any => {
   const server = createServer(() => {})
   const onListen = () => {

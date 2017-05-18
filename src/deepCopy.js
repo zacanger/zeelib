@@ -2,6 +2,10 @@
 
 import isArray from './isArray'
 
+/**
+ * Deep copy object or array
+ */
+
 const deepCopy = (o: Object): any => {
   let newObj
   if (!o || typeof o !== 'object') {

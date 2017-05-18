@@ -1,8 +1,17 @@
-const dropWhile = (pd, a) => {
-  for (let i in a) {
-    if (!pd(a[i])) return a.slice(i)
-  }
-  return []
-}
+// @flow
+
+import span from './span'
+
+/**
+ * The opposite of `takeWhile`:
+ * takes a predicate and array and returns an
+ * array of the elements that didn't pass the predicate
+ */
+
+const dropWhile = (
+  pred: () => bool,
+  a: any[]
+): any[] =>
+  span(pred, a)[1] || []
 
 export default dropWhile

@@ -1,3 +1,15 @@
+/**
+ * Takes a function and three lists
+ * Returns an array of elements calculated by
+ * calling the function on the elements of
+ * each list at the same position
+ * @param {function} any
+ * @param {array} any
+ * @param {array} any
+ * @param {array} any
+ * @returns {array} any
+ */
+
 const zipWith3 = (f, a1, a2, a3) => {
   const a4 = []
   const a2len = a2.length, a3len = a3.length

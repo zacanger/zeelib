@@ -5,6 +5,10 @@ type t = {
   left: number
 }
 
+/**
+ * Takes an element and retuns its offset from top left
+ */
+
 const getElementOffset = (el: HTMLElement): t => {
   const r = el.getBoundingClientRect()
   const d = document.documentElement

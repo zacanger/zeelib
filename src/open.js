@@ -2,8 +2,12 @@
 
 import { execFile } from 'child_process'
 
+/**
+ * Opens things. Works on Linux, Mac, and Windows
+ */
+
 const open = (args: any, opts: any, cb: any): any => {
-  args = [args]
+  args = [ args ]
   const cmd = process.platform === 'win32'
   ? 'cmd'
   : process.platform === 'darwin'

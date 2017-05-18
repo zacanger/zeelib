@@ -3,7 +3,11 @@
 import { watch } from 'fs'
 import { resolve } from 'path'
 
-const watchFile = (f: string, cb: Function): void => {
+/**
+ * Watch a file for changes, and call the function
+ */
+
+const watchFile = (f: string, cb: () => any): void => {
   const file = resolve(f)
   try {
     watch(file, cb)

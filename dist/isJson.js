@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isJson=function(a){try{JSON.parse(a)}catch(b){return!1}return!0};exports.default=isJson;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isJson=function(a){try{return JSON.parse(a),!0}catch(a){return!1}};exports.default=isJson;

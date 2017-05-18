@@ -3,7 +3,26 @@
 A small lib of FP, Node, and DOM utils.
 
 Changes:
-
+* `0.8.0` &mdash; *breaking* &mdash; several changes
+  * moved full documentation to [this file](./DOC.md)
+  * added `isSet`
+  * added `uniqAndFlatten`, the inverse of `flattenAndUniq`
+  * added `isMap`
+  * renamed `getDiskUsage` to `getFreeDisk`
+  * renamed `getNiceDate` to `getNiceTime`
+  * `length` now works for array, object, string, set, and map
+  * `getTitle` now falls back to `document.title`
+  * `flattenAndUniq` actually does what it sounds like now, sorry about that!
+  * `getNodeModules` now returns an array of locally installed modules, instead
+      of an object.
+  * `consoleGroup` and `consoleGroupEnd` removed (not working correctly)
+  * deprecated (will be removed in 1.0.0):
+    * `getBrokenImage`
+    * `isEmptyString` (just is `isEmpty`)
+    * `isObjectEmpty` (just is `isEmpty`)
+    * `isObjectEqual` (use `eq`)
+    * `isType` (use `is`)
+    * `where` (use `findWhere`)
 * `0.7.0` &mdash; *important* &mdash; If you've installed in the past eight days (since `0.6.17`), you're probably
   seeing a lot of annoying logs! I did something dumb. Please update!
 * `0.6.0` &mdash; *breaking* &mdash; `base64BufferDec` and `base64BufferEnc` are now `btoa` and `atob`
@@ -13,10 +32,6 @@ Changes:
   * (No more `import { fp } from 'zeelib'` to use `zipWith`, just `import { zipWith } from 'zeelib'`)
 
 Just a load of small utilities.
-
-There's a full list at the bottom of this file.
-
-Documentation is mostly just function names. Sorry.
 
 ## Usage
 
@@ -59,6 +74,8 @@ node: {
 Or, just import the functions you need (like
 `import words from 'zeelib/dist/words'`).
 
+See [this file](./DOC.md) for full documentation.
+
 ## License
 
 [WTFPL](./LICENSE.md)
@@ -68,369 +85,6 @@ Or, just import the functions you need (like
 * This project uses Flow.
 * Please run `npm test`.
 * If you can, please _add_ a test.
-* Please add your thing in these places:
-  * `src/index.js` in the appropriate place
-  * The full list below
+* Please add your thing in `src/index.js` in the appropriate place
 * Make sure you run `npm run build`
   * (This also runs `test`, which also runs `flow` and `eslint`)
-
-## Full list:
-
-### dom
-
-* eventOnce
-* getCookie
-* getElementOffset
-* getElementPosition
-* getElementText
-* getHeight
-* getIsBrowser
-* getLengthOfElements
-* getReferrer
-* getScrollBarWidth
-* getWidth
-* removeAttribute
-* restoreScrollPosition
-* scrollTop
-* setAttribute
-
-### regex, string utils, etc.
-
-* abbrev
-* abbrevNumber
-* addCommasToNumber
-* addNewlines
-* alphaNumericOnly
-* camelCaseToLispCase
-* camelCaseToPascalCase
-* camelCaseToSnakeCase
-* capitalizeFirstChar
-* collapseNewlines
-* collapseWhitespace
-* combineRegex
-* cssToJson
-* escapeForXpath
-* escapeHtml
-* fixWindowsSlashes
-* formatMs
-* getComplimentaryColors
-* getHexRegex
-* getQueryFromSearch
-* getRandomHex32
-* getRandomString
-* getRegexFlags
-* getUid4
-* getUid8
-* indenter
-* inlineString
-* isAlphaNumeric
-* isEmoji
-* isEmptyString
-* isHexBased
-* isMobileOrTablet
-* isStringSomewhereInArray
-* isValidEmail
-* isValidHex
-* isValidRegex
-* lightenOrDarken
-* lispCaseToCamelCase
-* lispCaseToPascalCase
-* lispCaseToSnakeCase
-* minifyString
-* moustache
-* newlinesToSpaces
-* normalizeClassname
-* normalizeColor
-* normalizeText
-* pascalCaseToCamelCase
-* pascalCaseToLispCase
-* pascalCaseToSnakeCase
-* randomColor
-* removeNewlines
-* removeNonAlpha
-* removeNonAlphaNumeric
-* removeNonAscii
-* removeNonNumeric
-* removeNumeric
-* removeTags
-* removeWhitespace
-* rgbToHex
-* rot13
-* safeDecodeURI
-* safeDecodeURIComponent
-* snakeCaseToCamelCase
-* snakeCaseToLispCase
-* snakeCaseToPascalCase
-* stripHref
-* stripPunctuation
-* stripSubdomain
-* toHttp
-* toHttps
-* trimHash
-* trimSpaces
-* truncate
-* unescapeHtml
-
-### node
-
-* atob
-* btoa
-* checkForFile
-* colorize
-* consoleClear
-* consoleGroup
-* consoleGroupEnd
-* execute
-* exit
-* findPort
-* getArgs
-* getBasename
-* getDiskUsage
-* getFreeMemory
-* getFileExt
-* getHashFromSystem
-* getHostname
-* getIsNode
-* getLoadAverage
-* getMemoryUsage
-* getNodeModules
-* getPlatform
-* getRelativePath
-* getTerminalColumns
-* getTerminalRows
-* getTerminalSize
-* getUserHome
-* getUserShell
-* hasColor
-* isDirectory
-* isFile
-* isInstalled
-* isSymLink
-* logWithInfo
-* makeFileIfNoFile
-* notFound
-* open
-* readFileSync
-* readJson
-* readJsonSync
-* resolveFiles
-* termPrompt
-* timeRequire
-* tinyRouter
-* watch
-* writeError
-* writeJson
-* writeJsonSync
-
-### fp utils
-
-* all
-* and
-* any
-* apply
-* caar
-* cadr
-* car
-* cdar
-* cddr
-* cdr
-* clone
-* collectBy
-* compose
-* concat
-* concatMap
-* cons
-* constant
-* curry
-* curry2
-* curry3
-* curry4
-* drop
-* dropWhere
-* dropWhile
-* each
-* elem
-* eq
-* filter
-* findIndex
-* findWhere
-* flip
-* foldl
-* foldl1
-* foldr
-* foldr1
-* getFunctionArguments
-* head
-* id
-* init
-* invoke
-* juxt
-* last
-* length
-* lines
-* list
-* map
-* memoize
-* mix
-* not
-* notElem
-* nth
-* once
-* or
-* pair
-* pick
-* pipe
-* pluck
-* propEq
-* reduce
-* replicate
-* reverse
-* span
-* splitAt
-* tail
-* take
-* takeLast
-* takeWhile
-* uncurry
-* unfold
-* unlines
-* unwords
-* unzip
-* unzip3
-* where
-* words
-* zip
-* zip3
-* zipThen
-* zipWith
-* zipWith3
-
-### types
-
-* checkIs
-* is
-* isArray
-* isArrayLike
-* isBoolean
-* isBuffer
-* isDate
-* isDefined
-* isDomElement
-* isEmpty
-* isError
-* isEven
-* isFloat
-* isFunction
-* isInteger
-* isJson
-* isNan
-* isNegative
-* isNodeList
-* isNull
-* isNullOrUndefined
-* isNumber
-* isObject
-* isObjectEqual
-* isOdd
-* isPositive
-* isPow2
-* isPrimitive
-* isPromise
-* isRegExp
-* isString
-* isSymbol
-* isType
-* isUndefined
-* objectToString
-* toBool
-* toBoolInverse
-* toObject
-* toType
-* typeOf
-
-### misc
-
-* ago
-* assert
-* average
-* calc
-* chunk
-* clamp
-* cloneWithout
-* contains
-* copy
-* copyWithout
-* countItemsInArray
-* debounce
-* deepCopy
-* diff
-* dir
-* doubleUntil
-* filterFloat
-* flatten
-* flattenAndUniq
-* generateSequence
-* getBrokenImage
-* getKeyByValue
-* getKeyCodes
-* getLengthOfCharactersInString
-* getLengthOfItemsInArray
-* getMethodsOf
-* getNiceDate
-* getNow
-* getOrdinal
-* getTitle
-* getTransparentGif
-* greater
-* greatestCommonDivisor
-* imul
-* inherits
-* intersection
-* invoker
-* isObjectEmpty
-* keys
-* leastCommonMultiple
-* leftPad
-* lesser
-* levenshteinDistance
-* lexSort
-* logWithTimestamp
-* makeThunk
-* maximum
-* maybeArgs
-* merge
-* minimum
-* nco
-* noSwitch
-* noop
-* objectAssign
-* objectClone
-* objectFromEntries
-* objectInherit
-* product
-* range
-* reverseDigits
-* reverseSign
-* safeGet
-* scaleToFit
-* setTitle
-* shallowCopy
-* shuffle
-* sizeOf
-* sleep
-* sleepAsync
-* slice
-* splitStringOn
-* store
-* sum
-* tap
-* throttle
-* throwError
-* timeTest
-* toMap
-* transpose
-* transposeFlat
-* tryExecNTimes
-* uniq
-* unless
-* xor

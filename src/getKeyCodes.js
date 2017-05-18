@@ -1,6 +1,10 @@
 /* eslint-disable comma-style */
 // @flow
 
+/**
+ * Returns an object of keycodes
+ */
+
 const getKeyCodes = (): Object => ({
   BACKSPACE: 8,
   TAB: 9,

@@ -1,5 +1,10 @@
 // @flow
 
+/**
+ * Takes search string and returns an object.
+ * Example: `?foo=bar` -> `foo: 'bar'`
+ */
+
 const getQueryFromSearch = (s: string): Object => {
   const ps = {}
   s

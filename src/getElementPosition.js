@@ -5,6 +5,10 @@ type p = {
   y: number
 }
 
+/**
+ * Takes an element and returns its x/y position
+ */
+
 const getElementPosition = (el: any): p => {
   let x = 0
   let y = 0

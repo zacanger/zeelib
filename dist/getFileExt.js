@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _path=require('path'),getBasename=function(a){return(0,_path.parse)(a).ext||''};exports.default=getBasename;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _path=require('path'),getFileExt=function(a){return(0,_path.parse)(a).ext||''};exports.default=getFileExt;

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var pluck=function(a,b){return a.map(function(c){return c[b]})};exports.default=pluck;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var pluck=function(a,b){return a.map(function(a){return a[b]})};exports.default=pluck;

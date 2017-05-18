@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var shuffle=function(b){for(var c=b.length-1;0<c;c--){var d=Math.floor(Math.random()*(c+1)),e=b[c];b[c]=b[d],b[d]=e}return b};exports.default=shuffle;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var shuffle=function(b){for(var a=b.length-1;0<a;a--){var c=Math.floor(Math.random()*(a+1)),d=b[a];b[a]=b[c],b[c]=d}return b};exports.default=shuffle;

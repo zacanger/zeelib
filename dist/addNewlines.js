@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var addNewlines=function(a){return a.split('\t').join('  ').split('\n').map(function(b){return b+'\n'}).join('')};exports.default=addNewlines;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var addNewlines=function(a){return a.split('\t').join('  ').split('\n').map(function(a){return a+'\n'}).join('')};exports.default=addNewlines;

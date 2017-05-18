@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var nth=function(b,c){return b[c]};exports.default=nth;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var nth=function(b,a){return b[a]};exports.default=nth;

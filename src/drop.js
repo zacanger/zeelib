@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Like Haskell's `drop`
+ */
+
 const drop = (n: number, a: any[]): any[] => {
   const alen = a.length
   if (n < 1) return a

@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * `car`
+ * `car` (same as `head`)
  */
 
 const car = (arr: any[]): any =>

@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * ROT13 a string
+ */
+
 const rot13 = (s: string): string =>
   s.split('').map((_) => {
     if (!_.match(/[A-Za-z]/)) {

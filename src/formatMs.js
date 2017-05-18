@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Format ms into human-readable time
+ */
+
 const formatMs = (ms: number): string => {
   const hr = 3600000
   const min = 60000

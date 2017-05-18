@@ -2,6 +2,10 @@
 
 import { execSync } from 'child_process'
 
+/**
+ * Get free disk space
+ */
+
 const getDiskUsage = (): number => {
   const lines = execSync('df -k /').toString().trim().split('\n')
   const strDiskInfo = lines[lines.length - 1].replace(/[\s\n\r]+/g, ' ')

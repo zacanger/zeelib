@@ -1,6 +1,5 @@
-// @flow
-
-const isEmptyString = (str: string): bool => {
+const isEmptyString = (str) => {
+  console.error('`isEmptyString` is deprecated. Please use `isEmpty` instead.')
   if (str === undefined || str === null) {
     return true
   }

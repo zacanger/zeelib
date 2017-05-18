@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _car=require('./car'),_car2=_interopRequireDefault(_car);function _interopRequireDefault(b){return b&&b.__esModule?b:{default:b}}var caar=function(b){return(0,_car2.default)((0,_car2.default)(b))};exports.default=caar;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _car=require('./car'),_car2=_interopRequireDefault(_car);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var caar=function(b){return(0,_car2.default)((0,_car2.default)(b))};exports.default=caar;

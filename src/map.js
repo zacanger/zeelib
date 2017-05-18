@@ -1,5 +1,9 @@
 // @flow
 
+/*
+ * `map`
+ */
+
 const map = (fn: () => any, arr: ?any[]): any => {
   if (arr === undefined) {
     return (h) => map(fn, h)

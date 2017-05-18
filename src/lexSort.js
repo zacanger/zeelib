@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Lex sort
+ */
+
 const lexSort = (a: string, b: string): number =>
   a === b
     ? 0

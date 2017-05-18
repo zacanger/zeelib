@@ -1,3 +1,12 @@
+/**
+ * Takes a function and returns a function that takes two arguments
+ * Produces a curried function
+ * @param {function} any
+ * @param {any}
+ * @param {any}
+ * @returns {function} curried
+ */
+
 function curry2 (f) {
   function curried (a, b) {
     switch (arguments.length) {

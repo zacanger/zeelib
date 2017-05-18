@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Remove an attribute from an element
+ */
+
 const removeAttribute = (
   el: HTMLElement,
   a: string

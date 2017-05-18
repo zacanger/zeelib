@@ -3,6 +3,10 @@
 import average from './average'
 import { loadavg } from 'os'
 
+/**
+ * Get load average
+ */
+
 const getLoadAverage = (): number =>
   parseFloat(average([ ...loadavg() ]).toFixed(2))
 

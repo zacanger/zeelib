@@ -1,6 +1,10 @@
 /* eslint-disable no-useless-escape */
 // @flow
 
+/**
+ * Roughly turn CSS into JSON
+ */
+
 const cssToJson = (str: string): string =>
   str
     .replace(/(\w*:)/g, '$1"')

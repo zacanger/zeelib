@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `Math.imul`
+ */
+
 const imul = Math.imul || ((a: number, b: number): number => {
   const ah = (a >>> 16) & 0xffff
   const al = a & 0xffff

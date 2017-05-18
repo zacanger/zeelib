@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Takes the last n items of array
+ */
+
 const takeLast = (n: number, a: any[]): any[] => {
   a = a.reverse()
   const alen = a.length

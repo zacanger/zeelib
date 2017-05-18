@@ -1,6 +1,9 @@
 // @flow
 
-// removes html-like tags
+/**
+ * Remove html-like tags from string
+ */
+
 const removeTags = (str: string): string =>
   str.replace(/(<([^>]+)>)/ig, '')
 

@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `console.clear` for Node and browser
+ */
+
 const consoleClear = (): void =>
   typeof console.clear === 'function'
     ? console.clear()

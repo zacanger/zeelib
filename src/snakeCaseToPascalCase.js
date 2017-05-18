@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * snake_case to PascalCase
+ */
+
 const snakeCaseToPascalCase = (s: string): string => {
   const c = s.toLowerCase().replace(/_[a-z]/g, (m) =>
     m.slice(1).toUpperCase())

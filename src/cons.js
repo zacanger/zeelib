@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `cons`
+ */
+
 const cons = (el: any, ar: any[]): any[] => {
   const l = ar.length
   const b = Array(l + 1)

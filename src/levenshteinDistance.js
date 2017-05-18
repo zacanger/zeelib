@@ -1,6 +1,9 @@
 // @flow
 
-// cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
+/**
+ * Levenshtein distance
+ * cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
+ */
 
 const levenshteinDistance = (a: string, b: string): number => {
   if (a.length === 0) {
