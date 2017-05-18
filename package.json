@@ -13,7 +13,7 @@
     "build": "babel --ignore \"src/*.test.js\" src/ -d dist/",
     "clean": "rm -rf dist/ && mkdir -p dist/",
     "doc": "documentation build src/index.js -f md > doc.md",
-    "postbuild": "npm run doc",
+    "_postbuild": "npm run doc",
     "prebuild": "npm run clean && npm run test && fixpack",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
     "test:cover": "flow-coverage-report -i 'src/*.js' -x 'src/*.test.js' -t text",
