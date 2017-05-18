@@ -418,6 +418,7 @@ Or, just import the functions you need (like
 * shuffle
 * sizeOf
 * sleep
+* sleepAsync
 * slice
 * splitStringOn
 * store

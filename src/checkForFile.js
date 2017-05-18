@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Returns bool based on if passed path exists
+ */
+
 import { statSync } from 'fs'
 import { resolve } from 'path'
 

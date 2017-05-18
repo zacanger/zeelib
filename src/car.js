@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `car`
+ */
+
 const car = (arr: any[]): any =>
   arr[0]
 

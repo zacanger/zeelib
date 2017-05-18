@@ -1,5 +1,10 @@
 // @flow
 
+/**
+ * Shortens a number and adds appropriate suffix
+ * (K, M, B)
+ */
+
 const abbrevNumber = (n: number): string => {
   if (n < 1000) return `${n}`
   if (n < 10000) return (Math.round(n / 100) / 10) + 'K'

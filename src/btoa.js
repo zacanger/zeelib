@@ -1,6 +1,10 @@
 /* eslint-disable node/no-deprecated-api */
 // @flow
 
+/**
+ * `window.btoa` for node and browser
+ */
+
 import getIsBrowser from './getIsBrowser'
 
 const btoa = (s: string): string =>

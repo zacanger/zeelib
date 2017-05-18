@@ -2,8 +2,12 @@
 
 import copyWithout from './copyWithout'
 
-// cred : gh:texastoland
-// { key, ...clone } = source
+/**
+ * Clones an object, leaving out specified keys
+ * cred : gh:texastoland
+ * `{ key, ...clone } = source`
+ */
+
 const cloneWithout = (source: Object, ...keys: any): any =>
   copyWithout({}, source, ...keys)
 

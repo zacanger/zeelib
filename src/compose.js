@@ -3,7 +3,10 @@
 import pipe from './pipe'
 import reverse from './reverse'
 
-// r->l composition
+/**
+ * Right to left composition
+ */
+
 const compose = (...fns: any): any =>
   pipe(...reverse(fns))
 

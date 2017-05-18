@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `cddr`
+ */
+
 import cdr from './cdr'
 
 const cddr = (a: any[]): any =>

@@ -12,6 +12,8 @@
   "scripts": {
     "build": "babel --ignore \"src/*.test.js\" src/ -d dist/",
     "clean": "rm -rf dist/ && mkdir -p dist/",
+    "doc": "documentation build src/index.js -f md > doc.md",
+    "_postbuild": "npm run doc",
     "prebuild": "npm run clean && npm run test && fixpack",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
     "test:cover": "flow-coverage-report -i 'src/*.js' -x 'src/*.test.js' -t text",
@@ -44,6 +46,7 @@
     "babel-preset-env": "1.4.0",
     "babel-preset-stage-3": "6.24.1",
     "babel-tape-runner": "2.0.1",
+    "documentation": "4.0.0-rc.1",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-babel": "4.1.1",

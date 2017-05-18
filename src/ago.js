@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Makes pretty 'n whatevers ago' string
+ */
+
 const ago = (d: Date): string => {
   const diff = (((new Date()).getTime() - d.getTime()) / 1000)
   const dayDiff = Math.floor(diff / 86400)
