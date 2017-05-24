@@ -5,7 +5,7 @@
  * Adapted from kyle simpson's blog
  * Example: `const something = makeThunk(fn, param1, param2)`
  * @param {function} any
- * @param {any} ...args
+ * @param {any} args
  * @returns {function} thunk
  */
 
