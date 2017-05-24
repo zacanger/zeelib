@@ -4,7 +4,7 @@
  * Get truthiness
  */
 
-const toBool = (a: any): bool =>
-  !!a
+const toBool = (val: any): bool =>
+  !!val
 
 export default toBool

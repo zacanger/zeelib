@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var take=function(b,c){var a=c.length;if(b>a)return c;for(var d=[],e=0;e<b&&e<a;e++)d.push(c[e]);return a1};exports.default=take;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var take=function(a,b){var c=b.length;if(a>c)return b;for(var d=[],e=0;e<a&&e<c;e++)d.push(b[e]);return a1};exports.default=take;

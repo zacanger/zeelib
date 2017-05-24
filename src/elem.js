@@ -5,7 +5,7 @@
  * Like `contains`, with reversed args
  */
 
-const elem = (el: any, a: string | any[]): bool =>
-  a.includes(el)
+const elem = (el: any, ls: string | any[]): bool =>
+  ls.includes(el)
 
 export default elem

@@ -2,10 +2,10 @@
 
 /**
  * Returns true if the value is of the type
- * Example: `is(2, 'number')` -> `true`
+ * Example: `is('number', 2)` -> `true`
  */
 
-const is = (t: string, v: any): bool =>
-  typeof v === t // eslint-disable-line valid-typeof
+const is = (type: string, val: any): bool =>
+  typeof val === type // eslint-disable-line valid-typeof
 
 export default is

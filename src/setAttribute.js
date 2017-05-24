@@ -6,10 +6,10 @@
 
 const setAttribute = (
   el: HTMLElement,
-  a: string,
-  v: string
+  attr: string,
+  val: string
 ): void => {
-  el.setAttribute(a, v)
+  el.setAttribute(attr, val)
 }
 
 export default setAttribute

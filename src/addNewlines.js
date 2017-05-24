@@ -4,7 +4,12 @@
  * Adds `\n` to every line
  */
 
-const addNewlines = (s: string): string =>
-  s.split('\t').join('  ').split('\n').map((e) => e + '\n').join('')
+const addNewlines = (str: string): string =>
+  str
+    .split('\t')
+    .join('  ')
+    .split('\n')
+    .map((e) => e + '\n')
+    .join('')
 
 export default addNewlines

@@ -7,9 +7,9 @@ import { resolve } from 'path'
  * Safe `readFileSync`
  */
 
-const readFileS = (s: string): ?string => {
+const readFileS = (str: string): ?string => {
   try {
-    return readFileSync(resolve(s), { encoding: 'utf8' })
+    return readFileSync(resolve(str), { encoding: 'utf8' })
   } catch (_) { }
 }
 

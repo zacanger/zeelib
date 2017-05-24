@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isSymLink=function(b){return(0,_fs.lstatSync)(b).isSymbolicLink()};exports.default=isSymLink;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isSymLink=function(a){try{return(0,_fs.lstatSync)(a).isSymbolicLink()}catch(a){return!1}};exports.default=isSymLink;

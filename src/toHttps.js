@@ -4,7 +4,7 @@
  * http to https
  */
 
-const toHttps = (s: string): string =>
-  s.replace(/^http:/, 'https:')
+const toHttps = (str: string): string =>
+  str.replace(/^http:/, 'https:')
 
 export default toHttps

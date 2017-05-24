@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var imul=Math.imul||function(c,a){var b=65535&c,d=65535&a>>>16;return 0|b*(65535&a)+((65535&c>>>16)*d+b*d<<16>>>0)};exports.default=imul;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var imul=Math.imul||function(c,a){console.error('`imul` is deprecated, use `Math.imul` instead.');var b=65535&c,d=65535&a>>>16;return 0|b*(65535&a)+((65535&c>>>16)*d+b*d<<16>>>0)};exports.default=imul;

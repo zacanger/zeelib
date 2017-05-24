@@ -1,8 +1,7 @@
 // @flow
 
 /**
- *
- * only calls fn once; subsequent calls just return first val
+ * Only calls fn once; subsequent calls just return first val
  */
 
 const once = (fn: any): any => {

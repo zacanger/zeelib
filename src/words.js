@@ -4,7 +4,7 @@
  * Split a string on spaces
  */
 
-const words = (s: string): string[] =>
-  s.split(' ')
+const words = (str: string): string[] =>
+  str.split(' ')
 
 export default words

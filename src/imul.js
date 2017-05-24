@@ -5,6 +5,7 @@
  */
 
 const imul = Math.imul || ((a: number, b: number): number => {
+  console.error('`imul` is deprecated, use `Math.imul` instead.')
   const ah = (a >>> 16) & 0xffff
   const al = a & 0xffff
   const bh = (b >>> 16) & 0xffff

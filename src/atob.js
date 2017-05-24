@@ -1,4 +1,5 @@
 /* eslint-disable node/no-deprecated-api */
+
 // @flow
 
 import getIsBrowser from './getIsBrowser'
@@ -7,11 +8,11 @@ import getIsBrowser from './getIsBrowser'
  * `window.atob` for node and browser
  */
 
-const atob = (s: string): string =>
+const atob = (str: string): string =>
   getIsBrowser()
-    ? window.atob(s)
+    ? window.atob(str)
     : Buffer.from
-      ? Buffer.from(s, 'base64').toString('utf8')
-      : new Buffer(s, 'base64').toString('utf8')
+      ? Buffer.from(str, 'base64').toString('utf8')
+      : new Buffer(str, 'base64').toString('utf8')
 
 export default atob

@@ -7,7 +7,7 @@ import elem from './elem'
  * Like `!contains`, with reversed args
  */
 
-const notElem = (el: any, a: string | any[]): bool =>
-  !elem(el, a)
+const notElem = (el: any, ls: string | any[]): bool =>
+  !elem(el, ls)
 
 export default notElem

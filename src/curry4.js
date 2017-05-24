@@ -4,12 +4,12 @@ import curry3 from './curry3'
 /**
  * Takes a function and returns a function that takes four arguments
  * Produces a curried function
- * @param {function} any
- * @param {any}
- * @param {any}
- * @param {any}
- * @param {any}
- * @returns {function} curried
+ * @param {function} f
+ * @param {any} a
+ * @param {any} b
+ * @param {any} c
+ * @param {any} d
+ * @returns {function}
  */
 
 function curry4 (f) {

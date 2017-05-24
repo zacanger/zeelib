@@ -4,12 +4,12 @@
  * `cons`
  */
 
-const cons = (el: any, ar: any[]): any[] => {
-  const l = ar.length
+const cons = (el: any, arr: any[]): any[] => {
+  const l = arr.length
   const b = Array(l + 1)
   b[0] = el
   for (let i = 0; i < l; ++i) {
-    b[i + 1] = ar[i]
+    b[i + 1] = arr[i]
   }
   return b
 }

@@ -8,7 +8,7 @@ import uniq from './uniq'
  * then uniq what's left
  */
 
-const flattenAndUniq = (a: any): any[] =>
-  uniq(flatten(a))
+const flattenAndUniq = (arr: any): any[] =>
+  uniq(flatten(arr))
 
 export default flattenAndUniq

@@ -6,7 +6,12 @@ import { lstatSync } from 'fs'
  * Returns true if path is a symlink
  */
 
-const isSymLink = (a: string): bool =>
-  lstatSync(a).isSymbolicLink()
+const isSymLink = (filePath: string): bool => {
+  try {
+    return lstatSync(filePath).isSymbolicLink()
+  } catch (_) {
+    return false
+  }
+}
 
 export default isSymLink

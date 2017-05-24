@@ -4,8 +4,8 @@
  * ROT13 a string
  */
 
-const rot13 = (s: string): string =>
-  s.split('').map((_) => {
+const rot13 = (str: string): string =>
+  str.split('').map((_) => {
     if (!_.match(/[A-Za-z]/)) {
       return _
     }

@@ -7,8 +7,11 @@ import { resolve } from 'path'
  * Watch a file for changes, and call the function
  */
 
-const watchFile = (f: string, cb: () => any): void => {
-  const file = resolve(f)
+const watchFile = (
+  filePath: string,
+  cb: () => any
+): void => {
+  const file = resolve(filePath)
   try {
     watch(file, cb)
     console.log('watching', file)

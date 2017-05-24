@@ -4,7 +4,7 @@
  * Uniq an array
  */
 
-const uniq = (a: any[]): any[] =>
-  [ ...new Set(a) ]
+const uniq = (arr: any[]): any[] =>
+  [ ...new Set(arr) ]
 
 export default uniq

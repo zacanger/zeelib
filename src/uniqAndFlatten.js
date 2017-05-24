@@ -7,7 +7,7 @@ import uniq from './uniq'
  * Uniqs arrays, then recursively flattens
  */
 
-const uniqAndFlatten = (a: any): any[] =>
-  flatten(uniq(a))
+const uniqAndFlatten = (arr: any[]): any[] =>
+  flatten(uniq(arr))
 
 export default uniqAndFlatten

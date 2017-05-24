@@ -4,11 +4,11 @@
  * `decodeURI`, but safe
  */
 
-const safeDecodeURI = (t: string): string => {
+const safeDecodeURI = (str: string): string => {
   try {
-    return decodeURI(t)
+    return decodeURI(str)
   } catch (_) {
-    return t
+    return str
   }
 }
 

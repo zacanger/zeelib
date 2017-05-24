@@ -1,7 +1,7 @@
 /**
  * Get complimentary colors for a given color
- * @param {string} color a #rrggbb hex string
- * @returns {string} color
+ * @param {string} s a #rrggbb hex string
+ * @returns {string}
  */
 
 const getComplimentaryColors = (s) =>

@@ -5,10 +5,10 @@
  * If second param is truthy, will look by classname instead of tagname
  */
 
-const getLengthOfElements = (i: string, c: ?bool): number =>
+const getLengthOfElements = (element: string, useClassnames: ?bool): number =>
   document &&
-    c
-      ? document.getElementsByClassName(i).length
-      : document.getElementsByTagName(i).length
+    useClassnames
+      ? document.getElementsByClassName(element).length
+      : document.getElementsByTagName(element).length
 
 export default getLengthOfElements

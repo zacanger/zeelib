@@ -4,10 +4,10 @@
  * Make an array that contains e, n times
  */
 
-const replicate = (i: number, e: any): any[] => {
+const replicate = (num: number, el: any): any[] => {
   const a = []
-  for (let x = 0; x < i; x++) {
-    a.push(e)
+  for (let x = 0; x < num; x++) {
+    a.push(el)
   }
   return a
 }

@@ -3,7 +3,7 @@ import isArray from './isArray'
 /**
  * Shallow, top-level copy an object
  * @param {Object} o
- * @returns {Object} copy
+ * @returns {Object}
  */
 
 const shallowCopy = (o) => {

@@ -4,7 +4,7 @@
  * Returns nth element of array
  */
 
-const nth = (a: any[], n: number): any =>
-  a[n]
+const nth = (arr: any[], n: number): any =>
+  arr[n]
 
 export default nth

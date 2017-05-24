@@ -4,7 +4,7 @@
  * Make a pair out of any two values
  */
 
-const pair = (f: any, s: any): any[] =>
-  [ f, s ]
+const pair = (first: any, second: any): any[] =>
+  [ first, second ]
 
 export default pair

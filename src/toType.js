@@ -1,10 +1,10 @@
 /**
  * Get the type of value
- * @param {any} value
- * @returns {string} type
+ * @param {any} val
+ * @returns {string}
  */
 
-const toType = (v) =>
-  ({}).toString.call(v).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+const toType = (val) =>
+  ({}).toString.call(val).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 
 export default toType

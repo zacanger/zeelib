@@ -4,9 +4,9 @@
  * Strip subdomain from string
  */
 
-const stripSubdomain = (s: string): string =>
-  s.split('').filter((c: string) => c === '.').length > 2
-    ? s.replace(/^[^.]+\./g, '')
-    : s
+const stripSubdomain = (str: string): string =>
+  str.split('').filter((c: string) => c === '.').length > 2
+    ? str.replace(/^[^.]+\./g, '')
+    : str
 
 export default stripSubdomain

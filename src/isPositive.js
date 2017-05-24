@@ -4,7 +4,7 @@
  * Returns true if number is positive
  */
 
-const isPositive = (x: number): bool =>
-  +x === x && x > 0
+const isPositive = (a: number): bool =>
+  +a === a && a > 0
 
 export default isPositive

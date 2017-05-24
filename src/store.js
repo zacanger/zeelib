@@ -1,16 +1,17 @@
 // @flow
 
+import objectAssign from './objectAssign'
+
 /**
  * A very simple store implementation (think Redux-like)
  * Usage:
- * ```import { store } from 'zeelib'
+ * ```
+ * import { store } from 'zeelib'
  * const state = store()
  * state.subscribe((new, prev) => new.foo)
  * state.setState({ foo: 'bar' })
  * ```
  */
-
-import objectAssign from './objectAssign'
 
 const store = (state: Object = {}) => {
   let ls = []

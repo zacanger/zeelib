@@ -4,12 +4,12 @@
  * Like Haskell's `take`
  */
 
-const take = (n: number, a: any[]): any[] => {
-  const alen = a.length
-  if (n > alen) return a
+const take = (num: number, arr: any[]): any[] => {
+  const alen = arr.length
+  if (num > alen) return arr
   const a1 = []
-  for (let i = 0; i < n && i < alen; i++) {
-    a1.push(a[i])
+  for (let i = 0; i < num && i < alen; i++) {
+    a1.push(arr[i])
   }
   return a1
 }

@@ -6,9 +6,9 @@
 
 const removeAttribute = (
   el: HTMLElement,
-  a: string
+  attr: string
 ): void => {
-  el.removeAttribute(a)
+  el.removeAttribute(attr)
 }
 
 export default removeAttribute

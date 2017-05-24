@@ -4,7 +4,7 @@
  * Get the intersection of two arrays
  */
 
-const intersection = (a: any[], b: any[]): any[] =>
-  [...new Set(a.filter((el) => b.includes(el)))]
+const intersection = (xs: any[], ys: any[]): any[] =>
+  [...new Set(xs.filter((el) => ys.includes(el)))]
 
 export default intersection

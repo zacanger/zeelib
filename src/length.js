@@ -11,10 +11,10 @@ import isString from './isString'
  * Works for array, object, string, set, and map
  */
 
-const length = (v: any): number => {
-  if (isArray(v) || isString(v)) return v.length
-  if (isMap(v) || isSet(v)) return v.size
-  if (isObject(v)) return v.keys.length
+const length = (val: any): number => {
+  if (isArray(val) || isString(val)) return val.length
+  if (isMap(val) || isSet(val)) return val.size
+  if (isObject(val)) return val.keys.length
   return 0
 }
 

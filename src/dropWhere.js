@@ -5,15 +5,15 @@
  * credit: gh:spicydonuts
  */
 
-const dropWhere = (fn: any, array: any[]): any[] => {
+const dropWhere = (fn: any, arr: any[]): any[] => {
   const keepers = []
-  array.forEach((item, i) => {
+  arr.forEach((item, i) => {
     if (!fn(item, i)) {
       keepers.push(item)
     }
   })
-  if (array.length === keepers.length) {
-    return array
+  if (arr.length === keepers.length) {
+    return arr
   }
   return keepers
 }

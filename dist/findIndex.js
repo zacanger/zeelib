@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var findIndex=function(b,a){return a.indexOf(b)};exports.default=findIndex;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var findIndex=function(a,b){return b.indexOf(a)};exports.default=findIndex;

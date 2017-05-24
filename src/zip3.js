@@ -2,22 +2,23 @@
  * Makes a list of tuples. Each list
  * is made of the elements of each list param's
  * elements at the same position
- * @param {array} any
- * @param {array} any
- * @param {array} any
- * @returns {array} any
+ * @param {array} xs
+ * @param {array} ys
+ * @param {array} zs
+ * @returns {array}
  */
 
-const zip3 = (a1, a2, a3) => {
-  const a4 = []
-  const a2len = a2.length, a3len = a3.length
-  for (let i in a1) {
-    if (i >= a2len || i >= a3len) {
-      return a4
+const zip3 = (xs, ys, zs) => {
+  const res = []
+  const yslen = ys.length
+  const zslen = zs.length
+  for (let i in xs) {
+    if (i >= yslen || i >= zslen) {
+      return res
     }
-    a4.push([a1[i], a2[i], a3[i]])
+    res.push([xs[i], ys[i], zs[i]])
   }
-  return a4
+  return res
 }
 
 export default zip3

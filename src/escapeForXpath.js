@@ -4,8 +4,8 @@
  * Escapes a string for use in XPath
  */
 
-const escapeForXpath = (s: string): ?string => {
-  let parts = s.match(/[^'"]+|['"]/g)
+const escapeForXpath = (str: string): ?string => {
+  let parts = str.match(/[^'"]+|['"]/g)
   if (parts) {
     parts = parts.map((part) => {
       if (part === "'") {
