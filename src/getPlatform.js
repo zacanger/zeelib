@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Returns platform (e.g. 'linux')
+ */
+
 const getPlatform = (): string =>
   process.platform
 

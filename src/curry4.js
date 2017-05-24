@@ -1,6 +1,17 @@
 import curry2 from './curry2'
 import curry3 from './curry3'
 
+/**
+ * Takes a function and returns a function that takes four arguments
+ * Produces a curried function
+ * @param {function} any
+ * @param {any}
+ * @param {any}
+ * @param {any}
+ * @param {any}
+ * @returns {function} curried
+ */
+
 function curry4 (f) {
   function curried (a, b, c, d) { // eslint-disable-line complexity
     switch (arguments.length) {
@@ -8,7 +19,7 @@ function curry4 (f) {
       case 1: return curry3((b, c, d) => f(a, b, c, d))
       case 2: return curry2((c, d) => f(a, b, c, d))
       case 3: return (d) => f(a, b, c, d)
-      default:return f(a, b, c, d)
+      default: return f(a, b, c, d)
     }
   }
   return curried

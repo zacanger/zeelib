@@ -1,14 +1,13 @@
 /* eslint-disable no-multi-spaces */
 
-// @flow
-
 import isArray from './isArray'
 
 // usage:
 // isType(el, type)
 // isType(1, 'number')
 // isType(thing.something, 'array')
-function isType (a: any, t: string): bool {
+function isType (a, t) {
+  console.error('`isType` is deprecated. Please use `is` instead.')
   const type = String(t).toLowerCase()
 
   if ((type === 'null' && a === null)             ||

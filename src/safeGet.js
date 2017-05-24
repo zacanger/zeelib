@@ -50,6 +50,10 @@ function helper (obj: Object, tokens: string[], ctx: any, fnArgs: any): any {
   }
 }
 
+/**
+ * Like `_.get`: takes an object and an access string
+ */
+
 function safeGet (obj: Object, accessStr: string): any {
   if (isUndefined(accessStr)) {
     return safeGet.bind(null, obj)

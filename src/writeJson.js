@@ -1,6 +1,15 @@
 import { writeFile } from 'fs'
 
-const writeJson = (file, data, indent, cb) => {
+/**
+ * Write JSON from a stringifiable value
+ */
+
+const writeJson = (
+  file: string,
+  data: any,
+  indent: ?number = 2,
+  cb: () => any
+) => {
   if (typeof cb !== 'function') {
     cb = indent
     indent = 0

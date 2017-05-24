@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function pick(a,b){if(b===void 0)return function(f){return pick(a,f)};for(var d={},e=0;e<a.length;)a[e]in b&&(d[a[e]]=b[a[e]]),e++;return d}exports.default=pick;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function pick(a,b){if(b===void 0)return function(b){return pick(a,b)};for(var d={},e=0;e<a.length;)a[e]in b&&(d[a[e]]=b[a[e]]),e++;return r}exports.default=pick;

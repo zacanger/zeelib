@@ -2,6 +2,10 @@ import isArray from './isArray'
 import isDate from './isDate'
 import isRegExp from './isRegExp'
 
+/**
+ * Clones anything
+ */
+
 const objectClone = (obj) => {
   // Number, String, Boolean, Function, null, undefined
   if (obj === null || typeof obj !== 'object') {

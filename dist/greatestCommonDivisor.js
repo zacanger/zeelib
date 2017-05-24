@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function greatestCommonDivisor(){for(var g,d=arguments.length,e=arguments[--d];e&&d;)for(g=arguments[--d];g;){var f=e%g;e=g,g=f}return e}exports.default=greatestCommonDivisor;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function greatestCommonDivisor(){for(var d=arguments.length,e=arguments[--d];e&&d;)for(var f,c=arguments[--d];c;)f=e%c,e=c,c=f;return a}exports.default=greatestCommonDivisor;

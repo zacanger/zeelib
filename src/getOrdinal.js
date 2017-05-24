@@ -1,5 +1,10 @@
 // @flow
 
+/**
+ * Adds ordinal onto number
+ * Example: 1 -> '1st'
+ */
+
 const getOrdinal = (n: number): string => {
   const s = [ 'th', 'st', 'nd', 'rd' ]
   const v = n % 100

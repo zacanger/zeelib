@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Get list of methods in an object
+ */
+
 const getMethodsOf = (o: Object): string[] => {
   const r = []
   for (let m in o) {

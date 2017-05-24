@@ -1,6 +1,6 @@
-// @flow
-
-const getBrokenImage = (): string =>
-  'data:;base64,iVBORwOKGO=='
+const getBrokenImage = () => {
+  console.error('`getBrokenImage` is deprecated.')
+  return 'data:;base64,iVBORwOKGO=='
+}
 
 export default getBrokenImage

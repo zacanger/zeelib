@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Unescape HTML entities
+ */
+
 const unescapeHtml = (str: string): string =>
   str
     .replace(/&amp;/g, '&')

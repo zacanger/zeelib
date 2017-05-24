@@ -2,7 +2,10 @@
 
 import objectClone from './objectClone'
 
-// inherits target by source
+/**
+ * Inherits target by source
+ */
+
 const objectInherit = (target: Object, source: Object): void => {
   target.super_ = source
   target.prototype = Object.create(target.super_.prototype)

@@ -1,10 +1,11 @@
-const elem = (el, a) => {
-  for (let i in a) {
-    if (el === a[i]) {
-      return true
-    }
-  }
-  return false
-}
+// @flow
+
+/**
+ * Here because of Haskell's `elem`
+ * Like `contains`, with reversed args
+ */
+
+const elem = (el: any, a: string | any[]): bool =>
+  a.includes(el)
 
 export default elem

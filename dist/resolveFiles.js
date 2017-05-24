@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _path=require('path'),resolveFiles=function(a){return a.map(function(b){return(0,_path.resolve)(b)})};exports.default=resolveFiles;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _path=require('path'),resolveFiles=function(a){return a.map(function(a){return(0,_path.resolve)(a)})};exports.default=resolveFiles;

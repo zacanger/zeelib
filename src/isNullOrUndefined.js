@@ -1,6 +1,13 @@
 // @flow
 
+import isNull from './isNull'
+import isUndefined from './isUndefined'
+
+/**
+ * Returns true if the value is null or undefined
+ */
+
 const isNullOrUndefined = (v: any): bool =>
-  v == null
+  isNull(v) || isUndefined(v)
 
 export default isNullOrUndefined

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var average=function(c){var d=c.reduce(function(e,f){return e+f},0);return d/c.length};exports.default=average;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var average=function(a){var b=a.reduce(function(c,a){return c+a},0);return b/a.length};exports.default=average;

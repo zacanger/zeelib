@@ -1,6 +1,9 @@
 /* eslint-disable  */
-// just require this and invoke to time requires into that file
-// based on gh:stefanpenner/node-require-timings
+
+/**
+ * Just require this and invoke to time requires into that file
+ * based on gh:stefanpenner/node-require-timings
+ */
 
 import { readFileSync } from 'fs'
 

@@ -1,9 +1,12 @@
 // @flow
 
-// adapted from facebook utility scripts
-// run fn n times
-// return 0 on success
-// return code of last failed if no more tries left
+/**
+ *
+ * Run fn n times
+ * Adapted from facebook utility scripts
+ * Return 0 on success
+ * Return code of last failed if no more tries left
+ */
 
 function tryExecNTimes (
   funcToRetry: () => any,

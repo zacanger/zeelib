@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Set an attribute on an element
+ */
+
 const setAttribute = (
   el: HTMLElement,
   a: string,

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldr1=function(b,c){for(var d=c[c.length-1],e=c.length-2;0<=e;e--)d=b(d,c[e]);return d};exports.default=foldr1;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldr1=function(b,c){for(var a=c[c.length-1],d=c.length-2;0<=d;d--)a=b(a,c[d]);return s};exports.default=foldr1;

@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Returns true if number is positive
+ */
+
 const isPositive = (x: number): bool =>
   +x === x && x > 0
 

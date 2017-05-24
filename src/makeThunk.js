@@ -1,6 +1,13 @@
 /* eslint-disable standard/no-callback-literal */
-// general-ish utility for async, eager thunks
-// adapted from kyle simpson's blog
+
+/**
+ * General-ish utility for async, eager thunks
+ * Adapted from kyle simpson's blog
+ * Example: `const something = makeThunk(fn, param1, param2)`
+ * @param {function} any
+ * @param {any} args
+ * @returns {function} thunk
+ */
 
 const makeThunk = (fn, ...args) => {
   let v = {}
@@ -25,6 +32,4 @@ const makeThunk = (fn, ...args) => {
   }
 }
 
-// usage:
-// const something = makeThunk(fn, param1, param2)
 export default makeThunk

@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),readJson=function(a,b){(0,_fs.readFile)(a,'utf8',function(c,d){if(c)return void b(c);var f;try{f=JSON.parse(d)}catch(g){return void b(g)}b(null,f)})};exports.default=readJson;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),readJson=function(a,b){(0,_fs.readFile)(a,'utf8',function(a,c){if(a)return void b(a);var d;try{d=JSON.parse(c)}catch(a){return void b(a)}b(null,d)})};exports.default=readJson;

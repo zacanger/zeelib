@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Debounce. Takes a function, a wait (ms), and optionally a truthy immediate param
+ */
+
 function debounce (
   f: () => any,
   wait: number,

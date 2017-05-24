@@ -1,5 +1,15 @@
 import curry2 from './curry2'
 
+/**
+ * Takes a function and returns a function that takes three arguments
+ * Produces a curried function
+ * @param {function} any
+ * @param {any}
+ * @param {any}
+ * @param {any}
+ * @returns {function} curried
+ */
+
 function curry3 (f) {
   function curried (a, b, c) {
     switch (arguments.length) {

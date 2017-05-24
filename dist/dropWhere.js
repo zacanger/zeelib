@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dropWhere=function(a,b){var c=[];return b.forEach(function(d,e){a(d,e)||c.push(d)}),b.length===c.length?b:c};exports.default=dropWhere;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var dropWhere=function(a,b){var c=[];return b.forEach(function(b,d){a(b,d)||c.push(b)}),b.length===c.length?b:c};exports.default=dropWhere;

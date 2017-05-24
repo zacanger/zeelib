@@ -5,6 +5,12 @@ type O = {
   height: number
 }
 
+/**
+ * Takes a width, height, maxWidth, and maxHeight
+ * Returns an object that tells you the largest you can
+ * scale to.
+ */
+
 const scaleToFit = (
   width: number,
   height: number,

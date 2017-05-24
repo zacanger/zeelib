@@ -1,6 +1,11 @@
 import isArray from './isArray'
 
-// top level
+/**
+ * Shallow, top-level copy an object
+ * @param {Object} o
+ * @returns {Object} copy
+ */
+
 const shallowCopy = (o) => {
   let newObj
   if (!o || typeof o !== 'object') {

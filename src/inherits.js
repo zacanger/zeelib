@@ -1,6 +1,9 @@
 // @flow
 
-// usage: inherits(A, B)
+/**
+ * Simple `inherits`
+ * Example: inherits(A, B)
+ */
 
 function inherits (a: any, b: any): any {
   function c () {}

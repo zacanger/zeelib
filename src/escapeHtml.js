@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Escapes HTML with entities
+ */
+
 const escapeHtml = (str: string): string =>
   str
     .replace(/&/g, '&amp;')

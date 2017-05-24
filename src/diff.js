@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Diff two arrays
+ */
+
 const diff = (a: any[], b: ?any[]): any[] => {
   const arr = []
   let len = a.length

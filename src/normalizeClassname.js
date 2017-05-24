@@ -1,8 +1,12 @@
 // @flow
 
-// replaces newlines with spaces, for use in classNames
-// also can take array of classnames, convert to string
-// returns arg as string if it's not an array or a string
+/**
+ * Normalize classnames. Similar to the `classnames` lib.
+ * Replaces newlines with spaces, can take array of classnames,
+ * converts to string
+ * Returns arg as string if it's not an array or a string
+ */
+
 const normalizeClassname = (arg: any[] | string): string => {
   const replaceNewlines = (a) => a.replace(/\s+/g, ' ').trim()
   const replaceArr = (a) => a.map((i) => `${i}`).join(' ')

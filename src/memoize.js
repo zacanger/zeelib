@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * A simple memoizing util
+ */
+
 const memoize = (fn: any): any => {
   const results = new Map()
   return (...args: any): any => {

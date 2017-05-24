@@ -1,3 +1,10 @@
+/**
+ * Range function. Takes a start and and end,
+ * and a step (defaults to 1). Works for numbers and
+ * latin characters. This is _inclusive_. That is:
+ * 1..10,2 == 0,2,4,6,8,10
+ */
+
 const range = (a, b, step = 1) => {
   let arr = []
 
@@ -22,8 +29,3 @@ const range = (a, b, step = 1) => {
 }
 
 export default range
-
-// this is _inclusive_, eg 1..10,2 == 0,2,4,6,8,10
-// usage:
-// range(1, 10, 2)
-// range('q, w')

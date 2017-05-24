@@ -1,10 +1,13 @@
 // @flow
 
-// usage :
-// lighten
-// consty newCol = lightenOrDarken('#F06D06', 20)
-// darken
-// const newCol = lightenOrDarken('#F06D06', -20)
+/**
+ * Lighten or darken a color
+ * Lighten example:
+ * `const newCol = lightenOrDarken('#F06D06', 20)`
+ * Darken example:
+ * `const newCol = lightenOrDarken('#F06D06', -20)`
+ */
+
 const lightenOrDarken = (col: string, amt: number): string => {
   let useHash = false
   let num = parseInt(col, 16)

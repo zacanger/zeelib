@@ -7,6 +7,10 @@ const env = Object.assign({}, process.env)
 
 env.PATH = resolve('./node_modules/.bin') + SEPARATOR + env.PATH
 
+/**
+ * Like a standalone `npm run` that obeys `npm bin`
+ */
+
 const execute = (cmd: string): void => {
   let output = execSync(cmd, { // eslint-disable-line no-unused-vars
     cwd: process.cwd(), env

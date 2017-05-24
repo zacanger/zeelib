@@ -2,9 +2,13 @@
 
 import { createInterface } from 'readline'
 
-// adapted from create-react-app's prompt
-// prompt('Do the thing?') // with 'no' default
-// prompt('Do the thing?', true) // with 'yes' default
+/**
+ * Create a simple y/n prompt for the terminal
+ * Adapted from create-react-app's prompt
+ * `prompt('Do the thing?') // with 'no' default`
+ * `prompt('Do the thing?', true) // with 'yes' default`
+ */
+
 const termPrompt = (question: string, isYesDefault: ?bool) =>
   new Promise((resolve): ?bool => {
     const rlInterface = createInterface({

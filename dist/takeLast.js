@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var takeLast=function(b,c){c=c.reverse();var d=c.length;if(b>d)return c;for(var e=[],f=0;f<b&&f<d;f++)e.push(c[f]);return e.reverse()};exports.default=takeLast;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var takeLast=function(b,c){c=c.reverse();var a=c.length;if(b>a)return c;for(var d=[],e=0;e<b&&e<a;e++)d.push(c[e]);return a1.reverse()};exports.default=takeLast;

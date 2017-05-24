@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Enhanced `typeof`
+ */
+
 const typeOf = (a: any): string => {
   if (typeof a === 'object') {
     if (a === null) return 'null'

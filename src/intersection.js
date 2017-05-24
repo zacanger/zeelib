@@ -1,6 +1,10 @@
 // @flow
 
-const both = (a: any[], b: any[]): any[] =>
+/**
+ * Get the intersection of two arrays
+ */
+
+const intersection = (a: any[], b: any[]): any[] =>
   [...new Set(a.filter((el) => b.includes(el)))]
 
-export default both
+export default intersection

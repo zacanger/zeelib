@@ -1,6 +1,10 @@
 // @flow
 
-// credit: gh:spicydonuts
+/**
+ * Drop where matches predicate
+ * credit: gh:spicydonuts
+ */
+
 const dropWhere = (fn: any, array: any[]): any[] => {
   const keepers = []
   array.forEach((item, i) => {

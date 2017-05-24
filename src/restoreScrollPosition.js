@@ -5,6 +5,11 @@ type s = {
   scrollY: number
 }
 
+/**
+ * Restore scroll position to coordinates
+ * Takes `{ scrollX: number, scrollX: number }`
+ */
+
 const restoreScrollPosition = ({ scrollX, scrollY }: s) =>
   window.scrollTo(scrollX, scrollY)
 

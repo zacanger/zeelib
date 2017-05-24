@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getLengthOfCharactersInString=function(a,b){return a.split('').filter(function(d){return d===b}).length};exports.default=getLengthOfCharactersInString;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getLengthOfCharactersInString=function(a,b){return a.split('').filter(function(a){return a===b}).length};exports.default=getLengthOfCharactersInString;

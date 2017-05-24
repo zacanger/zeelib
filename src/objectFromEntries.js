@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Get an object from an array of entries
+ */
+
 const objectFromEntries = (entries: any[]): Object => {
   const res = {}
   const len = entries.length

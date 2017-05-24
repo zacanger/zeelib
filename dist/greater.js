@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var greater=function(c,d){return c>d?c:d};exports.default=greater;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var greater=function(c,a){return c>a?c:a};exports.default=greater;

@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Returns true if value is a primitive
+ */
+
 const isPrimitive = (v: any): bool => {
   if (v === null) {
     return true

@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Get the greatest common diviser of all arguments
+ */
+
 function greatestCommonDivisor (): number {
   let i = arguments.length
   let a = arguments[--i]

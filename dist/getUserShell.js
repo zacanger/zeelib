@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getUserShell=function(){return process.env.SHELL};exports.default=getUserShell;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getUserShell=function(){return process.env.SHELL||''};exports.default=getUserShell;

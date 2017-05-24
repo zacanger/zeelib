@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Escapes a string for use in XPath
+ */
+
 const escapeForXpath = (s: string): ?string => {
   let parts = s.match(/[^'"]+|['"]/g)
   if (parts) {

@@ -1,10 +1,13 @@
 // @flow
 /* eslint-disable no-return-assign */
 
-// line: string to format
-// indent: amount by which to indent
-// limit: maxlen of line
-// accum: accumulator string
+/**
+ * Indent a string
+ * line: string to format
+ * indent: amount by which to indent
+ * limit: maxlen of line
+ * accum: accumulator string
+ */
 
 const indenter = (
   line: string,

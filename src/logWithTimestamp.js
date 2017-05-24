@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * `console.log` with a timestamp
+ */
+
 function logWithTimestamp (): ?string {
   const date = new Date()
   const timestamp = date.getDate() + '/' + date.getMonth() + ' ' + date.getHours() + ':' +

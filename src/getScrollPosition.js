@@ -5,6 +5,10 @@ type S = {
   scrollY: number
 }
 
+/**
+ * Returns current scroll position
+ */
+
 const getScrollPosition = (): S =>
   ({ scrollX: window.scrollX, scrollY: window.scrollY })
 

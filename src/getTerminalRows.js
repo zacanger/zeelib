@@ -1,2 +1,9 @@
-const getTerminalRows = () => process.stdout.rows
+/**
+ * Get current terminal rows
+ * @returns {number} rows
+ */
+
+const getTerminalRows = () =>
+  process.stdout.rows
+
 export default getTerminalRows

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isObjectEqual=function(c,d){return!(c!==d)||JSON.stringify(c)===JSON.stringify(d)};exports.default=isObjectEqual;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isObjectEqual=function(c,a){return console.error('`isObjectEqual` is deprecated. Please use `eq` instead.'),c===a||JSON.stringify(c)===JSON.stringify(a)};exports.default=isObjectEqual;

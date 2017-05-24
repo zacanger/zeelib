@@ -2,14 +2,13 @@
 
 import { readdirSync } from 'fs'
 
-const getNodeModules = (): Object => {
-  const nodeModules = {}
+/**
+ * Returns array of all locally installed
+ * Node modules
+ */
+
+const getNodeModules = (): string[] =>
   readdirSync('node_modules')
-    .filter((a) => ['.bin'].indexOf(a) === -1)
-    .forEach((b) => {
-      nodeModules[b] = 'commonjs ' + b
-    })
-  return nodeModules
-}
+    .filter((n) => n !== '.bin')
 
 export default getNodeModules

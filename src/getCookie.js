@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Get the value of a cookie by name
+ */
+
 const getCookie = (name: string): ?string => {
   const value = '; ' + document.cookie
   const parts = value.split(`; ${name}=`)

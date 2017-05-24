@@ -1,5 +1,9 @@
 // @flow
 
+/**
+ * Split a string on given char
+ */
+
 const splitStringOn = (str: string, spl: string = ''): string[] | null => {
   if (!str || typeof str !== 'string') {
     console.warn('Please pass a string as first param.')

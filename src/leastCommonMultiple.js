@@ -2,7 +2,10 @@
 
 import greatestCommonDivisor from './greatestCommonDivisor'
 
-// returns least common multiple
+/**
+ * Returns least common multiple
+ */
+
 function leastCommonMultiple (): number {
   let i = arguments.length
   let a = arguments[--i]

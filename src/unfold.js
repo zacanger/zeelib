@@ -1,6 +1,18 @@
-const unfold = (fn, seed) => {
+// @flow
+
+import isArray from './isArray'
+
+/**
+ * Builds a list from a seed
+ * Takes an iterating fn and an array seed
+ */
+
+const unfold = (
+  fn: () => any,
+  seed: any
+): any[] => {
   const r = fn(seed)
-  if (!Array.isArray(r)) {
+  if (!isArray(r)) {
     return []
   }
   return [r[0]].concat(unfold(fn, r[1]))

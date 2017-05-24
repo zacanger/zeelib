@@ -2,7 +2,15 @@
 
 import { writeFileSync } from 'fs'
 
-const writeJsonSync = (file: string, data: any, indent: ?number): void => {
+/**
+ * Write JSON from a stringifiable value, sync
+ */
+
+const writeJsonSync = (
+  file: string,
+  data: any,
+  indent: ?number = 2
+): void => {
   if (typeof indent !== 'number') {
     indent = 0
   }
