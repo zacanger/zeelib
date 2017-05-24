@@ -4,6 +4,8 @@ import isRegExp from './isRegExp'
 
 /**
  * Clones anything
+ * @param {any} obj
+ * @returns {any}
  */
 
 const objectClone = (obj) => {

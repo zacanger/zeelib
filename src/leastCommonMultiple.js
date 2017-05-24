@@ -3,7 +3,7 @@
 import greatestCommonDivisor from './greatestCommonDivisor'
 
 /**
- * Returns least common multiple
+ * Returns least common multiple of all arguments
  */
 
 function leastCommonMultiple (): number {

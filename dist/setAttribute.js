@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var setAttribute=function(b,c,a){b.setAttribute(c,a)};exports.default=setAttribute;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var setAttribute=function(a,b,c){a.setAttribute(b,c)};exports.default=setAttribute;

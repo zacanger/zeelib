@@ -1,4 +1,5 @@
 /* eslint-disable node/no-deprecated-api */
+
 // @flow
 
 /**
@@ -7,11 +8,11 @@
 
 import getIsBrowser from './getIsBrowser'
 
-const btoa = (s: string): string =>
+const btoa = (str: string): string =>
   getIsBrowser()
-    ? window.btoa(s)
+    ? window.btoa(str)
     : Buffer.from
-      ? Buffer.from(s, 'utf8').toString('base64')
-      : new Buffer(s, 'utf8').toString('base64')
+      ? Buffer.from(str, 'utf8').toString('base64')
+      : new Buffer(str, 'utf8').toString('base64')
 
 export default btoa

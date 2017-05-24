@@ -2,7 +2,11 @@
  * Range function. Takes a start and and end,
  * and a step (defaults to 1). Works for numbers and
  * latin characters. This is _inclusive_. That is:
- * 1..10,2 == 0,2,4,6,8,10
+ * `1..10,2 == 0,2,4,6,8,10`
+ * @param {string|number} a
+ * @param {string|number} b
+ * @param {number} step (optional, defaults to one)
+ * @returns {Array}
  */
 
 const range = (a, b, step = 1) => {

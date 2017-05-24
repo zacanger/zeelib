@@ -1,10 +1,12 @@
 /**
  * Trims a string to just abbreved caps
- * @param {string} any string
- * @returns {string} string, abbreviated
+ * @param {string} str
+ * @returns {string}
  */
 
-const abbrev = (s) =>
-  s.match(/\b([A-Z])/g) ? s.match(/\b([A-Z])/g).join('') : s
+const abbrev = (str) =>
+  str.match(/\b([A-Z])/g)
+    ? str.match(/\b([A-Z])/g).join('')
+    : str
 
 export default abbrev

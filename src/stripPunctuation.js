@@ -6,6 +6,8 @@
  */
 
 const stripPunctuation = (str: string): string =>
-  str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ')
+  str
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+    .replace(/\s{2,}/g, ' ')
 
 export default stripPunctuation

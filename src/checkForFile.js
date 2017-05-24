@@ -7,9 +7,9 @@
 import { statSync } from 'fs'
 import { resolve } from 'path'
 
-const checkForFile = (a: string): bool => {
+const checkForFile = (filePath: string): bool => {
   try {
-    statSync(resolve(a))
+    statSync(resolve(filePath))
     return true
   } catch (_) {
     return false

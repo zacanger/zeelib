@@ -1,10 +1,10 @@
 /**
  * Takes a function and returns a function that takes two arguments
  * Produces a curried function
- * @param {function} any
- * @param {any}
- * @param {any}
- * @returns {function} curried
+ * @param {function} f
+ * @param {any} a
+ * @param {any} b
+ * @returns {function}
  */
 
 function curry2 (f) {

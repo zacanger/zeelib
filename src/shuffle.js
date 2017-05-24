@@ -4,14 +4,14 @@
  * Randomly shuffle items in array
  */
 
-const shuffle = (a: any[]): any[] => {
-  for (let i = a.length - 1; i > 0; i--) {
+const shuffle = (arr: any[]): any[] => {
+  for (let i = arr.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1))
-    let temp = a[i]
-    a[i] = a[j]
-    a[j] = temp
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
   }
-  return a
+  return arr
 }
 
 export default shuffle

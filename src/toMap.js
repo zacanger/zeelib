@@ -1,12 +1,12 @@
 // @flow
 
 /**
- * Make a map-like object from an object
+ * Make a map-like object from an array
  */
 
-const toMap = (a: any[]): Object => {
+const toMap = (arr: any[]): Object => {
   const m = {}
-  a.forEach((e, i) => {
+  arr.forEach((e, i) => {
     e.index = i
     m[e.name] = e
   })

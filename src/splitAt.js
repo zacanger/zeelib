@@ -9,7 +9,7 @@ import drop from './drop'
  * and second element is remainder of list
  */
 
-const splitAt = (n: number, a: any[]): any[] =>
-  [ take(n, a), drop(n, a) ]
+const splitAt = (num: number, arr: any[]): any[] =>
+  [ take(num, arr), drop(num, arr) ]
 
 export default splitAt

@@ -4,7 +4,7 @@
  * Remove non-ascii chars from string
  */
 
-const removeNonAscii = (s: string): string =>
-  s.replace(/[^\x20-\x7E]/g, '')
+const removeNonAscii = (str: string): string =>
+  str.replace(/[^\x20-\x7E]/g, '')
 
 export default removeNonAscii

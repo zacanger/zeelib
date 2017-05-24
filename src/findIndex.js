@@ -4,7 +4,7 @@
  * `indexOf`, here because of haskell's findIndex
  */
 
-const findIndex = (a: any, arr: any[]): number =>
-  arr.indexOf(a)
+const findIndex = (el: any, arr: any[]): number =>
+  arr.indexOf(el)
 
 export default findIndex

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var takeWhile=function(b,c){var a=[];return c.forEach(function(c){return b(c)?void a.push(c):a}),a};exports.default=takeWhile;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var takeWhile=function(a,b){var c=[];return b.forEach(function(b){return a(b)?void c.push(b):c}),c};exports.default=takeWhile;

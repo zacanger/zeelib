@@ -4,7 +4,7 @@
  * snake_case to lisp-case
  */
 
-const snakeCaseToLispCase = (s: string): string =>
-  s.replace(/_/g, '-')
+const snakeCaseToLispCase = (str: string): string =>
+  str.replace(/_/g, '-')
 
 export default snakeCaseToLispCase

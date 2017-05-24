@@ -5,7 +5,7 @@
  * duplicate elements
  */
 
-const hasDuplicate = (a: any[]): bool =>
-  a.some((v, i, s) => s.indexOf(v) !== i)
+const hasDuplicate = (arr: any[]): bool =>
+  arr.some((v, i, s) => s.indexOf(v) !== i)
 
 export default hasDuplicate

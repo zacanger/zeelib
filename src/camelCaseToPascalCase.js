@@ -4,7 +4,7 @@
  * Takes a camelCase string and returns one in PascalCase
  */
 
-const camelCaseToPascalCase = (s: string): string =>
-  s.charAt(0).toUpperCase() + s.slice(1)
+const camelCaseToPascalCase = (str: string): string =>
+  str.charAt(0).toUpperCase() + str.slice(1)
 
 export default camelCaseToPascalCase

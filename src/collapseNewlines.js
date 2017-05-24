@@ -4,7 +4,7 @@
  * Collapses multiple newlines to two
  */
 
-const collapseNewlines = (s: string): string =>
-  s.replace(/\n\s*\n/g, '\n\n')
+const collapseNewlines = (str: string): string =>
+  str.replace(/\n\s*\n/g, '\n\n')
 
 export default collapseNewlines

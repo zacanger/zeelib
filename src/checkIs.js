@@ -11,11 +11,11 @@ type R = Error | any
  * returns the value otherwise.
  */
 
-const checkIs = (t: string, v: any, n: ?string): R => {
-  if (!is(t, v)) {
-    throw new TypeError(`${n || v.name || ''} should be of type ${t}!`)
+const checkIs = (type: string, val: any, name: ?string): R => {
+  if (!is(type, val)) {
+    throw new TypeError(`${name || val.name || ''} should be of type ${type}!`)
   }
-  return v
+  return val
 }
 
 export default checkIs

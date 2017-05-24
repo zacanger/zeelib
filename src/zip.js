@@ -6,9 +6,9 @@ import pair from './pair'
  * Each tuple is the elements of each passed array
  * at the same position
  * @param {Array} xs
- * @param {Array} l
+ * @param {Array} ys
  * @returns {Array}
  */
 
-const zip = (xs, l) => map((x, i) => pair(x, l[i]), xs)
+const zip = (xs, ys) => map((x, i) => pair(x, ys[i]), xs)
 export default zip

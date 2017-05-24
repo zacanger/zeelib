@@ -7,12 +7,12 @@ import invoke from './invoke'
  * of calling zipWith on the lists
  * @param {function} after
  * @param {Array} xs
- * @param {Array} list
+ * @param {Array} ys
  * @returns {any}
  */
 
 const zipThen = (after, xs) =>
-  (...list) =>
-    after.apply(after, zipWith(invoke, xs, list))
+  (...ys) =>
+    after.apply(after, zipWith(invoke, xs, ys))
 
 export default zipThen

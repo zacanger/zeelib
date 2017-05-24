@@ -8,7 +8,11 @@ import objectAssign from './objectAssign'
  * {key, ...copy} = {...target, ...source}
  */
 
-const copyWithout = (target: Object, source: Object, ...keys: any): any => {
+const copyWithout = (
+  target: Object,
+  source: Object,
+  ...keys: any
+): any => {
   const copy = objectAssign(target, source)
   for (const key of keys) {
     delete copy[key]

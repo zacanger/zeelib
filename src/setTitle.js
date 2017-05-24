@@ -6,11 +6,11 @@ import getIsBrowser from './getIsBrowser'
  * Set `window.title` or `process.title`
  */
 
-const setTitle = (t: string): void => {
+const setTitle = (newTitle: string): void => {
   if (getIsBrowser()) {
-    window.title = t
+    window.title = newTitle
   } else {
-    process.title = t
+    process.title = newTitle
   }
 }
 

@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isBuffer=function(b){return Buffer.isBuffer(b)};exports.default=isBuffer;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isBuffer=function(b){try{return Buffer.isBuffer(b)}catch(a){return!1}};exports.default=isBuffer;

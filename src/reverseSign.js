@@ -4,7 +4,7 @@
  * Reverse the sign on a number
  */
 
-const reverseSign = (a: number): number =>
-  -(a)
+const reverseSign = (num: number): number =>
+  -(num)
 
 export default reverseSign

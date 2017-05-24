@@ -4,7 +4,7 @@
  * Find out how many of a given element is in an array
  */
 
-const getLengthOfItemsInArray = (a: any[], i: any): number =>
-  a.filter((el) => el === i).length
+const getLengthOfItemsInArray = (arr: any[], el: any): number =>
+  arr.filter((a) => a === el).length
 
 export default getLengthOfItemsInArray

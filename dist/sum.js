@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var sum=function(b){return b.reduce(function(a,b){return a+b},0)};exports.default=sum;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var sum=function(a){return a.reduce(function(a,b){return a+b},0)};exports.default=sum;

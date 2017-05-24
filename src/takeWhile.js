@@ -7,10 +7,10 @@
 
 const takeWhile = (
   pred: () => bool,
-  a: any[]
+  arr: any[]
 ): any[] => {
   const a1 = []
-  a.forEach((el) => {
+  arr.forEach((el) => {
     if (pred(el)) {
       a1.push(el)
     } else {

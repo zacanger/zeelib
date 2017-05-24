@@ -10,9 +10,10 @@ import { format } from 'util'
 
 const fn = process.argv[2] || process.env.ERR_FILE || 'err.log'
 const file = createWriteStream(`${__dirname}/${fn}`, { flags : 'w' })
-const writeError = (d: any): void => {
-  file.write(format(d) + '\n')
-  process.stdout.write(format(d) + '\n')
+
+const writeError = (data: any): void => {
+  file.write(format(data) + '\n')
+  process.stdout.write(format(data) + '\n')
 }
 
 export default writeError

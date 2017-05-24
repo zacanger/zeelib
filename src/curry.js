@@ -4,9 +4,9 @@ import getFunctionArguments from './getFunctionArguments'
  * Takes a function and returns a function that takes
  * any number of arguments
  * Produces a curried function
- * @param {function} any
+ * @param {function} fn
  * @param {any} args
- * @returns {function} curried
+ * @returns {function}
  */
 
 const curry = function (fn) {

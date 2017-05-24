@@ -10,10 +10,10 @@ import takeWhile from './takeWhile'
 
 const span = (
   pred: () => bool,
-  a: any[]
+  arr: any[]
 ): any[] => {
-  const sat = takeWhile(pred, a)
-  return [ sat, a.slice(sat.length) ]
+  const sat = takeWhile(pred, arr)
+  return [ sat, arr.slice(sat.length) ]
 }
 
 export default span

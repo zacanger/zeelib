@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _elem=require('./elem'),_elem2=_interopRequireDefault(_elem);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var notElem=function(b,c){return!(0,_elem2.default)(b,c)};exports.default=notElem;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _elem=require('./elem'),_elem2=_interopRequireDefault(_elem);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var notElem=function(a,b){return!(0,_elem2.default)(a,b)};exports.default=notElem;
