@@ -2,13 +2,8 @@ import isArray from './isArray'
 import isDate from './isDate'
 import isRegExp from './isRegExp'
 
-/**
- * Clones anything
- * @param {any} obj
- * @returns {any}
- */
-
 const objectClone = (obj) => {
+  console.error('`objectClone` is deprecated. Please use `clone` instead.')
   // Number, String, Boolean, Function, null, undefined
   if (obj === null || typeof obj !== 'object') {
     return obj

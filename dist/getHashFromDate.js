@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getHashFromDate=function(){return(+new Date+100*Math.random()).toString(32).replace(/\./,'')};exports.default=getHashFromDate;

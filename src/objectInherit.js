@@ -1,6 +1,6 @@
 // @flow
 
-import objectClone from './objectClone'
+import clone from './clone'
 
 /**
  * Inherits target by source
@@ -9,7 +9,7 @@ import objectClone from './objectClone'
 const objectInherit = (target: Object, source: Object): void => {
   target.super_ = source
   target.prototype = Object.create(target.super_.prototype)
-  let descriptor = objectClone(target.super_.descriptor) || {}
+  let descriptor = clone(target.super_.descriptor) || {}
   descriptor.constructor = {
     value        : target,
     enumerable   : false,

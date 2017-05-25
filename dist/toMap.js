@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var toMap=function(a){var b={};return a.forEach(function(a,c){a.index=c,b[a.name]=a}),b};exports.default=toMap;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var toMap=function(a){console.error('`toMap` is deprecated. Please use native `Map` instead.');var b={};return a.forEach(function(a,c){a.index=c,b[a.name]=a}),b};exports.default=toMap;

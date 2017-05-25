@@ -36,6 +36,7 @@
 -   [fixWindowsSlashes](#fixwindowsslashes)
 -   [formatMs](#formatms)
 -   [getComplimentaryColors](#getcomplimentarycolors)
+-   [getHashFromDate](#gethashfromdate)
 -   [getHexRegex](#gethexregex)
 -   [getQueryFromSearch](#getqueryfromsearch)
 -   [getRandomHex32](#getrandomhex32)
@@ -58,8 +59,6 @@
 -   [lispCaseToPascalCase](#lispcasetopascalcase)
 -   [lispCaseToSnakeCase](#lispcasetosnakecase)
 -   [minifyString](#minifystring)
--   [moustache](#moustache)
--   [newlinesToSpaces](#newlinestospaces)
 -   [normalizeClassname](#normalizeclassname)
 -   [normalizeColor](#normalizecolor)
 -   [normalizeText](#normalizetext)
@@ -153,9 +152,6 @@
 -   [cons](#cons)
 -   [constant](#constant)
 -   [curry](#curry)
--   [curry2](#curry2)
--   [curry3](#curry3)
--   [curry4](#curry4)
 -   [drop](#drop)
 -   [dropWhere](#dropwhere)
 -   [dropWhile](#dropwhile)
@@ -171,7 +167,6 @@
 -   [foldr](#foldr)
 -   [foldr1](#foldr1)
 -   [getFunctionArguments](#getfunctionarguments)
--   [head](#head)
 -   [id](#id)
 -   [init](#init)
 -   [invoke](#invoke)
@@ -197,7 +192,6 @@
 -   [reverse](#reverse)
 -   [span](#span)
 -   [splitAt](#splitat)
--   [tail](#tail)
 -   [take](#take)
 -   [takeLast](#takelast)
 -   [takeWhile](#takewhile)
@@ -227,7 +221,6 @@
 -   [isEven](#iseven)
 -   [isFloat](#isfloat)
 -   [isFunction](#isfunction)
--   [isInteger](#isinteger)
 -   [isJson](#isjson)
 -   [isMap](#ismap)
 -   [isNan](#isnan)
@@ -260,7 +253,6 @@
 -   [chunk](#chunk)
 -   [clamp](#clamp)
 -   [cloneWithout](#clonewithout)
--   [contains](#contains)
 -   [copy](#copy)
 -   [copyWithout](#copywithout)
 -   [countItemsInArray](#countitemsinarray)
@@ -288,7 +280,6 @@
 -   [inherits](#inherits)
 -   [intersection](#intersection)
 -   [invoker](#invoker)
--   [keys](#keys)
 -   [leastCommonMultiple](#leastcommonmultiple)
 -   [leftPad](#leftpad)
 -   [lesser](#lesser)
@@ -303,8 +294,6 @@
 -   [nco](#nco)
 -   [noSwitch](#noswitch)
 -   [noop](#noop)
--   [objectAssign](#objectassign)
--   [objectClone](#objectclone)
 -   [objectFromEntries](#objectfromentries)
 -   [objectInherit](#objectinherit)
 -   [product](#product)
@@ -335,7 +324,6 @@
 -   [uniqAndFlatten](#uniqandflatten)
 -   [unless](#unless)
 -   [xor](#xor)
--   [imul](#imul)
 
 ## eventOnce
 
@@ -660,6 +648,12 @@ Get complimentary colors for a given color
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+## getHashFromDate
+
+Returns a hash based on current timestamp
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
 ## getHexRegex
 
 Returns a regex to test for valid hex
@@ -875,30 +869,6 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## minifyString
 
 Roughly minify a string
-
-**Parameters**
-
--   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-## moustache
-
-Simple handlebars/mustache-like string util
-Takes the template, the replacements (as an object),
-and an optional syntax (defaults to `{{}}`)
-
-**Parameters**
-
--   `template` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `replacements` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `syntax` **[RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)** 
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-## newlinesToSpaces
-
-Turns each newline into a space
 
 **Parameters**
 
@@ -1686,13 +1656,13 @@ Returns **any**
 
 ## clone
 
-Clones a stringifiable object
+Clones anything
 
 **Parameters**
 
--   `a` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `obj` **[any](#any)** 
 
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+Returns **[any](#any)** 
 
 ## collectBy
 
@@ -1769,48 +1739,6 @@ Produces a curried function
 
 Returns **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 
-## curry2
-
-Takes a function and returns a function that takes two arguments
-Produces a curried function
-
-**Parameters**
-
--   `f` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
--   `a` **[any](#any)** 
--   `b` **[any](#any)** 
-
-Returns **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
-
-## curry3
-
-Takes a function and returns a function that takes three arguments
-Produces a curried function
-
-**Parameters**
-
--   `f` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
--   `a` **[any](#any)** 
--   `b` **[any](#any)** 
--   `c` **[any](#any)** 
-
-Returns **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
-
-## curry4
-
-Takes a function and returns a function that takes four arguments
-Produces a curried function
-
-**Parameters**
-
--   `f` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
--   `a` **[any](#any)** 
--   `b` **[any](#any)** 
--   `c` **[any](#any)** 
--   `d` **[any](#any)** 
-
-Returns **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
-
 ## drop
 
 Like Haskell's `drop`
@@ -1863,8 +1791,7 @@ Returns **[any](#any)**
 
 ## elem
 
-Here because of Haskell's `elem`
-Like `contains`, with reversed args
+Check if a string or array contains an element
 
 **Parameters**
 
@@ -1990,16 +1917,6 @@ Get function arguments
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>?** 
 
-## head
-
-`head` (same as `car`)
-
-**Parameters**
-
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-Returns **any** 
-
 ## id
 
 `id`
@@ -2074,9 +1991,9 @@ Make a list out of all arguments
 
 **Parameters**
 
--   `any`  
+-   `args` **...any** 
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ## memoize
 
@@ -2111,8 +2028,8 @@ if the two are not the same
 
 ## notElem
 
-The inverse of `elem`, here because of Haskell's `notElem`
-Like `!contains`, with reversed args
+The opposite of `elem`
+Returns true if the element is not in the string or array
 
 **Parameters**
 
@@ -2250,16 +2167,6 @@ and second element is remainder of list
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-## tail
-
-`tail` (same as `cdr`)
-
-**Parameters**
-
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-Returns **any** 
 
 ## take
 
@@ -2579,10 +2486,6 @@ Returns true if the value is a function
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
-## isInteger
-
-Returns true if the value is an integer
-
 ## isJson
 
 Returns true if the string is valid JSON
@@ -2894,17 +2797,6 @@ cred : gh:texastoland
 
 Returns **any** 
 
-## contains
-
-Check if a string or array contains an element
-
-**Parameters**
-
--   `ls` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>)** 
--   `el` **any** 
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
 ## copy
 
 Copy an object.
@@ -3166,28 +3058,28 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ## invoker
 
 Invokes until function returns truthily
-examples:
-Succeeds after 15 calls
-let i = 0
-invoker(20, 100)(() => {
-  console.log(i)
-  return ++i > 15
-}, console.log)
-Fails after 20 calls
-let ii = 0
-invoker(20, 100)(() => {
-  console.log(ii)
-  return ++ii > 22
-}, console.log)
 
 **Parameters**
 
 -   `limit` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `interval` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
-## keys
+**Examples**
 
-`Object.keys` polyfill
+```javascript
+// Succeeds after 15 calls
+let i = 0
+invoker(20, 100)(() => {
+  console.log(i)
+  return ++i > 15
+}, console.log)
+// Fails after 20 calls
+let ii = 0
+invoker(20, 100)(() => {
+  console.log(ii)
+  return ++ii > 22
+}, console.log)
+```
 
 ## leastCommonMultiple
 
@@ -3334,21 +3226,6 @@ credit: gh:egoist/switchy
 noop
 
 Returns **void** 
-
-## objectAssign
-
-`Object.assign`
-Copy vals of all enumerable own properties from source obj to target obj
-
-## objectClone
-
-Clones anything
-
-**Parameters**
-
--   `obj` **[any](#any)** 
-
-Returns **[any](#any)** 
 
 ## objectFromEntries
 
@@ -3577,7 +3454,7 @@ Returns **[any](#any)** result
 
 ## throwError
 
-Throw an error
+Throw an error, or anything else passed in as an error
 
 **Parameters**
 
@@ -3683,7 +3560,3 @@ Simple xor
 -   `b` **any** 
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
-## imul
-
-`Math.imul`

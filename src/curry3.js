@@ -1,16 +1,7 @@
 import curry2 from './curry2'
 
-/**
- * Takes a function and returns a function that takes three arguments
- * Produces a curried function
- * @param {function} f
- * @param {any} a
- * @param {any} b
- * @param {any} c
- * @returns {function}
- */
-
 function curry3 (f) {
+  console.error('`curry3` is deprecated. Please use `curry` instead.')
   function curried (a, b, c) {
     switch (arguments.length) {
       case 0: return curried
