@@ -1,7 +1,5 @@
 // @flow
 
-import objectAssign from './objectAssign'
-
 /**
  * Copy an object, leaving out specified keys
  * cred : gh:texastoland
@@ -13,7 +11,7 @@ const copyWithout = (
   source: Object,
   ...keys: any
 ): any => {
-  const copy = objectAssign(target, source)
+  const copy = Object.assign(target, source)
   for (const key of keys) {
     delete copy[key]
   }

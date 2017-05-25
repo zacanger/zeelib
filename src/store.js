@@ -1,7 +1,5 @@
 // @flow
 
-import objectAssign from './objectAssign'
-
 /**
  * A very simple store implementation (think Redux-like)
  * Usage:
@@ -27,7 +25,7 @@ const store = (state: Object = {}) => {
     },
     setState: (n: Object | Function) => {
       const p = state
-      state = objectAssign(
+      state = Object.assign(
         {},
         p,
         typeof n === 'function' ? n(p) : n

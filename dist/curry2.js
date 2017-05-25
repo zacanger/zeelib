@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function curry2(c){function d(e,a){switch(arguments.length){case 0:return d;case 1:return function(a){return c(e,a)};default:return c(e,a);}}return d}exports.default=curry2;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function curry2(c){function d(e,a){switch(arguments.length){case 0:return d;case 1:return function(a){return c(e,a)};default:return c(e,a);}}return console.error('`curry2` is deprecated. Please use `curry` instead.'),d}exports.default=curry2;

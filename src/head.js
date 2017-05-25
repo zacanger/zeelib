@@ -1,10 +1,8 @@
 // @flow
 
-/**
- * `head` (same as `car`)
- */
-
-const head = (arr: any[]): any =>
-  arr[0]
+const head = (arr: any[]): any => {
+  console.error('`head` is deprecated. Please use `car` instead.')
+  return arr[0]
+}
 
 export default head

@@ -1,9 +1,5 @@
 // @flow
 
-/**
- * `Math.imul`
- */
-
 const imul = Math.imul || ((a: number, b: number): number => {
   console.error('`imul` is deprecated, use `Math.imul` instead.')
   const ah = (a >>> 16) & 0xffff

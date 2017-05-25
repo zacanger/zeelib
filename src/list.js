@@ -2,12 +2,9 @@
 
 /**
  * Make a list out of all arguments
- * @param {any}
- * @returns {Array}
  */
 
-function list (): any[] {
-  return [ ...arguments ]
-}
+const list = (...args: any): any[] =>
+  [ ...args ]
 
 export default list

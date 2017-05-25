@@ -3,7 +3,7 @@
 import isError from './isError'
 
 /**
- * Throw an error
+ * Throw an error, or anything else passed in as an error
  */
 
 const throwError = (err: any): Error => {

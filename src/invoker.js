@@ -2,14 +2,14 @@
 
 /**
  * Invokes until function returns truthily
- * examples:
- * Succeeds after 15 calls
+ * @example
+ * // Succeeds after 15 calls
  * let i = 0
  * invoker(20, 100)(() => {
  *   console.log(i)
  *   return ++i > 15
  * }, console.log)
- * Fails after 20 calls
+ * // Fails after 20 calls
  * let ii = 0
  * invoker(20, 100)(() => {
  *   console.log(ii)

@@ -1,8 +1,7 @@
 // @flow
 
 /**
- * Here because of Haskell's `elem`
- * Like `contains`, with reversed args
+ * Check if a string or array contains an element
  */
 
 const elem = (el: any, ls: string | any[]): bool =>

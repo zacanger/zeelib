@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var tail=function(a){return a.slice(1)};exports.default=tail;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var tail=function(a){return console.error('`tail` is deprecated. Please use `cdr` instead.'),a.slice(1)};exports.default=tail;

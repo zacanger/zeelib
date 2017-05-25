@@ -1,10 +1,8 @@
 // @flow
 
-/**
- * Turns each newline into a space
- */
-
-const newlinesToSpaces = (str: string): string =>
-  str.replace(/\s+/g, ' ').trim()
+const newlinesToSpaces = (str: string): string => {
+  console.error('`newlinesToSpaces` is deprecated. Please use `collapseWhitespace` instead.')
+  return str.replace(/\s+/g, ' ').trim()
+}
 
 export default newlinesToSpaces

@@ -1,18 +1,8 @@
 import curry2 from './curry2'
 import curry3 from './curry3'
 
-/**
- * Takes a function and returns a function that takes four arguments
- * Produces a curried function
- * @param {function} f
- * @param {any} a
- * @param {any} b
- * @param {any} c
- * @param {any} d
- * @returns {function}
- */
-
 function curry4 (f) {
+  console.error('`curry4` is deprecated. Please use `curry` instead.')
   function curried (a, b, c, d) { // eslint-disable-line complexity
     switch (arguments.length) {
       case 0: return curried
