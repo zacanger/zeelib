@@ -2,7 +2,7 @@
 
 // @flow
 
-import getIsBrowser from './getIsBrowser'
+import getIsBrowser from './get-is-browser'
 
 /**
  * `window.atob` for node and browser

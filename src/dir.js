@@ -1,5 +1,5 @@
 // @flow
-import getIsNode from './getIsNode'
+import getIsNode from './get-is-node'
 
 /**
  * `console.dir` with colors by default in Node

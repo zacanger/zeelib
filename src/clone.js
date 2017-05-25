@@ -1,6 +1,6 @@
-import isArray from './isArray'
-import isDate from './isDate'
-import isRegExp from './isRegExp'
+import isArray from './is-array'
+import isDate from './is-date'
+import isRegExp from './is-reg-exp'
 
 /**
  * Clones anything

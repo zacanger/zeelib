@@ -1,6 +1,6 @@
 // @flow
 
-import isArray from './isArray'
+import isArray from './is-array'
 
 /**
  * Recursively flatten arrays

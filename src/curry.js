@@ -1,4 +1,4 @@
-import getFunctionArguments from './getFunctionArguments'
+import getFunctionArguments from './get-function-arguments'
 
 /**
  * Takes a function and returns a function that takes

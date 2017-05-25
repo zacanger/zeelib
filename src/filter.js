@@ -1,6 +1,6 @@
 // @flow
 
-import isArrayLike from './isArrayLike'
+import isArrayLike from './is-array-like'
 import each from './each'
 
 /**

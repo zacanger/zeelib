@@ -1,6 +1,6 @@
 // @flow
 
-import isArray from './isArray'
+import isArray from './is-array'
 /**
  * Like Haskell's `concat`,
  * a one-level flatten of an array of arrays

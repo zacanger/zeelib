@@ -1,7 +1,7 @@
 // @flow
 
-import deepCopy from './deepCopy'
-import shallowCopy from './shallowCopy'
+import deepCopy from './deep-copy'
+import shallowCopy from './shallow-copy'
 
 /**
  * Copy an object.

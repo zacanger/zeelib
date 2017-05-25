@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var preventDefault=function(a){a&&('function'==typeof a.preventDefault&&a.preventDefault(),'function'==typeof a.stopPropagation&&a.stopPropagation())};exports.default=preventDefault;

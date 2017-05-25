@@ -1,6 +1,6 @@
 // @flow
 
-import takeWhile from './takeWhile'
+import takeWhile from './take-while'
 
 /**
  * Similar to `takeWhile`: returns a tuple
