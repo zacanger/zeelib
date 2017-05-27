@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var unescapeHtml=function(a){return a.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"')};exports.default=unescapeHtml;
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var unescapeHtml=function(a){return a.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,'\'')};exports.default=unescapeHtml;
