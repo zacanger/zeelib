@@ -256,6 +256,7 @@
 -   [chunk](#chunk)
 -   [clamp](#clamp)
 -   [cloneWithout](#clonewithout)
+-   [compact](#compact)
 -   [copy](#copy)
 -   [copyWithout](#copywithout)
 -   [countItemsInArray](#countitemsinarray)
@@ -2863,6 +2864,16 @@ cred : gh:texastoland
 -   `keys` **...any** 
 
 Returns **any** 
+
+## compact
+
+Returns an array with all falsey values removed
+
+**Parameters**
+
+-   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ## copy
 
