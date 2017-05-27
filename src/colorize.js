@@ -7,7 +7,7 @@ import { inspect } from 'util'
  * Options:
  * bold, italic, underline, inverse,
  * white, grey, black, blue, cyan, green, magenta, red, yellow
- * usage:
+ * @example
  * const c = require('./color')
  * console.log(c.bold(c.blue('foo')))
  */

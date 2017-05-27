@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var objectToString=function(a){return Object.prototype.toString.call(a)};exports.default=objectToString;

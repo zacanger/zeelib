@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isError=require('./is-error'),_isError2=_interopRequireDefault(_isError);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var throwError=function(a){throw(0,_isError2.default)(a)?a:new Error(a)};exports.default=throwError;

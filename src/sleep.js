@@ -2,7 +2,8 @@
 
 /**
  * Sync sleep. Also see `sleepAsync`.
- * Usage: sleep(1000)
+ * @example
+ * sleep(1000)
  */
 
 const sleep = (ms: number): void => {

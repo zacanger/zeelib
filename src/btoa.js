@@ -6,7 +6,7 @@
  * `window.btoa` for node and browser
  */
 
-import getIsBrowser from './getIsBrowser'
+import getIsBrowser from './get-is-browser'
 
 const btoa = (str: string): string =>
   getIsBrowser()

@@ -1,5 +1,5 @@
-import isDefined from './isDefined'
-import isArrayLike from './isArrayLike'
+import isDefined from './is-defined'
+import isArrayLike from './is-array-like'
 
 const iterateArray = (arr, fn) => {
   for (let index = 0, len = arr.length; index < len; index++) {

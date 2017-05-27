@@ -1,6 +1,6 @@
 // @flow
 
-import isArray from './isArray'
+import isArray from './is-array'
 
 /**
  * Builds a list from a seed

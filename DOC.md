@@ -14,6 +14,7 @@
 -   [getReferrer](#getreferrer)
 -   [getScrollBarWidth](#getscrollbarwidth)
 -   [getWidth](#getwidth)
+-   [preventDefault](#preventdefault)
 -   [removeAttribute](#removeattribute)
 -   [restoreScrollPosition](#restorescrollposition)
 -   [scrollTop](#scrolltop)
@@ -53,7 +54,6 @@
 -   [isStringSomewhereInArray](#isstringsomewhereinarray)
 -   [isValidEmail](#isvalidemail)
 -   [isValidHex](#isvalidhex)
--   [isValidRegex](#isvalidregex)
 -   [lightenOrDarken](#lightenordarken)
 -   [lispCaseToCamelCase](#lispcasetocamelcase)
 -   [lispCaseToPascalCase](#lispcasetopascalcase)
@@ -183,6 +183,7 @@
 -   [once](#once)
 -   [or](#or)
 -   [pair](#pair)
+-   [pairWith](#pairwith)
 -   [pick](#pick)
 -   [pipe](#pipe)
 -   [pluck](#pluck)
@@ -240,6 +241,8 @@
 -   [isString](#isstring)
 -   [isSymbol](#issymbol)
 -   [isUndefined](#isundefined)
+-   [isValidDate](#isvaliddate)
+-   [isValidRegex](#isvalidregex)
 -   [objectToString](#objecttostring)
 -   [toBool](#tobool)
 -   [toBoolInverse](#toboolinverse)
@@ -297,6 +300,7 @@
 -   [objectFromEntries](#objectfromentries)
 -   [objectInherit](#objectinherit)
 -   [product](#product)
+-   [promiseGuard](#promiseguard)
 -   [range](#range)
 -   [reverseDigits](#reversedigits)
 -   [reverseSign](#reversesign)
@@ -321,7 +325,6 @@
 -   [transposeFlat](#transposeflat)
 -   [tryExecNTimes](#tryexecntimes)
 -   [uniq](#uniq)
--   [uniqAndFlatten](#uniqandflatten)
 -   [unless](#unless)
 -   [xor](#xor)
 
@@ -423,6 +426,17 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 Get window width
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+## preventDefault
+
+Calls preventDefault and stopPropagation
+if they exist
+
+**Parameters**
+
+-   `e` **EventTarget** 
+
+Returns **void** 
 
 ## removeAttribute
 
@@ -663,11 +677,16 @@ Returns **[RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## getQueryFromSearch
 
 Takes search string and returns an object.
-Example: `?foo=bar` -> `foo: 'bar'`
 
 **Parameters**
 
 -   `search` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+getQueryFromSearch('?foo-bar') // { foo: 'bar' }
+```
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
@@ -777,6 +796,14 @@ a mobile or tablet user agent
 
 -   `device` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+if (isMobileOrTablet(navigator.userAgent || navigator.vendor || window.opera)) {
+  // do mobile-specific-stuff
+}
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isStringSomewhereInArray
@@ -811,28 +838,23 @@ Returns true if string is a valid hex
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
-## isValidRegex
-
-Returns true if RegExp is valid
-
-**Parameters**
-
--   `v` **any** 
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
 ## lightenOrDarken
 
 Lighten or darken a color
-Lighten example:
-`const newCol = lightenOrDarken('#F06D06', 20)`
-Darken example:
-`const newCol = lightenOrDarken('#F06D06', -20)`
 
 **Parameters**
 
 -   `col` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `amt` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+// lighten
+const newCol = lightenOrDarken('#F06D06', 20)
+// darken
+const newCol = lightenOrDarken('#F06D06', -20)
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1209,14 +1231,18 @@ Basic set of fns to add colors to console output in Node.
 Options:
 bold, italic, underline, inverse,
 white, grey, black, blue, cyan, green, magenta, red, yellow
-usage:
-const c = require('./color')
-console.log(c.bold(c.blue('foo')))
 
 **Parameters**
 
 -   `color` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `text` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+const c = require('./color')
+console.log(c.bold(c.blue('foo')))
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1332,12 +1358,17 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## getRelativePath
 
 Returns the relative path from here to there
-example: `getRelativePath('/home/z/', '/')` -> `'../..'`
 
 **Parameters**
 
 -   `here` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `there` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+getRelativePath('/home/z/', '/') // '../..'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -2080,6 +2111,16 @@ Make a pair out of any two values
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+## pairWith
+
+Returns an empty array if xs is shorter than two
+Otherwise returns an array made from calling f on
+pairs of adjacent elements
+
+**Parameters**
+
+-   `xs` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
 ## pick
 
 `pick`
@@ -2670,9 +2711,35 @@ Returns true if value is undefined
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
+## isValidDate
+
+Returns true if the passed object is a valid Date
+
+**Parameters**
+
+-   `d` **any** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
+## isValidRegex
+
+Returns true if RegExp is valid
+
+**Parameters**
+
+-   `v` **any** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
 ## objectToString
 
 `toString`
+
+**Parameters**
+
+-   `v` **any** 
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## toBool
 
@@ -2993,12 +3060,18 @@ Returns **function (): [number](https://developer.mozilla.org/en-US/docs/Web/Jav
 
 ## getOrdinal
 
-Adds ordinal onto number
-Example: 1 -> '1st'
+Adds ordinal onto integer
+Works up to 999
 
 **Parameters**
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+getOrdinal(1) // '1st'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -3035,12 +3108,17 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## inherits
 
 Simple `inherits`
-Example: inherits(A, B)
 
 **Parameters**
 
 -   `a` **any** 
 -   `b` **any** 
+
+**Examples**
+
+```javascript
+inherits(A, B)
+```
 
 Returns **any** 
 
@@ -3144,13 +3222,17 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 General-ish utility for async, eager thunks
 Adapted from kyle simpson's blog
-Example: `const something = makeThunk(fn, param1, param2)`
 
 **Parameters**
 
--   `fn`  
+-   `fn` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 -   `args` **[any](#any)** 
--   `any` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
+
+**Examples**
+
+```javascript
+const something = makeThunk(fn, param1, param2)
+```
 
 Returns **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** thunk
 
@@ -3258,6 +3340,17 @@ Get the product of a list of numbers
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+## promiseGuard
+
+Will reject if condition is false
+
+**Parameters**
+
+-   `cond` **[any](#any)** 
+-   `err` **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)**  (optional, default ``new Error(`${cond} was false`)``)
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
 ## range
 
 Range function. Takes a start and and end,
@@ -3276,11 +3369,16 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ## reverseDigits
 
 Reverse digits with correct sign handling
-Example: `reverseDigits(-123)` -> `-321`
 
 **Parameters**
 
 -   `num` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+reverseDigits(-123) // -321
+```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -3364,11 +3462,16 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## sleep
 
 Sync sleep. Also see `sleepAsync`.
-Usage: sleep(1000)
 
 **Parameters**
 
 -   `ms` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+sleep(1000)
+```
 
 Returns **void** 
 
@@ -3376,11 +3479,16 @@ Returns **void**
 
 Async `sleep`. Also see `sleep`.
 You can `await` it, or `.then` it.
-Usage: `const delay = await sleepAsync(1000)`
 
 **Parameters**
 
 -   `ms` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+const delay = await sleepAsync(1000)
+```
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;any>** 
 
@@ -3410,16 +3518,19 @@ Returns **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ## store
 
 A very simple store implementation (think Redux-like)
-Usage:
-
-    import { store } from 'zeelib'
-    const state = store()
-    state.subscribe((new, prev) => new.foo)
-    state.setState({ foo: 'bar' })
 
 **Parameters**
 
 -   `state` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
+
+**Examples**
+
+```javascript
+import { store } from 'zeelib'
+const state = store()
+state.subscribe((new, prev) => new.foo)
+state.setState({ foo: 'bar' })
+```
 
 ## sum
 
@@ -3522,16 +3633,6 @@ Returns **any**
 ## uniq
 
 Uniq an array
-
-**Parameters**
-
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-## uniqAndFlatten
-
-Uniqs arrays, then recursively flattens
 
 **Parameters**
 

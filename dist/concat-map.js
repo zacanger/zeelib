@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isArray=require('./is-array'),_isArray2=_interopRequireDefault(_isArray);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var concatMap=function(b,c){var a=[];return c.forEach(function(c){(0,_isArray2.default)(c)&&(a=a.concat(b(c)))}),a};exports.default=concatMap;

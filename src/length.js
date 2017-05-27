@@ -1,10 +1,10 @@
 // @flow
 
-import isArray from './isArray'
-import isMap from './isMap'
-import isObject from './isObject'
-import isSet from './isSet'
-import isString from './isString'
+import isArray from './is-array'
+import isMap from './is-map'
+import isObject from './is-object'
+import isSet from './is-set'
+import isString from './is-string'
 
 /**
  * Get length of element

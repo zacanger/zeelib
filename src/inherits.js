@@ -2,7 +2,8 @@
 
 /**
  * Simple `inherits`
- * Example: inherits(A, B)
+ * @example
+ * inherits(A, B)
  */
 
 function inherits (a: any, b: any): any {
