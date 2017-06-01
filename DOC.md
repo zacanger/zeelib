@@ -1467,7 +1467,9 @@ Make a file if it doesn't exist already
 **Parameters**
 
 -   `filePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `contents` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional) (optional, default `''`)
+-   `contents` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `''`)
+
+Returns **void** 
 
 ## notFound
 
