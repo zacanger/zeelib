@@ -166,7 +166,6 @@
 -   [foldl1](#foldl1)
 -   [foldr](#foldr)
 -   [foldr1](#foldr1)
--   [getFunctionArguments](#getfunctionarguments)
 -   [id](#id)
 -   [init](#init)
 -   [invoke](#invoke)
@@ -1940,16 +1939,6 @@ etc.
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **any** 
-
-## getFunctionArguments
-
-Get function arguments
-
-**Parameters**
-
--   `fn` **function (): any** 
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>?** 
 
 ## id
 

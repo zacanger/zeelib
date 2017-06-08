@@ -1,10 +1,5 @@
-// @flow
-
-/**
- * Get function arguments
- */
-
-const getFunctionArguments = function (fn: () => any): ?any[] {
+const getFunctionArguments = function (fn) {
+  console.error('`getFunctionArguments` is deprecated. Please use `...args` instead.')
   if (typeof fn !== 'function') {
     throw new TypeError(`Expected argument to be a function! Received a ${typeof fn}.`)
   }

@@ -1,5 +1,3 @@
-import getFunctionArguments from './get-function-arguments'
-
 /**
  * Takes a function and returns a function that takes
  * any number of arguments
@@ -9,23 +7,26 @@ import getFunctionArguments from './get-function-arguments'
  * @returns {function}
  */
 
-const curry = function (fn) {
-  const originalArguments = getFunctionArguments(fn) || []
+const curry = (fn) => {
+  const originalArguments = fn
+    .toString()
+    .match(/\(.*?\)/)[0]
+    .replace(/[()]/gi, '')
+    .replace(/\s/gi, '')
+    .split(',')
+    .filter((x) => x)
 
-  const makeCurriedFunc = function () {
-    const givenArguments = arguments || []
+  const makeCurriedFunc = (...args) => {
+    const givenArguments = [...args] || []
     if (givenArguments.length < originalArguments.length) {
-      return function (...rest) {
-        return makeCurriedFunc(...givenArguments, ...rest)
-      }
+      return (...rest) =>
+        makeCurriedFunc(...givenArguments, ...rest)
     } else {
       return fn(...givenArguments)
     }
   }
 
-  return function () {
-    return makeCurriedFunc(...arguments)
-  }
+  return (...args) => makeCurriedFunc(...args)
 }
 
 export default curry
