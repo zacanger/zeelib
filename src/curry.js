@@ -17,13 +17,10 @@ const curry = (fn) => {
     .filter((x) => x)
 
   const makeCurriedFunc = (...args) => {
-    const givenArguments = [...args] || []
-    if (givenArguments.length < originalArguments.length) {
-      return (...rest) =>
-        makeCurriedFunc(...givenArguments, ...rest)
-    } else {
-      return fn(...givenArguments)
-    }
+    const givenArguments = [ ...args ] || []
+    return givenArguments.length < originalArguments.length
+      ? (...rest) => makeCurriedFunc(...givenArguments, ...rest)
+      : fn(...givenArguments)
   }
 
   return (...args) => makeCurriedFunc(...args)
