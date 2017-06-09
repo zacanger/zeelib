@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function calc(a){return function(){return[].reduce.call(arguments,a)}}exports.default=calc;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var calc=function(a){return function(){for(var b=arguments.length,c=Array(b),d=0;d<b;d++)c[d]=arguments[d];return[].reduce.call(c,a)}};exports.default=calc;

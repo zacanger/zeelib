@@ -2817,12 +2817,12 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## calc
 
-Takes an operation in string form
+Takes an operation as a function
 and returns a function that takes any number of arguments
 
 **Parameters**
 
--   `op` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `op` **function ([number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)): [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## chunk
 
