@@ -1,14 +1,8 @@
-// @flow
-
 import deepCopy from './deep-copy'
 import shallowCopy from './shallow-copy'
 
-/**
- * Copy an object.
- * A truthy second param will make it a shallow copy.
- */
-
-const copy = (o: Object, shallow: bool): Object => {
+const copy = (o, shallow) => {
+  console.error('`copy` is deprecated. Please use `clone` instead.')
   let copyfn = shallow ? shallowCopy : deepCopy
   return copyfn(o)
 }

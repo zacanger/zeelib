@@ -255,11 +255,9 @@
 -   [clamp](#clamp)
 -   [cloneWithout](#clonewithout)
 -   [compact](#compact)
--   [copy](#copy)
 -   [copyWithout](#copywithout)
 -   [countItemsInArray](#countitemsinarray)
 -   [debounce](#debounce)
--   [deepCopy](#deepcopy)
 -   [diff](#diff)
 -   [dir](#dir)
 -   [doubleUntil](#doubleuntil)
@@ -306,7 +304,6 @@
 -   [safeGet](#safeget)
 -   [scaleToFit](#scaletofit)
 -   [setTitle](#settitle)
--   [shallowCopy](#shallowcopy)
 -   [shuffle](#shuffle)
 -   [sizeOf](#sizeof)
 -   [sleep](#sleep)
@@ -2853,18 +2850,6 @@ Returns an array with all falsey values removed
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
-## copy
-
-Copy an object.
-A truthy second param will make it a shallow copy.
-
-**Parameters**
-
--   `o` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `shallow` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
 ## copyWithout
 
 Copy an object, leaving out specified keys
@@ -2898,16 +2883,6 @@ Debounce. Takes a function, a wait (ms), and optionally a truthy immediate param
 -   `f` **function (): any** 
 -   `wait` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `immediate` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
-
-Returns **any** 
-
-## deepCopy
-
-Deep copy object or array
-
-**Parameters**
-
--   `o` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 Returns **any** 
 
@@ -3416,16 +3391,6 @@ Set `window.title` or `process.title`
 -   `newTitle` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 Returns **void** 
-
-## shallowCopy
-
-Shallow, top-level copy an object
-
-**Parameters**
-
--   `o` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 ## shuffle
 

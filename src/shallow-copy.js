@@ -1,12 +1,7 @@
 import isArray from './is-array'
 
-/**
- * Shallow, top-level copy an object
- * @param {Object} o
- * @returns {Object}
- */
-
 const shallowCopy = (o) => {
+  console.error('`shallowCopy` is deprecated. Please use `clone` instead.')
   let newObj
   if (!o || typeof o !== 'object') {
     return o

@@ -1,12 +1,7 @@
-// @flow
-
 import isArray from './is-array'
 
-/**
- * Deep copy object or array
- */
-
-const deepCopy = (o: Object): any => {
+const deepCopy = (o) => {
+  console.error('`deepCopy` is deprecated. Please use `clone` instead.')
   let newObj
   if (!o || typeof o !== 'object') {
     return o
