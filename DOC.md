@@ -1594,12 +1594,11 @@ Returns true if all items pass predicate fn
 
 ## and
 
-Returns false if any in input is false
+Returns false if any in input array is false
 
 **Parameters**
 
--   `a`  
--   `array` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** of any
+-   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -2072,11 +2071,11 @@ Returns **any**
 
 ## or
 
-Return true if any val in an obj is true
+Return true if any val in input array is true
 
 **Parameters**
 
--   `a` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 

@@ -1,16 +1,17 @@
 // @flow
 
 /**
- * Return true if any val in an obj is true
+ * Return true if any val in input array is true
  */
 
-const or = (a: Object): bool => {
-  for (let i in a) {
-    if (a[i] === true) {
-      return true
+const or = (a: any[]): bool => {
+  let r = false
+  a.forEach((el) => {
+    if (el === true) {
+      r = true
     }
-  }
-  return false
+  })
+  return r
 }
 
 export default or

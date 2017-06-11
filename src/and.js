@@ -1,16 +1,17 @@
+// @flow
+
 /**
- * Returns false if any in input is false
- * @param {array} array of any
- * @returns {boolean}
+ * Returns false if any in input array is false
  */
 
-const and = (a) => {
-  for (let i in a) {
-    if (a[i] === false) {
-      return false
+const and = (a: any[]): bool => {
+  let r = true
+  a.forEach((el) => {
+    if (el === false) {
+      r = false
     }
-  }
-  return true
+  })
+  return r
 }
 
 export default and

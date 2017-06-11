@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var and=function(b){for(var a in b)if(!1===b[a])return!1;return!0};exports.default=and;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var and=function(b){var a=!0;return b.forEach(function(b){!1===b&&(a=!1)}),a};exports.default=and;
