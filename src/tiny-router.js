@@ -1,13 +1,7 @@
 import { readFileSync } from 'fs'
 
-/**
- * Very simple router for Node
- * @param {string} pathname
- * @param {object} response Node's response obj
- * @return {undefined}
- */
-
 const tinyRouter = (pathname, response) => {
+  console.error('`tinyRouter` is deprecated.')
   let html, filePath
   if (pathname !== '/favicon.ico') {
     try {

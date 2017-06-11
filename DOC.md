@@ -129,7 +129,6 @@
 -   [resolveFiles](#resolvefiles)
 -   [termPrompt](#termprompt)
 -   [readFileSync](#readfilesync)
--   [tinyRouter](#tinyrouter)
 -   [watchFile](#watchfile)
 -   [fn](#fn)
 -   [writeJson](#writejson)
@@ -1549,17 +1548,6 @@ Adapted from create-react-app's prompt
 Just require this and invoke to time requires into that file
 based on gh:stefanpenner/node-require-timings
 Takes no parameters
-
-## tinyRouter
-
-Very simple router for Node
-
-**Parameters**
-
--   `pathname` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `response` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Node's response obj
-
-Returns **[undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)** 
 
 ## watchFile
 
