@@ -277,6 +277,8 @@
 -   [getTransparentGif](#gettransparentgif)
 -   [greater](#greater)
 -   [greatestCommonDivisor](#greatestcommondivisor)
+-   [gt](#gt)
+-   [gte](#gte)
 -   [inherits](#inherits)
 -   [intersection](#intersection)
 -   [invoker](#invoker)
@@ -286,6 +288,8 @@
 -   [levenshteinDistance](#levenshteindistance)
 -   [lexSort](#lexsort)
 -   [logWithTimestamp](#logwithtimestamp)
+-   [lt](#lt)
+-   [lte](#lte)
 -   [makeThunk](#makethunk)
 -   [maximum](#maximum)
 -   [maybeArgs](#maybeargs)
@@ -3069,6 +3073,28 @@ Get the greatest common diviser of all arguments
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+## gt
+
+Returns true if first param is greater than second param
+
+**Parameters**
+
+-   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
+## gte
+
+Returns true if first param is greater than or equal to second param
+
+**Parameters**
+
+-   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
 ## inherits
 
 Simple `inherits`
@@ -3181,6 +3207,28 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 `console.log` with a timestamp
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+
+## lt
+
+Returns true if first param is less than second param
+
+**Parameters**
+
+-   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
+## lte
+
+Returns true if first param is less than or equal to second param
+
+**Parameters**
+
+-   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## makeThunk
 

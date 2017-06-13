@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var chunk=function(a,b){return a.length&&b?[a.slice(0,b)].concat(chunk(a.slice(b),b)):[]};exports.default=chunk;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var chunk=function(a,b){return a.length&&b?[a.slice(0,b),chunk(a.slice(b),b)]:[]};exports.default=chunk;

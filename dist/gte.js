@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var gte=function(c,a){return c>=a};exports.default=gte;
