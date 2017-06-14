@@ -1,4 +1,7 @@
-* `0.9.0` &mdash; **2017-06-27** &mdash; *breaking*
+* `0.9.12` &mdash; **2017-06-13** &mdash; *important*
+  * `curry` was broken in a weird way since `0.9.6` **2017-06-07**. I'm sorry.
+    It's fixed now.
+* `0.9.0` &mdash; **2017-05-27** &mdash; *breaking*
   * All filenames are now `lisp-cased`, so if you import them directly you
     may need to change your imports.
   * `objectToString` now `call`s, instead of needing to do that everywhere it's
