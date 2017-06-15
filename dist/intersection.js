@@ -1,1 +1,21 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function _toConsumableArray(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}return Array.from(a)}var intersection=function(a,b){return[_toConsumableArray(new Set(a.filter(function(a){return b.includes(a)})))]};exports.default=intersection;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// @flow
+
+/**
+ * Get the intersection of two arrays
+ */
+
+var intersection = function intersection(xs /*: any[]*/, ys /*: any[]*/) /*: any[]*/ {
+  return [].concat(_toConsumableArray(new Set(xs.filter(function (el) {
+    return ys.includes(el);
+  }))));
+};
+
+exports.default = intersection;

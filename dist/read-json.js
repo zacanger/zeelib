@@ -1,1 +1,30 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),readJson=function(a,b){(0,_fs.readFile)(a,'utf8',function(a,c){if(a)return void b(a);var d;try{d=JSON.parse(c)}catch(a){return void b(a)}b(null,d)})};exports.default=readJson;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+/**
+ * Read json file, parse it, call cb with obj or err
+ */
+
+var readJson = function readJson(file /*: string*/, cb /*: any*/) /*: ?any*/ {
+  (0, _fs.readFile)(file, 'utf8', function (err, json) {
+    if (err) {
+      cb(err);
+      return;
+    }
+    var data = void 0;
+    try {
+      data = JSON.parse(json);
+    } catch (e) {
+      cb(e);
+      return;
+    }
+    cb(null, data);
+  });
+}; // @flow
+
+exports.default = readJson;

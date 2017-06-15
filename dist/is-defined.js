@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isDefined=function(a){return a!==void 0};exports.default=isDefined;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value is defined
+ */
+
+var isDefined = function isDefined(v /*: any*/) /*: bool*/ {
+  return v !== undefined;
+};
+
+exports.default = isDefined;

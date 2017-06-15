@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _child_process=require('child_process'),getDiskUsage=function(){var a=(0,_child_process.execSync)('df -k /').toString().trim().split('\n'),b=a[a.length-1].replace(/[\s\n\r]+/g,' '),c=b.split(' '),d=1024*+c[1],e=1024*+c[3];return e/d/0.01};exports.default=getDiskUsage;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _child_process = require('child_process');
+
+/**
+ * Get free disk space
+ */
+
+var getDiskUsage = function getDiskUsage() /*: number*/ {
+  var lines = (0, _child_process.execSync)('df -k /').toString().trim().split('\n');
+  var strDiskInfo = lines[lines.length - 1].replace(/[\s\n\r]+/g, ' ');
+  var diskInfo = strDiskInfo.split(' ');
+  var total = +diskInfo[1] * 1024;
+  var free = +diskInfo[3] * 1024;
+  var freeDisk = free / total / Math.pow(10, -2);
+  return freeDisk;
+}; // @flow
+
+exports.default = getDiskUsage;

@@ -1,1 +1,20 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var safeDecodeURIComponent=function(a){try{return decodeURIComponent(a)}catch(b){return a}};exports.default=safeDecodeURIComponent;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * `decodeURIComponent`, but safe
+ */
+
+var safeDecodeURIComponent = function safeDecodeURIComponent(str /*: string*/) /*: string*/ {
+  try {
+    return decodeURIComponent(str);
+  } catch (_) {
+    return str;
+  }
+};
+
+exports.default = safeDecodeURIComponent;

@@ -1,1 +1,30 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var formatMs=function(a){var b=Math.floor,c=3.6e6,d=6e4,e=b(a/c),f=b((a-e*c)/d),g=Math.round((a-e*c-f*d)/1e3);e&&10>f&&(f='0'+f),10>g&&(g='0'+g);var h=f+':'+g;return e&&(h=e+':'+h),h};exports.default=formatMs;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Format ms into human-readable time
+ */
+
+var formatMs = function formatMs(ms /*: number*/) /*: string*/ {
+  var hr = 3600000;
+  var min = 60000;
+  var sec = 1000;
+
+  var hours = Math.floor(ms / hr);
+  var minutes = Math.floor((ms - hours * hr) / min);
+  var seconds = Math.round((ms - hours * hr - minutes * min) / sec);
+
+  if (hours && minutes < 10) minutes = '0' + minutes;
+  if (seconds < 10) seconds = '0' + seconds;
+
+  var str = minutes + ':' + seconds;
+  if (hours) str = hours + ':' + str;
+
+  return str;
+};
+
+exports.default = formatMs;

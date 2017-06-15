@@ -1,1 +1,18 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _filter=require('./filter'),_filter2=_interopRequireDefault(_filter);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var where=function(a,b){return console.error('`where` is deprecated. Please use `findWhere instead.`'),(0,_filter2.default)(a,b)[0]||null};exports.default=where;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _filter = require('./filter');
+
+var _filter2 = _interopRequireDefault(_filter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var where = function where(arr, f) {
+  console.error('`where` is deprecated. Please use `findWhere instead.`');
+  return (0, _filter2.default)(arr, f)[0] || null;
+};
+
+exports.default = where;

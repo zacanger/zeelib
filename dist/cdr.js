@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var cdr=function(a){return a.slice(1)};exports.default=cdr;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * `cdr`
+ */
+
+var cdr = function cdr(arr /*: any[]*/) /*: any*/ {
+  return arr.slice(1);
+};
+
+exports.default = cdr;

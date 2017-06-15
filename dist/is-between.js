@@ -1,1 +1,37 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _lesser=require('./lesser'),_lesser2=_interopRequireDefault(_lesser),_greater=require('./greater'),_greater2=_interopRequireDefault(_greater),_gt=require('./gt'),_gt2=_interopRequireDefault(_gt),_lt=require('./lt'),_lt2=_interopRequireDefault(_lt);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isBetween=function(c,a,b){var d=(0,_lesser2.default)(c,a),e=(0,_greater2.default)(c,a);return(0,_lt2.default)(d,b)&&(0,_gt2.default)(e,b)};exports.default=isBetween;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _lesser = require('./lesser');
+
+var _lesser2 = _interopRequireDefault(_lesser);
+
+var _greater = require('./greater');
+
+var _greater2 = _interopRequireDefault(_greater);
+
+var _gt = require('./gt');
+
+var _gt2 = _interopRequireDefault(_gt);
+
+var _lt = require('./lt');
+
+var _lt2 = _interopRequireDefault(_lt);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if the last parameter is before the first and second parameters
+ */
+
+// @flow
+
+var isBetween = function isBetween(a /*: number*/, b /*: number*/, mid /*: number*/) /*: bool*/ {
+  var first = (0, _lesser2.default)(a, b);
+  var last = (0, _greater2.default)(a, b);
+  return (0, _lt2.default)(first, mid) && (0, _gt2.default)(last, mid);
+};
+
+exports.default = isBetween;

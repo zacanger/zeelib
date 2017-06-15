@@ -1,1 +1,17 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _path=require('path'),getBasename=function(a){return(0,_path.parse)(a).base};exports.default=getBasename;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _path = require('path');
+
+/*
+ * `basename` for Node
+ */
+
+var getBasename = function getBasename(str /*: string*/) /*: string*/ {
+  return (0, _path.parse)(str).base;
+}; // @flow
+
+exports.default = getBasename;

@@ -1,1 +1,25 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _curry=require('./curry'),_curry2=_interopRequireDefault(_curry);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var reduce=(0,_curry2.default)(function(a,b,c){for(var d=b,e=0;e<c.length;e++)d=a(d,c[e]);return reducedValue});exports.default=reduce;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('./curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Reduce
+ */
+
+var reduce = (0, _curry2.default)(function (fn /*: any*/, initialValue /*: any*/, data /*: any[]*/) /*: any*/ {
+  var reducedValue = initialValue;
+  for (var i = 0; i < data.length; i++) {
+    reducedValue = fn(reducedValue, data[i]);
+  }
+  return reducedValue;
+}); // @flow
+
+exports.default = reduce;

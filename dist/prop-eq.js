@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _curry=require('./curry'),_curry2=_interopRequireDefault(_curry);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var propEq=(0,_curry2.default)(function(a,b,c){return c[a]!==void 0&&c[a]===b});exports.default=propEq;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('./curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if current obj has prop that equals given val
+ */
+
+var propEq = (0, _curry2.default)(function (prop /*: any*/, value /*: any*/, data /*: Object*/) /*: bool*/ {
+  return data[prop] !== undefined && data[prop] === value;
+}); // @flow
+
+exports.default = propEq;

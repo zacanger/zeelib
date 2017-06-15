@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isNumber=require('./is-number'),_isNumber2=_interopRequireDefault(_isNumber);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isArrayLike=function(a){return a&&(0,_isNumber2.default)(a.length)};exports.default=isArrayLike;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isNumber = require('./is-number');
+
+var _isNumber2 = _interopRequireDefault(_isNumber);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if the passed value is array-like
+ */
+
+var isArrayLike = function isArrayLike(v /*: any*/) /*: bool*/ {
+  return v && (0, _isNumber2.default)(v.length);
+}; // @flow
+
+exports.default = isArrayLike;

@@ -1,1 +1,60 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function throttle(a,b){var c=2<arguments.length&&arguments[2]!==void 0&&arguments[2],d=3<arguments.length&&arguments[3]!==void 0&&arguments[3],e=void 0,f=void 0,g=void 0,h=null,i=0,j=function(){i=!1===c?0:Date.now(),h=null,g=a.apply(e,f),h||(e=f=null)};return function(){var k=Date.now();i||!1!==c||(i=k);var l=b-(k-i);return e=this,f=arguments,0>=l||l>b?(h&&(clearTimeout(h),h=null),i=k,g=a.apply(e,f),!h&&(e=f=null)):!h&&!1!==d&&(h=setTimeout(j,l)),g}}exports.default=throttle;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Simple `throttle` implementation
+ * @param {function} f to throttle
+ * @param {number} wait ms
+ * @param {boolean} lead optional, defaults to false
+ * @param {boolean} trail, optional, defaults to false
+ * @returns {any} result
+ */
+
+function throttle(f, wait) {
+  var lead = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var trail = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+  var ctx = void 0;
+  var args = void 0;
+  var res = void 0;
+  var timeout = null;
+  var prev = 0;
+
+  var later = function later() {
+    prev = lead === false ? 0 : Date.now();
+    timeout = null;
+    res = f.apply(ctx, args);
+    if (!timeout) {
+      ctx = args = null;
+    }
+  };
+
+  return function () {
+    var now = Date.now();
+    if (!prev && lead === false) {
+      prev = now;
+    }
+    var remain = wait - (now - prev);
+    ctx = this;
+    args = arguments;
+    if (remain <= 0 || remain > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      prev = now;
+      res = f.apply(ctx, args);
+      if (!timeout) {
+        ctx = args = null;
+      }
+    } else if (!timeout && trail !== false) {
+      timeout = setTimeout(later, remain);
+    }
+
+    return res;
+  };
+}
+
+exports.default = throttle;

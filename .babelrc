@@ -1,9 +1,8 @@
 {
-  "presets": [ "stage-3", "env", "babili" ],
+  "presets": [ "stage-3", "env" ],
   "plugins": [
-    "transform-flow-strip-types",
+    "transform-flow-comments",
     "transform-export-extensions",
     "transform-es2015-modules-commonjs"
-    ],
-  "comments": false
+  ]
 }

@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _filter=require('./filter'),_filter2=_interopRequireDefault(_filter);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var findWhere=function(a,b){return(0,_filter2.default)(b,a)[0]||null};exports.default=findWhere;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _filter = require('./filter');
+
+var _filter2 = _interopRequireDefault(_filter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Takes a predicate and an array
+ * Returns either first element that passes predicate,
+ * or null
+ */
+
+var findWhere = function findWhere(f /*: () => bool*/, arr /*: any[]*/) /*: any*/ {
+  return (0, _filter2.default)(arr, f)[0] || null;
+}; // @flow
+
+exports.default = findWhere;

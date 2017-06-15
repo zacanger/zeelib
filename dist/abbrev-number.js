@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var abbrevNumber=function(a){var b=Math.round;return 1e3>a?''+a:1e4>a?b(a/100)/10+'K':1e6>a?b(a/1e3)+'K':1e7>a?b(a/1e5)/10+'M':1e9>a?b(a/1e6)+'M':1e10>a?b(a/1e8)+'B':b(a/1e9)+'B'};exports.default=abbrevNumber;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Shortens a number and adds appropriate suffix
+ * (K, M, B)
+ */
+
+var abbrevNumber = function abbrevNumber(n /*: number*/) /*: string*/ {
+  if (n < 1000) return '' + n;
+  if (n < 10000) return Math.round(n / 100) / 10 + 'K';
+  if (n < 1000000) return Math.round(n / 1000) + 'K';
+  if (n < 10000000) return Math.round(n / 100000) / 10 + 'M';
+  if (n < 1000000000) return Math.round(n / 1000000) + 'M';
+  if (n < 10000000000) return Math.round(n / 100000000) + 'B';
+  return Math.round(n / 1000000000) + 'B';
+};
+
+exports.default = abbrevNumber;

@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _getIsBrowser=require('./get-is-browser'),_getIsBrowser2=_interopRequireDefault(_getIsBrowser);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var atob=function(a){return(0,_getIsBrowser2.default)()?window.atob(a):Buffer.from?Buffer.from(a,'base64').toString('utf8'):new Buffer(a,'base64').toString('utf8')};exports.default=atob;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getIsBrowser = require('./get-is-browser');
+
+var _getIsBrowser2 = _interopRequireDefault(_getIsBrowser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * `window.atob` for node and browser
+ */
+
+var atob = function atob(str /*: string*/) /*: string*/ {
+  return (0, _getIsBrowser2.default)() ? window.atob(str) : Buffer.from ? Buffer.from(str, 'base64').toString('utf8') : new Buffer(str, 'base64').toString('utf8');
+}; /* eslint-disable node/no-deprecated-api */
+
+// @flow
+
+exports.default = atob;

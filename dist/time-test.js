@@ -1,1 +1,19 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var timeTest=function(a,b){console.time('time');var c=b(a);return console.timeEnd('time'),c};exports.default=timeTest;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Run a function on n (any), and time it
+ */
+
+var timeTest = function timeTest(n /*: any*/, cb /*: any*/) /*: any*/ {
+  console.time('time');
+  var r = cb(n);
+  console.timeEnd('time');
+  return r;
+};
+
+exports.default = timeTest;

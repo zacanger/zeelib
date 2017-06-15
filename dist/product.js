@@ -1,1 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var product=function(a){return a.reduce(function(a,b){return a*b},1)};exports.default=product;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Get the product of a list of numbers
+ */
+
+var product = function product(nums /*: number[]*/) /*: number*/ {
+  return nums.reduce(function (acc, curr) {
+    return acc * curr;
+  }, 1);
+};
+
+exports.default = product;

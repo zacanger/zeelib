@@ -1,1 +1,22 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldr1=function(b,c){for(var a=c[c.length-1],d=c.length-2;0<=d;d--)a=b(a,c[d]);return s};exports.default=foldr1;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Takes last two items of list, applies fn,
+ * then third-last and previous result,
+ * etc.
+ */
+
+var foldr1 = function foldr1(f /*: () => any*/, a /*: any[]*/) /*: any*/ {
+  var s = a[a.length - 1];
+  for (var i = a.length - 2; i >= 0; i--) {
+    s = f(s, a[i]);
+  }
+  return s;
+};
+
+exports.default = foldr1;

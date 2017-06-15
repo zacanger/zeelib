@@ -1,1 +1,22 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var shuffle=function(a){for(var b=a.length-1;0<b;b--){var c=Math.floor(Math.random()*(b+1)),d=a[b];a[b]=a[c],a[c]=d}return a};exports.default=shuffle;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Randomly shuffle items in array
+ */
+
+var shuffle = function shuffle(arr /*: any[]*/) /*: any[]*/ {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  return arr;
+};
+
+exports.default = shuffle;

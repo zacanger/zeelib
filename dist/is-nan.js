@@ -1,1 +1,14 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNan=Number.isNaN;exports.default=isNan;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value isNaN
+ */
+
+var isNan = Number.isNaN;
+
+exports.default = isNan;

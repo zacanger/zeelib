@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _objectToString=require('./object-to-string'),_objectToString2=_interopRequireDefault(_objectToString);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isMap=function(a){return'[object Map]'===(0,_objectToString2.default)(a)};exports.default=isMap;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _objectToString = require('./object-to-string');
+
+var _objectToString2 = _interopRequireDefault(_objectToString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if value is a map
+ */
+
+var isMap = function isMap(v /*: any*/) /*: bool*/ {
+  return (0, _objectToString2.default)(v) === '[object Map]';
+}; // @flow
+
+exports.default = isMap;

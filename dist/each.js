@@ -1,1 +1,51 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isDefined=require('./is-defined'),_isDefined2=_interopRequireDefault(_isDefined),_isArrayLike=require('./is-array-like'),_isArrayLike2=_interopRequireDefault(_isArrayLike);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var iterateArray=function(a,b){for(var c,d=0,e=a.length;d<e;d++)if(c=b(a[d],d),(0,_isDefined2.default)(c))return c},iterateObject=function(a,b){for(var c in a){var d=b(a[c],c);if((0,_isDefined2.default)(d))return d}},each=function(a,b){return(0,_isArrayLike2.default)(a)?iterateArray(a,b):iterateObject(a,b)};exports.default=each;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isDefined = require('./is-defined');
+
+var _isDefined2 = _interopRequireDefault(_isDefined);
+
+var _isArrayLike = require('./is-array-like');
+
+var _isArrayLike2 = _interopRequireDefault(_isArrayLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var iterateArray = function iterateArray(arr, fn) {
+  for (var index = 0, len = arr.length; index < len; index++) {
+    var exit = fn(arr[index], index);
+    if ((0, _isDefined2.default)(exit)) {
+      return exit;
+    }
+  }
+};
+
+var iterateObject = function iterateObject(obj, fn) {
+  for (var prop in obj) {
+    var exit = fn(obj[prop], prop);
+    if ((0, _isDefined2.default)(exit)) {
+      return exit;
+    }
+  }
+};
+
+/**
+ * Takes a an array or object
+ * and a function, and runs the function
+ * on each element
+ * @param {array|object} list
+ * @param {function}
+ * @returns {any}
+ */
+
+var each = function each(list, fn) {
+  if ((0, _isArrayLike2.default)(list)) {
+    return iterateArray(list, fn);
+  }
+  return iterateObject(list, fn);
+};
+
+exports.default = each;

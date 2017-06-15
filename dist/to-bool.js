@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var toBool=function(a){return!!a};exports.default=toBool;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Get truthiness
+ */
+
+var toBool = function toBool(val /*: any*/) /*: bool*/ {
+  return !!val;
+};
+
+exports.default = toBool;

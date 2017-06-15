@@ -1,1 +1,28 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _flatten=require('./flatten'),_flatten2=_interopRequireDefault(_flatten),_uniq=require('./uniq'),_uniq2=_interopRequireDefault(_uniq);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var flattenAndUniq=function(a){return(0,_uniq2.default)((0,_flatten2.default)(a))};exports.default=flattenAndUniq;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _flatten = require('./flatten');
+
+var _flatten2 = _interopRequireDefault(_flatten);
+
+var _uniq = require('./uniq');
+
+var _uniq2 = _interopRequireDefault(_uniq);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Recursively flatten arrays
+ * then uniq what's left
+ */
+
+// @flow
+
+var flattenAndUniq = function flattenAndUniq(arr /*: any*/) /*: any[]*/ {
+  return (0, _uniq2.default)((0, _flatten2.default)(arr));
+};
+
+exports.default = flattenAndUniq;

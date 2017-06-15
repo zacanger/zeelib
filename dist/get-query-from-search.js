@@ -1,1 +1,31 @@
-'use strict';var _slicedToArray=function(){function a(a,b){var c=[],d=!0,e=!1,f=void 0;try{for(var g,h=a[Symbol.iterator]();!(d=(g=h.next()).done)&&(c.push(g.value),!(b&&c.length===b));d=!0);}catch(a){e=!0,f=a}finally{try{!d&&h['return']&&h['return']()}finally{if(e)throw f}}return c}return function(b,c){if(Array.isArray(b))return b;if(Symbol.iterator in Object(b))return a(b,c);throw new TypeError('Invalid attempt to destructure non-iterable instance')}}(),getQueryFromSearch=function(a){var b={};return a.substring(1).split('&').forEach(function(a){var c=a.split('='),d=_slicedToArray(c,2),e=d[0],f=d[1];b[e]=decodeURIComponent(f)}),b};Object.defineProperty(exports,'__esModule',{value:!0});exports.default=getQueryFromSearch;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+// @flow
+
+/**
+ * Takes search string and returns an object.
+ * @example
+ * getQueryFromSearch('?foo-bar') // { foo: 'bar' }
+ */
+
+var getQueryFromSearch = function getQueryFromSearch(search /*: string*/) /*: Object*/ {
+  var ps = {};
+  search.substring(1).split('&').forEach(function (p) {
+    var _p$split = p.split('='),
+        _p$split2 = _slicedToArray(_p$split, 2),
+        k = _p$split2[0],
+        v = _p$split2[1];
+
+    ps[k] = decodeURIComponent(v);
+  });
+
+  return ps;
+};
+
+exports.default = getQueryFromSearch;

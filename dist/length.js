@@ -1,1 +1,41 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isArray=require('./is-array'),_isArray2=_interopRequireDefault(_isArray),_isMap=require('./is-map'),_isMap2=_interopRequireDefault(_isMap),_isObject=require('./is-object'),_isObject2=_interopRequireDefault(_isObject),_isSet=require('./is-set'),_isSet2=_interopRequireDefault(_isSet),_isString=require('./is-string'),_isString2=_interopRequireDefault(_isString);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var length=function(a){return(0,_isArray2.default)(a)||(0,_isString2.default)(a)?a.length:(0,_isMap2.default)(a)||(0,_isSet2.default)(a)?a.size:(0,_isObject2.default)(a)?a.keys.length:0};exports.default=length;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isArray = require('./is-array');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isMap = require('./is-map');
+
+var _isMap2 = _interopRequireDefault(_isMap);
+
+var _isObject = require('./is-object');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+var _isSet = require('./is-set');
+
+var _isSet2 = _interopRequireDefault(_isSet);
+
+var _isString = require('./is-string');
+
+var _isString2 = _interopRequireDefault(_isString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Get length of element
+ * Works for array, object, string, set, and map
+ */
+
+var length = function length(val /*: any*/) /*: number*/ {
+  if ((0, _isArray2.default)(val) || (0, _isString2.default)(val)) return val.length;
+  if ((0, _isMap2.default)(val) || (0, _isSet2.default)(val)) return val.size;
+  if ((0, _isObject2.default)(val)) return val.keys.length;
+  return 0;
+}; // @flow
+
+exports.default = length;

@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var abbrev=function(a){return a.match(/\b([A-Z])/g)?a.match(/\b([A-Z])/g).join(''):a};exports.default=abbrev;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Trims a string to just abbreved caps
+ * @param {string} str
+ * @returns {string}
+ */
+
+var abbrev = function abbrev(str) {
+  return str.match(/\b([A-Z])/g) ? str.match(/\b([A-Z])/g).join('') : str;
+};
+
+exports.default = abbrev;

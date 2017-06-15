@@ -1,1 +1,20 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var eventOnce=function(a,b,c){var d=function(a){a.target.removeEventListener(b,d),c()};a.addEventListener(b,d)};exports.default=eventOnce;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Runs an event handler once
+ */
+
+var eventOnce = function eventOnce(el /*: HTMLElement*/, t /*: string*/, handler /*: () => any*/) /*: void*/ {
+  var f = function f(e /*: Event*/) /*: void*/ {
+    e.target.removeEventListener(t, f);
+    handler();
+  };
+  el.addEventListener(t, f);
+};
+
+exports.default = eventOnce;

@@ -1,1 +1,18 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var leftPad=function(a,b){var c=2<arguments.length&&arguments[2]!==void 0?arguments[2]:' ';return Array(b>a.length?1+b-a.length:0).join(c)+a};exports.default=leftPad;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * It's just left-pad
+ * Yes, really
+ */
+
+var leftPad = function leftPad(str /*: string*/, len /*: number*/) /*: string*/ {
+  var pd /*: string*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
+  return Array(len > str.length ? 1 + len - str.length : 0).join(pd) + str;
+};
+
+exports.default = leftPad;

@@ -1,1 +1,26 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),checkForFile=function(a){try{return(0,_fs.statSync)((0,_path.resolve)(a)),!0}catch(a){return!1}};exports.default=checkForFile;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+var _path = require('path');
+
+// @flow
+
+/**
+ * Returns bool based on if passed path exists
+ */
+
+var checkForFile = function checkForFile(filePath /*: string*/) /*: bool*/ {
+  try {
+    (0, _fs.statSync)((0, _path.resolve)(filePath));
+    return true;
+  } catch (_) {
+    return false;
+  }
+};
+
+exports.default = checkForFile;

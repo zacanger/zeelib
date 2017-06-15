@@ -1,1 +1,25 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _os=require('os'),withInfo=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:'';return a+':'+(0,_os.hostname)()+':'+process.pid},logWithInfo=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:'';return console.log(withInfo(a))};exports.default=logWithInfo;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _os = require('os');
+
+var withInfo = function withInfo() /*: string*/ {
+  var str /*: string*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  return str + ':' + (0, _os.hostname)() + ':' + process.pid;
+};
+
+/**
+ * `console.log` with hostname and PID info
+ */
+
+// @flow
+
+var logWithInfo = function logWithInfo() /*: void*/ {
+  var str /*: string*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  return console.log(withInfo(str));
+};
+
+exports.default = logWithInfo;

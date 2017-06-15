@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var removeNumeric=function(a){return a.replace(/[0-9]/g,'')};exports.default=removeNumeric;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Remove numeric chars from string
+ */
+
+var removeNumeric = function removeNumeric(str /*: string*/) /*: string*/ {
+  return str.replace(/[0-9]/g, '');
+};
+
+exports.default = removeNumeric;

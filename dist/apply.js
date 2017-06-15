@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var apply=function(a,b){return a(b)};exports.default=apply;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Applys f to arg
+ */
+
+var apply = function apply(f /*: any*/, x /*: any*/) /*: any*/ {
+  return f(x);
+};
+
+exports.default = apply;

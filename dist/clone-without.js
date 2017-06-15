@@ -1,1 +1,29 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _copyWithout=require('./copy-without'),_copyWithout2=_interopRequireDefault(_copyWithout);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}function _toConsumableArray(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}return Array.from(a)}var cloneWithout=function(a){for(var b=arguments.length,c=Array(1<b?b-1:0),d=1;d<b;d++)c[d-1]=arguments[d];return _copyWithout2.default.apply(void 0,[{},a,_toConsumableArray(c)])};exports.default=cloneWithout;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _copyWithout = require('./copy-without');
+
+var _copyWithout2 = _interopRequireDefault(_copyWithout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @flow
+
+/**
+ * Clones an object, leaving out specified keys
+ * cred : gh:texastoland
+ * `{ key, ...clone } = source`
+ */
+
+var cloneWithout = function cloneWithout(source /*: Object*/) /*: any*/ {
+  for (var _len = arguments.length, keys = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    keys[_key - 1] = arguments[_key];
+  }
+
+  return _copyWithout2.default.apply(undefined, [{}, source].concat(_toConsumableArray(keys)));
+};
+
+exports.default = cloneWithout;

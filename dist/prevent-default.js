@@ -1,1 +1,24 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var preventDefault=function(a){a&&('function'==typeof a.preventDefault&&a.preventDefault(),'function'==typeof a.stopPropagation&&a.stopPropagation())};exports.default=preventDefault;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Calls preventDefault and stopPropagation
+ * if they exist
+ */
+
+var preventDefault = function preventDefault(e /*: EventTarget*/) /*: void*/ {
+  if (e) {
+    if (typeof e.preventDefault === 'function') {
+      e.preventDefault();
+    }
+    if (typeof e.stopPropagation === 'function') {
+      e.stopPropagation();
+    }
+  }
+};
+
+exports.default = preventDefault;

@@ -1,1 +1,19 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var hasDuplicate=function(a){return a.some(function(a,b,c){return c.indexOf(a)!==b})};exports.default=hasDuplicate;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if an array has any
+ * duplicate elements
+ */
+
+var hasDuplicate = function hasDuplicate(arr /*: any[]*/) /*: bool*/ {
+  return arr.some(function (v, i, s) {
+    return s.indexOf(v) !== i;
+  });
+};
+
+exports.default = hasDuplicate;

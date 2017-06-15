@@ -1,1 +1,17 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getComplimentaryColors=function(a){return'#'+(1e5+(16777216+~('0x'+a.slice(1))).toString(16)).slice(-6)};exports.default=getComplimentaryColors;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Get complimentary colors for a given color
+ * @param {string} s a #rrggbb hex string
+ * @returns {string}
+ */
+
+var getComplimentaryColors = function getComplimentaryColors(s) {
+  return '#' + (1e5 + (Math.pow(8, 8) + ~('0x' + s.slice(1))).toString(16)).slice(-6
+  // c=>c.replace(/\w/g,x=>(15-`0x${x}`).toString(16))
+
+  );
+};exports.default = getComplimentaryColors;

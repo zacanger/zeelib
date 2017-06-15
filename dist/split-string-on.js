@@ -1,1 +1,22 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var splitStringOn=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:'';a&&'string'==typeof a||console.warn('Please pass a string as first param.');var c=a.indexOf(b);return-1===c?null:[a.substr(0,c),a.substr(c+b.length)]};exports.default=splitStringOn;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Split a string on given char
+ */
+
+var splitStringOn = function splitStringOn(str /*: string*/) /*: string[] | null*/ {
+  var spl /*: string*/ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+  if (!str || typeof str !== 'string') {
+    console.warn('Please pass a string as first param.');
+  }
+  var idx = str.indexOf(spl);
+  return idx === -1 ? null : [str.substr(0, idx), str.substr(idx + spl.length)];
+};
+
+exports.default = splitStringOn;

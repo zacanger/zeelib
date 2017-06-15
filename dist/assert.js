@@ -1,1 +1,22 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var assert=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:'Assertion Failed:';if(!a)throw new Error(b+a.toString())};exports.default=assert;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Takes a value and an optional failure message
+ * and asserts truthiness
+ */
+
+/*:: type res = void | Error*/
+var assert = function assert(exp /*: any*/) /*: res*/ {
+  var message /*: ?string*/ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'Assertion Failed:';
+
+  if (!exp) {
+    throw new Error(message + exp.toString());
+  }
+};
+
+exports.default = assert;

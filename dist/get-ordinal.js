@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getOrdinal=function(a){var b=['th','st','nd','rd'],c=a%100;return a+(b[(c-20)%10]||b[c]||b[0])};exports.default=getOrdinal;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Adds ordinal onto integer
+ * Works up to 999
+ * @example
+ * getOrdinal(1) // '1st'
+ */
+
+var getOrdinal = function getOrdinal(n /*: number*/) /*: string*/ {
+  var s = ['th', 'st', 'nd', 'rd'];
+  var v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+};
+
+exports.default = getOrdinal;

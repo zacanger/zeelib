@@ -1,1 +1,23 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var drop=function(a,b){var c=b.length;if(1>a)return b;if(a>c)return[];for(var d=[],e=a;e<c;e++)d.push(b[e]);return res};exports.default=drop;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Like Haskell's `drop`
+ */
+
+var drop = function drop(n /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+  var alen = arr.length;
+  if (n < 1) return arr;
+  if (n > alen) return [];
+  var res = [];
+  for (var i = n; i < alen; i++) {
+    res.push(arr[i]);
+  }
+  return res;
+};
+
+exports.default = drop;

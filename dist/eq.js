@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var eq=function(c,a){return!(c!==a)||(c===void 0||a===void 0?!1:JSON.stringify(c)===JSON.stringify(a))};exports.default=eq;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * `eq`
+ */
+
+var eq = function eq(a /*: any*/, b /*: any*/) /*: bool*/ {
+  return a === b ? true : a === undefined || b === undefined ? false : JSON.stringify(a) === JSON.stringify(b);
+};
+
+exports.default = eq;

@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNegative=function(b){return+b===b&&0>b};exports.default=isNegative;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the number is negative
+ */
+
+var isNegative = function isNegative(a /*: number*/) /*: bool*/ {
+  return +a === a && a < 0;
+};
+
+exports.default = isNegative;

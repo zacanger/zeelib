@@ -1,1 +1,31 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),watchFile=function(a,b){var c=(0,_path.resolve)(a);try{(0,_fs.watch)(c,b),console.log('watching',c)}catch(a){'ENOENT'===a.errno?console.error('Error, no such file',c):console.error(a)}};exports.default=watchFile;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+var _path = require('path');
+
+/**
+ * Watch a file for changes, and call the function
+ */
+
+// @flow
+
+var watchFile = function watchFile(filePath /*: string*/, cb /*: () => any*/) /*: void*/ {
+  var file = (0, _path.resolve)(filePath);
+  try {
+    (0, _fs.watch)(file, cb);
+    console.log('watching', file);
+  } catch (e) {
+    if (e.errno === 'ENOENT') {
+      console.error('Error, no such file', file);
+    } else {
+      console.error(e);
+    }
+  }
+};
+
+exports.default = watchFile;

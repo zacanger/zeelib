@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var objectToString=function(a){return Object.prototype.toString.call(a)};exports.default=objectToString;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * `toString`
+ */
+
+var objectToString = function objectToString(v /*: any*/) /*: string*/ {
+  return Object.prototype.toString.call(v);
+};
+
+exports.default = objectToString;

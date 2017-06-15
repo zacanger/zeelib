@@ -1,1 +1,18 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var ago=function(a){var b=Math.floor,c=(new Date().getTime()-a.getTime())/1e3,d=b(c/86400);return 0===d&&(60>c&&'just now'||120>c&&'1 minute ago'||3600>c&&b(c/60)+' minutes ago'||7200>c&&'1 hour ago'||86400>c&&b(c/3600)+' hours ago')||1===d&&'Yesterday'||7>d&&d+' days ago'||365>d&&Math.ceil(d/7)+' weeks ago'||(d/365).toFixed(2)+' years ago'};exports.default=ago;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Makes pretty 'n whatevers ago' string
+ */
+
+var ago = function ago(d /*: Date*/) /*: string*/ {
+  var diff = (new Date().getTime() - d.getTime()) / 1000;
+  var dayDiff = Math.floor(diff / 86400);
+  return dayDiff === 0 && (diff < 60 && 'just now' || diff < 120 && '1 minute ago' || diff < 3600 && Math.floor(diff / 60) + ' minutes ago' || diff < 7200 && '1 hour ago' || diff < 86400 && Math.floor(diff / 3600) + ' hours ago') || dayDiff === 1 && 'Yesterday' || dayDiff < 7 && dayDiff + ' days ago' || dayDiff < 365 && Math.ceil(dayDiff / 7) + ' weeks ago' || (dayDiff / 365).toFixed(2) + ' years ago';
+};
+
+exports.default = ago;

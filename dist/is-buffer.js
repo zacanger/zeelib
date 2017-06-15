@@ -1,1 +1,20 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isBuffer=function(b){try{return Buffer.isBuffer(b)}catch(a){return!1}};exports.default=isBuffer;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value is a buffer
+ */
+
+var isBuffer = function isBuffer(a /*: any*/) /*: bool*/ {
+  try {
+    return Buffer.isBuffer(a);
+  } catch (_) {
+    return false;
+  }
+};
+
+exports.default = isBuffer;

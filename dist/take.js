@@ -1,1 +1,22 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var take=function(a,b){var c=b.length;if(a>c)return b;for(var d=[],e=0;e<a&&e<c;e++)d.push(b[e]);return a1};exports.default=take;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Like Haskell's `take`
+ */
+
+var take = function take(num /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+  var alen = arr.length;
+  if (num > alen) return arr;
+  var a1 = [];
+  for (var i = 0; i < num && i < alen; i++) {
+    a1.push(arr[i]);
+  }
+  return a1;
+};
+
+exports.default = take;

@@ -1,1 +1,19 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _child_process=require('child_process'),open=function(a,b,c){a=[a];var d='win32'===process.platform?'cmd':'darwin'===process.platform?'open':'xdg-open';return(0,_child_process.execFile)(d,a,b,c)};exports.default=open;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _child_process = require('child_process');
+
+/**
+ * Opens things. Works on Linux, Mac, and Windows
+ */
+
+var open = function open(args /*: any*/, opts /*: any*/, cb /*: any*/) /*: any*/ {
+  args = [args];
+  var cmd = process.platform === 'win32' ? 'cmd' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+  return (0, _child_process.execFile)(cmd, args, opts, cb);
+}; // @flow
+
+exports.default = open;

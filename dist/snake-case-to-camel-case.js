@@ -1,1 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var snakeCaseToCamelCase=function(a){return a.replace(/(_\w)/g,function(a){return a[1].toUpperCase()})};exports.default=snakeCaseToCamelCase;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * snake_case to camelCase
+ */
+
+var snakeCaseToCamelCase = function snakeCaseToCamelCase(str /*: string*/) /*: string*/ {
+  return str.replace(/(_\w)/g, function (match) {
+    return match[1].toUpperCase();
+  });
+};
+
+exports.default = snakeCaseToCamelCase;

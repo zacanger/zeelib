@@ -1,1 +1,25 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _getIsBrowser=require('./get-is-browser'),_getIsBrowser2=_interopRequireDefault(_getIsBrowser);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var setTitle=function(a){(0,_getIsBrowser2.default)()?window.title=a:process.title=a};exports.default=setTitle;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getIsBrowser = require('./get-is-browser');
+
+var _getIsBrowser2 = _interopRequireDefault(_getIsBrowser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Set `window.title` or `process.title`
+ */
+
+var setTitle = function setTitle(newTitle /*: string*/) /*: void*/ {
+  if ((0, _getIsBrowser2.default)()) {
+    window.title = newTitle;
+  } else {
+    process.title = newTitle;
+  }
+}; // @flow
+
+exports.default = setTitle;

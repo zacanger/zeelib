@@ -1,1 +1,22 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getRegexFlags=function(a){var b=[];return a.global&&b.push('g'),a.ignoreCase&&b.push('i'),a.multiline&&b.push('m'),a.unicode&&b.push('u'),a.sticky&&b.push('y'),b};exports.default=getRegexFlags;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns the flags for a given regular expression
+ */
+
+var getRegexFlags = function getRegexFlags(r /*: RegExp*/) /*: Array<string | null>*/ {
+  var flags = [];
+  if (r.global) flags.push('g');
+  if (r.ignoreCase) flags.push('i');
+  if (r.multiline) flags.push('m');
+  if (r.unicode) flags.push('u');
+  if (r.sticky) flags.push('y');
+  return flags;
+};
+
+exports.default = getRegexFlags;

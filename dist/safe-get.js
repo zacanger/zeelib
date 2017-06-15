@@ -1,1 +1,75 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isUndefined=require('./is-undefined'),_isUndefined2=_interopRequireDefault(_isUndefined),_isArray=require('./is-array'),_isArray2=_interopRequireDefault(_isArray),_isNull=require('./is-null'),_isNull2=_interopRequireDefault(_isNull),_isFunction=require('./is-function'),_isFunction2=_interopRequireDefault(_isFunction);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isTokenFunctionCall=function(a){return'()'===a},isTokenArrayAccess=function(a){return /^\[\d+\]$/.test(a)},tokenize=function(a){return a.split(/\.|(\(\))|(\[\d+?])/).filter(function(a){return a})};function helper(a,b,c,d){if(0===b.length)return a;var e=b[0];return(0,_isUndefined2.default)(a)||(0,_isNull2.default)(a)||isTokenFunctionCall(e)&&!(0,_isFunction2.default)(a)?void 0:isTokenFunctionCall(e)?helper(a[(0,_isArray2.default)(d[0])?'apply':'call'](c,d[0]),b.slice(1),null,d.slice(1)):isTokenArrayAccess(e)?helper(a[parseInt(e.substr(1),10)],b.slice(1),isTokenFunctionCall(b[1])?a:c,d):helper(a[e],b.slice(1),isTokenFunctionCall(b[1])?a:c,d)}function safeGet(a,b){if((0,_isUndefined2.default)(b))return safeGet.bind(null,a);var c=Array.prototype.slice.call(arguments,2);return helper(a,tokenize(b),null,c)}exports.default=safeGet;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isUndefined = require('./is-undefined');
+
+var _isUndefined2 = _interopRequireDefault(_isUndefined);
+
+var _isArray = require('./is-array');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isNull = require('./is-null');
+
+var _isNull2 = _interopRequireDefault(_isNull);
+
+var _isFunction = require('./is-function');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// @flow
+
+var isTokenFunctionCall = function isTokenFunctionCall(t /*: string*/) /*: bool*/ {
+  return t === '()';
+};
+
+var isTokenArrayAccess = function isTokenArrayAccess(t /*: string*/) /*: bool*/ {
+  return (/^\[\d+\]$/.test(t)
+  );
+};
+
+var tokenize = function tokenize(s /*: string*/) /*: string[]*/ {
+  return s.split(/\.|(\(\))|(\[\d+?])/).filter(function (t) {
+    return t;
+  });
+};
+
+function helper(obj /*: Object*/, tokens /*: string[]*/, ctx /*: any*/, fnArgs /*: any*/) /*: any*/ {
+  if (tokens.length === 0) {
+    return obj;
+  }
+
+  var currentToken = tokens[0];
+
+  if ((0, _isUndefined2.default)(obj) || (0, _isNull2.default)(obj) || isTokenFunctionCall(currentToken) && !(0, _isFunction2.default)(obj)) {
+    return undefined;
+  }
+
+  if (isTokenFunctionCall(currentToken)) {
+    return helper(obj[(0, _isArray2.default)(fnArgs[0]) ? 'apply' : 'call'](ctx, fnArgs[0]), tokens.slice(1), null, fnArgs.slice(1));
+  } else if (isTokenArrayAccess(currentToken)) {
+    return helper(obj[parseInt(currentToken.substr(1), 10)], tokens.slice(1), isTokenFunctionCall(tokens[1]) ? obj : ctx, fnArgs);
+  } else {
+    return helper(obj[currentToken], tokens.slice(1), isTokenFunctionCall(tokens[1]) ? obj : ctx, fnArgs);
+  }
+}
+
+/**
+ * Like `_.get`: takes an object and an access string
+ */
+
+function safeGet(obj /*: Object*/, accessStr /*: string*/) /*: any*/ {
+  if ((0, _isUndefined2.default)(accessStr)) {
+    return safeGet.bind(null, obj);
+  }
+
+  var funcArgs = Array.prototype.slice.call(arguments, 2);
+  return helper(obj, tokenize(accessStr), null, funcArgs);
+}
+
+exports.default = safeGet;

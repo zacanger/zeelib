@@ -1,1 +1,18 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getLengthOfCharactersInString=function(a,b){return a.split('').filter(function(a){return a===b}).length};exports.default=getLengthOfCharactersInString;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Find out how many of a given character is in a string
+ */
+
+var getLengthOfCharactersInString = function getLengthOfCharactersInString(str /*: string*/, el /*: string*/) /*: number*/ {
+  return str.split('').filter(function (c) {
+    return c === el;
+  }).length;
+};
+
+exports.default = getLengthOfCharactersInString;

@@ -1,1 +1,44 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var invoker=function(a,b){return function(c,d){var e=0,f=function(){e++;var g=c();g?d(null,g):e<a?setTimeout(f,b):(d(new Error('Limit exceeded!'),null),d=function(){})};f()}};exports.default=invoker;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Invokes until function returns truthily
+ * @example
+ * // Succeeds after 15 calls
+ * let i = 0
+ * invoker(20, 100)(() => {
+ *   console.log(i)
+ *   return ++i > 15
+ * }, console.log)
+ * // Fails after 20 calls
+ * let ii = 0
+ * invoker(20, 100)(() => {
+ *   console.log(ii)
+ *   return ++ii > 22
+ * }, console.log)
+ */
+
+var invoker = function invoker(limit /*: number*/, interval /*: number*/) {
+  return function (fn /*: any*/, cb /*: any*/) /*: void*/ {
+    var current = 0;
+    var _fn = function _fn() {
+      current++;
+      var result = fn();
+      if (result) {
+        cb(null, result);
+      } else if (current < limit) {
+        setTimeout(_fn, interval);
+      } else {
+        cb(new Error('Limit exceeded!'), null);
+        cb = function cb() {};
+      }
+    };
+    _fn();
+  };
+};
+
+exports.default = invoker;

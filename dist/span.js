@@ -1,1 +1,24 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _takeWhile=require('./take-while'),_takeWhile2=_interopRequireDefault(_takeWhile);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var span=function(a,b){var c=(0,_takeWhile2.default)(a,b);return[c,b.slice(c.length)]};exports.default=span;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _takeWhile = require('./take-while');
+
+var _takeWhile2 = _interopRequireDefault(_takeWhile);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Similar to `takeWhile`: returns a tuple
+ * of all elements that pass predicate
+ * and all elements that did not
+ */
+
+var span = function span(pred /*: () => bool*/, arr /*: any[]*/) /*: any[]*/ {
+  var sat = (0, _takeWhile2.default)(pred, arr);
+  return [sat, arr.slice(sat.length)];
+}; // @flow
+
+exports.default = span;

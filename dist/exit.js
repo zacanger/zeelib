@@ -1,1 +1,25 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _getIsNode=require('./get-is-node'),_getIsNode2=_interopRequireDefault(_getIsNode);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var exit=function(){var a=0<arguments.length&&arguments[0]!==void 0?arguments[0]:0;(0,_getIsNode2.default)()&&process.exit(a)};exports.default=exit;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getIsNode = require('./get-is-node');
+
+var _getIsNode2 = _interopRequireDefault(_getIsNode);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * `process.exit` that optionally takes an exit code
+ */
+
+var exit = function exit() /*: void*/ {
+  var n /*: number*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+  if ((0, _getIsNode2.default)()) {
+    process.exit(n);
+  }
+}; // @flow
+
+exports.default = exit;

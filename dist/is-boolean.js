@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isBoolean=function(a){return'boolean'==typeof a};exports.default=isBoolean;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value is a boolean
+ */
+
+var isBoolean = function isBoolean(v /*: any*/) /*: bool*/ {
+  return typeof v === 'boolean';
+};
+
+exports.default = isBoolean;

@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isNull=function(a){return null===a};exports.default=isNull;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value is null
+ */
+
+var isNull = function isNull(v /*: any*/) /*: bool*/ {
+  return v === null;
+};
+
+exports.default = isNull;

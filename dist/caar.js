@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _car=require('./car'),_car2=_interopRequireDefault(_car);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var caar=function(b){return(0,_car2.default)((0,_car2.default)(b))};exports.default=caar;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _car = require('./car');
+
+var _car2 = _interopRequireDefault(_car);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * `caar`
+ */
+
+var caar = function caar(a /*: any[]*/) /*: any*/ {
+  return (0, _car2.default)((0, _car2.default)(a));
+}; // @flow
+
+exports.default = caar;

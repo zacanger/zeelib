@@ -1,1 +1,28 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _average=require('./average'),_average2=_interopRequireDefault(_average),_os=require('os');function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}function _toConsumableArray(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}return Array.from(a)}var getLoadAverage=function(){return parseFloat((0,_average2.default)([_toConsumableArray((0,_os.loadavg)())]).toFixed(2))};exports.default=getLoadAverage;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _average = require('./average');
+
+var _average2 = _interopRequireDefault(_average);
+
+var _os = require('os');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @flow
+
+/**
+ * Get load average
+ */
+
+var getLoadAverage = function getLoadAverage() /*: number*/ {
+  return parseFloat((0, _average2.default)([].concat(_toConsumableArray((0, _os.loadavg)()))).toFixed(2)
+
+  // the above line is weird because loadavg() is a tuple
+  // but average expects an array. ¯\_(ツ)_/¯
+
+  );
+};exports.default = getLoadAverage;

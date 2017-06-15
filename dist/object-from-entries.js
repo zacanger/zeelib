@@ -1,1 +1,24 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var objectFromEntries=function(a){for(var b={},c=a.length,d=0;d<c;++d){var e=a[d],f=e[0],g=e[1];b[f]=g}return res};exports.default=objectFromEntries;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Get an object from an array of entries
+ */
+
+var objectFromEntries = function objectFromEntries(entries /*: any[]*/) /*: Object*/ {
+  var res = {};
+  var len = entries.length;
+  for (var i = 0; i < len; ++i) {
+    var ent = entries[i];
+    var key = ent[0];
+    var val = ent[1];
+    res[key] = val;
+  }
+  return res;
+};
+
+exports.default = objectFromEntries;

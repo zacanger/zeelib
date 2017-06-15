@@ -1,1 +1,19 @@
-'use strict';var _typeof='function'==typeof Symbol&&'symbol'==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&'function'==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?'symbol':typeof a},isSymbol=function(b){return'symbol'===('undefined'==typeof b?'undefined':_typeof(b))};Object.defineProperty(exports,'__esModule',{value:!0});exports.default=isSymbol;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+// @flow
+
+/**
+ * Returns true if value is a symbol
+ */
+
+var isSymbol = function isSymbol(a /*: any*/) /*: bool*/ {
+  return (typeof a === 'undefined' ? 'undefined' : _typeof(a)) === 'symbol';
+};
+
+exports.default = isSymbol;

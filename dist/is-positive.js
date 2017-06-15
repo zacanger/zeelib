@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isPositive=function(b){return+b===b&&0<b};exports.default=isPositive;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if number is positive
+ */
+
+var isPositive = function isPositive(a /*: number*/) /*: bool*/ {
+  return +a === a && a > 0;
+};
+
+exports.default = isPositive;

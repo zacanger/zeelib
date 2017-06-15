@@ -1,1 +1,30 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function _toConsumableArray(a){if(Array.isArray(a)){for(var b=0,c=Array(a.length);b<a.length;b++)c[b]=a[b];return c}return Array.from(a)}var memoize=function(a){var b=new Map;return function(){for(var c=arguments.length,d=Array(c),e=0;e<c;e++)d[e]=arguments[e];var f=d.toString();return b.get(f)||b.set(f,a.apply(void 0,_toConsumableArray(d))),b.get(f)}};exports.default=memoize;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// @flow
+
+/**
+ * A simple memoizing util
+ */
+
+var memoize = function memoize(fn /*: any*/) /*: any*/ {
+  var results = new Map();
+  return function () /*: any*/ {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var key = args.toString();
+    if (!results.get(key)) {
+      results.set(key, fn.apply(undefined, _toConsumableArray(args)));
+    }
+    return results.get(key);
+  };
+};
+
+exports.default = memoize;

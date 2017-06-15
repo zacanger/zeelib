@@ -1,1 +1,26 @@
-"use strict";var _extends=Object.assign||function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a};Object.defineProperty(exports,"__esModule",{value:!0});function _defineProperty(a,b,c){return b in a?Object.defineProperty(a,b,{value:c,enumerable:!0,configurable:!0,writable:!0}):a[b]=c,a}var collectBy=function(a){return function(b){return b.reduce(function(b,c){return _extends({},b,_defineProperty({},c[a],c))},{})}};exports.default=collectBy;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// @flow
+
+/**
+ * Collect an an array of objects by string key
+ * cred: gh:uniqname
+ */
+
+var collectBy = function collectBy(p /*: string*/) {
+  return function (a /*: any[]*/) /*: Object*/ {
+    return a.reduce(function (c, i) {
+      return _extends({}, c, _defineProperty({}, i[p], i));
+    }, {});
+  };
+};
+
+exports.default = collectBy;

@@ -1,1 +1,28 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),_path=require('path'),makeFileIfNoFile=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:'',c=(0,_path.resolve)(a);try{(0,_fs.statSync)(c)}catch(a){(0,_fs.writeFileSync)(c,b)}};exports.default=makeFileIfNoFile;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+var _path = require('path');
+
+/**
+ * Make a file if it doesn't exist already
+ */
+
+// @flow
+
+var makeFileIfNoFile = function makeFileIfNoFile(filePath /*: string*/) /*: void*/ {
+  var contents /*: string*/ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+  var fl = (0, _path.resolve)(filePath);
+  try {
+    (0, _fs.statSync)(fl);
+  } catch (_) {
+    (0, _fs.writeFileSync)(fl, contents);
+  }
+};
+
+exports.default = makeFileIfNoFile;

@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});function logWithTimestamp(){var a=new Date,b=a.getDate()+'/'+a.getMonth()+' '+a.getHours()+':'+a.getMinutes()+':'+a.getSeconds()+'.'+a.getMilliseconds(),c=Array.prototype.slice.call(arguments);c.unshift('--'),c.unshift(b),console.log.apply(console,c)}exports.default=logWithTimestamp;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * `console.log` with a timestamp
+ */
+
+function logWithTimestamp() /*: ?string*/ {
+  var date = new Date();
+  var timestamp = date.getDate() + '/' + date.getMonth() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '.' + date.getMilliseconds();
+  var message = Array.prototype.slice.call(arguments);
+  message.unshift('--');
+  message.unshift(timestamp);
+  console.log.apply(console, message);
+}
+
+exports.default = logWithTimestamp;

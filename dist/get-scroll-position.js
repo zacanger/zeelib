@@ -1,1 +1,20 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getScrollPosition=function(){return{scrollX:window.scrollX,scrollY:window.scrollY}};exports.default=getScrollPosition;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns current scroll position
+ */
+
+/*:: type S = {
+  scrollX: number,
+  scrollY: number
+}*/
+var getScrollPosition = function getScrollPosition() /*: S*/ {
+  return { scrollX: window.scrollX, scrollY: window.scrollY };
+};
+
+exports.default = getScrollPosition;

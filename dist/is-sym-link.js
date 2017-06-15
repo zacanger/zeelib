@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isSymLink=function(a){try{return(0,_fs.lstatSync)(a).isSymbolicLink()}catch(a){return!1}};exports.default=isSymLink;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+/**
+ * Returns true if path is a symlink
+ */
+
+var isSymLink = function isSymLink(filePath /*: string*/) /*: bool*/ {
+  try {
+    return (0, _fs.lstatSync)(filePath).isSymbolicLink();
+  } catch (_) {
+    return false;
+  }
+}; // @flow
+
+exports.default = isSymLink;

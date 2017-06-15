@@ -1,1 +1,21 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isInstalled=function(a){try{return require.resolve(a),!0}catch(a){return!1}};exports.default=isInstalled;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the passed node_module name is installed
+ */
+
+var isInstalled = function isInstalled(pkgName /*: string*/) /*: bool*/ {
+  try {
+    require.resolve(pkgName);
+    return true;
+  } catch (_) {
+    return false;
+  }
+};
+
+exports.default = isInstalled;

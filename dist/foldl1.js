@@ -1,1 +1,21 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var foldl1=function(b,c){for(var a=c[0],d=1;d<c.length;d++)a=b(a,c[d]);return s};exports.default=foldl1;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Applies f to first two items of list,
+ * then to next, etc.
+ */
+
+var foldl1 = function foldl1(f /*: () => any*/, a /*: any[]*/) /*: any*/ {
+  var s = a[0];
+  for (var i = 1; i < a.length; i++) {
+    s = f(s, a[i]);
+  }
+  return s;
+};
+
+exports.default = foldl1;

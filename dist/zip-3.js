@@ -1,1 +1,29 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var zip3=function(a,b,c){var d=[],e=b.length,f=c.length;for(var g in a){if(g>=e||g>=f)return d;d.push([a[g],b[g],c[g]])}return d};exports.default=zip3;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Makes a list of tuples. Each list
+ * is made of the elements of each list param's
+ * elements at the same position
+ * @param {array} xs
+ * @param {array} ys
+ * @param {array} zs
+ * @returns {array}
+ */
+
+var zip3 = function zip3(xs, ys, zs) {
+  var res = [];
+  var yslen = ys.length;
+  var zslen = zs.length;
+  for (var i in xs) {
+    if (i >= yslen || i >= zslen) {
+      return res;
+    }
+    res.push([xs[i], ys[i], zs[i]]);
+  }
+  return res;
+};
+
+exports.default = zip3;

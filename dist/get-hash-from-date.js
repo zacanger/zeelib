@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getHashFromDate=function(){return(+new Date+100*Math.random()).toString(32).replace(/\./,'')};exports.default=getHashFromDate;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns a hash based on current timestamp
+ */
+
+var getHashFromDate = function getHashFromDate() /*: string*/ {
+  return (+new Date() + Math.random() * 100).toString(32).replace(/\./, '');
+};
+
+exports.default = getHashFromDate;

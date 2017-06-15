@@ -1,1 +1,17 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var imul=Math.imul||function(c,a){console.error('`imul` is deprecated, use `Math.imul` instead.');var b=65535&c,d=65535&a>>>16;return 0|b*(65535&a)+((65535&c>>>16)*d+b*d<<16>>>0)};exports.default=imul;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+var imul = Math.imul || function (a /*: number*/, b /*: number*/) /*: number*/ {
+  console.error('`imul` is deprecated, use `Math.imul` instead.');
+  var ah = a >>> 16 & 0xffff;
+  var al = a & 0xffff;
+  var bh = b >>> 16 & 0xffff;
+  var bl = b & 0xffff;
+  return al * bl + (ah * bh + al * bh << 16 >>> 0) | 0;
+};
+
+exports.default = imul;

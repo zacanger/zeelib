@@ -1,1 +1,28 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),timeRequire=function(){return require.extensions['.js']=function(a,b){var c=new Date,d=(0,_fs.readFileSync)(b,'utf8').toString(),e=a._compile(d,b),f=[],g=new Date-c+' : '+b;return f.push(g),console.log(f),e}};exports.default=timeRequire;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+var timeRequire = function timeRequire() {
+  return require.extensions['.js'] = function (module, filename) {
+    var strt = new Date();
+    var cont = (0, _fs.readFileSync)(filename, 'utf8').toString();
+    var modl = module._compile(cont, filename);
+    var arry = [];
+    var item = new Date() - strt + ' : ' + filename;
+    arry.push(item);
+    console.log(arry);
+    return modl;
+  };
+}; /* eslint-disable  */
+
+/**
+ * Just require this and invoke to time requires into that file
+ * based on gh:stefanpenner/node-require-timings
+ * Takes no parameters
+ */
+
+exports.default = timeRequire;

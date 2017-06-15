@@ -1,1 +1,36 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});function debounce(a,b){var c=2<arguments.length&&arguments[2]!==void 0&&arguments[2],d=null;return function(){var e=this,f=arguments,g=c&&!d;clearTimeout(d),d=setTimeout(function later(){d=null,c||a.apply(e,f)},b),g&&a.apply(e,f)}}exports.default=debounce;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Debounce. Takes a function, a wait (ms), and optionally a truthy immediate param
+ */
+
+function debounce(f /*: () => any*/, wait /*: number*/) /*: any*/ {
+  var immediate /*: bool*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+  var timeout = null;
+  return function () {
+    var ctx = this;
+    var args = arguments;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) {
+        f.apply(ctx, args);
+      }
+    };
+
+    var now = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (now) {
+      f.apply(ctx, args);
+    }
+  };
+}
+
+exports.default = debounce;

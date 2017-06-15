@@ -1,1 +1,35 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _curry=require('./curry'),_curry2=_interopRequireDefault(_curry);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var map=function(b,c){return c.map(b)},juxt=(0,_curry2.default)(function(b,c){return map(function(a){return a(c)},b)});exports.default=juxt;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('./curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*:: type F = () => any*/ // @flow
+
+/*:: type FS = F[]*/
+/*:: type A = any*/
+
+
+var map = function map(f /*: any*/, a /*: any[]*/) /*: any*/ {
+  return a.map(f
+
+  /**
+   * Like Clojure's `juxt`
+   * Takes a list of functions and returns a fn that is the juxtaposition
+   * of those fns
+   */
+
+  );
+};var juxt = (0, _curry2.default)(function (fns /*: FS*/, a /*: A*/) {
+  return map(function (f /*: F*/) {
+    return f(a);
+  }, fns);
+});
+
+exports.default = juxt;

@@ -1,1 +1,13 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var newlinesToSpaces=function(a){return console.error('`newlinesToSpaces` is deprecated. Please use `collapseWhitespace` instead.'),a.replace(/\s+/g,' ').trim()};exports.default=newlinesToSpaces;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+var newlinesToSpaces = function newlinesToSpaces(str /*: string*/) /*: string*/ {
+  console.error('`newlinesToSpaces` is deprecated. Please use `collapseWhitespace` instead.');
+  return str.replace(/\s+/g, ' ').trim();
+};
+
+exports.default = newlinesToSpaces;

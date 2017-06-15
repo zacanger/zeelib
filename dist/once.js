@@ -1,1 +1,22 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var once=function(a){var b;return function(){return b||(b=a.apply(void 0,arguments)),b}};exports.default=once;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Only calls fn once; subsequent calls just return first val
+ */
+
+var once = function once(fn /*: any*/) /*: any*/ {
+  var returnValue = void 0;
+  return function () /*: any*/ {
+    if (!returnValue) {
+      returnValue = fn.apply(undefined, arguments);
+    }
+    return returnValue;
+  };
+};
+
+exports.default = once;

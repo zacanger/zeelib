@@ -1,1 +1,33 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _net=require('net'),findPort=function(a,b){var c=(0,_net.createServer)(function(){}),d=function(){c.removeListener('error',e),c.close(),b(null,a)},e=function(e){return c.removeListener('listening',d),'EADDRINUSE'===e.code?void findPort(a+1,b):b(e)};c.once('error',e),c.once('listening',d),c.listen(a)};exports.default=findPort;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _net = require('net');
+
+/**
+ * Find next open port
+ * `findPort(8000, (err, port) => {})`
+ */
+
+var findPort = function findPort(port /*: number*/, cb /*: any*/) /*: any*/ {
+  var server = (0, _net.createServer)(function () {});
+  var onListen = function onListen() {
+    server.removeListener('error', onError);
+    server.close();
+    cb(null, port);
+  };
+  var onError = function onError(err) {
+    server.removeListener('listening', onListen);
+    if (err.code !== ('EADDRINUSE' || 'EACCESS')) {
+      return cb(err);
+    }
+    findPort(port + 1, cb);
+  };
+  server.once('error', onError);
+  server.once('listening', onListen);
+  server.listen(port);
+}; // @flow
+
+exports.default = findPort;

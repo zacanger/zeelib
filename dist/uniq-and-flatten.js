@@ -1,1 +1,24 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _flatten=require('./flatten'),_flatten2=_interopRequireDefault(_flatten),_uniq=require('./uniq'),_uniq2=_interopRequireDefault(_uniq);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var uniqAndFlatten=function(a){return console.error('`uniqAndFlatten` is deprecated.'),(0,_flatten2.default)((0,_uniq2.default)(a))};exports.default=uniqAndFlatten;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _flatten = require('./flatten');
+
+var _flatten2 = _interopRequireDefault(_flatten);
+
+var _uniq = require('./uniq');
+
+var _uniq2 = _interopRequireDefault(_uniq);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// @flow
+
+var uniqAndFlatten = function uniqAndFlatten(arr /*: any[]*/) /*: any[]*/ {
+  console.error('`uniqAndFlatten` is deprecated.');
+  return (0, _flatten2.default)((0, _uniq2.default)(arr));
+};
+
+exports.default = uniqAndFlatten;

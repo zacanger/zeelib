@@ -1,1 +1,48 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var copyWithout=function(a,b){for(var c=arguments.length,d=Array(2<c?c-2:0),e=2;e<c;e++)d[e-2]=arguments[e];var f=Object.assign(a,b),g=!0,h=!1,i=void 0;try{for(var j,k,l=d[Symbol.iterator]();!(g=(j=l.next()).done);g=!0)k=j.value,delete f[k]}catch(a){h=!0,i=a}finally{try{!g&&l.return&&l.return()}finally{if(h)throw i}}return f};exports.default=copyWithout;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Copy an object, leaving out specified keys
+ * cred : gh:texastoland
+ * {key, ...copy} = {...target, ...source}
+ */
+
+var copyWithout = function copyWithout(target /*: Object*/, source /*: Object*/) /*: any*/ {
+  for (var _len = arguments.length, keys = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    keys[_key - 2] = arguments[_key];
+  }
+
+  var copy = Object.assign(target, source);
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = keys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var key = _step.value;
+
+      delete copy[key];
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return copy;
+};
+
+exports.default = copyWithout;

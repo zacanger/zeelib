@@ -1,1 +1,17 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var toType=function(a){return console.error('`toType` is depreacted. Use `typeOf` instead.'),{}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()};exports.default=toType;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Get the type of value
+ * @param {any} val
+ * @returns {string}
+ */
+
+var toType = function toType(val) {
+  console.error('`toType` is depreacted. Use `typeOf` instead.');
+  return {}.toString.call(val).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+};
+
+exports.default = toType;

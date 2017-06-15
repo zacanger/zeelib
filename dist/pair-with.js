@@ -1,1 +1,20 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var pairWith=function(a){return function(b){return 2>a.length?[]:[b(a[0],a[1]),pairWith(a.slice(1),b)]}};exports.default=pairWith;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns an empty array if xs is shorter than two
+ * Otherwise returns an array made from calling f on
+ * pairs of adjacent elements
+ */
+
+var pairWith = function pairWith(xs /*: any[]*/) {
+  return function (f /*: () => any*/) {
+    return xs.length < 2 ? [] : [f(xs[0], xs[1])].concat(pairWith(xs.slice(1), f));
+  };
+};
+
+exports.default = pairWith;

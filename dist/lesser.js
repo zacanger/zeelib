@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lesser=function(c,a){return c<a?c:a};exports.default=lesser;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns the lesser of two numbers
+ */
+
+var lesser = function lesser(a /*: number*/, b /*: number*/) /*: number*/ {
+  return a < b ? a : b;
+};
+
+exports.default = lesser;

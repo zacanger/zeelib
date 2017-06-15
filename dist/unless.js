@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var unless=function(a,b){return a?null:b()};exports.default=unless;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Call a function if the condition is falsey
+ */
+
+var unless = function unless(cond /*: any*/, fn /*: () => any*/) /*: ?any*/ {
+  return !cond ? fn() : null;
+};
+
+exports.default = unless;

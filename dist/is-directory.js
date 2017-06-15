@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isDirectory=function(a){try{return(0,_fs.statSync)(a).isDirectory()}catch(a){return!1}};exports.default=isDirectory;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+/**
+ * Returns true if the path is a directory
+ */
+
+var isDirectory = function isDirectory(filePath /*: string*/) /*: bool*/ {
+  try {
+    return (0, _fs.statSync)(filePath).isDirectory();
+  } catch (_) {
+    return false;
+  }
+}; // @flow
+
+exports.default = isDirectory;

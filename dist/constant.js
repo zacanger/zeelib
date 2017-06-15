@@ -1,1 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var constant=function(b){return function(){return b}};exports.default=constant;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Similar to `id` but takes another `any`
+ */
+
+var constant = function constant(a /*: any*/) {
+  return function (_ /*: any*/) {
+    return a;
+  };
+};
+
+exports.default = constant;

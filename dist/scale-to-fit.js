@@ -1,1 +1,33 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var scaleToFit=function(a,b,c,d){var e={width:a,height:b};return c&&e.width>c&&(e.width=c,e.height=c/a*b),d&&e.height>d&&(e.height=d,e.width=d/b*a),e};exports.default=scaleToFit;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Takes a width, height, maxWidth, and maxHeight
+ * Returns an object that tells you the largest you can
+ * scale to.
+ */
+
+/*:: type O = {
+  width: number,
+  height: number
+}*/
+var scaleToFit = function scaleToFit(width /*: number*/, height /*: number*/, maxWidth /*: ?number*/, maxHeight /*: ?number*/) /*: O*/ {
+  var output = { width: width, height: height };
+
+  if (maxWidth && output.width > maxWidth) {
+    output.width = maxWidth;
+    output.height = maxWidth / width * height;
+  }
+  if (maxHeight && output.height > maxHeight) {
+    output.height = maxHeight;
+    output.width = maxHeight / height * width;
+  }
+
+  return output;
+};
+
+exports.default = scaleToFit;

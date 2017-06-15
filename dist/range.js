@@ -1,1 +1,43 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var range=function(c,d){var b=2<arguments.length&&arguments[2]!==void 0?arguments[2]:1,e=[];if('number'==typeof c)for(e[0]=c;c+b<=d;)e[e.length]=c+=b;else{var f='abcdefghijklmnopqrstuvwxyz';(c===c.toUpperCase()||d===d.toUpperCase())&&(d=d.toUpperCase(),f=f.toUpperCase()),f=f.substring(f.indexOf(c),f.indexOf(d)+1),e=f.split('')}return e};exports.default=range;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Range function. Takes a start and and end,
+ * and a step (defaults to 1). Works for numbers and
+ * latin characters. This is _inclusive_. That is:
+ * `1..10,2 == 0,2,4,6,8,10`
+ * @param {string|number} a
+ * @param {string|number} b
+ * @param {number} step (optional, defaults to one)
+ * @returns {Array}
+ */
+
+var range = function range(a, b) {
+  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  var arr = [];
+
+  if (typeof a === 'number') {
+    arr[0] = a;
+    while (a + step <= b) {
+      arr[arr.length] = a += step;
+    }
+  } else {
+    // TODO one day: unicode, maybe
+    var s = 'abcdefghijklmnopqrstuvwxyz';
+
+    if (a === a.toUpperCase() || b === b.toUpperCase()) {
+      b = b.toUpperCase();
+      s = s.toUpperCase();
+    }
+
+    s = s.substring(s.indexOf(a), s.indexOf(b) + 1);
+    arr = s.split('');
+  }
+
+  return arr;
+};
+
+exports.default = range;

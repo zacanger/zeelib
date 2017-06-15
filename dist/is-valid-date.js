@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isDate=require('./is-date'),_isDate2=_interopRequireDefault(_isDate);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isValidDate=function(a){return(0,_isDate2.default)(a)&&'Invalid Date'!==a.toString()};exports.default=isValidDate;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isDate = require('./is-date');
+
+var _isDate2 = _interopRequireDefault(_isDate);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if the passed object is a valid Date
+ */
+
+var isValidDate = function isValidDate(d /*: any*/) /*: bool*/ {
+  return (0, _isDate2.default)(d) && d.toString() !== 'Invalid Date';
+}; // @flow
+
+exports.default = isValidDate;

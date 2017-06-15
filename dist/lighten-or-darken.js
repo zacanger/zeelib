@@ -1,1 +1,46 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var lightenOrDarken=function(a,c){var d=!1,e=parseInt(a,16),f=(e>>16)+c,h=(255&e>>8)+c,b=(255&e)+c;return'#'===a[0]&&(a=a.slice(1),d=!0),255<f?f=255:0>f&&(f=0),255<h?h=255:0>h&&(h=0),255<b?b=255:0>b&&(b=0),(d?'#':'')+(b|h<<8|f<<16).toString(16)};exports.default=lightenOrDarken;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Lighten or darken a color
+ * @example
+ * // lighten
+ * const newCol = lightenOrDarken('#F06D06', 20)
+ * // darken
+ * const newCol = lightenOrDarken('#F06D06', -20)
+ */
+
+var lightenOrDarken = function lightenOrDarken(col /*: string*/, amt /*: number*/) /*: string*/ {
+  var useHash = false;
+  var num = parseInt(col, 16);
+  var r = (num >> 16) + amt;
+  var b = (num >> 8 & 0x00FF) + amt;
+  var g = (num & 0x0000FF) + amt;
+
+  if (col[0] === '#') {
+    col = col.slice(1);
+    useHash = true;
+  }
+  if (r > 255) {
+    r = 255;
+  } else if (r < 0) {
+    r = 0;
+  }
+  if (b > 255) {
+    b = 255;
+  } else if (b < 0) {
+    b = 0;
+  }
+  if (g > 255) {
+    g = 255;
+  } else if (g < 0) {
+    g = 0;
+  }
+  return (useHash ? '#' : '') + (g | b << 8 | r << 16).toString(16);
+};
+
+exports.default = lightenOrDarken;

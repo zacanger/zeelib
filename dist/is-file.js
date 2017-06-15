@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _fs=require('fs'),isFile=function(a){try{return(0,_fs.statSync)(a).isFile()}catch(a){return!1}};exports.default=isFile;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _fs = require('fs');
+
+/**
+ * Returns true if the path is a file
+ */
+
+var isFile = function isFile(filePath /*: string*/) /*: bool*/ {
+  try {
+    return (0, _fs.statSync)(filePath).isFile();
+  } catch (_) {
+    return false;
+  }
+}; // @flow
+
+exports.default = isFile;

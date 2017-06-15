@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isFunction=function(a){return'function'==typeof a};exports.default=isFunction;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the value is a function
+ */
+
+var isFunction = function isFunction(v /*: any*/) /*: bool*/ {
+  return typeof v === 'function';
+};
+
+exports.default = isFunction;

@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isFloat=function(a){return(0|a)!==a};exports.default=isFloat;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the number is a float
+ */
+
+var isFloat = function isFloat(n /*: number*/) /*: bool*/ {
+  return (n | 0) !== n;
+};
+
+exports.default = isFloat;

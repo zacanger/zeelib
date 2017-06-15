@@ -1,1 +1,27 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isNull=require('./is-null'),_isNull2=_interopRequireDefault(_isNull),_isUndefined=require('./is-undefined'),_isUndefined2=_interopRequireDefault(_isUndefined);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var isNullOrUndefined=function(a){return(0,_isNull2.default)(a)||(0,_isUndefined2.default)(a)};exports.default=isNullOrUndefined;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isNull = require('./is-null');
+
+var _isNull2 = _interopRequireDefault(_isNull);
+
+var _isUndefined = require('./is-undefined');
+
+var _isUndefined2 = _interopRequireDefault(_isUndefined);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if the value is null or undefined
+ */
+
+// @flow
+
+var isNullOrUndefined = function isNullOrUndefined(v /*: any*/) /*: bool*/ {
+  return (0, _isNull2.default)(v) || (0, _isUndefined2.default)(v);
+};
+
+exports.default = isNullOrUndefined;

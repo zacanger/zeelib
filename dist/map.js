@@ -1,1 +1,32 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var map=function(a,b){if(b===void 0)return function(b){return map(a,b)};for(var c=-1,d=b&&b.length||0,e=Array(d);++c<d;)b&&(e[c]=a(b[c]));return toReturn};exports.default=map;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/*
+ * `map`
+ */
+
+var map = function map(fn /*: () => any*/, arr /*: ?any[]*/) /*: any*/ {
+  if (arr === undefined) {
+    return function (h) {
+      return map(fn, h);
+    };
+  }
+
+  var ix = -1;
+  var len = arr && arr.length || 0;
+  var toReturn = Array(len);
+
+  while (++ix < len) {
+    if (arr) {
+      toReturn[ix] = fn(arr[ix]);
+    }
+  }
+
+  return toReturn;
+};
+
+exports.default = map;

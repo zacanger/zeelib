@@ -1,1 +1,16 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var getIsNode=function(){return process&&!!process.version};exports.default=getIsNode;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if code is in Node
+ */
+
+var getIsNode = function getIsNode() /*: bool*/ {
+  return process && !!process.version;
+};
+
+exports.default = getIsNode;

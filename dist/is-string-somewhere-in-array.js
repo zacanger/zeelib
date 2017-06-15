@@ -1,1 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var isStringSomewhereInArray=function(a,b){return a.some(function(c){return b.toLowerCase().includes(c.toLowerCase())||c.toLowerCase().includes(b.toLowerCase())})};exports.default=isStringSomewhereInArray;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if the string is contained somewhere in the array
+ */
+
+var isStringSomewhereInArray = function isStringSomewhereInArray(arr /*: string[]*/, el /*: string*/) /*: bool*/ {
+  return arr.some(function (a) {
+    return el.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(el.toLowerCase());
+  });
+};
+
+exports.default = isStringSomewhereInArray;

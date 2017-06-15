@@ -1,1 +1,16 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isString=function(a){return'string'==typeof a};exports.default=isString;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Returns true if value is a string
+ */
+
+var isString = function isString(v /*: any*/) /*: bool*/ {
+  return typeof v === 'string';
+};
+
+exports.default = isString;

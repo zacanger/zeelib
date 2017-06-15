@@ -1,1 +1,19 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lispCaseToPascalCase=function(a){var b=a.toLowerCase().replace(/-[a-z]/g,function(a){return a.slice(1).toUpperCase()});return b.charAt(0).toUpperCase()+b.slice(1)};exports.default=lispCaseToPascalCase;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * lisp-case to PascalCase
+ */
+
+var lispCaseToPascalCase = function lispCaseToPascalCase(str /*: string*/) /*: string*/ {
+  var c = str.toLowerCase().replace(/-[a-z]/g, function (m) {
+    return m.slice(1).toUpperCase();
+  });
+  return c.charAt(0).toUpperCase() + c.slice(1);
+};
+
+exports.default = lispCaseToPascalCase;

@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _curry=require('./curry'),_curry2=_interopRequireDefault(_curry);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var all=(0,_curry2.default)(function(a,b){return!!b.reduce&&'function'==typeof a&&b.reduce(function(b,c){return!!b&&!!a(c)},!0)});exports.default=all;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('./curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Returns true if all items pass predicate fn
+ */
+
+var all = (0, _curry2.default)(function (predicate, list) /*: bool*/ {
+  return !!list.reduce && typeof predicate === 'function' && list.reduce(function (result, current) {
+    return !result ? false : !!predicate(current);
+  }, true);
+}); // @flow
+
+exports.default = all;

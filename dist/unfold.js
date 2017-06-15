@@ -1,1 +1,26 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isArray=require('./is-array'),_isArray2=_interopRequireDefault(_isArray);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var unfold=function(a,b){var c=a(b);return(0,_isArray2.default)(c)?[c[0],unfold(a,c[1])]:[]};exports.default=unfold;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isArray = require('./is-array');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Builds a list from a seed
+ * Takes an iterating fn and an array seed
+ */
+
+var unfold = function unfold(fn /*: () => any*/, seed /*: any*/) /*: any[]*/ {
+  var r = fn(seed);
+  if (!(0, _isArray2.default)(r)) {
+    return [];
+  }
+  return [r[0]].concat(unfold(fn, r[1]));
+}; // @flow
+
+exports.default = unfold;

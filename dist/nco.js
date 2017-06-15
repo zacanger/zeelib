@@ -1,1 +1,17 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var nco=function(a,b){return null===a||'undefined'==typeof a?b:a};exports.default=nco;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * nco
+ * cred: gh:artificerentertainment
+ */
+
+var nco = function nco(variable /*: any*/, defaultValue /*: any*/) /*: any*/ {
+  return variable === null || typeof variable === 'undefined' ? defaultValue : variable;
+};
+
+exports.default = nco;

@@ -1,1 +1,18 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var lispCaseToCamelCase=function(a){return a.toLowerCase().replace(/-[a-z]/g,function(a){return a.slice(1).toUpperCase()})};exports.default=lispCaseToCamelCase;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * From lisp-case to camelCase
+ */
+
+var lispCaseToCamelCase = function lispCaseToCamelCase(str /*: string*/) /*: string*/ {
+  return str.toLowerCase().replace(/-[a-z]/g, function (match) {
+    return match.slice(1).toUpperCase();
+  });
+};
+
+exports.default = lispCaseToCamelCase;

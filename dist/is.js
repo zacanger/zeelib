@@ -1,1 +1,20 @@
-"use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},is=function(a,b){return("undefined"==typeof b?"undefined":_typeof(b))===a};Object.defineProperty(exports,"__esModule",{value:!0});exports.default=is;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+// @flow
+
+/**
+ * Returns true if the value is of the type
+ * Example: `is('number', 2)` -> `true`
+ */
+
+var is = function is(type /*: string*/, val /*: any*/) /*: bool*/ {
+  return (typeof val === "undefined" ? "undefined" : _typeof(val)) === type;
+}; // eslint-disable-line valid-typeof
+
+exports.default = is;

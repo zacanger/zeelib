@@ -1,1 +1,21 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _isError=require('./is-error'),_isError2=_interopRequireDefault(_isError);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var throwError=function(a){throw(0,_isError2.default)(a)?a:new Error(a)};exports.default=throwError;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isError = require('./is-error');
+
+var _isError2 = _interopRequireDefault(_isError);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Throw an error, or anything else passed in as an error
+ */
+
+var throwError = function throwError(err /*: any*/) /*: Error*/ {
+  throw (0, _isError2.default)(err) ? err : new Error(err);
+}; // @flow
+
+exports.default = throwError;

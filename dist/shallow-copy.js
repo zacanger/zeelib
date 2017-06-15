@@ -1,1 +1,31 @@
-'use strict';var _typeof='function'==typeof Symbol&&'symbol'==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&'function'==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?'symbol':typeof a},_isArray=require('./is-array'),_isArray2=_interopRequireDefault(_isArray);Object.defineProperty(exports,'__esModule',{value:!0});function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var shallowCopy=function(a){console.error('`shallowCopy` is deprecated. Please use `clone` instead.');var b;return a&&'object'===('undefined'==typeof a?'undefined':_typeof(a))?(0,_isArray2.default)(a)?a.slice(0):(b={},Object.keys(a).forEach(function(c){b[c]=a[c]}),b):a};exports.default=shallowCopy;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _isArray = require('./is-array');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var shallowCopy = function shallowCopy(o) {
+  console.error('`shallowCopy` is deprecated. Please use `clone` instead.');
+  var newObj = void 0;
+  if (!o || (typeof o === 'undefined' ? 'undefined' : _typeof(o)) !== 'object') {
+    return o;
+  }
+  if ((0, _isArray2.default)(o)) {
+    return o.slice(0);
+  }
+  newObj = {};
+  Object.keys(o).forEach(function (prop) {
+    newObj[prop] = o[prop];
+  });
+  return newObj;
+};
+
+exports.default = shallowCopy;

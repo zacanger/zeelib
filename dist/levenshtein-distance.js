@@ -1,1 +1,60 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var levenshteinDistance=function(c,a){var b=Math.min;if(0===c.length)return a.length;if(0===a.length)return c.length;var d,e,f,g,h,i;for(c.length>a.length&&(d=c,c=a,a=d),i=Array(c.length+1),e=0;e<=c.length;e++)i[e]=e;for(e=1;e<=a.length;e++){for(g=e,f=1;f<=c.length;f++)h=a[e-1]===c[f-1]?i[f-1]:b(i[f-1]+1,b(g+1,i[f]+1)),i[f-1]=g,g=h;i[c.length]=g}return i[c.length]};exports.default=levenshteinDistance;
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Levenshtein distance
+ * cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
+ */
+
+var levenshteinDistance = function levenshteinDistance(a /*: string*/, b /*: string*/) /*: number*/ {
+  if (a.length === 0) {
+    return b.length;
+  }
+  if (b.length === 0) {
+    return a.length;
+  }
+
+  var tmp = void 0,
+      i = void 0,
+      j = void 0,
+      prev = void 0,
+      val = void 0,
+      row = void 0;
+  // swap to save some memory O(min(a,b)) instead of O(a)
+  if (a.length > b.length) {
+    tmp = a;
+    a = b;
+    b = tmp;
+  }
+
+  row = Array(a.length + 1
+  // init the row
+  );for (i = 0; i <= a.length; i++) {
+    row[i] = i;
+  }
+
+  // fill in the rest
+  for (i = 1; i <= b.length; i++) {
+    prev = i;
+    for (j = 1; j <= a.length; j++) {
+      if (b[i - 1] === a[j - 1]) {
+        val = row[j - 1]; // match
+      } else {
+        val = Math.min(row[j - 1] + 1, // substitution
+        Math.min(prev + 1, // insertion
+        row[j] + 1) // deletion
+        );
+      }
+      row[j - 1] = prev;
+      prev = val;
+    }
+    row[a.length] = prev;
+  }
+  return row[a.length];
+};
+
+exports.default = levenshteinDistance;

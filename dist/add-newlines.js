@@ -1,1 +1,18 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var addNewlines=function(a){return a.split('\t').join('  ').split('\n').map(function(a){return a+'\n'}).join('')};exports.default=addNewlines;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+/**
+ * Adds `\n` to every line
+ */
+
+var addNewlines = function addNewlines(str /*: string*/) /*: string*/ {
+  return str.split('\t').join('  ').split('\n').map(function (e) {
+    return e + '\n';
+  }).join('');
+};
+
+exports.default = addNewlines;

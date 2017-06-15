@@ -1,1 +1,11 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var getBrokenImage=function(){return console.error('`getBrokenImage` is deprecated.'),'data:;base64,iVBORwOKGO=='};exports.default=getBrokenImage;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var getBrokenImage = function getBrokenImage() {
+  console.error('`getBrokenImage` is deprecated.');
+  return 'data:;base64,iVBORwOKGO==';
+};
+
+exports.default = getBrokenImage;

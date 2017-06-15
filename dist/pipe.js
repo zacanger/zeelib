@@ -1,1 +1,29 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var _reduce=require('./reduce'),_reduce2=_interopRequireDefault(_reduce);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var pipe=function(){for(var a=arguments.length,b=Array(a),c=0;c<a;c++)b[c]=arguments[c];return function(a){return(0,_reduce2.default)(function(a,b){return b(a)},a)(b)}};exports.default=pipe;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _reduce = require('./reduce');
+
+var _reduce2 = _interopRequireDefault(_reduce);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * l->r composition
+ */
+
+var pipe = function pipe() /*: any*/ {
+  for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {
+    fns[_key] = arguments[_key];
+  }
+
+  return function (data /*: any*/) {
+    return (0, _reduce2.default)(function (v /*: any*/, fn /*: any*/) /*: any*/ {
+      return fn(v);
+    }, data)(fns);
+  };
+}; // @flow
+
+exports.default = pipe;

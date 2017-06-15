@@ -1,1 +1,23 @@
-'use strict';Object.defineProperty(exports,'__esModule',{value:!0});var isWin=function(){return'win32'===process.platform},isColor=function(){var a=/^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;return!!process.env.COLORTERM||a.test(process.env.TERM||'')},hasColor=isWin()||isColor();exports.default=hasColor;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// @flow
+
+var isWin = function isWin() /*: bool*/ {
+  return process.platform === 'win32';
+};
+
+var isColor = function isColor() /*: bool*/ {
+  var termColor = /^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;
+  return !!process.env.COLORTERM || termColor.test(process.env.TERM || '');
+};
+
+/**
+ * Returns true if the current terminal supports color
+ */
+
+var hasColor /*: bool*/ = isWin() || isColor();
+
+exports.default = hasColor;
