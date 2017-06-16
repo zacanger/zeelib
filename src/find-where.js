@@ -12,6 +12,6 @@ const findWhere = (
   f: () => bool,
   arr: any[]
 ): any =>
-  filter(arr, f)[0] || null
+  filter(f, arr)[0] || null
 
 export default findWhere

@@ -4,7 +4,7 @@
  * Simple `pluck`
  */
 
-const pluck = (arr: any[], key: string): any[] =>
+const pluck = (key: string, arr: any[]): any[] =>
   arr.map((obj) => obj[key])
 
 export default pluck

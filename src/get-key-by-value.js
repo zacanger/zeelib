@@ -2,9 +2,11 @@
 
 /**
  * Get the key for a value
- * `getKeyByValue({ foo: 'bar' }, 'bar')`
+ * @example
+ * getKeyByValue('bar', { foo: 'bar' })
  */
-const getKeyByValue = (object: Object, value: any): ?string =>
+
+const getKeyByValue = (value: any, object: Object): ?string =>
   Object.keys(object).find((key) => object[key] === value)
 
 export default getKeyByValue
