@@ -3,6 +3,8 @@
 /**
  * Shortens a number and adds appropriate suffix
  * (K, M, B)
+ * @example
+ * abbrevNumber(100) // => '100K'
  */
 
 const abbrevNumber = (n: number): string => {

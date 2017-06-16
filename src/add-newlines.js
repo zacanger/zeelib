@@ -2,6 +2,8 @@
 
 /**
  * Adds `\n` to every line
+ * @example
+ * addNewlines('asdf asdf') // => 'asdf asdf\n'
  */
 
 const addNewlines = (str: string): string =>
