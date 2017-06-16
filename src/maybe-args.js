@@ -10,7 +10,7 @@
 
 function maybeArgs (fn: () => any): any {
   return function () {
-    const args = Array.prototype.slice.all(arguments)
+    const args = Array.prototype.slice.call(arguments)
     const invalid = args.some((arg) => arg === null)
     if (invalid) return
     const result = fn.apply(this, args)

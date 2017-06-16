@@ -7,7 +7,10 @@ import each from './each'
  * `filter` for array and object
  */
 
-function filter (list: any[], fn: any): Object | any[] {
+const filter = (
+  fn: () => any,
+  list: any[]
+): Object | any[] => {
   const isArr = isArrayLike(list)
   const filtered = isArr ? [] : {}
 

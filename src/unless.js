@@ -2,11 +2,13 @@
 
 /**
  * Call a function if the condition is falsey
+ * @example
+ * unless(false, () => a) // a
  */
 
 const unless = (
-  cond: any,
-  fn: () => any
+  fn: () => any,
+  cond: any
 ): ?any =>
   !cond ? fn() : null
 

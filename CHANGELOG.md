@@ -1,3 +1,8 @@
+* `0.9.17` &mdash; **2017-06-15** &mdash; *breaking*
+  * Some functions have had their argument order flipped to be more easily
+    curryable. These are:
+    * `filter`
+    * `unless`
 * `0.9.12` &mdash; **2017-06-13** &mdash; *important*
   * `curry` was broken in a weird way since `0.9.6` **2017-06-07**. I'm sorry.
     It's fixed now.
