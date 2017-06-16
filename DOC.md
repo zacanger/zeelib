@@ -36,7 +36,6 @@
 -   [escapeHtml](#escapehtml)
 -   [fixWindowsSlashes](#fixwindowsslashes)
 -   [formatMs](#formatms)
--   [getComplimentaryColors](#getcomplimentarycolors)
 -   [getHashFromDate](#gethashfromdate)
 -   [getHexRegex](#gethexregex)
 -   [getQueryFromSearch](#getqueryfromsearch)
@@ -652,16 +651,6 @@ Format ms into human-readable time
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-## getComplimentaryColors
-
-Get complimentary colors for a given color
-
-**Parameters**
-
--   `s` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** a #rrggbb hex string
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
 ## getHashFromDate
 
 Returns a hash based on current timestamp
@@ -812,8 +801,8 @@ Returns true if the string is contained somewhere in the array
 
 **Parameters**
 
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
 -   `el` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -1622,7 +1611,7 @@ Applys f to arg
 
 **Parameters**
 
--   `f` **any** 
+-   `f` **function (any): any** 
 -   `x` **any** 
 
 Returns **any** 
@@ -1805,8 +1794,7 @@ on each element
 **Parameters**
 
 -   `list` **([array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) \| [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object))** 
--   `fn`  
--   `function`  
+-   `fn` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 
 Returns **[any](#any)** 
 
@@ -1838,8 +1826,8 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 **Parameters**
 
+-   `fn` **function (): any** 
 -   `list` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
--   `fn` **any** 
 
 Returns **([Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) \| [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>)** 
 
@@ -2129,8 +2117,8 @@ Simple `pluck`
 
 **Parameters**
 
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `key` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
@@ -2967,12 +2955,17 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 ## getKeyByValue
 
 Get the key for a value
-`getKeyByValue({ foo: 'bar' }, 'bar')`
 
 **Parameters**
 
--   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 -   `value` **any** 
+-   `object` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+
+**Examples**
+
+```javascript
+getKeyByValue('bar', { foo: 'bar' })
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
@@ -2988,8 +2981,8 @@ Find out how many of a given character is in a string
 
 **Parameters**
 
--   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `el` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -2999,8 +2992,8 @@ Find out how many of a given element is in an array
 
 **Parameters**
 
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `el` **any** 
+-   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -3648,8 +3641,14 @@ Call a function if the condition is falsey
 
 **Parameters**
 
--   `cond` **any** 
 -   `fn` **function (): any** 
+-   `cond` **any** 
+
+**Examples**
+
+```javascript
+unless(false, () => a) // a
+```
 
 Returns **any?** 
 

@@ -7,9 +7,11 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get the key for a value
- * `getKeyByValue({ foo: 'bar' }, 'bar')`
+ * @example
+ * getKeyByValue('bar', { foo: 'bar' })
  */
-var getKeyByValue = function getKeyByValue(object /*: Object*/, value /*: any*/) /*: ?string*/ {
+
+var getKeyByValue = function getKeyByValue(value /*: any*/, object /*: Object*/) /*: ?string*/ {
   return Object.keys(object).find(function (key) {
     return object[key] === value;
   });

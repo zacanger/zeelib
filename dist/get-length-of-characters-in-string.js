@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Find out how many of a given character is in a string
  */
 
-var getLengthOfCharactersInString = function getLengthOfCharactersInString(str /*: string*/, el /*: string*/) /*: number*/ {
+var getLengthOfCharactersInString = function getLengthOfCharactersInString(el /*: string*/, str /*: string*/) /*: number*/ {
   return str.split('').filter(function (c) {
     return c === el;
   }).length;

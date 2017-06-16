@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Applys f to arg
  */
 
-var apply = function apply(f /*: any*/, x /*: any*/) /*: any*/ {
+var apply = function apply(f /*: (any) => any*/, x /*: any*/) /*: any*/ {
   return f(x);
 };
 

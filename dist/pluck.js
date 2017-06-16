@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Simple `pluck`
  */
 
-var pluck = function pluck(arr /*: any[]*/, key /*: string*/) /*: any[]*/ {
+var pluck = function pluck(key /*: string*/, arr /*: any[]*/) /*: any[]*/ {
   return arr.map(function (obj) {
     return obj[key];
   });

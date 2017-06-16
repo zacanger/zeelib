@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var where = function where(arr, f) {
   console.error('`where` is deprecated. Please use `findWhere instead.`');
-  return (0, _filter2.default)(arr, f)[0] || null;
+  return (0, _filter2.default)(f, arr)[0] || null;
 };
 
 exports.default = where;

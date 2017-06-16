@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // @flow
 
-function filter(list /*: any[]*/, fn /*: any*/) /*: Object | any[]*/ {
+var filter = function filter(fn /*: () => any*/, list /*: any[]*/) /*: Object | any[]*/ {
   var isArr = (0, _isArrayLike2.default)(list);
   var filtered = isArr ? [] : {};
 
@@ -34,6 +34,6 @@ function filter(list /*: any[]*/, fn /*: any*/) /*: Object | any[]*/ {
   });
 
   return filtered;
-}
+};
 
 exports.default = filter;

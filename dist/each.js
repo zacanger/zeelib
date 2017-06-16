@@ -37,7 +37,7 @@ var iterateObject = function iterateObject(obj, fn) {
  * and a function, and runs the function
  * on each element
  * @param {array|object} list
- * @param {function}
+ * @param {function} fn
  * @returns {any}
  */
 

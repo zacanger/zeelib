@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Find out how many of a given element is in an array
  */
 
-var getLengthOfItemsInArray = function getLengthOfItemsInArray(arr /*: any[]*/, el /*: any*/) /*: number*/ {
+var getLengthOfItemsInArray = function getLengthOfItemsInArray(el /*: any*/, arr /*: any[]*/) /*: number*/ {
   return arr.filter(function (a) {
     return a === el;
   }).length;

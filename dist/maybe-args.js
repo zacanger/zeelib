@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", {
 
 function maybeArgs(fn /*: () => any*/) /*: any*/ {
   return function () {
-    var args = Array.prototype.slice.all(arguments);
+    var args = Array.prototype.slice.call(arguments);
     var invalid = args.some(function (arg) {
       return arg === null;
     });

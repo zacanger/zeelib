@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Returns true if the string is contained somewhere in the array
  */
 
-var isStringSomewhereInArray = function isStringSomewhereInArray(arr /*: string[]*/, el /*: string*/) /*: bool*/ {
+var isStringSomewhereInArray = function isStringSomewhereInArray(el /*: string*/, arr /*: string[]*/) /*: bool*/ {
   return arr.some(function (a) {
     return el.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(el.toLowerCase());
   });
