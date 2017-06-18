@@ -15,10 +15,12 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 /**
  * Clones an object, leaving out specified keys
  * cred : gh:texastoland
- * `{ key, ...clone } = source`
+ * @example
+ * cloneWithout({ a: 1, b: 2 }, 'a') // => { b: 2 }
+ * cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
  */
 
-var cloneWithout = function cloneWithout(source /*: Object*/) /*: any*/ {
+var cloneWithout = function cloneWithout(source /*: Object*/) /*: Object*/ {
   for (var _len = arguments.length, keys = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     keys[_key - 1] = arguments[_key];
   }

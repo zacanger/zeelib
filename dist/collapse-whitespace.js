@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Collapses consecutive whitespace to a single space
+ * @example
+ * collapseWhitespace('a\n\r\t\nb') // => 'a b'
  */
 
 var collapseWhitespace = function collapseWhitespace(str /*: string*/) /*: string*/ {

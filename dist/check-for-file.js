@@ -12,6 +12,8 @@ var _path = require('path');
 
 /**
  * Returns bool based on if passed path exists
+ * @example
+ * checkForFile('./foo') // => bool
  */
 
 var checkForFile = function checkForFile(filePath /*: string*/) /*: bool*/ {

@@ -2,6 +2,8 @@
 
 /**
  * `cddr`
+ * @example
+ * cddr([ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
 import cdr from './cdr'

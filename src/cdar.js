@@ -2,6 +2,8 @@
 
 /**
  * `cdar`
+ * @example
+ * cdar([ [ 1, 2 ], 3 ]) // => 2
  */
 
 import car from './car'

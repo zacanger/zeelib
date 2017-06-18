@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * `window.atob` for node and browser
+ * @example
+ * atob('YXNkZg==') // => 'asdf'
  */
 
 var atob = function atob(str /*: string*/) /*: string*/ {

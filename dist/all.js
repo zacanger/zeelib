@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if all items pass predicate fn
+ * @example
+ * all(lessThanThree, [ 1, 2 ]) // => true
+ * all(lessThanThree, [ 1, 2, 3 ]) // => false
  */
 
 var all = (0, _curry2.default)(function (predicate, list) /*: bool*/ {

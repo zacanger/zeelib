@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Adds `\n` to every line
+ * @example
+ * addNewlines('asdf asdf') // => 'asdf asdf\n'
  */
 
 var addNewlines = function addNewlines(str /*: string*/) /*: string*/ {

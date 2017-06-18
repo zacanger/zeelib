@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Collapses multiple newlines to two
+ * @example
+ * collapseNewlines('\n\n\n\n') // => '\n\n'
  */
 
 var collapseNewlines = function collapseNewlines(str /*: string*/) /*: string*/ {

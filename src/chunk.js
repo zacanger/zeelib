@@ -2,6 +2,8 @@
 
 /**
  * Splits an array into chunks
+ * @example
+ * chunk([1, 2, 3, 4 ], 2) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
 const chunk = (arr: any[], n: number): any[] => {

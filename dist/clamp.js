@@ -1,17 +1,12 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Gets the number in the middle
- */
-
-var clamp = function clamp(l /*: number*/) {
-  return function (h /*: number*/) {
-    return function (x /*: number*/) /*: number*/ {
+var clamp = function clamp(l) {
+  return function (h) {
+    return function (x) {
+      console.error('`clamp is deprecated`');
       return x > h ? h : x < l ? l : x;
     };
   };

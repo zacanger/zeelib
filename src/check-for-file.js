@@ -2,6 +2,8 @@
 
 /**
  * Returns bool based on if passed path exists
+ * @example
+ * checkForFile('./foo') // => bool
  */
 
 import { statSync } from 'fs'

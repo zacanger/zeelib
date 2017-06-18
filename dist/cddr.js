@@ -16,6 +16,8 @@ var cddr = function cddr(a /*: any[]*/) /*: any*/ {
 
 /**
  * `cddr`
+ * @example
+ * cddr([ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
 exports.default = cddr;

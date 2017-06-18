@@ -167,7 +167,6 @@
 -   [id](#id)
 -   [init](#init)
 -   [invoke](#invoke)
--   [juxt](#juxt)
 -   [last](#last)
 -   [length](#length)
 -   [lines](#lines)
@@ -251,7 +250,6 @@
 -   [average](#average)
 -   [calc](#calc)
 -   [chunk](#chunk)
--   [clamp](#clamp)
 -   [cloneWithout](#clonewithout)
 -   [compact](#compact)
 -   [copyWithout](#copywithout)
@@ -396,6 +394,12 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 `window.btoa` for node and browser
 
+**Examples**
+
+```javascript
+btoa('asdf') // => 'YXNkZg=='
+```
+
 ## getLengthOfElements
 
 Find out how many of a matching element is on the page
@@ -485,6 +489,12 @@ Trims a string to just abbreved caps
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+abbrev('Zacary Erik Anger') // => 'ZEA'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## abbrevNumber
@@ -496,11 +506,18 @@ Shortens a number and adds appropriate suffix
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+abbrevNumber(10000) // => '100K'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## addCommasToNumber
 
 Adds commas in correct place in number
+addCommasToNumber(1000000) // => '1,000,000'
 
 **Parameters**
 
@@ -516,6 +533,12 @@ Adds `\n` to every line
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+addNewlines('asdf asdf') // => 'asdf asdf\n'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## alphaNumericOnly
@@ -525,6 +548,12 @@ Returns only alphanumeric characters
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+alphaNumericOnly('asdf1234!@#$') // => 'asdf1234'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -536,6 +565,12 @@ Takes a camelCase string and returns one in lisp-case
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+camelCaseToLispCase('fooBar') // => 'foo-bar'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## camelCaseToPascalCase
@@ -545,6 +580,12 @@ Takes a camelCase string and returns one in PascalCase
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+camelCaseToPascalCase('fooBar') // => 'FooBar'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -556,6 +597,12 @@ Takes a camelCase string and returns one in snake_case
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+camelCaseToSnakeCase('fooBar') // => 'foo_bar'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## capitalizeFirstChar
@@ -565,6 +612,12 @@ Capitalizes the first character of string
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+capitalizeFirstChar('things and stuff') // => 'Things and stuff'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -576,6 +629,12 @@ Collapses multiple newlines to two
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+collapseNewlines('\n\n\n\n') // => '\n\n'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## collapseWhitespace
@@ -585,6 +644,12 @@ Collapses consecutive whitespace to a single space
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+collapseWhitespace('a\n\r\t\nb') // => 'a b'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1208,11 +1273,23 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+atob('YXNkZg==') // => 'asdf'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## statSync
 
 Returns bool based on if passed path exists
+
+**Examples**
+
+```javascript
+checkForFile('./foo') // => bool
+```
 
 ## colorize
 
@@ -1582,6 +1659,13 @@ Returns **void**
 
 Returns true if all items pass predicate fn
 
+**Examples**
+
+```javascript
+all(lessThanThree, [ 1, 2 ]) // => true
+all(lessThanThree, [ 1, 2, 3 ]) // => false
+```
+
 ## and
 
 Returns false if any in input array is false
@@ -1589,6 +1673,13 @@ Returns false if any in input array is false
 **Parameters**
 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+and([ 1, 2, 3 ]) // => true
+and([ 1, 2, 3, false ]) // => false
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -1603,6 +1694,13 @@ Returns true if any passes predicate
 -   `predicate` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 -   `array` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** of anything
 
+**Examples**
+
+```javascript
+any(lessThanThree, [ 1, 2, 3 ]) // => true
+any(lessThanThree, [ 4, 5, 6 ]) // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## apply
@@ -1614,6 +1712,12 @@ Applys f to arg
 -   `f` **function (any): any** 
 -   `x` **any** 
 
+**Examples**
+
+```javascript
+apply(lessThanThree, 1) // => true
+```
+
 Returns **any** 
 
 ## caar
@@ -1623,6 +1727,12 @@ Returns **any**
 **Parameters**
 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+caar([ [ 1 ] ]) // => 1
+```
 
 Returns **any** 
 
@@ -1634,6 +1744,12 @@ Returns **any**
 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+**Examples**
+
+```javascript
+cadr([ 1, 2, 3 ]) // => 2
+```
+
 Returns **any** 
 
 ## car
@@ -1644,15 +1760,33 @@ Returns **any**
 
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+**Examples**
+
+```javascript
+car([ 1, 2, 3 ]) // => 1
+```
+
 Returns **any** 
 
 ## car
 
 `cdar`
 
+**Examples**
+
+```javascript
+cdar([ [ 1, 2 ], 3 ]) // => 2
+```
+
 ## cdr
 
 `cddr`
+
+**Examples**
+
+```javascript
+cddr([ 1, 2, 3, 4 ]) // => [ 3, 4 ]
+```
 
 ## cdr
 
@@ -1661,6 +1795,12 @@ Returns **any**
 **Parameters**
 
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+cdr([ 1, 2, 3, 4 ]) // => [ 2, 3, 4 ]
+```
 
 Returns **any** 
 
@@ -1671,6 +1811,12 @@ Clones anything
 **Parameters**
 
 -   `obj` **[any](#any)** 
+
+**Examples**
+
+```javascript
+clone(1) // => 1
+```
 
 Returns **[any](#any)** 
 
@@ -1947,7 +2093,7 @@ Invoke a function on any number of passed args
 
 Returns **any** 
 
-## juxt
+## 
 
 Like Clojure's `juxt`
 Takes a list of functions and returns a fn that is the juxtaposition
@@ -2367,6 +2513,13 @@ returns the value otherwise.
 -   `val` **any** 
 -   `name` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
+**Examples**
+
+```javascript
+checkIs('function', () => {}) // => [Function]
+checkIs('function', 2) // => Error
+```
+
 Returns **R** 
 
 ## is
@@ -2767,6 +2920,12 @@ Makes pretty 'n whatevers ago' string
 
 -   `d` **[Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)** 
 
+**Examples**
+
+```javascript
+ago(new Date('2007-98-17')) // => '9.75 years ago'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## assert
@@ -2777,7 +2936,15 @@ and asserts truthiness
 **Parameters**
 
 -   `exp` **any** 
--   `message` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?**  (optional, default `'Assertion Failed:'`)
+-   `message` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `'Assertion Failed:'`)
+
+**Examples**
+
+```javascript
+assert(false) // => Error: Assertion Failed: false
+assert(true) // => undefined
+assert(false, 'NOPE') // => Error: NOPE false
+```
 
 Returns **res** 
 
@@ -2788,6 +2955,12 @@ Averages a list of numbers
 **Parameters**
 
 -   `xs` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>** 
+
+**Examples**
+
+```javascript
+average([ 2, 4, 6, 8 ]) // => 5
+```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -2800,6 +2973,12 @@ and returns a function that takes any number of arguments
 
 -   `op` **function ([number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)): [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+calc(add)(1, 2, 3) // => 6
+```
+
 ## chunk
 
 Splits an array into chunks
@@ -2809,28 +2988,32 @@ Splits an array into chunks
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+chunk([1, 2, 3, 4 ], 2) // => [ [ 1, 2 ], [ 3, 4 ] ]
+```
+
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-## clamp
-
-Gets the number in the middle
-
-**Parameters**
-
--   `l` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## cloneWithout
 
 Clones an object, leaving out specified keys
 cred : gh:texastoland
-`{ key, ...clone } = source`
 
 **Parameters**
 
 -   `source` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `keys` **...any** 
+-   `keys` **...[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
 
-Returns **any** 
+**Examples**
+
+```javascript
+cloneWithout({ a: 1, b: 2 }, 'a') // => { b: 2 }
+cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
+```
+
+Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 ## compact
 

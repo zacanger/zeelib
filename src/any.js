@@ -3,6 +3,9 @@
  * @param {function} predicate
  * @param {array} array of anything
  * @returns {boolean}
+ * @example
+ * any(lessThanThree, [ 1, 2, 3 ]) // => true
+ * any(lessThanThree, [ 4, 5, 6 ]) // => false
  */
 
 const any = (f, a) => {

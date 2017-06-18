@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * `caar`
+ * @example
+ * caar([ [ 1 ] ]) // => 1
  */
 
 var caar = function caar(a /*: any[]*/) /*: any*/ {

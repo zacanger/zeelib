@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Applys f to arg
+ * @example
+ * apply(lessThanThree, 1) // => true
  */
 
 var apply = function apply(f /*: (any) => any*/, x /*: any*/) /*: any*/ {

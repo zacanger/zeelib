@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Takes a camelCase string and returns one in PascalCase
+ * @example
+ * camelCaseToPascalCase('fooBar') // => 'FooBar'
  */
 
 var camelCaseToPascalCase = function camelCaseToPascalCase(str /*: string*/) /*: string*/ {

@@ -24,6 +24,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Clones anything
  * @param {any} obj
  * @returns {any}
+ * @example
+ * clone(1) // => 1
  */
 
 var clone = function clone(obj) {
