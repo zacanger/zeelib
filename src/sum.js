@@ -2,6 +2,8 @@
 
 /**
  * Sum an array of numbers
+ * @example
+ * sum([ 1, 2, 3, 4 ]) // => 10
  */
 
 const sum = (nums: number[]): number =>

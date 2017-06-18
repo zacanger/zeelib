@@ -2,6 +2,8 @@
 
 /**
  * snake_case to camelCase
+ * @example
+ * snakeCaseToCamelCase('foo_bar') // => 'fooBar'
  */
 
 const snakeCaseToCamelCase = (str: string): string =>

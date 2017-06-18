@@ -3,6 +3,8 @@
 
 /**
  * Strip punctuation from string
+ * @example
+ * stripPunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
  */
 
 const stripPunctuation = (str: string): string =>
