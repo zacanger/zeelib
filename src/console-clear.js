@@ -1,12 +1,15 @@
 // @flow
 
+import getIsNode from './get-is-node'
 /**
  * `console.clear` for Node and browser
+ * @example
+ * consoleClear() // => undefined
  */
 
 const consoleClear = (): void =>
-  typeof console.clear === 'function'
-    ? console.clear()
-    : console.log('\x1Bc')
+  getIsNode()
+    ? console.log('\x1Bc')
+    : console.clear()
 
 export default consoleClear

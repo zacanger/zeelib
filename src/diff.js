@@ -2,6 +2,8 @@
 
 /**
  * Diff two arrays
+ * @example
+ * diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
  */
 
 const diff = (a: any[], b: ?any[]): any[] => {

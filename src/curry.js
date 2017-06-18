@@ -5,6 +5,9 @@
  * @param {function} fn
  * @param {any} args
  * @returns {function}
+ * @example
+ * const addThree = (a, b, c) => a + b + c
+ * curry(addThree)(1)(1)(1) // => 3
  */
 
 const curry = function (fn) {

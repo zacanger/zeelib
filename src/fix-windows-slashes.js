@@ -3,6 +3,8 @@
 /**
  * Fix windows-style path sep
  * cred: gh:sindresorhus/slash
+ * @example
+ * fixWindowsSlashes('C:\\Windows\\Something') // => 'C:/Windows/Something'
  */
 
 const fixWindowsSlashes = (str: string): string => {

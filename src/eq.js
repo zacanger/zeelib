@@ -2,6 +2,9 @@
 
 /**
  * `eq`
+ * @example
+ * eq(1, 1) // => true
+ * eq({ a: 'b' }, { b: 'a' }) // => false
  */
 
 const eq = (a: any, b: any): bool =>

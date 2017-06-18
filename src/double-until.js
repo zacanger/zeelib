@@ -2,7 +2,8 @@
 
 /**
  * Double an array until it's n long
- * `doubleUntil(10)[ 'hi' ]`
+ * @example
+ * doubleUntil(2)([ 'hi' ]) // => [ 'hi', 'hi' ]
  */
 
 const doubleUntil = (minSize: number = 0) =>

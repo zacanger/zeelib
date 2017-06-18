@@ -2,6 +2,8 @@
 
 /**
  * Like Haskell's `drop`
+ * @example
+ * drop(2, [ 1, 2, 3 ]) // => 3
  */
 
 const drop = (n: number, arr: any[]): any[] => {
