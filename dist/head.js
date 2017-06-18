@@ -3,9 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-var head = function head(arr /*: any[]*/) /*: any*/ {
+var head = function head(arr) {
   console.error('`head` is deprecated. Please use `car` instead.');
   return arr[0];
 };

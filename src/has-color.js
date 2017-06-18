@@ -10,6 +10,8 @@ const isColor = (): bool => {
 
 /**
  * Returns true if the current terminal supports color
+ * @example
+ * hasColor()
  */
 
 const hasColor: bool = isWin() || isColor()

@@ -2,6 +2,9 @@
 
 /**
  * Get the value of a cookie by name
+ * @example
+ * document.cookie = 'foo=bar'
+ * getCookie('foo') // => 'bar'
  */
 
 const getCookie = (name: string): ?string => {

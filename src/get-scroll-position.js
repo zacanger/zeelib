@@ -7,6 +7,8 @@ type S = {
 
 /**
  * Returns current scroll position
+ * @example
+ * getScrollPosition() // => { scrollX: number, scrollY: number }
  */
 
 const getScrollPosition = (): S =>

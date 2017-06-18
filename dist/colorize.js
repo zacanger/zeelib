@@ -12,8 +12,7 @@ var _util = require('util');
  * bold, italic, underline, inverse,
  * white, grey, black, blue, cyan, green, magenta, red, yellow
  * @example
- * const c = require('./color')
- * console.log(c.bold(c.blue('foo')))
+ * console.log(colorize.bold(colorize.blue('foo'))) // => '\'\\u001b[34mfoo\\u001b[39m\''
  */
 
 var colorize = function colorize(color /*: string*/, text /*: string*/) /*: string*/ {

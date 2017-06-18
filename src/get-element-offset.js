@@ -7,6 +7,8 @@ type t = {
 
 /**
  * Takes an element and retuns its offset from top left
+ * @example
+ * getElementOffset(document.getElementById('foo')) // => { top: number, left: number }
  */
 
 const getElementOffset = (el: HTMLElement): t => {

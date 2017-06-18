@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Get current terminal rows
  * @returns {number} rows
+ * @example
+ * getTerminalRows()
  */
 
 var getTerminalRows = function getTerminalRows() {

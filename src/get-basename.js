@@ -2,8 +2,10 @@
 
 import { parse } from 'path'
 
-/*
+/**
  * `basename` for Node
+ * @example
+ * getBasename() // => string
  */
 
 const getBasename = (str: string): string =>

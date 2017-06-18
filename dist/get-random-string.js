@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns random string of n length (defaults to 8)
+ * @example
+ * getRandomString()
+ * getRandomString(32)
  */
 
 var getRandomString = function getRandomString() /*: string*/ {

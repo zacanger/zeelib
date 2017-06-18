@@ -2,6 +2,8 @@
 
 /**
  * Returns a timestamp for now
+ * @example
+ * getNow()
  */
 
 const getNow = (): () => number =>

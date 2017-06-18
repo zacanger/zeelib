@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * `console.dir` with colors by default in Node
+ * @example
+ * dir({ foo: 'bar' }) // => { foo: 'bar' }
  */
 
 var dir = function dir(obj /*: Object*/) /*: void*/ {

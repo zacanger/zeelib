@@ -2,6 +2,8 @@
 
 /**
  * Returns true if code is in Node
+ * @example
+ * getIsNode()
  */
 
 const getIsNode = (): bool =>

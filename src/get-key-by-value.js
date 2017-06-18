@@ -3,7 +3,7 @@
 /**
  * Get the key for a value
  * @example
- * getKeyByValue('bar', { foo: 'bar' })
+ * getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
  */
 
 const getKeyByValue = (value: any, object: Object): ?string =>

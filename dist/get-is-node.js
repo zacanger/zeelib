@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if code is in Node
+ * @example
+ * getIsNode()
  */
 
 var getIsNode = function getIsNode() /*: bool*/ {

@@ -5,6 +5,8 @@ import getIsBrowser from './get-is-browser'
 /**
  * Returns title of either window or document, or process,
  * depending on environment
+ * @example
+ * getTitle()
  */
 
 const getTitle = (): string =>

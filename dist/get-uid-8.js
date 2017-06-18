@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns a random uid of length 8
+ * @example
+ * getUid8()
  */
 
 var getUid8 = function getUid8() /*: string*/ {

@@ -2,6 +2,8 @@
 
 /**
  * Returns true if code is in browser
+ * @example
+ * getIsBrowser()
  */
 
 const getIsBrowser = (): bool =>

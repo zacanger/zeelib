@@ -2,6 +2,8 @@
 
 /**
  * Format ms into human-readable time
+ * @example
+ * formatMs(1000000000) // => '277:46:40'
  */
 
 const formatMs = (ms: number): string => {

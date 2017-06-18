@@ -4,9 +4,11 @@ import { execSync } from 'child_process'
 
 /**
  * Get free disk space
+ * @example
+ * getFreeDisk()
  */
 
-const getDiskUsage = (): number => {
+const getFreeDisk = (): number => {
   const lines = execSync('df -k /').toString().trim().split('\n')
   const strDiskInfo = lines[lines.length - 1].replace(/[\s\n\r]+/g, ' ')
   const diskInfo = strDiskInfo.split(' ')
@@ -16,4 +18,4 @@ const getDiskUsage = (): number => {
   return freeDisk
 }
 
-export default getDiskUsage
+export default getFreeDisk

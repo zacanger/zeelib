@@ -8,6 +8,8 @@ var _os = require('os');
 
 /**
  * Get memory usage
+ * @example
+ * getMemoryUsage()
  */
 
 var getMemoryUsage = function getMemoryUsage() /*: number*/ {

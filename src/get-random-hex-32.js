@@ -2,6 +2,8 @@
 
 /**
  * Returns random hex 32
+ * @example
+ * getRandomHex32()
  */
 
 const getRandomHex32 = (hexN: string = ''): string =>

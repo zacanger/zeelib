@@ -15,6 +15,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  * @param {function} fn
  * @param {any} args
  * @returns {function}
+ * @example
+ * const addThree = (a, b, c) => a + b + c
+ * curry(addThree)(1)(1)(1) // => 3
  */
 
 var curry = function curry(fn) {

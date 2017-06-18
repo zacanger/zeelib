@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Get the key for a value
  * @example
- * getKeyByValue('bar', { foo: 'bar' })
+ * getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
  */
 
 var getKeyByValue = function getKeyByValue(value /*: any*/, object /*: Object*/) /*: ?string*/ {

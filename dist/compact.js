@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns an array with all falsey values removed
+ * @example
+ * compact([ 'a', null, '', 2]) // => [ 'a', 2 ]
  */
 
 var compact = function compact(a /*: any[]*/) /*: any[]*/ {

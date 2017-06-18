@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns a timestamp for now
+ * @example
+ * getNow()
  */
 
 var getNow = function getNow() /*: () => number*/ {

@@ -2,6 +2,8 @@
 
 /**
  * Returns a hash based on current timestamp
+ * @example
+ * getHashFromDate()
  */
 
 const getHashFromDate = (): string =>

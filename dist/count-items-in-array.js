@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get an object of items in an array with count
+ * @example
+ * countItemsInArray([ 1, 1, 2, 3, 4 ]) // => { '1': 2, '2': 1, '3': 1, '4': 1 }
  */
 
 var countItemsInArray = function countItemsInArray(arr /*: any[]*/) /*: Object*/ {

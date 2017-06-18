@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * `process.exit` that optionally takes an exit code
+ * @example
+ * exit(1)
  */
 
 var exit = function exit() /*: void*/ {

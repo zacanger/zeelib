@@ -6,7 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 // @flow
 
 /**
- * `fn -> a -> b -> fn b a`
+ * Flips order of received arguments and calls f.
+ * @example
+ * const minus = (a) => (b) => a - b
+ * minus(2)(1) // => 1
+ * flip(minus)(2)(1) // => -1
  */
 
 var flip = function flip(f /*: () => any*/) /*: any*/ {

@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.clamp = exports.where = exports.uniqAndFlatten = exports.tinyRouter = exports.tail = exports.shallowCopy = exports.objectClone = exports.objectAssign = exports.notContains = exports.newlinesToSpaces = exports.moustache = exports.keys = exports.isType = exports.isObjectEqual = exports.isObjectEmpty = exports.isInteger = exports.isEmptyString = exports.imul = exports.head = exports.getFunctionArguments = exports.getComplimentaryColors = exports.getBrokenImage = exports.deepCopy = exports.curry4 = exports.curry3 = exports.curry2 = exports.copy = exports.contains = exports.xor = exports.unless = exports.uniq = exports.tryExecNTimes = exports.transposeFlat = exports.transpose = exports.toMap = exports.timeTest = exports.throwError = exports.throttle = exports.tap = exports.sum = exports.store = exports.splitStringOn = exports.slice = exports.sleepAsync = exports.sleep = exports.sizeOf = exports.shuffle = exports.setTitle = exports.scaleToFit = exports.safeGet = exports.reverseSign = exports.reverseDigits = exports.range = undefined;
-exports.promiseGuard = exports.product = exports.objectInherit = exports.objectFromEntries = exports.noop = exports.noSwitch = exports.nco = exports.minimum = exports.merge = exports.maybeArgs = exports.maximum = exports.makeThunk = exports.lte = exports.lt = exports.logWithTimestamp = exports.lexSort = exports.levenshteinDistance = exports.lesser = exports.leftPad = exports.leastCommonMultiple = exports.invoker = exports.intersection = exports.inherits = exports.gte = exports.gt = exports.greatestCommonDivisor = exports.greater = exports.getTransparentGif = exports.getTitle = exports.getOrdinal = exports.getNow = exports.getNiceTime = exports.getMethodsOf = exports.getLengthOfItemsInArray = exports.getLengthOfCharactersInString = exports.getKeyCodes = exports.getKeyByValue = exports.generateSequence = exports.flattenAndUniq = exports.flatten = exports.filterFloat = exports.doubleUntil = exports.dir = exports.diff = exports.debounce = exports.countItemsInArray = exports.copyWithout = exports.compact = exports.cloneWithout = exports.chunk = exports.calc = exports.average = exports.assert = exports.ago = exports.typeOf = exports.toType = exports.toObject = exports.toBoolInverse = exports.toBool = exports.objectToString = exports.isValidRegex = exports.isValidDate = exports.isUndefined = exports.isSymbol = exports.isString = exports.isSet = exports.isRegExp = exports.isPromise = exports.isPrimitive = exports.isPow2 = exports.isPositive = exports.isOdd = exports.isObject = exports.isNumber = exports.isNullOrUndefined = exports.isNull = exports.isNodeList = exports.isNegative = exports.isNan = exports.isMap = exports.isJson = exports.isFunction = exports.isFloat = exports.isEven = exports.isError = exports.isEmpty = exports.isDomElement = exports.isDefined = exports.isDate = exports.isBuffer = exports.isBoolean = exports.isArrayLike = exports.isArray = exports.is = exports.checkIs = exports.zipWith3 = exports.zipWith = exports.zipThen = exports.zip3 = exports.zip = undefined;
-exports.words = exports.unzip3 = exports.unzip = exports.unwords = exports.unlines = exports.unfold = exports.uncurry = exports.takeWhile = exports.takeLast = exports.take = exports.splitAt = exports.span = exports.reverse = exports.replicate = exports.reduce = exports.propEq = exports.pluck = exports.pipe = exports.pick = exports.pairWith = exports.pair = exports.or = exports.once = exports.nth = exports.notElem = exports.not = exports.mix = exports.memoize = exports.map = exports.list = exports.lines = exports.length = exports.last = exports.juxt = exports.invoke = exports.init = exports.id = exports.foldr1 = exports.foldr = exports.foldl1 = exports.foldl = exports.flip = exports.findWhere = exports.findIndex = exports.filter = exports.eq = exports.elem = exports.each = exports.dropWhile = exports.dropWhere = exports.drop = exports.curry = exports.constant = exports.cons = exports.concatMap = exports.concat = exports.compose = exports.collectBy = exports.clone = exports.cdr = exports.cddr = exports.cdar = exports.car = exports.cadr = exports.caar = exports.apply = exports.any = exports.and = exports.all = exports.writeJsonSync = exports.writeJson = exports.writeError = exports.watch = exports.timeRequire = exports.termPrompt = exports.resolveFiles = exports.readJsonSync = exports.readJson = exports.readFileSync = exports.open = exports.notFound = exports.makeFileIfNoFile = exports.logWithInfo = exports.isSymLink = exports.isInstalled = exports.isFile = exports.isDirectory = exports.hasColor = exports.getUserShell = exports.getUserHome = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalColumns = exports.getRelativePath = exports.getPlatform = exports.getNodeModules = exports.getMemoryUsage = exports.getLoadAverage = exports.getIsNode = exports.getHostname = undefined;
-exports.getHashFromSystem = exports.getFreeMemory = exports.getFreeDisk = exports.getFileExt = exports.getBasename = exports.getArgs = exports.findPort = exports.exit = exports.execute = exports.consoleClear = exports.colorize = exports.checkForFile = exports.btoa = exports.atob = exports.unescapeHtml = exports.truncate = exports.trimSpaces = exports.trimHash = exports.toHttps = exports.toHttp = exports.stripSubdomain = exports.stripPunctuation = exports.stripHref = exports.snakeCaseToPascalCase = exports.snakeCaseToLispCase = exports.snakeCaseToCamelCase = exports.safeDecodeURIComponent = exports.safeDecodeURI = exports.rot13 = exports.rgbToHex = exports.removeWhitespace = exports.removeTags = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAscii = exports.removeNonAlphaNumeric = exports.removeNonAlpha = exports.removeNewlines = exports.randomColor = exports.pascalCaseToSnakeCase = exports.pascalCaseToLispCase = exports.pascalCaseToCamelCase = exports.normalizeText = exports.normalizeColor = exports.normalizeClassname = exports.minifyString = exports.lispCaseToSnakeCase = exports.lispCaseToPascalCase = exports.lispCaseToCamelCase = exports.lightenOrDarken = exports.isValidHex = exports.isValidEmail = exports.isStringSomewhereInArray = exports.isMobileOrTablet = exports.isHexBased = exports.isEmoji = exports.isAlphaNumeric = exports.inlineString = exports.indenter = exports.getUid8 = exports.getUid4 = exports.getRegexFlags = exports.getRandomString = exports.getRandomHex32 = exports.getQueryFromSearch = exports.getHexRegex = exports.getHashFromDate = exports.formatMs = exports.fixWindowsSlashes = exports.escapeHtml = exports.escapeForXpath = exports.cssToJson = exports.combineRegex = exports.collapseWhitespace = exports.collapseNewlines = exports.capitalizeFirstChar = exports.camelCaseToSnakeCase = exports.camelCaseToPascalCase = exports.camelCaseToLispCase = exports.alphaNumericOnly = exports.addNewlines = exports.addCommasToNumber = exports.abbrevNumber = exports.abbrev = exports.setAttribute = exports.scrollTop = exports.restoreScrollPosition = exports.removeAttribute = exports.preventDefault = exports.getWidth = exports.getScrollBarWidth = exports.getReferrer = exports.getLengthOfElements = exports.getIsBrowser = exports.getHeight = exports.getElementText = exports.getElementPosition = exports.getElementOffset = exports.getCookie = exports.eventOnce = undefined;
+exports.dropWhere = exports.cssToJson = exports.copyWithout = exports.clamp = exports.where = exports.uniqAndFlatten = exports.tinyRouter = exports.tail = exports.shallowCopy = exports.objectClone = exports.objectAssign = exports.notContains = exports.newlinesToSpaces = exports.moustache = exports.keys = exports.isType = exports.isObjectEqual = exports.isObjectEmpty = exports.isInteger = exports.isEmptyString = exports.imul = exports.head = exports.getFunctionArguments = exports.getComplimentaryColors = exports.getBrokenImage = exports.deepCopy = exports.curry4 = exports.curry3 = exports.curry2 = exports.copy = exports.contains = exports.xor = exports.unless = exports.uniq = exports.tryExecNTimes = exports.transposeFlat = exports.transpose = exports.toMap = exports.timeTest = exports.throwError = exports.throttle = exports.tap = exports.sum = exports.store = exports.splitStringOn = exports.slice = exports.sleepAsync = exports.sleep = exports.sizeOf = exports.shuffle = exports.setTitle = exports.scaleToFit = exports.safeGet = undefined;
+exports.reverseSign = exports.reverseDigits = exports.range = exports.promiseGuard = exports.product = exports.objectInherit = exports.objectFromEntries = exports.noop = exports.noSwitch = exports.nco = exports.minimum = exports.merge = exports.maybeArgs = exports.maximum = exports.makeThunk = exports.lte = exports.lt = exports.logWithTimestamp = exports.lexSort = exports.levenshteinDistance = exports.lesser = exports.leftPad = exports.leastCommonMultiple = exports.invoker = exports.intersection = exports.inherits = exports.gte = exports.gt = exports.greatestCommonDivisor = exports.greater = exports.getTransparentGif = exports.getTitle = exports.getOrdinal = exports.getNow = exports.getNiceTime = exports.getMethodsOf = exports.getLengthOfItemsInArray = exports.getLengthOfCharactersInString = exports.getKeyCodes = exports.getKeyByValue = exports.generateSequence = exports.flattenAndUniq = exports.flatten = exports.filterFloat = exports.doubleUntil = exports.dir = exports.diff = exports.debounce = exports.countItemsInArray = exports.compact = exports.cloneWithout = exports.chunk = exports.calc = exports.average = exports.assert = exports.ago = exports.typeOf = exports.toType = exports.toObject = exports.toBoolInverse = exports.toBool = exports.objectToString = exports.isValidRegex = exports.isValidDate = exports.isUndefined = exports.isSymbol = exports.isString = exports.isSet = exports.isRegExp = exports.isPromise = exports.isPrimitive = exports.isPow2 = exports.isPositive = exports.isOdd = exports.isObject = exports.isNumber = exports.isNullOrUndefined = exports.isNull = exports.isNodeList = exports.isNegative = exports.isNan = exports.isMap = exports.isJson = exports.isFunction = exports.isFloat = exports.isEven = exports.isError = exports.isEmpty = exports.isDomElement = exports.isDefined = exports.isDate = exports.isBuffer = exports.isBoolean = exports.isArrayLike = exports.isArray = exports.is = exports.checkIs = exports.zipWith3 = exports.zipWith = exports.zipThen = undefined;
+exports.zip3 = exports.zip = exports.words = exports.unzip3 = exports.unzip = exports.unwords = exports.unlines = exports.unfold = exports.uncurry = exports.takeWhile = exports.takeLast = exports.take = exports.splitAt = exports.span = exports.reverse = exports.replicate = exports.reduce = exports.propEq = exports.pluck = exports.pipe = exports.pick = exports.pairWith = exports.pair = exports.or = exports.once = exports.nth = exports.notElem = exports.not = exports.mix = exports.memoize = exports.map = exports.list = exports.lines = exports.length = exports.last = exports.juxt = exports.invoke = exports.init = exports.id = exports.foldr1 = exports.foldr = exports.foldl1 = exports.foldl = exports.flip = exports.findWhere = exports.findIndex = exports.filter = exports.eq = exports.elem = exports.each = exports.dropWhile = exports.drop = exports.curry = exports.constant = exports.cons = exports.concatMap = exports.concat = exports.compose = exports.collectBy = exports.clone = exports.cdr = exports.cddr = exports.cdar = exports.car = exports.cadr = exports.caar = exports.apply = exports.any = exports.and = exports.all = exports.writeJsonSync = exports.writeJson = exports.writeError = exports.watch = exports.timeRequire = exports.termPrompt = exports.resolveFiles = exports.readJsonSync = exports.readJson = exports.readFileSync = exports.open = exports.notFound = exports.makeFileIfNoFile = exports.logWithInfo = exports.isSymLink = exports.isInstalled = exports.isFile = exports.isDirectory = exports.hasColor = exports.getUserShell = exports.getUserHome = exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalColumns = exports.getRelativePath = exports.getPlatform = exports.getNodeModules = exports.getMemoryUsage = exports.getLoadAverage = exports.getIsNode = undefined;
+exports.getHostname = exports.getHashFromSystem = exports.getFreeMemory = exports.getFreeDisk = exports.getFileExt = exports.getBasename = exports.getArgs = exports.findPort = exports.exit = exports.execute = exports.consoleClear = exports.colorize = exports.checkForFile = exports.btoa = exports.atob = exports.unescapeHtml = exports.truncate = exports.trimSpaces = exports.trimHash = exports.toHttps = exports.toHttp = exports.stripSubdomain = exports.stripPunctuation = exports.stripHref = exports.snakeCaseToPascalCase = exports.snakeCaseToLispCase = exports.snakeCaseToCamelCase = exports.safeDecodeURIComponent = exports.safeDecodeURI = exports.rot13 = exports.rgbToHex = exports.removeWhitespace = exports.removeTags = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAscii = exports.removeNonAlphaNumeric = exports.removeNonAlpha = exports.removeNewlines = exports.randomColor = exports.pascalCaseToSnakeCase = exports.pascalCaseToLispCase = exports.pascalCaseToCamelCase = exports.normalizeText = exports.normalizeColor = exports.normalizeClassname = exports.minifyString = exports.lispCaseToSnakeCase = exports.lispCaseToPascalCase = exports.lispCaseToCamelCase = exports.lightenOrDarken = exports.isValidHex = exports.isValidEmail = exports.isStringSomewhereInArray = exports.isMobileOrTablet = exports.isHexBased = exports.isEmoji = exports.isAlphaNumeric = exports.inlineString = exports.indenter = exports.getUid8 = exports.getUid4 = exports.getRegexFlags = exports.getRandomString = exports.getRandomHex32 = exports.getQueryFromSearch = exports.getHexRegex = exports.getHashFromDate = exports.formatMs = exports.fixWindowsSlashes = exports.escapeHtml = exports.escapeForXpath = exports.combineRegex = exports.collapseWhitespace = exports.collapseNewlines = exports.capitalizeFirstChar = exports.camelCaseToSnakeCase = exports.camelCaseToPascalCase = exports.camelCaseToLispCase = exports.alphaNumericOnly = exports.addNewlines = exports.addCommasToNumber = exports.abbrevNumber = exports.abbrev = exports.setAttribute = exports.scrollTop = exports.restoreScrollPosition = exports.removeAttribute = exports.preventDefault = exports.getWidth = exports.getScrollBarWidth = exports.getReferrer = exports.getLengthOfElements = exports.getIsBrowser = exports.getHeight = exports.getElementText = exports.getElementPosition = exports.getElementOffset = exports.getCookie = exports.eventOnce = undefined;
 
 var _eventOnce2 = require('./event-once');
 
@@ -119,10 +119,6 @@ var _collapseWhitespace3 = _interopRequireDefault(_collapseWhitespace2);
 var _combineRegex2 = require('./combine-regex');
 
 var _combineRegex3 = _interopRequireDefault(_combineRegex2);
-
-var _cssToJson2 = require('./css-to-json');
-
-var _cssToJson3 = _interopRequireDefault(_cssToJson2);
 
 var _escapeForXpath2 = require('./escape-for-xpath');
 
@@ -608,10 +604,6 @@ var _drop2 = require('./drop');
 
 var _drop3 = _interopRequireDefault(_drop2);
 
-var _dropWhere2 = require('./drop-where');
-
-var _dropWhere3 = _interopRequireDefault(_dropWhere2);
-
 var _dropWhile2 = require('./drop-while');
 
 var _dropWhile3 = _interopRequireDefault(_dropWhile2);
@@ -1020,10 +1012,6 @@ var _compact2 = require('./compact');
 
 var _compact3 = _interopRequireDefault(_compact2);
 
-var _copyWithout2 = require('./copy-without');
-
-var _copyWithout3 = _interopRequireDefault(_copyWithout2);
-
 var _countItemsInArray2 = require('./count-items-in-array');
 
 var _countItemsInArray3 = _interopRequireDefault(_countItemsInArray2);
@@ -1420,6 +1408,18 @@ var _clamp2 = require('./clamp');
 
 var _clamp3 = _interopRequireDefault(_clamp2);
 
+var _copyWithout2 = require('./copy-without');
+
+var _copyWithout3 = _interopRequireDefault(_copyWithout2);
+
+var _cssToJson2 = require('./css-to-json');
+
+var _cssToJson3 = _interopRequireDefault(_cssToJson2);
+
+var _dropWhere2 = require('./drop-where');
+
+var _dropWhere3 = _interopRequireDefault(_dropWhere2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.eventOnce = _eventOnce3.default; // dom
@@ -1453,7 +1453,6 @@ exports.capitalizeFirstChar = _capitalizeFirstChar3.default;
 exports.collapseNewlines = _collapseNewlines3.default;
 exports.collapseWhitespace = _collapseWhitespace3.default;
 exports.combineRegex = _combineRegex3.default;
-exports.cssToJson = _cssToJson3.default;
 exports.escapeForXpath = _escapeForXpath3.default;
 exports.escapeHtml = _escapeHtml3.default;
 exports.fixWindowsSlashes = _fixWindowsSlashes3.default;
@@ -1579,7 +1578,6 @@ exports.cons = _cons3.default;
 exports.constant = _constant3.default;
 exports.curry = _curry6.default;
 exports.drop = _drop3.default;
-exports.dropWhere = _dropWhere3.default;
 exports.dropWhile = _dropWhile3.default;
 exports.each = _each3.default;
 exports.elem = _elem3.default;
@@ -1686,7 +1684,6 @@ exports.calc = _calc3.default;
 exports.chunk = _chunk3.default;
 exports.cloneWithout = _cloneWithout3.default;
 exports.compact = _compact3.default;
-exports.copyWithout = _copyWithout3.default;
 exports.countItemsInArray = _countItemsInArray3.default;
 exports.debounce = _debounce3.default;
 exports.diff = _diff3.default;
@@ -1789,3 +1786,6 @@ exports.tinyRouter = _tinyRouter3.default;
 exports.uniqAndFlatten = _uniqAndFlatten3.default;
 exports.where = _where3.default;
 exports.clamp = _clamp3.default;
+exports.copyWithout = _copyWithout3.default;
+exports.cssToJson = _cssToJson3.default;
+exports.dropWhere = _dropWhere3.default;

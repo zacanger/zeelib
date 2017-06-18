@@ -3,6 +3,8 @@
 /**
  * Returns true if an array has any
  * duplicate elements
+ * @example
+ * hasDuplicate([ 1, 1, 2 ]) // => true
  */
 
 const hasDuplicate = (arr: any[]): bool =>

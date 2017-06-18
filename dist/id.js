@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * `id`
+ * @example
+ * id(1) // => 1
+ * id() // => undefined
  */
 
 var id = function id /*:: <T>*/(a /*: T*/) /*: T*/ {

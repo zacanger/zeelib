@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns a 1px transparent gif
+ * @example
+ * getTransparentGif()
  */
 
 var getTransparentGif = function getTransparentGif() /*: string*/ {

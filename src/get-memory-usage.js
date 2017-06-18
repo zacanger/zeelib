@@ -4,6 +4,8 @@ import { freemem, totalmem } from 'os'
 
 /**
  * Get memory usage
+ * @example
+ * getMemoryUsage()
  */
 
 const getMemoryUsage = (): number =>

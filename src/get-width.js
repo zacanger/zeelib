@@ -2,6 +2,8 @@
 
 /**
  * Get window width
+ * @example
+ * getWidth()
  */
 
 const getWidth = (): number =>

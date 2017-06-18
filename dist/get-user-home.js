@@ -12,6 +12,8 @@ var _process = process,
 /**
  * Get current user's home directory
  * @returns {string} home dir
+ * @example
+ * getUserHome()
  */
 
 var getUserHome = function getUserHome() {

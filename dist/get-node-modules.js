@@ -9,6 +9,8 @@ var _fs = require('fs');
 /**
  * Returns array of all locally installed
  * Node modules
+ * @example
+ * getNodeModules()
  */
 
 var getNodeModules = function getNodeModules() /*: string[]*/ {

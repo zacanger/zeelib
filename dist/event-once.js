@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Runs an event handler once
+ * @example
+ * const el = document.getElementById('foo')
+ * eventOnce(el, 'logger', console.log)
  */
 
 var eventOnce = function eventOnce(el /*: HTMLElement*/, t /*: string*/, handler /*: () => any*/) /*: void*/ {

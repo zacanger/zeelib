@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if code is in browser
+ * @example
+ * getIsBrowser()
  */
 
 var getIsBrowser = function getIsBrowser() /*: bool*/ {

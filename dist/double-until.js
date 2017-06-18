@@ -10,7 +10,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Double an array until it's n long
- * `doubleUntil(10)[ 'hi' ]`
+ * @example
+ * doubleUntil(2)([ 'hi' ]) // => [ 'hi', 'hi' ]
  */
 
 var doubleUntil = function doubleUntil() {

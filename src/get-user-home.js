@@ -4,6 +4,8 @@ const { env } = process
 /**
  * Get current user's home directory
  * @returns {string} home dir
+ * @example
+ * getUserHome()
  */
 
 const getUserHome = () =>

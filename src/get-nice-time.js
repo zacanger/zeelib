@@ -1,6 +1,8 @@
 /**
  * Get a nicely-formatted time string
  * @returns {string} '[hh:mm:ss]'
+ * @example
+ * getNiceTime()
  */
 
 const getNiceTime = () =>
