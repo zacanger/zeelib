@@ -8,12 +8,11 @@
 -   [getElementPosition](#getelementposition)
 -   [getElementText](#getelementtext)
 -   [getHeight](#getheight)
--   [getIsBrowser](#getisbrowser)
--   [getIsBrowser](#getisbrowser-1)
 -   [getLengthOfElements](#getlengthofelements)
 -   [getReferrer](#getreferrer)
 -   [getScrollBarWidth](#getscrollbarwidth)
 -   [getWidth](#getwidth)
+-   [isBrowser](#isbrowser)
 -   [preventDefault](#preventdefault)
 -   [removeAttribute](#removeattribute)
 -   [restoreScrollPosition](#restorescrollposition)
@@ -43,7 +42,6 @@
 -   [getRegexFlags](#getregexflags)
 -   [getUid4](#getuid4)
 -   [getUid8](#getuid8)
--   [indenter](#indenter)
 -   [inlineString](#inlinestring)
 -   [isAlphaNumeric](#isalphanumeric)
 -   [isEmoji](#isemoji)
@@ -57,8 +55,6 @@
 -   [lispCaseToPascalCase](#lispcasetopascalcase)
 -   [lispCaseToSnakeCase](#lispcasetosnakecase)
 -   [minifyString](#minifystring)
--   [normalizeClassname](#normalizeclassname)
--   [normalizeColor](#normalizecolor)
 -   [normalizeText](#normalizetext)
 -   [pascalCaseToCamelCase](#pascalcasetocamelcase)
 -   [pascalCaseToLispCase](#pascalcasetolispcase)
@@ -89,6 +85,7 @@
 -   [truncate](#truncate)
 -   [unescapeHtml](#unescapehtml)
 -   [atob](#atob)
+-   [getIsBrowser](#getisbrowser)
 -   [statSync](#statsync)
 -   [colorize](#colorize)
 -   [consoleClear](#consoleclear)
@@ -102,7 +99,6 @@
 -   [getFreeMemory](#getfreememory)
 -   [getHashFromSystem](#gethashfromsystem)
 -   [getHostname](#gethostname)
--   [getIsNode](#getisnode)
 -   [getLoadAverage](#getloadaverage)
 -   [getMemoryUsage](#getmemoryusage)
 -   [getNodeModules](#getnodemodules)
@@ -117,6 +113,7 @@
 -   [isDirectory](#isdirectory)
 -   [isFile](#isfile)
 -   [isInstalled](#isinstalled)
+-   [isNode](#isnode)
 -   [isSymLink](#issymlink)
 -   [logWithInfo](#logwithinfo)
 -   [makeFileIfNoFile](#makefileifnofile)
@@ -139,7 +136,7 @@
 -   [caar](#caar)
 -   [cadr](#cadr)
 -   [car](#car)
--   [car](#car-1)
+-   [cdar](#cdar)
 -   [cdr](#cdr)
 -   [cdr](#cdr-1)
 -   [clone](#clone)
@@ -165,12 +162,12 @@
 -   [foldr1](#foldr1)
 -   [id](#id)
 -   [init](#init)
--   [invoke](#invoke)
 -   [juxt](#juxt)
 -   [last](#last)
 -   [length](#length)
 -   [lines](#lines)
 -   [list](#list)
+-   [map](#map)
 -   [memoize](#memoize)
 -   [mix](#mix)
 -   [not](#not)
@@ -422,28 +419,6 @@ getHeight()
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
-## getIsBrowser
-
-Returns true if code is in browser
-
-**Examples**
-
-```javascript
-getIsBrowser()
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
-## getIsBrowser
-
-`window.btoa` for node and browser
-
-**Examples**
-
-```javascript
-btoa('asdf') // => 'YXNkZg=='
-```
-
 ## getLengthOfElements
 
 Find out how many of a matching element is on the page
@@ -498,6 +473,18 @@ getWidth()
 ```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+## isBrowser
+
+Returns true if code is in browser
+
+**Examples**
+
+```javascript
+isBrowser()
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## preventDefault
 
@@ -912,21 +899,6 @@ getUid8()
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-## indenter
-
-Indent a string
-line: string to format
-indent: amount by which to indent
-limit: maxlen of line
-accum: accumulator string
-
-**Parameters**
-
--   `line` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `indent` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `2`)
--   `limit` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `80`)
--   `accum` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `''`)
-
 ## inlineString
 
 Turns all newlines into a single space
@@ -934,6 +906,12 @@ Turns all newlines into a single space
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+inlineString('asdfasdf \n\n asdfasdf') // => 'asdfasdf asdfasdf'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1046,25 +1024,43 @@ From lisp-case to camelCase
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+lispCaseToCamelCase('foo-bar') // => 'fooBar'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## lispCaseToPascalCase
 
-lisp-case to PascalCase
+From lisp-case to PascalCase
 
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+lispCaseToPascalCase('foo-bar') // => 'FooBar'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## lispCaseToSnakeCase
 
-lisp-case to snake_case
+From lisp-case to snake_case
 
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+lispCaseToSnakeCase('foo-bar') // => 'foo_bar'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1074,32 +1070,7 @@ Roughly minify a string
 
 **Parameters**
 
--   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-## normalizeClassname
-
-Normalize classnames. Similar to the `classnames` lib.
-Replaces newlines with spaces, can take array of classnames,
-converts to string
-Returns arg as string if it's not an array or a string
-
-**Parameters**
-
--   `arg` **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any> | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** 
-
-Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-## normalizeColor
-
-takes string color, returns either string or null
-
-**Parameters**
-
--   `color` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-Returns **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | null)** 
+-   `str`  
 
 ## normalizeText
 
@@ -1108,6 +1079,12 @@ Normalizes text
 **Parameters**
 
 -   `text` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+normalizeText('Asdf 0  0----  ') // => 'asdf 0 0'
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
@@ -1407,6 +1384,16 @@ atob('YXNkZg==') // => 'asdf'
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+## getIsBrowser
+
+`window.btoa` for node and browser
+
+**Examples**
+
+```javascript
+btoa('asdf') // => 'YXNkZg=='
+```
+
 ## statSync
 
 Returns bool based on if passed path exists
@@ -1590,18 +1577,6 @@ getHostname()
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-## getIsNode
-
-Returns true if code is in Node
-
-**Examples**
-
-```javascript
-getIsNode()
-```
-
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
 ## getLoadAverage
 
 Get load average
@@ -1771,6 +1746,18 @@ Returns true if the passed node_module name is installed
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
+## isNode
+
+Returns true if code is in Node
+
+**Examples**
+
+```javascript
+isNode()
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
 ## isSymLink
 
 Returns true if path is a symlink
@@ -1789,6 +1776,12 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `''`)
 
+**Examples**
+
+```javascript
+logWithInfo('foo') // => `foo:angr:1234`
+```
+
 Returns **void** 
 
 ## makeFileIfNoFile
@@ -1799,6 +1792,13 @@ Make a file if it doesn't exist already
 
 -   `filePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `contents` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `''`)
+
+**Examples**
+
+```javascript
+makeFileIfNoFile('foo.txt')
+makeFileIfNoFile('foo.txt', 'contentx')
+```
 
 Returns **void** 
 
@@ -1811,6 +1811,12 @@ Takes a path to an html file
 
 -   `config` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+notFound('./404.html')
+```
+
 ## open
 
 Opens things. Works on Linux, Mac, and Windows
@@ -1820,6 +1826,12 @@ Opens things. Works on Linux, Mac, and Windows
 -   `args` **any** 
 -   `opts` **any** 
 -   `cb` **any** 
+
+**Examples**
+
+```javascript
+open('http://zacanger.com')
+```
 
 Returns **any** 
 
@@ -1971,12 +1983,12 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## apply
 
-Applys f to arg
+Applys f to any number of args
 
 **Parameters**
 
 -   `f` **function (any): any** 
--   `x` **any** 
+-   `args` **...[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 **Examples**
 
@@ -2034,15 +2046,21 @@ car([ 1, 2, 3 ]) // => 1
 
 Returns **any** 
 
-## car
+## cdar
 
 `cdar`
+
+**Parameters**
+
+-   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 **Examples**
 
 ```javascript
 cdar([ [ 1, 2 ], 3 ]) // => [ 2 ]
 ```
+
+Returns **any** 
 
 ## cdr
 
@@ -2417,18 +2435,13 @@ Returns all but the last item of an array
 
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+**Examples**
+
+```javascript
+init([ 1, 2, 3 ]) // => [ 1, 2 ]
+```
+
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-## invoke
-
-Invoke a function on any number of passed args
-
-**Parameters**
-
--   `fn` **any** 
--   `args` **...any** 
-
-Returns **any** 
 
 ## juxt
 
@@ -2444,6 +2457,12 @@ Returns the last element of the array
 
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+**Examples**
+
+```javascript
+last([ 1, 2, 3 ]) // => 3
+```
+
 Returns **any** 
 
 ## length
@@ -2455,6 +2474,13 @@ Works for array, object, string, set, and map
 
 -   `val` **any** 
 
+**Examples**
+
+```javascript
+length('foo') // => 3
+length([ 1, 2 ]) => 2
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## lines
@@ -2464,6 +2490,12 @@ Split a string on lines
 **Parameters**
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+lines('foo\nbar') // => [ 'foo', 'bar' ]
+```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
 
@@ -2475,7 +2507,30 @@ Make a list out of all arguments
 
 -   `args` **...any** 
 
+**Examples**
+
+```javascript
+list(1, 2, 3) // => [ 1, 2, 3 ]
+```
+
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+## map
+
+`map`
+
+**Parameters**
+
+-   `fn` **function (): any** 
+-   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>?** 
+
+**Examples**
+
+```javascript
+map(increment, [ 1, 2, 3 ]) // => [ 2, 3, 4 ]
+```
+
+Returns **any** 
 
 ## memoize
 
@@ -2484,6 +2539,13 @@ A simple memoizing util
 **Parameters**
 
 -   `fn` **any** 
+
+**Examples**
+
+```javascript
+memoize((a) => a) // => [Function]
+memoize((a) => a)(1) // => 1
+```
 
 Returns **any** 
 
@@ -2497,6 +2559,13 @@ arguments and mixes the two
 -   `original` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** object
 -   `other` **[any](#any)** args
 
+**Examples**
+
+```javascript
+mix({ a: 'a' }, { b: 'b' }) // => { a: 'a', b: 'b' }
+mix({ a: 'a' }, [ 1, 2, 3 ]) // => { '0': 1, '1': 2, '2': 3, a: 'a' }
+```
+
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 ## not
@@ -2508,6 +2577,13 @@ if the two are not the same
 
 -   `a` **any** 
 
+**Examples**
+
+```javascript
+not(1)(1) // => false
+not(1)(2) // => true
+```
+
 ## notElem
 
 The opposite of `elem`
@@ -2518,6 +2594,13 @@ Returns true if the element is not in the string or array
 -   `el` **any** 
 -   `ls` **([string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>)** 
 
+**Examples**
+
+```javascript
+notElem('a', 'asdf') // => false
+notElem('b', 'asdf') // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## nth
@@ -2526,8 +2609,14 @@ Returns nth element of array
 
 **Parameters**
 
--   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+nth(2, [ 1, 2 3 ]) // => 3
+```
 
 Returns **any** 
 
@@ -2539,6 +2628,15 @@ Only calls fn once; subsequent calls just return first val
 
 -   `fn` **any** 
 
+**Examples**
+
+```javascript
+const o = once(id)
+o(1) // => 1
+o() // => 1
+o(2) // => 1
+```
+
 Returns **any** 
 
 ## or
@@ -2548,6 +2646,13 @@ Return true if any val in input array is true
 **Parameters**
 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+or([ 1, 2, 3 ]) // => false
+or([ 1, 2, 3, true ]) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3197,6 +3302,12 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+objectToString({}) // => '[object Object]'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## toBool
@@ -3738,6 +3849,13 @@ Get the intersection of two arrays
 -   `xs` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 -   `ys` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
+**Examples**
+
+```javascript
+intersection([ 1, 2 ], []) // => []
+intersection([ 1, 2, 3 ], [1, 2]) // => [ 1, 2 ]
+```
+
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ## invoker
@@ -3783,6 +3901,13 @@ Yes, really
 -   `len` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `pd` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `' '`)
 
+**Examples**
+
+```javascript
+leftPad('asdf', 8) // => '    asdf'
+leftPad('asdf', 8, 'z') // => 'zzzzasdf'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ## lesser
@@ -3793,6 +3918,12 @@ Returns the lesser of two numbers
 
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+lesser(1, 2) // => 1
+```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -3806,6 +3937,13 @@ cred: <https://gist.github.com/andrei-m/982927#gistcomment-1931258> kigiri MTT
 -   `a` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `b` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+levenshteinDistance('asdf', 'asdf') // => 0
+levenshteinDistance('asdf', 'ghjkl') // => 5
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## lexSort
@@ -3817,11 +3955,24 @@ Lex sort
 -   `a` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `b` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+lexSort('asdf', 'asdf') // => 0
+'asdfghjkl'.split('').sort(lexSort).join('') // => 'adfghjls'
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## logWithTimestamp
 
 `console.log` with a timestamp
+
+**Examples**
+
+```javascript
+logWithTimestamp('foo') // => 18/5 15:29:27.685 -- foo
+```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
@@ -3834,6 +3985,12 @@ Returns true if first param is less than second param
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+lt(2, 1) // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## lte
@@ -3844,6 +4001,13 @@ Returns true if first param is less than or equal to second param
 
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+lte(2, 1) // => false
+lte(1, 1) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3873,6 +4037,12 @@ Get the largest number from an array
 
 -   `nums` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>** 
 
+**Examples**
+
+```javascript
+maximum([ 1, 2, 3, 4, 5 ]) // => 5
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 ## maybeArgs
@@ -3887,6 +4057,13 @@ Otherwise, will call the function with whatever arguments passed
 
 -   `fn` **function (): any** 
 
+**Examples**
+
+```javascript
+maybeArgs(() => {})(1) // => undefined
+maybeArgs((a) => a)(1) // => 1
+```
+
 Returns **any** 
 
 ## merge
@@ -3898,6 +4075,12 @@ Simple merge for objects
 -   `o` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 -   `n` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
 
+**Examples**
+
+```javascript
+merge({ a: 'a' }, { b: 'b' }) // => { a: 'a', b: 'b' }
+```
+
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
 ## minimum
@@ -3907,6 +4090,12 @@ Get the smallest from an array of numbers
 **Parameters**
 
 -   `nums` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)>** 
+
+**Examples**
+
+```javascript
+minimum([ 1, 2, 3, 4, 5 ]) // => 1
+```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
@@ -3919,6 +4108,13 @@ cred: gh:artificerentertainment
 
 -   `variable` **any** 
 -   `defaultValue` **any** 
+
+**Examples**
+
+```javascript
+nco(null, 1) // => 1
+nco(1, 2) // => 1
+```
 
 Returns **any** 
 
@@ -3936,6 +4132,12 @@ credit: gh:egoist/switchy
 
 noop
 
+**Examples**
+
+```javascript
+noop() // => undefined
+```
+
 Returns **void** 
 
 ## objectFromEntries
@@ -3945,6 +4147,12 @@ Get an object from an array of entries
 **Parameters**
 
 -   `entries` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
+
+**Examples**
+
+```javascript
+objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
+```
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 

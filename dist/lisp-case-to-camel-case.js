@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * From lisp-case to camelCase
+ * @example
+ * lispCaseToCamelCase('foo-bar') // => 'fooBar'
  */
 
 var lispCaseToCamelCase = function lispCaseToCamelCase(str /*: string*/) /*: string*/ {

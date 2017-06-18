@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Split a string on lines
+ * @example
+ * lines('foo\nbar') // => [ 'foo', 'bar' ]
  */
 
 var lines = function lines(str /*: string*/) /*: string[]*/ {

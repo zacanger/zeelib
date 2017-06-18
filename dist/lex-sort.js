@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Lex sort
+ * @example
+ * lexSort('asdf', 'asdf') // => 0
+ * 'asdfghjkl'.split('').sort(lexSort).join('') // => 'adfghjls'
  */
 
 var lexSort = function lexSort(a /*: string*/, b /*: string*/) /*: number*/ {

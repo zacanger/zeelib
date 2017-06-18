@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 // @flow
 
 /**
- * lisp-case to PascalCase
+ * From lisp-case to PascalCase
+ * @example
+ * lispCaseToPascalCase('foo-bar') // => 'FooBar'
  */
 
 var lispCaseToPascalCase = function lispCaseToPascalCase(str /*: string*/) /*: string*/ {

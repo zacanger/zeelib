@@ -3,9 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-var newlinesToSpaces = function newlinesToSpaces(str /*: string*/) /*: string*/ {
+var newlinesToSpaces = function newlinesToSpaces(str) {
   console.error('`newlinesToSpaces` is deprecated. Please use `collapseWhitespace` instead.');
   return str.replace(/\s+/g, ' ').trim();
 };

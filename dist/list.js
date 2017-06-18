@@ -10,6 +10,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Make a list out of all arguments
+ * @example
+ * list(1, 2, 3) // => [ 1, 2, 3 ]
  */
 
 var list = function list() /*: any[]*/ {

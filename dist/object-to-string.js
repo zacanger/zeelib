@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * `toString`
+ * @example
+ * objectToString({}) // => '[object Object]'
  */
 
 var objectToString = function objectToString(v /*: any*/) /*: string*/ {

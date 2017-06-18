@@ -8,6 +8,9 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * It's just left-pad
  * Yes, really
+ * @example
+ * leftPad('asdf', 8) // => '    asdf'
+ * leftPad('asdf', 8, 'z') // => 'zzzzasdf'
  */
 
 var leftPad = function leftPad(str /*: string*/, len /*: number*/) /*: string*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Normalizes text
+ * @example
+ * normalizeText('Asdf 0  0----  ') // => 'asdf 0 0'
  */
 
 var normalizeText = function normalizeText(text /*: string*/) /*: string*/ {

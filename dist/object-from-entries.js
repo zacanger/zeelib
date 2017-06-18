@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get an object from an array of entries
+ * @example
+ * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
  */
 
 var objectFromEntries = function objectFromEntries(entries /*: any[]*/) /*: Object*/ {

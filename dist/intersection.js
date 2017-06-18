@@ -10,6 +10,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Get the intersection of two arrays
+ * @example
+ * intersection([ 1, 2 ], []) // => []
+ * intersection([ 1, 2, 3 ], [1, 2]) // => [ 1, 2 ]
  */
 
 var intersection = function intersection(xs /*: any[]*/, ys /*: any[]*/) /*: any[]*/ {

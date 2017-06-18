@@ -3,16 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Normalize classnames. Similar to the `classnames` lib.
- * Replaces newlines with spaces, can take array of classnames,
- * converts to string
- * Returns arg as string if it's not an array or a string
- */
-
-var normalizeClassname = function normalizeClassname(arg /*: any[] | string*/) /*: string*/ {
+var normalizeClassname = function normalizeClassname(arg) {
+  console.error('`normalizeClassname` is deprecated. Please use the `classnames` lib instead.');
   var replaceNewlines = function replaceNewlines(a) {
     return a.replace(/\s+/g, ' ').trim();
   };
