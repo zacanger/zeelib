@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * `cdar`
  * @example
- * cdar([ [ 1, 2 ], 3 ]) // => 2
+ * cdar([ [ 1, 2 ], 3 ]) // => [ 2 ]
  */
 
 var cdar = function cdar(a /*: any[]*/) /*: any*/ {

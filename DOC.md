@@ -167,6 +167,7 @@
 -   [id](#id)
 -   [init](#init)
 -   [invoke](#invoke)
+-   [juxt](#juxt)
 -   [last](#last)
 -   [length](#length)
 -   [lines](#lines)
@@ -1775,7 +1776,7 @@ Returns **any**
 **Examples**
 
 ```javascript
-cdar([ [ 1, 2 ], 3 ]) // => 2
+cdar([ [ 1, 2 ], 3 ]) // => [ 2 ]
 ```
 
 ## cdr
@@ -2093,7 +2094,7 @@ Invoke a function on any number of passed args
 
 Returns **any** 
 
-## 
+## juxt
 
 Like Clojure's `juxt`
 Takes a list of functions and returns a fn that is the juxtaposition
