@@ -2,6 +2,8 @@
 
 /**
  * Get an object from an array of entries
+ * @example
+ * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
  */
 
 const objectFromEntries = (entries: any[]): Object => {
