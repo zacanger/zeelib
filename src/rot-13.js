@@ -2,6 +2,8 @@
 
 /**
  * ROT13 a string
+ * @example
+ * rot13('asdf') // => 'nfqs'
  */
 
 const rot13 = (str: string): string =>

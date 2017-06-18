@@ -2,6 +2,8 @@
 
 /**
  * Scroll to the top
+ * @example
+ * scrollTop()
  */
 
 const scrollTop = (): void =>

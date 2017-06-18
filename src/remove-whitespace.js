@@ -1,10 +1,6 @@
-// @flow
-
-/**
- * Remove all whitespace from string
- */
-
-const removeWhitespace = (str: string): string =>
-  str.replace(/^\s+|\s+$/, '')
+const removeWhitespace = (str) => {
+  console.error('`removeWhitespace` is deprecated. Please use `collapseWhitespace`.')
+  return str.replace(/^\s+|\s+$/, '')
+}
 
 export default removeWhitespace

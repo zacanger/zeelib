@@ -2,6 +2,8 @@
 
 /**
  * Randomly shuffle items in array
+ * @example
+ * shuffle([ 1, 2, 3, 4 ])
  */
 
 const shuffle = (arr: any[]): any[] => {

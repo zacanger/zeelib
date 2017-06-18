@@ -1,3 +1,6 @@
+* `0.9.19` &mdash; **2017-06-18** &mdash; *breaking*
+  * More deprecations
+  * Flipped order of `nth`s arguments
 * `0.9.17` &mdash; **2017-06-15** &mdash; *breaking*
   * Some functions have had their argument order flipped to be more easily
     curryable. These are:

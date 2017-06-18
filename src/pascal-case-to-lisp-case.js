@@ -2,6 +2,8 @@
 
 /**
  * PascalCase to lisp-case
+ * @example
+ * pascalCaseToLispCase('FooBar') // => 'foo-bar'
  */
 
 const pascalCaseToLispCase = (str: string): string =>

@@ -4,6 +4,8 @@ import { resolve } from 'path'
 
 /**
  * Resolve a list of paths
+ * @example
+ * resolveFiles([ 'foo', 'bar' ])
  */
 
 const resolveFiles = (ls: string[]): string[] =>

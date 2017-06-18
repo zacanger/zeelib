@@ -2,6 +2,8 @@
 
 /**
  * Remove non-alpha chars from string
+ * @example
+ * removeNonAlpha('asdf 22 a') // => 'asdf  a'
  */
 
 const removeNonAlpha = (str: string): string =>

@@ -2,6 +2,8 @@
 
 /**
  * Remove non-numeric chars from string
+ * @example
+ * removeNonNumeric('asdf22\n!') // => '22'
  */
 
 const removeNonNumeric = (str: string): string =>

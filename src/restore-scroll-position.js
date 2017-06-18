@@ -7,7 +7,8 @@ type s = {
 
 /**
  * Restore scroll position to coordinates
- * Takes `{ scrollX: number, scrollX: number }`
+ * @example
+ * restoreScrollPosition({ scrollX: 0, scrollY: 100 })
  */
 
 const restoreScrollPosition = ({ scrollX, scrollY }: s) =>
