@@ -2,6 +2,8 @@
 
 /**
  * Normalizes text
+ * @example
+ * normalizeText('Asdf 0  0----  ') // => 'asdf 0 0'
  */
 
 const normalizeText = (text: string): string => {

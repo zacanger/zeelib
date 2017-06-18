@@ -6,6 +6,9 @@
  * If no arguments, or if any arguments are null,
  * well return undefined
  * Otherwise, will call the function with whatever arguments passed
+ * @example
+ * maybeArgs(() => {})(1) // => undefined
+ * maybeArgs((a) => a)(1) // => 1
  */
 
 function maybeArgs (fn: () => any): any {

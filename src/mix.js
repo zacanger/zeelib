@@ -8,6 +8,9 @@ import each from './each'
  * @param {Object} original object
  * @param {any} other args
  * @returns {Object}
+ * @example
+ * mix({ a: 'a' }, { b: 'b' }) // => { a: 'a', b: 'b' }
+ * mix({ a: 'a' }, [ 1, 2, 3 ]) // => { '0': 1, '1': 2, '2': 3, a: 'a' }
  */
 
 function mix (): Object {

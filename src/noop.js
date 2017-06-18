@@ -2,6 +2,8 @@
 
 /**
  * noop
+ * @example
+ * noop() // => undefined
  */
 
 const noop = (): void => {}

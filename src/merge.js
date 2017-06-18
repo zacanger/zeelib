@@ -2,6 +2,8 @@
 
 /**
  * Simple merge for objects
+ * @example
+ * merge({ a: 'a' }, { b: 'b' }) // => { a: 'a', b: 'b' }
  */
 
 function merge (o: Object, n: ?Object): Object {

@@ -4,11 +4,8 @@ import trimSpaces from './trim-spaces'
 import isHexBased from './is-hex-based'
 import trimHash from './trim-hash'
 
-/**
- * takes string color, returns either string or null
- */
-
 const normalizeColor = (color: string): string | null => {
+  console.error('`normalizeColor` is deprecated.')
   let nextColor = trimSpaces(color)
   if (!isHexBased(color)) {
     return null

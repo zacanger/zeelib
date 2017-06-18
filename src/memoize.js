@@ -2,6 +2,9 @@
 
 /**
  * A simple memoizing util
+ * @example
+ * memoize((a) => a) // => [Function]
+ * memoize((a) => a)(1) // => 1
  */
 
 const memoize = (fn: any): any => {

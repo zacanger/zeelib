@@ -17,7 +17,7 @@ import isString from './is-string'
 const length = (val: any): number => {
   if (isArray(val) || isString(val)) return val.length
   if (isMap(val) || isSet(val)) return val.size
-  if (isObject(val)) return Object(val).keys.length
+  if (isObject(val)) return Object.keys(val).length
   return 0
 }
 

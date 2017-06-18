@@ -1,7 +1,9 @@
 // @flow
 
-/*
+/**
  * `map`
+ * @example
+ * map(increment, [ 1, 2, 3 ]) // => [ 2, 3, 4 ]
  */
 
 const map = (fn: () => any, arr: ?any[]): any => {

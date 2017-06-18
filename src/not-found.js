@@ -6,6 +6,8 @@ import { resolve } from 'path'
 /**
  * Very simple 404 handler for Node
  * Takes a path to an html file
+ * @example
+ * notFound('./404.html')
  */
 
 const notFound = (config: string) => {

@@ -2,6 +2,8 @@
 
 /**
  * From lisp-case to camelCase
+ * @example
+ * lispCaseToCamelCase('foo-bar') // => 'fooBar'
  */
 
 const lispCaseToCamelCase = (str: string): string =>
