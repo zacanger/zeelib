@@ -1,20 +1,12 @@
-// @flow
 /* eslint-disable no-return-assign */
 
-/**
- * Indent a string
- * line: string to format
- * indent: amount by which to indent
- * limit: maxlen of line
- * accum: accumulator string
- */
-
 const indenter = (
-  line: string,
-  indent: number = 2,
-  limit: number = 80,
-  accum: string = ''
+  line,
+  indent,
+  limit,
+  accum
 ) => {
+  console.error('`indenter` is deprecated.')
   if (line.length > limit) {
     const reverseSlice = line.slice(0, limit).split('').reverse('')
     const firstSpace = reverseSlice.indexOf(' ')
