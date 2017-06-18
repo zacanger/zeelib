@@ -6,6 +6,8 @@ import getIsBrowser from './get-is-browser'
 
 /**
  * `window.atob` for node and browser
+ * @example
+ * atob('YXNkZg==') // => 'asdf'
  */
 
 const atob = (str: string): string =>

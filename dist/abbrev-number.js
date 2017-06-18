@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Shortens a number and adds appropriate suffix
  * (K, M, B)
+ * @example
+ * abbrevNumber(10000) // => '100K'
  */
 
 var abbrevNumber = function abbrevNumber(n /*: number*/) /*: string*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Takes a camelCase string and returns one in snake_case
+ * @example
+ * camelCaseToSnakeCase('fooBar') // => 'foo_bar'
  */
 
 var camelCaseToSnakeCase = function camelCaseToSnakeCase(str /*: string*/) /*: string*/ {

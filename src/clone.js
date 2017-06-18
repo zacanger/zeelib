@@ -6,6 +6,8 @@ import isRegExp from './is-reg-exp'
  * Clones anything
  * @param {any} obj
  * @returns {any}
+ * @example
+ * clone(1) // => 1
  */
 
 const clone = (obj) => {

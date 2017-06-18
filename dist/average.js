@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Averages a list of numbers
+ * @example
+ * average([ 2, 4, 6, 8 ]) // => 5
  */
 
 var average = function average(xs /*: number[]*/) /*: number*/ {

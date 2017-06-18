@@ -18,6 +18,8 @@ var btoa = function btoa(str /*: string*/) /*: string*/ {
 
 /**
  * `window.btoa` for node and browser
+ * @example
+ * btoa('asdf') // => 'YXNkZg=='
  */
 
 exports.default = btoa;

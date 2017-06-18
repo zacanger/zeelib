@@ -2,6 +2,8 @@
  * Trims a string to just abbreved caps
  * @param {string} str
  * @returns {string}
+ * @example
+ * abbrev('Zacary Erik Anger') // => 'ZEA'
  */
 
 const abbrev = (str) =>

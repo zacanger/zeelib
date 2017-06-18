@@ -2,6 +2,8 @@
 
 /**
  * Makes pretty 'n whatevers ago' string
+ * @example
+ * ago(new Date('2007-98-17')) // => '9.75 years ago'
  */
 
 const ago = (d: Date): string => {

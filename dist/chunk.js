@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Splits an array into chunks
+ * @example
+ * chunk([1, 2, 3, 4 ], 2) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
 var chunk = function chunk(arr /*: any[]*/, n /*: number*/) /*: any[]*/ {

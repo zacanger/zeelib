@@ -2,6 +2,8 @@
 
 /**
  * Capitalizes the first character of string
+ * @example
+ * capitalizeFirstChar('things and stuff') // => 'Things and stuff'
  */
 
 const capitalizeFirstChar = (str: string): string =>

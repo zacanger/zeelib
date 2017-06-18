@@ -4,6 +4,8 @@
 
 /**
  * `window.btoa` for node and browser
+ * @example
+ * btoa('asdf') // => 'YXNkZg=='
  */
 
 import getIsBrowser from './get-is-browser'

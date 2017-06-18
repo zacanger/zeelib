@@ -16,6 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * `cadr`
+ * @example
+ * cadr([ 1, 2, 3 ]) // => 2
  */
 
 // @flow
