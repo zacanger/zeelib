@@ -1,12 +1,6 @@
-// @flow
-
-/**
- * Returns true if code is in Node
- * @example
- * getIsNode()
- */
-
-const getIsNode = (): bool =>
-  process && !!process.version
+const getIsNode = () => {
+  console.error('`getIsNode` is deprecated. Please use `isNode`.')
+  return process && !!process.version
+}
 
 export default getIsNode

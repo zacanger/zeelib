@@ -2,6 +2,9 @@
 
 /**
  * Lex sort
+ * @example
+ * lexSort('asdf', 'asdf') // => 0
+ * 'asdfghjkl'.split('').sort(lexSort).join('') // => 'adfghjls'
  */
 
 const lexSort = (a: string, b: string): number =>
