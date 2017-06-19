@@ -158,6 +158,7 @@
 -   [foldr1](#foldr1)
 -   [id](#id)
 -   [init](#init)
+-   [juxt](#juxt)
 -   [last](#last)
 -   [length](#length)
 -   [lines](#lines)
@@ -2629,7 +2630,7 @@ init([ 1, 2, 3 ]) // => [ 1, 2 ]
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
-## 
+## juxt
 
 Like Clojure's `juxt`
 Takes a list of functions and returns a fn that is the juxtaposition
