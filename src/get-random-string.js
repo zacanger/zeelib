@@ -2,6 +2,9 @@
 
 /**
  * Returns random string of n length (defaults to 8)
+ * @example
+ * getRandomString()
+ * getRandomString(32)
  */
 
 const getRandomString = (n: number = 8): string =>

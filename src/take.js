@@ -2,6 +2,8 @@
 
 /**
  * Like Haskell's `take`
+ * @example
+ * take(2, [ 1, 2, 3 ]) // => [ 1, 2 ]
  */
 
 const take = (num: number, arr: any[]): any[] => {

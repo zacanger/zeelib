@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,15 +6,18 @@ Object.defineProperty(exports, "__esModule", {
 // @flow
 
 /**
- * Make an array that contains e, n times
+ * Generates an array of the length of the first param,
+ * filled with the second param, calling the second param
+ * if it's a function
+ * @example
+ * replicate(3, 10) // => [ 10, 10, 10 ]
+ * replicate(4, (a) => a + 1) // => [ 5, 5, 5, 5 ]
  */
 
-var replicate = function replicate(num /*: number*/, el /*: any*/) /*: any[]*/ {
-  var a = [];
-  for (var x = 0; x < num; x++) {
-    a.push(el);
-  }
-  return a;
+var replicate = function replicate(n /*: number*/, p /*: any*/) /*: any[]*/ {
+  return Array(n).fill().map(function (_, i) {
+    return typeof p === 'function' ? p(n, i) : p;
+  });
 };
 
 exports.default = replicate;

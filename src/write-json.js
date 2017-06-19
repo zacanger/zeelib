@@ -2,6 +2,8 @@ import { writeFile } from 'fs'
 
 /**
  * Write JSON from a stringifiable value
+ * @example
+ * writeJson('foo.json', someObject, 4, (err) => {})
  */
 
 const writeJson = (

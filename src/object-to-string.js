@@ -2,6 +2,8 @@
 
 /**
  * `toString`
+ * @example
+ * objectToString({}) // => '[object Object]'
  */
 
 const objectToString = (v: any): string =>

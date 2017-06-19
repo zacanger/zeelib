@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns random hex 32
+ * @example
+ * getRandomHex32()
  */
 
 var getRandomHex32 = function getRandomHex32() /*: string*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Like Haskell's `take`
+ * @example
+ * take(2, [ 1, 2, 3 ]) // => [ 1, 2 ]
  */
 
 var take = function take(num /*: number*/, arr /*: any[]*/) /*: any[]*/ {

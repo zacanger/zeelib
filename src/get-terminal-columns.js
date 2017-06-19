@@ -1,6 +1,8 @@
 /**
  * Get columns of current terminal
  * @returns {number} columns
+ * @example
+ * getTerminalColumns()
  */
 
 const getTerminalColumns = () =>

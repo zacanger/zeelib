@@ -2,6 +2,8 @@
 
 /**
  * Escapes HTML with entities
+ * @example
+ * escapeHtml('<span>"&</span>\'') // => '&lt;span&gt;&quot;&amp;&lt;/span&gt;&#39;'
  */
 
 const escapeHtml = (str: string): string =>

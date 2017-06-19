@@ -4,6 +4,8 @@ import getIsNode from './get-is-node'
 
 /**
  * `process.exit` that optionally takes an exit code
+ * @example
+ * exit(1)
  */
 
 const exit = (n: number = 0): void => {

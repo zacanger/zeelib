@@ -2,6 +2,8 @@
 
 /**
  * snake_case to lisp-case
+ * @example
+ * snakeCaseToLispCase('foo_bar') // => 'foo-bar'
  */
 
 const snakeCaseToLispCase = (str: string): string =>

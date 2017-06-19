@@ -5,6 +5,9 @@ import { resolve } from 'path'
 
 /**
  * Safe `readFileSync`
+ * @example
+ * const fooContents = readFileSync('./foo')
+ * if (fooContents != null) doThings(fooContents)
  */
 
 const readFileS = (str: string): ?string => {

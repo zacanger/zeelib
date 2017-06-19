@@ -1,10 +1,8 @@
-// @flow
-
 const moustache = (
-  template: string,
-  replacements: Object,
-  syntax: RegExp
-): string => {
+  template,
+  replacements,
+  syntax
+) => {
   console.error('`moustache` is deprecated. Please use template literals instead.')
   const ms = /\{\{(\w+)\}\}/g
   const f = (m, p) => p in replacements ? replacements[p] : ''

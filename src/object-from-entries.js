@@ -2,18 +2,11 @@
 
 /**
  * Get an object from an array of entries
+ * @example
+ * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
  */
 
-const objectFromEntries = (entries: any[]): Object => {
-  const res = {}
-  const len = entries.length
-  for (let i = 0; i < len; ++i) {
-    const ent = entries[i]
-    const key = ent[0]
-    const val = ent[1]
-    res[key] = val
-  }
-  return res
-}
+const objectFromEntries = (arr: any[]): Object =>
+  arr.reduce((res, [ k, v ]) => ({ ...res, [k]: v }), {})
 
 export default objectFromEntries

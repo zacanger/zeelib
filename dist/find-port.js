@@ -8,7 +8,8 @@ var _net = require('net');
 
 /**
  * Find next open port
- * `findPort(8000, (err, port) => {})`
+ * @example
+ * findPort(8000, (err, port) => console.log(`${port} is open`))
  */
 
 var findPort = function findPort(port /*: number*/, cb /*: any*/) /*: any*/ {

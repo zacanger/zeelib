@@ -1,6 +1,4 @@
-// @flow
-
-const newlinesToSpaces = (str: string): string => {
+const newlinesToSpaces = (str) => {
   console.error('`newlinesToSpaces` is deprecated. Please use `collapseWhitespace` instead.')
   return str.replace(/\s+/g, ' ').trim()
 }

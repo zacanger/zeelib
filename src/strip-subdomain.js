@@ -2,6 +2,8 @@
 
 /**
  * Strip subdomain from string
+ * @example
+ * stripSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
  */
 
 const stripSubdomain = (str: string): string =>

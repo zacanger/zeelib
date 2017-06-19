@@ -1,15 +1,10 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Returns true if code is in Node
- */
-
-var getIsNode = function getIsNode() /*: bool*/ {
+var getIsNode = function getIsNode() {
+  console.error('`getIsNode` is deprecated. Please use `isNode`.');
   return process && !!process.version;
 };
 

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Turns all newlines into a single space
+ * @example
+ * inlineString('asdfasdf \n\n asdfasdf') // => 'asdfasdf asdfasdf'
  */
 
 var inlineString = function inlineString(str /*: string*/) /*: string*/ {

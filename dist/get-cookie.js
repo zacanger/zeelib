@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get the value of a cookie by name
+ * @example
+ * document.cookie = 'foo=bar'
+ * getCookie('foo') // => 'bar'
  */
 
 var getCookie = function getCookie(name /*: string*/) /*: ?string*/ {

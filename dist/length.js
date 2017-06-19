@@ -29,12 +29,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Get length of element
  * Works for array, object, string, set, and map
+ * @example
+ * length('foo') // => 3
+ * length([ 1, 2 ]) => 2
  */
 
 var length = function length(val /*: any*/) /*: number*/ {
   if ((0, _isArray2.default)(val) || (0, _isString2.default)(val)) return val.length;
   if ((0, _isMap2.default)(val) || (0, _isSet2.default)(val)) return val.size;
-  if ((0, _isObject2.default)(val)) return val.keys.length;
+  if ((0, _isObject2.default)(val)) return Object.keys(val).length;
   return 0;
 }; // @flow
 

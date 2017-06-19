@@ -5,6 +5,8 @@ import { createHash } from 'crypto'
 
 /**
  * Get a md5 hash based on hostname, process.ppid, and date
+ * @example
+ * getHashFromSystem()
  */
 
 const getHashFromSystem = (): string => {

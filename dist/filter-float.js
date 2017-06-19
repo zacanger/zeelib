@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * `filterFloat` from MDN's parseFloat docs
+ * @example
+ * filterFloat('-111.111111111111') // => -111.111111111111
  */
 
 var filterFloat = function filterFloat(value /*: string*/) /*: number*/ {

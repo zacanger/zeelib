@@ -2,6 +2,8 @@
 
 /**
  * snake_case to PascalCase
+ * @example
+ * snakeCaseToPascalCase('foo_bar') // => 'FooBar'
  */
 
 const snakeCaseToPascalCase = (str: string): string => {

@@ -2,6 +2,8 @@
 
 /**
  * PascalCase to camelCase
+ * @example
+ * pascalCaseToCamelCase('FooBar') // => 'fooBar'
  */
 
 const pascalCaseToCamelCase = (str: string): string =>

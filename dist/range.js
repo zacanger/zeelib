@@ -12,6 +12,10 @@ Object.defineProperty(exports, "__esModule", {
  * @param {string|number} b
  * @param {number} step (optional, defaults to one)
  * @returns {Array}
+ * @example
+ * range(1, 4) // => [ 1, 2, 3, 4 ]
+ * range(1, 10, 3) // => [ 1, 4, 7, 10 ]
+ * range('z', 'q') // > [ 'r', 's', 't', 'u', 'v', 'w', 'x', 'y' ]
  */
 
 var range = function range(a, b) {

@@ -1,7 +1,9 @@
 // @flow
 
 /**
- * lisp-case to PascalCase
+ * From lisp-case to PascalCase
+ * @example
+ * lispCaseToPascalCase('foo-bar') // => 'FooBar'
  */
 
 const lispCaseToPascalCase = (str: string): string => {

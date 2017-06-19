@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Trim spaces from string
+ * @example
+ * trimSpaces(' asdf asdf ') // => 'asdfasdf'
  */
 
 var trimSpaces = function trimSpaces(str /*: string*/) /*: string*/ {

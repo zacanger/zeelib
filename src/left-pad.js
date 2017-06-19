@@ -3,6 +3,9 @@
 /**
  * It's just left-pad
  * Yes, really
+ * @example
+ * leftPad('asdf', 8) // => '    asdf'
+ * leftPad('asdf', 8, 'z') // => 'zzzzasdf'
  */
 
 const leftPad = (

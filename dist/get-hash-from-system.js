@@ -10,6 +10,8 @@ var _crypto = require('crypto');
 
 /**
  * Get a md5 hash based on hostname, process.ppid, and date
+ * @example
+ * getHashFromSystem()
  */
 
 // @flow

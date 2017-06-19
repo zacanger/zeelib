@@ -2,6 +2,8 @@
 
 /**
  * Set an attribute on an element
+ * @example
+ * setAttribute(document.body, 'data-foo', 'bar')
  */
 
 const setAttribute = (

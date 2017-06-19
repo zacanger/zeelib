@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Split a string on spaces
+ * @example
+ * words('foo bar') // => [ 'foo', 'bar' ]
  */
 
 var words = function words(str /*: string*/) /*: string[]*/ {

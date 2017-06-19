@@ -2,6 +2,8 @@
 
 /**
  * Returns a random uid of length 8
+ * @example
+ * getUid8()
  */
 
 const getUid8 = (): string =>

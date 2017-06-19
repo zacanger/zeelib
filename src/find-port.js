@@ -4,7 +4,8 @@ import { createServer } from 'net'
 
 /**
  * Find next open port
- * `findPort(8000, (err, port) => {})`
+ * @example
+ * findPort(8000, (err, port) => console.log(`${port} is open`))
  */
 
 const findPort = (port: number, cb: any): any => {

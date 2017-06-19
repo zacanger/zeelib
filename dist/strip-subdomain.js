@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Strip subdomain from string
+ * @example
+ * stripSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
  */
 
 var stripSubdomain = function stripSubdomain(str /*: string*/) /*: string*/ {

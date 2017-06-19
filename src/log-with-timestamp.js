@@ -2,6 +2,8 @@
 
 /**
  * `console.log` with a timestamp
+ * @example
+ * logWithTimestamp('foo') // => 18/5 15:29:27.685 -- foo
  */
 
 function logWithTimestamp (): ?string {

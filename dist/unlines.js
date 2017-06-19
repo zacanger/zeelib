@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Join an array with lines
+ * @example
+ * unlines([ 'foo', 'bar' ]) // => 'foo\nbar'
  */
 
 var unlines = function unlines(arr /*: string[]*/) /*: string*/ {

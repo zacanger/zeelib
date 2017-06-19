@@ -2,6 +2,8 @@
 
 /**
  * Returns a regex to test for valid hex
+ * @example
+ * getHexRegex()
  */
 
 const getHexRegex = (): RegExp =>

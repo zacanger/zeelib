@@ -1,10 +1,6 @@
-// @flow
-
-/**
- * Invoke a function on any number of passed args
- */
-
-const invoke = (fn: any, ...args: any): any =>
-  fn(...args)
+const invoke = (fn, ...args) => {
+  console.error('`invoke` is deprecated. Please use `apply`.')
+  return fn(...args)
+}
 
 export default invoke

@@ -14,6 +14,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Recursively flatten arrays
+ * @example
+ * flatten([ 1, 2, 3, [ 1, 2, 3 ] ]) // => [ 1, 2, 3, 1, 2, 3 ]
  */
 
 var flatten = function flatten(arr /*: any[]*/) /*: any[]*/ {

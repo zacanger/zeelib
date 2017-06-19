@@ -8,6 +8,8 @@ var _os = require('os');
 
 /**
  * Get hostname
+ * @example
+ * getHostname()
  */
 
 var getHostname = function getHostname() /*: string*/ {

@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Get columns of current terminal
  * @returns {number} columns
+ * @example
+ * getTerminalColumns()
  */
 
 var getTerminalColumns = function getTerminalColumns() {

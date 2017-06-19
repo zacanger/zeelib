@@ -13,6 +13,8 @@ var withInfo = function withInfo() /*: string*/ {
 
 /**
  * `console.log` with hostname and PID info
+ * @example
+ * logWithInfo('foo') // => `foo:angr:1234`
  */
 
 // @flow

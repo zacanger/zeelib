@@ -1,15 +1,16 @@
 // @flow
 
 /**
- * Make an array that contains e, n times
+ * Generates an array of the length of the first param,
+ * filled with the second param, calling the second param
+ * if it's a function
+ * @example
+ * replicate(3, 10) // => [ 10, 10, 10 ]
+ * replicate(4, (a) => a + 1) // => [ 5, 5, 5, 5 ]
  */
 
-const replicate = (num: number, el: any): any[] => {
-  const a = []
-  for (let x = 0; x < num; x++) {
-    a.push(el)
-  }
-  return a
-}
+const replicate = (n: number, p: any): any[] =>
+  Array(n).fill().map((_, i) =>
+    typeof p === 'function' ? p(n, i) : p)
 
 export default replicate

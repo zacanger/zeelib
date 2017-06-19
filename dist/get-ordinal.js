@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Adds ordinal onto integer
  * Works up to 999
  * @example
- * getOrdinal(1) // '1st'
+ * getOrdinal(1) // => '1st'
  */
 
 var getOrdinal = function getOrdinal(n /*: number*/) /*: string*/ {

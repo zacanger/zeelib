@@ -5,8 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 // @flow
 
-/*
+/**
  * `map`
+ * @example
+ * map(increment, [ 1, 2, 3 ]) // => [ 2, 3, 4 ]
  */
 
 var map = function map(fn /*: () => any*/, arr /*: ?any[]*/) /*: any*/ {

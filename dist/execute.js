@@ -17,6 +17,8 @@ env.PATH = (0, _path.resolve)('./node_modules/.bin') + SEPARATOR + env.PATH;
 
 /**
  * Like a standalone `npm run` that obeys `npm bin`
+ * @example
+ * execute('standard-format -w')
  */
 
 var execute = function execute(cmd /*: string*/) /*: void*/ {

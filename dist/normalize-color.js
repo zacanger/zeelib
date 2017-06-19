@@ -18,11 +18,8 @@ var _trimHash2 = _interopRequireDefault(_trimHash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * takes string color, returns either string or null
- */
-
 var normalizeColor = function normalizeColor(color /*: string*/) /*: string | null*/ {
+  console.error('`normalizeColor` is deprecated.');
   var nextColor = (0, _trimSpaces2.default)(color);
   if (!(0, _isHexBased2.default)(color)) {
     return null;

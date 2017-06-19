@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Randomly shuffle items in array
+ * @example
+ * shuffle([ 1, 2, 3, 4 ])
  */
 
 var shuffle = function shuffle(arr /*: any[]*/) /*: any[]*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Escapes a string for use in XPath
+ * @example
+ * escapeForXpath('asdf lask jf((slkfjf ') // => 'concat(\'asdf lask jf((slkfjf \')'
  */
 
 var escapeForXpath = function escapeForXpath(str /*: string*/) /*: ?string*/ {

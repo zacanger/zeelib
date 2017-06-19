@@ -52,6 +52,9 @@ function helper (obj: Object, tokens: string[], ctx: any, fnArgs: any): any {
 
 /**
  * Like `_.get`: takes an object and an access string
+ * @example
+ * safeGet({ a: { b: { c: 'd' } } }, 'a.b.c') // => 'd'
+ * safeGet({ a: { b: { c: 'd' } } }, 'a.b.e') // => undefined
  */
 
 function safeGet (obj: Object, accessStr: string): any {

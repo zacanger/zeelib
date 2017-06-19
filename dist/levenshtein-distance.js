@@ -8,6 +8,9 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Levenshtein distance
  * cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
+ * @example
+ * levenshteinDistance('asdf', 'asdf') // => 0
+ * levenshteinDistance('asdf', 'ghjkl') // => 5
  */
 
 var levenshteinDistance = function levenshteinDistance(a /*: string*/, b /*: string*/) /*: number*/ {

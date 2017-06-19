@@ -11,15 +11,11 @@ Object.defineProperty(exports, "__esModule", {
  */
 
 var takeWhile = function takeWhile(pred /*: () => bool*/, arr /*: any[]*/) /*: any[]*/ {
-  var a1 = [];
-  arr.forEach(function (el) {
-    if (pred(el)) {
-      a1.push(el);
-    } else {
-      return a1;
-    }
+  var stop = arr.length;
+  arr.some(function (n, idx) {
+    return pred(n, idx) ? false : (stop = idx, true);
   });
-  return a1;
+  return arr.slice(0, stop);
 };
 
 exports.default = takeWhile;

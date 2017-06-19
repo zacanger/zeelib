@@ -10,6 +10,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * A simple memoizing util
+ * @example
+ * memoize((a) => a) // => [Function]
+ * memoize((a) => a)(1) // => 1
  */
 
 var memoize = function memoize(fn /*: any*/) /*: any*/ {

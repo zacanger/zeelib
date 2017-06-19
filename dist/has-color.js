@@ -16,6 +16,8 @@ var isColor = function isColor() /*: bool*/ {
 
 /**
  * Returns true if the current terminal supports color
+ * @example
+ * hasColor()
  */
 
 var hasColor /*: bool*/ = isWin() || isColor();

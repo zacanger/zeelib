@@ -5,6 +5,8 @@ import { loadavg } from 'os'
 
 /**
  * Get load average
+ * @example
+ * getLoadAverage()
  */
 
 const getLoadAverage = (): number =>

@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Get inverse truthiness
+ * @example
+ * toBoolInverse(1) // => false
  */
 
 var toBoolInverse = function toBoolInverse(val /*: any*/) /*: bool*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get truthiness
+ * @example
+ * toBool(1) // => true
  */
 
 var toBool = function toBool(val /*: any*/) /*: bool*/ {

@@ -1,7 +1,11 @@
 // @flow
 
 /**
- * `fn -> a -> b -> fn b a`
+ * Flips order of received arguments and calls f.
+ * @example
+ * const minus = (a) => (b) => a - b
+ * minus(2)(1) // => 1
+ * flip(minus)(2)(1) // => -1
  */
 
 const flip = (f: () => any): any =>

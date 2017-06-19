@@ -1,6 +1,4 @@
-// @flow
-
-const contains = (ls: string | any[], el: any): bool => {
+const contains = (ls, el) => {
   console.error('`contains` is deprecated. Please use `elem` instead.')
   return ls.includes(el)
 }

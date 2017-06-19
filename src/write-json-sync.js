@@ -4,6 +4,9 @@ import { writeFileSync } from 'fs'
 
 /**
  * Write JSON from a stringifiable value, sync
+ * @example
+ * writeJsonSync('foo.json', 'whatever')
+ * writeJsonSync('foo.json', someObject, 4)
  */
 
 const writeJsonSync = (

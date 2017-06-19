@@ -8,6 +8,8 @@ var _os = require('os');
 
 /**
  * Get free memory
+ * @example
+ * getFreeMemory()
  */
 
 var getFreeMemory = function getFreeMemory() /*: number*/ {

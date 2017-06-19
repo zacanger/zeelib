@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Returns size of the current terminal
  * @returns {object} columns, rows
+ * @example
+ * getTerminalSize() // => { columns: number, rows: number }
  */
 
 var getTerminalSize = function getTerminalSize() {

@@ -2,6 +2,8 @@
 
 /**
  * Unescape HTML entities
+ * @example
+ * unescapeHtml(escapeHtml('<foo>&bar</foo>')) // => '<foo>&bar</foo>'
  */
 
 const unescapeHtml = (str: string): string =>

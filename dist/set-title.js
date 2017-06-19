@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Set `window.title` or `process.title`
+ * @example
+ * setTitle('foo')
  */
 
 var setTitle = function setTitle(newTitle /*: string*/) /*: void*/ {

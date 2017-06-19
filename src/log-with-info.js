@@ -7,6 +7,8 @@ const withInfo = (str: string = ''): string =>
 
 /**
  * `console.log` with hostname and PID info
+ * @example
+ * logWithInfo('foo') // => `foo:angr:1234`
  */
 
 const logWithInfo = (str: string = ''): void =>

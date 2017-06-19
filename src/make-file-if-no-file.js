@@ -5,6 +5,9 @@ import { resolve } from 'path'
 
 /**
  * Make a file if it doesn't exist already
+ * @example
+ * makeFileIfNoFile('foo.txt')
+ * makeFileIfNoFile('foo.txt', 'contentx')
  */
 
 const makeFileIfNoFile = (

@@ -16,6 +16,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Get load average
+ * @example
+ * getLoadAverage()
  */
 
 var getLoadAverage = function getLoadAverage() /*: number*/ {

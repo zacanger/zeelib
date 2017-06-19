@@ -1,16 +1,9 @@
-// @flow
-
-/**
- * Copy an object, leaving out specified keys
- * cred : gh:texastoland
- * {key, ...copy} = {...target, ...source}
- */
-
 const copyWithout = (
-  target: Object,
-  source: Object,
-  ...keys: any
-): any => {
+  target,
+  source,
+  ...keys
+) => {
+  console.error('`copyWithout` is deprecated.')
   const copy = Object.assign(target, source)
   for (const key of keys) {
     delete copy[key]

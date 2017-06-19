@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Takes an element and returns its x/y position
+ * @example
+ * getElementPosition(document.getElementById('foo')) // => { x: number, y: number }
  */
 
 /*:: type p = {

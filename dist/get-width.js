@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get window width
+ * @example
+ * getWidth()
  */
 
 var getWidth = function getWidth() /*: number*/ {

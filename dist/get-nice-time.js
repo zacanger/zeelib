@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Get a nicely-formatted time string
  * @returns {string} '[hh:mm:ss]'
+ * @example
+ * getNiceTime()
  */
 
 var getNiceTime = function getNiceTime() {

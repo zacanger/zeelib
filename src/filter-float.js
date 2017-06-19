@@ -2,6 +2,8 @@
 
 /**
  * `filterFloat` from MDN's parseFloat docs
+ * @example
+ * filterFloat('-111.111111111111') // => -111.111111111111
  */
 
 const filterFloat = (value: string): number => {

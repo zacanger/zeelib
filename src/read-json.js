@@ -4,6 +4,8 @@ import { readFile } from 'fs'
 
 /**
  * Read json file, parse it, call cb with obj or err
+ * @example
+ * readJson('./foo.json', (err, data) => {})
  */
 
 const readJson = (file: string, cb: any): ?any => {

@@ -2,6 +2,8 @@
 
 /**
  * Returns the flags for a given regular expression
+ * @example
+ * getRegexFlags(/foo/ig) // => [ 'g', 'i' ]
  */
 
 const getRegexFlags = (r: RegExp): Array<string | null> => {

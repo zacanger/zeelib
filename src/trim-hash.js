@@ -2,6 +2,8 @@
 
 /**
  * Trim hash from string
+ * @example
+ * trimHash('#foo') // => 'foo'
  */
 
 const trimHash = (str: string): string =>

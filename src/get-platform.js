@@ -2,6 +2,8 @@
 
 /**
  * Returns platform (e.g. 'linux')
+ * @example
+ * getPlatform()
  */
 
 const getPlatform = (): string =>

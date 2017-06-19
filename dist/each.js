@@ -39,6 +39,9 @@ var iterateObject = function iterateObject(obj, fn) {
  * @param {array|object} list
  * @param {function} fn
  * @returns {any}
+ * @example
+ * each([ 'a', 'b', 'c' ], id) // => 'a'
+ * each() // => undefined
  */
 
 var each = function each(list, fn) {

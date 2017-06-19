@@ -1,12 +1,8 @@
 /* eslint-disable no-useless-escape */
-// @flow
 
-/**
- * Roughly turn CSS into JSON
- */
-
-const cssToJson = (str: string): string =>
-  str
+const cssToJson = (str) => {
+  console.warn('`cssToJson` is deprecated.')
+  return str
     .replace(/(\w*:)/g, '$1"')
     .replace(/[;]/g, '";')
     .replace(/(\'{2,})/g, '"')
@@ -14,5 +10,6 @@ const cssToJson = (str: string): string =>
     .replace(/(['"])?([a-zA-Z0-9_-]+)(['"])?:/g, '"$2": ')
     .replace(/,\s*\}/, '}')
     .trim()
+}
 
 export default cssToJson

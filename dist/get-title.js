@@ -13,6 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Returns title of either window or document, or process,
  * depending on environment
+ * @example
+ * getTitle()
  */
 
 var getTitle = function getTitle() /*: string*/ {

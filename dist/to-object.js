@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -12,11 +12,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 // @flow
 
-/**
- * Make an object from an array
- */
-
 var toObject = function toObject(arr /*: any[]*/) /*: Object*/ {
+  console.error('`toObject` is deprecated. Please use `objectFromEntries`.');
   return arr.reduce(function (res, _ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         k = _ref2[0],

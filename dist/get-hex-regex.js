@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns a regex to test for valid hex
+ * @example
+ * getHexRegex()
  */
 
 var getHexRegex = function getHexRegex() /*: RegExp*/ {

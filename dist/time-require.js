@@ -23,6 +23,8 @@ var timeRequire = function timeRequire() {
  * Just require this and invoke to time requires into that file
  * based on gh:stefanpenner/node-require-timings
  * Takes no parameters
+ * @example
+ * timeRequire()
  */
 
 exports.default = timeRequire;

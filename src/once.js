@@ -2,6 +2,11 @@
 
 /**
  * Only calls fn once; subsequent calls just return first val
+ * @example
+ * const o = once(id)
+ * o(1) // => 1
+ * o() // => 1
+ * o(2) // => 1
  */
 
 const once = (fn: any): any => {

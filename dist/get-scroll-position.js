@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns current scroll position
+ * @example
+ * getScrollPosition() // => { scrollX: number, scrollY: number }
  */
 
 /*:: type S = {

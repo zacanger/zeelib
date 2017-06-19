@@ -5,6 +5,8 @@ import { resolve } from 'path'
 
 /**
  * Watch a file for changes, and call the function
+ * @example
+ * watch('./foo', console.log)
  */
 
 const watchFile = (

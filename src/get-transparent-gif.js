@@ -2,6 +2,8 @@
 
 /**
  * Returns a 1px transparent gif
+ * @example
+ * getTransparentGif()
  */
 
 const getTransparentGif = (): string =>

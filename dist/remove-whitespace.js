@@ -3,13 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Remove all whitespace from string
- */
-
-var removeWhitespace = function removeWhitespace(str /*: string*/) /*: string*/ {
+var removeWhitespace = function removeWhitespace(str) {
+  console.error('`removeWhitespace` is deprecated. Please use `collapseWhitespace`.');
   return str.replace(/^\s+|\s+$/, '');
 };
 

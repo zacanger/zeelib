@@ -2,6 +2,8 @@
 
 /**
  * Returns the width of the brower's scrollbar
+ * @example
+ * getScrollBarWidth() // => 17
  */
 
 const getScrollBarWidth = (): number =>

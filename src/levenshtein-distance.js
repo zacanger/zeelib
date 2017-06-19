@@ -3,6 +3,9 @@
 /**
  * Levenshtein distance
  * cred: https://gist.github.com/andrei-m/982927#gistcomment-1931258 kigiri MTT
+ * @example
+ * levenshteinDistance('asdf', 'asdf') // => 0
+ * levenshteinDistance('asdf', 'ghjkl') // => 5
  */
 
 const levenshteinDistance = (a: string, b: string): number => {

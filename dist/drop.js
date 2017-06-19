@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Like Haskell's `drop`
+ * @example
+ * drop(2, [ 1, 2, 3 ]) // => 3
  */
 
 var drop = function drop(n /*: number*/, arr /*: any[]*/) /*: any[]*/ {

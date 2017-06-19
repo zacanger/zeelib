@@ -8,6 +8,8 @@ var _child_process = require('child_process');
 
 /**
  * Opens things. Works on Linux, Mac, and Windows
+ * @example
+ * open('http://zacanger.com')
  */
 
 var open = function open(args /*: any*/, opts /*: any*/, cb /*: any*/) /*: any*/ {

@@ -2,6 +2,8 @@
 
 /**
  * Get height of window
+ * @example
+ * getHeight()
  */
 
 const getHeight = (): number =>

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Convert rgb to hex
+ * @example
+ * rgbToHex(255, 255, 255) // => '#ffffff'
  */
 
 var rgbToHex = function rgbToHex(r /*: number*/, g /*: number*/, b /*: number*/) /*: string*/ {

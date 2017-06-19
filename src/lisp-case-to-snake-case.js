@@ -1,7 +1,9 @@
 // @flow
 
 /**
- * lisp-case to snake_case
+ * From lisp-case to snake_case
+ * @example
+ * lispCaseToSnakeCase('foo-bar') // => 'foo_bar'
  */
 
 const lispCaseToSnakeCase = (str: string): string =>

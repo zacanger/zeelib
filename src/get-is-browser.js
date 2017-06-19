@@ -1,10 +1,6 @@
-// @flow
-
-/**
- * Returns true if code is in browser
- */
-
-const getIsBrowser = (): bool =>
-  !!(typeof window !== 'undefined' && typeof process === 'undefined')
+const getIsBrowser = () => {
+  console.error('`getIsBrowser` is deprecated. Please use `isBrowser`.')
+  return !!(typeof window !== 'undefined' && typeof process === 'undefined')
+}
 
 export default getIsBrowser

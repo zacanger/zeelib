@@ -1,21 +1,14 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Copy an object, leaving out specified keys
- * cred : gh:texastoland
- * {key, ...copy} = {...target, ...source}
- */
-
-var copyWithout = function copyWithout(target /*: Object*/, source /*: Object*/) /*: any*/ {
+var copyWithout = function copyWithout(target, source) {
   for (var _len = arguments.length, keys = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
     keys[_key - 2] = arguments[_key];
   }
 
+  console.error('`copyWithout` is deprecated.');
   var copy = Object.assign(target, source);
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;

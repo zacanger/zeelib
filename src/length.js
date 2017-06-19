@@ -9,12 +9,15 @@ import isString from './is-string'
 /**
  * Get length of element
  * Works for array, object, string, set, and map
+ * @example
+ * length('foo') // => 3
+ * length([ 1, 2 ]) => 2
  */
 
 const length = (val: any): number => {
   if (isArray(val) || isString(val)) return val.length
   if (isMap(val) || isSet(val)) return val.size
-  if (isObject(val)) return val.keys.length
+  if (isObject(val)) return Object.keys(val).length
   return 0
 }
 

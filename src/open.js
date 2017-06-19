@@ -4,6 +4,8 @@ import { execFile } from 'child_process'
 
 /**
  * Opens things. Works on Linux, Mac, and Windows
+ * @example
+ * open('http://zacanger.com')
  */
 
 const open = (args: any, opts: any, cb: any): any => {

@@ -14,6 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Similar to `takeWhile`: returns a tuple
  * of all elements that pass predicate
  * and all elements that did not
+ * @example
+ * span(lessThanThree, [ 1, 2, 3, 4 ]) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
 var span = function span(pred /*: () => bool*/, arr /*: any[]*/) /*: any[]*/ {

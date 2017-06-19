@@ -1,10 +1,8 @@
 // @flow
 
-/**
- * Make an object from an array
- */
-
-const toObject = (arr: any[]): Object =>
-  arr.reduce((res, [ k, v ]) => ({ ...res, [k]: v }), {})
+const toObject = (arr: any[]): Object => {
+  console.error('`toObject` is deprecated. Please use `objectFromEntries`.')
+  return arr.reduce((res, [ k, v ]) => ({ ...res, [k]: v }), {})
+}
 
 export default toObject

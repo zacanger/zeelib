@@ -2,6 +2,8 @@
 
 /**
  * Split a string on given char
+ * @example
+ * splitStringOn('asdfasdf asdf', 'a') // => [ '', 'sdfasdf asdf' ]
  */
 
 const splitStringOn = (str: string, spl: string = ''): string[] | null => {

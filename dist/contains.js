@@ -3,9 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-var contains = function contains(ls /*: string | any[]*/, el /*: any*/) /*: bool*/ {
+var contains = function contains(ls, el) {
   console.error('`contains` is deprecated. Please use `elem` instead.');
   return ls.includes(el);
 };

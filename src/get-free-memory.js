@@ -4,6 +4,8 @@ import { freemem } from 'os'
 
 /**
  * Get free memory
+ * @example
+ * getFreeMemory()
  */
 
 const getFreeMemory = (): number =>

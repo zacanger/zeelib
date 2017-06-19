@@ -3,13 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-/**
- * Returns true if code is in browser
- */
-
-var getIsBrowser = function getIsBrowser() /*: bool*/ {
+var getIsBrowser = function getIsBrowser() {
+  console.error('`getIsBrowser` is deprecated. Please use `isBrowser`.');
   return !!(typeof window !== 'undefined' && typeof process === 'undefined');
 };
 

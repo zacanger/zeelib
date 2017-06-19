@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Fix windows-style path sep
  * cred: gh:sindresorhus/slash
+ * @example
+ * fixWindowsSlashes('C:\\Windows\\Something') // => 'C:/Windows/Something'
  */
 
 var fixWindowsSlashes = function fixWindowsSlashes(str /*: string*/) /*: string*/ {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Simple `pluck`
+ * @example
+ * pluck('a', [ { a: 'a' }, { a: 'b' } ]) // => [ 'a', 'b' ]
  */
 
 var pluck = function pluck(key /*: string*/, arr /*: any[]*/) /*: any[]*/ {

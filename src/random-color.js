@@ -2,6 +2,8 @@
 
 /**
  * Get a random hex-based color
+ * @example
+ * randomColor()
  */
 
 const randomColor = (): string => {

@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Get a random hex-based color
+ * @example
+ * randomColor()
  */
 
 var randomColor = function randomColor() /*: string*/ {

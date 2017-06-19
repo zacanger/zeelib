@@ -10,6 +10,9 @@ var _path = require('path');
 
 /**
  * Safe `readFileSync`
+ * @example
+ * const fooContents = readFileSync('./foo')
+ * if (fooContents != null) doThings(fooContents)
  */
 
 // @flow

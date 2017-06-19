@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Remove html-like tags from string
+ * @example
+ * removeTags('<foo>whatver</foo>') // => 'whatever'
  */
 
 var removeTags = function removeTags(str /*: string*/) /*: string*/ {

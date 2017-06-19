@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Sum an array of numbers
+ * @example
+ * sum([ 1, 2, 3, 4 ]) // => 10
  */
 
 var sum = function sum(nums /*: number[]*/) /*: number*/ {

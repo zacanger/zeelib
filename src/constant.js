@@ -2,6 +2,8 @@
 
 /**
  * Similar to `id` but takes another `any`
+ * @example
+ * constant(1)(() => {}) // => 1
  */
 
 const constant = (a: any) =>
