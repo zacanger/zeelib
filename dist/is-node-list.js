@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is a nodelist
+ * @example
+ * isNodeList(document.getElementsByTagName('span')) // => true
  */
 
 var isNodeList = function isNodeList(v /*: any*/) /*: bool*/ {

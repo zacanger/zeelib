@@ -8,6 +8,9 @@ var _fs = require('fs');
 
 /**
  * Returns true if the path is a directory
+ * @example
+ * isDirectory('.') // => true
+ * isDirectory('./fake-path') // => false
  */
 
 var isDirectory = function isDirectory(filePath /*: string*/) /*: bool*/ {

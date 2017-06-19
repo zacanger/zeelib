@@ -24,6 +24,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is empty
+ * @example
+ * isEmpty('') // => true
+ * isEmpty({}) // => true
+ * isEmpty([]) // => true
+ * isEmpty(null) // => true
  */
 
 // @flow

@@ -7,6 +7,9 @@ import lt from './lt'
 
 /**
  * Returns true if the last parameter is before the first and second parameters
+ * @example
+ * isBetween(1, 3, 2) // => true
+ * isBetween(2, 1, 2) // => false
  */
 
 const isBetween = (a: number, b: number, mid: number): bool => {

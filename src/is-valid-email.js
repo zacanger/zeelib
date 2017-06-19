@@ -4,6 +4,8 @@
 /**
  * Retuns true if email is valid
  * For a more complete implementation, please see Mail::RFC822::Address
+ * @example
+ * isValidEmail('zac@zacanger.com') // => true
  */
 
 const isValidEmail = (email: string): bool => // eslint-disable-next-line max-len

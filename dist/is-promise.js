@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if value is a promise
+ * @example
+ * isPromise(Promise.resolve())
  */
 
 var isPromise = function isPromise(a /*: any*/) /*: bool*/ {

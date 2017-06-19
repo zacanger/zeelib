@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is a date
+ * @example
+ * isDate(new Date()) // => true
  */
 
 var isDate = function isDate(v /*: any*/) /*: bool*/ {

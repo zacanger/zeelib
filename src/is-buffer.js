@@ -2,6 +2,9 @@
 
 /**
  * Returns true if the value is a buffer
+ * @example
+ * isBuffer('asdf') // => false
+ * isBuffer(Buffer.from('asdf')) // => true
  */
 
 const isBuffer = (a: any): bool => {

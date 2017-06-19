@@ -5,6 +5,8 @@ import isUndefined from './is-undefined'
 
 /**
  * Returns true if the value is null or undefined
+ * @example
+ * isNullOrUndefined(null) // => true
  */
 
 const isNullOrUndefined = (v: any): bool =>

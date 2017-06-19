@@ -16,6 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if string is a valid hex
+ * @example
+ * isValidHex('fff') // => true
  */
 
 // @flow

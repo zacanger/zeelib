@@ -5,6 +5,8 @@ import trimSpaces from './trim-spaces'
 
 /**
  * Returns true if string is a valid hex
+ * @example
+ * isValidHex('fff') // => true
  */
 
 const isValidHex = (color: string): bool =>

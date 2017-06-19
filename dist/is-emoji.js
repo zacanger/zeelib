@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the value is an emoji
+ * @example
+ * isEmoji('asdf') // => false
  */
 
 var isEmoji = function isEmoji(str // eslint-disable-next-line max-len

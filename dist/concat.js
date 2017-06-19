@@ -13,6 +13,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * Like Haskell's `concat`,
  * a one-level flatten of an array of arrays
+ * @example
+ * const nested = [ [ 1, 2, 3 ], [ [ 4, 5, 6 ] ] ]
+ * concat(nested) // => [ 1, 2, 3, [ 4, 5, 6 ] ]
  */
 
 var concat = function concat(a /*: Array<any[]>*/) /*: any[]*/ {

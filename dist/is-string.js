@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if value is a string
+ * @example
+ * isString('a') // => true
  */
 
 var isString = function isString(v /*: any*/) /*: bool*/ {

@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if value is a set
+ * @example
+ * isSet(new Set()) // => true
  */
 
 var isSet = function isSet(v /*: any*/) /*: bool*/ {

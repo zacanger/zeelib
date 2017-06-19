@@ -2,6 +2,8 @@
 
 /**
  * Returns true if number is positive
+ * @example
+ * isPositive(1) // => true
  */
 
 const isPositive = (a: number): bool =>

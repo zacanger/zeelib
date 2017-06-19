@@ -2,6 +2,8 @@
 
 /**
  * Returns true if the value is null
+ * @example
+ * isNull(null) // => true
  */
 
 const isNull = (v: any): bool =>

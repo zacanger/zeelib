@@ -129,6 +129,7 @@
 -   [and](#and)
 -   [any](#any)
 -   [apply](#apply)
+-   [arity](#arity)
 -   [caar](#caar)
 -   [cadr](#cadr)
 -   [car](#car)
@@ -231,7 +232,6 @@
 -   [isSymbol](#issymbol)
 -   [isUndefined](#isundefined)
 -   [isValidDate](#isvaliddate)
--   [isValidRegex](#isvalidregex)
 -   [objectToString](#objecttostring)
 -   [toBool](#tobool)
 -   [toBoolInverse](#toboolinverse)
@@ -262,13 +262,11 @@
 -   [getTitle](#gettitle)
 -   [getTransparentGif](#gettransparentgif)
 -   [greater](#greater)
--   [greatestCommonDivisor](#greatestcommondivisor)
 -   [gt](#gt)
 -   [gte](#gte)
--   [inherits](#inherits)
 -   [intersection](#intersection)
 -   [invoker](#invoker)
--   [leastCommonMultiple](#leastcommonmultiple)
+-   [isBetween](#isbetween)
 -   [leftPad](#leftpad)
 -   [lesser](#lesser)
 -   [levenshteinDistance](#levenshteindistance)
@@ -285,7 +283,6 @@
 -   [noSwitch](#noswitch)
 -   [noop](#noop)
 -   [objectFromEntries](#objectfromentries)
--   [objectInherit](#objectinherit)
 -   [product](#product)
 -   [range](#range)
 -   [reverseDigits](#reversedigits)
@@ -944,6 +941,13 @@ Returns true if the string is alphanumeric
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isAlphaNumeric('asdf1234') // => true
+isAlphaNumeric('!') // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isEmoji
@@ -954,6 +958,12 @@ Returns true if the value is an emoji
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isEmoji('asdf') // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isHexBased
@@ -963,6 +973,13 @@ Returns true if the string is hex-based
 **Parameters**
 
 -   `color` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+isHexBased('fff') // => true
+isHexBased('whatever') // => false
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -994,6 +1011,12 @@ Returns true if the string is contained somewhere in the array
 -   `el` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `arr` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
 
+**Examples**
+
+```javascript
+isStringSomewhereInArray('a', [ 'asdf' ]) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isValidEmail
@@ -1005,6 +1028,12 @@ For a more complete implementation, please see Mail::RFC822::Address
 
 -   `email` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isValidEmail('zac@zacanger.com') // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isValidHex
@@ -1014,6 +1043,12 @@ Returns true if string is a valid hex
 **Parameters**
 
 -   `color` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+isValidHex('fff') // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -1850,6 +1885,13 @@ Returns true if the path is a directory
 
 -   `filePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isDirectory('.') // => true
+isDirectory('./fake-path') // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isFile
@@ -1860,6 +1902,13 @@ Returns true if the path is a file
 
 -   `filePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isFile('./README.md') // => true
+isFile('.') // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isInstalled
@@ -1869,6 +1918,12 @@ Returns true if the passed node_module name is installed
 **Parameters**
 
 -   `pkgName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+isInstalled('zeelib') // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -1891,6 +1946,12 @@ Returns true if path is a symlink
 **Parameters**
 
 -   `filePath` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+**Examples**
+
+```javascript
+isSymLink('.') // => false
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -2185,6 +2246,23 @@ apply(lessThanThree, 1) // => true
 
 Returns **any** 
 
+## arity
+
+Get the arity of f
+
+**Parameters**
+
+-   `f` **function (any): any** 
+
+**Examples**
+
+```javascript
+const addFour = (a, b, c, d) => a + b + c + d
+arity(addFour) // => 4
+```
+
+Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
 ## caar
 
 `caar`
@@ -2308,6 +2386,14 @@ Right to left composition
 
 -   `fns` **...any** 
 
+**Examples**
+
+```javascript
+const addOne = (a) => a + 1
+const timesTwo = (a) => a * 2
+compose(addOne, timesTwo)(2) // => 5
+```
+
 Returns **any** 
 
 ## concat
@@ -2318,6 +2404,13 @@ a one-level flatten of an array of arrays
 **Parameters**
 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>>** 
+
+**Examples**
+
+```javascript
+const nested = [ [ 1, 2, 3 ], [ [ 4, 5, 6 ] ] ]
+concat(nested) // => [ 1, 2, 3, [ 4, 5, 6 ] ]
+```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
@@ -2331,6 +2424,15 @@ calling `f` on each of the sub-arrays
 
 -   `f` **function (): any** 
 -   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>>** 
+
+**Examples**
+
+```javascript
+import { doubleUntil } from 'zeelib'
+const nested = [ [ 1, 2, 3 ], [ [ 4, 5, 6 ] ] ]
+const f = (el) => doubleUntil(2)(el)
+concatMap(f, nested) // => [ 1, 2, 3, [ 4, 5, 6 ], [ 4, 5, 6 ] ]
+```
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
@@ -2891,11 +2993,19 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## pipe
 
-l->r composition
+Left to right composition
 
 **Parameters**
 
 -   `fns` **...any** 
+
+**Examples**
+
+```javascript
+const addOne = (a) => a + 1
+const timesTwo = (a) => a * 2
+pipe(addOne, timesTwo)(2) // => 6
+```
 
 Returns **any** 
 
@@ -3236,18 +3346,29 @@ Returns **R**
 ## is
 
 Returns true if the value is of the type
-Example: `is('number', 2)` -> `true`
 
 **Parameters**
 
 -   `type` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `val` **any** 
 
+**Examples**
+
+```javascript
+is('number', 2) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isArray
 
 Returns true if the passed value is an array
+
+**Examples**
+
+```javascript
+isArray([]) // => true
+```
 
 ## isArrayLike
 
@@ -3256,6 +3377,13 @@ Returns true if the passed value is array-like
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isArrayLike({}) // => false
+isArrayLike([ 1, 2 ]) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3267,6 +3395,12 @@ Returns true if the value is a boolean
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isBoolean(true) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isBuffer
@@ -3276,6 +3410,13 @@ Returns true if the value is a buffer
 **Parameters**
 
 -   `a` **any** 
+
+**Examples**
+
+```javascript
+isBuffer('asdf') // => false
+isBuffer(Buffer.from('asdf')) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3287,6 +3428,12 @@ Returns true if the value is a date
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isDate(new Date()) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isDefined
@@ -3296,6 +3443,12 @@ Returns true if the value is defined
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isDefined(null) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3307,6 +3460,12 @@ Returns true if the value is a dom element
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isDomElement(document.getElementById('foo')) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isEmpty
@@ -3316,6 +3475,15 @@ Returns true if the value is empty
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isEmpty('') // => true
+isEmpty({}) // => true
+isEmpty([]) // => true
+isEmpty(null) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3327,6 +3495,12 @@ Returns true if value is an error
 
 -   `a` **any** 
 
+**Examples**
+
+```javascript
+isError(new Error()) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isEven
@@ -3336,6 +3510,12 @@ Returns true if the number is even
 **Parameters**
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+isEven(2) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3347,6 +3527,13 @@ Returns true if the number is a float
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+isFloat(2) // => false
+isFloat(2.2) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isFunction
@@ -3356,6 +3543,14 @@ Returns true if the value is a function
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+const noop = () => {}
+isFunction(2) // => false
+isFunction(noop) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3367,6 +3562,12 @@ Returns true if the string is valid JSON
 
 -   `str` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+isJson(JSON.stringify({ a: 'b' })) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isMap
@@ -3377,11 +3578,23 @@ Returns true if value is a map
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isMap(new Map()) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isNan
 
 Returns true if the value isNaN
+
+**Examples**
+
+```javascript
+isNan(2) // => false
+```
 
 ## isNegative
 
@@ -3390,6 +3603,12 @@ Returns true if the number is negative
 **Parameters**
 
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+isNegative(-1) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3401,6 +3620,12 @@ Returns true if the value is a nodelist
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isNodeList(document.getElementsByTagName('span')) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isNull
@@ -3410,6 +3635,12 @@ Returns true if the value is null
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isNull(null) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3421,6 +3652,12 @@ Returns true if the value is null or undefined
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isNullOrUndefined(null) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isNumber
@@ -3430,6 +3667,13 @@ Returns true if the value is a number and is not NaN
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isNumber(2) // => true
+isNumber(NaN) // => false
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3441,6 +3685,12 @@ Returns true if the value is an object
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isObject('asdf') // => false
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isOdd
@@ -3450,6 +3700,12 @@ Returns true if the number is odd
 **Parameters**
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+isOdd(1) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3461,6 +3717,12 @@ Returns true if number is positive
 
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+isPositive(1) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isPow2
@@ -3470,6 +3732,12 @@ Returns true if number is a power of two
 **Parameters**
 
 -   `n` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+isPow2(16) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3481,6 +3749,12 @@ Returns true if value is a primitive
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isPrimitive(1) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isPromise
@@ -3490,6 +3764,12 @@ Returns true if value is a promise
 **Parameters**
 
 -   `a` **any** 
+
+**Examples**
+
+```javascript
+isPromise(Promise.resolve())
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3501,6 +3781,12 @@ Returns true if value is a RegExp
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isRegExp(/a/) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isSet
@@ -3510,6 +3796,12 @@ Returns true if value is a set
 **Parameters**
 
 -   `v` **any** 
+
+**Examples**
+
+```javascript
+isSet(new Set()) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3521,6 +3813,12 @@ Returns true if value is a string
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isString('a') // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isSymbol
@@ -3530,6 +3828,12 @@ Returns true if value is a symbol
 **Parameters**
 
 -   `a` **any** 
+
+**Examples**
+
+```javascript
+isSymbol(Symbol.for('foo')) // => true
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -3541,6 +3845,12 @@ Returns true if value is undefined
 
 -   `v` **any** 
 
+**Examples**
+
+```javascript
+isUndefined(undefined) // => true
+```
+
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## isValidDate
@@ -3551,15 +3861,11 @@ Returns true if the passed object is a valid Date
 
 -   `d` **any** 
 
-Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+**Examples**
 
-## isValidRegex
-
-Returns true if RegExp is valid
-
-**Parameters**
-
--   `v` **any** 
+```javascript
+isValidDate('1234') // => false
+```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
@@ -4028,12 +4334,6 @@ greater(1, 2) // => 2
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
-## greatestCommonDivisor
-
-Get the greatest common diviser of all arguments
-
-Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
-
 ## gt
 
 Returns true if first param is greater than second param
@@ -4070,23 +4370,6 @@ gte(2, 3) // => false
 ```
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
-
-## inherits
-
-Simple `inherits`
-
-**Parameters**
-
--   `a` **any** 
--   `b` **any** 
-
-**Examples**
-
-```javascript
-inherits(A, B)
-```
-
-Returns **any** 
 
 ## intersection
 
@@ -4132,11 +4415,24 @@ invoker(20, 100)(() => {
 }, console.log)
 ```
 
-## leastCommonMultiple
+## isBetween
 
-Returns least common multiple of all arguments
+Returns true if the last parameter is before the first and second parameters
 
-Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+**Parameters**
+
+-   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `mid` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+**Examples**
+
+```javascript
+isBetween(1, 3, 2) // => true
+isBetween(2, 1, 2) // => false
+```
+
+Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ## leftPad
 
@@ -4404,17 +4700,6 @@ objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## objectInherit
-
-Inherits target by source
-
-**Parameters**
-
--   `target` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `source` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-Returns **void** 
-
 ## product
 
 Get the product of a list of numbers
@@ -4655,7 +4940,7 @@ A very simple store implementation (think Redux-like)
 ```javascript
 import { store } from 'zeelib'
 const state = store()
-state.subscribe((new, prev) => new.foo)
+state.subscribe((next, prev) => next.foo)
 state.setState({ foo: 'bar' })
 ```
 

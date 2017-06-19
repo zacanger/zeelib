@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
  * @example
  * import { store } from 'zeelib'
  * const state = store()
- * state.subscribe((new, prev) => new.foo)
+ * state.subscribe((next, prev) => next.foo)
  * state.setState({ foo: 'bar' })
  */
 

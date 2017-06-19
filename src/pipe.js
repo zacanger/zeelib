@@ -3,7 +3,11 @@
 import reduce from './reduce'
 
 /**
- * l->r composition
+ * Left to right composition
+ * @example
+ * const addOne = (a) => a + 1
+ * const timesTwo = (a) => a * 2
+ * pipe(addOne, timesTwo)(2) // => 6
  */
 
 const pipe = (...fns: any): any =>

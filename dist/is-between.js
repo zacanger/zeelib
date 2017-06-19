@@ -24,6 +24,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the last parameter is before the first and second parameters
+ * @example
+ * isBetween(1, 3, 2) // => true
+ * isBetween(2, 1, 2) // => false
  */
 
 // @flow

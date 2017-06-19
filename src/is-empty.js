@@ -7,6 +7,11 @@ import isNullOrUndefined from './is-null-or-undefined'
 
 /**
  * Returns true if the value is empty
+ * @example
+ * isEmpty('') // => true
+ * isEmpty({}) // => true
+ * isEmpty([]) // => true
+ * isEmpty(null) // => true
  */
 
 const isEmpty = (v: any): bool => {

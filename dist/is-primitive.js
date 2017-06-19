@@ -10,6 +10,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /**
  * Returns true if value is a primitive
+ * @example
+ * isPrimitive(1) // => true
  */
 
 var isPrimitive = function isPrimitive(v /*: any*/) /*: bool*/ {

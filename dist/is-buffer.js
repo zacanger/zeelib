@@ -7,6 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the value is a buffer
+ * @example
+ * isBuffer('asdf') // => false
+ * isBuffer(Buffer.from('asdf')) // => true
  */
 
 var isBuffer = function isBuffer(a /*: any*/) /*: bool*/ {

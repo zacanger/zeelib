@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the passed value is an array
+ * @example
+ * isArray([]) // => true
  */
 
 var isArray = Array.isArray || function (v /*: any*/) /*: bool*/ {

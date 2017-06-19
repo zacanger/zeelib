@@ -8,6 +8,8 @@ var _fs = require('fs');
 
 /**
  * Returns true if path is a symlink
+ * @example
+ * isSymLink('.') // => false
  */
 
 var isSymLink = function isSymLink(filePath /*: string*/) /*: bool*/ {

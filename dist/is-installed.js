@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the passed node_module name is installed
+ * @example
+ * isInstalled('zeelib') // => true
  */
 
 var isInstalled = function isInstalled(pkgName /*: string*/) /*: bool*/ {
