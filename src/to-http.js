@@ -1,10 +1,8 @@
 // @flow
 
-/**
- * https to http
- */
-
-const toHttp = (str: string): string =>
-  str.replace(/^https/, 'http')
+const toHttp = (str: string): string => {
+  console.error('`toHttp` is deprecated.')
+  return str.replace(/^https/, 'http')
+}
 
 export default toHttp

@@ -1,18 +1,12 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 // @flow
 
-/**
- * Run fn n times
- * Adapted from facebook utility scripts
- * Return 0 on success
- * Return code of last failed if no more tries left
- */
-
 function tryExecNTimes(funcToRetry /*: () => any*/, retriesLeft /*: number*/, onEveryError /*: ?() => any*/) /*: any*/ {
+  console.error('`tryExecNTimes` is deprecated.');
   var exitCode = funcToRetry();
   if (exitCode === 0) {
     return exitCode;
@@ -21,7 +15,7 @@ function tryExecNTimes(funcToRetry /*: () => any*/, retriesLeft /*: number*/, on
       onEveryError();
     }
     retriesLeft--;
-    console.log("Command failed, " + retriesLeft + " retries left");
+    console.log('Command failed, ' + retriesLeft + ' retries left');
     if (retriesLeft === 0) {
       return exitCode;
     } else {

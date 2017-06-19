@@ -2,6 +2,8 @@
 
 /**
  * Takes the last n items of array
+ * @example
+ * takeLast(2, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
 const takeLast = (num: number, arr: any[]): any[] => {

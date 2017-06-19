@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * `[].slice` util
+ * @example
+ * slice([ 1, 2, 3 ], 1, 2) // => [ 2 ]
  */
 
 var slice = function slice(arr /*: any[]*/, from /*: number*/, to /*: ?number*/) /*: any[]*/ {

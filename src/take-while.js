@@ -9,15 +9,10 @@ const takeWhile = (
   pred: () => bool,
   arr: any[]
 ): any[] => {
-  const a1 = []
-  arr.forEach((el) => {
-    if (pred(el)) {
-      a1.push(el)
-    } else {
-      return a1
-    }
-  })
-  return a1
+  let stop = arr.length
+  arr.some((n, idx) =>
+    pred(n, idx) ? false : ((stop = idx), true))
+  return arr.slice(0, stop)
 }
 
 export default takeWhile

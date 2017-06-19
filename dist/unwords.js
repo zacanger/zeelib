@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Join an array with spaces
+ * @example
+ * unwords([ 'foo', bar ]) // => 'foo bar'
  */
 
 var unwords = function unwords(arr /*: string[]*/) /*: string*/ {

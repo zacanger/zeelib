@@ -11,6 +11,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /**
  * Get the memory size of an object
  * based on code by http://code.stephenmorley.org/ CC0 1.0 Universal
+ * @example
+ * sizeOf('asdf') // => 8
  */
 
 var sizeOf = function sizeOf(object /*: Object*/) /*: number*/ {

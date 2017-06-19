@@ -5,11 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 // @flow
 
-/**
- * http to https
- */
-
 var toHttps = function toHttps(str /*: string*/) /*: string*/ {
+  console.error('`toHttps` is deprecated.');
   return str.replace(/^http:/, 'https:');
 };
 

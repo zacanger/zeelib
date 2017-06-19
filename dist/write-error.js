@@ -11,6 +11,8 @@ var _util = require('util');
 /**
  * Use instead of `console.error()`
  * Logs to file and stdout both
+ * @example
+ * writeError('foo')
  */
 
 // @flow

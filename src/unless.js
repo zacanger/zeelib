@@ -3,7 +3,7 @@
 /**
  * Call a function if the condition is falsey
  * @example
- * unless(false, () => a) // a
+ * unless(false, () => true) // => true
  */
 
 const unless = (

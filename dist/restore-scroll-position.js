@@ -7,7 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Restore scroll position to coordinates
- * Takes `{ scrollX: number, scrollX: number }`
+ * @example
+ * restoreScrollPosition({ scrollX: 0, scrollY: 100 })
  */
 
 /*:: type s = {

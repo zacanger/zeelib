@@ -10,6 +10,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Uniq an array
+ * @example
+ * uniq([ 1, 1, 2, 3 ]) // => [ 1, 2, 3 ]
  */
 
 var uniq = function uniq(arr /*: any[]*/) /*: any[]*/ {

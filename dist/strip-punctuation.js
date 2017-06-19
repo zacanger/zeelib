@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Strip punctuation from string
+ * @example
+ * stripPunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
  */
 
 var stripPunctuation = function stripPunctuation(str /*: string*/) /*: string*/ {

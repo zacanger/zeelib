@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
  * Takes a width, height, maxWidth, and maxHeight
  * Returns an object that tells you the largest you can
  * scale to.
+ * @example
+ * scaleToFit(1400, 1200, 2000, 200) // => { width: 233.33333333333331, height: 200 }
  */
 
 /*:: type O = {

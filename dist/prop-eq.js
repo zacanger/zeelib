@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if current obj has prop that equals given val
+ * @example
+ * propEq('a', 1, { a: 1 }) // => true
  */
 
 var propEq = (0, _curry2.default)(function (prop /*: any*/, value /*: any*/, data /*: Object*/) /*: bool*/ {

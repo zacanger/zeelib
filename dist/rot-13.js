@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * ROT13 a string
+ * @example
+ * rot13('asdf') // => 'nfqs'
  */
 
 var rot13 = function rot13(str /*: string*/) /*: string*/ {

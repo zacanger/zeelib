@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Remove all newlines from string
+ * @example
+ * removeNewlines('\n\na\n\n') // => 'a'
  */
 
 var removeNewlines = function removeNewlines(str /*: string*/) /*: string*/ {

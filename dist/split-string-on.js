@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Split a string on given char
+ * @example
+ * splitStringOn('asdfasdf asdf', 'a') // => [ '', 'sdfasdf asdf' ]
  */
 
 var splitStringOn = function splitStringOn(str /*: string*/) /*: string[] | null*/ {

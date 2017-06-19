@@ -2,6 +2,8 @@
 
 /**
  * Trim spaces from string
+ * @example
+ * trimSpaces(' asdf asdf ') // => 'asdfasdf'
  */
 
 const trimSpaces = (str: string): string =>

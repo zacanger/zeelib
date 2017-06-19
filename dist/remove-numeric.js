@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Remove numeric chars from string
+ * @example
+ * removeNumeric('123abc') // => 'abc'
  */
 
 var removeNumeric = function removeNumeric(str /*: string*/) /*: string*/ {

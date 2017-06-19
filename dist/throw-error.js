@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Throw an error, or anything else passed in as an error
+ * @example
+ * throwError(new Error('Oh noes!'))
+ * throwError('Oh noes!')
  */
 
 var throwError = function throwError(err /*: any*/) /*: Error*/ {

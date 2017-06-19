@@ -8,6 +8,8 @@ var _fs = require('fs');
 
 /**
  * Read and parse JSON
+ * @example
+ * const stuff = readJsonSync('./foo.json')
  */
 
 var readJsonSync = function readJsonSync(file /*: string*/) /*: string*/ {

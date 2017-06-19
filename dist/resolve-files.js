@@ -8,6 +8,8 @@ var _path = require('path');
 
 /**
  * Resolve a list of paths
+ * @example
+ * resolveFiles([ 'foo', 'bar' ])
  */
 
 var resolveFiles = function resolveFiles(ls /*: string[]*/) /*: string[]*/ {

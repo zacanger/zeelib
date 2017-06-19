@@ -14,10 +14,17 @@ var _isDate = require('./is-date');
 
 var _isDate2 = _interopRequireDefault(_isDate);
 
+var _isRegExp = require('./is-reg-exp');
+
+var _isRegExp2 = _interopRequireDefault(_isRegExp);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Enhanced `typeof`
+ * @example
+ * typeOf('a') // => 'string'
+ * typeOf(new Date()) // => 'date'
  */
 
 var typeOf = function typeOf(a /*: any*/) /*: string*/ {
@@ -26,6 +33,7 @@ var typeOf = function typeOf(a /*: any*/) /*: string*/ {
     if (a && a.nodeType === 1) return 'dom';
     if ((0, _isArray2.default)(a)) return 'array';
     if ((0, _isDate2.default)(a)) return 'date';
+    if ((0, _isRegExp2.default)(a)) return 'regexp';
     return 'object';
   }
   return typeof a === 'undefined' ? 'undefined' : _typeof(a);

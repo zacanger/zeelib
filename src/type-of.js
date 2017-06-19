@@ -2,9 +2,13 @@
 
 import isArray from './is-array'
 import isDate from './is-date'
+import isRegExp from './is-reg-exp'
 
 /**
  * Enhanced `typeof`
+ * @example
+ * typeOf('a') // => 'string'
+ * typeOf(new Date()) // => 'date'
  */
 
 const typeOf = (a: any): string => {
@@ -13,6 +17,7 @@ const typeOf = (a: any): string => {
     if (a && a.nodeType === 1) return 'dom'
     if (isArray(a)) return 'array'
     if (isDate(a)) return 'date'
+    if (isRegExp(a)) return 'regexp'
     return 'object'
   }
   return typeof a

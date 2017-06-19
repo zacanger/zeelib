@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Trim hash from string
+ * @example
+ * trimHash('#foo') // => 'foo'
  */
 
 var trimHash = function trimHash(str /*: string*/) /*: string*/ {

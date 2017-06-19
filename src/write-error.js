@@ -6,6 +6,8 @@ import { format } from 'util'
 /**
  * Use instead of `console.error()`
  * Logs to file and stdout both
+ * @example
+ * writeError('foo')
  */
 
 const fn = process.argv[2] || process.env.ERR_FILE || 'err.log'

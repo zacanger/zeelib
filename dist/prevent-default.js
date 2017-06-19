@@ -8,6 +8,11 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Calls preventDefault and stopPropagation
  * if they exist
+ * @example
+ * handleClick (e) {
+ *   preventDefault(e)
+ *   doOtherThingsMaybe()
+ * }
  */
 
 var preventDefault = function preventDefault(e /*: EventTarget*/) /*: void*/ {

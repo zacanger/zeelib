@@ -8,6 +8,8 @@ var _fs = require('fs');
 
 /**
  * Read json file, parse it, call cb with obj or err
+ * @example
+ * readJson('./foo.json', (err, data) => {})
  */
 
 var readJson = function readJson(file /*: string*/, cb /*: any*/) /*: ?any*/ {

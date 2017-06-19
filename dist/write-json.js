@@ -8,6 +8,8 @@ var _fs = require('fs');
 
 /**
  * Write JSON from a stringifiable value
+ * @example
+ * writeJson('foo.json', someObject, 4, (err) => {})
  */
 
 var writeJson = function writeJson(file /*: string*/, data /*: any*/) {

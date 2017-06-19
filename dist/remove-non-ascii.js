@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Remove non-ascii chars from string
+ * @example
+ * removeNonAscii('asdf!!\n\r\t\ns') // => 'asdf!!s'
  */
 
 var removeNonAscii = function removeNonAscii(str /*: string*/) /*: string*/ {

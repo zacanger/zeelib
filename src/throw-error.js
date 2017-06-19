@@ -4,6 +4,9 @@ import isError from './is-error'
 
 /**
  * Throw an error, or anything else passed in as an error
+ * @example
+ * throwError(new Error('Oh noes!'))
+ * throwError('Oh noes!')
  */
 
 const throwError = (err: any): Error => {

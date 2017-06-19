@@ -4,6 +4,8 @@
  * Just require this and invoke to time requires into that file
  * based on gh:stefanpenner/node-require-timings
  * Takes no parameters
+ * @example
+ * timeRequire()
  */
 
 import { readFileSync } from 'fs'
