@@ -2,7 +2,8 @@
 
 /**
  * Returns true if the value is of the type
- * Example: `is('number', 2)` -> `true`
+ * @example
+ * is('number', 2) // => true
  */
 
 const is = (type: string, val: any): bool =>

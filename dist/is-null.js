@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the value is null
+ * @example
+ * isNull(null) // => true
  */
 
 var isNull = function isNull(v /*: any*/) /*: bool*/ {

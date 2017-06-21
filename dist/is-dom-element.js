@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is a dom element
+ * @example
+ * isDomElement(document.getElementById('foo')) // => true
  */
 
 var isDomElement = function isDomElement(v /*: any*/) /*: bool*/ {

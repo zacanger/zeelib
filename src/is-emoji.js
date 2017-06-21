@@ -3,6 +3,8 @@
 
 /**
  * Returns true if the value is an emoji
+ * @example
+ * isEmoji('asdf') // => false
  */
 
 const isEmoji = (str: string): bool => // eslint-disable-next-line max-len

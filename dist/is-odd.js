@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the number is odd
+ * @example
+ * isOdd(1) // => true
  */
 
 var isOdd = function isOdd(n /*: number*/) /*: bool*/ {

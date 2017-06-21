@@ -4,6 +4,8 @@ import objectToString from './object-to-string'
 
 /**
  * Returns true if the value is a dom element
+ * @example
+ * isDomElement(document.getElementById('foo')) // => true
  */
 
 const isDomElement = (v: any): bool =>

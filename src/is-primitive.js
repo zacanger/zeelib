@@ -2,6 +2,8 @@
 
 /**
  * Returns true if value is a primitive
+ * @example
+ * isPrimitive(1) // => true
  */
 
 const isPrimitive = (v: any): bool => {

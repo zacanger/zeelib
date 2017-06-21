@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if value is a RegExp
+ * @example
+ * isRegExp(/a/) // => true
  */
 
 var isRegExp = function isRegExp(v /*: any*/) /*: bool*/ {

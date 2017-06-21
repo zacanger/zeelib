@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the string is hex-based
+ * @example
+ * isHexBased('fff') // => true
+ * isHexBased('whatever') // => false
  */
 
 var isHexBased = function isHexBased(color /*: string*/) /*: bool*/ {

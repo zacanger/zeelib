@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Returns true if the value is a boolean
+ * @example
+ * isBoolean(true) // => true
  */
 
 var isBoolean = function isBoolean(v /*: any*/) /*: bool*/ {

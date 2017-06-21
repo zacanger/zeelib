@@ -2,6 +2,8 @@
 
 /**
  * Returns true if the string is contained somewhere in the array
+ * @example
+ * isStringSomewhereInArray('a', [ 'asdf' ]) // => true
  */
 
 const isStringSomewhereInArray = (el: string, arr: string[]): bool =>

@@ -1,15 +1,12 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 // @flow
 
-/**
- * Get the greatest common diviser of all arguments
- */
-
 function greatestCommonDivisor() /*: number*/ {
+  console.error('`greatestCommonDivisor` is deprecated.');
   var i = arguments.length;
   var a = arguments[--i];
   while (a && i) {

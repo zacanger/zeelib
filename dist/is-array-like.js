@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the passed value is array-like
+ * @example
+ * isArrayLike({}) // => false
+ * isArrayLike([ 1, 2 ]) // => true
  */
 
 var isArrayLike = function isArrayLike(v /*: any*/) /*: bool*/ {

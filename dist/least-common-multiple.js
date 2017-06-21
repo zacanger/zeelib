@@ -10,11 +10,8 @@ var _greatestCommonDivisor2 = _interopRequireDefault(_greatestCommonDivisor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns least common multiple of all arguments
- */
-
 function leastCommonMultiple() /*: number*/ {
+  console.error('`leastCommonMultiple` is deprecated.');
   var i = arguments.length;
   var a = arguments[--i];
   while (a && i) {

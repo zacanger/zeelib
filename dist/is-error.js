@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if value is an error
+ * @example
+ * isError(new Error()) // => true
  */
 
 var isError = function isError(a /*: any*/) /*: bool*/ {

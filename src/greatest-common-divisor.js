@@ -1,10 +1,7 @@
 // @flow
 
-/**
- * Get the greatest common diviser of all arguments
- */
-
 function greatestCommonDivisor (): number {
+  console.error('`greatestCommonDivisor` is deprecated.')
   let i = arguments.length
   let a = arguments[--i]
   while (a && i) {

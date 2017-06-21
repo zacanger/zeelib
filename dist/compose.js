@@ -18,6 +18,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /**
  * Right to left composition
+ * @example
+ * const addOne = (a) => a + 1
+ * const timesTwo = (a) => a * 2
+ * compose(addOne, timesTwo)(2) // => 5
  */
 
 var compose = function compose() /*: any*/ {

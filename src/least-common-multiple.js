@@ -2,11 +2,8 @@
 
 import greatestCommonDivisor from './greatest-common-divisor'
 
-/**
- * Returns least common multiple of all arguments
- */
-
 function leastCommonMultiple (): number {
+  console.error('`leastCommonMultiple` is deprecated.')
   let i = arguments.length
   let a = arguments[--i]
   while (a && i) {

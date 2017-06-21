@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if value is a map
+ * @example
+ * isMap(new Map()) // => true
  */
 
 var isMap = function isMap(v /*: any*/) /*: bool*/ {

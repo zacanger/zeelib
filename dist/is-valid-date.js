@@ -12,6 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the passed object is a valid Date
+ * @example
+ * isValidDate('1234') // => false
  */
 
 var isValidDate = function isValidDate(d /*: any*/) /*: bool*/ {

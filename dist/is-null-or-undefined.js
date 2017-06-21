@@ -16,6 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is null or undefined
+ * @example
+ * isNullOrUndefined(null) // => true
  */
 
 // @flow

@@ -10,7 +10,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /**
  * Returns true if the value is of the type
- * Example: `is('number', 2)` -> `true`
+ * @example
+ * is('number', 2) // => true
  */
 
 var is = function is(type /*: string*/, val /*: any*/) /*: bool*/ {

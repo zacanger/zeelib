@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Returns true if the value is a number and is not NaN
+ * @example
+ * isNumber(2) // => true
+ * isNumber(NaN) // => false
  */
 
 var isNumber = function isNumber(v /*: any*/) /*: bool*/ {

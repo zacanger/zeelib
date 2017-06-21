@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,11 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 /* eslint-disable max-len */
 // @flow
 
-/**
- * Returns true if RegExp is valid
- */
-
 var isValidRegex = function isValidRegex(v /*: any*/) /*: bool*/ {
+  console.error('`isValidRegex` is deprecated.');
   return (/^((?:(?:[^?+*{}()[\]\\|]+|\\.|\[(?:\^?\\.|\^[^\\]|[^\\^])(?:[^\]\\]+|\\.)*\]|\((?:\?[:=!]|\?<[=!]|\?>)?(?1)??\)|\(\?(?:R|[+-]?\d+)\))(?:(?:[?+*]|\{\d+(?:,\d*)?\})[?+]?)?|\|)*)$/.test(v)
   );
 };
