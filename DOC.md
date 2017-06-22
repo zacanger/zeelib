@@ -29,7 +29,6 @@
 -   [capitalizeFirstChar](#capitalizefirstchar)
 -   [collapseNewlines](#collapsenewlines)
 -   [collapseWhitespace](#collapsewhitespace)
--   [combineRegex](#combineregex)
 -   [escapeForXpath](#escapeforxpath)
 -   [escapeHtml](#escapehtml)
 -   [fixWindowsSlashes](#fixwindowsslashes)
@@ -74,8 +73,8 @@
 -   [snakeCaseToCamelCase](#snakecasetocamelcase)
 -   [snakeCaseToLispCase](#snakecasetolispcase)
 -   [snakeCaseToPascalCase](#snakecasetopascalcase)
--   [stripPunctuation](#strippunctuation)
--   [stripSubdomain](#stripsubdomain)
+-   [removePunctuation](#removepunctuation)
+-   [removeSubdomain](#removesubdomain)
 -   [trimHash](#trimhash)
 -   [trimSpaces](#trimspaces)
 -   [truncate](#truncate)
@@ -242,9 +241,7 @@
 -   [calc](#calc)
 -   [chunk](#chunk)
 -   [cloneWithout](#clonewithout)
--   [compact](#compact)
 -   [countItemsInArray](#countitemsinarray)
--   [debounce](#debounce)
 -   [diff](#diff)
 -   [dir](#dir)
 -   [doubleUntil](#doubleuntil)
@@ -267,6 +264,7 @@
 -   [intersection](#intersection)
 -   [invoker](#invoker)
 -   [isBetween](#isbetween)
+-   [keep](#keep)
 -   [leftPad](#leftpad)
 -   [lesser](#lesser)
 -   [levenshteinDistance](#levenshteindistance)
@@ -280,7 +278,6 @@
 -   [merge](#merge)
 -   [minimum](#minimum)
 -   [nco](#nco)
--   [noSwitch](#noswitch)
 -   [noop](#noop)
 -   [objectFromEntries](#objectfromentries)
 -   [product](#product)
@@ -299,7 +296,6 @@
 -   [store](#store)
 -   [sum](#sum)
 -   [tap](#tap)
--   [throttle](#throttle)
 -   [throwError](#throwerror)
 -   [timeTest](#timetest)
 -   [toMap](#tomap)
@@ -726,18 +722,6 @@ collapseWhitespace('a\n\r\t\nb') // => 'a b'
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
-
-## combineRegex
-
-Takes a list of regular expressions and returns a single regular expression
-[RegExp] -> RegEx
-
-**Parameters**
-
--   `rs` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** List of RegExp
--   `opts` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** string of regex opts
-
-Returns **[RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)** 
 
 ## escapeForXpath
 
@@ -1430,9 +1414,9 @@ snakeCaseToPascalCase('foo_bar') // => 'FooBar'
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-## stripPunctuation
+## removePunctuation
 
-Strip punctuation from string
+Remove punctuation from string
 
 **Parameters**
 
@@ -1441,14 +1425,14 @@ Strip punctuation from string
 **Examples**
 
 ```javascript
-stripPunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
+removePunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-## stripSubdomain
+## removeSubdomain
 
-Strip subdomain from string
+Remove subdomain from string
 
 **Parameters**
 
@@ -1457,7 +1441,7 @@ Strip subdomain from string
 **Examples**
 
 ```javascript
-stripSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
+removeSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
 ```
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
@@ -2378,6 +2362,13 @@ cred: gh:uniqname
 
 -   `p` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+**Examples**
+
+```javascript
+const data = [ { foo: 'a', bar: 'baz' }, { foo: 'b', bar: 'quux' }, { foo: 'a', bar: 'whatever' } ]
+collectBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }
+```
+
 ## compose
 
 Right to left composition
@@ -3040,6 +3031,13 @@ propEq('a', 1, { a: 1 }) // => true
 
 Reduce
 
+**Examples**
+
+```javascript
+reduce((a, b) => a + b, 0, [ 1, 2, 3, 4 ]) // => 10
+reduce((a, b) => a + b)(0)([ 1, 2, 3, 4 ]) // => 10
+```
+
 ## replicate
 
 Generates an array of the length of the first param,
@@ -3167,6 +3165,14 @@ Uncurry a function
 **Parameters**
 
 -   `f` **function (): any** 
+
+**Examples**
+
+```javascript
+const addCurried = (a) => (b) => a + b
+const add = uncurry(addCurried)
+add(1, 2) // => 3
+```
 
 ## unfold
 
@@ -4037,22 +4043,6 @@ cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-## compact
-
-Returns an array with all falsey values removed
-
-**Parameters**
-
--   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
-**Examples**
-
-```javascript
-compact([ 'a', null, '', 2]) // => [ 'a', 2 ]
-```
-
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
-
 ## countItemsInArray
 
 Get an object of items in an array with count
@@ -4068,18 +4058,6 @@ countItemsInArray([ 1, 1, 2, 3, 4 ]) // => { '1': 2, '2': 1, '3': 1, '4': 1 }
 ```
 
 Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-
-## debounce
-
-Debounce. Takes a function, a wait (ms), and optionally a truthy immediate param
-
-**Parameters**
-
--   `f` **function (): any** 
--   `wait` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `immediate` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
-
-Returns **any** 
 
 ## diff
 
@@ -4434,6 +4412,22 @@ isBetween(2, 1, 2) // => false
 
 Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
+## keep
+
+Returns an array with all falsey values removed
+
+**Parameters**
+
+-   `a` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+
+**Examples**
+
+```javascript
+keep([ 'a', null, '', 2]) // => [ 'a', 2 ]
+```
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+
 ## leftPad
 
 It's just left-pad
@@ -4661,16 +4655,6 @@ nco(1, 2) // => 1
 ```
 
 Returns **any** 
-
-## noSwitch
-
-Switch statements are annoying sometimes
-Takes an object of conditions: functions, and a thing to switch on
-credit: gh:egoist/switchy
-
-**Parameters**
-
--   `conds` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
 
 ## noop
 
@@ -4974,19 +4958,6 @@ Log a value to console, and return that value
 const logger = tap('This is the thing!')
 logger(2) // => this is the thing 2 ; 2
 ```
-
-## throttle
-
-Simple `throttle` implementation
-
-**Parameters**
-
--   `f` **[function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** to throttle
--   `wait` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** ms
--   `lead` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** optional, defaults to false (optional, default `false`)
--   `trail` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** , optional, defaults to false (optional, default `false`)
-
-Returns **[any](#any)** result
 
 ## throwError
 

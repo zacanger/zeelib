@@ -17,16 +17,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 var map = function map(f /*: any*/, a /*: any[]*/) /*: any*/ {
-  return a.map(f
+  return a.map(f);
+};
 
-  /**
-   * Like Clojure's `juxt`
-   * Takes a list of functions and returns a fn that is the juxtaposition
-   * of those fns
-   */
+/**
+ * Like Clojure's `juxt`
+ * Takes a list of functions and returns a fn that is the juxtaposition
+ * of those fns
+ */
 
-  );
-};var juxt = (0, _curry2.default)(function (fns /*: FS*/, a /*: A*/) {
+var juxt = (0, _curry2.default)(function (fns /*: FS*/, a /*: A*/) {
   return map(function (f /*: F*/) {
     return f(a);
   }, fns);

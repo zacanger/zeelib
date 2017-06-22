@@ -5,11 +5,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 // @flow
 
-var stripSubdomain = function stripSubdomain(str /*: string*/) /*: string*/ {
-  console.error('`stripSubdomain` is deprecated. Use `removeSubdomain`.');
+/**
+ * Remove subdomain from string
+ * @example
+ * removeSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
+ */
+
+var removeSubdomain = function removeSubdomain(str /*: string*/) /*: string*/ {
   return str.split('').filter(function (c /*: string*/) {
     return c === '.';
   }).length > 2 ? str.replace(/^[^.]+\./g, '') : str;
 };
 
-exports.default = stripSubdomain;
+exports.default = removeSubdomain;

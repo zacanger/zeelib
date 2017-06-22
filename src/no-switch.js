@@ -1,12 +1,5 @@
-// @flow
-
-/**
- * Switch statements are annoying sometimes
- * Takes an object of conditions: functions, and a thing to switch on
- * credit: gh:egoist/switchy
- */
-
-const noSwitch = (conds: Object = {}) => (c: any): any => {
+const noSwitch = (conds) => (c) => {
+  console.error('`noSwitch` is deprecated. Please use the `switchy` lib.')
   if (typeof conds[c] === 'function') {
     return conds[c]()
   } else if (typeof conds.default === 'function') {

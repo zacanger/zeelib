@@ -12,6 +12,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Reduce
+ * @example
+ * reduce((a, b) => a + b, 0, [ 1, 2, 3, 4 ]) // => 10
+ * reduce((a, b) => a + b)(0)([ 1, 2, 3, 4 ]) // => 10
  */
 
 var reduce = (0, _curry2.default)(function (fn /*: any*/, initialValue /*: any*/, data /*: any[]*/) /*: any*/ {

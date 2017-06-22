@@ -21,10 +21,10 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 
 var getLoadAverage = function getLoadAverage() /*: number*/ {
-  return parseFloat((0, _average2.default)([].concat(_toConsumableArray((0, _os.loadavg)()))).toFixed(2)
+  return parseFloat((0, _average2.default)([].concat(_toConsumableArray((0, _os.loadavg)()))).toFixed(2));
+};
 
-  // the above line is weird because loadavg() is a tuple
-  // but average expects an array. ¯\_(ツ)_/¯
+// the above line is weird because loadavg() is a tuple
+// but average expects an array. ¯\_(ツ)_/¯
 
-  );
-};exports.default = getLoadAverage;
+exports.default = getLoadAverage;

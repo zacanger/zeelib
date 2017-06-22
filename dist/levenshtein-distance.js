@@ -34,9 +34,9 @@ var levenshteinDistance = function levenshteinDistance(a /*: string*/, b /*: str
     b = tmp;
   }
 
-  row = Array(a.length + 1
+  row = Array(a.length + 1);
   // init the row
-  );for (i = 0; i <= a.length; i++) {
+  for (i = 0; i <= a.length; i++) {
     row[i] = i;
   }
 
@@ -49,8 +49,7 @@ var levenshteinDistance = function levenshteinDistance(a /*: string*/, b /*: str
       } else {
         val = Math.min(row[j - 1] + 1, // substitution
         Math.min(prev + 1, // insertion
-        row[j] + 1) // deletion
-        );
+        row[j] + 1)); // deletion
       }
       row[j - 1] = prev;
       prev = val;

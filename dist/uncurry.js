@@ -7,6 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Uncurry a function
+ * @example
+ * const addCurried = (a) => (b) => a + b
+ * const add = uncurry(addCurried)
+ * add(1, 2) // => 3
  */
 
 var uncurry = function uncurry(f /*: () => any*/) {

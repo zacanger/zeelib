@@ -21,9 +21,9 @@ var _isRegExp2 = _interopRequireDefault(_isRegExp);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var objectClone = function objectClone(obj) {
-  console.error('`objectClone` is deprecated. Please use `clone` instead.'
+  console.error('`objectClone` is deprecated. Please use `clone` instead.');
   // Number, String, Boolean, Function, null, undefined
-  );if (obj === null || (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object') {
+  if (obj === null || (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object') {
     return obj;
   }
 
