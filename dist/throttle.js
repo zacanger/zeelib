@@ -1,21 +1,13 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- * Simple `throttle` implementation
- * @param {function} f to throttle
- * @param {number} wait ms
- * @param {boolean} lead optional, defaults to false
- * @param {boolean} trail, optional, defaults to false
- * @returns {any} result
- */
-
 function throttle(f, wait) {
   var lead = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   var trail = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
 
+  console.error('`throttle` is deprecated.');
   var ctx = void 0;
   var args = void 0;
   var res = void 0;

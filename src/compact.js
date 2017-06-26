@@ -1,12 +1,9 @@
-// @flow
+import id from './id'
+import filter from './filter'
 
-/**
- * Returns an array with all falsey values removed
- * @example
- * compact([ 'a', null, '', 2]) // => [ 'a', 2 ]
- */
-
-const compact = (a: any[]): any[] =>
-  a.filter((v) => v)
+const compact = (a) => {
+  console.error('`compact` is deprecated. Use `keep`.')
+  return filter(id, a)
+}
 
 export default compact

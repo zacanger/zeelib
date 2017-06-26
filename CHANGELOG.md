@@ -1,3 +1,6 @@
+* `0.9.21` &mdash; **2017-06-18** &mdash; *breaking*
+  * More deprecations
+  * Removed `isValidRegex`, which was broken
 * `0.9.19` &mdash; **2017-06-18** &mdash; *breaking*
   * More deprecations
   * Flipped order of `nth`s arguments

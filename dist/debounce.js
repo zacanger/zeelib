@@ -1,17 +1,14 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 // @flow
 
-/**
- * Debounce. Takes a function, a wait (ms), and optionally a truthy immediate param
- */
-
 function debounce(f /*: () => any*/, wait /*: number*/) /*: any*/ {
   var immediate /*: bool*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
+  console.error('`debounce` is deprecated.');
   var timeout = null;
   return function () {
     var ctx = this;

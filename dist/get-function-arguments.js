@@ -18,14 +18,13 @@ var getFunctionArguments = function getFunctionArguments(fn) {
     var m = functionAsString.match(/\(.*?\)/);
     if (m && m[0]) {
       var args = m[0] // match everything between brackets
-      .replace(/[()]/gi, '' // remove brackets
-      ).replace(/\s/gi, '' // remove all whitespace
-      ).split(',' // split on the commas
+      .replace(/[()]/gi, '') // remove brackets
+      .replace(/\s/gi, '') // remove all whitespace
+      .split(','); // split on the commas
 
-      );return args.filter(function (x) {
+      return args.filter(function (x) {
         return x;
-      } // remove possible empty string from the result
-      );
+      }); // remove possible empty string from the result
     }
   }
 };

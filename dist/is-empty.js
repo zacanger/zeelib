@@ -35,10 +35,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var isEmpty = function isEmpty(v /*: any*/) /*: bool*/ {
   if ((0, _isNullOrUndefined2.default)(v)) return true;
-  if ((0, _isString2.default)(v)) return (/^\s*$/.test(v
-    // /^[ \t\s]*$/.test(v)
-    )
-  );if ((0, _isArrayLike2.default)(v)) return !v.length;
+  if ((0, _isString2.default)(v)) return (/^\s*$/.test(v)
+  );
+  // /^[ \t\s]*$/.test(v)
+  if ((0, _isArrayLike2.default)(v)) return !v.length;
   if ((0, _isObject2.default)(v)) return !Object.keys(v).length;
   return !v;
 };
