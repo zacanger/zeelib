@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel --ignore \"src/*.test.js\" src/ -d dist/",
     "clean": "rm -rf dist/ && mkdir -p dist/",
-    "doc": "documentation build src/index.js -f md > DOC.md",
+    "doc": "documentation build src/index.js -f html -o docs",
     "postbuild": "npm run doc",
     "prebuild": "npm run clean && npm run test && fixpack",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
@@ -21,7 +21,7 @@
     "test:lint": "eslint -c .eslintrc.json src",
     "test:tape": "babel-tape-runner src/*.test.js | tap-spec"
   },
-  "homepage": "https://github.com/zacanger/zeelib#readme",
+  "homepage": "https://zacanger.github.io/zeelib",
   "repository": {
     "type": "git",
     "url": "https://github.com/zacanger/zeelib.git"

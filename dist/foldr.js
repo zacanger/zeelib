@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Applies f with second arg and last item of list,
  * then again with next-last item, etc.
+ * @example
+ * foldr(increment, 1, [ 1, 1, 1 ]) // => 4
  */
 
 var foldr = function foldr(f /*: () => any*/, s /*: any*/, a /*: any[]*/) /*: any*/ {

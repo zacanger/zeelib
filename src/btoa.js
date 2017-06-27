@@ -8,10 +8,10 @@
  * btoa('asdf') // => 'YXNkZg=='
  */
 
-import getIsBrowser from './get-is-browser'
+import isBrowser from './is-browser'
 
 const btoa = (str: string): string =>
-  getIsBrowser()
+  isBrowser()
     ? window.btoa(str)
     : Buffer.from
       ? Buffer.from(str, 'utf8').toString('base64')

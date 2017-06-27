@@ -11,6 +11,8 @@ Object.defineProperty(exports, "__esModule", {
  * @param {array} ys
  * @param {array} zs
  * @returns {array}
+ * @example
+ * zip3([ 1, 2 ], [ 3, 4 ], [ 5, 6 ]) // => [ [ 1, 3, 5 ], [ 2, 4, 6 ] ]
  */
 
 var zip3 = function zip3(xs, ys, zs) {

@@ -3,9 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.where = exports.uniqAndFlatten = exports.tryExecNTimes = exports.toObject = exports.toHttps = exports.toHttp = exports.tinyRouter = exports.throttle = exports.tail = exports.stripSubdomain = exports.stripPunctuation = exports.stripHref = exports.shallowCopy = exports.removeWhitespace = exports.promiseGuard = exports.objectInherit = exports.objectClone = exports.objectAssign = exports.notContains = exports.normalizeColor = exports.normalizeClassname = exports.noSwitch = exports.newlinesToSpaces = exports.moustache = exports.leastCommonMultiple = exports.keys = exports.isType = exports.isObjectEqual = exports.isObjectEmpty = exports.isInteger = exports.isEmptyString = exports.inherits = exports.indenter = exports.imul = exports.head = exports.greatestCommonDivisor = exports.getIsNode = exports.getIsBrowser = exports.getFunctionArguments = exports.getComplimentaryColors = exports.getBrokenImage = exports.generateSequence = exports.dropWhere = exports.deepCopy = exports.debounce = exports.curry4 = exports.curry3 = exports.curry2 = exports.cssToJson = exports.copyWithout = exports.copy = exports.contains = exports.compact = exports.combineRegex = exports.clamp = exports.xor = exports.unless = exports.uniq = exports.transposeFlat = undefined;
-exports.transpose = exports.toMap = exports.timeTest = exports.throwError = exports.tap = exports.sum = exports.store = exports.splitStringOn = exports.slice = exports.sleepAsync = exports.sleep = exports.sizeOf = exports.shuffle = exports.setTitle = exports.scaleToFit = exports.safeGet = exports.reverseSign = exports.reverseDigits = exports.range = exports.product = exports.objectFromEntries = exports.noop = exports.nco = exports.minimum = exports.merge = exports.maybeArgs = exports.maximum = exports.makeThunk = exports.lte = exports.lt = exports.logWithTimestamp = exports.lexSort = exports.levenshteinDistance = exports.lesser = exports.leftPad = exports.keep = exports.isBetween = exports.invoker = exports.intersection = exports.gte = exports.gt = exports.greater = exports.getTransparentGif = exports.getTitle = exports.getOrdinal = exports.getNow = exports.getNiceTime = exports.getMethodsOf = exports.getLengthOfItemsInArray = exports.getLengthOfCharactersInString = exports.getKeyCodes = exports.getKeyByValue = exports.flattenAndUniq = exports.flatten = exports.filterFloat = exports.doubleUntil = exports.dir = exports.diff = exports.countItemsInArray = exports.cloneWithout = exports.chunk = exports.calc = exports.average = exports.assert = exports.ago = exports.typeOf = exports.toType = exports.toBoolInverse = exports.toBool = exports.objectToString = exports.isValidDate = exports.isUndefined = exports.isSymbol = exports.isString = exports.isSet = exports.isRegExp = exports.isPromise = exports.isPrimitive = exports.isPow2 = exports.isPositive = exports.isOdd = exports.isObject = exports.isNumber = exports.isNullOrUndefined = exports.isNull = exports.isNodeList = exports.isNegative = exports.isNan = exports.isMap = exports.isJson = exports.isFunction = exports.isFloat = exports.isEven = exports.isError = exports.isEmpty = exports.isDomElement = exports.isDefined = exports.isDate = exports.isBuffer = exports.isBoolean = undefined;
-exports.isArrayLike = exports.isArray = exports.is = exports.checkIs = exports.zipWith3 = exports.zipWith = exports.zipThen = exports.zip3 = exports.zip = exports.words = exports.unzip3 = exports.unzip = exports.unwords = exports.unlines = exports.unfold = exports.uncurry = exports.takeWhile = exports.takeLast = exports.take = exports.splitAt = exports.span = exports.reverse = exports.replicate = exports.reduce = exports.propEq = exports.pluck = exports.pipe = exports.pick = exports.pairWith = exports.pair = exports.or = exports.once = exports.nth = exports.notElem = exports.not = exports.mix = exports.memoize = exports.map = exports.list = exports.lines = exports.length = exports.last = exports.juxt = exports.invoke = exports.init = exports.id = exports.foldr1 = exports.foldr = exports.foldl1 = exports.foldl = exports.flip = exports.findWhere = exports.findIndex = exports.filter = exports.eq = exports.elem = exports.each = exports.dropWhile = exports.drop = exports.curry = exports.constant = exports.cons = exports.concatMap = exports.concat = exports.compose = exports.collectBy = exports.clone = exports.cdr = exports.cddr = exports.cdar = exports.car = exports.cadr = exports.caar = exports.arity = exports.apply = exports.any = exports.and = exports.all = exports.writeJsonSync = exports.writeJson = exports.writeError = exports.watch = exports.timeRequire = exports.termPrompt = exports.resolveFiles = exports.readJsonSync = exports.readJson = exports.readFileSync = exports.open = exports.notFound = exports.makeFileIfNoFile = exports.logWithInfo = exports.isSymLink = exports.isNode = exports.isInstalled = exports.isFile = exports.isDirectory = exports.hasColor = exports.getUserShell = exports.getUserHome = undefined;
+exports.xor = exports.unless = undefined;
+exports.uniq = exports.transposeFlat = exports.transpose = exports.toMap = exports.timeTest = exports.throwError = exports.tap = exports.sum = exports.store = exports.splitStringOn = exports.slice = exports.sleepAsync = exports.sleep = exports.sizeOf = exports.shuffle = exports.setTitle = exports.scaleToFit = exports.safeGet = exports.reverseSign = exports.reverseDigits = exports.range = exports.product = exports.objectFromEntries = exports.noop = exports.nco = exports.minimum = exports.merge = exports.maybeArgs = exports.maximum = exports.makeThunk = exports.lte = exports.lt = exports.logWithTimestamp = exports.lexSort = exports.levenshteinDistance = exports.lesser = exports.leftPad = exports.keep = exports.isBetween = exports.invoker = exports.intersection = exports.gte = exports.gt = exports.greater = exports.getTransparentGif = exports.getTitle = exports.getOrdinal = exports.getNow = exports.getNiceTime = exports.getMethodsOf = exports.getLengthOfItemsInArray = exports.getLengthOfCharactersInString = exports.getKeyCodes = exports.getKeyByValue = exports.flattenAndUniq = exports.flatten = exports.filterFloat = exports.doubleUntil = exports.dir = exports.diff = exports.countItemsInArray = exports.cloneWithout = exports.chunk = exports.calc = exports.average = exports.assert = exports.ago = exports.typeOf = exports.toType = exports.toBoolInverse = exports.toBool = exports.objectToString = exports.isValidDate = exports.isUndefined = exports.isSymbol = exports.isString = exports.isSet = exports.isRegExp = exports.isPromise = exports.isPrimitive = exports.isPow2 = exports.isPositive = exports.isOdd = exports.isObject = exports.isNumber = exports.isNullOrUndefined = exports.isNull = exports.isNodeList = exports.isNegative = exports.isNan = exports.isMap = exports.isJson = exports.isFunction = exports.isFloat = exports.isEven = exports.isError = exports.isEmpty = exports.isDomElement = exports.isDefined = exports.isDate = undefined;
+exports.isBuffer = exports.isBoolean = exports.isArrayLike = exports.isArray = exports.is = exports.checkIs = exports.zipWith3 = exports.zipWith = exports.zip3 = exports.zip = exports.words = exports.unzip3 = exports.unzip = exports.unwords = exports.unlines = exports.uncurry = exports.takeWhile = exports.takeLast = exports.take = exports.splitAt = exports.span = exports.reverse = exports.replicate = exports.reduce = exports.propEq = exports.pluck = exports.pipe = exports.pick = exports.pairWith = exports.pair = exports.or = exports.once = exports.nth = exports.notElem = exports.not = exports.mix = exports.memoize = exports.map = exports.list = exports.lines = exports.length = exports.last = exports.juxt = exports.invoke = exports.init = exports.id = exports.foldr1 = exports.foldr = exports.foldl1 = exports.foldl = exports.flip = exports.findWhere = exports.findIndex = exports.filter = exports.eq = exports.elem = exports.each = exports.dropWhile = exports.drop = exports.curry = exports.constant = exports.cons = exports.concatMap = exports.concat = exports.compose = exports.collectBy = exports.clone = exports.cdr = exports.cddr = exports.cdar = exports.car = exports.cadr = exports.caar = exports.arity = exports.apply = exports.any = exports.and = exports.all = exports.writeJsonSync = exports.writeJson = exports.writeError = exports.watch = exports.timeRequire = exports.termPrompt = exports.resolveFiles = exports.readJsonSync = exports.readJson = exports.readFileSync = exports.open = exports.notFound = exports.makeFileIfNoFile = exports.logWithInfo = exports.isSymLink = exports.isNode = exports.isInstalled = exports.isFile = exports.isDirectory = exports.hasColor = exports.getUserShell = exports.getUserHome = undefined;
 exports.getTerminalSize = exports.getTerminalRows = exports.getTerminalColumns = exports.getRelativePath = exports.getPlatform = exports.getNodeModules = exports.getMemoryUsage = exports.getLoadAverage = exports.getHostname = exports.getHashFromSystem = exports.getFreeMemory = exports.getFreeDisk = exports.getFileExt = exports.getBasename = exports.getArgs = exports.findPort = exports.exit = exports.execute = exports.consoleClear = exports.colorize = exports.checkForFile = exports.btoa = exports.atob = exports.unescapeHtml = exports.truncate = exports.trimSpaces = exports.trimHash = exports.removeSubdomain = exports.removePunctuation = exports.snakeCaseToPascalCase = exports.snakeCaseToLispCase = exports.snakeCaseToCamelCase = exports.safeDecodeURIComponent = exports.safeDecodeURI = exports.rot13 = exports.rgbToHex = exports.removeTags = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAscii = exports.removeNonAlphaNumeric = exports.removeNonAlpha = exports.removeNewlines = exports.randomColor = exports.pascalCaseToSnakeCase = exports.pascalCaseToLispCase = exports.pascalCaseToCamelCase = exports.normalizeText = exports.minifyString = exports.lispCaseToSnakeCase = exports.lispCaseToPascalCase = exports.lispCaseToCamelCase = exports.lightenOrDarken = exports.isValidHex = exports.isValidEmail = exports.isStringSomewhereInArray = exports.isMobileOrTablet = exports.isHexBased = exports.isEmoji = exports.isAlphaNumeric = exports.inlineString = exports.getUid8 = exports.getUid4 = exports.getRegexFlags = exports.getRandomString = exports.getRandomHex32 = exports.getQueryFromSearch = exports.getHexRegex = exports.getHashFromDate = exports.formatMs = exports.fixWindowsSlashes = exports.escapeHtml = exports.escapeForXpath = exports.collapseWhitespace = exports.collapseNewlines = exports.capitalizeFirstChar = exports.camelCaseToSnakeCase = exports.camelCaseToPascalCase = exports.camelCaseToLispCase = exports.alphaNumericOnly = exports.addNewlines = exports.addCommasToNumber = exports.abbrevNumber = exports.abbrev = exports.setAttribute = exports.scrollTop = exports.restoreScrollPosition = exports.removeAttribute = exports.preventDefault = exports.isBrowser = exports.getWidth = exports.getScrollBarWidth = exports.getReferrer = exports.getLengthOfElements = exports.getHeight = exports.getElementText = exports.getElementPosition = exports.getElementOffset = exports.getCookie = exports.eventOnce = undefined;
 
 var _eventOnce2 = require('./event-once');
@@ -568,9 +568,9 @@ var _constant2 = require('./constant');
 
 var _constant3 = _interopRequireDefault(_constant2);
 
-var _curry5 = require('./curry');
+var _curry2 = require('./curry');
 
-var _curry6 = _interopRequireDefault(_curry5);
+var _curry3 = _interopRequireDefault(_curry2);
 
 var _drop2 = require('./drop');
 
@@ -748,10 +748,6 @@ var _uncurry2 = require('./uncurry');
 
 var _uncurry3 = _interopRequireDefault(_uncurry2);
 
-var _unfold2 = require('./unfold');
-
-var _unfold3 = _interopRequireDefault(_unfold2);
-
 var _unlines2 = require('./unlines');
 
 var _unlines3 = _interopRequireDefault(_unlines2);
@@ -779,10 +775,6 @@ var _zip4 = _interopRequireDefault(_zip3);
 var _zip5 = require('./zip-3');
 
 var _zip6 = _interopRequireDefault(_zip5);
-
-var _zipThen2 = require('./zip-then');
-
-var _zipThen3 = _interopRequireDefault(_zipThen2);
 
 var _zipWith3 = require('./zip-with');
 
@@ -1224,226 +1216,6 @@ var _xor2 = require('./xor');
 
 var _xor3 = _interopRequireDefault(_xor2);
 
-var _clamp2 = require('./clamp');
-
-var _clamp3 = _interopRequireDefault(_clamp2);
-
-var _combineRegex2 = require('./combine-regex');
-
-var _combineRegex3 = _interopRequireDefault(_combineRegex2);
-
-var _compact2 = require('./compact');
-
-var _compact3 = _interopRequireDefault(_compact2);
-
-var _contains2 = require('./contains');
-
-var _contains3 = _interopRequireDefault(_contains2);
-
-var _copy2 = require('./copy');
-
-var _copy3 = _interopRequireDefault(_copy2);
-
-var _copyWithout2 = require('./copy-without');
-
-var _copyWithout3 = _interopRequireDefault(_copyWithout2);
-
-var _cssToJson2 = require('./css-to-json');
-
-var _cssToJson3 = _interopRequireDefault(_cssToJson2);
-
-var _curry7 = require('./curry2');
-
-var _curry8 = _interopRequireDefault(_curry7);
-
-var _curry9 = require('./curry3');
-
-var _curry10 = _interopRequireDefault(_curry9);
-
-var _curry11 = require('./curry4');
-
-var _curry12 = _interopRequireDefault(_curry11);
-
-var _debounce2 = require('./debounce');
-
-var _debounce3 = _interopRequireDefault(_debounce2);
-
-var _deepCopy2 = require('./deep-copy');
-
-var _deepCopy3 = _interopRequireDefault(_deepCopy2);
-
-var _dropWhere2 = require('./drop-where');
-
-var _dropWhere3 = _interopRequireDefault(_dropWhere2);
-
-var _generateSequence2 = require('./generate-sequence');
-
-var _generateSequence3 = _interopRequireDefault(_generateSequence2);
-
-var _getBrokenImage2 = require('./get-broken-image');
-
-var _getBrokenImage3 = _interopRequireDefault(_getBrokenImage2);
-
-var _getComplimentaryColors2 = require('./get-complimentary-colors');
-
-var _getComplimentaryColors3 = _interopRequireDefault(_getComplimentaryColors2);
-
-var _getFunctionArguments2 = require('./get-function-arguments');
-
-var _getFunctionArguments3 = _interopRequireDefault(_getFunctionArguments2);
-
-var _getIsBrowser2 = require('./get-is-browser');
-
-var _getIsBrowser3 = _interopRequireDefault(_getIsBrowser2);
-
-var _getIsNode2 = require('./get-is-node');
-
-var _getIsNode3 = _interopRequireDefault(_getIsNode2);
-
-var _greatestCommonDivisor2 = require('./greatest-common-divisor');
-
-var _greatestCommonDivisor3 = _interopRequireDefault(_greatestCommonDivisor2);
-
-var _head2 = require('./head');
-
-var _head3 = _interopRequireDefault(_head2);
-
-var _imul2 = require('./imul');
-
-var _imul3 = _interopRequireDefault(_imul2);
-
-var _indenter2 = require('./indenter');
-
-var _indenter3 = _interopRequireDefault(_indenter2);
-
-var _inherits2 = require('./inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _isEmptyString2 = require('./is-empty-string');
-
-var _isEmptyString3 = _interopRequireDefault(_isEmptyString2);
-
-var _isInteger2 = require('./is-integer');
-
-var _isInteger3 = _interopRequireDefault(_isInteger2);
-
-var _isObjectEmpty2 = require('./is-object-empty');
-
-var _isObjectEmpty3 = _interopRequireDefault(_isObjectEmpty2);
-
-var _isObjectEqual2 = require('./is-object-equal');
-
-var _isObjectEqual3 = _interopRequireDefault(_isObjectEqual2);
-
-var _isType2 = require('./is-type');
-
-var _isType3 = _interopRequireDefault(_isType2);
-
-var _keys2 = require('./keys');
-
-var _keys3 = _interopRequireDefault(_keys2);
-
-var _leastCommonMultiple2 = require('./least-common-multiple');
-
-var _leastCommonMultiple3 = _interopRequireDefault(_leastCommonMultiple2);
-
-var _moustache2 = require('./moustache');
-
-var _moustache3 = _interopRequireDefault(_moustache2);
-
-var _newlinesToSpaces2 = require('./newlines-to-spaces');
-
-var _newlinesToSpaces3 = _interopRequireDefault(_newlinesToSpaces2);
-
-var _noSwitch2 = require('./no-switch');
-
-var _noSwitch3 = _interopRequireDefault(_noSwitch2);
-
-var _normalizeClassname2 = require('./normalize-classname');
-
-var _normalizeClassname3 = _interopRequireDefault(_normalizeClassname2);
-
-var _normalizeColor2 = require('./normalize-color');
-
-var _normalizeColor3 = _interopRequireDefault(_normalizeColor2);
-
-var _notContains2 = require('./not-contains');
-
-var _notContains3 = _interopRequireDefault(_notContains2);
-
-var _objectAssign2 = require('./object-assign');
-
-var _objectAssign3 = _interopRequireDefault(_objectAssign2);
-
-var _objectClone2 = require('./object-clone');
-
-var _objectClone3 = _interopRequireDefault(_objectClone2);
-
-var _objectInherit2 = require('./object-inherit');
-
-var _objectInherit3 = _interopRequireDefault(_objectInherit2);
-
-var _promiseGuard2 = require('./promise-guard');
-
-var _promiseGuard3 = _interopRequireDefault(_promiseGuard2);
-
-var _removeWhitespace2 = require('./remove-whitespace');
-
-var _removeWhitespace3 = _interopRequireDefault(_removeWhitespace2);
-
-var _shallowCopy2 = require('./shallow-copy');
-
-var _shallowCopy3 = _interopRequireDefault(_shallowCopy2);
-
-var _stripHref2 = require('./strip-href');
-
-var _stripHref3 = _interopRequireDefault(_stripHref2);
-
-var _stripPunctuation2 = require('./strip-punctuation');
-
-var _stripPunctuation3 = _interopRequireDefault(_stripPunctuation2);
-
-var _stripSubdomain2 = require('./strip-subdomain');
-
-var _stripSubdomain3 = _interopRequireDefault(_stripSubdomain2);
-
-var _tail2 = require('./tail');
-
-var _tail3 = _interopRequireDefault(_tail2);
-
-var _throttle2 = require('./throttle');
-
-var _throttle3 = _interopRequireDefault(_throttle2);
-
-var _tinyRouter2 = require('./tiny-router');
-
-var _tinyRouter3 = _interopRequireDefault(_tinyRouter2);
-
-var _toHttp2 = require('./to-http');
-
-var _toHttp3 = _interopRequireDefault(_toHttp2);
-
-var _toHttps2 = require('./to-https');
-
-var _toHttps3 = _interopRequireDefault(_toHttps2);
-
-var _toObject2 = require('./to-object');
-
-var _toObject3 = _interopRequireDefault(_toObject2);
-
-var _tryExecNTimes2 = require('./try-exec-n-times');
-
-var _tryExecNTimes3 = _interopRequireDefault(_tryExecNTimes2);
-
-var _uniqAndFlatten2 = require('./uniq-and-flatten');
-
-var _uniqAndFlatten3 = _interopRequireDefault(_uniqAndFlatten2);
-
-var _where2 = require('./where');
-
-var _where3 = _interopRequireDefault(_where2);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.eventOnce = _eventOnce3.default; // dom
@@ -1593,7 +1365,7 @@ exports.concat = _concat3.default;
 exports.concatMap = _concatMap3.default;
 exports.cons = _cons3.default;
 exports.constant = _constant3.default;
-exports.curry = _curry6.default;
+exports.curry = _curry3.default;
 exports.drop = _drop3.default;
 exports.dropWhile = _dropWhile3.default;
 exports.each = _each3.default;
@@ -1638,7 +1410,6 @@ exports.take = _take3.default;
 exports.takeLast = _takeLast3.default;
 exports.takeWhile = _takeWhile3.default;
 exports.uncurry = _uncurry3.default;
-exports.unfold = _unfold3.default;
 exports.unlines = _unlines3.default;
 exports.unwords = _unwords3.default;
 exports.unzip = _unzip4.default;
@@ -1646,7 +1417,6 @@ exports.unzip3 = _unzip6.default;
 exports.words = _words3.default;
 exports.zip = _zip4.default;
 exports.zip3 = _zip6.default;
-exports.zipThen = _zipThen3.default;
 exports.zipWith = _zipWith4.default;
 exports.zipWith3 = _zipWith6.default;
 // types
@@ -1761,61 +1531,3 @@ exports.transposeFlat = _transposeFlat3.default;
 exports.uniq = _uniq3.default;
 exports.unless = _unless3.default;
 exports.xor = _xor3.default;
-
-// deprecated
-
-exports.clamp = _clamp3.default;
-exports.combineRegex = _combineRegex3.default;
-exports.compact = _compact3.default;
-exports.contains = _contains3.default;
-exports.copy = _copy3.default;
-exports.copyWithout = _copyWithout3.default;
-exports.cssToJson = _cssToJson3.default;
-exports.curry2 = _curry8.default;
-exports.curry3 = _curry10.default;
-exports.curry4 = _curry12.default;
-exports.debounce = _debounce3.default;
-exports.deepCopy = _deepCopy3.default;
-exports.dropWhere = _dropWhere3.default;
-exports.generateSequence = _generateSequence3.default;
-exports.getBrokenImage = _getBrokenImage3.default;
-exports.getComplimentaryColors = _getComplimentaryColors3.default;
-exports.getFunctionArguments = _getFunctionArguments3.default;
-exports.getIsBrowser = _getIsBrowser3.default;
-exports.getIsNode = _getIsNode3.default;
-exports.greatestCommonDivisor = _greatestCommonDivisor3.default;
-exports.head = _head3.default;
-exports.imul = _imul3.default;
-exports.indenter = _indenter3.default;
-exports.inherits = _inherits3.default;
-exports.isEmptyString = _isEmptyString3.default;
-exports.isInteger = _isInteger3.default;
-exports.isObjectEmpty = _isObjectEmpty3.default;
-exports.isObjectEqual = _isObjectEqual3.default;
-exports.isType = _isType3.default;
-exports.keys = _keys3.default;
-exports.leastCommonMultiple = _leastCommonMultiple3.default;
-exports.moustache = _moustache3.default;
-exports.newlinesToSpaces = _newlinesToSpaces3.default;
-exports.noSwitch = _noSwitch3.default;
-exports.normalizeClassname = _normalizeClassname3.default;
-exports.normalizeColor = _normalizeColor3.default;
-exports.notContains = _notContains3.default;
-exports.objectAssign = _objectAssign3.default;
-exports.objectClone = _objectClone3.default;
-exports.objectInherit = _objectInherit3.default;
-exports.promiseGuard = _promiseGuard3.default;
-exports.removeWhitespace = _removeWhitespace3.default;
-exports.shallowCopy = _shallowCopy3.default;
-exports.stripHref = _stripHref3.default;
-exports.stripPunctuation = _stripPunctuation3.default;
-exports.stripSubdomain = _stripSubdomain3.default;
-exports.tail = _tail3.default;
-exports.throttle = _throttle3.default;
-exports.tinyRouter = _tinyRouter3.default;
-exports.toHttp = _toHttp3.default;
-exports.toHttps = _toHttps3.default;
-exports.toObject = _toObject3.default;
-exports.tryExecNTimes = _tryExecNTimes3.default;
-exports.uniqAndFlatten = _uniqAndFlatten3.default;
-exports.where = _where3.default;

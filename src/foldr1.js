@@ -4,6 +4,8 @@
  * Takes last two items of list, applies fn,
  * then third-last and previous result,
  * etc.
+ * @example
+ * foldr1(increment, [ 1, 1, 1 ]) // => 3
  */
 
 const foldr1 = (

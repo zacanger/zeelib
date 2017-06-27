@@ -2,7 +2,7 @@
 
 A small lib of FP, Node, and DOM utils.
 
-[Full documentation](./DOC.md)
+[Full documentation](https://zacanger.github.io/zeelib)
 
 [Changes](./CHANGELOG.md)
 
@@ -49,7 +49,7 @@ node: {
 Or, just import the functions you need (like
 `import words from 'zeelib/dist/words'`).
 
-See [this file](./DOC.md) for full documentation.
+See [the full documentation](https://zacanger.github.io/zeelib).
 
 ## License
 

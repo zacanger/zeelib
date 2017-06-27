@@ -24,6 +24,8 @@ var map = function map(f /*: any*/, a /*: any[]*/) /*: any*/ {
  * Like Clojure's `juxt`
  * Takes a list of functions and returns a fn that is the juxtaposition
  * of those fns
+ * @example
+ * juxt([ id, increment ], [ 1 ]) // => [ 1, 2 ]
  */
 
 var juxt = (0, _curry2.default)(function (fns /*: FS*/, a /*: A*/) {

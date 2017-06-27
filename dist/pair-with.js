@@ -6,15 +6,14 @@ Object.defineProperty(exports, "__esModule", {
 // @flow
 
 /**
- * Returns an empty array if xs is shorter than two
- * Otherwise returns an array made from calling f on
- * pairs of adjacent elements
+ * Returns an array made by calling
+ * f on a and b.
+ * @example
+ * pairWith(increment, 1, 1) // => [ 2, 2 ]
  */
 
-var pairWith = function pairWith(xs /*: any[]*/) {
-  return function (f /*: () => any*/) {
-    return xs.length < 2 ? [] : [f(xs[0], xs[1])].concat(pairWith(xs.slice(1), f));
-  };
+var pairWith = function pairWith(f /*: () => any*/, a /*: any*/, b /*: any*/) /*: any[]*/ {
+  return [f(a), f(b)];
 };
 
 exports.default = pairWith;

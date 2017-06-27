@@ -3,6 +3,8 @@
 /**
  * Applies f with second arg and last item of list,
  * then again with next-last item, etc.
+ * @example
+ * foldr(increment, 1, [ 1, 1, 1 ]) // => 4
  */
 
 const foldr = (

@@ -1,4 +1,3 @@
-import map from './map'
 import pair from './pair'
 
 /**
@@ -9,9 +8,11 @@ import pair from './pair'
  * @param {Array} xs
  * @param {Array} ys
  * @returns {Array}
+ * @example
+ * zipWith(increment, [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2 ]
  */
 
 const zipWith = (fn, xs, ys) =>
-  map((x, i) => fn.apply(fn, pair(x, ys[i])), xs)
+  xs.map((x, i) => fn.apply(fn, pair(x, ys[i])))
 
 export default zipWith

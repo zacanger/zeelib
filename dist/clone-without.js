@@ -1,16 +1,9 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _copyWithout = require('./copy-without');
-
-var _copyWithout2 = _interopRequireDefault(_copyWithout);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @flow
+// @flow
 
 /**
  * Clones an object, leaving out specified keys
@@ -25,7 +18,33 @@ var cloneWithout = function cloneWithout(source /*: Object*/) /*: Object*/ {
     keys[_key - 1] = arguments[_key];
   }
 
-  return _copyWithout2.default.apply(undefined, [{}, source].concat(_toConsumableArray(keys)));
+  var copy = Object.assign({}, source);
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = keys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var key = _step.value;
+
+      delete copy[key];
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return copy;
 };
 
 exports.default = cloneWithout;

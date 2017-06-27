@@ -2,7 +2,7 @@
 
 // @flow
 
-import getIsBrowser from './get-is-browser'
+import isBrowser from './is-browser'
 
 /**
  * `window.atob` for node and browser
@@ -11,7 +11,7 @@ import getIsBrowser from './get-is-browser'
  */
 
 const atob = (str: string): string =>
-  getIsBrowser()
+  isBrowser()
     ? window.atob(str)
     : Buffer.from
       ? Buffer.from(str, 'base64').toString('utf8')

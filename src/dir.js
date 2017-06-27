@@ -1,5 +1,6 @@
 // @flow
-import getIsNode from './get-is-node'
+
+import isNode from './is-node'
 
 /**
  * `console.dir` with colors by default in Node
@@ -8,6 +9,6 @@ import getIsNode from './get-is-node'
  */
 
 const dir = (obj: Object): void =>
-  getIsNode() ? console.dir(obj, { colors: true }) : console.log(obj)
+  isNode() ? console.dir(obj, { colors: true }) : console.log(obj)
 
 export default dir

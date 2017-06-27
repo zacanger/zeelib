@@ -1,6 +1,6 @@
 // @flow
 
-import getIsBrowser from './get-is-browser'
+import isBrowser from './is-browser'
 
 /**
  * Set `window.title` or `process.title`
@@ -9,7 +9,7 @@ import getIsBrowser from './get-is-browser'
  */
 
 const setTitle = (newTitle: string): void => {
-  if (getIsBrowser()) {
+  if (isBrowser()) {
     window.title = newTitle
   } else {
     process.title = newTitle
