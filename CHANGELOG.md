@@ -1,4 +1,4 @@
-* `1.0.0` &mdash; **2017-06-18** &mdash; *breaking*
+* `1.0.0` &mdash; **2017-06-28** &mdash; *breaking*
   * `unless` argument order switched (now `cond, fn`)
   * All previously deprecated functions removed. These are:
     * `clamp`
