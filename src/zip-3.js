@@ -18,7 +18,7 @@ const zip3 = (xs, ys, zs) => {
     if (i >= yslen || i >= zslen) {
       return res
     }
-    res.push([xs[i], ys[i], zs[i]])
+    res.push([ xs[i], ys[i], zs[i] ])
   }
   return res
 }

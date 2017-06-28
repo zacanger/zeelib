@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 1.0.2 | Documentation</title>
+  <title>zeelib 1.0.3 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>1.0.2</code></div>
+          <div class='mb1'><code>1.0.3</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -118,16 +118,6 @@
                   href='#getwidth'
                   class="">
                   getWidth
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#isbrowser'
-                  class="">
-                  isBrowser
                   
                 </a>
                 
@@ -815,9 +805,19 @@
               
                 
                 <li><a
-                  href='#statsync'
+                  href='#btoa'
                   class="">
-                  statSync
+                  btoa
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkforfile'
+                  class="">
+                  checkForFile
                   
                 </a>
                 
@@ -1335,9 +1335,9 @@
               
                 
                 <li><a
-                  href='#cdr'
+                  href='#cddr'
                   class="">
-                  cdr
+                  cddr
                   
                 </a>
                 
@@ -2965,16 +2965,6 @@
               
                 
                 <li><a
-                  href='#tomap'
-                  class="">
-                  toMap
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#uniq'
                   class="">
                   uniq
@@ -3755,59 +3745,6 @@ getLengthOfElements(<span class="hljs-string">'btn-whatever'</span>, <span class
     
       
       <pre class='p1 overflow-auto round fill-light'>isBrowser()</pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='isbrowser'>
-      isBrowser
-    </h3>
-    
-    
-  </div>
-  
-
-  <p><code>window.btoa</code> for node and browser</p>
-
-
-  <div class='pre p1 fill-light mt0'>isBrowser</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>btoa(<span class="hljs-string">'asdf'</span>) <span class="hljs-comment">// =&gt; 'YXNkZg=='</span></pre>
     
   
 
@@ -8607,8 +8544,79 @@ truncate(<span class="hljs-string">'asdf asdf asdf asdf'</span>, <span class="hl
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='statsync'>
-      statSync
+    <h3 class='fl m0' id='btoa'>
+      btoa
+    </h3>
+    
+    
+  </div>
+  
+
+  <p><code>window.btoa</code> for node and browser</p>
+
+
+  <div class='pre p1 fill-light mt0'>btoa</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>btoa(<span class="hljs-string">'asdf'</span>) <span class="hljs-comment">// =&gt; 'YXNkZg=='</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkforfile'>
+      checkForFile
     </h3>
     
     
@@ -8618,7 +8626,7 @@ truncate(<span class="hljs-string">'asdf asdf asdf asdf'</span>, <span class="hl
   <p>Returns bool based on if passed path exists</p>
 
 
-  <div class='pre p1 fill-light mt0'>statSync</div>
+  <div class='pre p1 fill-light mt0'>checkForFile</div>
   
   
 
@@ -8630,9 +8638,27 @@ truncate(<span class="hljs-string">'asdf asdf asdf asdf'</span>, <span class="hl
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>filePath</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
   
 
   
@@ -10082,11 +10108,6 @@ an empty string on shell-less platforms</p>
 
   <div class='pre p1 fill-light mt0'>hasColor</div>
   
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>
-    </p>
-  
   
 
   
@@ -10100,6 +10121,11 @@ an empty string on shell-less platforms</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
   
 
   
@@ -12194,8 +12220,8 @@ arity(addFour) <span class="hljs-comment">// =&gt; 4</span></pre>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='cdr'>
-      cdr
+    <h3 class='fl m0' id='cddr'>
+      cddr
     </h3>
     
     
@@ -12205,7 +12231,7 @@ arity(addFour) <span class="hljs-comment">// =&gt; 4</span></pre>
   <p><code>cddr</code></p>
 
 
-  <div class='pre p1 fill-light mt0'>cdr</div>
+  <div class='pre p1 fill-light mt0'>cddr</div>
   
   
 
@@ -12217,9 +12243,27 @@ arity(addFour) <span class="hljs-comment">// =&gt; 4</span></pre>
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>a</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>
+    
   
 
   
@@ -16581,7 +16625,7 @@ at the same position</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    
           </div>
           
@@ -16589,7 +16633,7 @@ at the same position</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ys</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>ys</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    
           </div>
           
@@ -16603,10 +16647,7 @@ at the same position</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
-        
-
-      
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></code>
     
   
 
@@ -16757,7 +16798,7 @@ on the elements of each list in the same position</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>fn</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+            <span class='code bold'>fn</span> <code class='quiet'>(function (any): any)</code>
 	    
           </div>
           
@@ -16765,7 +16806,7 @@ on the elements of each list in the same position</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>xs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    
           </div>
           
@@ -16773,7 +16814,7 @@ on the elements of each list in the same position</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ys</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+            <span class='code bold'>ys</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    
           </div>
           
@@ -16787,10 +16828,7 @@ on the elements of each list in the same position</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
-        
-
-      
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></code>
     
   
 
@@ -22749,8 +22787,7 @@ maybeArgs(<span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;
   </div>
   
 
-  <p>nco
-cred: gh:artificerentertainment</p>
+  <p>nco</p>
 
 
   <div class='pre p1 fill-light mt0'>nco</div>
@@ -24307,71 +24344,6 @@ throwError(<span class="hljs-string">'Oh noes!'</span>)</pre>
       
       <pre class='p1 overflow-auto round fill-light'>timeTest(<span class="hljs-number">1</span>, () =&gt; <span class="hljs-literal">true</span>) <span class="hljs-comment">// time: 0.166ms ; true</span></pre>
     
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='tomap'>
-      toMap
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Make a map-like object from an array</p>
-
-
-  <div class='pre p1 fill-light mt0'>toMap</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>arr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
-    
-  
-
-  
-
   
 
   

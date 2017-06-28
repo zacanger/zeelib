@@ -7,7 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * nco
- * cred: gh:artificerentertainment
  * @example
  * nco(null, 1) // => 1
  * nco(1, 2) // => 1

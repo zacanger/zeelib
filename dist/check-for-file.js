@@ -8,13 +8,13 @@ var _fs = require('fs');
 
 var _path = require('path');
 
-// @flow
-
 /**
  * Returns bool based on if passed path exists
  * @example
  * checkForFile('./foo') // => bool
  */
+
+// @flow
 
 var checkForFile = function checkForFile(filePath /*: string*/) /*: bool*/ {
   try {

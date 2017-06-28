@@ -20,6 +20,8 @@ var isColor = function isColor() /*: bool*/ {
  * hasColor()
  */
 
-var hasColor /*: bool*/ = isWin() || isColor();
+var hasColor = function hasColor() /*: bool*/ {
+  return isWin() || isColor();
+};
 
 exports.default = hasColor;

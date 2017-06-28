@@ -1,13 +1,13 @@
 // @flow
 
+import { statSync } from 'fs'
+import { resolve } from 'path'
+
 /**
  * Returns bool based on if passed path exists
  * @example
  * checkForFile('./foo') // => bool
  */
-
-import { statSync } from 'fs'
-import { resolve } from 'path'
 
 const checkForFile = (filePath: string): bool => {
   try {

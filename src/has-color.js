@@ -14,6 +14,6 @@ const isColor = (): bool => {
  * hasColor()
  */
 
-const hasColor: bool = isWin() || isColor()
+const hasColor = (): bool => isWin() || isColor()
 
 export default hasColor

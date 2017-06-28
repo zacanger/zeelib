@@ -1,3 +1,12 @@
+* `1.0.3` &mdash; **2017-06-28**
+  * Fixed `hasColor` to be a function
+  * Fixed some issues in the docs
+  * Removed following deprecated functions I missed in `1.0.0`:
+    * `invoke`
+    * `toMap`
+    * `toType`
+    * `transposeFlat`
+    * `transpose`
 * `1.0.0` &mdash; **2017-06-28** &mdash; *breaking*
   * `unless` argument order switched (now `cond, fn`)
   * Documentation moved [here](https://zacanger.github.io/zeelib/)

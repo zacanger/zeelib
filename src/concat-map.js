@@ -1,6 +1,7 @@
 // @flow
 
 import isArray from './is-array'
+
 /**
  * Like Haskell's `concatMap`,
  * a one-level flatten of an array of arrays,

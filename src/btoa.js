@@ -2,13 +2,13 @@
 
 // @flow
 
+import isBrowser from './is-browser'
+
 /**
  * `window.btoa` for node and browser
  * @example
  * btoa('asdf') // => 'YXNkZg=='
  */
-
-import isBrowser from './is-browser'
 
 const btoa = (str: string): string =>
   isBrowser()
