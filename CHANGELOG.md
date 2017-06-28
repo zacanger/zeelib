@@ -1,5 +1,6 @@
 * `1.0.0` &mdash; **2017-06-28** &mdash; *breaking*
   * `unless` argument order switched (now `cond, fn`)
+  * Documentation moved [here](https://zacanger.github.io/zeelib/)
   * All previously deprecated functions removed. These are:
     * `clamp`
     * `combineRegex`
