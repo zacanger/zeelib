@@ -1,7 +1,5 @@
 // @flow
 
-import copyWithout from './copy-without'
-
 /**
  * Clones an object, leaving out specified keys
  * cred : gh:texastoland
@@ -10,7 +8,12 @@ import copyWithout from './copy-without'
  * cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
  */
 
-const cloneWithout = (source: Object, ...keys: string[]): Object =>
-  copyWithout({}, source, ...keys)
+const cloneWithout = (source: Object, ...keys: string[]): Object => {
+  const copy = Object.assign({}, source)
+  for (const key of keys) {
+    delete copy[key]
+  }
+  return copy
+}
 
 export default cloneWithout

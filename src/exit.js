@@ -1,6 +1,6 @@
 // @flow
 
-import getIsNode from './get-is-node'
+import isNode from './is-node'
 
 /**
  * `process.exit` that optionally takes an exit code
@@ -9,7 +9,7 @@ import getIsNode from './get-is-node'
  */
 
 const exit = (n: number = 0): void => {
-  if (getIsNode()) {
+  if (isNode()) {
     process.exit(n)
   }
 }

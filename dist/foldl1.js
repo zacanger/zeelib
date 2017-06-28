@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Applies f to first two items of list,
  * then to next, etc.
+ * @example
+ * foldl1(increment, [ 1, 1, 1 ]) // => 3
  */
 
 var foldl1 = function foldl1(f /*: () => any*/, a /*: any[]*/) /*: any*/ {

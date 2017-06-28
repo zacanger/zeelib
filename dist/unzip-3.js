@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Similar to `unzip`, but takes a list of triples
  * and returns three lists
+ * @example
+ * unzip3([ [ 1, 1, 1 ], [ 2, 2, 2 ] ]) // => [ [ 1, 2 ], [ 1, 2 ], [ 1, 2 ] ]
  */
 
 var unzip3 = function unzip3(xs /*: any[]*/) /*: Array<any[]>*/ {

@@ -8,6 +8,8 @@
  * @param {array} ys
  * @param {array} zs
  * @returns {array}
+ * @example
+ * zipWith3(increment, [ 1, 1 ], [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2, 2 ]
  */
 
 const zipWith3 = (fn, xs, ys, zs) => {

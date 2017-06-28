@@ -13,6 +13,8 @@ Object.defineProperty(exports, "__esModule", {
  * @param {array} ys
  * @param {array} zs
  * @returns {array}
+ * @example
+ * zipWith3(increment, [ 1, 1 ], [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2, 2 ]
  */
 
 var zipWith3 = function zipWith3(fn, xs, ys, zs) {

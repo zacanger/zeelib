@@ -3,12 +3,12 @@
 /**
  * Call a function if the condition is falsey
  * @example
- * unless(false, () => true) // => true
+ * unless(() => true, false) // => true
  */
 
 const unless = (
-  fn: () => any,
-  cond: any
+  cond: any,
+  fn: () => any
 ): ?any =>
   !cond ? fn() : null
 

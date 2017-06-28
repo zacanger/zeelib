@@ -8,10 +8,10 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Call a function if the condition is falsey
  * @example
- * unless(false, () => true) // => true
+ * unless(() => true, false) // => true
  */
 
-var unless = function unless(fn /*: () => any*/, cond /*: any*/) /*: ?any*/ {
+var unless = function unless(cond /*: any*/, fn /*: () => any*/) /*: ?any*/ {
   return !cond ? fn() : null;
 };
 

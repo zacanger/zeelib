@@ -3,6 +3,8 @@
 /**
  * Takes a list of pairs
  * and returns two lists of first and second elements
+ * @example
+ * unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
  */
 
 const unzip = (xs: any[]): Array<any[]> => {

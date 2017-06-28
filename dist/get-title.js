@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getIsBrowser = require('./get-is-browser');
+var _isBrowser = require('./is-browser');
 
-var _getIsBrowser2 = _interopRequireDefault(_getIsBrowser);
+var _isBrowser2 = _interopRequireDefault(_isBrowser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 
 var getTitle = function getTitle() /*: string*/ {
-  return (0, _getIsBrowser2.default)() ? window.title || document.title : process.title;
+  return (0, _isBrowser2.default)() ? window.title || document.title : process.title;
 }; // @flow
 
 exports.default = getTitle;

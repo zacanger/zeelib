@@ -1,4 +1,64 @@
-* `0.9.21` &mdash; **2017-06-18** &mdash; *breaking*
+* `1.0.0` &mdash; **2017-06-18** &mdash; *breaking*
+  * `unless` argument order switched (now `cond, fn`)
+  * All previously deprecated functions removed. These are:
+    * `clamp`
+    * `combineRegex`
+    * `compact`
+    * `contains`
+    * `copyWithout`
+    * `copy`
+    * `cssToJson`
+    * `curry2`
+    * `curry3`
+    * `curry4`
+    * `debounce`
+    * `deepCopy`
+    * `dropWhere`
+    * `generateSequence`
+    * `getBrokenImage`
+    * `getComplimentaryColors`
+    * `getFunctionArguments`
+    * `getIsBrowser`
+    * `getIsNode`
+    * `greatestCommonDivisor`
+    * `head`
+    * `imul`
+    * `indenter`
+    * `inherits`
+    * `isEmptyString`
+    * `isInteger`
+    * `isObjectEmpty`
+    * `isObjectEqual`
+    * `isType`
+    * `keys`
+    * `leastCommonMultiple`
+    * `moustache`
+    * `newlinesToSpaces`
+    * `noSwitch`
+    * `normalizeClassname`
+    * `normalizeColor`
+    * `notContains`
+    * `objectAssign`
+    * `objectClone`
+    * `objectInherit`
+    * `promiseGuard`
+    * `removeWhitespace`
+    * `shallowCopy`
+    * `stripHref`
+    * `stripPunctuation`
+    * `stripSubdomain`
+    * `tail`
+    * `throttle`
+    * `tinyRouter`
+    * `toHttp`
+    * `toHttps`
+    * `toObject`
+    * `tryExecNTimes`
+    * `unfold`
+    * `uniqAndFlatten`
+    * `where`
+    * `zipThen`
+* `0.9.21` &mdash; **2017-06-26** &mdash; *breaking*
   * More deprecations
   * Removed `isValidRegex`, which was broken
 * `0.9.19` &mdash; **2017-06-18** &mdash; *breaking*

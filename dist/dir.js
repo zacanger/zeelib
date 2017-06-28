@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getIsNode = require('./get-is-node');
+var _isNode = require('./is-node');
 
-var _getIsNode2 = _interopRequireDefault(_getIsNode);
+var _isNode2 = _interopRequireDefault(_isNode);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17,6 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 
 var dir = function dir(obj /*: Object*/) /*: void*/ {
-  return (0, _getIsNode2.default)() ? console.dir(obj, { colors: true }) : console.log(obj);
+  return (0, _isNode2.default)() ? console.dir(obj, { colors: true }) : console.log(obj);
 }; // @flow
+
 exports.default = dir;

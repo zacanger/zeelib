@@ -3,6 +3,8 @@
 /**
  * Applies f to first two items of list,
  * then to next, etc.
+ * @example
+ * foldl1(increment, [ 1, 1, 1 ]) // => 3
  */
 
 const foldl1 = (

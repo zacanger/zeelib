@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _map = require('./map');
-
-var _map2 = _interopRequireDefault(_map);
-
 var _pair = require('./pair');
 
 var _pair2 = _interopRequireDefault(_pair);
@@ -22,12 +18,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {Array} xs
  * @param {Array} ys
  * @returns {Array}
+ * @example
+ * zipWith(increment, [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2 ]
  */
 
 var zipWith = function zipWith(fn, xs, ys) {
-  return (0, _map2.default)(function (x, i) {
+  return xs.map(function (x, i) {
     return fn.apply(fn, (0, _pair2.default)(x, ys[i]));
-  }, xs);
+  });
 };
 
 exports.default = zipWith;

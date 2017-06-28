@@ -1,6 +1,6 @@
 // @flow
 
-import getIsNode from './get-is-node'
+import isNode from './is-node'
 /**
  * `console.clear` for Node and browser
  * @example
@@ -8,7 +8,7 @@ import getIsNode from './get-is-node'
  */
 
 const consoleClear = (): void =>
-  getIsNode()
+  isNode()
     ? console.log('\x1Bc')
     : console.clear()
 

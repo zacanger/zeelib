@@ -1,5 +1,7 @@
 // @flow
 
+type AnyF = () => any
+
 /**
  * Uncurry a function
  * @example
@@ -8,8 +10,20 @@
  * add(1, 2) // => 3
  */
 
-const uncurry = (f: () => any) =>
-  (a: any, b: any): any =>
-    f(a)(b)
+const uncurry = (f: AnyF): AnyF => {
+  if (typeof f !== 'function' || f.length === 0) {
+    return f
+  }
+
+  return (...args) => {
+    for (let arg of args) {
+      if (typeof f !== 'function') {
+        return f
+      }
+      f = f(arg)
+    }
+    return f
+  }
+}
 
 export default uncurry

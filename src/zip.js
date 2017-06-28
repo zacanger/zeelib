@@ -1,4 +1,3 @@
-import map from './map'
 import pair from './pair'
 
 /**
@@ -8,7 +7,9 @@ import pair from './pair'
  * @param {Array} xs
  * @param {Array} ys
  * @returns {Array}
+ * @example
+ * zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
  */
 
-const zip = (xs, ys) => map((x, i) => pair(x, ys[i]), xs)
+const zip = (xs, ys) => xs.map((x, i) => pair(x, ys[i]))
 export default zip
