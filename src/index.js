@@ -16,6 +16,7 @@ export removeAttribute from './remove-attribute'
 export restoreScrollPosition from './restore-scroll-position'
 export scrollTop from './scroll-top'
 export setAttribute from './set-attribute'
+export setDescription from './set-description'
 // regex, string utils, etc.
 export abbrev from './abbrev'
 export abbrevNumber from './abbrev-number'
