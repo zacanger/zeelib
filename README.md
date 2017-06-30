@@ -6,6 +6,8 @@ A small lib of FP, Node, and DOM utils.
 
 [Changes](./CHANGELOG.md)
 
+[npm](https://npmjs.com/package/zeelib)
+
 --------
 
 ## Usage
