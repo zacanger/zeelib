@@ -21,10 +21,10 @@ const curry = function (fn) {
     if (functionAsString) {
       const m = functionAsString.match(/\(.*?\)/)
       if (m && m[0]) {
-        const args = m[0]          // match everything between brackets
-          .replace(/[()]/gi, '')   // remove brackets
-          .replace(/\s/gi, '')     // remove all whitespace
-          .split(',')              // split on the commas
+        const args = m[0] // match everything between brackets
+          .replace(/[()]/gi, '') // remove brackets
+          .replace(/\s/gi, '') // remove all whitespace
+          .split(',') // split on the commas
 
         return args.filter((x) => x) // remove possible empty string from the result
       }

@@ -37,9 +37,12 @@ const levenshteinDistance = (a: string, b: string): number => {
       if (b[i - 1] === a[j - 1]) {
         val = row[j - 1] // match
       } else {
-        val = Math.min(row[j - 1] + 1, // substitution
-              Math.min(prev + 1,     // insertion
-                       row[j] + 1))  // deletion
+        val = Math.min(
+          row[j - 1] + 1, // substitution
+          Math.min(
+            prev + 1, // insertion
+            row[j] + 1
+          )) // deletion
       }
       row[j - 1] = prev
       prev = val

@@ -12,6 +12,6 @@ import curry from './curry'
 const all = curry((predicate, list): bool =>
   !!list.reduce && (typeof predicate === 'function') && list.reduce((result, current) =>
     !result ? false : !!predicate(current)
-  , true))
+    , true))
 
 export default all

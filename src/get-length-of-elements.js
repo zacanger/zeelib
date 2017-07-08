@@ -11,7 +11,7 @@
 const getLengthOfElements = (element: string, useClassnames: ?bool): number =>
   document &&
     useClassnames
-      ? document.getElementsByClassName(element).length
-      : document.getElementsByTagName(element).length
+    ? document.getElementsByClassName(element).length
+    : document.getElementsByTagName(element).length
 
 export default getLengthOfElements
