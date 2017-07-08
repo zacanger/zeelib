@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -11,8 +11,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel --ignore \"src/*.test.js\" src/ -d dist/",
-    "clean": "rm -rf dist/ && mkdir -p dist/",
-    "copy-flow": "flow-copy-source src dist",
+    "clean": "rm -r dist/ && mkdir -p dist/",
+    "copy-flow": "flow-copy-source -i \"*.test.js\" src dist",
     "doc": "documentation build src/index.js -f html -o docs",
     "postbuild": "npm run copy-flow && npm run doc",
     "prebuild": "npm run clean && npm run test && fixpack",
