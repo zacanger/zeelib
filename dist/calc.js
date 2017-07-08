@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes an operation as a function
@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", {
  * calc(add)(1, 2, 3) // => 6
  */
 
-var calc = function calc(op /*: (number) => number*/) {
-  return function () /*: number*/ {
+var calc = function calc(op) {
+  return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

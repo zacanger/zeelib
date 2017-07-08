@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `car` (same as `head`)
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * car([ 1, 2, 3 ]) // => 1
  */
 
-var car = function car(arr /*: any[]*/) /*: any*/ {
+var car = function car(arr) {
   return arr[0];
 };
 

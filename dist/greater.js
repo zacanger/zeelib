@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get the greater of two numbers
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * greater(1, 2) // => 2
  */
 
-var greater = function greater(a /*: number*/, b /*: number*/) /*: number*/ {
+var greater = function greater(a, b) {
   return a > b ? a : b;
 };
 

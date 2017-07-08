@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Format ms into human-readable time
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * formatMs(1000000000) // => '277:46:40'
  */
 
-var formatMs = function formatMs(ms /*: number*/) /*: string*/ {
+var formatMs = function formatMs(ms) {
   var hr = 3600000;
   var min = 60000;
   var sec = 1000;

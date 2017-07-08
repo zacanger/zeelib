@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * snake_case to camelCase
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * snakeCaseToCamelCase('foo_bar') // => 'fooBar'
  */
 
-var snakeCaseToCamelCase = function snakeCaseToCamelCase(str /*: string*/) /*: string*/ {
+var snakeCaseToCamelCase = function snakeCaseToCamelCase(str) {
   return str.replace(/(_\w)/g, function (match) {
     return match[1].toUpperCase();
   });

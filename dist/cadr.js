@@ -20,9 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * cadr([ 1, 2, 3 ]) // => 2
  */
 
-// @flow
-
-var cadr = function cadr(a /*: any[]*/) /*: any*/ {
+var cadr = function cadr(a) {
   return (0, _car2.default)((0, _cdr2.default)(a));
 };
 

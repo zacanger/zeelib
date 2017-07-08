@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns the width of the brower's scrollbar
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getScrollBarWidth() // => 17
  */
 
-var getScrollBarWidth = function getScrollBarWidth() /*: number*/ {
+var getScrollBarWidth = function getScrollBarWidth() {
   return window.innerWidth - window.document.documentElement.clientWidth;
 };
 

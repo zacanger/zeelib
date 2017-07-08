@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove subdomain from string
@@ -11,8 +11,8 @@ Object.defineProperty(exports, "__esModule", {
  * removeSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
  */
 
-var removeSubdomain = function removeSubdomain(str /*: string*/) /*: string*/ {
-  return str.split('').filter(function (c /*: string*/) {
+var removeSubdomain = function removeSubdomain(str) {
+  return str.split('').filter(function (c) {
     return c === '.';
   }).length > 2 ? str.replace(/^[^.]+\./g, '') : str;
 };

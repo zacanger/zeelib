@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * throwError('Oh noes!')
  */
 
-var throwError = function throwError(err /*: any*/) /*: Error*/ {
+var throwError = function throwError(err) {
   throw (0, _isError2.default)(err) ? err : new Error(err);
-}; // @flow
+};
 
 exports.default = throwError;

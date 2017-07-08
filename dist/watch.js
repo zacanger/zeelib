@@ -14,9 +14,7 @@ var _path = require('path');
  * watch('./foo', console.log)
  */
 
-// @flow
-
-var watchFile = function watchFile(filePath /*: string*/, cb /*: () => any*/) /*: void*/ {
+var watchFile = function watchFile(filePath, cb) {
   var file = (0, _path.resolve)(filePath);
   try {
     (0, _fs.watch)(file, cb);

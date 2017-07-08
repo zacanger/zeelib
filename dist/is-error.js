@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isError(new Error()) // => true
  */
 
-var isError = function isError(a /*: any*/) /*: bool*/ {
+var isError = function isError(a) {
   return a instanceof Error || (0, _objectToString2.default)(a) === '[object Error]';
-}; // @flow
+};
 exports.default = isError;

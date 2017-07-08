@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isRegExp(/a/) // => true
  */
 
-var isRegExp = function isRegExp(v /*: any*/) /*: bool*/ {
+var isRegExp = function isRegExp(v) {
   return (0, _objectToString2.default)(v) === '[object RegExp]';
-}; // @flow
+};
 
 exports.default = isRegExp;

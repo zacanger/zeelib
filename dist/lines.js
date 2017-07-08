@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Split a string on lines
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * lines('foo\nbar') // => [ 'foo', 'bar' ]
  */
 
-var lines = function lines(str /*: string*/) /*: string[]*/ {
+var lines = function lines(str) {
   return str.split('\n');
 };
 

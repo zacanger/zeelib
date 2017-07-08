@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `cdr`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * cdr([ 1, 2, 3, 4 ]) // => [ 2, 3, 4 ]
  */
 
-var cdr = function cdr(arr /*: any[]*/) /*: any*/ {
+var cdr = function cdr(arr) {
   return arr.slice(1);
 };
 

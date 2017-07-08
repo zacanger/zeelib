@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _os = require('os');
 
-var withInfo = function withInfo() /*: string*/ {
-  var str /*: string*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+var withInfo = function withInfo() {
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return str + ':' + (0, _os.hostname)() + ':' + process.pid;
 };
 
@@ -17,10 +17,8 @@ var withInfo = function withInfo() /*: string*/ {
  * logWithInfo('foo') // => `foo:angr:1234`
  */
 
-// @flow
-
-var logWithInfo = function logWithInfo() /*: void*/ {
-  var str /*: string*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+var logWithInfo = function logWithInfo() {
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return console.log(withInfo(str));
 };
 

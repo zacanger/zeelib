@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the number is negative
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isNegative(-1) // => true
  */
 
-var isNegative = function isNegative(a /*: number*/) /*: bool*/ {
+var isNegative = function isNegative(a) {
   return +a === a && a < 0;
 };
 

@@ -12,7 +12,7 @@ var _net = require('net');
  * findPort(8000, (err, port) => console.log(`${port} is open`))
  */
 
-var findPort = function findPort(port /*: number*/, cb /*: any*/) /*: any*/ {
+var findPort = function findPort(port, cb) {
   var server = (0, _net.createServer)(function () {});
   var onListen = function onListen() {
     server.removeListener('error', onError);
@@ -29,6 +29,6 @@ var findPort = function findPort(port /*: number*/, cb /*: any*/) /*: any*/ {
   server.once('error', onError);
   server.once('listening', onListen);
   server.listen(port);
-}; // @flow
+};
 
 exports.default = findPort;

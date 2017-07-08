@@ -1,7 +1,7 @@
 {
   "presets": [ "stage-3", "env" ],
   "plugins": [
-    "transform-flow-comments",
+    "transform-flow-strip-types",
     "transform-export-extensions",
     "transform-es2015-modules-commonjs"
   ]

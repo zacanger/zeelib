@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isValidDate('1234') // => false
  */
 
-var isValidDate = function isValidDate(d /*: any*/) /*: bool*/ {
+var isValidDate = function isValidDate(d) {
   return (0, _isDate2.default)(d) && d.toString() !== 'Invalid Date';
-}; // @flow
+};
 
 exports.default = isValidDate;

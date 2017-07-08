@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get list of methods in an object
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * getMethodsOf(o) // => [ 'foo', 'bar' ]
  */
 
-var getMethodsOf = function getMethodsOf(o /*: Object*/) /*: string[]*/ {
+var getMethodsOf = function getMethodsOf(o) {
   var r = [];
   for (var m in o) {
     if (o.hasOwnProperty(m)) {

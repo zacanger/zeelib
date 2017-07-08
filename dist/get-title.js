@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * getTitle()
  */
 
-var getTitle = function getTitle() /*: string*/ {
+var getTitle = function getTitle() {
   return (0, _isBrowser2.default)() ? window.title || document.title : process.title;
-}; // @flow
+};
 
 exports.default = getTitle;

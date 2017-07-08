@@ -14,9 +14,7 @@ var _path = require('path');
  * checkForFile('./foo') // => bool
  */
 
-// @flow
-
-var checkForFile = function checkForFile(filePath /*: string*/) /*: bool*/ {
+var checkForFile = function checkForFile(filePath) {
   try {
     (0, _fs.statSync)((0, _path.resolve)(filePath));
     return true;

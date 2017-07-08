@@ -12,8 +12,8 @@ var _os = require('os');
  * getHostname()
  */
 
-var getHostname = function getHostname() /*: string*/ {
+var getHostname = function getHostname() {
   return (0, _os.hostname)();
-}; // @flow
+};
 
 exports.default = getHostname;

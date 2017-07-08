@@ -17,12 +17,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * reduce((a, b) => a + b)(0)([ 1, 2, 3, 4 ]) // => 10
  */
 
-var reduce = (0, _curry2.default)(function (fn /*: any*/, initialValue /*: any*/, data /*: any[]*/) /*: any*/ {
+var reduce = (0, _curry2.default)(function (fn, initialValue, data) {
   var reducedValue = initialValue;
   for (var i = 0; i < data.length; i++) {
     reducedValue = fn(reducedValue, data[i]);
   }
   return reducedValue;
-}); // @flow
+});
 
 exports.default = reduce;

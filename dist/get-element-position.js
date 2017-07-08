@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes an element and returns its x/y position
@@ -11,11 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getElementPosition(document.getElementById('foo')) // => { x: number, y: number }
  */
 
-/*:: type p = {
-  x: number,
-  y: number
-}*/
-var getElementPosition = function getElementPosition(el /*: any*/) /*: p*/ {
+var getElementPosition = function getElementPosition(el) {
   var x = 0;
   var y = 0;
 

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns a timestamp for now
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getNow()
  */
 
-var getNow = function getNow() /*: () => number*/ {
+var getNow = function getNow() {
   return Date.now || function () {
     return new Date().getTime();
   };

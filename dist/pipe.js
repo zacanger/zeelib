@@ -18,16 +18,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * pipe(addOne, timesTwo)(2) // => 6
  */
 
-var pipe = function pipe() /*: any*/ {
+var pipe = function pipe() {
   for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {
     fns[_key] = arguments[_key];
   }
 
-  return function (data /*: any*/) {
-    return (0, _reduce2.default)(function (v /*: any*/, fn /*: any*/) /*: any*/ {
+  return function (data) {
+    return (0, _reduce2.default)(function (v, fn) {
       return fn(v);
     }, data)(fns);
   };
-}; // @flow
+};
 
 exports.default = pipe;

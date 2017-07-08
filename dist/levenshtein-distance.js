@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Levenshtein distance
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * levenshteinDistance('asdf', 'ghjkl') // => 5
  */
 
-var levenshteinDistance = function levenshteinDistance(a /*: string*/, b /*: string*/) /*: number*/ {
+var levenshteinDistance = function levenshteinDistance(a, b) {
   if (a.length === 0) {
     return b.length;
   }

@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isArrayLike([ 1, 2 ]) // => true
  */
 
-var isArrayLike = function isArrayLike(v /*: any*/) /*: bool*/ {
+var isArrayLike = function isArrayLike(v) {
   return v && (0, _isNumber2.default)(v.length);
-}; // @flow
+};
 
 exports.default = isArrayLike;

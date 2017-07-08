@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `indexOf`, here because of haskell's findIndex
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * findIndex(1, [ 3, 2, 1 ]) // => 2
  */
 
-var findIndex = function findIndex(el /*: any*/, arr /*: any[]*/) /*: number*/ {
+var findIndex = function findIndex(el, arr) {
   return arr.indexOf(el);
 };
 

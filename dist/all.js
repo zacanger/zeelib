@@ -17,10 +17,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * all(lessThanThree, [ 1, 2, 3 ]) // => false
  */
 
-var all = (0, _curry2.default)(function (predicate, list) /*: bool*/ {
+var all = (0, _curry2.default)(function (predicate, list) {
   return !!list.reduce && typeof predicate === 'function' && list.reduce(function (result, current) {
     return !result ? false : !!predicate(current);
   }, true);
-}); // @flow
+});
 
 exports.default = all;

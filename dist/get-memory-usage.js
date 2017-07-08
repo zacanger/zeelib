@@ -12,8 +12,8 @@ var _os = require('os');
  * getMemoryUsage()
  */
 
-var getMemoryUsage = function getMemoryUsage() /*: number*/ {
+var getMemoryUsage = function getMemoryUsage() {
   return parseFloat(((0, _os.freemem)() / (0, _os.totalmem)() / Math.pow(10, -2)).toFixed(2));
-}; // @flow
+};
 
 exports.default = getMemoryUsage;

@@ -18,10 +18,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
  */
 
-var zip = function zip(xs /*: any[]*/, ys /*: any[]*/) /*: any[]*/ {
+var zip = function zip(xs, ys) {
   return xs.map(function (x, i) {
     return (0, _pair2.default)(x, ys[i]);
   });
-}; // @flow
+};
 
 exports.default = zip;

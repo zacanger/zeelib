@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove non-alpha chars from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeNonAlpha('asdf 22 a') // => 'asdf  a'
  */
 
-var removeNonAlpha = function removeNonAlpha(str /*: string*/) /*: string*/ {
+var removeNonAlpha = function removeNonAlpha(str) {
   return str.replace(/[^A-Za-z ]+/g, '');
 };
 

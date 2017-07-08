@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Split a string on spaces
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * words('foo bar') // => [ 'foo', 'bar' ]
  */
 
-var words = function words(str /*: string*/) /*: string[]*/ {
+var words = function words(str) {
   return str.split(' ');
 };
 

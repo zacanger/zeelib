@@ -22,9 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * splitAt(1, [ [ 'a', 'b' ], 'c' ]) // => [ [ [ 'a', 'b' ] ], [ 'c' ] ]
  */
 
-// @flow
-
-var splitAt = function splitAt(num /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+var splitAt = function splitAt(num, arr) {
   return [(0, _take2.default)(num, arr), (0, _drop2.default)(num, arr)];
 };
 

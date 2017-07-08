@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * PascalCase to camelCase
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * pascalCaseToCamelCase('FooBar') // => 'fooBar'
  */
 
-var pascalCaseToCamelCase = function pascalCaseToCamelCase(str /*: string*/) /*: string*/ {
+var pascalCaseToCamelCase = function pascalCaseToCamelCase(str) {
   return str.charAt(0).toLowerCase() + str.slice(1);
 };
 

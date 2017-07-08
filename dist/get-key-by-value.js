@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get the key for a value
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
  */
 
-var getKeyByValue = function getKeyByValue(value /*: any*/, object /*: Object*/) /*: ?string*/ {
+var getKeyByValue = function getKeyByValue(value, object) {
   return Object.keys(object).find(function (key) {
     return object[key] === value;
   });

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if value is undefined
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isUndefined(undefined) // => true
  */
 
-var isUndefined = function isUndefined(v /*: any*/) /*: bool*/ {
+var isUndefined = function isUndefined(v) {
   return v === undefined;
 };
 

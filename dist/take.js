@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Like Haskell's `take`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * take(2, [ 1, 2, 3 ]) // => [ 1, 2 ]
  */
 
-var take = function take(num /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+var take = function take(num, arr) {
   var alen = arr.length;
   if (num > alen) return arr;
   var a1 = [];

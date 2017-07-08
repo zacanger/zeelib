@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Find out how many of a matching element is on the page
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * getLengthOfElements('btn-whatever', true) // => number
  */
 
-var getLengthOfElements = function getLengthOfElements(element /*: string*/, useClassnames /*: ?bool*/) /*: number*/ {
+var getLengthOfElements = function getLengthOfElements(element, useClassnames) {
   return document && useClassnames ? document.getElementsByClassName(element).length : document.getElementsByTagName(element).length;
 };
 

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Join an array with lines
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * unlines([ 'foo', 'bar' ]) // => 'foo\nbar'
  */
 
-var unlines = function unlines(arr /*: string[]*/) /*: string*/ {
+var unlines = function unlines(arr) {
   return arr.join('\n');
 };
 

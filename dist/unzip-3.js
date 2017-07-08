@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Similar to `unzip`, but takes a list of triples
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * unzip3([ [ 1, 1, 1 ], [ 2, 2, 2 ] ]) // => [ [ 1, 2 ], [ 1, 2 ], [ 1, 2 ] ]
  */
 
-var unzip3 = function unzip3(xs /*: any[]*/) /*: Array<any[]>*/ {
+var unzip3 = function unzip3(xs) {
   var a2 = [];
   var a3 = [];
   var a4 = [];

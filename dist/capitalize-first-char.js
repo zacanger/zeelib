@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Capitalizes the first character of string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * capitalizeFirstChar('things and stuff') // => 'Things and stuff'
  */
 
-var capitalizeFirstChar = function capitalizeFirstChar(str /*: string*/) /*: string*/ {
+var capitalizeFirstChar = function capitalizeFirstChar(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 

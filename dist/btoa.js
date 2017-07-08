@@ -16,10 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * btoa('asdf') // => 'YXNkZg=='
  */
 
-var btoa = function btoa(str /*: string*/) /*: string*/ {
+var btoa = function btoa(str) {
   return (0, _isBrowser2.default)() ? window.btoa(str) : Buffer.from ? Buffer.from(str, 'utf8').toString('base64') : new Buffer(str, 'utf8').toString('base64');
 }; /* eslint-disable node/no-deprecated-api */
-
-// @flow
 
 exports.default = btoa;

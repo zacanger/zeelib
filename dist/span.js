@@ -18,9 +18,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * span(lessThanThree, [ 1, 2, 3, 4 ]) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
-var span = function span(pred /*: () => bool*/, arr /*: any[]*/) /*: any[]*/ {
+var span = function span(pred, arr) {
   var sat = (0, _takeWhile2.default)(pred, arr);
   return [sat, arr.slice(sat.length)];
-}; // @flow
+};
 
 exports.default = span;

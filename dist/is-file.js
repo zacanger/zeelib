@@ -13,12 +13,12 @@ var _fs = require('fs');
  * isFile('.') // => false
  */
 
-var isFile = function isFile(filePath /*: string*/) /*: bool*/ {
+var isFile = function isFile(filePath) {
   try {
     return (0, _fs.statSync)(filePath).isFile();
   } catch (_) {
     return false;
   }
-}; // @flow
+};
 
 exports.default = isFile;

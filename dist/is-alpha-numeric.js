@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the string is alphanumeric
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * isAlphaNumeric('!') // => false
  */
 
-var isAlphaNumeric = function isAlphaNumeric(str /*: string*/) /*: bool*/ {
+var isAlphaNumeric = function isAlphaNumeric(str) {
   return (/[0-9a-zA-Z]+/.test(str)
   );
 };

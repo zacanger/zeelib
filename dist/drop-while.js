@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * dropWhile(lessThanThree, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
-var dropWhile = function dropWhile(pred /*: () => bool*/, arr /*: any[]*/) /*: any[]*/ {
+var dropWhile = function dropWhile(pred, arr) {
   return (0, _span2.default)(pred, arr)[1] || [];
-}; // @flow
+};
 
 exports.default = dropWhile;

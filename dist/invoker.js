@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Invokes until function returns truthily
@@ -22,8 +22,8 @@ Object.defineProperty(exports, "__esModule", {
  * }, console.log)
  */
 
-var invoker = function invoker(limit /*: number*/, interval /*: number*/) {
-  return function (fn /*: any*/, cb /*: any*/) /*: void*/ {
+var invoker = function invoker(limit, interval) {
+  return function (fn, cb) {
     var current = 0;
     var _fn = function _fn() {
       current++;

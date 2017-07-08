@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * noop
@@ -11,6 +11,6 @@ Object.defineProperty(exports, "__esModule", {
  * noop() // => undefined
  */
 
-var noop = function noop() /*: void*/ {};
+var noop = function noop() {};
 
 exports.default = noop;

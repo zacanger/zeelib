@@ -12,8 +12,8 @@ var _path = require('path');
  * getFileExt('foo.bar') // => '.bar'
  */
 
-var getFileExt = function getFileExt(str /*: string*/) /*: string*/ {
+var getFileExt = function getFileExt(str) {
   return (0, _path.parse)(str).ext.replace(/./, '') || '';
-}; // @flow
+};
 
 exports.default = getFileExt;

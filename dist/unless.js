@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Call a function if the condition is falsey
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * unless(() => true, false) // => true
  */
 
-var unless = function unless(cond /*: any*/, fn /*: () => any*/) /*: ?any*/ {
+var unless = function unless(cond, fn) {
   return !cond ? fn() : null;
 };
 

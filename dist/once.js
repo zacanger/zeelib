@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Only calls fn once; subsequent calls just return first val
@@ -14,9 +14,9 @@ Object.defineProperty(exports, "__esModule", {
  * o(2) // => 1
  */
 
-var once = function once(fn /*: any*/) /*: any*/ {
+var once = function once(fn) {
   var returnValue = void 0;
-  return function () /*: any*/ {
+  return function () {
     if (!returnValue) {
       returnValue = fn.apply(undefined, arguments);
     }

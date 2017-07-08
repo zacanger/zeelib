@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Shortens a number and adds appropriate suffix
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * abbrevNumber(10000) // => '100K'
  */
 
-var abbrevNumber = function abbrevNumber(n /*: number*/) /*: string*/ {
+var abbrevNumber = function abbrevNumber(n) {
   if (n < 1000) return '' + n;
   if (n < 10000) return Math.round(n / 100) / 10 + 'K';
   if (n < 1000000) return Math.round(n / 1000) + 'K';

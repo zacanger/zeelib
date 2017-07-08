@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get truthiness
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * toBool(1) // => true
  */
 
-var toBool = function toBool(val /*: any*/) /*: bool*/ {
+var toBool = function toBool(val) {
   return !!val;
 };
 

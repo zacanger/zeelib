@@ -12,8 +12,8 @@ var _path = require('path');
  * getBasename() // => string
  */
 
-var getBasename = function getBasename(str /*: string*/) /*: string*/ {
+var getBasename = function getBasename(str) {
   return (0, _path.parse)(str).base;
-}; // @flow
+};
 
 exports.default = getBasename;

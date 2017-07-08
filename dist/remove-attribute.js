@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove an attribute from an element
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeAttribute(document.getElementById('foo'), 'data-something')
  */
 
-var removeAttribute = function removeAttribute(el /*: HTMLElement*/, attr /*: string*/) /*: void*/ {
+var removeAttribute = function removeAttribute(el, attr) {
   el.removeAttribute(attr);
 };
 

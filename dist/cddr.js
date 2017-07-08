@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * cddr([ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
-var cddr = function cddr(a /*: any[]*/) /*: any*/ {
+var cddr = function cddr(a) {
   return (0, _cdr2.default)((0, _cdr2.default)(a));
-}; // @flow
+};
 
 exports.default = cddr;

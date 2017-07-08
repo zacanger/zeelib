@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `[].slice` util
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * slice([ 1, 2, 3 ], 1, 2) // => [ 2 ]
  */
 
-var slice = function slice(arr /*: any[]*/, from /*: number*/, to /*: ?number*/) /*: any[]*/ {
+var slice = function slice(arr, from, to) {
   return [].slice.call(arr, from, to || 1);
 };
 

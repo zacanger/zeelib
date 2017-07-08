@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if an array has any
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * hasDuplicate([ 1, 1, 2 ]) // => true
  */
 
-var hasDuplicate = function hasDuplicate(arr /*: any[]*/) /*: bool*/ {
+var hasDuplicate = function hasDuplicate(arr) {
   return arr.some(function (v, i, s) {
     return s.indexOf(v) !== i;
   });

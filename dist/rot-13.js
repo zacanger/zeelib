@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * ROT13 a string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * rot13('asdf') // => 'nfqs'
  */
 
-var rot13 = function rot13(str /*: string*/) /*: string*/ {
+var rot13 = function rot13(str) {
   return str.split('').map(function (_) {
     if (!_.match(/[A-Za-z]/)) {
       return _;

@@ -20,9 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isValidHex('fff') // => true
  */
 
-// @flow
-
-var isValidHex = function isValidHex(color /*: string*/) /*: bool*/ {
+var isValidHex = function isValidHex(color) {
   return (0, _isHexBased2.default)((0, _trimSpaces2.default)(color));
 };
 

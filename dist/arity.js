@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get the arity of f
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * arity(addFour) // => 4
  */
 
-var arity = function arity(f /*: (any) => any*/) /*: number*/ {
+var arity = function arity(f) {
   return f.length;
 };
 

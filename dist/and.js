@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns false if any in input array is false
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * and([ 1, 2, 3, false ]) // => false
  */
 
-var and = function and(a /*: any[]*/) /*: bool*/ {
+var and = function and(a) {
   var r = true;
   a.forEach(function (el) {
     if (el === false) {

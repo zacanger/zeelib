@@ -21,7 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * concatMap(f, nested) // => [ 1, 2, 3, [ 4, 5, 6 ], [ 4, 5, 6 ] ]
  */
 
-var concatMap = function concatMap(f /*: () => any*/, a /*: Array<any[]>*/) /*: any[]*/ {
+var concatMap = function concatMap(f, a) {
   var res = [];
   a.forEach(function (el) {
     if ((0, _isArray2.default)(el)) {
@@ -29,6 +29,6 @@ var concatMap = function concatMap(f /*: () => any*/, a /*: Array<any[]>*/) /*: 
     }
   });
   return res;
-}; // @flow
+};
 
 exports.default = concatMap;

@@ -15,10 +15,8 @@ var _path = require('path');
  * makeFileIfNoFile('foo.txt', 'contentx')
  */
 
-// @flow
-
-var makeFileIfNoFile = function makeFileIfNoFile(filePath /*: string*/) /*: void*/ {
-  var contents /*: string*/ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+var makeFileIfNoFile = function makeFileIfNoFile(filePath) {
+  var contents = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
   var fl = (0, _path.resolve)(filePath);
   try {

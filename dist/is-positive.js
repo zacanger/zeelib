@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if number is positive
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isPositive(1) // => true
  */
 
-var isPositive = function isPositive(a /*: number*/) /*: bool*/ {
+var isPositive = function isPositive(a) {
   return +a === a && a > 0;
 };
 

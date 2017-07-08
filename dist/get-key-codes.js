@@ -4,13 +4,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /* eslint-disable comma-style */
-// @flow
+
 
 /**
  * Returns an object of keycodes
  */
 
-var getKeyCodes = function getKeyCodes() /*: Object*/ {
+var getKeyCodes = function getKeyCodes() {
   return {
     BACKSPACE: 8,
     TAB: 9,

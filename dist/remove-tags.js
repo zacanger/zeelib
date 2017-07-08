@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove html-like tags from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeTags('<foo>whatver</foo>') // => 'whatever'
  */
 
-var removeTags = function removeTags(str /*: string*/) /*: string*/ {
+var removeTags = function removeTags(str) {
   return str.replace(/(<([^>]+)>)/ig, '');
 };
 

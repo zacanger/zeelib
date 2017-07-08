@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if number is a power of two
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isPow2(16) // => true
  */
 
-var isPow2 = function isPow2(n /*: number*/) /*: bool*/ {
+var isPow2 = function isPow2(n) {
   return 1 << n.toString(2).length - 1 === n;
 };
 

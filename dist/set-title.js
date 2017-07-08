@@ -16,12 +16,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * setTitle('foo')
  */
 
-var setTitle = function setTitle(newTitle /*: string*/) /*: void*/ {
+var setTitle = function setTitle(newTitle) {
   if ((0, _isBrowser2.default)()) {
     window.title = newTitle;
   } else {
     process.title = newTitle;
   }
-}; // @flow
+};
 
 exports.default = setTitle;

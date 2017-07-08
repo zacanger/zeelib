@@ -13,10 +13,10 @@ var _fs = require('fs');
  * getNodeModules()
  */
 
-var getNodeModules = function getNodeModules() /*: string[]*/ {
+var getNodeModules = function getNodeModules() {
   return (0, _fs.readdirSync)('node_modules').filter(function (n) {
     return n !== '.bin';
   });
-}; // @flow
+};
 
 exports.default = getNodeModules;

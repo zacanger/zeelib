@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * A very simple store implementation (think Redux-like)
@@ -15,20 +15,20 @@ Object.defineProperty(exports, "__esModule", {
  */
 
 var store = function store() {
-  var state /*: Object*/ = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
   var ls = [];
 
   return {
-    subscribe: function subscribe(l /*: Function*/) {
+    subscribe: function subscribe(l) {
       ls.push(l);
     },
-    unsubscribe: function unsubscribe(l /*: Function*/) {
+    unsubscribe: function unsubscribe(l) {
       if (ls.includes(l)) {
         ls.splice(ls.indexOf(l), 1);
       }
     },
-    setState: function setState(n /*: Object | Function*/) {
+    setState: function setState(n) {
       var p = state;
       state = Object.assign({}, p, typeof n === 'function' ? n(p) : n);
       for (var i = 0; i < ls.length; i++) {

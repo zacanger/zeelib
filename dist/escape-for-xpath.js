@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Escapes a string for use in XPath
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * escapeForXpath('asdf lask jf((slkfjf ') // => 'concat(\'asdf lask jf((slkfjf \')'
  */
 
-var escapeForXpath = function escapeForXpath(str /*: string*/) /*: ?string*/ {
+var escapeForXpath = function escapeForXpath(str) {
   var parts = str.match(/[^'"]+|['"]/g);
   if (parts) {
     parts = parts.map(function (part) {

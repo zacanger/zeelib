@@ -22,24 +22,22 @@ var _isFunction2 = _interopRequireDefault(_isFunction);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// @flow
-
-var isTokenFunctionCall = function isTokenFunctionCall(t /*: string*/) /*: bool*/ {
+var isTokenFunctionCall = function isTokenFunctionCall(t) {
   return t === '()';
 };
 
-var isTokenArrayAccess = function isTokenArrayAccess(t /*: string*/) /*: bool*/ {
+var isTokenArrayAccess = function isTokenArrayAccess(t) {
   return (/^\[\d+\]$/.test(t)
   );
 };
 
-var tokenize = function tokenize(s /*: string*/) /*: string[]*/ {
+var tokenize = function tokenize(s) {
   return s.split(/\.|(\(\))|(\[\d+?])/).filter(function (t) {
     return t;
   });
 };
 
-function helper(obj /*: Object*/, tokens /*: string[]*/, ctx /*: any*/, fnArgs /*: any*/) /*: any*/ {
+function helper(obj, tokens, ctx, fnArgs) {
   if (tokens.length === 0) {
     return obj;
   }
@@ -66,7 +64,7 @@ function helper(obj /*: Object*/, tokens /*: string[]*/, ctx /*: any*/, fnArgs /
  * safeGet({ a: { b: { c: 'd' } } }, 'a.b.e') // => undefined
  */
 
-function safeGet(obj /*: Object*/, accessStr /*: string*/) /*: any*/ {
+function safeGet(obj, accessStr) {
   if ((0, _isUndefined2.default)(accessStr)) {
     return safeGet.bind(null, obj);
   }

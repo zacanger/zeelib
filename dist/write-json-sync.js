@@ -13,13 +13,13 @@ var _fs = require('fs');
  * writeJsonSync('foo.json', someObject, 4)
  */
 
-var writeJsonSync = function writeJsonSync(file /*: string*/, data /*: any*/) /*: void*/ {
-  var indent /*: ?number*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
+var writeJsonSync = function writeJsonSync(file, data) {
+  var indent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
 
   if (typeof indent !== 'number') {
     indent = 0;
   }
   (0, _fs.writeFileSync)(file, JSON.stringify(data, null, indent), 'utf8');
-}; // @flow
+};
 
 exports.default = writeJsonSync;

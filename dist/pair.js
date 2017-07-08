@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Make a pair out of any two values
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * pair('a', 'b') // => [ 'a', 'b' ]
  */
 
-var pair = function pair(first /*: any*/, second /*: any*/) /*: any[]*/ {
+var pair = function pair(first, second) {
   return [first, second];
 };
 

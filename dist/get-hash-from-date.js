@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns a hash based on current timestamp
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getHashFromDate()
  */
 
-var getHashFromDate = function getHashFromDate() /*: string*/ {
+var getHashFromDate = function getHashFromDate() {
   return (+new Date() + Math.random() * 100).toString(32).replace(/\./, '');
 };
 

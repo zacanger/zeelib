@@ -18,8 +18,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * notElem('b', 'asdf') // => true
  */
 
-var notElem = function notElem(el /*: any*/, ls /*: string | any[]*/) /*: bool*/ {
+var notElem = function notElem(el, ls) {
   return !(0, _elem2.default)(el, ls);
-}; // @flow
+};
 
 exports.default = notElem;

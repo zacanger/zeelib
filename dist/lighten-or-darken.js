@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Lighten or darken a color
@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", {
  * const newCol = lightenOrDarken('#F06D06', -20)
  */
 
-var lightenOrDarken = function lightenOrDarken(col /*: string*/, amt /*: number*/) /*: string*/ {
+var lightenOrDarken = function lightenOrDarken(col, amt) {
   var useHash = false;
   var num = parseInt(col, 16);
   var r = (num >> 16) + amt;

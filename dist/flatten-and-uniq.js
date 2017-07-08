@@ -21,9 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * flattenAndUniq([ 1, 2, 3, [ 1, 2, 3 ]]) // =>  [ 1, 2, 3 ]
  */
 
-// @flow
-
-var flattenAndUniq = function flattenAndUniq(arr /*: any*/) /*: any[]*/ {
+var flattenAndUniq = function flattenAndUniq(arr) {
   return (0, _uniq2.default)((0, _flatten2.default)(arr));
 };
 

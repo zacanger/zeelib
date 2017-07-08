@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the value is null
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isNull(null) // => true
  */
 
-var isNull = function isNull(v /*: any*/) /*: bool*/ {
+var isNull = function isNull(v) {
   return v === null;
 };
 

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Like Haskell's `getArgs`, but for Node
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getArgs() // => Array<?string>
  */
 
-var getArgs = function getArgs() /*: string[]*/ {
+var getArgs = function getArgs() {
   return process.argv.slice(2);
 };
 

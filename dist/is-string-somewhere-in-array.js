@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the string is contained somewhere in the array
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isStringSomewhereInArray('a', [ 'asdf' ]) // => true
  */
 
-var isStringSomewhereInArray = function isStringSomewhereInArray(el /*: string*/, arr /*: string[]*/) /*: bool*/ {
+var isStringSomewhereInArray = function isStringSomewhereInArray(el, arr) {
   return arr.some(function (a) {
     return el.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(el.toLowerCase());
   });

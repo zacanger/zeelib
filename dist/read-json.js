@@ -12,7 +12,7 @@ var _fs = require('fs');
  * readJson('./foo.json', (err, data) => {})
  */
 
-var readJson = function readJson(file /*: string*/, cb /*: any*/) /*: ?any*/ {
+var readJson = function readJson(file, cb) {
   (0, _fs.readFile)(file, 'utf8', function (err, json) {
     if (err) {
       cb(err);
@@ -27,6 +27,6 @@ var readJson = function readJson(file /*: string*/, cb /*: any*/) /*: ?any*/ {
     }
     cb(null, data);
   });
-}; // @flow
+};
 
 exports.default = readJson;

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * It's just left-pad
@@ -13,8 +13,8 @@ Object.defineProperty(exports, "__esModule", {
  * leftPad('asdf', 8, 'z') // => 'zzzzasdf'
  */
 
-var leftPad = function leftPad(str /*: string*/, len /*: number*/) /*: string*/ {
-  var pd /*: string*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
+var leftPad = function leftPad(str, len) {
+  var pd = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
   return Array(len > str.length ? 1 + len - str.length : 0).join(pd) + str;
 };
 

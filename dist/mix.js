@@ -21,7 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * mix({ a: 'a' }, [ 1, 2, 3 ]) // => { '0': 1, '1': 2, '2': 3, a: 'a' }
  */
 
-function mix() /*: Object*/ {
+function mix() {
   var mixed = {};
   (0, _each2.default)(arguments, function (obj) {
     (0, _each2.default)(obj, function (item, index) {
@@ -29,6 +29,6 @@ function mix() /*: Object*/ {
     });
   });
   return mixed;
-} // @flow
+}
 
 exports.default = mix;

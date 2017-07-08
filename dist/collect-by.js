@@ -8,8 +8,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// @flow
-
 /**
  * Collect an an array of objects by string key
  * cred: gh:uniqname
@@ -18,8 +16,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * collectBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }
  */
 
-var collectBy = function collectBy(p /*: string*/) {
-  return function (a /*: any[]*/) /*: Object*/ {
+var collectBy = function collectBy(p) {
+  return function (a) {
     return a.reduce(function (c, i) {
       return _extends({}, c, _defineProperty({}, i[p], i));
     }, {});

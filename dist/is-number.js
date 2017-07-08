@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isNumber(NaN) // => false
  */
 
-var isNumber = function isNumber(v /*: any*/) /*: bool*/ {
+var isNumber = function isNumber(v) {
   return typeof v === 'number' && !(0, _isNan2.default)(v);
-}; // @flow
+};
 
 exports.default = isNumber;

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Like Haskell's `drop`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * drop(2, [ 1, 2, 3 ]) // => 3
  */
 
-var drop = function drop(n /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+var drop = function drop(n, arr) {
   var alen = arr.length;
   if (n < 1) return arr;
   if (n > alen) return [];

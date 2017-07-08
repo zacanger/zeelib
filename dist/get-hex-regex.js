@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns a regex to test for valid hex
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getHexRegex()
  */
 
-var getHexRegex = function getHexRegex() /*: RegExp*/ {
+var getHexRegex = function getHexRegex() {
   return (/^#?[a-f0-9]{3}|[a-f0-9]{6}$/i
   );
 };

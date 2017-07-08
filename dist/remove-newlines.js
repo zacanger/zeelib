@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove all newlines from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeNewlines('\n\na\n\n') // => 'a'
  */
 
-var removeNewlines = function removeNewlines(str /*: string*/) /*: string*/ {
+var removeNewlines = function removeNewlines(str) {
   return str.replace(/(\r\n|\n|\r)/gm, '');
 };
 

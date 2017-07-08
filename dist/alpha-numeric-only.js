@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /* eslint-disable no-useless-escape */
-// @flow
+
 
 /**
  * Returns only alphanumeric characters
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * alphaNumericOnly('asdf1234!@#$') // => 'asdf1234'
  */
 
-var alphaNumericOnly = function alphaNumericOnly(str /*: string*/) /*: string*/ {
+var alphaNumericOnly = function alphaNumericOnly(str) {
   return str.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
 };
 

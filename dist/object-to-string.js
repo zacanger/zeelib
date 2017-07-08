@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `toString`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * objectToString({}) // => '[object Object]'
  */
 
-var objectToString = function objectToString(v /*: any*/) /*: string*/ {
+var objectToString = function objectToString(v) {
   return Object.prototype.toString.call(v);
 };
 

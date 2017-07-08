@@ -15,9 +15,7 @@ var _path = require('path');
  * if (fooContents != null) doThings(fooContents)
  */
 
-// @flow
-
-var readFileS = function readFileS(str /*: string*/) /*: ?string*/ {
+var readFileS = function readFileS(str) {
   try {
     return (0, _fs.readFileSync)((0, _path.resolve)(str), { encoding: 'utf8' });
   } catch (_) {}

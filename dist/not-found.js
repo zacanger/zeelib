@@ -15,13 +15,11 @@ var _path = require('path');
  * notFound('./404.html')
  */
 
-// @flow
-
-var notFound = function notFound(config /*: string*/) {
+var notFound = function notFound(config) {
   var status = 404;
   var filePath = config;
 
-  return function (req /*: Object*/, res /*: Object*/) {
+  return function (req, res) {
     res.writeHead(status, { 'Content-Type': 'text/html' });
     (0, _fs.createReadStream)((0, _path.resolve)(filePath)).pipe(res);
   };

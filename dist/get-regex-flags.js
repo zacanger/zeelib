@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns the flags for a given regular expression
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getRegexFlags(/foo/ig) // => [ 'g', 'i' ]
  */
 
-var getRegexFlags = function getRegexFlags(r /*: RegExp*/) /*: Array<string | null>*/ {
+var getRegexFlags = function getRegexFlags(r) {
   var flags = [];
   if (r.global) flags.push('g');
   if (r.ignoreCase) flags.push('i');

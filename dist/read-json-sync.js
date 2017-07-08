@@ -12,8 +12,8 @@ var _fs = require('fs');
  * const stuff = readJsonSync('./foo.json')
  */
 
-var readJsonSync = function readJsonSync(file /*: string*/) /*: string*/ {
+var readJsonSync = function readJsonSync(file) {
   return JSON.parse((0, _fs.readFileSync)(file, 'utf8'));
-}; // @flow
+};
 
 exports.default = readJsonSync;

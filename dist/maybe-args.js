@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes a function
@@ -16,7 +16,7 @@ Object.defineProperty(exports, "__esModule", {
  * maybeArgs((a) => a)(1) // => 1
  */
 
-function maybeArgs(fn /*: () => any*/) /*: any*/ {
+function maybeArgs(fn) {
   return function () {
     var args = Array.prototype.slice.call(arguments);
     var invalid = args.some(function (arg) {

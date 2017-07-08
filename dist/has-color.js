@@ -3,13 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
-
-var isWin = function isWin() /*: bool*/ {
+var isWin = function isWin() {
   return process.platform === 'win32';
 };
 
-var isColor = function isColor() /*: bool*/ {
+var isColor = function isColor() {
   var termColor = /^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;
   return !!process.env.COLORTERM || termColor.test(process.env.TERM || '');
 };
@@ -20,7 +18,7 @@ var isColor = function isColor() /*: bool*/ {
  * hasColor()
  */
 
-var hasColor = function hasColor() /*: bool*/ {
+var hasColor = function hasColor() {
   return isWin() || isColor();
 };
 

@@ -15,15 +15,15 @@ var _util = require('util');
  * console.log(colorize.bold(colorize.blue('foo'))) // => '\'\\u001b[34mfoo\\u001b[39m\''
  */
 
-var colorize = function colorize(color /*: string*/, text /*: string*/) /*: string*/ {
+var colorize = function colorize(color, text) {
   var codes = _util.inspect.colors[color];
   return '\x1B[' + codes[0] + 'm' + text + '\x1B[' + codes[1] + 'm';
-}; // @flow
+};
 
-var colors = function colors() /*: any*/ {
+var colors = function colors() {
   var val = {};
   Object.keys(_util.inspect.colors).forEach(function (color) {
-    val[color] = function (text /*: string*/) {
+    val[color] = function (text) {
       return colorize(color, text);
     };
   });

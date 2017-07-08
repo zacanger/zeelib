@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Simple xor
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * xor(1, !1) // => true
  */
 
-var xor = function xor(a /*: any*/, b /*: any*/) /*: bool*/ {
+var xor = function xor(a, b) {
   return !a !== !b;
 };
 

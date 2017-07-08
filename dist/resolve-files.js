@@ -12,10 +12,10 @@ var _path = require('path');
  * resolveFiles([ 'foo', 'bar' ])
  */
 
-var resolveFiles = function resolveFiles(ls /*: string[]*/) /*: string[]*/ {
+var resolveFiles = function resolveFiles(ls) {
   return ls.map(function (e) {
     return (0, _path.resolve)(e);
   });
-}; // @flow
+};
 
 exports.default = resolveFiles;

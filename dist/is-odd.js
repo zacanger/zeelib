@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the number is odd
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isOdd(1) // => true
  */
 
-var isOdd = function isOdd(n /*: number*/) /*: bool*/ {
+var isOdd = function isOdd(n) {
   return (n & 1) !== 0;
 };
 

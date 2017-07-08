@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if value is a string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isString('a') // => true
  */
 
-var isString = function isString(v /*: any*/) /*: bool*/ {
+var isString = function isString(v) {
   return typeof v === 'string';
 };
 

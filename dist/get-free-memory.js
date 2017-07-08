@@ -12,8 +12,8 @@ var _os = require('os');
  * getFreeMemory()
  */
 
-var getFreeMemory = function getFreeMemory() /*: number*/ {
+var getFreeMemory = function getFreeMemory() {
   return parseFloat(((0, _os.freemem)() / 1024 / 1024).toFixed(2));
-}; // @flow
+};
 
 exports.default = getFreeMemory;

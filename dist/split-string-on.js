@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Split a string on given char
@@ -11,8 +11,8 @@ Object.defineProperty(exports, "__esModule", {
  * splitStringOn('asdfasdf asdf', 'a') // => [ '', 'sdfasdf asdf' ]
  */
 
-var splitStringOn = function splitStringOn(str /*: string*/) /*: string[] | null*/ {
-  var spl /*: string*/ = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+var splitStringOn = function splitStringOn(str) {
+  var spl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
   if (!str || typeof str !== 'string') {
     console.warn('Please pass a string as first param.');

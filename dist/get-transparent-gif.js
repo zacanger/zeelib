@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns a 1px transparent gif
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getTransparentGif()
  */
 
-var getTransparentGif = function getTransparentGif() /*: string*/ {
+var getTransparentGif = function getTransparentGif() {
   return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 };
 

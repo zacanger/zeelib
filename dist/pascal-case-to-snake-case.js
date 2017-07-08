@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * PascalCase to snake_case
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * pascalCaseToSnakeCase('FooBar') // => 'foo_bar'
  */
 
-var pascalCaseToSnakeCase = function pascalCaseToSnakeCase(str /*: string*/) /*: string*/ {
+var pascalCaseToSnakeCase = function pascalCaseToSnakeCase(str) {
   return str.charAt(0).toLowerCase() + str.slice(1).replace(/[A-Z]/g, function (m) {
     return '_' + m.toLowerCase();
   }).toLowerCase();

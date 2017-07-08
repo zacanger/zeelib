@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `eq`
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * eq({ a: 'b' }, { b: 'a' }) // => false
  */
 
-var eq = function eq(a /*: any*/, b /*: any*/) /*: bool*/ {
+var eq = function eq(a, b) {
   return a === b ? true : a === undefined || b === undefined ? false : JSON.stringify(a) === JSON.stringify(b);
 };
 

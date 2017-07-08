@@ -20,9 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isNullOrUndefined(null) // => true
  */
 
-// @flow
-
-var isNullOrUndefined = function isNullOrUndefined(v /*: any*/) /*: bool*/ {
+var isNullOrUndefined = function isNullOrUndefined(v) {
   return (0, _isNull2.default)(v) || (0, _isUndefined2.default)(v);
 };
 

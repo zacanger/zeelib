@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Diff two arrays
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
  */
 
-var diff = function diff(a /*: any[]*/, b /*: ?any[]*/) /*: any[]*/ {
+var diff = function diff(a, b) {
   var arr = [];
   var len = a.length;
 

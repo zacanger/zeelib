@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Lex sort
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * 'asdfghjkl'.split('').sort(lexSort).join('') // => 'adfghjls'
  */
 
-var lexSort = function lexSort(a /*: string*/, b /*: string*/) /*: number*/ {
+var lexSort = function lexSort(a, b) {
   return a === b ? 0 : a > b ? 1 : -1;
 };
 

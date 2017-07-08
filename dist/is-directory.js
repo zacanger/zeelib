@@ -13,12 +13,12 @@ var _fs = require('fs');
  * isDirectory('./fake-path') // => false
  */
 
-var isDirectory = function isDirectory(filePath /*: string*/) /*: bool*/ {
+var isDirectory = function isDirectory(filePath) {
   try {
     return (0, _fs.statSync)(filePath).isDirectory();
   } catch (_) {
     return false;
   }
-}; // @flow
+};
 
 exports.default = isDirectory;

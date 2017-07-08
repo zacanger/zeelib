@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get height of window
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getHeight()
  */
 
-var getHeight = function getHeight() /*: number*/ {
+var getHeight = function getHeight() {
   return window.innerHeight || window.document.documentElement.clientHeight;
 };
 

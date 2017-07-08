@@ -12,8 +12,8 @@ var _path = require('path');
  * getRelativePath('/home/z/', '/') // '../..'
  */
 
-var getRelativePath = function getRelativePath(here /*: string*/, there /*: string*/) /*: string*/ {
+var getRelativePath = function getRelativePath(here, there) {
   return (0, _path.relative)(here, there);
-}; // @flow
+};
 
 exports.default = getRelativePath;

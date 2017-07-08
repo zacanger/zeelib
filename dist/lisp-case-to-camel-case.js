@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * From lisp-case to camelCase
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * lispCaseToCamelCase('foo-bar') // => 'fooBar'
  */
 
-var lispCaseToCamelCase = function lispCaseToCamelCase(str /*: string*/) /*: string*/ {
+var lispCaseToCamelCase = function lispCaseToCamelCase(str) {
   return str.toLowerCase().replace(/-[a-z]/g, function (match) {
     return match.slice(1).toUpperCase();
   });

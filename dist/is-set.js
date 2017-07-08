@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isSet(new Set()) // => true
  */
 
-var isSet = function isSet(v /*: any*/) /*: bool*/ {
+var isSet = function isSet(v) {
   return (0, _objectToString2.default)(v) === '[object Set]';
-}; // @flow
+};
 
 exports.default = isSet;

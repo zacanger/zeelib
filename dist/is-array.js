@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isArray([]) // => true
  */
 
-var isArray = Array.isArray || function (v /*: any*/) /*: bool*/ {
+var isArray = Array.isArray || function (v) {
   return (0, _objectToString2.default)(v) === '[object Array]';
-}; // @flow
+};
 
 exports.default = isArray;

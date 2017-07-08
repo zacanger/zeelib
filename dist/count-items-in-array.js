@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get an object of items in an array with count
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * countItemsInArray([ 1, 1, 2, 3, 4 ]) // => { '1': 2, '2': 1, '3': 1, '4': 1 }
  */
 
-var countItemsInArray = function countItemsInArray(arr /*: any[]*/) /*: Object*/ {
+var countItemsInArray = function countItemsInArray(arr) {
   return arr.reduce(function (a, c) {
     a[c]++ ? 0 : a[c] = 1; // eslint-disable-line
     return a;

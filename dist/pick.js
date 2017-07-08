@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `pick`
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * pick([ 'a', 'b' ], { a: 'a', b: 'b', c: 'c' }) // => { a: 'a', b: 'b' }
  */
 
-function pick(ks /*: any*/, o /*: Object*/) /*: Object*/ {
+function pick(ks, o) {
   if (o === undefined) {
     return function (t) {
       return pick(ks, t);

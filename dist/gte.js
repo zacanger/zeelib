@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if first param is greater than or equal to second param
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * gte(2, 3) // => false
  */
 
-var gte = function gte(a /*: number*/, b /*: number*/) /*: bool*/ {
+var gte = function gte(a, b) {
   return a >= b;
 };
 

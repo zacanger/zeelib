@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * dir({ foo: 'bar' }) // => { foo: 'bar' }
  */
 
-var dir = function dir(obj /*: Object*/) /*: void*/ {
+var dir = function dir(obj) {
   return (0, _isNode2.default)() ? console.dir(obj, { colors: true }) : console.log(obj);
-}; // @flow
+};
 
 exports.default = dir;

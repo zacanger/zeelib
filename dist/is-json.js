@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the string is valid JSON
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isJson(JSON.stringify({ a: 'b' })) // => true
  */
 
-var isJson = function isJson(str /*: string*/) /*: bool*/ {
+var isJson = function isJson(str) {
   try {
     JSON.parse(str);
     return true;

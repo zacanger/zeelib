@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove non-numeric chars from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeNonNumeric('asdf22\n!') // => '22'
  */
 
-var removeNonNumeric = function removeNonNumeric(str /*: string*/) /*: string*/ {
+var removeNonNumeric = function removeNonNumeric(str) {
   return str.replace(/[^0-9-.]/g, '');
 };
 

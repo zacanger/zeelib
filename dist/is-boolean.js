@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the value is a boolean
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isBoolean(true) // => true
  */
 
-var isBoolean = function isBoolean(v /*: any*/) /*: bool*/ {
+var isBoolean = function isBoolean(v) {
   return typeof v === 'boolean';
 };
 

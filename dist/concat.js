@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * concat(nested) // => [ 1, 2, 3, [ 4, 5, 6 ] ]
  */
 
-var concat = function concat(a /*: Array<any[]>*/) /*: any[]*/ {
+var concat = function concat(a) {
   var res = [];
   a.forEach(function (e) {
     if ((0, _isArray2.default)(e)) {
@@ -26,6 +26,6 @@ var concat = function concat(a /*: Array<any[]>*/) /*: any[]*/ {
     }
   });
   return res;
-}; // @flow
+};
 
 exports.default = concat;

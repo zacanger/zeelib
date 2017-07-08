@@ -14,8 +14,8 @@ var _readline = require('readline');
  * prompt('Do the thing?', true) // with 'yes' default
  */
 
-var termPrompt = function termPrompt(question /*: string*/, isYesDefault /*: ?bool*/) {
-  return new Promise(function (resolve) /*: ?bool*/ {
+var termPrompt = function termPrompt(question, isYesDefault) {
+  return new Promise(function (resolve) {
     var rlInterface = (0, _readline.createInterface)({
       input: process.stdin,
       output: process.stdout
@@ -34,6 +34,6 @@ var termPrompt = function termPrompt(question /*: string*/, isYesDefault /*: ?bo
       return resolve(isYes);
     });
   });
-}; // @flow
+};
 
 exports.default = termPrompt;

@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isNodeList(document.getElementsByTagName('span')) // => true
  */
 
-var isNodeList = function isNodeList(v /*: any*/) /*: bool*/ {
+var isNodeList = function isNodeList(v) {
   return (0, _isArrayLike2.default)(v) && /^\[object (HTMLCollection|NodeList)\]$/.test(v + '');
-}; // @flow
+};
 
 exports.default = isNodeList;

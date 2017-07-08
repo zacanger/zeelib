@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the value is defined
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isDefined(null) // => true
  */
 
-var isDefined = function isDefined(v /*: any*/) /*: bool*/ {
+var isDefined = function isDefined(v) {
   return v !== undefined;
 };
 

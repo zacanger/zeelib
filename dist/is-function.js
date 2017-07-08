@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the value is a function
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * isFunction(noop) // => true
  */
 
-var isFunction = function isFunction(v /*: any*/) /*: bool*/ {
+var isFunction = function isFunction(v) {
   return typeof v === 'function';
 };
 

@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isDate(new Date()) // => true
  */
 
-var isDate = function isDate(v /*: any*/) /*: bool*/ {
+var isDate = function isDate(v) {
   return (0, _objectToString2.default)(v) === '[object Date]';
-}; // @flow
+};
 
 exports.default = isDate;

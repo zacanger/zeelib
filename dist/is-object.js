@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isObject('asdf') // => false
  */
 
-var isObject = function isObject(v /*: any*/) /*: bool*/ {
+var isObject = function isObject(v) {
   return (0, _objectToString2.default)(v) === '[object Object]';
-}; // @flow
+};
 
 exports.default = isObject;

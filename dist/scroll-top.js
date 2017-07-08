@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Scroll to the top
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * scrollTop()
  */
 
-var scrollTop = function scrollTop() /*: void*/ {
+var scrollTop = function scrollTop() {
   return window.scrollTo(0, 0);
 };
 

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes a camelCase string and returns one in snake_case
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * camelCaseToSnakeCase('fooBar') // => 'foo_bar'
  */
 
-var camelCaseToSnakeCase = function camelCaseToSnakeCase(str /*: string*/) /*: string*/ {
+var camelCaseToSnakeCase = function camelCaseToSnakeCase(str) {
   return str.replace(/[A-Z]/g, function (match) {
     return '_' + match.toLowerCase();
   }).toLowerCase();

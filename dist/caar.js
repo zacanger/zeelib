@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * caar([ [ 1 ] ]) // => 1
  */
 
-var caar = function caar(a /*: any[]*/) /*: any*/ {
+var caar = function caar(a) {
   return (0, _car2.default)((0, _car2.default)(a));
-}; // @flow
+};
 
 exports.default = caar;

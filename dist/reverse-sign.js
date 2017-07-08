@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Reverse the sign on a number
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * reverseSign(-10) // => 10
  */
 
-var reverseSign = function reverseSign(num /*: number*/) /*: number*/ {
+var reverseSign = function reverseSign(num) {
   return -num;
 };
 

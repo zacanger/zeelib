@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Averages a list of numbers
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * average([ 2, 4, 6, 8 ]) // => 5
  */
 
-var average = function average(xs /*: number[]*/) /*: number*/ {
+var average = function average(xs) {
   var t = xs.reduce(function (a, b) {
     return a + b;
   }, 0);

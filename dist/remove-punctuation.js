@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /* eslint-disable no-useless-escape */
-// @flow
+
 
 /**
  * Remove punctuation from string
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * removePunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
  */
 
-var removePunctuation = function removePunctuation(str /*: string*/) /*: string*/ {
+var removePunctuation = function removePunctuation(str) {
   return str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ');
 };
 

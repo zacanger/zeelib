@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Remove numeric chars from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * removeNumeric('123abc') // => 'abc'
  */
 
-var removeNumeric = function removeNumeric(str /*: string*/) /*: string*/ {
+var removeNumeric = function removeNumeric(str) {
   return str.replace(/[0-9]/g, '');
 };
 

@@ -12,9 +12,9 @@ var _fs = require('fs');
  * writeJson('foo.json', someObject, 4, (err) => {})
  */
 
-var writeJson = function writeJson(file /*: string*/, data /*: any*/) {
-  var indent /*: ?number*/ = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
-  var cb /*: () => any*/ = arguments[3];
+var writeJson = function writeJson(file, data) {
+  var indent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
+  var cb = arguments[3];
 
   if (typeof cb !== 'function') {
     cb = indent;

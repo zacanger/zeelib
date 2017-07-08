@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Sync sleep. Also see `sleepAsync`.
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * sleep(1000)
  */
 
-var sleep = function sleep(ms /*: number*/) /*: void*/ {
+var sleep = function sleep(ms) {
   var start = new Date().getTime();
   while (new Date().getTime() - start < ms) {}
 };

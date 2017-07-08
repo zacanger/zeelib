@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Trim hash from string
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * trimHash('#foo') // => 'foo'
  */
 
-var trimHash = function trimHash(str /*: string*/) /*: string*/ {
+var trimHash = function trimHash(str) {
   return typeof str === 'string' ? str.replace('#', '') : str;
 };
 

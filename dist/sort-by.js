@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes a sort fn and an array
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * sortBy(({ id }) => id, list) // => [ { id: 1 }, { id: 2 }, { id: 3 } ]
  */
 
-var sortBy = function sortBy /*:: <T>*/(f /*: (obj: T) => any*/, xs /*: Array<T>*/) /*: Array<T>*/ {
+var sortBy = function sortBy(f, xs) {
   return xs.sort(function (a, b) {
     return f(a) - f(b);
   });

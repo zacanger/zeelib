@@ -12,7 +12,7 @@ var _os = require('os');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // @flow
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 /**
  * Get load average
@@ -20,7 +20,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  * getLoadAverage()
  */
 
-var getLoadAverage = function getLoadAverage() /*: number*/ {
+var getLoadAverage = function getLoadAverage() {
   return parseFloat((0, _average2.default)([].concat(_toConsumableArray((0, _os.loadavg)()))).toFixed(2));
 };
 

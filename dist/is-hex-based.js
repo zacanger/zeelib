@@ -17,8 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isHexBased('whatever') // => false
  */
 
-var isHexBased = function isHexBased(color /*: string*/) /*: bool*/ {
+var isHexBased = function isHexBased(color) {
   return (0, _getHexRegex2.default)().test(color);
-}; // @flow
+};
 
 exports.default = isHexBased;

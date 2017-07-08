@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Flips order of received arguments and calls f.
@@ -13,9 +13,9 @@ Object.defineProperty(exports, "__esModule", {
  * flip(minus)(2)(1) // => -1
  */
 
-var flip = function flip(f /*: () => any*/) /*: any*/ {
-  return function (a /*: any*/) {
-    return function (b /*: any*/) {
+var flip = function flip(f) {
+  return function (a) {
+    return function (b) {
       return f(b)(a);
     };
   };

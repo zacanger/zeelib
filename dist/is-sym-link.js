@@ -12,12 +12,12 @@ var _fs = require('fs');
  * isSymLink('.') // => false
  */
 
-var isSymLink = function isSymLink(filePath /*: string*/) /*: bool*/ {
+var isSymLink = function isSymLink(filePath) {
   try {
     return (0, _fs.lstatSync)(filePath).isSymbolicLink();
   } catch (_) {
     return false;
   }
-}; // @flow
+};
 
 exports.default = isSymLink;

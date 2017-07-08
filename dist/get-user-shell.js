@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get the current user's shell, or
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * getUserShell()
  */
 
-var getUserShell = function getUserShell() /*: string*/ {
+var getUserShell = function getUserShell() {
   return process.env.SHELL || '';
 };
 

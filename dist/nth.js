@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns nth element of array
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * nth(2, [ 1, 2 3 ]) // => 3
  */
 
-var nth = function nth(n /*: number*/, arr /*: any[]*/) /*: any*/ {
+var nth = function nth(n, arr) {
   return arr[n];
 };
 

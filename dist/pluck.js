@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Simple `pluck`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * pluck('a', [ { a: 'a' }, { a: 'b' } ]) // => [ 'a', 'b' ]
  */
 
-var pluck = function pluck(key /*: string*/, arr /*: any[]*/) /*: any[]*/ {
+var pluck = function pluck(key, arr) {
   return arr.map(function (obj) {
     return obj[key];
   });

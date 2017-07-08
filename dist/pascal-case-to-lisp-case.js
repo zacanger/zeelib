@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * PascalCase to lisp-case
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * pascalCaseToLispCase('FooBar') // => 'foo-bar'
  */
 
-var pascalCaseToLispCase = function pascalCaseToLispCase(str /*: string*/) /*: string*/ {
+var pascalCaseToLispCase = function pascalCaseToLispCase(str) {
   return str.charAt(0).toLowerCase() + str.slice(1).replace(/[A-Z]/g, function (m) {
     return '-' + m.toLowerCase();
   }).toLowerCase();

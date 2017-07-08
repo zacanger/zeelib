@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns all but the last item of an array
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * init([ 1, 2, 3 ]) // => [ 1, 2 ]
  */
 
-var init = function init(arr /*: any[]*/) /*: any[]*/ {
+var init = function init(arr) {
   return arr.slice(0, -1);
 };
 

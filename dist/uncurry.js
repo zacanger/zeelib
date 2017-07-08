@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Uncurry a function
@@ -13,8 +13,7 @@ Object.defineProperty(exports, "__esModule", {
  * add(1, 2) // => 3
  */
 
-/*:: type AnyF = () => any*/
-var uncurry = function uncurry(f /*: AnyF*/) /*: AnyF*/ {
+var uncurry = function uncurry(f) {
   if (typeof f !== 'function' || f.length === 0) {
     return f;
   }

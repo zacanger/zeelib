@@ -20,9 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * checkIs('function', 2) // => Error
  */
 
-/*:: type R = Error | any*/ // @flow
-
-var checkIs = function checkIs(type /*: string*/, val /*: any*/, name /*: ?string*/) /*: R*/ {
+var checkIs = function checkIs(type, val, name) {
   if (!(0, _is2.default)(type, val)) {
     throw new TypeError((name || val.name || val.toString() || '') + ' should be of type ' + type + '!');
   }

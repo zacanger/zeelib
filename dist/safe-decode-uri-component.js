@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `decodeURIComponent`, but safe
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * safeDecodeURIComponent('20%2F%3F') // => '20/?'
  */
 
-var safeDecodeURIComponent = function safeDecodeURIComponent(str /*: string*/) /*: string*/ {
+var safeDecodeURIComponent = function safeDecodeURIComponent(str) {
   try {
     return decodeURIComponent(str);
   } catch (_) {

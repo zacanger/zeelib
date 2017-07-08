@@ -22,9 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * filter(lessThanThree, { a: 1, b: 4 }) // =>  { a: 1 }
  */
 
-// @flow
-
-var filter = function filter(fn /*: () => any*/, list /*: any[]*/) /*: Object | any[]*/ {
+var filter = function filter(fn, list) {
   var isArr = (0, _isArrayLike2.default)(list);
   var filtered = isArr ? [] : {};
 

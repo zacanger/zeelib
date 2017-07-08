@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `filterFloat` from MDN's parseFloat docs
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * filterFloat('-111.111111111111') // => -111.111111111111
  */
 
-var filterFloat = function filterFloat(value /*: string*/) /*: number*/ {
+var filterFloat = function filterFloat(value) {
   if (/^(-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value)) {
     return Number(value);
   }

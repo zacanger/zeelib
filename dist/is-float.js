@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the number is a float
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * isFloat(2.2) // => true
  */
 
-var isFloat = function isFloat(n /*: number*/) /*: bool*/ {
+var isFloat = function isFloat(n) {
   return (n | 0) !== n;
 };
 

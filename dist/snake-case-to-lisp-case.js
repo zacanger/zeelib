@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * snake_case to lisp-case
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * snakeCaseToLispCase('foo_bar') // => 'foo-bar'
  */
 
-var snakeCaseToLispCase = function snakeCaseToLispCase(str /*: string*/) /*: string*/ {
+var snakeCaseToLispCase = function snakeCaseToLispCase(str) {
   return str.replace(/_/g, '-');
 };
 

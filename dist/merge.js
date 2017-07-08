@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Simple merge for objects
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * merge({ a: 'a' }, { b: 'b' }) // => { a: 'a', b: 'b' }
  */
 
-function merge(o /*: Object*/, n /*: ?Object*/) /*: Object*/ {
+function merge(o, n) {
   if (n === undefined) {
     return function (t) {
       return merge(o, t);

@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-// @flow
-
 /**
  * A simple memoizing util
  * @example
@@ -15,9 +13,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  * memoize((a) => a)(1) // => 1
  */
 
-var memoize = function memoize(fn /*: any*/) /*: any*/ {
+var memoize = function memoize(fn) {
   var results = new Map();
-  return function () /*: any*/ {
+  return function () {
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }

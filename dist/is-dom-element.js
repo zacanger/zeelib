@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isDomElement(document.getElementById('foo')) // => true
  */
 
-var isDomElement = function isDomElement(v /*: any*/) /*: bool*/ {
+var isDomElement = function isDomElement(v) {
   return (0, _objectToString2.default)(v).slice(8, 12) === 'HTML';
-}; // @flow
+};
 
 exports.default = isDomElement;

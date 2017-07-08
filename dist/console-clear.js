@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * consoleClear() // => undefined
  */
 
-var consoleClear = function consoleClear() /*: void*/ {
+var consoleClear = function consoleClear() {
   return (0, _isNode2.default)() ? console.log('\x1Bc') : console.clear();
-}; // @flow
+};
 
 exports.default = consoleClear;

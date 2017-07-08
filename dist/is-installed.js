@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the passed node_module name is installed
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isInstalled('zeelib') // => true
  */
 
-var isInstalled = function isInstalled(pkgName /*: string*/) /*: bool*/ {
+var isInstalled = function isInstalled(pkgName) {
   try {
     require.resolve(pkgName);
     return true;

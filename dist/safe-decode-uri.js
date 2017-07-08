@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `decodeURI`, but safe
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * safeDecodeURI('2!!!!0/,.?+=*^\n|\@@@@') // => '2!!!!0/,.?+=*^\n|@@@@'
  */
 
-var safeDecodeURI = function safeDecodeURI(str /*: string*/) /*: string*/ {
+var safeDecodeURI = function safeDecodeURI(str) {
   try {
     return decodeURI(str);
   } catch (_) {

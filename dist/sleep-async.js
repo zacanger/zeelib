@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Async `sleep`. Also see `sleep`.
@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", {
  * const delay = await sleepAsync(1000)
  */
 
-var sleepAsync = function sleepAsync(ms /*: number*/) /*: Promise<*>*/ {
-  return new Promise(function (resolve) /*: any*/ {
+var sleepAsync = function sleepAsync(ms) {
+  return new Promise(function (resolve) {
     return setTimeout(resolve, ms);
   });
 };

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Sum an array of numbers
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * sum([ 1, 2, 3, 4 ]) // => 10
  */
 
-var sum = function sum(nums /*: number[]*/) /*: number*/ {
+var sum = function sum(nums) {
   return nums.reduce(function (acc, cur) {
     return acc + cur;
   }, 0);

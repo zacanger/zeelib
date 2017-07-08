@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `cons`
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * cons(1, [ 2, 3, 4 ]) // => [ 1, 2, 3, 4 ]
  */
 
-var cons = function cons(el /*: any*/, arr /*: any[]*/) /*: any[]*/ {
+var cons = function cons(el, arr) {
   var l = arr.length;
   var b = Array(l + 1);
   b[0] = el;

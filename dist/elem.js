@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Check if a string or array contains an element
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * elem('a', 'asdf'.split('')) // => true
  */
 
-var elem = function elem(el /*: any*/, ls /*: string | any[]*/) /*: bool*/ {
+var elem = function elem(el, ls) {
   return ls.includes(el);
 };
 

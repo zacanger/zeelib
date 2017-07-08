@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Return true if any val in input array is true
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * or([ 1, 2, 3, true ]) // => true
  */
 
-var or = function or(a /*: any[]*/) /*: bool*/ {
+var or = function or(a) {
   var r = false;
   a.forEach(function (el) {
     if (el === true) {

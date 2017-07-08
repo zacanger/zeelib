@@ -29,9 +29,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isBetween(2, 1, 2) // => false
  */
 
-// @flow
-
-var isBetween = function isBetween(a /*: number*/, b /*: number*/, mid /*: number*/) /*: bool*/ {
+var isBetween = function isBetween(a, b, mid) {
   var first = (0, _lesser2.default)(a, b);
   var last = (0, _greater2.default)(a, b);
   return (0, _lt2.default)(first, mid) && (0, _gt2.default)(last, mid);

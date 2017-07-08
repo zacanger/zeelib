@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if first param is greater than second param
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * gt(1, 2) // => false
  */
 
-var gt = function gt(a /*: number*/, b /*: number*/) /*: bool*/ {
+var gt = function gt(a, b) {
   return a > b;
 };
 

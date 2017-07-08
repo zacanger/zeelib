@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * toBoolInverse(1) // => false
  */
 
-var toBoolInverse = function toBoolInverse(val /*: any*/) /*: bool*/ {
+var toBoolInverse = function toBoolInverse(val) {
   return !(0, _toBool2.default)(val);
-}; // @flow
+};
 
 exports.default = toBoolInverse;

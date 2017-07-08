@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * nco
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * nco(1, 2) // => 1
  */
 
-var nco = function nco(variable /*: any*/, defaultValue /*: any*/) /*: any*/ {
+var nco = function nco(variable, defaultValue) {
   return variable === null || typeof variable === 'undefined' ? defaultValue : variable;
 };
 

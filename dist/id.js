@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * `id`
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * id() // => undefined
  */
 
-var id = function id /*:: <T>*/(a /*: T*/) /*: T*/ {
+var id = function id(a) {
   return a;
 };
 

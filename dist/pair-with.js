@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns an array made by calling
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * pairWith(increment, 1, 1) // => [ 2, 2 ]
  */
 
-var pairWith = function pairWith(f /*: () => any*/, a /*: any*/, b /*: any*/) /*: any[]*/ {
+var pairWith = function pairWith(f, a, b) {
   return [f(a), f(b)];
 };
 

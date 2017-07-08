@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns platform (e.g. 'linux')
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getPlatform()
  */
 
-var getPlatform = function getPlatform() /*: string*/ {
+var getPlatform = function getPlatform() {
   return process.platform;
 };
 

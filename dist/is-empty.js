@@ -31,9 +31,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * isEmpty(null) // => true
  */
 
-// @flow
-
-var isEmpty = function isEmpty(v /*: any*/) /*: bool*/ {
+var isEmpty = function isEmpty(v) {
   if ((0, _isNullOrUndefined2.default)(v)) return true;
   if ((0, _isString2.default)(v)) return (/^\s*$/.test(v)
   );

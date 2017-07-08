@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if code is in Node
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * isNode()
  */
 
-var isNode = function isNode() /*: bool*/ {
+var isNode = function isNode() {
   return process && !!process.version;
 };
 

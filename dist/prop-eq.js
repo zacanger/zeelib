@@ -16,8 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * propEq('a', 1, { a: 1 }) // => true
  */
 
-var propEq = (0, _curry2.default)(function (prop /*: any*/, value /*: any*/, data /*: Object*/) /*: bool*/ {
+var propEq = (0, _curry2.default)(function (prop, value, data) {
   return data[prop] !== undefined && data[prop] === value;
-}); // @flow
+});
 
 exports.default = propEq;

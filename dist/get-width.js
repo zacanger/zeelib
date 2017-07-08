@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Get window width
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getWidth()
  */
 
-var getWidth = function getWidth() /*: number*/ {
+var getWidth = function getWidth() {
   return window.innerWidth || window.document.documentElement.clientWidth;
 };
 

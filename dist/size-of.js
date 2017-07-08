@@ -6,8 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-// @flow
-
 /**
  * Get the memory size of an object
  * based on code by http://code.stephenmorley.org/ CC0 1.0 Universal
@@ -15,7 +13,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  * sizeOf('asdf') // => 8
  */
 
-var sizeOf = function sizeOf(object /*: Object*/) /*: number*/ {
+var sizeOf = function sizeOf(object) {
   var objects = [object];
   var size = 0;
 

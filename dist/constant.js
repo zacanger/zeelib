@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Similar to `id` but takes another `any`
@@ -11,8 +11,8 @@ Object.defineProperty(exports, "__esModule", {
  * constant(1)(() => {}) // => 1
  */
 
-var constant = function constant(a /*: any*/) {
-  return function (_ /*: any*/) {
+var constant = function constant(a) {
+  return function (_) {
     return a;
   };
 };

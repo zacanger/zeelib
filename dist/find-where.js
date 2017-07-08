@@ -19,8 +19,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * findWhere(lessThanThree, [ 3, 2, 1 ]) // => 2
  */
 
-var findWhere = function findWhere(f /*: () => bool*/, arr /*: any[]*/) /*: any*/ {
+var findWhere = function findWhere(f, arr) {
   return (0, _filter2.default)(f, arr)[0] || null;
-}; // @flow
+};
 
 exports.default = findWhere;

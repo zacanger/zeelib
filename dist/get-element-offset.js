@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes an element and retuns its offset from top left
@@ -11,11 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * getElementOffset(document.getElementById('foo')) // => { top: number, left: number }
  */
 
-/*:: type t = {
-  top: number,
-  left: number
-}*/
-var getElementOffset = function getElementOffset(el /*: HTMLElement*/) /*: t*/ {
+var getElementOffset = function getElementOffset(el) {
   var r = el.getBoundingClientRect();
   var d = document.documentElement;
   var w = window;

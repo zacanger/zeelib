@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; // @flow
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _isArray = require('./is-array');
 
@@ -27,7 +27,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * typeOf(new Date()) // => 'date'
  */
 
-var typeOf = function typeOf(a /*: any*/) /*: string*/ {
+var typeOf = function typeOf(a) {
   if ((typeof a === 'undefined' ? 'undefined' : _typeof(a)) === 'object') {
     if (a === null) return 'null';
     if (a && a.nodeType === 1) return 'dom';

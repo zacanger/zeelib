@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if the value is a buffer
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  * isBuffer(Buffer.from('asdf')) // => true
  */
 
-var isBuffer = function isBuffer(a /*: any*/) /*: bool*/ {
+var isBuffer = function isBuffer(a) {
   try {
     return Buffer.isBuffer(a);
   } catch (_) {

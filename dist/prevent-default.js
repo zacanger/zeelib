@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Calls preventDefault and stopPropagation
@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", {
  * }
  */
 
-var preventDefault = function preventDefault(e /*: EventTarget*/) /*: void*/ {
+var preventDefault = function preventDefault(e) {
   if (e) {
     if (typeof e.preventDefault === 'function') {
       e.preventDefault();

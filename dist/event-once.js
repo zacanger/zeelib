@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Runs an event handler once
@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", {
  * eventOnce(el, 'logger', console.log)
  */
 
-var eventOnce = function eventOnce(el /*: HTMLElement*/, t /*: string*/, handler /*: () => any*/) /*: void*/ {
-  var f = function f(e /*: Event*/) /*: void*/ {
+var eventOnce = function eventOnce(el, t, handler) {
+  var f = function f(e) {
     e.target.removeEventListener(t, f);
     handler();
   };

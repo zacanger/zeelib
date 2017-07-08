@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Takes the last n items of array
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * takeLast(2, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
-var takeLast = function takeLast(num /*: number*/, arr /*: any[]*/) /*: any[]*/ {
+var takeLast = function takeLast(num, arr) {
   arr = arr.reverse();
   var alen = arr.length;
   if (num > alen) return arr;

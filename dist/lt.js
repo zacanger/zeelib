@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Returns true if first param is less than second param
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * lt(2, 1) // => false
  */
 
-var lt = function lt(a /*: number*/, b /*: number*/) /*: bool*/ {
+var lt = function lt(a, b) {
   return a < b;
 };
 

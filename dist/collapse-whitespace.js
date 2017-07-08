@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Collapses consecutive whitespace to a single space
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * collapseWhitespace('a\n\r\t\nb') // => 'a b'
  */
 
-var collapseWhitespace = function collapseWhitespace(str /*: string*/) /*: string*/ {
+var collapseWhitespace = function collapseWhitespace(str) {
   return str.replace(/\s+/g, ' ');
 };
 

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// @flow
+
 
 /**
  * Adds `\n` to every line
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * addNewlines('asdf asdf') // => 'asdf asdf\n'
  */
 
-var addNewlines = function addNewlines(str /*: string*/) /*: string*/ {
+var addNewlines = function addNewlines(str) {
   return str.split('\t').join('  ').split('\n').map(function (e) {
     return e + '\n';
   }).join('');
