@@ -9,7 +9,7 @@
  */
 
 const sortBy = <T> (
-  f: (obj: T) => any,
+  f: (a: T) => any,
   xs: Array<T>
 ): Array<T> =>
   xs.sort((a, b) =>
