@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns the flags for a given regular expression
- * @example
- * getRegexFlags(/foo/ig) // => [ 'g', 'i' ]
- */
-
 var getRegexFlags = function getRegexFlags(r) {
   var flags = [];
   if (r.global) flags.push('g');

@@ -14,12 +14,6 @@ var _trimSpaces2 = _interopRequireDefault(_trimSpaces);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if string is a valid hex
- * @example
- * isValidHex('fff') // => true
- */
-
 var isValidHex = function isValidHex(color) {
   return (0, _isHexBased2.default)((0, _trimSpaces2.default)(color));
 };

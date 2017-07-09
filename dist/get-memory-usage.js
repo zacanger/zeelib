@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _os = require('os');
 
-/**
- * Get memory usage
- * @example
- * getMemoryUsage()
- */
-
 var getMemoryUsage = function getMemoryUsage() {
   return parseFloat(((0, _os.freemem)() / (0, _os.totalmem)() / Math.pow(10, -2)).toFixed(2));
 };

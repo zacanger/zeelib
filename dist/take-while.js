@@ -5,11 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns elements that pass predicate,
- * until failure (ignores matches after failure)
- */
-
 var takeWhile = function takeWhile(pred, arr) {
   var stop = arr.length;
   arr.some(function (n, idx) {

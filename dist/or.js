@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Return true if any val in input array is true
- * @example
- * or([ 1, 2, 3 ]) // => false
- * or([ 1, 2, 3, true ]) // => true
- */
-
 var or = function or(a) {
   var r = false;
   a.forEach(function (el) {

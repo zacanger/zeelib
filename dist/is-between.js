@@ -22,13 +22,6 @@ var _lt2 = _interopRequireDefault(_lt);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if the last parameter is before the first and second parameters
- * @example
- * isBetween(1, 3, 2) // => true
- * isBetween(2, 1, 2) // => false
- */
-
 var isBetween = function isBetween(a, b, mid) {
   var first = (0, _lesser2.default)(a, b);
   var last = (0, _greater2.default)(a, b);

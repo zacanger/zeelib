@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * PascalCase to camelCase
- * @example
- * pascalCaseToCamelCase('FooBar') // => 'fooBar'
- */
-
 var pascalCaseToCamelCase = function pascalCaseToCamelCase(str) {
   return str.charAt(0).toLowerCase() + str.slice(1);
 };

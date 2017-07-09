@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Takes an element and returns its x/y position
- * @example
- * getElementPosition(document.getElementById('foo')) // => { x: number, y: number }
- */
-
 var getElementPosition = function getElementPosition(el) {
   var x = 0;
   var y = 0;

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Remove subdomain from string
- * @example
- * removeSubdomain('foo.me.bar.baz') // => 'me.bar.baz'
- */
-
 var removeSubdomain = function removeSubdomain(str) {
   return str.split('').filter(function (c) {
     return c === '.';

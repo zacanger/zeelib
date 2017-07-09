@@ -14,12 +14,6 @@ var _cdr2 = _interopRequireDefault(_cdr);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * `cdar`
- * @example
- * cdar([ [ 1, 2 ], 3 ]) // => [ 2 ]
- */
-
 var cdar = function cdar(a) {
   return (0, _cdr2.default)((0, _car2.default)(a));
 };

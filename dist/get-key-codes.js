@@ -3,12 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/* eslint-disable comma-style */
 
-
-/**
- * Returns an object of keycodes
- */
 
 var getKeyCodes = function getKeyCodes() {
   return {
@@ -29,7 +24,6 @@ var getKeyCodes = function getKeyCodes() {
     END: 35,
     HOME: 36,
 
-    // arrows
     LEFT: 37,
     UP: 38,
     RIGHT: 39,
@@ -38,7 +32,6 @@ var getKeyCodes = function getKeyCodes() {
     INSERT: 45,
     DELETE: 46,
 
-    // numbers
     NUMBER_0: 48,
     NUMBER_1: 49,
     NUMBER_2: 50,
@@ -50,7 +43,6 @@ var getKeyCodes = function getKeyCodes() {
     NUMBER_8: 56,
     NUMBER_9: 57,
 
-    // letters
     A: 65,
     B: 66,
     C: 67,
@@ -109,7 +101,6 @@ var getKeyCodes = function getKeyCodes() {
     RIGHT_WINDOW_KEY: 92,
     SELECT_KEY: 93,
 
-    // number pad
     NUMPAD_0: 96,
     NUMPAD_1: 97,
     NUMPAD_2: 98,
@@ -127,7 +118,6 @@ var getKeyCodes = function getKeyCodes() {
     NUMPAD_DECIMAL: 110,
     NUMPAD_DIVIDE: 111,
 
-    // function keys
     F1: 112,
     F2: 113,
     F3: 114,
@@ -147,7 +137,6 @@ var getKeyCodes = function getKeyCodes() {
     NUM_LOCK: 144,
     SCROLL_LOCK: 145,
 
-    // punctuation
     SEMICOLON: 186,
     EQUAL: 187,
     COMMA: 188,

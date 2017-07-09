@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Fix windows-style path sep
- * cred: gh:sindresorhus/slash
- * @example
- * fixWindowsSlashes('C:\\Windows\\Something') // => 'C:/Windows/Something'
- */
-
 var fixWindowsSlashes = function fixWindowsSlashes(str) {
   var isExtendedLengthPath = /^\\\\\?\\/.test(str);
   var hasNonAscii = /[^\x00-\x80]+/.test(str);

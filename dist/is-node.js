@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if code is in Node
- * @example
- * isNode()
- */
-
 var isNode = function isNode() {
   return process && !!process.version;
 };

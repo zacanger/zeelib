@@ -14,13 +14,6 @@ var _uniq2 = _interopRequireDefault(_uniq);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Recursively flatten arrays
- * then uniq what's left
- * @example
- * flattenAndUniq([ 1, 2, 3, [ 1, 2, 3 ]]) // =>  [ 1, 2, 3 ]
- */
-
 var flattenAndUniq = function flattenAndUniq(arr) {
   return (0, _uniq2.default)((0, _flatten2.default)(arr));
 };

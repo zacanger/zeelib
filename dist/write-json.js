@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _fs = require('fs');
 
-/**
- * Write JSON from a stringifiable value
- * @example
- * writeJson('foo.json', someObject, 4, (err) => {})
- */
-
 var writeJson = function writeJson(file, data) {
   var indent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
   var cb = arguments[3];

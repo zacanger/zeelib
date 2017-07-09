@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns platform (e.g. 'linux')
- * @example
- * getPlatform()
- */
-
 var getPlatform = function getPlatform() {
   return process.platform;
 };

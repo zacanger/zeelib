@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Get list of methods in an object
- * @example
- * const o = { foo: () => true, bar () { return false }, a: 'b' }
- * getMethodsOf(o) // => [ 'foo', 'bar' ]
- */
-
 var getMethodsOf = function getMethodsOf(o) {
   var r = [];
   for (var m in o) {

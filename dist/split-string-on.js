@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Split a string on given char
- * @example
- * splitStringOn('asdfasdf asdf', 'a') // => [ '', 'sdfasdf asdf' ]
- */
-
 var splitStringOn = function splitStringOn(str) {
   var spl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 

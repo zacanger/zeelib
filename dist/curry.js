@@ -8,18 +8,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-/**
- * Takes a function and returns a function that takes
- * any number of arguments
- * Produces a curried function
- * @param {function} fn
- * @param {any} args
- * @returns {function}
- * @example
- * const addThree = (a, b, c) => a + b + c
- * curry(addThree)(1)(1)(1) // => 3
- */
-
 var curry = function curry(fn) {
   var getFunctionArguments = function getFunctionArguments(fn) {
     if (typeof fn !== 'function') {
@@ -31,14 +19,11 @@ var curry = function curry(fn) {
     if (functionAsString) {
       var m = functionAsString.match(/\(.*?\)/);
       if (m && m[0]) {
-        var args = m[0] // match everything between brackets
-        .replace(/[()]/gi, '') // remove brackets
-        .replace(/\s/gi, '') // remove all whitespace
-        .split(','); // split on the commas
+        var args = m[0].replace(/[()]/gi, '').replace(/\s/gi, '').split(',');
 
         return args.filter(function (x) {
           return x;
-        }); // remove possible empty string from the result
+        });
       }
     }
   };

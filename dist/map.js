@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `map`
- * @example
- * map(increment, [ 1, 2, 3 ]) // => [ 2, 3, 4 ]
- */
-
 var map = function map(fn, arr) {
   if (arr === undefined) {
     return function (h) {

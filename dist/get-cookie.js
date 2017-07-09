@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Get the value of a cookie by name
- * @example
- * document.cookie = 'foo=bar'
- * getCookie('foo') // => 'bar'
- */
-
 var getCookie = function getCookie(name) {
   var value = '; ' + document.cookie;
   var parts = value.split('; ' + name + '=');

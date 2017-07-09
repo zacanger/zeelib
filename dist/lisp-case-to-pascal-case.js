@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * From lisp-case to PascalCase
- * @example
- * lispCaseToPascalCase('foo-bar') // => 'FooBar'
- */
-
 var lispCaseToPascalCase = function lispCaseToPascalCase(str) {
   var c = str.toLowerCase().replace(/-[a-z]/g, function (m) {
     return m.slice(1).toUpperCase();

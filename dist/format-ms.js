@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Format ms into human-readable time
- * @example
- * formatMs(1000000000) // => '277:46:40'
- */
-
 var formatMs = function formatMs(ms) {
   var hr = 3600000;
   var min = 60000;

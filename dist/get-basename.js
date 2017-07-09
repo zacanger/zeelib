@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _path = require('path');
 
-/**
- * `basename` for Node
- * @example
- * getBasename() // => string
- */
-
 var getBasename = function getBasename(str) {
   return (0, _path.parse)(str).base;
 };

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if the value is defined
- * @example
- * isDefined(null) // => true
- */
-
 var isDefined = function isDefined(v) {
   return v !== undefined;
 };

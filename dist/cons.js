@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `cons`
- * @example
- * cons(1, [ 2, 3, 4 ]) // => [ 1, 2, 3, 4 ]
- */
-
 var cons = function cons(el, arr) {
   var l = arr.length;
   var b = Array(l + 1);

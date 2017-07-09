@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Scroll to the top
- * @example
- * scrollTop()
- */
-
 var scrollTop = function scrollTop() {
   return window.scrollTo(0, 0);
 };

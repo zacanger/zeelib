@@ -14,12 +14,6 @@ var _isUndefined2 = _interopRequireDefault(_isUndefined);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if the value is null or undefined
- * @example
- * isNullOrUndefined(null) // => true
- */
-
 var isNullOrUndefined = function isNullOrUndefined(v) {
   return (0, _isNull2.default)(v) || (0, _isUndefined2.default)(v);
 };

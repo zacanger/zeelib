@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Gets `document.referrer`
- * @example
- * getReferrer()
- */
-
 var getReferrer = function getReferrer() {
   return document.referrer || '';
 };

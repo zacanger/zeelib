@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Diff two arrays
- * @example
- * diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
- */
-
 var diff = function diff(a, b) {
   var arr = [];
   var len = a.length;

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Restore scroll position to coordinates
- * @example
- * restoreScrollPosition({ scrollX: 0, scrollY: 100 })
- */
-
 var restoreScrollPosition = function restoreScrollPosition(_ref) {
   var scrollX = _ref.scrollX,
       scrollY = _ref.scrollY;

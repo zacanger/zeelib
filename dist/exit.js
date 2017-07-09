@@ -10,12 +10,6 @@ var _isNode2 = _interopRequireDefault(_isNode);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * `process.exit` that optionally takes an exit code
- * @example
- * exit(1)
- */
-
 var exit = function exit() {
   var n = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 

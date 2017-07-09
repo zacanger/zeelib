@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Sync sleep. Also see `sleepAsync`.
- * @example
- * sleep(1000)
- */
-
 var sleep = function sleep(ms) {
   var start = new Date().getTime();
   while (new Date().getTime() - start < ms) {}

@@ -6,18 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-/* eslint-disable standard/no-callback-literal */
-
-/**
- * General-ish utility for async, eager thunks
- * Adapted from kyle simpson's blog
- * @param {function} fn
- * @param {any} args
- * @returns {function} thunk
- * @example
- * const something = makeThunk(fn, param1, param2)
- */
-
 var makeThunk = function makeThunk(fn) {
   for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];

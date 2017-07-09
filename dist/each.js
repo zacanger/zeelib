@@ -32,18 +32,6 @@ var iterateObject = function iterateObject(obj, fn) {
   }
 };
 
-/**
- * Takes a an array or object
- * and a function, and runs the function
- * on each element
- * @param {array|object} list
- * @param {function} fn
- * @returns {any}
- * @example
- * each([ 'a', 'b', 'c' ], id) // => 'a'
- * each() // => undefined
- */
-
 var each = function each(list, fn) {
   if ((0, _isArrayLike2.default)(list)) {
     return iterateArray(list, fn);

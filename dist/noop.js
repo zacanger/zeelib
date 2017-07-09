@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * noop
- * @example
- * noop() // => undefined
- */
-
 var noop = function noop() {};
 
 exports.default = noop;

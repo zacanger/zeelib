@@ -5,14 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `pick`
- * as it is in rambda (not ramda), MIT gh:selfrefactor
- * @example
- * pick('a', { a: 'a', b: 'b' }) // => { a: 'a' }
- * pick([ 'a', 'b' ], { a: 'a', b: 'b', c: 'c' }) // => { a: 'a', b: 'b' }
- */
-
 function pick(ks, o) {
   if (o === undefined) {
     return function (t) {

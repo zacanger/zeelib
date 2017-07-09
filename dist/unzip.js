@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Takes a list of pairs
- * and returns two lists of first and second elements
- * @example
- * unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
- */
-
 var unzip = function unzip(xs) {
   var a2 = [];
   var a3 = [];

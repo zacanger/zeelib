@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if the string is valid JSON
- * @example
- * isJson(JSON.stringify({ a: 'b' })) // => true
- */
-
 var isJson = function isJson(str) {
   try {
     JSON.parse(str);

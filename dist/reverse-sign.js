@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Reverse the sign on a number
- * @example
- * reverseSign(-10) // => 10
- */
-
 var reverseSign = function reverseSign(num) {
   return -num;
 };

@@ -20,24 +20,13 @@ var _isRegExp2 = _interopRequireDefault(_isRegExp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Clones anything
- * @param {any} obj
- * @returns {any}
- * @example
- * clone(1) // => 1
- */
-
 var clone = function clone(obj) {
-  // Number, String, Boolean, Function, null, undefined
   if (obj === null || (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object') {
     return obj;
   }
 
-  // Date and RegExp
   if ((0, _isDate2.default)(obj) || (0, _isRegExp2.default)(obj)) {
     return new obj.constructor(obj);
-    // Array and Object
   } else {
     var copy = (0, _isArray2.default)(obj) ? [] : Object.create(Object.getPrototypeOf(obj));
     for (var key in obj) {

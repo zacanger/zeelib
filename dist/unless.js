@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Call a function if the condition is falsey
- * @example
- * unless(() => true, false) // => true
- */
-
 var unless = function unless(cond, fn) {
   return !cond ? fn() : null;
 };

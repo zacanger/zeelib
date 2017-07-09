@@ -8,12 +8,6 @@ var _fs = require('fs');
 
 var _path = require('path');
 
-/**
- * Returns bool based on if passed path exists
- * @example
- * checkForFile('./foo') // => bool
- */
-
 var checkForFile = function checkForFile(filePath) {
   try {
     (0, _fs.statSync)((0, _path.resolve)(filePath));

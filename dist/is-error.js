@@ -10,13 +10,8 @@ var _objectToString2 = _interopRequireDefault(_objectToString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if value is an error
- * @example
- * isError(new Error()) // => true
- */
-
 var isError = function isError(a) {
   return a instanceof Error || (0, _objectToString2.default)(a) === '[object Error]';
 };
+
 exports.default = isError;

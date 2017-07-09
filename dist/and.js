@@ -5,13 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns false if any in input array is false
- * @example
- * and([ 1, 2, 3 ]) // => true
- * and([ 1, 2, 3, false ]) // => false
- */
-
 var and = function and(a) {
   var r = true;
   a.forEach(function (el) {

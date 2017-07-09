@@ -8,13 +8,6 @@ var _fs = require('fs');
 
 var _path = require('path');
 
-/**
- * Safe `readFileSync`
- * @example
- * const fooContents = readFileSync('./foo')
- * if (fooContents != null) doThings(fooContents)
- */
-
 var readFileS = function readFileS(str) {
   try {
     return (0, _fs.readFileSync)((0, _path.resolve)(str), { encoding: 'utf8' });

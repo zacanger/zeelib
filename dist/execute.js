@@ -13,14 +13,8 @@ var env = Object.assign({}, process.env);
 
 env.PATH = (0, _path.resolve)('./node_modules/.bin') + SEPARATOR + env.PATH;
 
-/**
- * Like a standalone `npm run` that obeys `npm bin`
- * @example
- * execute('standard-format -w')
- */
-
 var execute = function execute(cmd) {
-  var output = (0, _child_process.execSync)(cmd, { // eslint-disable-line no-unused-vars
+  var output = (0, _child_process.execSync)(cmd, {
     cwd: process.cwd(), env: env
   });
 };

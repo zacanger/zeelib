@@ -17,14 +17,6 @@ var timeRequire = function timeRequire() {
     console.log(arry);
     return modl;
   };
-}; /* eslint-disable  */
-
-/**
- * Just require this and invoke to time requires into that file
- * based on gh:stefanpenner/node-require-timings
- * Takes no parameters
- * @example
- * timeRequire()
- */
+};
 
 exports.default = timeRequire;

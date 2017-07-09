@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if value is undefined
- * @example
- * isUndefined(undefined) // => true
- */
-
 var isUndefined = function isUndefined(v) {
   return v === undefined;
 };

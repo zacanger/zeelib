@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if code is in browser
- * @example
- * isBrowser()
- */
-
 var isBrowser = function isBrowser() {
   return !!(typeof window !== 'undefined' && typeof process === 'undefined');
 };

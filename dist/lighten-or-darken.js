@@ -5,15 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Lighten or darken a color
- * @example
- * // lighten
- * const newCol = lightenOrDarken('#F06D06', 20)
- * // darken
- * const newCol = lightenOrDarken('#F06D06', -20)
- */
-
 var lightenOrDarken = function lightenOrDarken(col, amt) {
   var useHash = false;
   var num = parseInt(col, 16);

@@ -8,13 +8,6 @@ var _fs = require('fs');
 
 var _path = require('path');
 
-/**
- * Make a file if it doesn't exist already
- * @example
- * makeFileIfNoFile('foo.txt')
- * makeFileIfNoFile('foo.txt', 'contentx')
- */
-
 var makeFileIfNoFile = function makeFileIfNoFile(filePath) {
   var contents = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 

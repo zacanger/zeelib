@@ -5,15 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * A very simple store implementation (think Redux-like)
- * @example
- * import { store } from 'zeelib'
- * const state = store()
- * state.subscribe((next, prev) => next.foo)
- * state.setState({ foo: 'bar' })
- */
-
 var store = function store() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 

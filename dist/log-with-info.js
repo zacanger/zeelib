@@ -11,12 +11,6 @@ var withInfo = function withInfo() {
   return str + ':' + (0, _os.hostname)() + ':' + process.pid;
 };
 
-/**
- * `console.log` with hostname and PID info
- * @example
- * logWithInfo('foo') // => `foo:angr:1234`
- */
-
 var logWithInfo = function logWithInfo() {
   var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
   return console.log(withInfo(str));

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `cdr`
- * @example
- * cdr([ 1, 2, 3, 4 ]) // => [ 2, 3, 4 ]
- */
-
 var cdr = function cdr(arr) {
   return arr.slice(1);
 };

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Find out how many of a given element is in an array
- * @example
- * getLengthOfItemsInArray(3, [ 1, 2, 3, 3 ]) // => 2
- */
-
 var getLengthOfItemsInArray = function getLengthOfItemsInArray(el, arr) {
   return arr.filter(function (a) {
     return a === el;

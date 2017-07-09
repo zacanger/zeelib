@@ -6,14 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _readline = require('readline');
 
-/**
- * Create a simple y/n prompt for the terminal
- * Adapted from create-react-app's prompt
- * @example
- * prompt('Do the thing?') // with 'no' default
- * prompt('Do the thing?', true) // with 'yes' default
- */
-
 var termPrompt = function termPrompt(question, isYesDefault) {
   return new Promise(function (resolve) {
     var rlInterface = (0, _readline.createInterface)({

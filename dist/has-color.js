@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+
 var isWin = function isWin() {
   return process.platform === 'win32';
 };
@@ -11,12 +13,6 @@ var isColor = function isColor() {
   var termColor = /^screen|^xterm|^vt100|color|ansi|cygwin|linux/i;
   return !!process.env.COLORTERM || termColor.test(process.env.TERM || '');
 };
-
-/**
- * Returns true if the current terminal supports color
- * @example
- * hasColor()
- */
 
 var hasColor = function hasColor() {
   return isWin() || isColor();

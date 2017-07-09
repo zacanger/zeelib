@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _child_process = require('child_process');
 
-/**
- * Get free disk space
- * @example
- * getFreeDisk()
- */
-
 var getFreeDisk = function getFreeDisk() {
   var lines = (0, _child_process.execSync)('df -k /').toString().trim().split('\n');
   var strDiskInfo = lines[lines.length - 1].replace(/[\s\n\r]+/g, ' ');

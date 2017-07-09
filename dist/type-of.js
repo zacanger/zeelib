@@ -20,13 +20,6 @@ var _isRegExp2 = _interopRequireDefault(_isRegExp);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Enhanced `typeof`
- * @example
- * typeOf('a') // => 'string'
- * typeOf(new Date()) // => 'date'
- */
-
 var typeOf = function typeOf(a) {
   if ((typeof a === 'undefined' ? 'undefined' : _typeof(a)) === 'object') {
     if (a === null) return 'null';

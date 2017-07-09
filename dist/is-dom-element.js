@@ -10,12 +10,6 @@ var _objectToString2 = _interopRequireDefault(_objectToString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if the value is a dom element
- * @example
- * isDomElement(document.getElementById('foo')) // => true
- */
-
 var isDomElement = function isDomElement(v) {
   return (0, _objectToString2.default)(v).slice(8, 12) === 'HTML';
 };

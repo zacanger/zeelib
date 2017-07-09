@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `console.log` with a timestamp
- * @example
- * logWithTimestamp('foo') // => 18/5 15:29:27.685 -- foo
- */
-
 function logWithTimestamp() {
   var date = new Date();
   var timestamp = date.getDate() + '/' + date.getMonth() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + '.' + date.getMilliseconds();

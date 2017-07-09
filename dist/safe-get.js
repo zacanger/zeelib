@@ -57,13 +57,6 @@ function helper(obj, tokens, ctx, fnArgs) {
   }
 }
 
-/**
- * Like `_.get`: takes an object and an access string
- * @example
- * safeGet({ a: { b: { c: 'd' } } }, 'a.b.c') // => 'd'
- * safeGet({ a: { b: { c: 'd' } } }, 'a.b.e') // => undefined
- */
-
 function safeGet(obj, accessStr) {
   if ((0, _isUndefined2.default)(accessStr)) {
     return safeGet.bind(null, obj);

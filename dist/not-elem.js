@@ -10,14 +10,6 @@ var _elem2 = _interopRequireDefault(_elem);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * The opposite of `elem`
- * Returns true if the element is not in the string or array
- * @example
- * notElem('a', 'asdf') // => false
- * notElem('b', 'asdf') // => true
- */
-
 var notElem = function notElem(el, ls) {
   return !(0, _elem2.default)(el, ls);
 };

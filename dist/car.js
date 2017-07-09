@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `car` (same as `head`)
- * @example
- * car([ 1, 2, 3 ]) // => 1
- */
-
 var car = function car(arr) {
   return arr[0];
 };

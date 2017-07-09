@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Similar to `id` but takes another `any`
- * @example
- * constant(1)(() => {}) // => 1
- */
-
 var constant = function constant(a) {
   return function (_) {
     return a;

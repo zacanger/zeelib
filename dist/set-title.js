@@ -10,12 +10,6 @@ var _isBrowser2 = _interopRequireDefault(_isBrowser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Set `window.title` or `process.title`
- * @example
- * setTitle('foo')
- */
-
 var setTitle = function setTitle(newTitle) {
   if ((0, _isBrowser2.default)()) {
     window.title = newTitle;

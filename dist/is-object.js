@@ -10,12 +10,6 @@ var _objectToString2 = _interopRequireDefault(_objectToString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if the value is an object
- * @example
- * isObject('asdf') // => false
- */
-
 var isObject = function isObject(v) {
   return (0, _objectToString2.default)(v) === '[object Object]';
 };

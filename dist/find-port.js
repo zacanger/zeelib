@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _net = require('net');
 
-/**
- * Find next open port
- * @example
- * findPort(8000, (err, port) => console.log(`${port} is open`))
- */
-
 var findPort = function findPort(port, cb) {
   var server = (0, _net.createServer)(function () {});
   var onListen = function onListen() {

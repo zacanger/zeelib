@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns true if the number is even
- * @example
- * isEven(2) // => true
- */
-
 var isEven = function isEven(n) {
   return (n & 1) === 0;
 };

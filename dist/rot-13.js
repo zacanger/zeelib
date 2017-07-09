@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * ROT13 a string
- * @example
- * rot13('asdf') // => 'nfqs'
- */
-
 var rot13 = function rot13(str) {
   return str.split('').map(function (_) {
     if (!_.match(/[A-Za-z]/)) {

@@ -3,1520 +3,2705 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.xor = exports.unless = exports.uniq = exports.timeTest = exports.throwError = exports.tap = exports.sum = exports.store = exports.splitStringOn = exports.sortBy = exports.slice = exports.sleepAsync = exports.sleep = exports.sizeOf = exports.shuffle = exports.setTitle = exports.scaleToFit = exports.safeGet = exports.reverseSign = exports.reverseDigits = exports.range = exports.product = exports.objectFromEntries = exports.noop = exports.nco = exports.minimum = exports.merge = exports.maybeArgs = exports.maximum = exports.makeThunk = exports.lte = exports.lt = exports.logWithTimestamp = exports.lexSort = exports.levenshteinDistance = exports.lesser = exports.leftPad = exports.keep = exports.isBetween = exports.invoker = exports.intersection = exports.gte = exports.gt = exports.greater = exports.getTransparentGif = exports.getTitle = exports.getOrdinal = exports.getNow = exports.getNiceTime = exports.getMethodsOf = exports.getLengthOfItemsInArray = exports.getLengthOfCharactersInString = exports.getKeyCodes = exports.getKeyByValue = exports.flattenAndUniq = exports.flatten = exports.filterFloat = exports.doubleUntil = exports.dir = exports.diff = exports.countItemsInArray = exports.cloneWithout = exports.chunk = exports.calc = exports.average = exports.assert = exports.ago = exports.typeOf = exports.toBoolInverse = exports.toBool = exports.objectToString = exports.isValidDate = exports.isUndefined = exports.isSymbol = exports.isString = exports.isSet = exports.isRegExp = exports.isPromise = exports.isPrimitive = exports.isPow2 = exports.isPositive = exports.isOdd = exports.isObject = exports.isNumber = exports.isNullOrUndefined = exports.isNull = exports.isNodeList = exports.isNegative = exports.isNan = exports.isMap = exports.isJson = exports.isFunction = exports.isFloat = exports.isEven = exports.isError = exports.isEmpty = exports.isDomElement = exports.isDefined = exports.isDate = exports.isBuffer = undefined;
-exports.isBoolean = exports.isArrayLike = exports.isArray = exports.is = exports.checkIs = exports.zipWith3 = exports.zipWith = exports.zip3 = exports.zip = exports.words = exports.unzip3 = exports.unzip = exports.unwords = exports.unlines = exports.uncurry = exports.takeWhile = exports.takeLast = exports.take = exports.splitAt = exports.span = exports.reverse = exports.replicate = exports.reduce = exports.propEq = exports.pluck = exports.pipe = exports.pick = exports.pairWith = exports.pair = exports.or = exports.once = exports.nth = exports.notElem = exports.not = exports.mix = exports.memoize = exports.map = exports.list = exports.lines = exports.length = exports.last = exports.juxt = exports.init = exports.id = exports.foldr1 = exports.foldr = exports.foldl1 = exports.foldl = exports.flip = exports.findWhere = exports.findIndex = exports.filter = exports.eq = exports.elem = exports.each = exports.dropWhile = exports.drop = exports.curry = exports.constant = exports.cons = exports.concatMap = exports.concat = exports.compose = exports.collectBy = exports.clone = exports.cdr = exports.cddr = exports.cdar = exports.car = exports.cadr = exports.caar = exports.arity = exports.apply = exports.any = exports.and = exports.all = exports.writeJsonSync = exports.writeJson = exports.writeError = exports.watch = exports.timeRequire = exports.termPrompt = exports.resolveFiles = exports.readJsonSync = exports.readJson = exports.readFileSync = exports.open = exports.notFound = exports.makeFileIfNoFile = exports.logWithInfo = exports.isSymLink = exports.isNode = exports.isInstalled = exports.isFile = exports.isDirectory = exports.hasColor = exports.getUserShell = exports.getUserHome = exports.getTerminalSize = exports.getTerminalRows = undefined;
-exports.getTerminalColumns = exports.getRelativePath = exports.getPlatform = exports.getNodeModules = exports.getMemoryUsage = exports.getLoadAverage = exports.getHostname = exports.getHashFromSystem = exports.getFreeMemory = exports.getFreeDisk = exports.getFileExt = exports.getBasename = exports.getArgs = exports.findPort = exports.exit = exports.execute = exports.consoleClear = exports.colorize = exports.checkForFile = exports.btoa = exports.atob = exports.unescapeHtml = exports.truncate = exports.trimSpaces = exports.trimHash = exports.removeSubdomain = exports.removePunctuation = exports.snakeCaseToPascalCase = exports.snakeCaseToLispCase = exports.snakeCaseToCamelCase = exports.safeDecodeURIComponent = exports.safeDecodeURI = exports.rot13 = exports.rgbToHex = exports.removeTags = exports.removeNumeric = exports.removeNonNumeric = exports.removeNonAscii = exports.removeNonAlphaNumeric = exports.removeNonAlpha = exports.removeNewlines = exports.randomColor = exports.pascalCaseToSnakeCase = exports.pascalCaseToLispCase = exports.pascalCaseToCamelCase = exports.normalizeText = exports.minifyString = exports.lispCaseToSnakeCase = exports.lispCaseToPascalCase = exports.lispCaseToCamelCase = exports.lightenOrDarken = exports.isValidHex = exports.isValidEmail = exports.isStringSomewhereInArray = exports.isMobileOrTablet = exports.isHexBased = exports.isEmoji = exports.isAlphaNumeric = exports.inlineString = exports.getUid8 = exports.getUid4 = exports.getRegexFlags = exports.getRandomString = exports.getRandomHex32 = exports.getQueryFromSearch = exports.getHexRegex = exports.getHashFromDate = exports.formatMs = exports.fixWindowsSlashes = exports.escapeHtml = exports.escapeForXpath = exports.collapseWhitespace = exports.collapseNewlines = exports.capitalizeFirstChar = exports.camelCaseToSnakeCase = exports.camelCaseToPascalCase = exports.camelCaseToLispCase = exports.alphaNumericOnly = exports.addNewlines = exports.addCommasToNumber = exports.abbrevNumber = exports.abbrev = exports.setDescription = exports.setAttribute = exports.scrollTop = exports.restoreScrollPosition = exports.removeAttribute = exports.preventDefault = exports.isBrowser = exports.getWidth = exports.getScrollPosition = exports.getScrollBarWidth = exports.getReferrer = exports.getLengthOfElements = exports.getHeight = exports.getElementText = exports.getElementPosition = exports.getElementOffset = exports.getCookie = exports.eventOnce = undefined;
 
-var _eventOnce2 = require('./event-once');
-
-var _eventOnce3 = _interopRequireDefault(_eventOnce2);
-
-var _getCookie2 = require('./get-cookie');
-
-var _getCookie3 = _interopRequireDefault(_getCookie2);
-
-var _getElementOffset2 = require('./get-element-offset');
-
-var _getElementOffset3 = _interopRequireDefault(_getElementOffset2);
-
-var _getElementPosition2 = require('./get-element-position');
-
-var _getElementPosition3 = _interopRequireDefault(_getElementPosition2);
-
-var _getElementText2 = require('./get-element-text');
-
-var _getElementText3 = _interopRequireDefault(_getElementText2);
-
-var _getHeight2 = require('./get-height');
-
-var _getHeight3 = _interopRequireDefault(_getHeight2);
-
-var _getLengthOfElements2 = require('./get-length-of-elements');
-
-var _getLengthOfElements3 = _interopRequireDefault(_getLengthOfElements2);
-
-var _getReferrer2 = require('./get-referrer');
-
-var _getReferrer3 = _interopRequireDefault(_getReferrer2);
-
-var _getScrollBarWidth2 = require('./get-scroll-bar-width');
-
-var _getScrollBarWidth3 = _interopRequireDefault(_getScrollBarWidth2);
-
-var _getScrollPosition2 = require('./get-scroll-position');
-
-var _getScrollPosition3 = _interopRequireDefault(_getScrollPosition2);
-
-var _getWidth2 = require('./get-width');
-
-var _getWidth3 = _interopRequireDefault(_getWidth2);
-
-var _isBrowser2 = require('./is-browser');
-
-var _isBrowser3 = _interopRequireDefault(_isBrowser2);
-
-var _preventDefault2 = require('./prevent-default');
-
-var _preventDefault3 = _interopRequireDefault(_preventDefault2);
-
-var _removeAttribute2 = require('./remove-attribute');
-
-var _removeAttribute3 = _interopRequireDefault(_removeAttribute2);
-
-var _restoreScrollPosition2 = require('./restore-scroll-position');
-
-var _restoreScrollPosition3 = _interopRequireDefault(_restoreScrollPosition2);
-
-var _scrollTop2 = require('./scroll-top');
-
-var _scrollTop3 = _interopRequireDefault(_scrollTop2);
-
-var _setAttribute2 = require('./set-attribute');
-
-var _setAttribute3 = _interopRequireDefault(_setAttribute2);
-
-var _setDescription2 = require('./set-description');
-
-var _setDescription3 = _interopRequireDefault(_setDescription2);
-
-var _abbrev2 = require('./abbrev');
-
-var _abbrev3 = _interopRequireDefault(_abbrev2);
-
-var _abbrevNumber2 = require('./abbrev-number');
-
-var _abbrevNumber3 = _interopRequireDefault(_abbrevNumber2);
-
-var _addCommasToNumber2 = require('./add-commas-to-number');
-
-var _addCommasToNumber3 = _interopRequireDefault(_addCommasToNumber2);
-
-var _addNewlines2 = require('./add-newlines');
-
-var _addNewlines3 = _interopRequireDefault(_addNewlines2);
-
-var _alphaNumericOnly2 = require('./alpha-numeric-only');
-
-var _alphaNumericOnly3 = _interopRequireDefault(_alphaNumericOnly2);
-
-var _camelCaseToLispCase2 = require('./camel-case-to-lisp-case');
-
-var _camelCaseToLispCase3 = _interopRequireDefault(_camelCaseToLispCase2);
-
-var _camelCaseToPascalCase2 = require('./camel-case-to-pascal-case');
-
-var _camelCaseToPascalCase3 = _interopRequireDefault(_camelCaseToPascalCase2);
-
-var _camelCaseToSnakeCase2 = require('./camel-case-to-snake-case');
-
-var _camelCaseToSnakeCase3 = _interopRequireDefault(_camelCaseToSnakeCase2);
-
-var _capitalizeFirstChar2 = require('./capitalize-first-char');
-
-var _capitalizeFirstChar3 = _interopRequireDefault(_capitalizeFirstChar2);
-
-var _collapseNewlines2 = require('./collapse-newlines');
-
-var _collapseNewlines3 = _interopRequireDefault(_collapseNewlines2);
-
-var _collapseWhitespace2 = require('./collapse-whitespace');
-
-var _collapseWhitespace3 = _interopRequireDefault(_collapseWhitespace2);
-
-var _escapeForXpath2 = require('./escape-for-xpath');
-
-var _escapeForXpath3 = _interopRequireDefault(_escapeForXpath2);
-
-var _escapeHtml2 = require('./escape-html');
-
-var _escapeHtml3 = _interopRequireDefault(_escapeHtml2);
-
-var _fixWindowsSlashes2 = require('./fix-windows-slashes');
-
-var _fixWindowsSlashes3 = _interopRequireDefault(_fixWindowsSlashes2);
-
-var _formatMs2 = require('./format-ms');
-
-var _formatMs3 = _interopRequireDefault(_formatMs2);
-
-var _getHashFromDate2 = require('./get-hash-from-date');
-
-var _getHashFromDate3 = _interopRequireDefault(_getHashFromDate2);
-
-var _getHexRegex2 = require('./get-hex-regex');
-
-var _getHexRegex3 = _interopRequireDefault(_getHexRegex2);
-
-var _getQueryFromSearch2 = require('./get-query-from-search');
-
-var _getQueryFromSearch3 = _interopRequireDefault(_getQueryFromSearch2);
-
-var _getRandomHex2 = require('./get-random-hex-32');
-
-var _getRandomHex3 = _interopRequireDefault(_getRandomHex2);
-
-var _getRandomString2 = require('./get-random-string');
-
-var _getRandomString3 = _interopRequireDefault(_getRandomString2);
-
-var _getRegexFlags2 = require('./get-regex-flags');
-
-var _getRegexFlags3 = _interopRequireDefault(_getRegexFlags2);
-
-var _getUid3 = require('./get-uid-4');
-
-var _getUid4 = _interopRequireDefault(_getUid3);
-
-var _getUid5 = require('./get-uid-8');
-
-var _getUid6 = _interopRequireDefault(_getUid5);
-
-var _inlineString2 = require('./inline-string');
-
-var _inlineString3 = _interopRequireDefault(_inlineString2);
-
-var _isAlphaNumeric2 = require('./is-alpha-numeric');
-
-var _isAlphaNumeric3 = _interopRequireDefault(_isAlphaNumeric2);
-
-var _isEmoji2 = require('./is-emoji');
-
-var _isEmoji3 = _interopRequireDefault(_isEmoji2);
-
-var _isHexBased2 = require('./is-hex-based');
-
-var _isHexBased3 = _interopRequireDefault(_isHexBased2);
-
-var _isMobileOrTablet2 = require('./is-mobile-or-tablet');
-
-var _isMobileOrTablet3 = _interopRequireDefault(_isMobileOrTablet2);
-
-var _isStringSomewhereInArray2 = require('./is-string-somewhere-in-array');
-
-var _isStringSomewhereInArray3 = _interopRequireDefault(_isStringSomewhereInArray2);
-
-var _isValidEmail2 = require('./is-valid-email');
-
-var _isValidEmail3 = _interopRequireDefault(_isValidEmail2);
-
-var _isValidHex2 = require('./is-valid-hex');
-
-var _isValidHex3 = _interopRequireDefault(_isValidHex2);
-
-var _lightenOrDarken2 = require('./lighten-or-darken');
-
-var _lightenOrDarken3 = _interopRequireDefault(_lightenOrDarken2);
-
-var _lispCaseToCamelCase2 = require('./lisp-case-to-camel-case');
-
-var _lispCaseToCamelCase3 = _interopRequireDefault(_lispCaseToCamelCase2);
-
-var _lispCaseToPascalCase2 = require('./lisp-case-to-pascal-case');
-
-var _lispCaseToPascalCase3 = _interopRequireDefault(_lispCaseToPascalCase2);
-
-var _lispCaseToSnakeCase2 = require('./lisp-case-to-snake-case');
-
-var _lispCaseToSnakeCase3 = _interopRequireDefault(_lispCaseToSnakeCase2);
-
-var _minifyString2 = require('./minify-string');
-
-var _minifyString3 = _interopRequireDefault(_minifyString2);
-
-var _normalizeText2 = require('./normalize-text');
-
-var _normalizeText3 = _interopRequireDefault(_normalizeText2);
-
-var _pascalCaseToCamelCase2 = require('./pascal-case-to-camel-case');
-
-var _pascalCaseToCamelCase3 = _interopRequireDefault(_pascalCaseToCamelCase2);
-
-var _pascalCaseToLispCase2 = require('./pascal-case-to-lisp-case');
-
-var _pascalCaseToLispCase3 = _interopRequireDefault(_pascalCaseToLispCase2);
-
-var _pascalCaseToSnakeCase2 = require('./pascal-case-to-snake-case');
-
-var _pascalCaseToSnakeCase3 = _interopRequireDefault(_pascalCaseToSnakeCase2);
-
-var _randomColor2 = require('./random-color');
-
-var _randomColor3 = _interopRequireDefault(_randomColor2);
-
-var _removeNewlines2 = require('./remove-newlines');
-
-var _removeNewlines3 = _interopRequireDefault(_removeNewlines2);
-
-var _removeNonAlpha2 = require('./remove-non-alpha');
-
-var _removeNonAlpha3 = _interopRequireDefault(_removeNonAlpha2);
-
-var _removeNonAlphaNumeric2 = require('./remove-non-alpha-numeric');
-
-var _removeNonAlphaNumeric3 = _interopRequireDefault(_removeNonAlphaNumeric2);
-
-var _removeNonAscii2 = require('./remove-non-ascii');
-
-var _removeNonAscii3 = _interopRequireDefault(_removeNonAscii2);
-
-var _removeNonNumeric2 = require('./remove-non-numeric');
-
-var _removeNonNumeric3 = _interopRequireDefault(_removeNonNumeric2);
-
-var _removeNumeric2 = require('./remove-numeric');
-
-var _removeNumeric3 = _interopRequireDefault(_removeNumeric2);
-
-var _removeTags2 = require('./remove-tags');
-
-var _removeTags3 = _interopRequireDefault(_removeTags2);
-
-var _rgbToHex2 = require('./rgb-to-hex');
-
-var _rgbToHex3 = _interopRequireDefault(_rgbToHex2);
-
-var _rot2 = require('./rot-13');
-
-var _rot3 = _interopRequireDefault(_rot2);
+var _eventOnce = require('./event-once');
+
+Object.defineProperty(exports, 'eventOnce', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_eventOnce).default;
+  }
+});
+
+var _getCookie = require('./get-cookie');
+
+Object.defineProperty(exports, 'getCookie', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getCookie).default;
+  }
+});
+
+var _getElementOffset = require('./get-element-offset');
+
+Object.defineProperty(exports, 'getElementOffset', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getElementOffset).default;
+  }
+});
+
+var _getElementPosition = require('./get-element-position');
+
+Object.defineProperty(exports, 'getElementPosition', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getElementPosition).default;
+  }
+});
+
+var _getElementText = require('./get-element-text');
+
+Object.defineProperty(exports, 'getElementText', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getElementText).default;
+  }
+});
+
+var _getHeight = require('./get-height');
+
+Object.defineProperty(exports, 'getHeight', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getHeight).default;
+  }
+});
+
+var _getLengthOfElements = require('./get-length-of-elements');
+
+Object.defineProperty(exports, 'getLengthOfElements', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getLengthOfElements).default;
+  }
+});
+
+var _getReferrer = require('./get-referrer');
+
+Object.defineProperty(exports, 'getReferrer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getReferrer).default;
+  }
+});
+
+var _getScrollBarWidth = require('./get-scroll-bar-width');
+
+Object.defineProperty(exports, 'getScrollBarWidth', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getScrollBarWidth).default;
+  }
+});
+
+var _getScrollPosition = require('./get-scroll-position');
+
+Object.defineProperty(exports, 'getScrollPosition', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getScrollPosition).default;
+  }
+});
+
+var _getWidth = require('./get-width');
+
+Object.defineProperty(exports, 'getWidth', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getWidth).default;
+  }
+});
+
+var _isBrowser = require('./is-browser');
+
+Object.defineProperty(exports, 'isBrowser', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isBrowser).default;
+  }
+});
+
+var _preventDefault = require('./prevent-default');
+
+Object.defineProperty(exports, 'preventDefault', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_preventDefault).default;
+  }
+});
+
+var _removeAttribute = require('./remove-attribute');
+
+Object.defineProperty(exports, 'removeAttribute', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeAttribute).default;
+  }
+});
+
+var _restoreScrollPosition = require('./restore-scroll-position');
+
+Object.defineProperty(exports, 'restoreScrollPosition', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_restoreScrollPosition).default;
+  }
+});
+
+var _scrollTop = require('./scroll-top');
+
+Object.defineProperty(exports, 'scrollTop', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_scrollTop).default;
+  }
+});
+
+var _setAttribute = require('./set-attribute');
+
+Object.defineProperty(exports, 'setAttribute', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_setAttribute).default;
+  }
+});
+
+var _setDescription = require('./set-description');
+
+Object.defineProperty(exports, 'setDescription', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_setDescription).default;
+  }
+});
+
+var _abbrev = require('./abbrev');
+
+Object.defineProperty(exports, 'abbrev', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_abbrev).default;
+  }
+});
+
+var _abbrevNumber = require('./abbrev-number');
+
+Object.defineProperty(exports, 'abbrevNumber', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_abbrevNumber).default;
+  }
+});
+
+var _addCommasToNumber = require('./add-commas-to-number');
+
+Object.defineProperty(exports, 'addCommasToNumber', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_addCommasToNumber).default;
+  }
+});
+
+var _addNewlines = require('./add-newlines');
+
+Object.defineProperty(exports, 'addNewlines', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_addNewlines).default;
+  }
+});
+
+var _alphaNumericOnly = require('./alpha-numeric-only');
+
+Object.defineProperty(exports, 'alphaNumericOnly', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_alphaNumericOnly).default;
+  }
+});
+
+var _camelCaseToLispCase = require('./camel-case-to-lisp-case');
+
+Object.defineProperty(exports, 'camelCaseToLispCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_camelCaseToLispCase).default;
+  }
+});
+
+var _camelCaseToPascalCase = require('./camel-case-to-pascal-case');
+
+Object.defineProperty(exports, 'camelCaseToPascalCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_camelCaseToPascalCase).default;
+  }
+});
+
+var _camelCaseToSnakeCase = require('./camel-case-to-snake-case');
+
+Object.defineProperty(exports, 'camelCaseToSnakeCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_camelCaseToSnakeCase).default;
+  }
+});
+
+var _capitalizeFirstChar = require('./capitalize-first-char');
+
+Object.defineProperty(exports, 'capitalizeFirstChar', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_capitalizeFirstChar).default;
+  }
+});
+
+var _collapseNewlines = require('./collapse-newlines');
+
+Object.defineProperty(exports, 'collapseNewlines', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_collapseNewlines).default;
+  }
+});
+
+var _collapseWhitespace = require('./collapse-whitespace');
+
+Object.defineProperty(exports, 'collapseWhitespace', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_collapseWhitespace).default;
+  }
+});
+
+var _escapeForXpath = require('./escape-for-xpath');
+
+Object.defineProperty(exports, 'escapeForXpath', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_escapeForXpath).default;
+  }
+});
+
+var _escapeHtml = require('./escape-html');
+
+Object.defineProperty(exports, 'escapeHtml', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_escapeHtml).default;
+  }
+});
+
+var _fixWindowsSlashes = require('./fix-windows-slashes');
+
+Object.defineProperty(exports, 'fixWindowsSlashes', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_fixWindowsSlashes).default;
+  }
+});
+
+var _formatMs = require('./format-ms');
+
+Object.defineProperty(exports, 'formatMs', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_formatMs).default;
+  }
+});
+
+var _getHashFromDate = require('./get-hash-from-date');
+
+Object.defineProperty(exports, 'getHashFromDate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getHashFromDate).default;
+  }
+});
+
+var _getHexRegex = require('./get-hex-regex');
+
+Object.defineProperty(exports, 'getHexRegex', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getHexRegex).default;
+  }
+});
+
+var _getQueryFromSearch = require('./get-query-from-search');
+
+Object.defineProperty(exports, 'getQueryFromSearch', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getQueryFromSearch).default;
+  }
+});
+
+var _getRandomHex = require('./get-random-hex-32');
+
+Object.defineProperty(exports, 'getRandomHex32', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getRandomHex).default;
+  }
+});
+
+var _getRandomString = require('./get-random-string');
+
+Object.defineProperty(exports, 'getRandomString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getRandomString).default;
+  }
+});
+
+var _getRegexFlags = require('./get-regex-flags');
+
+Object.defineProperty(exports, 'getRegexFlags', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getRegexFlags).default;
+  }
+});
+
+var _getUid = require('./get-uid-4');
+
+Object.defineProperty(exports, 'getUid4', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getUid).default;
+  }
+});
+
+var _getUid2 = require('./get-uid-8');
+
+Object.defineProperty(exports, 'getUid8', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getUid2).default;
+  }
+});
+
+var _inlineString = require('./inline-string');
+
+Object.defineProperty(exports, 'inlineString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_inlineString).default;
+  }
+});
+
+var _isAlphaNumeric = require('./is-alpha-numeric');
+
+Object.defineProperty(exports, 'isAlphaNumeric', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isAlphaNumeric).default;
+  }
+});
+
+var _isEmoji = require('./is-emoji');
+
+Object.defineProperty(exports, 'isEmoji', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isEmoji).default;
+  }
+});
+
+var _isHexBased = require('./is-hex-based');
+
+Object.defineProperty(exports, 'isHexBased', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isHexBased).default;
+  }
+});
+
+var _isMobileOrTablet = require('./is-mobile-or-tablet');
+
+Object.defineProperty(exports, 'isMobileOrTablet', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isMobileOrTablet).default;
+  }
+});
+
+var _isStringSomewhereInArray = require('./is-string-somewhere-in-array');
+
+Object.defineProperty(exports, 'isStringSomewhereInArray', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isStringSomewhereInArray).default;
+  }
+});
+
+var _isValidEmail = require('./is-valid-email');
+
+Object.defineProperty(exports, 'isValidEmail', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isValidEmail).default;
+  }
+});
+
+var _isValidHex = require('./is-valid-hex');
+
+Object.defineProperty(exports, 'isValidHex', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isValidHex).default;
+  }
+});
+
+var _lightenOrDarken = require('./lighten-or-darken');
+
+Object.defineProperty(exports, 'lightenOrDarken', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lightenOrDarken).default;
+  }
+});
+
+var _lispCaseToCamelCase = require('./lisp-case-to-camel-case');
+
+Object.defineProperty(exports, 'lispCaseToCamelCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lispCaseToCamelCase).default;
+  }
+});
+
+var _lispCaseToPascalCase = require('./lisp-case-to-pascal-case');
+
+Object.defineProperty(exports, 'lispCaseToPascalCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lispCaseToPascalCase).default;
+  }
+});
+
+var _lispCaseToSnakeCase = require('./lisp-case-to-snake-case');
+
+Object.defineProperty(exports, 'lispCaseToSnakeCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lispCaseToSnakeCase).default;
+  }
+});
+
+var _minifyString = require('./minify-string');
+
+Object.defineProperty(exports, 'minifyString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_minifyString).default;
+  }
+});
+
+var _normalizeText = require('./normalize-text');
+
+Object.defineProperty(exports, 'normalizeText', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_normalizeText).default;
+  }
+});
+
+var _pascalCaseToCamelCase = require('./pascal-case-to-camel-case');
+
+Object.defineProperty(exports, 'pascalCaseToCamelCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pascalCaseToCamelCase).default;
+  }
+});
+
+var _pascalCaseToLispCase = require('./pascal-case-to-lisp-case');
+
+Object.defineProperty(exports, 'pascalCaseToLispCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pascalCaseToLispCase).default;
+  }
+});
+
+var _pascalCaseToSnakeCase = require('./pascal-case-to-snake-case');
+
+Object.defineProperty(exports, 'pascalCaseToSnakeCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pascalCaseToSnakeCase).default;
+  }
+});
+
+var _randomColor = require('./random-color');
+
+Object.defineProperty(exports, 'randomColor', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_randomColor).default;
+  }
+});
+
+var _removeNewlines = require('./remove-newlines');
+
+Object.defineProperty(exports, 'removeNewlines', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNewlines).default;
+  }
+});
+
+var _removeNonAlpha = require('./remove-non-alpha');
+
+Object.defineProperty(exports, 'removeNonAlpha', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNonAlpha).default;
+  }
+});
+
+var _removeNonAlphaNumeric = require('./remove-non-alpha-numeric');
+
+Object.defineProperty(exports, 'removeNonAlphaNumeric', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNonAlphaNumeric).default;
+  }
+});
+
+var _removeNonAscii = require('./remove-non-ascii');
+
+Object.defineProperty(exports, 'removeNonAscii', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNonAscii).default;
+  }
+});
+
+var _removeNonNumeric = require('./remove-non-numeric');
+
+Object.defineProperty(exports, 'removeNonNumeric', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNonNumeric).default;
+  }
+});
+
+var _removeNumeric = require('./remove-numeric');
+
+Object.defineProperty(exports, 'removeNumeric', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeNumeric).default;
+  }
+});
+
+var _removeTags = require('./remove-tags');
+
+Object.defineProperty(exports, 'removeTags', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeTags).default;
+  }
+});
+
+var _rgbToHex = require('./rgb-to-hex');
+
+Object.defineProperty(exports, 'rgbToHex', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_rgbToHex).default;
+  }
+});
+
+var _rot = require('./rot-13');
+
+Object.defineProperty(exports, 'rot13', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_rot).default;
+  }
+});
 
 var _safeDecodeUri = require('./safe-decode-uri');
 
-var _safeDecodeUri2 = _interopRequireDefault(_safeDecodeUri);
+Object.defineProperty(exports, 'safeDecodeURI', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_safeDecodeUri).default;
+  }
+});
 
 var _safeDecodeUriComponent = require('./safe-decode-uri-component');
 
-var _safeDecodeUriComponent2 = _interopRequireDefault(_safeDecodeUriComponent);
-
-var _snakeCaseToCamelCase2 = require('./snake-case-to-camel-case');
-
-var _snakeCaseToCamelCase3 = _interopRequireDefault(_snakeCaseToCamelCase2);
-
-var _snakeCaseToLispCase2 = require('./snake-case-to-lisp-case');
-
-var _snakeCaseToLispCase3 = _interopRequireDefault(_snakeCaseToLispCase2);
-
-var _snakeCaseToPascalCase2 = require('./snake-case-to-pascal-case');
-
-var _snakeCaseToPascalCase3 = _interopRequireDefault(_snakeCaseToPascalCase2);
-
-var _removePunctuation2 = require('./remove-punctuation');
-
-var _removePunctuation3 = _interopRequireDefault(_removePunctuation2);
-
-var _removeSubdomain2 = require('./remove-subdomain');
-
-var _removeSubdomain3 = _interopRequireDefault(_removeSubdomain2);
-
-var _trimHash2 = require('./trim-hash');
-
-var _trimHash3 = _interopRequireDefault(_trimHash2);
-
-var _trimSpaces2 = require('./trim-spaces');
-
-var _trimSpaces3 = _interopRequireDefault(_trimSpaces2);
-
-var _truncate2 = require('./truncate');
-
-var _truncate3 = _interopRequireDefault(_truncate2);
-
-var _unescapeHtml2 = require('./unescape-html');
-
-var _unescapeHtml3 = _interopRequireDefault(_unescapeHtml2);
-
-var _atob2 = require('./atob');
-
-var _atob3 = _interopRequireDefault(_atob2);
-
-var _btoa2 = require('./btoa');
-
-var _btoa3 = _interopRequireDefault(_btoa2);
-
-var _checkForFile2 = require('./check-for-file');
-
-var _checkForFile3 = _interopRequireDefault(_checkForFile2);
-
-var _colorize2 = require('./colorize');
-
-var _colorize3 = _interopRequireDefault(_colorize2);
-
-var _consoleClear2 = require('./console-clear');
-
-var _consoleClear3 = _interopRequireDefault(_consoleClear2);
-
-var _execute2 = require('./execute');
-
-var _execute3 = _interopRequireDefault(_execute2);
-
-var _exit2 = require('./exit');
-
-var _exit3 = _interopRequireDefault(_exit2);
-
-var _findPort2 = require('./find-port');
-
-var _findPort3 = _interopRequireDefault(_findPort2);
-
-var _getArgs2 = require('./get-args');
-
-var _getArgs3 = _interopRequireDefault(_getArgs2);
-
-var _getBasename2 = require('./get-basename');
-
-var _getBasename3 = _interopRequireDefault(_getBasename2);
-
-var _getFileExt2 = require('./get-file-ext');
-
-var _getFileExt3 = _interopRequireDefault(_getFileExt2);
-
-var _getFreeDisk2 = require('./get-free-disk');
-
-var _getFreeDisk3 = _interopRequireDefault(_getFreeDisk2);
-
-var _getFreeMemory2 = require('./get-free-memory');
-
-var _getFreeMemory3 = _interopRequireDefault(_getFreeMemory2);
-
-var _getHashFromSystem2 = require('./get-hash-from-system');
-
-var _getHashFromSystem3 = _interopRequireDefault(_getHashFromSystem2);
-
-var _getHostname2 = require('./get-hostname');
-
-var _getHostname3 = _interopRequireDefault(_getHostname2);
-
-var _getLoadAverage2 = require('./get-load-average');
-
-var _getLoadAverage3 = _interopRequireDefault(_getLoadAverage2);
-
-var _getMemoryUsage2 = require('./get-memory-usage');
-
-var _getMemoryUsage3 = _interopRequireDefault(_getMemoryUsage2);
-
-var _getNodeModules2 = require('./get-node-modules');
-
-var _getNodeModules3 = _interopRequireDefault(_getNodeModules2);
-
-var _getPlatform2 = require('./get-platform');
-
-var _getPlatform3 = _interopRequireDefault(_getPlatform2);
-
-var _getRelativePath2 = require('./get-relative-path');
-
-var _getRelativePath3 = _interopRequireDefault(_getRelativePath2);
-
-var _getTerminalColumns2 = require('./get-terminal-columns');
-
-var _getTerminalColumns3 = _interopRequireDefault(_getTerminalColumns2);
-
-var _getTerminalRows2 = require('./get-terminal-rows');
-
-var _getTerminalRows3 = _interopRequireDefault(_getTerminalRows2);
-
-var _getTerminalSize2 = require('./get-terminal-size');
-
-var _getTerminalSize3 = _interopRequireDefault(_getTerminalSize2);
-
-var _getUserHome2 = require('./get-user-home');
-
-var _getUserHome3 = _interopRequireDefault(_getUserHome2);
-
-var _getUserShell2 = require('./get-user-shell');
-
-var _getUserShell3 = _interopRequireDefault(_getUserShell2);
-
-var _hasColor2 = require('./has-color');
-
-var _hasColor3 = _interopRequireDefault(_hasColor2);
-
-var _isDirectory2 = require('./is-directory');
-
-var _isDirectory3 = _interopRequireDefault(_isDirectory2);
-
-var _isFile2 = require('./is-file');
-
-var _isFile3 = _interopRequireDefault(_isFile2);
-
-var _isInstalled2 = require('./is-installed');
-
-var _isInstalled3 = _interopRequireDefault(_isInstalled2);
-
-var _isNode2 = require('./is-node');
-
-var _isNode3 = _interopRequireDefault(_isNode2);
-
-var _isSymLink2 = require('./is-sym-link');
-
-var _isSymLink3 = _interopRequireDefault(_isSymLink2);
-
-var _logWithInfo2 = require('./log-with-info');
-
-var _logWithInfo3 = _interopRequireDefault(_logWithInfo2);
-
-var _makeFileIfNoFile2 = require('./make-file-if-no-file');
-
-var _makeFileIfNoFile3 = _interopRequireDefault(_makeFileIfNoFile2);
-
-var _notFound2 = require('./not-found');
-
-var _notFound3 = _interopRequireDefault(_notFound2);
-
-var _open2 = require('./open');
-
-var _open3 = _interopRequireDefault(_open2);
-
-var _readFileSync2 = require('./read-file-sync');
-
-var _readFileSync3 = _interopRequireDefault(_readFileSync2);
-
-var _readJson2 = require('./read-json');
-
-var _readJson3 = _interopRequireDefault(_readJson2);
-
-var _readJsonSync2 = require('./read-json-sync');
-
-var _readJsonSync3 = _interopRequireDefault(_readJsonSync2);
-
-var _resolveFiles2 = require('./resolve-files');
-
-var _resolveFiles3 = _interopRequireDefault(_resolveFiles2);
-
-var _termPrompt2 = require('./term-prompt');
-
-var _termPrompt3 = _interopRequireDefault(_termPrompt2);
-
-var _timeRequire2 = require('./time-require');
-
-var _timeRequire3 = _interopRequireDefault(_timeRequire2);
-
-var _watch2 = require('./watch');
-
-var _watch3 = _interopRequireDefault(_watch2);
-
-var _writeError2 = require('./write-error');
-
-var _writeError3 = _interopRequireDefault(_writeError2);
-
-var _writeJson2 = require('./write-json');
-
-var _writeJson3 = _interopRequireDefault(_writeJson2);
-
-var _writeJsonSync2 = require('./write-json-sync');
-
-var _writeJsonSync3 = _interopRequireDefault(_writeJsonSync2);
-
-var _all2 = require('./all');
-
-var _all3 = _interopRequireDefault(_all2);
-
-var _and2 = require('./and');
-
-var _and3 = _interopRequireDefault(_and2);
-
-var _any2 = require('./any');
-
-var _any3 = _interopRequireDefault(_any2);
-
-var _apply2 = require('./apply');
-
-var _apply3 = _interopRequireDefault(_apply2);
-
-var _arity2 = require('./arity');
-
-var _arity3 = _interopRequireDefault(_arity2);
-
-var _caar2 = require('./caar');
-
-var _caar3 = _interopRequireDefault(_caar2);
-
-var _cadr2 = require('./cadr');
-
-var _cadr3 = _interopRequireDefault(_cadr2);
-
-var _car2 = require('./car');
-
-var _car3 = _interopRequireDefault(_car2);
-
-var _cdar2 = require('./cdar');
-
-var _cdar3 = _interopRequireDefault(_cdar2);
-
-var _cddr2 = require('./cddr');
-
-var _cddr3 = _interopRequireDefault(_cddr2);
-
-var _cdr2 = require('./cdr');
-
-var _cdr3 = _interopRequireDefault(_cdr2);
-
-var _clone2 = require('./clone');
-
-var _clone3 = _interopRequireDefault(_clone2);
-
-var _collectBy2 = require('./collect-by');
-
-var _collectBy3 = _interopRequireDefault(_collectBy2);
-
-var _compose2 = require('./compose');
-
-var _compose3 = _interopRequireDefault(_compose2);
-
-var _concat2 = require('./concat');
-
-var _concat3 = _interopRequireDefault(_concat2);
-
-var _concatMap2 = require('./concat-map');
-
-var _concatMap3 = _interopRequireDefault(_concatMap2);
-
-var _cons2 = require('./cons');
-
-var _cons3 = _interopRequireDefault(_cons2);
-
-var _constant2 = require('./constant');
-
-var _constant3 = _interopRequireDefault(_constant2);
-
-var _curry2 = require('./curry');
-
-var _curry3 = _interopRequireDefault(_curry2);
-
-var _drop2 = require('./drop');
-
-var _drop3 = _interopRequireDefault(_drop2);
-
-var _dropWhile2 = require('./drop-while');
-
-var _dropWhile3 = _interopRequireDefault(_dropWhile2);
-
-var _each2 = require('./each');
-
-var _each3 = _interopRequireDefault(_each2);
-
-var _elem2 = require('./elem');
-
-var _elem3 = _interopRequireDefault(_elem2);
-
-var _eq2 = require('./eq');
-
-var _eq3 = _interopRequireDefault(_eq2);
-
-var _filter2 = require('./filter');
-
-var _filter3 = _interopRequireDefault(_filter2);
-
-var _findIndex2 = require('./find-index');
-
-var _findIndex3 = _interopRequireDefault(_findIndex2);
-
-var _findWhere2 = require('./find-where');
-
-var _findWhere3 = _interopRequireDefault(_findWhere2);
-
-var _flip2 = require('./flip');
-
-var _flip3 = _interopRequireDefault(_flip2);
-
-var _foldl3 = require('./foldl');
-
-var _foldl4 = _interopRequireDefault(_foldl3);
-
-var _foldl5 = require('./foldl1');
-
-var _foldl6 = _interopRequireDefault(_foldl5);
-
-var _foldr3 = require('./foldr');
-
-var _foldr4 = _interopRequireDefault(_foldr3);
-
-var _foldr5 = require('./foldr1');
-
-var _foldr6 = _interopRequireDefault(_foldr5);
-
-var _id2 = require('./id');
-
-var _id3 = _interopRequireDefault(_id2);
-
-var _init2 = require('./init');
-
-var _init3 = _interopRequireDefault(_init2);
-
-var _juxt2 = require('./juxt');
-
-var _juxt3 = _interopRequireDefault(_juxt2);
-
-var _last2 = require('./last');
-
-var _last3 = _interopRequireDefault(_last2);
-
-var _length2 = require('./length');
-
-var _length3 = _interopRequireDefault(_length2);
-
-var _lines2 = require('./lines');
-
-var _lines3 = _interopRequireDefault(_lines2);
-
-var _list2 = require('./list');
-
-var _list3 = _interopRequireDefault(_list2);
-
-var _map2 = require('./map');
-
-var _map3 = _interopRequireDefault(_map2);
-
-var _memoize2 = require('./memoize');
-
-var _memoize3 = _interopRequireDefault(_memoize2);
-
-var _mix2 = require('./mix');
-
-var _mix3 = _interopRequireDefault(_mix2);
-
-var _not2 = require('./not');
-
-var _not3 = _interopRequireDefault(_not2);
-
-var _notElem2 = require('./not-elem');
-
-var _notElem3 = _interopRequireDefault(_notElem2);
-
-var _nth2 = require('./nth');
-
-var _nth3 = _interopRequireDefault(_nth2);
-
-var _once2 = require('./once');
-
-var _once3 = _interopRequireDefault(_once2);
-
-var _or2 = require('./or');
-
-var _or3 = _interopRequireDefault(_or2);
-
-var _pair2 = require('./pair');
-
-var _pair3 = _interopRequireDefault(_pair2);
-
-var _pairWith2 = require('./pair-with');
-
-var _pairWith3 = _interopRequireDefault(_pairWith2);
-
-var _pick2 = require('./pick');
-
-var _pick3 = _interopRequireDefault(_pick2);
-
-var _pipe2 = require('./pipe');
-
-var _pipe3 = _interopRequireDefault(_pipe2);
-
-var _pluck2 = require('./pluck');
-
-var _pluck3 = _interopRequireDefault(_pluck2);
-
-var _propEq2 = require('./prop-eq');
-
-var _propEq3 = _interopRequireDefault(_propEq2);
-
-var _reduce2 = require('./reduce');
-
-var _reduce3 = _interopRequireDefault(_reduce2);
-
-var _replicate2 = require('./replicate');
-
-var _replicate3 = _interopRequireDefault(_replicate2);
-
-var _reverse2 = require('./reverse');
-
-var _reverse3 = _interopRequireDefault(_reverse2);
-
-var _span2 = require('./span');
-
-var _span3 = _interopRequireDefault(_span2);
-
-var _splitAt2 = require('./split-at');
-
-var _splitAt3 = _interopRequireDefault(_splitAt2);
-
-var _take2 = require('./take');
-
-var _take3 = _interopRequireDefault(_take2);
-
-var _takeLast2 = require('./take-last');
-
-var _takeLast3 = _interopRequireDefault(_takeLast2);
-
-var _takeWhile2 = require('./take-while');
-
-var _takeWhile3 = _interopRequireDefault(_takeWhile2);
-
-var _uncurry2 = require('./uncurry');
-
-var _uncurry3 = _interopRequireDefault(_uncurry2);
-
-var _unlines2 = require('./unlines');
-
-var _unlines3 = _interopRequireDefault(_unlines2);
-
-var _unwords2 = require('./unwords');
-
-var _unwords3 = _interopRequireDefault(_unwords2);
-
-var _unzip3 = require('./unzip');
-
-var _unzip4 = _interopRequireDefault(_unzip3);
-
-var _unzip5 = require('./unzip-3');
-
-var _unzip6 = _interopRequireDefault(_unzip5);
-
-var _words2 = require('./words');
-
-var _words3 = _interopRequireDefault(_words2);
-
-var _zip3 = require('./zip');
-
-var _zip4 = _interopRequireDefault(_zip3);
-
-var _zip5 = require('./zip-3');
-
-var _zip6 = _interopRequireDefault(_zip5);
-
-var _zipWith3 = require('./zip-with');
-
-var _zipWith4 = _interopRequireDefault(_zipWith3);
-
-var _zipWith5 = require('./zip-with-3');
-
-var _zipWith6 = _interopRequireDefault(_zipWith5);
-
-var _checkIs2 = require('./check-is');
-
-var _checkIs3 = _interopRequireDefault(_checkIs2);
-
-var _is2 = require('./is');
-
-var _is3 = _interopRequireDefault(_is2);
-
-var _isArray2 = require('./is-array');
-
-var _isArray3 = _interopRequireDefault(_isArray2);
-
-var _isArrayLike2 = require('./is-array-like');
-
-var _isArrayLike3 = _interopRequireDefault(_isArrayLike2);
-
-var _isBoolean2 = require('./is-boolean');
-
-var _isBoolean3 = _interopRequireDefault(_isBoolean2);
-
-var _isBuffer2 = require('./is-buffer');
-
-var _isBuffer3 = _interopRequireDefault(_isBuffer2);
-
-var _isDate2 = require('./is-date');
-
-var _isDate3 = _interopRequireDefault(_isDate2);
-
-var _isDefined2 = require('./is-defined');
-
-var _isDefined3 = _interopRequireDefault(_isDefined2);
-
-var _isDomElement2 = require('./is-dom-element');
-
-var _isDomElement3 = _interopRequireDefault(_isDomElement2);
-
-var _isEmpty2 = require('./is-empty');
-
-var _isEmpty3 = _interopRequireDefault(_isEmpty2);
-
-var _isError2 = require('./is-error');
-
-var _isError3 = _interopRequireDefault(_isError2);
-
-var _isEven2 = require('./is-even');
-
-var _isEven3 = _interopRequireDefault(_isEven2);
-
-var _isFloat2 = require('./is-float');
-
-var _isFloat3 = _interopRequireDefault(_isFloat2);
-
-var _isFunction2 = require('./is-function');
-
-var _isFunction3 = _interopRequireDefault(_isFunction2);
-
-var _isJson2 = require('./is-json');
-
-var _isJson3 = _interopRequireDefault(_isJson2);
-
-var _isMap2 = require('./is-map');
-
-var _isMap3 = _interopRequireDefault(_isMap2);
-
-var _isNan2 = require('./is-nan');
-
-var _isNan3 = _interopRequireDefault(_isNan2);
-
-var _isNegative2 = require('./is-negative');
-
-var _isNegative3 = _interopRequireDefault(_isNegative2);
-
-var _isNodeList2 = require('./is-node-list');
-
-var _isNodeList3 = _interopRequireDefault(_isNodeList2);
-
-var _isNull2 = require('./is-null');
-
-var _isNull3 = _interopRequireDefault(_isNull2);
-
-var _isNullOrUndefined2 = require('./is-null-or-undefined');
-
-var _isNullOrUndefined3 = _interopRequireDefault(_isNullOrUndefined2);
-
-var _isNumber2 = require('./is-number');
-
-var _isNumber3 = _interopRequireDefault(_isNumber2);
-
-var _isObject2 = require('./is-object');
-
-var _isObject3 = _interopRequireDefault(_isObject2);
-
-var _isOdd2 = require('./is-odd');
-
-var _isOdd3 = _interopRequireDefault(_isOdd2);
-
-var _isPositive2 = require('./is-positive');
-
-var _isPositive3 = _interopRequireDefault(_isPositive2);
-
-var _isPow2 = require('./is-pow-2');
-
-var _isPow3 = _interopRequireDefault(_isPow2);
-
-var _isPrimitive2 = require('./is-primitive');
-
-var _isPrimitive3 = _interopRequireDefault(_isPrimitive2);
-
-var _isPromise2 = require('./is-promise');
-
-var _isPromise3 = _interopRequireDefault(_isPromise2);
-
-var _isRegExp2 = require('./is-reg-exp');
-
-var _isRegExp3 = _interopRequireDefault(_isRegExp2);
-
-var _isSet2 = require('./is-set');
-
-var _isSet3 = _interopRequireDefault(_isSet2);
-
-var _isString2 = require('./is-string');
-
-var _isString3 = _interopRequireDefault(_isString2);
-
-var _isSymbol2 = require('./is-symbol');
-
-var _isSymbol3 = _interopRequireDefault(_isSymbol2);
-
-var _isUndefined2 = require('./is-undefined');
-
-var _isUndefined3 = _interopRequireDefault(_isUndefined2);
-
-var _isValidDate2 = require('./is-valid-date');
-
-var _isValidDate3 = _interopRequireDefault(_isValidDate2);
-
-var _objectToString2 = require('./object-to-string');
-
-var _objectToString3 = _interopRequireDefault(_objectToString2);
-
-var _toBool2 = require('./to-bool');
-
-var _toBool3 = _interopRequireDefault(_toBool2);
-
-var _toBoolInverse2 = require('./to-bool-inverse');
-
-var _toBoolInverse3 = _interopRequireDefault(_toBoolInverse2);
-
-var _typeOf2 = require('./type-of');
-
-var _typeOf3 = _interopRequireDefault(_typeOf2);
-
-var _ago2 = require('./ago');
-
-var _ago3 = _interopRequireDefault(_ago2);
-
-var _assert2 = require('./assert');
-
-var _assert3 = _interopRequireDefault(_assert2);
-
-var _average2 = require('./average');
-
-var _average3 = _interopRequireDefault(_average2);
-
-var _calc2 = require('./calc');
-
-var _calc3 = _interopRequireDefault(_calc2);
-
-var _chunk2 = require('./chunk');
-
-var _chunk3 = _interopRequireDefault(_chunk2);
-
-var _cloneWithout2 = require('./clone-without');
-
-var _cloneWithout3 = _interopRequireDefault(_cloneWithout2);
-
-var _countItemsInArray2 = require('./count-items-in-array');
-
-var _countItemsInArray3 = _interopRequireDefault(_countItemsInArray2);
-
-var _diff2 = require('./diff');
-
-var _diff3 = _interopRequireDefault(_diff2);
-
-var _dir2 = require('./dir');
-
-var _dir3 = _interopRequireDefault(_dir2);
-
-var _doubleUntil2 = require('./double-until');
-
-var _doubleUntil3 = _interopRequireDefault(_doubleUntil2);
-
-var _filterFloat2 = require('./filter-float');
-
-var _filterFloat3 = _interopRequireDefault(_filterFloat2);
-
-var _flatten2 = require('./flatten');
-
-var _flatten3 = _interopRequireDefault(_flatten2);
-
-var _flattenAndUniq2 = require('./flatten-and-uniq');
-
-var _flattenAndUniq3 = _interopRequireDefault(_flattenAndUniq2);
-
-var _getKeyByValue2 = require('./get-key-by-value');
-
-var _getKeyByValue3 = _interopRequireDefault(_getKeyByValue2);
-
-var _getKeyCodes2 = require('./get-key-codes');
-
-var _getKeyCodes3 = _interopRequireDefault(_getKeyCodes2);
-
-var _getLengthOfCharactersInString2 = require('./get-length-of-characters-in-string');
-
-var _getLengthOfCharactersInString3 = _interopRequireDefault(_getLengthOfCharactersInString2);
-
-var _getLengthOfItemsInArray2 = require('./get-length-of-items-in-array');
-
-var _getLengthOfItemsInArray3 = _interopRequireDefault(_getLengthOfItemsInArray2);
-
-var _getMethodsOf2 = require('./get-methods-of');
-
-var _getMethodsOf3 = _interopRequireDefault(_getMethodsOf2);
-
-var _getNiceTime2 = require('./get-nice-time');
-
-var _getNiceTime3 = _interopRequireDefault(_getNiceTime2);
-
-var _getNow2 = require('./get-now');
-
-var _getNow3 = _interopRequireDefault(_getNow2);
-
-var _getOrdinal2 = require('./get-ordinal');
-
-var _getOrdinal3 = _interopRequireDefault(_getOrdinal2);
-
-var _getTitle2 = require('./get-title');
-
-var _getTitle3 = _interopRequireDefault(_getTitle2);
-
-var _getTransparentGif2 = require('./get-transparent-gif');
-
-var _getTransparentGif3 = _interopRequireDefault(_getTransparentGif2);
-
-var _greater2 = require('./greater');
-
-var _greater3 = _interopRequireDefault(_greater2);
-
-var _gt2 = require('./gt');
-
-var _gt3 = _interopRequireDefault(_gt2);
-
-var _gte2 = require('./gte');
-
-var _gte3 = _interopRequireDefault(_gte2);
-
-var _intersection2 = require('./intersection');
-
-var _intersection3 = _interopRequireDefault(_intersection2);
-
-var _invoker2 = require('./invoker');
-
-var _invoker3 = _interopRequireDefault(_invoker2);
-
-var _isBetween2 = require('./is-between');
-
-var _isBetween3 = _interopRequireDefault(_isBetween2);
-
-var _keep2 = require('./keep');
-
-var _keep3 = _interopRequireDefault(_keep2);
-
-var _leftPad2 = require('./left-pad');
-
-var _leftPad3 = _interopRequireDefault(_leftPad2);
-
-var _lesser2 = require('./lesser');
-
-var _lesser3 = _interopRequireDefault(_lesser2);
-
-var _levenshteinDistance2 = require('./levenshtein-distance');
-
-var _levenshteinDistance3 = _interopRequireDefault(_levenshteinDistance2);
-
-var _lexSort2 = require('./lex-sort');
-
-var _lexSort3 = _interopRequireDefault(_lexSort2);
-
-var _logWithTimestamp2 = require('./log-with-timestamp');
-
-var _logWithTimestamp3 = _interopRequireDefault(_logWithTimestamp2);
-
-var _lt2 = require('./lt');
-
-var _lt3 = _interopRequireDefault(_lt2);
-
-var _lte2 = require('./lte');
-
-var _lte3 = _interopRequireDefault(_lte2);
-
-var _makeThunk2 = require('./make-thunk');
-
-var _makeThunk3 = _interopRequireDefault(_makeThunk2);
-
-var _maximum2 = require('./maximum');
-
-var _maximum3 = _interopRequireDefault(_maximum2);
-
-var _maybeArgs2 = require('./maybe-args');
-
-var _maybeArgs3 = _interopRequireDefault(_maybeArgs2);
-
-var _merge2 = require('./merge');
-
-var _merge3 = _interopRequireDefault(_merge2);
-
-var _minimum2 = require('./minimum');
-
-var _minimum3 = _interopRequireDefault(_minimum2);
-
-var _nco2 = require('./nco');
-
-var _nco3 = _interopRequireDefault(_nco2);
-
-var _noop2 = require('./noop');
-
-var _noop3 = _interopRequireDefault(_noop2);
-
-var _objectFromEntries2 = require('./object-from-entries');
-
-var _objectFromEntries3 = _interopRequireDefault(_objectFromEntries2);
-
-var _product2 = require('./product');
-
-var _product3 = _interopRequireDefault(_product2);
-
-var _range2 = require('./range');
-
-var _range3 = _interopRequireDefault(_range2);
-
-var _reverseDigits2 = require('./reverse-digits');
-
-var _reverseDigits3 = _interopRequireDefault(_reverseDigits2);
-
-var _reverseSign2 = require('./reverse-sign');
-
-var _reverseSign3 = _interopRequireDefault(_reverseSign2);
-
-var _safeGet2 = require('./safe-get');
-
-var _safeGet3 = _interopRequireDefault(_safeGet2);
-
-var _scaleToFit2 = require('./scale-to-fit');
-
-var _scaleToFit3 = _interopRequireDefault(_scaleToFit2);
-
-var _setTitle2 = require('./set-title');
-
-var _setTitle3 = _interopRequireDefault(_setTitle2);
-
-var _shuffle2 = require('./shuffle');
-
-var _shuffle3 = _interopRequireDefault(_shuffle2);
-
-var _sizeOf2 = require('./size-of');
-
-var _sizeOf3 = _interopRequireDefault(_sizeOf2);
-
-var _sleep2 = require('./sleep');
-
-var _sleep3 = _interopRequireDefault(_sleep2);
-
-var _sleepAsync2 = require('./sleep-async');
-
-var _sleepAsync3 = _interopRequireDefault(_sleepAsync2);
-
-var _slice2 = require('./slice');
-
-var _slice3 = _interopRequireDefault(_slice2);
-
-var _sortBy2 = require('./sort-by');
-
-var _sortBy3 = _interopRequireDefault(_sortBy2);
-
-var _splitStringOn2 = require('./split-string-on');
-
-var _splitStringOn3 = _interopRequireDefault(_splitStringOn2);
-
-var _store2 = require('./store');
-
-var _store3 = _interopRequireDefault(_store2);
-
-var _sum2 = require('./sum');
-
-var _sum3 = _interopRequireDefault(_sum2);
-
-var _tap2 = require('./tap');
-
-var _tap3 = _interopRequireDefault(_tap2);
-
-var _throwError2 = require('./throw-error');
-
-var _throwError3 = _interopRequireDefault(_throwError2);
-
-var _timeTest2 = require('./time-test');
-
-var _timeTest3 = _interopRequireDefault(_timeTest2);
-
-var _uniq2 = require('./uniq');
-
-var _uniq3 = _interopRequireDefault(_uniq2);
-
-var _unless2 = require('./unless');
-
-var _unless3 = _interopRequireDefault(_unless2);
-
-var _xor2 = require('./xor');
-
-var _xor3 = _interopRequireDefault(_xor2);
+Object.defineProperty(exports, 'safeDecodeURIComponent', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_safeDecodeUriComponent).default;
+  }
+});
+
+var _snakeCaseToCamelCase = require('./snake-case-to-camel-case');
+
+Object.defineProperty(exports, 'snakeCaseToCamelCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_snakeCaseToCamelCase).default;
+  }
+});
+
+var _snakeCaseToLispCase = require('./snake-case-to-lisp-case');
+
+Object.defineProperty(exports, 'snakeCaseToLispCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_snakeCaseToLispCase).default;
+  }
+});
+
+var _snakeCaseToPascalCase = require('./snake-case-to-pascal-case');
+
+Object.defineProperty(exports, 'snakeCaseToPascalCase', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_snakeCaseToPascalCase).default;
+  }
+});
+
+var _removePunctuation = require('./remove-punctuation');
+
+Object.defineProperty(exports, 'removePunctuation', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removePunctuation).default;
+  }
+});
+
+var _removeSubdomain = require('./remove-subdomain');
+
+Object.defineProperty(exports, 'removeSubdomain', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_removeSubdomain).default;
+  }
+});
+
+var _trimHash = require('./trim-hash');
+
+Object.defineProperty(exports, 'trimHash', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_trimHash).default;
+  }
+});
+
+var _trimSpaces = require('./trim-spaces');
+
+Object.defineProperty(exports, 'trimSpaces', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_trimSpaces).default;
+  }
+});
+
+var _truncate = require('./truncate');
+
+Object.defineProperty(exports, 'truncate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_truncate).default;
+  }
+});
+
+var _unescapeHtml = require('./unescape-html');
+
+Object.defineProperty(exports, 'unescapeHtml', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unescapeHtml).default;
+  }
+});
+
+var _atob = require('./atob');
+
+Object.defineProperty(exports, 'atob', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_atob).default;
+  }
+});
+
+var _btoa = require('./btoa');
+
+Object.defineProperty(exports, 'btoa', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_btoa).default;
+  }
+});
+
+var _checkForFile = require('./check-for-file');
+
+Object.defineProperty(exports, 'checkForFile', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_checkForFile).default;
+  }
+});
+
+var _colorize = require('./colorize');
+
+Object.defineProperty(exports, 'colorize', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_colorize).default;
+  }
+});
+
+var _consoleClear = require('./console-clear');
+
+Object.defineProperty(exports, 'consoleClear', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_consoleClear).default;
+  }
+});
+
+var _execute = require('./execute');
+
+Object.defineProperty(exports, 'execute', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_execute).default;
+  }
+});
+
+var _exit = require('./exit');
+
+Object.defineProperty(exports, 'exit', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_exit).default;
+  }
+});
+
+var _findPort = require('./find-port');
+
+Object.defineProperty(exports, 'findPort', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_findPort).default;
+  }
+});
+
+var _getArgs = require('./get-args');
+
+Object.defineProperty(exports, 'getArgs', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getArgs).default;
+  }
+});
+
+var _getBasename = require('./get-basename');
+
+Object.defineProperty(exports, 'getBasename', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getBasename).default;
+  }
+});
+
+var _getFileExt = require('./get-file-ext');
+
+Object.defineProperty(exports, 'getFileExt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getFileExt).default;
+  }
+});
+
+var _getFreeDisk = require('./get-free-disk');
+
+Object.defineProperty(exports, 'getFreeDisk', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getFreeDisk).default;
+  }
+});
+
+var _getFreeMemory = require('./get-free-memory');
+
+Object.defineProperty(exports, 'getFreeMemory', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getFreeMemory).default;
+  }
+});
+
+var _getHashFromSystem = require('./get-hash-from-system');
+
+Object.defineProperty(exports, 'getHashFromSystem', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getHashFromSystem).default;
+  }
+});
+
+var _getHostname = require('./get-hostname');
+
+Object.defineProperty(exports, 'getHostname', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getHostname).default;
+  }
+});
+
+var _getLoadAverage = require('./get-load-average');
+
+Object.defineProperty(exports, 'getLoadAverage', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getLoadAverage).default;
+  }
+});
+
+var _getMemoryUsage = require('./get-memory-usage');
+
+Object.defineProperty(exports, 'getMemoryUsage', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getMemoryUsage).default;
+  }
+});
+
+var _getNodeModules = require('./get-node-modules');
+
+Object.defineProperty(exports, 'getNodeModules', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getNodeModules).default;
+  }
+});
+
+var _getPlatform = require('./get-platform');
+
+Object.defineProperty(exports, 'getPlatform', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getPlatform).default;
+  }
+});
+
+var _getRelativePath = require('./get-relative-path');
+
+Object.defineProperty(exports, 'getRelativePath', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getRelativePath).default;
+  }
+});
+
+var _getTerminalColumns = require('./get-terminal-columns');
+
+Object.defineProperty(exports, 'getTerminalColumns', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getTerminalColumns).default;
+  }
+});
+
+var _getTerminalRows = require('./get-terminal-rows');
+
+Object.defineProperty(exports, 'getTerminalRows', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getTerminalRows).default;
+  }
+});
+
+var _getTerminalSize = require('./get-terminal-size');
+
+Object.defineProperty(exports, 'getTerminalSize', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getTerminalSize).default;
+  }
+});
+
+var _getUserHome = require('./get-user-home');
+
+Object.defineProperty(exports, 'getUserHome', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getUserHome).default;
+  }
+});
+
+var _getUserShell = require('./get-user-shell');
+
+Object.defineProperty(exports, 'getUserShell', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getUserShell).default;
+  }
+});
+
+var _hasColor = require('./has-color');
+
+Object.defineProperty(exports, 'hasColor', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_hasColor).default;
+  }
+});
+
+var _isDirectory = require('./is-directory');
+
+Object.defineProperty(exports, 'isDirectory', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isDirectory).default;
+  }
+});
+
+var _isFile = require('./is-file');
+
+Object.defineProperty(exports, 'isFile', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isFile).default;
+  }
+});
+
+var _isInstalled = require('./is-installed');
+
+Object.defineProperty(exports, 'isInstalled', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isInstalled).default;
+  }
+});
+
+var _isNode = require('./is-node');
+
+Object.defineProperty(exports, 'isNode', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNode).default;
+  }
+});
+
+var _isSymLink = require('./is-sym-link');
+
+Object.defineProperty(exports, 'isSymLink', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isSymLink).default;
+  }
+});
+
+var _logWithInfo = require('./log-with-info');
+
+Object.defineProperty(exports, 'logWithInfo', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_logWithInfo).default;
+  }
+});
+
+var _makeFileIfNoFile = require('./make-file-if-no-file');
+
+Object.defineProperty(exports, 'makeFileIfNoFile', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_makeFileIfNoFile).default;
+  }
+});
+
+var _notFound = require('./not-found');
+
+Object.defineProperty(exports, 'notFound', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_notFound).default;
+  }
+});
+
+var _open = require('./open');
+
+Object.defineProperty(exports, 'open', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_open).default;
+  }
+});
+
+var _readFileSync = require('./read-file-sync');
+
+Object.defineProperty(exports, 'readFileSync', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_readFileSync).default;
+  }
+});
+
+var _readJson = require('./read-json');
+
+Object.defineProperty(exports, 'readJson', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_readJson).default;
+  }
+});
+
+var _readJsonSync = require('./read-json-sync');
+
+Object.defineProperty(exports, 'readJsonSync', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_readJsonSync).default;
+  }
+});
+
+var _resolveFiles = require('./resolve-files');
+
+Object.defineProperty(exports, 'resolveFiles', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_resolveFiles).default;
+  }
+});
+
+var _termPrompt = require('./term-prompt');
+
+Object.defineProperty(exports, 'termPrompt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_termPrompt).default;
+  }
+});
+
+var _timeRequire = require('./time-require');
+
+Object.defineProperty(exports, 'timeRequire', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_timeRequire).default;
+  }
+});
+
+var _watch = require('./watch');
+
+Object.defineProperty(exports, 'watch', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_watch).default;
+  }
+});
+
+var _writeError = require('./write-error');
+
+Object.defineProperty(exports, 'writeError', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_writeError).default;
+  }
+});
+
+var _writeJson = require('./write-json');
+
+Object.defineProperty(exports, 'writeJson', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_writeJson).default;
+  }
+});
+
+var _writeJsonSync = require('./write-json-sync');
+
+Object.defineProperty(exports, 'writeJsonSync', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_writeJsonSync).default;
+  }
+});
+
+var _all = require('./all');
+
+Object.defineProperty(exports, 'all', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_all).default;
+  }
+});
+
+var _and = require('./and');
+
+Object.defineProperty(exports, 'and', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_and).default;
+  }
+});
+
+var _any = require('./any');
+
+Object.defineProperty(exports, 'any', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_any).default;
+  }
+});
+
+var _apply = require('./apply');
+
+Object.defineProperty(exports, 'apply', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_apply).default;
+  }
+});
+
+var _arity = require('./arity');
+
+Object.defineProperty(exports, 'arity', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_arity).default;
+  }
+});
+
+var _caar = require('./caar');
+
+Object.defineProperty(exports, 'caar', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_caar).default;
+  }
+});
+
+var _cadr = require('./cadr');
+
+Object.defineProperty(exports, 'cadr', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cadr).default;
+  }
+});
+
+var _car = require('./car');
+
+Object.defineProperty(exports, 'car', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_car).default;
+  }
+});
+
+var _cdar = require('./cdar');
+
+Object.defineProperty(exports, 'cdar', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cdar).default;
+  }
+});
+
+var _cddr = require('./cddr');
+
+Object.defineProperty(exports, 'cddr', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cddr).default;
+  }
+});
+
+var _cdr = require('./cdr');
+
+Object.defineProperty(exports, 'cdr', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cdr).default;
+  }
+});
+
+var _clone = require('./clone');
+
+Object.defineProperty(exports, 'clone', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_clone).default;
+  }
+});
+
+var _collectBy = require('./collect-by');
+
+Object.defineProperty(exports, 'collectBy', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_collectBy).default;
+  }
+});
+
+var _compose = require('./compose');
+
+Object.defineProperty(exports, 'compose', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_compose).default;
+  }
+});
+
+var _concat = require('./concat');
+
+Object.defineProperty(exports, 'concat', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_concat).default;
+  }
+});
+
+var _concatMap = require('./concat-map');
+
+Object.defineProperty(exports, 'concatMap', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_concatMap).default;
+  }
+});
+
+var _cons = require('./cons');
+
+Object.defineProperty(exports, 'cons', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cons).default;
+  }
+});
+
+var _constant = require('./constant');
+
+Object.defineProperty(exports, 'constant', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_constant).default;
+  }
+});
+
+var _curry = require('./curry');
+
+Object.defineProperty(exports, 'curry', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_curry).default;
+  }
+});
+
+var _drop = require('./drop');
+
+Object.defineProperty(exports, 'drop', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_drop).default;
+  }
+});
+
+var _dropWhile = require('./drop-while');
+
+Object.defineProperty(exports, 'dropWhile', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_dropWhile).default;
+  }
+});
+
+var _each = require('./each');
+
+Object.defineProperty(exports, 'each', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_each).default;
+  }
+});
+
+var _elem = require('./elem');
+
+Object.defineProperty(exports, 'elem', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_elem).default;
+  }
+});
+
+var _eq = require('./eq');
+
+Object.defineProperty(exports, 'eq', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_eq).default;
+  }
+});
+
+var _filter = require('./filter');
+
+Object.defineProperty(exports, 'filter', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_filter).default;
+  }
+});
+
+var _findIndex = require('./find-index');
+
+Object.defineProperty(exports, 'findIndex', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_findIndex).default;
+  }
+});
+
+var _findWhere = require('./find-where');
+
+Object.defineProperty(exports, 'findWhere', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_findWhere).default;
+  }
+});
+
+var _flip = require('./flip');
+
+Object.defineProperty(exports, 'flip', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_flip).default;
+  }
+});
+
+var _foldl = require('./foldl');
+
+Object.defineProperty(exports, 'foldl', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_foldl).default;
+  }
+});
+
+var _foldl2 = require('./foldl1');
+
+Object.defineProperty(exports, 'foldl1', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_foldl2).default;
+  }
+});
+
+var _foldr = require('./foldr');
+
+Object.defineProperty(exports, 'foldr', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_foldr).default;
+  }
+});
+
+var _foldr2 = require('./foldr1');
+
+Object.defineProperty(exports, 'foldr1', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_foldr2).default;
+  }
+});
+
+var _id = require('./id');
+
+Object.defineProperty(exports, 'id', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_id).default;
+  }
+});
+
+var _init = require('./init');
+
+Object.defineProperty(exports, 'init', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_init).default;
+  }
+});
+
+var _juxt = require('./juxt');
+
+Object.defineProperty(exports, 'juxt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_juxt).default;
+  }
+});
+
+var _last = require('./last');
+
+Object.defineProperty(exports, 'last', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_last).default;
+  }
+});
+
+var _length = require('./length');
+
+Object.defineProperty(exports, 'length', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_length).default;
+  }
+});
+
+var _lines = require('./lines');
+
+Object.defineProperty(exports, 'lines', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lines).default;
+  }
+});
+
+var _list = require('./list');
+
+Object.defineProperty(exports, 'list', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_list).default;
+  }
+});
+
+var _map = require('./map');
+
+Object.defineProperty(exports, 'map', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_map).default;
+  }
+});
+
+var _memoize = require('./memoize');
+
+Object.defineProperty(exports, 'memoize', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_memoize).default;
+  }
+});
+
+var _mix = require('./mix');
+
+Object.defineProperty(exports, 'mix', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_mix).default;
+  }
+});
+
+var _not = require('./not');
+
+Object.defineProperty(exports, 'not', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_not).default;
+  }
+});
+
+var _notElem = require('./not-elem');
+
+Object.defineProperty(exports, 'notElem', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_notElem).default;
+  }
+});
+
+var _nth = require('./nth');
+
+Object.defineProperty(exports, 'nth', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_nth).default;
+  }
+});
+
+var _once = require('./once');
+
+Object.defineProperty(exports, 'once', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_once).default;
+  }
+});
+
+var _or = require('./or');
+
+Object.defineProperty(exports, 'or', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_or).default;
+  }
+});
+
+var _pair = require('./pair');
+
+Object.defineProperty(exports, 'pair', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pair).default;
+  }
+});
+
+var _pairWith = require('./pair-with');
+
+Object.defineProperty(exports, 'pairWith', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pairWith).default;
+  }
+});
+
+var _pick = require('./pick');
+
+Object.defineProperty(exports, 'pick', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pick).default;
+  }
+});
+
+var _pipe = require('./pipe');
+
+Object.defineProperty(exports, 'pipe', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pipe).default;
+  }
+});
+
+var _pluck = require('./pluck');
+
+Object.defineProperty(exports, 'pluck', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pluck).default;
+  }
+});
+
+var _propEq = require('./prop-eq');
+
+Object.defineProperty(exports, 'propEq', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_propEq).default;
+  }
+});
+
+var _reduce = require('./reduce');
+
+Object.defineProperty(exports, 'reduce', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reduce).default;
+  }
+});
+
+var _replicate = require('./replicate');
+
+Object.defineProperty(exports, 'replicate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_replicate).default;
+  }
+});
+
+var _reverse = require('./reverse');
+
+Object.defineProperty(exports, 'reverse', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reverse).default;
+  }
+});
+
+var _span = require('./span');
+
+Object.defineProperty(exports, 'span', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_span).default;
+  }
+});
+
+var _splitAt = require('./split-at');
+
+Object.defineProperty(exports, 'splitAt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_splitAt).default;
+  }
+});
+
+var _take = require('./take');
+
+Object.defineProperty(exports, 'take', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_take).default;
+  }
+});
+
+var _takeLast = require('./take-last');
+
+Object.defineProperty(exports, 'takeLast', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_takeLast).default;
+  }
+});
+
+var _takeWhile = require('./take-while');
+
+Object.defineProperty(exports, 'takeWhile', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_takeWhile).default;
+  }
+});
+
+var _uncurry = require('./uncurry');
+
+Object.defineProperty(exports, 'uncurry', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_uncurry).default;
+  }
+});
+
+var _unlines = require('./unlines');
+
+Object.defineProperty(exports, 'unlines', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unlines).default;
+  }
+});
+
+var _unwords = require('./unwords');
+
+Object.defineProperty(exports, 'unwords', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unwords).default;
+  }
+});
+
+var _unzip = require('./unzip');
+
+Object.defineProperty(exports, 'unzip', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unzip).default;
+  }
+});
+
+var _unzip2 = require('./unzip-3');
+
+Object.defineProperty(exports, 'unzip3', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unzip2).default;
+  }
+});
+
+var _words = require('./words');
+
+Object.defineProperty(exports, 'words', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_words).default;
+  }
+});
+
+var _zip = require('./zip');
+
+Object.defineProperty(exports, 'zip', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_zip).default;
+  }
+});
+
+var _zip2 = require('./zip-3');
+
+Object.defineProperty(exports, 'zip3', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_zip2).default;
+  }
+});
+
+var _zipWith = require('./zip-with');
+
+Object.defineProperty(exports, 'zipWith', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_zipWith).default;
+  }
+});
+
+var _zipWith2 = require('./zip-with-3');
+
+Object.defineProperty(exports, 'zipWith3', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_zipWith2).default;
+  }
+});
+
+var _checkIs = require('./check-is');
+
+Object.defineProperty(exports, 'checkIs', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_checkIs).default;
+  }
+});
+
+var _is = require('./is');
+
+Object.defineProperty(exports, 'is', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_is).default;
+  }
+});
+
+var _isArray = require('./is-array');
+
+Object.defineProperty(exports, 'isArray', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isArray).default;
+  }
+});
+
+var _isArrayLike = require('./is-array-like');
+
+Object.defineProperty(exports, 'isArrayLike', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isArrayLike).default;
+  }
+});
+
+var _isBoolean = require('./is-boolean');
+
+Object.defineProperty(exports, 'isBoolean', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isBoolean).default;
+  }
+});
+
+var _isBuffer = require('./is-buffer');
+
+Object.defineProperty(exports, 'isBuffer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isBuffer).default;
+  }
+});
+
+var _isDate = require('./is-date');
+
+Object.defineProperty(exports, 'isDate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isDate).default;
+  }
+});
+
+var _isDefined = require('./is-defined');
+
+Object.defineProperty(exports, 'isDefined', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isDefined).default;
+  }
+});
+
+var _isDomElement = require('./is-dom-element');
+
+Object.defineProperty(exports, 'isDomElement', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isDomElement).default;
+  }
+});
+
+var _isEmpty = require('./is-empty');
+
+Object.defineProperty(exports, 'isEmpty', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isEmpty).default;
+  }
+});
+
+var _isError = require('./is-error');
+
+Object.defineProperty(exports, 'isError', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isError).default;
+  }
+});
+
+var _isEven = require('./is-even');
+
+Object.defineProperty(exports, 'isEven', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isEven).default;
+  }
+});
+
+var _isFloat = require('./is-float');
+
+Object.defineProperty(exports, 'isFloat', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isFloat).default;
+  }
+});
+
+var _isFunction = require('./is-function');
+
+Object.defineProperty(exports, 'isFunction', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isFunction).default;
+  }
+});
+
+var _isJson = require('./is-json');
+
+Object.defineProperty(exports, 'isJson', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isJson).default;
+  }
+});
+
+var _isMap = require('./is-map');
+
+Object.defineProperty(exports, 'isMap', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isMap).default;
+  }
+});
+
+var _isNan = require('./is-nan');
+
+Object.defineProperty(exports, 'isNan', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNan).default;
+  }
+});
+
+var _isNegative = require('./is-negative');
+
+Object.defineProperty(exports, 'isNegative', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNegative).default;
+  }
+});
+
+var _isNodeList = require('./is-node-list');
+
+Object.defineProperty(exports, 'isNodeList', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNodeList).default;
+  }
+});
+
+var _isNull = require('./is-null');
+
+Object.defineProperty(exports, 'isNull', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNull).default;
+  }
+});
+
+var _isNullOrUndefined = require('./is-null-or-undefined');
+
+Object.defineProperty(exports, 'isNullOrUndefined', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNullOrUndefined).default;
+  }
+});
+
+var _isNumber = require('./is-number');
+
+Object.defineProperty(exports, 'isNumber', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isNumber).default;
+  }
+});
+
+var _isObject = require('./is-object');
+
+Object.defineProperty(exports, 'isObject', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isObject).default;
+  }
+});
+
+var _isOdd = require('./is-odd');
+
+Object.defineProperty(exports, 'isOdd', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isOdd).default;
+  }
+});
+
+var _isPositive = require('./is-positive');
+
+Object.defineProperty(exports, 'isPositive', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isPositive).default;
+  }
+});
+
+var _isPow = require('./is-pow-2');
+
+Object.defineProperty(exports, 'isPow2', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isPow).default;
+  }
+});
+
+var _isPrimitive = require('./is-primitive');
+
+Object.defineProperty(exports, 'isPrimitive', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isPrimitive).default;
+  }
+});
+
+var _isPromise = require('./is-promise');
+
+Object.defineProperty(exports, 'isPromise', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isPromise).default;
+  }
+});
+
+var _isRegExp = require('./is-reg-exp');
+
+Object.defineProperty(exports, 'isRegExp', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isRegExp).default;
+  }
+});
+
+var _isSet = require('./is-set');
+
+Object.defineProperty(exports, 'isSet', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isSet).default;
+  }
+});
+
+var _isString = require('./is-string');
+
+Object.defineProperty(exports, 'isString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isString).default;
+  }
+});
+
+var _isSymbol = require('./is-symbol');
+
+Object.defineProperty(exports, 'isSymbol', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isSymbol).default;
+  }
+});
+
+var _isUndefined = require('./is-undefined');
+
+Object.defineProperty(exports, 'isUndefined', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isUndefined).default;
+  }
+});
+
+var _isValidDate = require('./is-valid-date');
+
+Object.defineProperty(exports, 'isValidDate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isValidDate).default;
+  }
+});
+
+var _objectToString = require('./object-to-string');
+
+Object.defineProperty(exports, 'objectToString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_objectToString).default;
+  }
+});
+
+var _toBool = require('./to-bool');
+
+Object.defineProperty(exports, 'toBool', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_toBool).default;
+  }
+});
+
+var _toBoolInverse = require('./to-bool-inverse');
+
+Object.defineProperty(exports, 'toBoolInverse', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_toBoolInverse).default;
+  }
+});
+
+var _typeOf = require('./type-of');
+
+Object.defineProperty(exports, 'typeOf', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_typeOf).default;
+  }
+});
+
+var _ago = require('./ago');
+
+Object.defineProperty(exports, 'ago', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ago).default;
+  }
+});
+
+var _assert = require('./assert');
+
+Object.defineProperty(exports, 'assert', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_assert).default;
+  }
+});
+
+var _average = require('./average');
+
+Object.defineProperty(exports, 'average', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_average).default;
+  }
+});
+
+var _calc = require('./calc');
+
+Object.defineProperty(exports, 'calc', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_calc).default;
+  }
+});
+
+var _chunk = require('./chunk');
+
+Object.defineProperty(exports, 'chunk', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_chunk).default;
+  }
+});
+
+var _cloneWithout = require('./clone-without');
+
+Object.defineProperty(exports, 'cloneWithout', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_cloneWithout).default;
+  }
+});
+
+var _countItemsInArray = require('./count-items-in-array');
+
+Object.defineProperty(exports, 'countItemsInArray', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_countItemsInArray).default;
+  }
+});
+
+var _diff = require('./diff');
+
+Object.defineProperty(exports, 'diff', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_diff).default;
+  }
+});
+
+var _dir = require('./dir');
+
+Object.defineProperty(exports, 'dir', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_dir).default;
+  }
+});
+
+var _doubleUntil = require('./double-until');
+
+Object.defineProperty(exports, 'doubleUntil', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_doubleUntil).default;
+  }
+});
+
+var _filterFloat = require('./filter-float');
+
+Object.defineProperty(exports, 'filterFloat', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_filterFloat).default;
+  }
+});
+
+var _flatten = require('./flatten');
+
+Object.defineProperty(exports, 'flatten', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_flatten).default;
+  }
+});
+
+var _flattenAndUniq = require('./flatten-and-uniq');
+
+Object.defineProperty(exports, 'flattenAndUniq', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_flattenAndUniq).default;
+  }
+});
+
+var _getKeyByValue = require('./get-key-by-value');
+
+Object.defineProperty(exports, 'getKeyByValue', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getKeyByValue).default;
+  }
+});
+
+var _getKeyCodes = require('./get-key-codes');
+
+Object.defineProperty(exports, 'getKeyCodes', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getKeyCodes).default;
+  }
+});
+
+var _getLengthOfCharactersInString = require('./get-length-of-characters-in-string');
+
+Object.defineProperty(exports, 'getLengthOfCharactersInString', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getLengthOfCharactersInString).default;
+  }
+});
+
+var _getLengthOfItemsInArray = require('./get-length-of-items-in-array');
+
+Object.defineProperty(exports, 'getLengthOfItemsInArray', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getLengthOfItemsInArray).default;
+  }
+});
+
+var _getMethodsOf = require('./get-methods-of');
+
+Object.defineProperty(exports, 'getMethodsOf', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getMethodsOf).default;
+  }
+});
+
+var _getNiceTime = require('./get-nice-time');
+
+Object.defineProperty(exports, 'getNiceTime', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getNiceTime).default;
+  }
+});
+
+var _getNow = require('./get-now');
+
+Object.defineProperty(exports, 'getNow', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getNow).default;
+  }
+});
+
+var _getOrdinal = require('./get-ordinal');
+
+Object.defineProperty(exports, 'getOrdinal', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getOrdinal).default;
+  }
+});
+
+var _getTitle = require('./get-title');
+
+Object.defineProperty(exports, 'getTitle', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getTitle).default;
+  }
+});
+
+var _getTransparentGif = require('./get-transparent-gif');
+
+Object.defineProperty(exports, 'getTransparentGif', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getTransparentGif).default;
+  }
+});
+
+var _greater = require('./greater');
+
+Object.defineProperty(exports, 'greater', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_greater).default;
+  }
+});
+
+var _gt = require('./gt');
+
+Object.defineProperty(exports, 'gt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_gt).default;
+  }
+});
+
+var _gte = require('./gte');
+
+Object.defineProperty(exports, 'gte', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_gte).default;
+  }
+});
+
+var _intersection = require('./intersection');
+
+Object.defineProperty(exports, 'intersection', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_intersection).default;
+  }
+});
+
+var _invoker = require('./invoker');
+
+Object.defineProperty(exports, 'invoker', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_invoker).default;
+  }
+});
+
+var _isBetween = require('./is-between');
+
+Object.defineProperty(exports, 'isBetween', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isBetween).default;
+  }
+});
+
+var _keep = require('./keep');
+
+Object.defineProperty(exports, 'keep', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_keep).default;
+  }
+});
+
+var _leftPad = require('./left-pad');
+
+Object.defineProperty(exports, 'leftPad', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_leftPad).default;
+  }
+});
+
+var _lesser = require('./lesser');
+
+Object.defineProperty(exports, 'lesser', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lesser).default;
+  }
+});
+
+var _levenshteinDistance = require('./levenshtein-distance');
+
+Object.defineProperty(exports, 'levenshteinDistance', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_levenshteinDistance).default;
+  }
+});
+
+var _lexSort = require('./lex-sort');
+
+Object.defineProperty(exports, 'lexSort', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lexSort).default;
+  }
+});
+
+var _logWithTimestamp = require('./log-with-timestamp');
+
+Object.defineProperty(exports, 'logWithTimestamp', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_logWithTimestamp).default;
+  }
+});
+
+var _lt = require('./lt');
+
+Object.defineProperty(exports, 'lt', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lt).default;
+  }
+});
+
+var _lte = require('./lte');
+
+Object.defineProperty(exports, 'lte', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_lte).default;
+  }
+});
+
+var _makeThunk = require('./make-thunk');
+
+Object.defineProperty(exports, 'makeThunk', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_makeThunk).default;
+  }
+});
+
+var _maximum = require('./maximum');
+
+Object.defineProperty(exports, 'maximum', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_maximum).default;
+  }
+});
+
+var _maybeArgs = require('./maybe-args');
+
+Object.defineProperty(exports, 'maybeArgs', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_maybeArgs).default;
+  }
+});
+
+var _merge = require('./merge');
+
+Object.defineProperty(exports, 'merge', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_merge).default;
+  }
+});
+
+var _minimum = require('./minimum');
+
+Object.defineProperty(exports, 'minimum', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_minimum).default;
+  }
+});
+
+var _nco = require('./nco');
+
+Object.defineProperty(exports, 'nco', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_nco).default;
+  }
+});
+
+var _noop = require('./noop');
+
+Object.defineProperty(exports, 'noop', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_noop).default;
+  }
+});
+
+var _objectFromEntries = require('./object-from-entries');
+
+Object.defineProperty(exports, 'objectFromEntries', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_objectFromEntries).default;
+  }
+});
+
+var _product = require('./product');
+
+Object.defineProperty(exports, 'product', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_product).default;
+  }
+});
+
+var _range = require('./range');
+
+Object.defineProperty(exports, 'range', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_range).default;
+  }
+});
+
+var _reverseDigits = require('./reverse-digits');
+
+Object.defineProperty(exports, 'reverseDigits', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reverseDigits).default;
+  }
+});
+
+var _reverseSign = require('./reverse-sign');
+
+Object.defineProperty(exports, 'reverseSign', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reverseSign).default;
+  }
+});
+
+var _safeGet = require('./safe-get');
+
+Object.defineProperty(exports, 'safeGet', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_safeGet).default;
+  }
+});
+
+var _scaleToFit = require('./scale-to-fit');
+
+Object.defineProperty(exports, 'scaleToFit', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_scaleToFit).default;
+  }
+});
+
+var _setTitle = require('./set-title');
+
+Object.defineProperty(exports, 'setTitle', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_setTitle).default;
+  }
+});
+
+var _shuffle = require('./shuffle');
+
+Object.defineProperty(exports, 'shuffle', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_shuffle).default;
+  }
+});
+
+var _sizeOf = require('./size-of');
+
+Object.defineProperty(exports, 'sizeOf', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sizeOf).default;
+  }
+});
+
+var _sleep = require('./sleep');
+
+Object.defineProperty(exports, 'sleep', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sleep).default;
+  }
+});
+
+var _sleepAsync = require('./sleep-async');
+
+Object.defineProperty(exports, 'sleepAsync', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sleepAsync).default;
+  }
+});
+
+var _slice = require('./slice');
+
+Object.defineProperty(exports, 'slice', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_slice).default;
+  }
+});
+
+var _sortBy = require('./sort-by');
+
+Object.defineProperty(exports, 'sortBy', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sortBy).default;
+  }
+});
+
+var _splitStringOn = require('./split-string-on');
+
+Object.defineProperty(exports, 'splitStringOn', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_splitStringOn).default;
+  }
+});
+
+var _store = require('./store');
+
+Object.defineProperty(exports, 'store', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_store).default;
+  }
+});
+
+var _sum = require('./sum');
+
+Object.defineProperty(exports, 'sum', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sum).default;
+  }
+});
+
+var _tap = require('./tap');
+
+Object.defineProperty(exports, 'tap', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_tap).default;
+  }
+});
+
+var _throwError = require('./throw-error');
+
+Object.defineProperty(exports, 'throwError', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_throwError).default;
+  }
+});
+
+var _timeTest = require('./time-test');
+
+Object.defineProperty(exports, 'timeTest', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_timeTest).default;
+  }
+});
+
+var _uniq = require('./uniq');
+
+Object.defineProperty(exports, 'uniq', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_uniq).default;
+  }
+});
+
+var _unless = require('./unless');
+
+Object.defineProperty(exports, 'unless', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_unless).default;
+  }
+});
+
+var _xor = require('./xor');
+
+Object.defineProperty(exports, 'xor', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_xor).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.eventOnce = _eventOnce3.default; // dom
-
-exports.getCookie = _getCookie3.default;
-exports.getElementOffset = _getElementOffset3.default;
-exports.getElementPosition = _getElementPosition3.default;
-exports.getElementText = _getElementText3.default;
-exports.getHeight = _getHeight3.default;
-exports.getLengthOfElements = _getLengthOfElements3.default;
-exports.getReferrer = _getReferrer3.default;
-exports.getScrollBarWidth = _getScrollBarWidth3.default;
-exports.getScrollPosition = _getScrollPosition3.default;
-exports.getWidth = _getWidth3.default;
-exports.isBrowser = _isBrowser3.default;
-exports.preventDefault = _preventDefault3.default;
-exports.removeAttribute = _removeAttribute3.default;
-exports.restoreScrollPosition = _restoreScrollPosition3.default;
-exports.scrollTop = _scrollTop3.default;
-exports.setAttribute = _setAttribute3.default;
-exports.setDescription = _setDescription3.default;
-// regex, string utils, etc.
-
-exports.abbrev = _abbrev3.default;
-exports.abbrevNumber = _abbrevNumber3.default;
-exports.addCommasToNumber = _addCommasToNumber3.default;
-exports.addNewlines = _addNewlines3.default;
-exports.alphaNumericOnly = _alphaNumericOnly3.default;
-exports.camelCaseToLispCase = _camelCaseToLispCase3.default;
-exports.camelCaseToPascalCase = _camelCaseToPascalCase3.default;
-exports.camelCaseToSnakeCase = _camelCaseToSnakeCase3.default;
-exports.capitalizeFirstChar = _capitalizeFirstChar3.default;
-exports.collapseNewlines = _collapseNewlines3.default;
-exports.collapseWhitespace = _collapseWhitespace3.default;
-exports.escapeForXpath = _escapeForXpath3.default;
-exports.escapeHtml = _escapeHtml3.default;
-exports.fixWindowsSlashes = _fixWindowsSlashes3.default;
-exports.formatMs = _formatMs3.default;
-exports.getHashFromDate = _getHashFromDate3.default;
-exports.getHexRegex = _getHexRegex3.default;
-exports.getQueryFromSearch = _getQueryFromSearch3.default;
-exports.getRandomHex32 = _getRandomHex3.default;
-exports.getRandomString = _getRandomString3.default;
-exports.getRegexFlags = _getRegexFlags3.default;
-exports.getUid4 = _getUid4.default;
-exports.getUid8 = _getUid6.default;
-exports.inlineString = _inlineString3.default;
-exports.isAlphaNumeric = _isAlphaNumeric3.default;
-exports.isEmoji = _isEmoji3.default;
-exports.isHexBased = _isHexBased3.default;
-exports.isMobileOrTablet = _isMobileOrTablet3.default;
-exports.isStringSomewhereInArray = _isStringSomewhereInArray3.default;
-exports.isValidEmail = _isValidEmail3.default;
-exports.isValidHex = _isValidHex3.default;
-exports.lightenOrDarken = _lightenOrDarken3.default;
-exports.lispCaseToCamelCase = _lispCaseToCamelCase3.default;
-exports.lispCaseToPascalCase = _lispCaseToPascalCase3.default;
-exports.lispCaseToSnakeCase = _lispCaseToSnakeCase3.default;
-exports.minifyString = _minifyString3.default;
-exports.normalizeText = _normalizeText3.default;
-exports.pascalCaseToCamelCase = _pascalCaseToCamelCase3.default;
-exports.pascalCaseToLispCase = _pascalCaseToLispCase3.default;
-exports.pascalCaseToSnakeCase = _pascalCaseToSnakeCase3.default;
-exports.randomColor = _randomColor3.default;
-exports.removeNewlines = _removeNewlines3.default;
-exports.removeNonAlpha = _removeNonAlpha3.default;
-exports.removeNonAlphaNumeric = _removeNonAlphaNumeric3.default;
-exports.removeNonAscii = _removeNonAscii3.default;
-exports.removeNonNumeric = _removeNonNumeric3.default;
-exports.removeNumeric = _removeNumeric3.default;
-exports.removeTags = _removeTags3.default;
-exports.rgbToHex = _rgbToHex3.default;
-exports.rot13 = _rot3.default;
-exports.safeDecodeURI = _safeDecodeUri2.default;
-exports.safeDecodeURIComponent = _safeDecodeUriComponent2.default;
-exports.snakeCaseToCamelCase = _snakeCaseToCamelCase3.default;
-exports.snakeCaseToLispCase = _snakeCaseToLispCase3.default;
-exports.snakeCaseToPascalCase = _snakeCaseToPascalCase3.default;
-exports.removePunctuation = _removePunctuation3.default;
-exports.removeSubdomain = _removeSubdomain3.default;
-exports.trimHash = _trimHash3.default;
-exports.trimSpaces = _trimSpaces3.default;
-exports.truncate = _truncate3.default;
-exports.unescapeHtml = _unescapeHtml3.default;
-// node
-
-exports.atob = _atob3.default;
-exports.btoa = _btoa3.default;
-exports.checkForFile = _checkForFile3.default;
-exports.colorize = _colorize3.default;
-exports.consoleClear = _consoleClear3.default;
-exports.execute = _execute3.default;
-exports.exit = _exit3.default;
-exports.findPort = _findPort3.default;
-exports.getArgs = _getArgs3.default;
-exports.getBasename = _getBasename3.default;
-exports.getFileExt = _getFileExt3.default;
-exports.getFreeDisk = _getFreeDisk3.default;
-exports.getFreeMemory = _getFreeMemory3.default;
-exports.getHashFromSystem = _getHashFromSystem3.default;
-exports.getHostname = _getHostname3.default;
-exports.getLoadAverage = _getLoadAverage3.default;
-exports.getMemoryUsage = _getMemoryUsage3.default;
-exports.getNodeModules = _getNodeModules3.default;
-exports.getPlatform = _getPlatform3.default;
-exports.getRelativePath = _getRelativePath3.default;
-exports.getTerminalColumns = _getTerminalColumns3.default;
-exports.getTerminalRows = _getTerminalRows3.default;
-exports.getTerminalSize = _getTerminalSize3.default;
-exports.getUserHome = _getUserHome3.default;
-exports.getUserShell = _getUserShell3.default;
-exports.hasColor = _hasColor3.default;
-exports.isDirectory = _isDirectory3.default;
-exports.isFile = _isFile3.default;
-exports.isInstalled = _isInstalled3.default;
-exports.isNode = _isNode3.default;
-exports.isSymLink = _isSymLink3.default;
-exports.logWithInfo = _logWithInfo3.default;
-exports.makeFileIfNoFile = _makeFileIfNoFile3.default;
-exports.notFound = _notFound3.default;
-exports.open = _open3.default;
-exports.readFileSync = _readFileSync3.default;
-exports.readJson = _readJson3.default;
-exports.readJsonSync = _readJsonSync3.default;
-exports.resolveFiles = _resolveFiles3.default;
-exports.termPrompt = _termPrompt3.default;
-exports.timeRequire = _timeRequire3.default;
-exports.watch = _watch3.default;
-exports.writeError = _writeError3.default;
-exports.writeJson = _writeJson3.default;
-exports.writeJsonSync = _writeJsonSync3.default;
-// fp utils
-
-exports.all = _all3.default;
-exports.and = _and3.default;
-exports.any = _any3.default;
-exports.apply = _apply3.default;
-exports.arity = _arity3.default;
-exports.caar = _caar3.default;
-exports.cadr = _cadr3.default;
-exports.car = _car3.default;
-exports.cdar = _cdar3.default;
-exports.cddr = _cddr3.default;
-exports.cdr = _cdr3.default;
-exports.clone = _clone3.default;
-exports.collectBy = _collectBy3.default;
-exports.compose = _compose3.default;
-exports.concat = _concat3.default;
-exports.concatMap = _concatMap3.default;
-exports.cons = _cons3.default;
-exports.constant = _constant3.default;
-exports.curry = _curry3.default;
-exports.drop = _drop3.default;
-exports.dropWhile = _dropWhile3.default;
-exports.each = _each3.default;
-exports.elem = _elem3.default;
-exports.eq = _eq3.default;
-exports.filter = _filter3.default;
-exports.findIndex = _findIndex3.default;
-exports.findWhere = _findWhere3.default;
-exports.flip = _flip3.default;
-exports.foldl = _foldl4.default;
-exports.foldl1 = _foldl6.default;
-exports.foldr = _foldr4.default;
-exports.foldr1 = _foldr6.default;
-exports.id = _id3.default;
-exports.init = _init3.default;
-exports.juxt = _juxt3.default;
-exports.last = _last3.default;
-exports.length = _length3.default;
-exports.lines = _lines3.default;
-exports.list = _list3.default;
-exports.map = _map3.default;
-exports.memoize = _memoize3.default;
-exports.mix = _mix3.default;
-exports.not = _not3.default;
-exports.notElem = _notElem3.default;
-exports.nth = _nth3.default;
-exports.once = _once3.default;
-exports.or = _or3.default;
-exports.pair = _pair3.default;
-exports.pairWith = _pairWith3.default;
-exports.pick = _pick3.default;
-exports.pipe = _pipe3.default;
-exports.pluck = _pluck3.default;
-exports.propEq = _propEq3.default;
-exports.reduce = _reduce3.default;
-exports.replicate = _replicate3.default;
-exports.reverse = _reverse3.default;
-exports.span = _span3.default;
-exports.splitAt = _splitAt3.default;
-exports.take = _take3.default;
-exports.takeLast = _takeLast3.default;
-exports.takeWhile = _takeWhile3.default;
-exports.uncurry = _uncurry3.default;
-exports.unlines = _unlines3.default;
-exports.unwords = _unwords3.default;
-exports.unzip = _unzip4.default;
-exports.unzip3 = _unzip6.default;
-exports.words = _words3.default;
-exports.zip = _zip4.default;
-exports.zip3 = _zip6.default;
-exports.zipWith = _zipWith4.default;
-exports.zipWith3 = _zipWith6.default;
-// types
-
-exports.checkIs = _checkIs3.default;
-exports.is = _is3.default;
-exports.isArray = _isArray3.default;
-exports.isArrayLike = _isArrayLike3.default;
-exports.isBoolean = _isBoolean3.default;
-exports.isBuffer = _isBuffer3.default;
-exports.isDate = _isDate3.default;
-exports.isDefined = _isDefined3.default;
-exports.isDomElement = _isDomElement3.default;
-exports.isEmpty = _isEmpty3.default;
-exports.isError = _isError3.default;
-exports.isEven = _isEven3.default;
-exports.isFloat = _isFloat3.default;
-exports.isFunction = _isFunction3.default;
-exports.isJson = _isJson3.default;
-exports.isMap = _isMap3.default;
-exports.isNan = _isNan3.default;
-exports.isNegative = _isNegative3.default;
-exports.isNodeList = _isNodeList3.default;
-exports.isNull = _isNull3.default;
-exports.isNullOrUndefined = _isNullOrUndefined3.default;
-exports.isNumber = _isNumber3.default;
-exports.isObject = _isObject3.default;
-exports.isOdd = _isOdd3.default;
-exports.isPositive = _isPositive3.default;
-exports.isPow2 = _isPow3.default;
-exports.isPrimitive = _isPrimitive3.default;
-exports.isPromise = _isPromise3.default;
-exports.isRegExp = _isRegExp3.default;
-exports.isSet = _isSet3.default;
-exports.isString = _isString3.default;
-exports.isSymbol = _isSymbol3.default;
-exports.isUndefined = _isUndefined3.default;
-exports.isValidDate = _isValidDate3.default;
-exports.objectToString = _objectToString3.default;
-exports.toBool = _toBool3.default;
-exports.toBoolInverse = _toBoolInverse3.default;
-exports.typeOf = _typeOf3.default;
-// misc
-
-exports.ago = _ago3.default;
-exports.assert = _assert3.default;
-exports.average = _average3.default;
-exports.calc = _calc3.default;
-exports.chunk = _chunk3.default;
-exports.cloneWithout = _cloneWithout3.default;
-exports.countItemsInArray = _countItemsInArray3.default;
-exports.diff = _diff3.default;
-exports.dir = _dir3.default;
-exports.doubleUntil = _doubleUntil3.default;
-exports.filterFloat = _filterFloat3.default;
-exports.flatten = _flatten3.default;
-exports.flattenAndUniq = _flattenAndUniq3.default;
-exports.getKeyByValue = _getKeyByValue3.default;
-exports.getKeyCodes = _getKeyCodes3.default;
-exports.getLengthOfCharactersInString = _getLengthOfCharactersInString3.default;
-exports.getLengthOfItemsInArray = _getLengthOfItemsInArray3.default;
-exports.getMethodsOf = _getMethodsOf3.default;
-exports.getNiceTime = _getNiceTime3.default;
-exports.getNow = _getNow3.default;
-exports.getOrdinal = _getOrdinal3.default;
-exports.getTitle = _getTitle3.default;
-exports.getTransparentGif = _getTransparentGif3.default;
-exports.greater = _greater3.default;
-exports.gt = _gt3.default;
-exports.gte = _gte3.default;
-exports.intersection = _intersection3.default;
-exports.invoker = _invoker3.default;
-exports.isBetween = _isBetween3.default;
-exports.keep = _keep3.default;
-exports.leftPad = _leftPad3.default;
-exports.lesser = _lesser3.default;
-exports.levenshteinDistance = _levenshteinDistance3.default;
-exports.lexSort = _lexSort3.default;
-exports.logWithTimestamp = _logWithTimestamp3.default;
-exports.lt = _lt3.default;
-exports.lte = _lte3.default;
-exports.makeThunk = _makeThunk3.default;
-exports.maximum = _maximum3.default;
-exports.maybeArgs = _maybeArgs3.default;
-exports.merge = _merge3.default;
-exports.minimum = _minimum3.default;
-exports.nco = _nco3.default;
-exports.noop = _noop3.default;
-exports.objectFromEntries = _objectFromEntries3.default;
-exports.product = _product3.default;
-exports.range = _range3.default;
-exports.reverseDigits = _reverseDigits3.default;
-exports.reverseSign = _reverseSign3.default;
-exports.safeGet = _safeGet3.default;
-exports.scaleToFit = _scaleToFit3.default;
-exports.setTitle = _setTitle3.default;
-exports.shuffle = _shuffle3.default;
-exports.sizeOf = _sizeOf3.default;
-exports.sleep = _sleep3.default;
-exports.sleepAsync = _sleepAsync3.default;
-exports.slice = _slice3.default;
-exports.sortBy = _sortBy3.default;
-exports.splitStringOn = _splitStringOn3.default;
-exports.store = _store3.default;
-exports.sum = _sum3.default;
-exports.tap = _tap3.default;
-exports.throwError = _throwError3.default;
-exports.timeTest = _timeTest3.default;
-exports.uniq = _uniq3.default;
-exports.unless = _unless3.default;
-exports.xor = _xor3.default;

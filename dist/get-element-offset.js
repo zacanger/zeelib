@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Takes an element and retuns its offset from top left
- * @example
- * getElementOffset(document.getElementById('foo')) // => { top: number, left: number }
- */
-
 var getElementOffset = function getElementOffset(el) {
   var r = el.getBoundingClientRect();
   var d = document.documentElement;

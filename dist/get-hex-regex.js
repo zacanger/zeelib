@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Returns a regex to test for valid hex
- * @example
- * getHexRegex()
- */
-
 var getHexRegex = function getHexRegex() {
   return (/^#?[a-f0-9]{3}|[a-f0-9]{6}$/i
   );

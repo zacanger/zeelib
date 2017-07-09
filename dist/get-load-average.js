@@ -14,17 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-/**
- * Get load average
- * @example
- * getLoadAverage()
- */
-
 var getLoadAverage = function getLoadAverage() {
   return parseFloat((0, _average2.default)([].concat(_toConsumableArray((0, _os.loadavg)()))).toFixed(2));
 };
-
-// the above line is weird because loadavg() is a tuple
-// but average expects an array. ¯\_(ツ)_/¯
 
 exports.default = getLoadAverage;

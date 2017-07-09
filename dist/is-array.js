@@ -10,12 +10,6 @@ var _objectToString2 = _interopRequireDefault(_objectToString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Returns true if the passed value is an array
- * @example
- * isArray([]) // => true
- */
-
 var isArray = Array.isArray || function (v) {
   return (0, _objectToString2.default)(v) === '[object Array]';
 };

@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * `decodeURI`, but safe
- * @example
- * safeDecodeURI('2!!!!0/,.?+=*^\n|\@@@@') // => '2!!!!0/,.?+=*^\n|@@@@'
- */
-
 var safeDecodeURI = function safeDecodeURI(str) {
   try {
     return decodeURI(str);

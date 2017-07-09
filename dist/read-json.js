@@ -6,12 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _fs = require('fs');
 
-/**
- * Read json file, parse it, call cb with obj or err
- * @example
- * readJson('./foo.json', (err, data) => {})
- */
-
 var readJson = function readJson(file, cb) {
   (0, _fs.readFile)(file, 'utf8', function (err, json) {
     if (err) {

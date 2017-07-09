@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * From lisp-case to snake_case
- * @example
- * lispCaseToSnakeCase('foo-bar') // => 'foo_bar'
- */
-
 var lispCaseToSnakeCase = function lispCaseToSnakeCase(str) {
   return str.replace(/-/g, '_');
 };

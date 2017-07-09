@@ -10,12 +10,6 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-/**
- * Get an object from an array of entries
- * @example
- * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
- */
-
 var objectFromEntries = function objectFromEntries(arr) {
   return arr.reduce(function (res, _ref) {
     var _ref2 = _slicedToArray(_ref, 2),

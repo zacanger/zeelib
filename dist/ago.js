@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Makes pretty 'n whatevers ago' string
- * @example
- * ago(new Date('2007-98-17')) // => '9.75 years ago'
- */
-
 var ago = function ago(d) {
   var diff = (new Date().getTime() - d.getTime()) / 1000;
   var dayDiff = Math.floor(diff / 86400);

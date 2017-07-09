@@ -3,14 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/* eslint-disable no-useless-escape */
 
-
-/**
- * Remove punctuation from string
- * @example
- * removePunctuation('asdf. as.f.sdaf .') // => 'asdf asfsdaf '
- */
 
 var removePunctuation = function removePunctuation(str) {
   return str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').replace(/\s{2,}/g, ' ');

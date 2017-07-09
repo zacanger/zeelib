@@ -5,12 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Like Haskell's `drop`
- * @example
- * drop(2, [ 1, 2, 3 ]) // => 3
- */
-
 var drop = function drop(n, arr) {
   var alen = arr.length;
   if (n < 1) return arr;

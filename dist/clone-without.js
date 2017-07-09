@@ -5,14 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 
-/**
- * Clones an object, leaving out specified keys
- * cred : gh:texastoland
- * @example
- * cloneWithout({ a: 1, b: 2 }, 'a') // => { b: 2 }
- * cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
- */
-
 var cloneWithout = function cloneWithout(source) {
   for (var _len = arguments.length, keys = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     keys[_key - 1] = arguments[_key];
