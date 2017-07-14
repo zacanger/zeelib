@@ -1,13 +1,7 @@
 // @flow
 
-/**
- * Fix windows-style path sep
- * cred: gh:sindresorhus/slash
- * @example
- * fixWindowsSlashes('C:\\Windows\\Something') // => 'C:/Windows/Something'
- */
-
 const fixWindowsSlashes = (str: string): string => {
+  console.error('`fixWindowsSlashes` is deprecated. Please use the `slash` lib.')
   const isExtendedLengthPath = /^\\\\\?\\/.test(str)
   const hasNonAscii = /[^\x00-\x80]+/.test(str)
   if (isExtendedLengthPath || hasNonAscii) return str

@@ -1,3 +1,8 @@
+* `1.1.3` &mdash; **2017-07-14**
+  * Deprecated the following functions (will be removed in `2.0.0`):
+  * `fixWindowsSlashes`
+  * `levenshteinDistance`
+  * `timeRequire`
 * `1.0.3` &mdash; **2017-06-28**
   * Fixed `hasColor` to be a function
   * Fixed some issues in the docs

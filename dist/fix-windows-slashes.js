@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 
 var fixWindowsSlashes = function fixWindowsSlashes(str) {
+  console.error('`fixWindowsSlashes` is deprecated. Please use the `slash` lib.');
   var isExtendedLengthPath = /^\\\\\?\\/.test(str);
   var hasNonAscii = /[^\x00-\x80]+/.test(str);
   if (isExtendedLengthPath || hasNonAscii) return str;

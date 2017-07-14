@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 
 var levenshteinDistance = function levenshteinDistance(a, b) {
+  console.error('`levenshteinDistance` is deprecated. Please use a real lib for this.');
   if (a.length === 0) {
     return b.length;
   }

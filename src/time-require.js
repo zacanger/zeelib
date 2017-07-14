@@ -1,17 +1,10 @@
 /* eslint-disable  */
 
-/**
- * Just require this and invoke to time requires into that file
- * based on gh:stefanpenner/node-require-timings
- * Takes no parameters
- * @example
- * timeRequire()
- */
-
 import { readFileSync } from 'fs'
 
-const timeRequire = () =>
-  require.extensions['.js'] = (module, filename) => {
+const timeRequire = () => {
+  console.error('`timeRequire` is deprecated. Please use the `node-require-timings` lib.')
+  return require.extensions['.js'] = (module, filename) => {
     const strt = new Date()
     const cont = readFileSync(filename, 'utf8').toString()
     const modl = module._compile(cont, filename)
@@ -21,5 +14,6 @@ const timeRequire = () =>
     console.log(arry)
     return modl
   }
+}
 
 export default timeRequire

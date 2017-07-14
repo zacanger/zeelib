@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 var _fs = require('fs');
 
 var timeRequire = function timeRequire() {
+  console.error('`timeRequire` is deprecated. Please use the `node-require-timings` lib.');
   return require.extensions['.js'] = function (module, filename) {
     var strt = new Date();
     var cont = (0, _fs.readFileSync)(filename, 'utf8').toString();

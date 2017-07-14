@@ -2,7 +2,6 @@
 
 /**
  * Clones an object, leaving out specified keys
- * cred : gh:texastoland
  * @example
  * cloneWithout({ a: 1, b: 2 }, 'a') // => { b: 2 }
  * cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
