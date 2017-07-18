@@ -1,13 +1,7 @@
 // @flow
 
-/**
- * Get the memory size of an object
- * based on code by http://code.stephenmorley.org/ CC0 1.0 Universal
- * @example
- * sizeOf('asdf') // => 8
- */
-
 const sizeOf = (object: Object): number => {
+  console.error('`sizeOf` is deprecated. Use the `sizeof` lib.')
   const objects = [ object ]
   let size = 0
 

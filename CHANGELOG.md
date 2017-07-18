@@ -1,3 +1,5 @@
+* `1.1.4` &mdash; **2017-07-18**
+  * Deprecated `sizeOf`
 * `1.1.3` &mdash; **2017-07-14**
   * Deprecated the following functions (will be removed in `2.0.0`):
   * `fixWindowsSlashes`
