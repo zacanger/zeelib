@@ -14,7 +14,7 @@ import isArray from './is-array'
  */
 
 const concatMap = (
-  f: () => any,
+  f: (any) => any,
   a: Array<any[]>
 ): any[] => {
   let res = []

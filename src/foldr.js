@@ -8,7 +8,7 @@
  */
 
 const foldr = (
-  f: () => any,
+  f: (any, any) => any,
   s: any,
   a: any[]
 ): any => {
