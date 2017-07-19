@@ -6,7 +6,7 @@
  */
 
 const takeWhile = (
-  pred: () => bool,
+  pred: (any, number) => bool,
   arr: any[]
 ): any[] => {
   let stop = arr.length

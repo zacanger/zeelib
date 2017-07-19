@@ -8,7 +8,7 @@
  */
 
 const foldl1 = (
-  f: () => any,
+  f: (any, any) => any,
   a: any[]
 ): any => {
   let s = a[0]

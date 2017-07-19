@@ -1,6 +1,6 @@
 // @flow
 
-type AnyF = () => any
+type AnyF = (any) => any
 
 /**
  * Uncurry a function

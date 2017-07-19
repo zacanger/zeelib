@@ -8,7 +8,7 @@
  * flip(minus)(2)(1) // => -1
  */
 
-const flip = (f: () => any): any =>
+const flip = (f: (any) => any): any =>
   (a: any) =>
     (b: any) =>
       f(b)(a)

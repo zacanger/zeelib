@@ -9,7 +9,7 @@
  */
 
 const foldr1 = (
-  f: () => any,
+  f: (any, any) => any,
   a: any[]
 ): any => {
   let s = a[a.length - 1]
