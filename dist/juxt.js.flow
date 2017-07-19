@@ -2,7 +2,7 @@
 
 import curry from './curry'
 
-type F = () => any
+type F = (any) => any
 type FS = F[]
 type A = any
 
