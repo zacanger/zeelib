@@ -895,6 +895,15 @@ Object.defineProperty(exports, 'getRelativePath', {
   }
 });
 
+var _getStdin = require('./get-stdin');
+
+Object.defineProperty(exports, 'getStdin', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getStdin).default;
+  }
+});
+
 var _getTerminalColumns = require('./get-terminal-columns');
 
 Object.defineProperty(exports, 'getTerminalColumns', {
