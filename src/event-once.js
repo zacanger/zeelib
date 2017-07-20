@@ -4,7 +4,7 @@
  * Runs an event handler once
  * @example
  * const el = document.getElementById('foo')
- * eventOnce(el, 'logger', console.log)
+ * eventOnce(el, 'click', console.log)
  */
 
 const eventOnce = (
