@@ -12,7 +12,7 @@ import each from './each'
  */
 
 const filter = (
-  fn: (any, any) => any,
+  fn: ((any) => bool, ?number) => bool,
   list: any[]
 ): Object | any[] => {
   const isArr = isArrayLike(list)
