@@ -1,3 +1,5 @@
+* `1.1.10` &mdash; **2017-07-20**
+  * Deprecated `arity` (use `length`)
 * `1.1.4` &mdash; **2017-07-18**
   * Deprecated `sizeOf`
 * `1.1.3` &mdash; **2017-07-14**

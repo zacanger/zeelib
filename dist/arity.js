@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 
 var arity = function arity(f) {
+  console.error('`arity` is deprecated. Please use `length` instead.');
   return f.length;
 };
 

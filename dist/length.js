@@ -24,10 +24,14 @@ var _isString = require('./is-string');
 
 var _isString2 = _interopRequireDefault(_isString);
 
+var _isFunction = require('./is-function');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var length = function length(val) {
-  if ((0, _isArray2.default)(val) || (0, _isString2.default)(val)) return val.length;
+  if ((0, _isArray2.default)(val) || (0, _isString2.default)(val) || (0, _isFunction2.default)(val)) return val.length;
   if ((0, _isMap2.default)(val) || (0, _isSet2.default)(val)) return val.size;
   if ((0, _isObject2.default)(val)) return Object.keys(val).length;
   return 0;
