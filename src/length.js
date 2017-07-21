@@ -9,10 +9,11 @@ import isFunction from './is-function'
 
 /**
  * Get length of element
- * Works for array, object, string, set, and map
+ * Works for array, object, string, set, map, and function
  * @example
  * length('foo') // => 3
  * length([ 1, 2 ]) => 2
+ * length((a, b) => a + b) // => 2
  */
 
 const length = (val: any): number => {
