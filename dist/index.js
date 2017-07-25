@@ -1822,6 +1822,15 @@ Object.defineProperty(exports, 'isBuffer', {
   }
 });
 
+var _isClass = require('./is-class');
+
+Object.defineProperty(exports, 'isClass', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isClass).default;
+  }
+});
+
 var _isDate = require('./is-date');
 
 Object.defineProperty(exports, 'isDate', {
@@ -1891,6 +1900,24 @@ Object.defineProperty(exports, 'isFunction', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_isFunction).default;
+  }
+});
+
+var _isGenerator = require('./is-generator');
+
+Object.defineProperty(exports, 'isGenerator', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isGenerator).default;
+  }
+});
+
+var _isGeneratorFunction = require('./is-generator-function');
+
+Object.defineProperty(exports, 'isGeneratorFunction', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_isGeneratorFunction).default;
   }
 });
 

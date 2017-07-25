@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 1.1.9 | Documentation</title>
+  <title>zeelib 1.1.11 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>1.1.9</code></div>
+          <div class='mb1'><code>1.1.11</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -2015,6 +2015,16 @@
               
                 
                 <li><a
+                  href='#isclass'
+                  class="">
+                  isClass
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#isdate'
                   class="">
                   isDate
@@ -2088,6 +2098,26 @@
                   href='#isfunction'
                   class="">
                   isFunction
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isgenerator'
+                  class="">
+                  isGenerator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isgeneratorfunction'
+                  class="">
+                  isGeneratorFunction
                   
                 </a>
                 
@@ -14287,7 +14317,7 @@ of those fns</p>
   
 
   <p>Get length of element
-Works for array, object, string, set, and map</p>
+Works for array, object, string, set, map, and function</p>
 
 
   <div class='pre p1 fill-light mt0'>length</div>
@@ -14332,7 +14362,8 @@ Works for array, object, string, set, and map</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>length(<span class="hljs-string">'foo'</span>) <span class="hljs-comment">// =&gt; 3</span>
-length([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ]) =&gt; <span class="hljs-number">2</span></pre>
+length([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span> ]) =&gt; <span class="hljs-number">2</span>
+length(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a + b) <span class="hljs-comment">// =&gt; 2</span></pre>
     
   
 
@@ -17389,6 +17420,72 @@ isBuffer(Buffer.from(<span class="hljs-string">'asdf'</span>)) <span class="hljs
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='isclass'>
+      isClass
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true if passed fn is an ES2015 class</p>
+
+
+  <div class='pre p1 fill-light mt0'>isClass</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isClass(noop) <span class="hljs-comment">// =&gt; false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='isdate'>
       isDate
     </h3>
@@ -17945,6 +18042,148 @@ isFloat(<span class="hljs-number">2.2</span>) <span class="hljs-comment">// =&gt
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> noop = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}
 isFunction(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span>
 isFunction(noop) <span class="hljs-comment">// =&gt; true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isgenerator'>
+      isGenerator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true if passed val is a generator</p>
+
+
+  <div class='pre p1 fill-light mt0'>isGenerator</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isGenerator(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isgeneratorfunction'>
+      isGeneratorFunction
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true if val is a generator function</p>
+
+
+  <div class='pre p1 fill-light mt0'>isGeneratorFunction</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isGeneratorFunction(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></pre>
     
   
 
