@@ -2326,6 +2326,15 @@ Object.defineProperty(exports, 'getOrdinal', {
   }
 });
 
+var _getParams = require('./get-params');
+
+Object.defineProperty(exports, 'getParams', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_getParams).default;
+  }
+});
+
 var _getTitle = require('./get-title');
 
 Object.defineProperty(exports, 'getTitle', {
@@ -2368,6 +2377,15 @@ Object.defineProperty(exports, 'gte', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_gte).default;
+  }
+});
+
+var _has = require('./has');
+
+Object.defineProperty(exports, 'has', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_has).default;
   }
 });
 
@@ -2656,6 +2674,15 @@ Object.defineProperty(exports, 'sortBy', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_sortBy).default;
+  }
+});
+
+var _sortObject = require('./sort-object');
+
+Object.defineProperty(exports, 'sortObject', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_sortObject).default;
   }
 });
 

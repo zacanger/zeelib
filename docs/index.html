@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 1.1.11 | Documentation</title>
+  <title>zeelib 1.1.12 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>1.1.11</code></div>
+          <div class='mb1'><code>1.1.12</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -2575,6 +2575,16 @@
               
                 
                 <li><a
+                  href='#getparams'
+                  class="">
+                  getParams
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#gettitle'
                   class="">
                   getTitle
@@ -2618,6 +2628,16 @@
                   href='#gte'
                   class="">
                   gte
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#has'
+                  class="">
+                  has
                   
                 </a>
                 
@@ -2918,6 +2938,16 @@
                   href='#sortby'
                   class="">
                   sortBy
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sortobject'
+                  class="">
+                  sortObject
                   
                 </a>
                 
@@ -21399,6 +21429,78 @@ Works up to 999</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='getparams'>
+      getParams
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get a function's parameters by name</p>
+
+
+  <div class='pre p1 fill-light mt0'>getParams</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(function (any): any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> thing = <span class="hljs-function">(<span class="hljs-params">a, b, c</span>) =&gt;</span> a + b + c
+getParams(thing) <span class="hljs-comment">// =&gt; [ 'a', 'b', 'c' ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='gettitle'>
       getTitle
     </h3>
@@ -21738,6 +21840,85 @@ gt(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span
       <pre class='p1 overflow-auto round fill-light'>gte(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; true</span>
 gte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
 gte(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; false</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='has'>
+      has
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>See if an object has a property</p>
+
+
+  <div class='pre p1 fill-light mt0'>has</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>p</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>o</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>has(<span class="hljs-string">'a'</span> { <span class="hljs-attr">b</span>: <span class="hljs-string">'c'</span> }) <span class="hljs-comment">// =&gt; false</span></pre>
     
   
 
@@ -24064,6 +24245,77 @@ Returns a sorted array</p>
       
       <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> list = [ { <span class="hljs-attr">id</span>: <span class="hljs-number">1</span> }, { <span class="hljs-attr">id</span>: <span class="hljs-number">3</span> }, { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span> } ]
 sortBy(<span class="hljs-function">(<span class="hljs-params">{ id }</span>) =&gt;</span> id, list) <span class="hljs-comment">// =&gt; [ { id: 1 }, { id: 2 }, { id: 3 } ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sortobject'>
+      sortObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sort an object</p>
+
+
+  <div class='pre p1 fill-light mt0'>sortObject</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>o</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>sortObject({ <span class="hljs-attr">b</span>: <span class="hljs-string">'c'</span>, <span class="hljs-attr">a</span>: <span class="hljs-string">'d'</span> }) <span class="hljs-comment">// =&gt; { a: 'd', b: 'c' }</span></pre>
     
   
 
