@@ -1,3 +1,5 @@
+* `1.1.14` &mdash; **2017-07-25**
+  * Deprecated `makeThunk`
 * `1.1.10` &mdash; **2017-07-20**
   * Deprecated `arity` (use `length`)
 * `1.1.4` &mdash; **2017-07-18**

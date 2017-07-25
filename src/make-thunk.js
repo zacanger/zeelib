@@ -1,16 +1,7 @@
 /* eslint-disable standard/no-callback-literal */
 
-/**
- * General-ish utility for async, eager thunks
- * Adapted from kyle simpson's blog
- * @param {function} fn
- * @param {any} args
- * @returns {function} thunk
- * @example
- * const something = makeThunk(fn, param1, param2)
- */
-
 const makeThunk = (fn, ...args) => {
+  console.error('`makeThunk` is deprecated.')
   let v = {}
   let fns = []
 

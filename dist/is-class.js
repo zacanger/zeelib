@@ -3,6 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+
 var toString = Function.prototype.toString;
 
 var fnBody = function fnBody(fn) {

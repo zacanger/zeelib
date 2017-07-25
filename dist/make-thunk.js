@@ -11,6 +11,7 @@ var makeThunk = function makeThunk(fn) {
     args[_key - 1] = arguments[_key];
   }
 
+  console.error('`makeThunk` is deprecated.');
   var v = {};
   var fns = [];
 

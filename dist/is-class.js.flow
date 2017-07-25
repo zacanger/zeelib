@@ -1,6 +1,8 @@
+// @flow
+
 const toString = Function.prototype.toString
 
-const fnBody = (fn) =>
+const fnBody = (fn: () => any): string =>
   toString.call(fn).replace(/^[^{]*{\s*/, '').replace(/\s*}[^}]*$/, '')
 
 /**
@@ -9,7 +11,7 @@ const fnBody = (fn) =>
  * isClass(noop) // => false
  */
 
-const isClass = (fn) =>
+const isClass = (fn: () => any): bool =>
   (typeof fn === 'function' &&
     (/^class\s/.test(toString.call(fn)) ||
       (/^.*classCallCheck\(/.test(fnBody(fn)))))
