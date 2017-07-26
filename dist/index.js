@@ -2740,6 +2740,15 @@ Object.defineProperty(exports, 'timeTest', {
   }
 });
 
+var _union = require('./union');
+
+Object.defineProperty(exports, 'union', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_union).default;
+  }
+});
+
 var _uniq = require('./uniq');
 
 Object.defineProperty(exports, 'uniq', {
