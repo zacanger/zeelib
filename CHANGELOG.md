@@ -1,3 +1,14 @@
+* `2.0.0` &mdash; **2017-07-30**
+  * Refactored safeGet, which now takes an access string first and an optional
+    fallback, then the object.
+  * Removed deprecated functions:
+    * `arity` (use `length`)
+    * `fixWindowsSlashes` (use the `slash` lib)
+    * `inlineString`
+    * `levenshteinDistance`
+    * `makeThunk`
+    * `sizeOf` (use the `sizeof` lib)
+    * `timeRequire` (use the `node-require-timings` lib)
 * `1.1.14` &mdash; **2017-07-25**
   * Deprecated `makeThunk`
 * `1.1.10` &mdash; **2017-07-20**
