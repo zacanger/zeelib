@@ -1,4 +1,5 @@
 * `2.0.0` &mdash; **2017-07-30**
+  * Moved `/dist` to `/lib`, and gitignored it
   * Refactored `safeGet`, which now takes an access string first and an optional
     fallback, then the object.
   * Renamed `collectBy` to `groupBy`

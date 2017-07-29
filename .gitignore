@@ -75,3 +75,4 @@ Temporary Items
 x/
 !yarn.lock
 /dist
+/lib
