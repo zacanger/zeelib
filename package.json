@@ -63,5 +63,8 @@
     "flow-coverage-report": "0.3.0",
     "tap-spec": "4.1.1",
     "tape": "4.7.0"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
