@@ -1,5 +1,7 @@
 // @flow
 
+// credit: gh:uniqname
+
 /**
  * Collect an an array of objects by string key
  * @example

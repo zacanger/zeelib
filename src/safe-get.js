@@ -1,3 +1,7 @@
+// credit: gh:uniqname
+// this used to be a lot more complex and handle many more edge cases
+// but it was unreadable, and this is what i originally _wanted_ anyway
+
 /**
  * Like `_.get`: takes an access string and an optional fallback,
  * then an object
