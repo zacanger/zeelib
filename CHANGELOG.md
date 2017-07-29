@@ -4,11 +4,23 @@
   * Renamed `collectBy` to `groupBy`
   * Removed deprecated functions:
     * `arity` (use `length`)
+    * `checkIs` (use `is` with your own error if you need one)
     * `fixWindowsSlashes` (use the `slash` lib)
+    * `getHashFromDate` (use a proper uuid lib)
+    * `getHashFromSystem` (use a proper uuid lib)
+    * `getRandomHex32` (use a proper uuid lib)
+    * `getRandomString` (use a proper uuid lib)
+    * `getUid4` (use a proper uuid lib)
+    * `getUid8` (use a proper uuid lib)
     * `inlineString`
+    * `invoker`
     * `levenshteinDistance`
+    * `logWithTimestamp`
     * `makeThunk`
+    * `minifyString`
+    * `rot13`
     * `sizeOf` (use the `sizeof` lib)
+    * `store`
     * `timeRequire` (use the `node-require-timings` lib)
 * `1.1.14` &mdash; **2017-07-25**
   * Deprecated `makeThunk`

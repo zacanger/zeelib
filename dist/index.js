@@ -292,15 +292,6 @@ Object.defineProperty(exports, 'formatMs', {
   }
 });
 
-var _getHashFromDate = require('./get-hash-from-date');
-
-Object.defineProperty(exports, 'getHashFromDate', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getHashFromDate).default;
-  }
-});
-
 var _getHexRegex = require('./get-hex-regex');
 
 Object.defineProperty(exports, 'getHexRegex', {
@@ -319,48 +310,12 @@ Object.defineProperty(exports, 'getQueryFromSearch', {
   }
 });
 
-var _getRandomHex = require('./get-random-hex-32');
-
-Object.defineProperty(exports, 'getRandomHex32', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getRandomHex).default;
-  }
-});
-
-var _getRandomString = require('./get-random-string');
-
-Object.defineProperty(exports, 'getRandomString', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getRandomString).default;
-  }
-});
-
 var _getRegexFlags = require('./get-regex-flags');
 
 Object.defineProperty(exports, 'getRegexFlags', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_getRegexFlags).default;
-  }
-});
-
-var _getUid = require('./get-uid-4');
-
-Object.defineProperty(exports, 'getUid4', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getUid).default;
-  }
-});
-
-var _getUid2 = require('./get-uid-8');
-
-Object.defineProperty(exports, 'getUid8', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getUid2).default;
   }
 });
 
@@ -460,15 +415,6 @@ Object.defineProperty(exports, 'lispCaseToSnakeCase', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_lispCaseToSnakeCase).default;
-  }
-});
-
-var _minifyString = require('./minify-string');
-
-Object.defineProperty(exports, 'minifyString', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_minifyString).default;
   }
 });
 
@@ -586,15 +532,6 @@ Object.defineProperty(exports, 'rgbToHex', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_rgbToHex).default;
-  }
-});
-
-var _rot = require('./rot-13');
-
-Object.defineProperty(exports, 'rot13', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_rot).default;
   }
 });
 
@@ -811,15 +748,6 @@ Object.defineProperty(exports, 'getFreeMemory', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_getFreeMemory).default;
-  }
-});
-
-var _getHashFromSystem = require('./get-hash-from-system');
-
-Object.defineProperty(exports, 'getHashFromSystem', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getHashFromSystem).default;
   }
 });
 
@@ -1732,15 +1660,6 @@ Object.defineProperty(exports, 'zipWith3', {
   }
 });
 
-var _checkIs = require('./check-is');
-
-Object.defineProperty(exports, 'checkIs', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_checkIs).default;
-  }
-});
-
 var _is = require('./is');
 
 Object.defineProperty(exports, 'is', {
@@ -2362,15 +2281,6 @@ Object.defineProperty(exports, 'intersection', {
   }
 });
 
-var _invoker = require('./invoker');
-
-Object.defineProperty(exports, 'invoker', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_invoker).default;
-  }
-});
-
 var _isBetween = require('./is-between');
 
 Object.defineProperty(exports, 'isBetween', {
@@ -2413,15 +2323,6 @@ Object.defineProperty(exports, 'lexSort', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_lexSort).default;
-  }
-});
-
-var _logWithTimestamp = require('./log-with-timestamp');
-
-Object.defineProperty(exports, 'logWithTimestamp', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_logWithTimestamp).default;
   }
 });
 
@@ -2629,15 +2530,6 @@ Object.defineProperty(exports, 'splitStringOn', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_splitStringOn).default;
-  }
-});
-
-var _store = require('./store');
-
-Object.defineProperty(exports, 'store', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_store).default;
   }
 });
 
