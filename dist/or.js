@@ -6,13 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 
 
 var or = function or(a) {
-  var r = false;
-  a.forEach(function (el) {
-    if (el === true) {
-      r = true;
-    }
+  return a.some(function (e) {
+    return e === true;
   });
-  return r;
 };
 
 exports.default = or;

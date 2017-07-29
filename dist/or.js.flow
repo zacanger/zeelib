@@ -7,14 +7,7 @@
  * or([ 1, 2, 3, true ]) // => true
  */
 
-const or = (a: any[]): bool => {
-  let r = false
-  a.forEach((el) => {
-    if (el === true) {
-      r = true
-    }
-  })
-  return r
-}
+const or = (a: any[]): bool =>
+  a.some((e) => e === true)
 
 export default or
