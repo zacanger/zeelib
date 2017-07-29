@@ -1,6 +1,7 @@
 /**
- * Makes a list of tuples. Each list
- * is made of the elements of each list param's
+ * Makes a list of tuples
+ *
+ * Each list is made of the elements of each list param's
  * elements at the same position
  * @param {array} xs
  * @param {array} ys

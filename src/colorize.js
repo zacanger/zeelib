@@ -4,7 +4,9 @@ import { inspect } from 'util'
 
 /**
  * Basic set of fns to add colors to console output in Node.
+ *
  * Options:
+ *
  * bold, italic, underline, inverse,
  * white, grey, black, blue, cyan, green, magenta, red, yellow
  * @example

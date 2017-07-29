@@ -1,69 +1,21 @@
-// @flow
-
-import isUndefined from './is-undefined'
-import isArray from './is-array'
-import isNull from './is-null'
-import isFunction from './is-function'
-
-const isTokenFunctionCall = (t: string): bool =>
-  t === '()'
-
-const isTokenArrayAccess = (t: string): bool =>
-  /^\[\d+\]$/.test(t)
-
-const tokenize = (s: string): string[] =>
-  s.split(/\.|(\(\))|(\[\d+?])/).filter((t) => t)
-
-function helper (obj: Object, tokens: string[], ctx: any, fnArgs: any): any {
-  if (tokens.length === 0) {
-    return obj
-  }
-
-  const currentToken = tokens[0]
-
-  if (isUndefined(obj) || isNull(obj) ||
-    (isTokenFunctionCall(currentToken) && !isFunction(obj))) {
-    return undefined
-  }
-
-  if (isTokenFunctionCall(currentToken)) {
-    return helper(
-      obj[isArray(fnArgs[0]) ? 'apply' : 'call'](ctx, fnArgs[0]),
-      tokens.slice(1),
-      null,
-      fnArgs.slice(1)
-    )
-  } else if (isTokenArrayAccess(currentToken)) {
-    return helper(
-      obj[parseInt(currentToken.substr(1), 10)],
-      tokens.slice(1),
-      isTokenFunctionCall(tokens[1]) ? obj : ctx,
-      fnArgs
-    )
-  } else {
-    return helper(
-      obj[currentToken],
-      tokens.slice(1),
-      isTokenFunctionCall(tokens[1]) ? obj : ctx,
-      fnArgs
-    )
-  }
-}
-
 /**
- * Like `_.get`: takes an object and an access string
+ * Like `_.get`: takes an access string and an optional fallback,
+ * then an object
+ * @param {string} path
+ * @param {any} fallback
+ * @param {Object} obj
+ * @returns {any}
  * @example
- * safeGet({ a: { b: { c: 'd' } } }, 'a.b.c') // => 'd'
- * safeGet({ a: { b: { c: 'd' } } }, 'a.b.e') // => undefined
+ * safeGet('a.b.c')({ a: { b: { c: 'd' } } }) // => 'd'
+ * safeGet('a.b.e')({ a: { b: { c: 'd' } } }) // => undefined
+ * safeGet('a.b.e', 'f')({ a: { b: { c: 'd' } } }) // => 'f'
  */
 
-function safeGet (obj: Object, accessStr: string): any {
-  if (isUndefined(accessStr)) {
-    return safeGet.bind(null, obj)
-  }
-
-  const funcArgs = Array.prototype.slice.call(arguments, 2)
-  return helper(obj, tokenize(accessStr), null, funcArgs)
-}
+const safeGet = (path = '', fallback) =>
+  (obj) =>
+    path.split(/[.[\]]/)
+      .filter((_) => _)
+      .reduce((o, prop) => o[prop] || '', obj) ||
+      fallback
 
 export default safeGet

@@ -8,6 +8,7 @@ const file = createWriteStream(`${__dirname}/${fn}`, { flags : 'w' })
 
 /**
  * Use instead of `console.error()`
+ *
  * Logs to file and stdout both
  * @example
  * writeError('foo')

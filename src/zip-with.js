@@ -4,6 +4,7 @@ import pair from './pair'
 
 /**
  * Takes a function and two lists
+ *
  * Returns a list made by calling the function
  * on the elements of each list in the same position
  * @example

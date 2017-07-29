@@ -2,6 +2,7 @@
 
 /**
  * Takes a sort fn and an array
+ *
  * Returns a sorted array
  * @example
  * const list = [ { id: 1 }, { id: 3 }, { id: 2 } ]

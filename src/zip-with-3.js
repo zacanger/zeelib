@@ -1,5 +1,6 @@
 /**
  * Takes a function and three lists
+ *
  * Returns an array of elements calculated by
  * calling the function on the elements of
  * each list at the same position

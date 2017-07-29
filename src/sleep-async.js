@@ -2,7 +2,8 @@
 
 /**
  * Async `sleep`. Also see `sleep`.
- * You can `await` it, or `.then` it.
+ *
+ * You can `await` it, or `.then` it
  * @example
  * const delay = await sleepAsync(1000)
  */

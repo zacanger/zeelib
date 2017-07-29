@@ -23,7 +23,7 @@ z.camelCaseToLispCase('thisString')
 You can also import individual functions.
 
 ```javascript
-import c from 'zeelib/dist/colorize'
+import c from 'zeelib/lib/colorize'
 
 console.log(c.bold(c.blue('HELLO THERE')))
 ```
@@ -31,7 +31,7 @@ console.log(c.bold(c.blue('HELLO THERE')))
 If you're using `require` with individual files you'll need to use `default`:
 
 ```javascript
-const c = require('zeelib/dist/colorize').default
+const c = require('zeelib/lib/colorize').default
 ```
 
 If you get errors when using `zeelib` in a front-end build, you may need to use
@@ -49,7 +49,7 @@ node: {
 ```
 
 Or, just import the functions you need (like
-`import words from 'zeelib/dist/words'`).
+`import words from 'zeelib/lib/words'`).
 
 See [the full documentation](https://zacanger.github.io/zeelib).
 

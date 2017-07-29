@@ -3,7 +3,8 @@ import safeGet from './safe-get'
 
 test('safeGet', (t) => {
   const o = { a: { b: { c: 'd' } } }
-  t.equal(safeGet(o, 'a.b.c'), 'd')
-  t.equal(safeGet(o, 'a.b.e'), undefined)
+  t.equal(safeGet('a.b.c')(o), 'd', 'works')
+  t.equal(safeGet('a.b.e')(o), undefined, 'returns undefined if not there')
+  t.equal(safeGet('a.b.e', 'f')(o), 'f', 'returns fallback')
   t.end()
 })

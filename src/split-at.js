@@ -5,6 +5,7 @@ import drop from './drop'
 
 /**
  * Like Haskell's `splitAt`
+ *
  * splitAt n xs returns a tuple xs prefix of length n
  * and second element is remainder of list
  * @example

@@ -1,17 +1,19 @@
+// @flow
+
 import { homedir } from 'os'
 const { env } = process
 
 /**
  * Get current user's home directory
- * @returns {string} home dir
  * @example
- * getUserHome()
+ * getUserHome() // => /home/z
  */
 
-const getUserHome = () =>
+const getUserHome = (): string =>
   env.HOME ||
   env.USERPROFILE ||
-  env.HOMEDRIVE + env.HOMEPATH ||
-  homedir()
+  homedir() ||
+  (env.HOMEDRIVE && env.HOMEPATH && env.HOMEDRIVE + env.HOMEPATH) ||
+  ''
 
 export default getUserHome
