@@ -4,6 +4,7 @@ import pair from './pair'
 
 /**
  * Makes a list of tuples
+ *
  * Each tuple is the elements of each passed array
  * at the same position
  * @example

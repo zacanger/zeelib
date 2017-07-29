@@ -485,16 +485,6 @@
               
                 
                 <li><a
-                  href='#normalizetext'
-                  class="">
-                  normalizeText
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#pascalcasetocamelcase'
                   class="">
                   pascalCaseToCamelCase
@@ -3378,8 +3368,8 @@ getCookie(<span class="hljs-string">'foo'</span>) <span class="hljs-comment">// 
   </div>
   
 
-  <p>Find out how many of a matching element is on the page
-If second param is truthy, will look by classname instead of tagname</p>
+  <p>Find out how many of a matching element is on the page</p>
+<p>If second param is truthy, will look by classname instead of tagname</p>
 
 
   <div class='pre p1 fill-light mt0'>getLengthOfElements</div>
@@ -4359,8 +4349,7 @@ if they exist</p>
   </div>
   
 
-  <p>Adds commas in correct place in number
-addCommasToNumber(1000000) // => '1,000,000'</p>
+  <p>Adds commas in correct place in number</p>
 
 
   <div class='pre p1 fill-light mt0'>addCommasToNumber</div>
@@ -4400,6 +4389,12 @@ addCommasToNumber(1000000) // => '1,000,000'</p>
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>addCommasToNumber(<span class="hljs-number">1000000</span>) <span class="hljs-comment">// =&gt; '1,000,000'</span></pre>
+    
   
 
   
@@ -5264,7 +5259,7 @@ addCommasToNumber(1000000) // => '1,000,000'</p>
   </div>
   
 
-  <p>Takes search string and returns an object.</p>
+  <p>Takes search string and returns an object</p>
 
 
   <div class='pre p1 fill-light mt0'>getQueryFromSearch</div>
@@ -5774,8 +5769,8 @@ a mobile or tablet user agent</p>
   </div>
   
 
-  <p>Retuns true if email is valid
-For a more complete implementation, please see Mail::RFC822::Address</p>
+  <p>Retuns true if email is valid</p>
+<p>For a more complete implementation, please see Mail::RFC822::Address</p>
 
 
   <div class='pre p1 fill-light mt0'>isValidEmail</div>
@@ -6186,77 +6181,6 @@ For a more complete implementation, please see Mail::RFC822::Address</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>lispCaseToSnakeCase(<span class="hljs-string">'foo-bar'</span>) <span class="hljs-comment">// =&gt; 'foo_bar'</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='normalizetext'>
-      normalizeText
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Normalizes text</p>
-
-
-  <div class='pre p1 fill-light mt0'>normalizeText</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>text</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>normalizeText(<span class="hljs-string">'Asdf 0  0----  '</span>) <span class="hljs-comment">// =&gt; 'asdf 0 0'</span></pre>
     
   
 
@@ -8150,9 +8074,9 @@ truncate(<span class="hljs-string">'asdf asdf asdf asdf'</span>, <span class="hl
   </div>
   
 
-  <p>Basic set of fns to add colors to console output in Node.
-Options:
-bold, italic, underline, inverse,
+  <p>Basic set of fns to add colors to console output in Node.</p>
+<p>Options:</p>
+<p>bold, italic, underline, inverse,
 white, grey, black, blue, cyan, green, magenta, red, yellow</p>
 
 
@@ -10129,8 +10053,8 @@ makeFileIfNoFile(<span class="hljs-string">'foo.txt'</span>, <span class="hljs-s
   </div>
   
 
-  <p>Very simple 404 handler for Node
-Takes a path to an html file</p>
+  <p>Very simple 404 handler for Node</p>
+<p>Takes a path to an html file</p>
 
 
   <div class='pre p1 fill-light mt0'>notFound</div>
@@ -10576,8 +10500,8 @@ Takes a path to an html file</p>
   </div>
   
 
-  <p>Create a simple y/n prompt for the terminal
-Adapted from create-react-app's prompt</p>
+  <p>Create a simple y/n prompt for the terminal</p>
+<p>Adapted from create-react-app's prompt</p>
 
 
   <div class='pre p1 fill-light mt0'>termPrompt</div>
@@ -10731,8 +10655,8 @@ prompt(<span class="hljs-string">'Do the thing?'</span>, <span class="hljs-liter
   </div>
   
 
-  <p>Use instead of <code>console.error()</code>
-Logs to file and stdout both</p>
+  <p>Use instead of <code>console.error()</code></p>
+<p>Logs to file and stdout both</p>
 
 
   <div class='pre p1 fill-light mt0'>writeError</div>
@@ -12164,8 +12088,8 @@ concatMap(f, nested) <span class="hljs-comment">// =&gt; [ 1, 2, 3, [ 4, 5, 6 ],
   
 
   <p>Takes a function and returns a function that takes
-any number of arguments
-Produces a curried function</p>
+any number of arguments</p>
+<p>Produces a curried function</p>
 
 
   <div class='pre p1 fill-light mt0'>curry</div>
@@ -12329,8 +12253,7 @@ curry(addThree)(<span class="hljs-number">1</span>)(<span class="hljs-number">1<
 
   <p>The opposite of <code>takeWhile</code>:
 takes a predicate and array and returns an
-array of the elements that didn't pass the predicate
-dropWhile(lessThanThree, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]</p>
+array of the elements that didn't pass the predicate</p>
 
 
   <div class='pre p1 fill-light mt0'>dropWhile</div>
@@ -12378,6 +12301,12 @@ dropWhile(lessThanThree, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]</p>
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>dropWhile(lessThanThree, [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span> ]) <span class="hljs-comment">// =&gt; [ 3, 4 ]</span></pre>
+    
   
 
   
@@ -12808,8 +12737,8 @@ filter(lessThanThree, { <span class="hljs-attr">a</span>: <span class="hljs-numb
   </div>
   
 
-  <p>Takes a predicate and an array
-Returns either first element that passes predicate,
+  <p>Takes a predicate and an array</p>
+<p>Returns either first element that passes predicate,
 or null</p>
 
 
@@ -13300,8 +13229,7 @@ etc.</p>
   </div>
   
 
-  <p>Collect an an array of objects by string key
-cred: gh:uniqname</p>
+  <p>Collect an an array of objects by string key</p>
 
 
   <div class='pre p1 fill-light mt0'>groupBy</div>
@@ -13511,8 +13439,8 @@ id() <span class="hljs-comment">// =&gt; undefined</span></pre>
   </div>
   
 
-  <p>Like Clojure's <code>juxt</code>
-Takes a list of functions and returns a fn that is the juxtaposition
+  <p>Like Clojure's <code>juxt</code></p>
+<p>Takes a list of functions and returns a fn that is the juxtaposition
 of those fns</p>
 
 
@@ -13637,8 +13565,8 @@ of those fns</p>
   </div>
   
 
-  <p>Get length of element
-Works for array, object, string, set, map, and function</p>
+  <p>Get length of element</p>
+<p>Works for array, object, string, set, map, and function</p>
 
 
   <div class='pre p1 fill-light mt0'>length</div>
@@ -14158,8 +14086,8 @@ not(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>) <spa
   </div>
   
 
-  <p>The opposite of <code>elem</code>
-Returns true if the element is not in the string or array</p>
+  <p>The opposite of <code>elem</code></p>
+<p>Returns true if the element is not in the string or array</p>
 
 
   <div class='pre p1 fill-light mt0'>notElem</div>
@@ -15205,8 +15133,8 @@ and all elements that did not</p>
   </div>
   
 
-  <p>Like Haskell's <code>splitAt</code>
-splitAt n xs returns a tuple xs prefix of length n
+  <p>Like Haskell's <code>splitAt</code></p>
+<p>splitAt n xs returns a tuple xs prefix of length n
 and second element is remainder of list</p>
 
 
@@ -15948,8 +15876,8 @@ and returns three lists</p>
   </div>
   
 
-  <p>Makes a list of tuples
-Each tuple is the elements of each passed array
+  <p>Makes a list of tuples</p>
+<p>Each tuple is the elements of each passed array
 at the same position</p>
 
 
@@ -16029,8 +15957,8 @@ at the same position</p>
   </div>
   
 
-  <p>Makes a list of tuples. Each list
-is made of the elements of each list param's
+  <p>Makes a list of tuples</p>
+<p>Each list is made of the elements of each list param's
 elements at the same position</p>
 
 
@@ -16121,8 +16049,8 @@ elements at the same position</p>
   </div>
   
 
-  <p>Takes a function and two lists
-Returns a list made by calling the function
+  <p>Takes a function and two lists</p>
+<p>Returns a list made by calling the function
 on the elements of each list in the same position</p>
 
 
@@ -16210,8 +16138,8 @@ on the elements of each list in the same position</p>
   </div>
   
 
-  <p>Takes a function and three lists
-Returns an array of elements calculated by
+  <p>Takes a function and three lists</p>
+<p>Returns an array of elements calculated by
 calling the function on the elements of
 each list at the same position</p>
 
@@ -20570,8 +20498,8 @@ hh:mm:ss
   </div>
   
 
-  <p>Adds ordinal onto integer
-Works up to 999</p>
+  <p>Adds ordinal onto integer</p>
+<p>Works up to 999</p>
 
 
   <div class='pre p1 fill-light mt0'>getOrdinal</div>
@@ -21872,11 +21800,11 @@ lte(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <spa
   </div>
   
 
-  <p>Takes a function
-Can be called with any number of arguments
-If no arguments, or if any arguments are null,
-well return undefined
-Otherwise, will call the function with whatever arguments passed</p>
+  <p>Takes a function</p>
+<p>Can be called with any number of arguments</p>
+<p>If no arguments, or if any arguments are null,
+will return undefined</p>
+<p>Otherwise, will call the function with whatever arguments passed</p>
 
 
   <div class='pre p1 fill-light mt0'>maybeArgs(fn: function (): any): any</div>
@@ -22378,9 +22306,11 @@ nco(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <spa
   </div>
   
 
-  <p>Range function. Takes a start and and end,
+  <p>Range function</p>
+<p>Takes a start and and end,
 and a step (defaults to 1). Works for numbers and
-latin characters. This is <em>inclusive</em>. That is:
+latin characters.</p>
+<p>This is <em>inclusive</em>. That is:
 <code>1..10,2 == 0,2,4,6,8,10</code></p>
 
 
@@ -22621,7 +22551,7 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
   
 
   <p>Like <code>_.get</code>: takes an access string and an optional fallback,
-then an object.</p>
+then an object</p>
 
 
   <div class='pre p1 fill-light mt0'>safeGet</div>
@@ -22714,9 +22644,9 @@ safeGet(<span class="hljs-string">'a.b.e'</span>, <span class="hljs-string">'f'<
   </div>
   
 
-  <p>Takes a width, height, maxWidth, and maxHeight
-Returns an object that tells you the largest you can
-scale to.</p>
+  <p>Takes a width, height, maxWidth, and maxHeight</p>
+<p>Returns an object that tells you the largest you can
+scale to</p>
 
 
   <div class='pre p1 fill-light mt0'>scaleToFit</div>
@@ -23024,8 +22954,8 @@ scale to.</p>
   </div>
   
 
-  <p>Async <code>sleep</code>. Also see <code>sleep</code>.
-You can <code>await</code> it, or <code>.then</code> it.</p>
+  <p>Async <code>sleep</code>. Also see <code>sleep</code>.</p>
+<p>You can <code>await</code> it, or <code>.then</code> it</p>
 
 
   <div class='pre p1 fill-light mt0'>sleepAsync</div>
@@ -23183,8 +23113,8 @@ You can <code>await</code> it, or <code>.then</code> it.</p>
   </div>
   
 
-  <p>Takes a sort fn and an array
-Returns a sorted array</p>
+  <p>Takes a sort fn and an array</p>
+<p>Returns a sorted array</p>
 
 
   <div class='pre p1 fill-light mt0'>sortBy</div>

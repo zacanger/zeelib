@@ -4,6 +4,7 @@ import { createInterface } from 'readline'
 
 /**
  * Create a simple y/n prompt for the terminal
+ *
  * Adapted from create-react-app's prompt
  * @example
  * prompt('Do the thing?') // with 'no' default

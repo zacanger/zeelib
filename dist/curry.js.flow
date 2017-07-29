@@ -1,6 +1,7 @@
 /**
  * Takes a function and returns a function that takes
  * any number of arguments
+ *
  * Produces a curried function
  * @param {function} fn
  * @param {any} args

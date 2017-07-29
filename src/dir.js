@@ -9,6 +9,10 @@ import isNode from './is-node'
  */
 
 const dir = (obj: Object): void =>
-  isNode() ? console.dir(obj, { colors: true }) : console.log(obj)
+  isNode()
+    ? console.dir(obj, { colors: true })
+    : typeof console.dir === 'function'
+      ? console.dir(obj)
+      : console.log(obj)
 
 export default dir

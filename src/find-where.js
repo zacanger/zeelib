@@ -4,6 +4,7 @@ import filter from './filter'
 
 /**
  * Takes a predicate and an array
+ *
  * Returns either first element that passes predicate,
  * or null
  * @example

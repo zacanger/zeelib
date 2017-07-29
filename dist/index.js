@@ -418,15 +418,6 @@ Object.defineProperty(exports, 'lispCaseToSnakeCase', {
   }
 });
 
-var _normalizeText = require('./normalize-text');
-
-Object.defineProperty(exports, 'normalizeText', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_normalizeText).default;
-  }
-});
-
 var _pascalCaseToCamelCase = require('./pascal-case-to-camel-case');
 
 Object.defineProperty(exports, 'pascalCaseToCamelCase', {

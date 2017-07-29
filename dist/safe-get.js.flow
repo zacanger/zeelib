@@ -1,6 +1,6 @@
 /**
  * Like `_.get`: takes an access string and an optional fallback,
- * then an object.
+ * then an object
  * @param {string} path
  * @param {any} fallback
  * @param {Object} obj

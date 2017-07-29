@@ -3,6 +3,7 @@
     fallback, then the object.
   * Renamed `collectBy` to `groupBy`
   * Removed deprecated functions:
+    * `normalizeText`
     * `arity` (use `length`)
     * `checkIs` (use `is` with your own error if you need one)
     * `fixWindowsSlashes` (use the `slash` lib)

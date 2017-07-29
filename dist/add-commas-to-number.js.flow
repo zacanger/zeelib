@@ -2,6 +2,7 @@
 
 /**
  * Adds commas in correct place in number
+ * @example
  * addCommasToNumber(1000000) // => '1,000,000'
  */
 

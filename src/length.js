@@ -9,6 +9,7 @@ import isFunction from './is-function'
 
 /**
  * Get length of element
+ *
  * Works for array, object, string, set, map, and function
  * @example
  * length('foo') // => 3

@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * Takes search string and returns an object.
+ * Takes search string and returns an object
  * @example
  * getQueryFromSearch('?foo-bar') // { foo: 'bar' }
  */

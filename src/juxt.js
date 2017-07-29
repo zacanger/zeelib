@@ -10,6 +10,7 @@ const map = (f: any, a: any[]): any => a.map(f)
 
 /**
  * Like Clojure's `juxt`
+ *
  * Takes a list of functions and returns a fn that is the juxtaposition
  * of those fns
  * @example
