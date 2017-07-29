@@ -16,6 +16,7 @@
     "doc": "documentation build src/index.js -f html -o docs",
     "postbuild": "npm run copy-flow && npm run doc",
     "prebuild": "npm run clean && npm run test && fixpack",
+    "prepublishOnly": "npm run build",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
     "test:cover": "flow-coverage-report -i 'src/*.js' -x 'src/*.test.js' -t text",
     "test:flow": "flow && flow stop",

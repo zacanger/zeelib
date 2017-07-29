@@ -74,3 +74,4 @@ Temporary Items
 .vscode
 x/
 !yarn.lock
+/dist
