@@ -1,6 +1,7 @@
 * `2.0.0` &mdash; **2017-07-30**
-  * Refactored safeGet, which now takes an access string first and an optional
+  * Refactored `safeGet`, which now takes an access string first and an optional
     fallback, then the object.
+  * Renamed `collectBy` to `groupBy`
   * Removed deprecated functions:
     * `arity` (use `length`)
     * `fixWindowsSlashes` (use the `slash` lib)

@@ -8,7 +8,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var collectBy = function collectBy(p) {
+var groupBy = function groupBy(p) {
   return function (a) {
     return a.reduce(function (c, i) {
       return _extends({}, c, _defineProperty({}, i[p], i));
@@ -16,4 +16,4 @@ var collectBy = function collectBy(p) {
   };
 };
 
-exports.default = collectBy;
+exports.default = groupBy;

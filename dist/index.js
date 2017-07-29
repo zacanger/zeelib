@@ -283,15 +283,6 @@ Object.defineProperty(exports, 'escapeHtml', {
   }
 });
 
-var _fixWindowsSlashes = require('./fix-windows-slashes');
-
-Object.defineProperty(exports, 'fixWindowsSlashes', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_fixWindowsSlashes).default;
-  }
-});
-
 var _formatMs = require('./format-ms');
 
 Object.defineProperty(exports, 'formatMs', {
@@ -370,15 +361,6 @@ Object.defineProperty(exports, 'getUid8', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_getUid2).default;
-  }
-});
-
-var _inlineString = require('./inline-string');
-
-Object.defineProperty(exports, 'inlineString', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_inlineString).default;
   }
 });
 
@@ -1084,15 +1066,6 @@ Object.defineProperty(exports, 'termPrompt', {
   }
 });
 
-var _timeRequire = require('./time-require');
-
-Object.defineProperty(exports, 'timeRequire', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_timeRequire).default;
-  }
-});
-
 var _watch = require('./watch');
 
 Object.defineProperty(exports, 'watch', {
@@ -1165,15 +1138,6 @@ Object.defineProperty(exports, 'apply', {
   }
 });
 
-var _arity = require('./arity');
-
-Object.defineProperty(exports, 'arity', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_arity).default;
-  }
-});
-
 var _caar = require('./caar');
 
 Object.defineProperty(exports, 'caar', {
@@ -1234,15 +1198,6 @@ Object.defineProperty(exports, 'clone', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_clone).default;
-  }
-});
-
-var _collectBy = require('./collect-by');
-
-Object.defineProperty(exports, 'collectBy', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_collectBy).default;
   }
 });
 
@@ -1414,6 +1369,15 @@ Object.defineProperty(exports, 'foldr1', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_foldr2).default;
+  }
+});
+
+var _groupBy = require('./group-by');
+
+Object.defineProperty(exports, 'groupBy', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_groupBy).default;
   }
 });
 
@@ -2443,15 +2407,6 @@ Object.defineProperty(exports, 'lesser', {
   }
 });
 
-var _levenshteinDistance = require('./levenshtein-distance');
-
-Object.defineProperty(exports, 'levenshteinDistance', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_levenshteinDistance).default;
-  }
-});
-
 var _lexSort = require('./lex-sort');
 
 Object.defineProperty(exports, 'lexSort', {
@@ -2485,15 +2440,6 @@ Object.defineProperty(exports, 'lte', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_lte).default;
-  }
-});
-
-var _makeThunk = require('./make-thunk');
-
-Object.defineProperty(exports, 'makeThunk', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_makeThunk).default;
   }
 });
 
@@ -2629,15 +2575,6 @@ Object.defineProperty(exports, 'shuffle', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_shuffle).default;
-  }
-});
-
-var _sizeOf = require('./size-of');
-
-Object.defineProperty(exports, 'sizeOf', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_sizeOf).default;
   }
 });
 

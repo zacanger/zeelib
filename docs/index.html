@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 1.1.16 | Documentation</title>
+  <title>zeelib 1.1.17 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>1.1.16</code></div>
+          <div class='mb1'><code>1.1.17</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -418,16 +418,6 @@
                   href='#getuid8'
                   class="">
                   getUid8
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#inlinestring'
-                  class="">
-                  inlineString
                   
                 </a>
                 
@@ -1365,16 +1355,6 @@
               
                 
                 <li><a
-                  href='#collectby'
-                  class="">
-                  collectBy
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#compose'
                   class="">
                   compose
@@ -1558,6 +1538,16 @@
                   href='#foldr1'
                   class="">
                   foldr1
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#groupby'
+                  class="">
+                  groupBy
                   
                 </a>
                 
@@ -5829,77 +5819,6 @@ getRandomString(<span class="hljs-number">32</span>)</pre>
     
       
       <pre class='p1 overflow-auto round fill-light'>getUid8()</pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='inlinestring'>
-      inlineString
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Turns all newlines into a single space</p>
-
-
-  <div class='pre p1 fill-light mt0'>inlineString</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>str</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>inlineString(<span class="hljs-string">'asdfasdf \n\n asdfasdf'</span>) <span class="hljs-comment">// =&gt; 'asdfasdf asdfasdf'</span></pre>
     
   
 
@@ -12489,74 +12408,6 @@ any(lessThanThree, [ <span class="hljs-number">4</span>, <span class="hljs-numbe
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='collectby'>
-      collectBy
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Collect an an array of objects by string key
-cred: gh:uniqname</p>
-
-
-  <div class='pre p1 fill-light mt0'>collectBy</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>p</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> data = [ { <span class="hljs-attr">foo</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'baz'</span> }, { <span class="hljs-attr">foo</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'quux'</span> }, { <span class="hljs-attr">foo</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'whatever'</span> } ]
-collectBy(<span class="hljs-string">'foo'</span>)(data) <span class="hljs-comment">// =&gt; { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
     <h3 class='fl m0' id='compose'>
       compose
     </h3>
@@ -14051,6 +13902,74 @@ etc.</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>foldr1(increment, [ <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span> ]) <span class="hljs-comment">// =&gt; 3</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='groupby'>
+      groupBy
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Collect an an array of objects by string key
+cred: gh:uniqname</p>
+
+
+  <div class='pre p1 fill-light mt0'>groupBy</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>p</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> data = [ { <span class="hljs-attr">foo</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'baz'</span> }, { <span class="hljs-attr">foo</span>: <span class="hljs-string">'b'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'quux'</span> }, { <span class="hljs-attr">foo</span>: <span class="hljs-string">'a'</span>, <span class="hljs-attr">bar</span>: <span class="hljs-string">'whatever'</span> } ]
+groupBy(<span class="hljs-string">'foo'</span>)(data) <span class="hljs-comment">// =&gt; { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }</span></pre>
     
   
 
@@ -23563,10 +23482,11 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
   </div>
   
 
-  <p>Like <code>_.get</code>: takes an object and an access string</p>
+  <p>Like <code>_.get</code>: takes an access string and an optional fallback,
+then an object.</p>
 
 
-  <div class='pre p1 fill-light mt0'>safeGet(obj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, accessStr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): any</div>
+  <div class='pre p1 fill-light mt0'>safeGet</div>
   
   
 
@@ -23583,7 +23503,8 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+            <span class='code bold'>path</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+            = <code>&#39;&#39;</code>)</code>
 	    
           </div>
           
@@ -23591,7 +23512,15 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>accessStr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+            <span class='code bold'>fallback</span> <code class='quiet'>(<a href="#any">any</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>obj</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
 	    
           </div>
           
@@ -23605,7 +23534,10 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>
+      <code><a href="#any">any</a></code>:
+        
+
+      
     
   
 
@@ -23615,8 +23547,9 @@ range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>safeGet({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> } } }, <span class="hljs-string">'a.b.c'</span>) <span class="hljs-comment">// =&gt; 'd'</span>
-safeGet({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> } } }, <span class="hljs-string">'a.b.e'</span>) <span class="hljs-comment">// =&gt; undefined</span></pre>
+      <pre class='p1 overflow-auto round fill-light'>safeGet(<span class="hljs-string">'a.b.c'</span>)({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> } } }) <span class="hljs-comment">// =&gt; 'd'</span>
+safeGet(<span class="hljs-string">'a.b.e'</span>)({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> } } }) <span class="hljs-comment">// =&gt; undefined</span>
+safeGet(<span class="hljs-string">'a.b.e'</span>, <span class="hljs-string">'f'</span>)({ <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> } } }) <span class="hljs-comment">// =&gt; 'f'</span></pre>
     
   
 
