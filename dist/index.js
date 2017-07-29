@@ -2173,15 +2173,6 @@ Object.defineProperty(exports, 'getMethodsOf', {
   }
 });
 
-var _getNiceTime = require('./get-nice-time');
-
-Object.defineProperty(exports, 'getNiceTime', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_getNiceTime).default;
-  }
-});
-
 var _getNow = require('./get-now');
 
 Object.defineProperty(exports, 'getNow', {
@@ -2413,15 +2404,6 @@ Object.defineProperty(exports, 'range', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_range).default;
-  }
-});
-
-var _reverseDigits = require('./reverse-digits');
-
-Object.defineProperty(exports, 'reverseDigits', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_reverseDigits).default;
   }
 });
 

@@ -2435,16 +2435,6 @@
               
                 
                 <li><a
-                  href='#getnicetime'
-                  class="">
-                  getNiceTime
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
                   href='#getnow'
                   class="">
                   getNow
@@ -2698,16 +2688,6 @@
                   href='#range'
                   class="">
                   range
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#reversedigits'
-                  class="">
-                  reverseDigits
                   
                 </a>
                 
@@ -9399,10 +9379,7 @@ Node modules</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        home dir
-
-      
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
     
   
 
@@ -9412,7 +9389,7 @@ Node modules</p>
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>getUserHome()</pre>
+      <pre class='p1 overflow-auto round fill-light'>getUserHome() <span class="hljs-comment">// =&gt; /home/z</span></pre>
     
   
 
@@ -11053,7 +11030,7 @@ and([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <s
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>f</span> <code class='quiet'>(any)</code>
+            <span class='code bold'>f</span> <code class='quiet'>(function (any): any)</code>
 	    
           </div>
           
@@ -11061,25 +11038,8 @@ and([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <s
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>a</span> <code class='quiet'>(any)</code>
+            <span class='code bold'>a</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
 	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>predicate</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>array</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
-	    of anything
-
           </div>
           
         </div>
@@ -11092,10 +11052,7 @@ and([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <s
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
-        
-
-      
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
     
   
 
@@ -20367,71 +20324,6 @@ getMethodsOf(o) <span class="hljs-comment">// =&gt; [ 'foo', 'bar' ]</span></pre
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='getnicetime'>
-      getNiceTime
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Get a nicely-formatted time string</p>
-
-
-  <div class='pre p1 fill-light mt0'>getNiceTime</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
-        '
-[
-hh:mm:ss
-]
-'
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>getNiceTime()</pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
     <h3 class='fl m0' id='getnow'>
       getNow
     </h3>
@@ -22379,80 +22271,6 @@ latin characters.</p>
       <pre class='p1 overflow-auto round fill-light'>range(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>) <span class="hljs-comment">// =&gt; [ 1, 2, 3, 4 ]</span>
 range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// =&gt; [ 1, 4, 7, 10 ]</span>
 range(<span class="hljs-string">'z'</span>, <span class="hljs-string">'q'</span>) <span class="hljs-comment">// &gt; [ 'r', 's', 't', 'u', 'v', 'w', 'x', 'y' ]</span></pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='reversedigits'>
-      reverseDigits
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Reverse digits with correct sign handling</p>
-
-
-  <div class='pre p1 fill-light mt0'>reverseDigits</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>num</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
-        
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>reverseDigits(<span class="hljs-number">-123</span>) <span class="hljs-comment">// -321</span></pre>
     
   
 

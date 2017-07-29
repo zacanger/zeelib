@@ -11,7 +11,7 @@ var _process = process,
 
 
 var getUserHome = function getUserHome() {
-  return env.HOME || env.USERPROFILE || env.HOMEDRIVE + env.HOMEPATH || (0, _os.homedir)();
+  return env.HOME || env.USERPROFILE || (0, _os.homedir)() || env.HOMEDRIVE && env.HOMEPATH && env.HOMEDRIVE + env.HOMEPATH || '';
 };
 
 exports.default = getUserHome;

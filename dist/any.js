@@ -6,12 +6,13 @@ Object.defineProperty(exports, "__esModule", {
 
 
 var any = function any(f, a) {
-  for (var i in a) {
-    if (f(a[i]) === true) {
-      return true;
+  var r = false;
+  a.forEach(function (e) {
+    if (f(e) === true) {
+      r = true;
     }
-  }
-  return false;
+  });
+  return r;
 };
 
 exports.default = any;
