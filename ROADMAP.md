@@ -1,0 +1,24 @@
+Roadmap/TODO list (for no release in particular):
+
+- [ ] Add tests for all functions
+- [ ] Remove all weak types
+- [ ] Allow for `import foo from 'zeelib/foo'` (instead of `import foo from 'zeelib/dist/foo'`)
+- [ ] Finish adding Flow
+  - [ ] abbrev
+  - [ ] keep
+  - [ ] curry
+  - [ ] each
+  - [ ] getelementtext
+  - [ ] getterminal*
+  - [ ] range
+  - [ ] zipwith3
+  - [ ] zip3
+  - [ ] any
+  - [ ] safeget
+- [ ] Move all function declarations to expression
+- [ ] Move all `arguments` to `...args`
+- [ ] Remove all for loops, for..in/of, and forEach, when possible
+- [ ] Make TypeScript types available for consumers
+- [ ] Doc
+  - [ ] TOC sections
+  - [ ] Fix all functions that are wrapped in `curry` so documentation.js actually knows what to do with them
