@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 2.0.0 | Documentation</title>
+  <title>zeelib 2.0.1 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>2.0.0</code></div>
+          <div class='mb1'><code>2.0.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -2598,6 +2598,16 @@
                   href='#lte'
                   class="">
                   lte
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mapobject'
+                  class="">
+                  mapObject
                   
                 </a>
                 
@@ -21595,6 +21605,96 @@ leftPad(<span class="hljs-string">'asdf'</span>, <span class="hljs-number">8</sp
       
       <pre class='p1 overflow-auto round fill-light'>lte(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span>
 lte(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mapobject'>
+      mapObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Map for objects</p>
+
+
+  <div class='pre p1 fill-light mt0'>mapObject</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>f</span> <code class='quiet'>(function (any, any, any): any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>o</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(any
+            = <code>this</code>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> f = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> a + <span class="hljs-string">' world'</span>
+<span class="hljs-keyword">const</span> d = { <span class="hljs-attr">a</span>: <span class="hljs-string">'hello'</span>, <span class="hljs-attr">b</span>: <span class="hljs-string">'sup'</span> }
+mapObject(f, d) <span class="hljs-comment">// =&gt; { a: 'hello world', b: 'sup world' }</span></pre>
     
   
 
