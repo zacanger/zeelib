@@ -8,6 +8,8 @@ A small lib of FP, Node, and DOM utils.
 
 [npm](https://npmjs.com/package/zeelib)
 
+[Roadmap](./ROADMAP.md)
+
 --------
 
 ## Usage
