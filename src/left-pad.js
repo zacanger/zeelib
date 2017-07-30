@@ -2,6 +2,7 @@
 
 /**
  * It's just left-pad
+ *
  * Yes, really
  * @example
  * leftPad('asdf', 8) // => '    asdf'
