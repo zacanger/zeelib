@@ -45,7 +45,7 @@
     "babel-preset-env": "1.6.0",
     "babel-preset-stage-3": "6.24.1",
     "babel-tape-runner": "2.0.1",
-    "documentation": "5.0.1",
+    "documentation": "5.1.0",
     "eslint": "4.3.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-babel": "4.1.2",
@@ -61,7 +61,7 @@
     "flow-copy-source": "1.2.0",
     "flow-coverage-report": "0.3.0",
     "tap-spec": "4.1.1",
-    "tape": "4.7.0"
+    "tape": "4.8.0"
   },
   "files": [
     "lib"
