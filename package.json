@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of FP, Node, and DOM utils.",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
