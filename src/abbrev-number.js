@@ -1,13 +1,7 @@
 // @flow
 
-/**
- * Shortens a number and adds appropriate suffix
- * (K, M, B)
- * @example
- * abbrevNumber(10000) // => '100K'
- */
-
 const abbrevNumber = (n: number): string => {
+  console.error('`abbrevNumber` is deprecated. Please use the `pretty-bytes` lib instead.')
   if (n < 1000) return `${n}`
   if (n < 10000) return (Math.round(n / 100) / 10) + 'K'
   if (n < 1000000) return Math.round(n / 1000) + 'K'
