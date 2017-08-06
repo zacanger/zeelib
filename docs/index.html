@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 2.0.6 | Documentation</title>
+  <title>zeelib 2.0.7 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>2.0.6</code></div>
+          <div class='mb1'><code>2.0.7</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1388,6 +1388,16 @@
                   href='#findwhere'
                   class="">
                   findWhere
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#flatmap'
+                  class="">
+                  flatMap
                   
                 </a>
                 
@@ -12678,6 +12688,90 @@ or null</p>
       
       <pre class='p1 overflow-auto round fill-light'>findWhere(lessThanThree, [ <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span> ]) <span class="hljs-comment">// =&gt; null</span>
 findWhere(lessThanThree, [ <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span> ]) <span class="hljs-comment">// =&gt; 2</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='flatmap'>
+      flatMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Simple flatMap</p>
+
+
+  <div class='pre p1 fill-light mt0'>flatMap</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>f</span> <code class='quiet'>(function (any): any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>a</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;any></code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> ns = [
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Zacary'</span>, <span class="hljs-attr">nicks</span>: [ <span class="hljs-string">'Zac'</span>, <span class="hljs-string">'Zac Anger'</span> ] },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'Foo'</span>, <span class="hljs-attr">nicks</span>: [ <span class="hljs-string">'Baz'</span>, <span class="hljs-string">'Bar'</span> ] }
+]
+<span class="hljs-keyword">const</span> f = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> [a.name].concat(a.nicks)
+flatMap(f, ns) <span class="hljs-comment">// =&gt; [ 'Zacary', 'Zac', 'Zac Anger', 'Foo', 'Baz', 'Bar' ]</span></pre>
     
   
 
