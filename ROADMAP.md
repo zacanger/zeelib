@@ -1,5 +1,6 @@
 Roadmap/TODO list (for no release in particular):
 
+- [ ] Switch to using [jsdoctap](http://npm.im/jsdoctap) for tests
 - [ ] Add tests for all functions
 - [ ] Remove all weak types
 - [ ] Allow for `import foo from 'zeelib/foo'` (instead of `import foo from 'zeelib/dist/foo'`)
