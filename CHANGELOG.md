@@ -1,3 +1,7 @@
+* `3.0.0` &mdash; **2017-08-13** *breaking*
+  * Changed API of `flip`; now accepts any amount of args, and is not curried.
+    Use `curry(flip)` to get the old API.
+  * Removed previously deprecated `abbrevNumber`
 * `2.0.5` &mdash; **2017-08-04**
   * Deprecated `abbrevNumber` (use the `pretty-bytes` lib)
 * `2.0.0` &mdash; **2017-07-29** &mdash; *breaking*

@@ -21,7 +21,6 @@ export { default as setAttribute } from './set-attribute'
 export { default as setDescription } from './set-description'
 // regex, string utils, etc.
 export { default as abbrev } from './abbrev'
-export { default as abbrevNumber } from './abbrev-number'
 export { default as addCommasToNumber } from './add-commas-to-number'
 export { default as addNewlines } from './add-newlines'
 export { default as alphaNumericOnly } from './alpha-numeric-only'
