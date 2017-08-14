@@ -1,3 +1,5 @@
+* `3.0.1` &mdash; **2017-08-13**
+  * Deprecate `findIndex`; use `indexOf`
 * `3.0.0` &mdash; **2017-08-13** *breaking*
   * Changed API of `flip`; now accepts any amount of args, and is not curried.
     Use `curry(flip)` to get the old API.
