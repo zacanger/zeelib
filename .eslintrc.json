@@ -1,24 +1,11 @@
 {
-  "extends": [ "standard", "plugin:flowtype/recommended" ],
-  "plugins": [ "babel", "flowtype", "flowtype-errors", "unicorn" ],
+  "extends": [ "eslint-config-jane", "plugin:flowtype/recommended" ],
+  "plugins": [ "babel", "flowtype", "flowtype-errors" ],
   "parser": "babel-eslint",
   "rules": {
-    "block-spacing": [ 0 ],
-    "comma-style": [ 1, "last" ],
-    "key-spacing": [ 0 ],
-    "no-multi-spaces": [ 1 ],
-    "object-curly-spacing": [ 1, "always" ],
-    "one-var": [ 0 ],
-    "arrow-parens": [ "warn", "always" ],
-    "no-mixed-operators": [ 0 ],
     "flowtype-errors/show-errors": [ 2 ],
     "flowtype/boolean-style": [ 2, "bool" ],
     "flowtype/no-weak-types": [ 0 ],
-    "flowtype/no-types-missing-file-annotation": [ 0 ],
-    "unicorn/filename-case": [ 2, { "case": "kebabCase" } ],
-    "unicorn/no-array-instanceof": [ 1 ],
-    "unicorn/prefer-starts-ends-with": [ 1 ],
-    "unicorn/prefer-type-error": [ 1 ],
-    "linebreak-style": [ 2, "unix" ]
+    "flowtype/no-types-missing-file-annotation": [ 0 ]
   }
 }
