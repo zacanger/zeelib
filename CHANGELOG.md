@@ -1,3 +1,5 @@
+* `3.0.4` &mdash; **2017-08-23**
+  * Deprecate `ago`
 * `3.0.1` &mdash; **2017-08-13**
   * Deprecate `findIndex`; use `indexOf`
 * `3.0.0` &mdash; **2017-08-13** *breaking*

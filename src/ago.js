@@ -1,12 +1,9 @@
+/* eslint-disable no-mixed-operators */
+
 // @flow
 
-/**
- * Makes pretty 'n whatevers ago' string
- * @example
- * ago(new Date('2007-98-17')) // => '9.75 years ago'
- */
-
 const ago = (d: Date): string => {
+  console.error('`ago` is deprecated. Use a proper lib for this.')
   const diff = (((new Date()).getTime() - d.getTime()) / 1000)
   const dayDiff = Math.floor(diff / 86400)
   return dayDiff === 0 && (
