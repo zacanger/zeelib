@@ -1,7 +1,3 @@
-'use strict';
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 /*!
  * AnchorJS - v4.0.0 - 2017-06-02
  * https://github.com/bryanbraun/anchorjs
@@ -10,13 +6,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* eslint-env amd, node */
 
 // https://github.com/umdjs/umd/blob/master/templates/returnExports.js
-(function (root, factory) {
+(function(root, factory) {
   'use strict';
-
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
-  } else if ((typeof module === 'undefined' ? 'undefined' : _typeof(module)) === 'object' && module.exports) {
+  } else if (typeof module === 'object' && module.exports) {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
@@ -26,9 +21,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     root.AnchorJS = factory();
     root.anchors = new root.AnchorJS();
   }
-})(undefined, function () {
+})(this, function() {
   'use strict';
-
   function AnchorJS(options) {
     this.options = options || {};
     this.elements = [];
@@ -38,12 +32,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @param {Object} opts - Options object
      */
     function _applyRemainingDefaultOptions(opts) {
-      opts.icon = opts.hasOwnProperty('icon') ? opts.icon : '\uE9CB'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
+      opts.icon = opts.hasOwnProperty('icon') ? opts.icon : '\ue9cb'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
       opts.visible = opts.hasOwnProperty('visible') ? opts.visible : 'hover'; // Also accepts 'always' & 'touch'
-      opts.placement = opts.hasOwnProperty('placement') ? opts.placement : 'right'; // Also accepts 'left'
+      opts.placement = opts.hasOwnProperty('placement')
+        ? opts.placement
+        : 'right'; // Also accepts 'left'
       opts.class = opts.hasOwnProperty('class') ? opts.class : ''; // Accepts any class name.
       // Using Math.floor here will ensure the value is Number-cast and an integer.
-      opts.truncate = opts.hasOwnProperty('truncate') ? Math.floor(opts.truncate) : 64; // Accepts any value that can be typecast to a number.
+      opts.truncate = opts.hasOwnProperty('truncate')
+        ? Math.floor(opts.truncate)
+        : 64; // Accepts any value that can be typecast to a number.
     }
 
     _applyRemainingDefaultOptions(this.options);
@@ -53,8 +51,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * https://github.com/Modernizr/Modernizr/blob/da22eb27631fc4957f67607fe6042e85c0a84656/feature-detects/touchevents.js#L40
      * @return {Boolean} - true if the current device supports touch.
      */
-    this.isTouchDevice = function () {
-      return !!('ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch);
+    this.isTouchDevice = function() {
+      return !!(
+        'ontouchstart' in window ||
+        (window.DocumentTouch && document instanceof DocumentTouch)
+      );
     };
 
     /**
@@ -63,20 +64,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      *                                            to. Also accepts an array or nodeList containing the relavant elements.
      * @return {this}                           - The AnchorJS object
      */
-    this.add = function (selector) {
+    this.add = function(selector) {
       var elements,
-          elsWithIds,
-          idList,
-          elementID,
-          i,
-          index,
-          count,
-          tidyText,
-          newTidyText,
-          readableID,
-          anchor,
-          visibleOptionToUse,
-          indexesToDrop = [];
+        elsWithIds,
+        idList,
+        elementID,
+        i,
+        index,
+        count,
+        tidyText,
+        newTidyText,
+        readableID,
+        anchor,
+        visibleOptionToUse,
+        indexesToDrop = [];
 
       // We reapply options here because somebody may have overwritten the default options object when setting options.
       // For example, this overwrites all options but visible:
@@ -154,7 +155,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           anchor.style.opacity = '1';
         }
 
-        if (this.options.icon === '\uE9CB') {
+        if (this.options.icon === '\ue9cb') {
           anchor.style.font = '1em/1 anchorjs-icons';
 
           // We set lineHeight = 1 here because the `anchorjs-icons` font family could otherwise affect the
@@ -192,10 +193,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      *                                            OR a nodeList / array containing the DOM elements.
      * @return {this}                           - The AnchorJS object
      */
-    this.remove = function (selector) {
+    this.remove = function(selector) {
       var index,
-          domAnchor,
-          elements = _getElements(selector);
+        domAnchor,
+        elements = _getElements(selector);
 
       for (var i = 0; i < elements.length; i++) {
         domAnchor = elements[i].querySelector('.anchorjs-link');
@@ -215,7 +216,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     /**
      * Removes all anchorjs links. Mostly used for tests.
      */
-    this.removeAll = function () {
+    this.removeAll = function() {
       this.remove(this.elements);
     };
 
@@ -228,10 +229,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @param  {String} text - Any text. Usually pulled from the webpage element we are linking to.
      * @return {String}      - hyphen-delimited text for use in IDs and URLs.
      */
-    this.urlify = function (text) {
+    this.urlify = function(text) {
       // Regex for finding the nonsafe URL characters (many need escaping): & +$,:;=?@"#{}|^~[`%!'<>]./()*\
       var nonsafeChars = /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g,
-          urlText;
+        urlText;
 
       // The reason we include this _applyRemainingDefaultOptions is so urlify can be called independently,
       // even after setting options. This can be useful for tests or other applications.
@@ -241,13 +242,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       // Note: we trim hyphens after truncating because truncating can cause dangling hyphens.
       // Example string:                                  // " ⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-      urlText = text.trim() // "⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-      .replace(/\'/gi, '') // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
-      .replace(nonsafeChars, '-') // "⚡⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
-      .replace(/-{2,}/g, '-') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
-      .substring(0, this.options.truncate) // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
-      .replace(/^-+|-+$/gm, '') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated"
-      .toLowerCase(); // "⚡⚡-dont-forget-url-fragments-should-be-i18n-friendly-hyphenated"
+      urlText = text
+        .trim() // "⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
+        .replace(/\'/gi, '') // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
+        .replace(nonsafeChars, '-') // "⚡⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
+        .replace(/-{2,}/g, '-') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
+        .substring(0, this.options.truncate) // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
+        .replace(/^-+|-+$/gm, '') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated"
+        .toLowerCase(); // "⚡⚡-dont-forget-url-fragments-should-be-i18n-friendly-hyphenated"
 
       return urlText;
     };
@@ -258,9 +260,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @param    {HTMLElemnt}  el - a DOM node
      * @return   {Boolean}     true/false
      */
-    this.hasAnchorJSLink = function (el) {
-      var hasLeftAnchor = el.firstChild && (' ' + el.firstChild.className + ' ').indexOf(' anchorjs-link ') > -1,
-          hasRightAnchor = el.lastChild && (' ' + el.lastChild.className + ' ').indexOf(' anchorjs-link ') > -1;
+    this.hasAnchorJSLink = function(el) {
+      var hasLeftAnchor =
+        el.firstChild &&
+        (' ' + el.firstChild.className + ' ').indexOf(' anchorjs-link ') > -1,
+        hasRightAnchor =
+          el.lastChild &&
+          (' ' + el.lastChild.className + ' ').indexOf(' anchorjs-link ') > -1;
 
       return hasLeftAnchor || hasRightAnchor || false;
     };
@@ -297,12 +303,28 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       }
 
       var style = document.createElement('style'),
-          linkRule = ' .anchorjs-link {' + '   opacity: 0;' + '   text-decoration: none;' + '   -webkit-font-smoothing: antialiased;' + '   -moz-osx-font-smoothing: grayscale;' + ' }',
-          hoverRule = ' *:hover > .anchorjs-link,' + ' .anchorjs-link:focus  {' + '   opacity: 1;' + ' }',
-          anchorjsLinkFontFace = ' @font-face {' + '   font-family: "anchorjs-icons";' + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
-      '   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype");' + ' }',
-          pseudoElContent = ' [data-anchorjs-icon]::after {' + '   content: attr(data-anchorjs-icon);' + ' }',
-          firstStyleEl;
+        linkRule =
+          ' .anchorjs-link {' +
+          '   opacity: 0;' +
+          '   text-decoration: none;' +
+          '   -webkit-font-smoothing: antialiased;' +
+          '   -moz-osx-font-smoothing: grayscale;' +
+          ' }',
+        hoverRule =
+          ' *:hover > .anchorjs-link,' +
+          ' .anchorjs-link:focus  {' +
+          '   opacity: 1;' +
+          ' }',
+        anchorjsLinkFontFace =
+          ' @font-face {' +
+          '   font-family: "anchorjs-icons";' + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
+          '   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype");' +
+          ' }',
+        pseudoElContent =
+          ' [data-anchorjs-icon]::after {' +
+          '   content: attr(data-anchorjs-icon);' +
+          ' }',
+        firstStyleEl;
 
       style.className = 'anchorjs';
       style.appendChild(document.createTextNode('')); // Necessary for Webkit.
