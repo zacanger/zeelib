@@ -17,7 +17,7 @@ const findPort = (port: number, cb: any): any => {
   }
   const onError = (err) => {
     server.removeListener('listening', onListen)
-    if (err.code !== ('EADDRINUSE' || 'EACCESS')) {
+    if (err.code && [ 'EADDRINUSE', 'EACCESS' ].includes(err.code)) {
       return cb(err)
     }
     findPort(port + 1, cb)
