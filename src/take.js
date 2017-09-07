@@ -6,14 +6,7 @@
  * take(2, [ 1, 2, 3 ]) // => [ 1, 2 ]
  */
 
-const take = (num: number, arr: any[]): any[] => {
-  const alen = arr.length
-  if (num > alen) return arr
-  const a1 = []
-  for (let i = 0; i < num && i < alen; i++) {
-    a1.push(arr[i])
-  }
-  return a1
-}
+const take = (n: number, a: any[]): any[] =>
+  n > a.length ? a : a.slice(0, n)
 
 export default take
