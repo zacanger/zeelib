@@ -12,6 +12,6 @@ const findIndices = (el: any, arr: any[]): number[] =>
       a.push(i)
     }
     return a
-  })
+  }, [])
 
 export default findIndices
