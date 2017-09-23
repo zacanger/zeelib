@@ -1,6 +1,6 @@
 // @flow
 
-import isArray from './is-array'
+import concat from './concat'
 
 /**
  * Like Haskell's `concatMap`,
@@ -16,14 +16,7 @@ import isArray from './is-array'
 const concatMap = (
   f: (any) => any,
   a: Array<any[]>
-): any[] => {
-  let res = []
-  a.forEach((el) => {
-    if (isArray(el)) {
-      res = res.concat(f(el))
-    }
-  })
-  return res
-}
+): any[] =>
+  concat(a.map(f))
 
 export default concatMap

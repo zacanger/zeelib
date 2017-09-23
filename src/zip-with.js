@@ -1,6 +1,6 @@
 // @flow
 
-import pair from './pair'
+import zip from './zip'
 
 /**
  * Takes a function and two lists
@@ -13,9 +13,8 @@ import pair from './pair'
 
 const zipWith = (
   fn: (any) => any,
-  xs: any[],
-  ys: any[]
+  ...xs: any[]
 ): any[] =>
-  xs.map((x, i) => fn.apply(fn, pair(x, ys[i])))
+  zip(...xs).map((a) => a.reduce(fn))
 
 export default zipWith
