@@ -11,7 +11,7 @@ import { createServer } from 'net'
 const findPort = (port: number, cb: any): any => {
   const server = createServer(() => {})
   const onListen = () => {
-    server.removeListener('error', onError)
+    server.removeListener('error', onError) // eslint-disable-line no-use-before-define
     server.close()
     cb(null, port)
   }

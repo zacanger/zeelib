@@ -9,7 +9,7 @@ type AnyF = (any) => any
  */
 
 const promisify = (f: AnyF) =>
-  (...args: any[]) =>
+  (...args: any[]): Promise<any> =>
     new Promise((resolve: AnyF, reject: AnyF) =>
       (f)(...args, (err: any, result: any) =>
         err ? reject(err) : resolve(result)))

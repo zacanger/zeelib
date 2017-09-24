@@ -11,8 +11,8 @@ import { createInterface } from 'readline'
  * prompt('Do the thing?', true) // with 'yes' default
  */
 
-const termPrompt = (question: string, isYesDefault: ?bool) =>
-  new Promise((resolve): ?bool => {
+const termPrompt = (question: string, isYesDefault: ?bool): Promise<any> =>
+  new Promise((resolve: any): ?bool => {
     const rlInterface = createInterface({
       input: process.stdin,
       output: process.stdout

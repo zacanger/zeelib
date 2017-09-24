@@ -1,4 +1,5 @@
-/* eslint-disable no-useless-escape */
+/* eslint-disable */
+
 // @flow
 
 /**
