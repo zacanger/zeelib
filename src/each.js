@@ -12,9 +12,11 @@ const iterateArray = (arr, fn) => {
 
 const iterateObject = (obj, fn) => {
   for (let prop in obj) {
-    const exit = fn(obj[prop], prop)
-    if (isDefined(exit)) {
-      return exit
+    if (obj.hasOwnProperty(prop)) {
+      const exit = fn(obj[prop], prop)
+      if (isDefined(exit)) {
+        return exit
+      }
     }
   }
 }
@@ -31,11 +33,9 @@ const iterateObject = (obj, fn) => {
  * each() // => undefined
  */
 
-const each = (list, fn) => {
-  if (isArrayLike(list)) {
-    return iterateArray(list, fn)
-  }
-  return iterateObject(list, fn)
-}
+const each = (list, fn) =>
+  isArrayLike(list)
+    ? iterateArray(list, fn)
+    : iterateObject(list, fn)
 
 export default each

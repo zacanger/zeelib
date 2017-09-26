@@ -11,12 +11,9 @@ const truncate = (
   str: string,
   limit: number,
   tail: string = '…'
-): string => {
-  if (str.length > limit) {
-    limit = limit - tail.length
-    return `${str.substr(0, limit)}${tail}`
-  }
-  return str
-}
+): string =>
+  str.length > limit
+    ? `${str.substr(0, limit - tail.length)}${tail}`
+    : str
 
 export default truncate
