@@ -13,9 +13,9 @@ import each from './each'
  * mix({ a: 'a' }, [ 1, 2, 3 ]) // => { '0': 1, '1': 2, '2': 3, a: 'a' }
  */
 
-function mix (): Object {
+const mix = (...args: any[]): Object => {
   const mixed = {}
-  each(arguments, (obj) => {
+  each(args, (obj) => {
     each(obj, (item, index) => {
       mixed[index] = item
     })

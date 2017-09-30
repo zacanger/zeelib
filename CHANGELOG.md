@@ -1,3 +1,5 @@
+* `3.1.6` &mdash; **2017-09-30**
+  * Deprecate `maybeArgs`
 * `3.0.4` &mdash; **2017-08-23**
   * Deprecate `ago`
 * `3.0.1` &mdash; **2017-08-13**

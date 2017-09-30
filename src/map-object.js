@@ -8,11 +8,11 @@
  * mapObject(f, d) // => { a: 'hello world', b: 'sup world' }
  */
 
-const mapObject = function (
+const mapObject = (
   f: (any, any, any) => any,
   o: Object,
   ctx: any = this
-): Object {
+): Object => {
   const res = {}
   Object.keys(o).forEach((k) => {
     res[k] = f.call(ctx, o[k], k, o)

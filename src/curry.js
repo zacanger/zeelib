@@ -11,8 +11,8 @@
  * curry(addThree)(1)(1)(1) // => 3
  */
 
-const curry = function (fn) {
-  const getFunctionArguments = function (fn) {
+const curry = (fn) => {
+  const getFunctionArguments = (fn) => {
     if (typeof fn !== 'function') {
       throw new TypeError(`Expected argument to be a function! Received a ${typeof fn}.`)
     }
@@ -27,26 +27,20 @@ const curry = function (fn) {
           .replace(/\s/gi, '') // remove all whitespace
           .split(',') // split on the commas
 
-        return args.filter((x) => x) // remove possible empty string from the result
+        return args.filter((a) => a) // remove possible empty string from the result
       }
     }
   }
 
   const originalArguments = getFunctionArguments(fn) || []
 
-  const makeCurriedFunc = function () {
-    const givenArguments = arguments || []
-    if (givenArguments.length < originalArguments.length) {
-      return function (...rest) {
-        return makeCurriedFunc(...givenArguments, ...rest)
-      }
-    } else {
-      return fn(...givenArguments)
-    }
+  const makeCurriedFunc = (...args) => {
+    const givenArguments = args || []
+    return givenArguments.length < originalArguments.length
+      ? (...rest) => makeCurriedFunc(...givenArguments, ...rest)
+      : fn(...givenArguments)
   }
 
-  return function () {
-    return makeCurriedFunc(...arguments)
-  }
+  return (...args) => makeCurriedFunc(...args)
 }
 export default curry

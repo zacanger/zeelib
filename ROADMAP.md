@@ -16,8 +16,6 @@ Roadmap/TODO list (for no release in particular):
   - [ ] zip3
   - [ ] any
   - [ ] safeget
-- [ ] Move all function declarations to expressions for consistency
-- [ ] Move all `arguments` to `...args`
 - [ ] Remove all stateful loops
 - [ ] Make TypeScript types available for consumers
 - [ ] Doc
