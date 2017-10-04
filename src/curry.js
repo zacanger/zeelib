@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Takes a function and returns a function that takes
  * any number of arguments
@@ -11,7 +13,7 @@
  * curry(addThree)(1)(1)(1) // => 3
  */
 
-const curry = (fn) => {
+const curry = (fn: (...any) => any) => {
   const getFunctionArguments = (fn) => {
     if (typeof fn !== 'function') {
       throw new TypeError(`Expected argument to be a function! Received a ${typeof fn}.`)
@@ -34,13 +36,13 @@ const curry = (fn) => {
 
   const originalArguments = getFunctionArguments(fn) || []
 
-  const makeCurriedFunc = (...args) => {
+  const makeCurriedFunc = (...args: any[]) => {
     const givenArguments = args || []
     return givenArguments.length < originalArguments.length
-      ? (...rest) => makeCurriedFunc(...givenArguments, ...rest)
+      ? (...rest: any[]) => makeCurriedFunc(...givenArguments, ...rest)
       : fn(...givenArguments)
   }
 
-  return (...args) => makeCurriedFunc(...args)
+  return (...args: any[]) => makeCurriedFunc(...args)
 }
 export default curry

@@ -1,3 +1,11 @@
+// @flow
+//
+//
+
+type Elem = {
+  value: ?string
+} & HTMLElement
+
 /**
  * Takes a select, textarea, or input and returns its contents
  * @param {any} HTMLElement
@@ -6,12 +14,12 @@
  * getElementText(document.getElementsByTagName('input')[0]) // => string
  */
 
-const getElementText = (el) => {
+const getElementText = (el: Elem): string => {
   const tg = el.tagName.toLowerCase()
-  if (tg === 'select') {
+  if (tg === 'select' && el.textContent) {
     return el.textContent
   }
-  if (tg === 'textarea' || tg === 'input') {
+  if ((tg === 'textarea' || tg === 'input') && el.value) {
     return el.value
   }
   return ''

@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Trims a string to just abbreved caps
  * @param {string} str
@@ -6,9 +8,9 @@
  * abbrev('Zacary Erik Anger') // => 'ZEA'
  */
 
-const abbrev = (str) =>
-  str.match(/\b([A-Z])/g)
-    ? str.match(/\b([A-Z])/g).join('')
-    : str
+const abbrev = (str: string): string => {
+  const a = str.match(/\b([A-Z])/g)
+  return a ? a.join('') : str
+}
 
 export default abbrev
