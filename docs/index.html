@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>zeelib 3.1.7 | Documentation</title>
+  <title>zeelib 3.1.8 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>zeelib</h3>
-          <div class='mb1'><code>3.1.7</code></div>
+          <div class='mb1'><code>3.1.8</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -2408,6 +2408,16 @@
                   href='#flattenanduniq'
                   class="">
                   flattenAndUniq
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getglobal'
+                  class="">
+                  getGlobal
                   
                 </a>
                 
@@ -20222,6 +20232,64 @@ then uniq what's left</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>flattenAndUniq([ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ]]) <span class="hljs-comment">// =&gt;  [ 1, 2, 3 ]</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getglobal'>
+      getGlobal
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the global for your current context.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getGlobal</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>getGlobal() <span class="hljs-comment">// =&gt; window, global, whatever</span></pre>
     
   
 
