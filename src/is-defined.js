@@ -7,6 +7,6 @@
  */
 
 const isDefined = (v: any): bool =>
-  v !== undefined
+  typeof v !== 'undefined'
 
 export default isDefined
