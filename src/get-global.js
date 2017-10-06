@@ -1,21 +1,17 @@
 // @flow
 
-import isDefined from './is-defined'
-
 /**
  * Gets the global for your current context.
  * @example
  * getGlobal() // => window, global, whatever
  */
 
-const getGlobal = (): any =>
-  isDefined(self)
-    ? self
-    : isDefined(window)
-      ? window
-      : isDefined(global)
-        ? global
-        // $FlowFixMe
-        : Function('return this')() // eslint-disable-line
+const getGlobal = (): any => {
+  if (typeof self !== 'undefined') return self
+  if (typeof window !== 'undefined') return window
+  if (typeof global !== 'undefined') return global
+  // $FlowFixMe
+  return Function('return this')() // eslint-disable-line
+}
 
 export default getGlobal
