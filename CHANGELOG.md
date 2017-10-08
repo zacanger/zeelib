@@ -1,3 +1,9 @@
+* `4.0.0` &mdash; **2017-10-08**
+  * Remove deprecated functions:
+    * `ago`
+    * `findIndex` (use `indexOf`)
+    * `maybeArgs`
+    * `notFound`
 * `3.1.6` &mdash; **2017-09-30**
   * Deprecate `maybeArgs`
 * `3.0.4` &mdash; **2017-08-23**
