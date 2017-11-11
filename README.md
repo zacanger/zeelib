@@ -2,13 +2,10 @@
 
 A small lib of FP, Node, and DOM utils.
 
-[Full documentation](https://zacanger.github.io/zeelib)
-
-[Changes](./CHANGELOG.md)
-
-[npm](https://npmjs.com/package/zeelib)
-
-[Roadmap](./ROADMAP.md)
+* [Full documentation](https://zacanger.github.io/zeelib)
+* [npm](https://npmjs.com/package/zeelib)
+* [Changes](./CHANGELOG.md)
+* [Roadmap](./ROADMAP.md)
 
 --------
 
