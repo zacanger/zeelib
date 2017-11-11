@@ -13,12 +13,15 @@
     "build": "babel --ignore \"src/*.test.js\" src/ -d lib/",
     "clean": "if [ -d lib ] ; then rm -r lib/ ; fi && mkdir -p lib/",
     "copy-flow": "flow-copy-source -i \"*.test.js\" src lib",
+    "cover": "run-s cover:tape cover:flow",
+    "cover:flow": "flow-coverage-report --config .flow-coverage-report.json",
+    "cover:tape": "nyc npm run test:tape",
     "doc": "documentation build src/index.js -f html -o docs",
+    "fixpack": "fixpack",
     "postbuild": "npm run copy-flow",
     "postpublish": "npm run doc && git commit -am doc && git push",
-    "prebuild": "npm run clean && npm run test && fixpack",
+    "prebuild": "run-s clean test cover fixpack",
     "test": "npm run test:lint && npm run test:flow && npm run test:tape",
-    "test:cover": "flow-coverage-report -i 'src/*.js' -x 'src/*.test.js' -t text",
     "test:flow": "flow && flow stop",
     "test:lint": "eslint -c .eslintrc.json src",
     "test:tape": "babel-tape-runner src/*.test.js | tap-spec"
@@ -40,30 +43,42 @@
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-eslint": "8.0.1",
+    "babel-eslint": "8.0.2",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-stage-3": "6.24.1",
     "babel-tape-runner": "2.0.1",
     "documentation": "5.3.3",
-    "eslint": "4.10.0",
-    "eslint-config-jane": "0.6.2",
+    "eslint": "4.11.0",
+    "eslint-config-jane": "0.6.3",
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-flowtype": "2.39.1",
     "eslint-plugin-flowtype-errors": "3.3.5",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-node": "5.2.1",
     "eslint-plugin-promise": "3.6.0",
-    "eslint-plugin-unicorn": "2.1.2",
+    "eslint-plugin-unicorn": "3.0.0",
     "fixpack": "2.3.1",
-    "flow-bin": "0.57.3",
+    "flow-bin": "0.59.0",
     "flow-copy-source": "1.2.1",
     "flow-coverage-report": "0.4.0",
+    "npm-run-all": "4.1.2",
+    "nyc": "11.3.0",
     "tap-spec": "4.1.1",
     "tape": "4.8.0"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "nyc": {
+    "include": [
+      "src"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
 }
