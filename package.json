@@ -79,6 +79,11 @@
       "babel-register"
     ],
     "sourceMap": true,
-    "instrument": true
+    "instrument": true,
+    "reporter": [
+      "text",
+      "html",
+      "json"
+    ]
   }
 }
