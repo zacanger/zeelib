@@ -6,6 +6,7 @@ A small lib of FP, Node, and DOM utils.
 * [npm](https://npmjs.com/package/zeelib)
 * [Changes](./CHANGELOG.md)
 * [Roadmap](./ROADMAP.md)
+* [Contributing](./CONTRIBUTING.md)
 
 --------
 
