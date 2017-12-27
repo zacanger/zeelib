@@ -7,6 +7,7 @@ import isError from './is-error'
  * @example
  * throwError(new Error('Oh noes!'))
  * throwError('Oh noes!')
+ * foo().then(something).catch(throwError)
  */
 
 const throwError = (err: any): Error => {
