@@ -1,14 +1,16 @@
 // @flow
 
 /**
- * Sync sleep. Also see `sleepAsync`.
+ * Simple sleep.
+ *
+ * You can `await` it, or `.then` it
  * @example
- * sleep(1000)
+ * const delay = await sleep(1000)
+ * sleep(1000).then(doAThing)
  */
 
-const sleep = (ms: number): void => {
-  const start = new Date().getTime()
-  while ((new Date().getTime() - start) < ms) {}
-}
+const sleep = (ms: number): Promise<*> =>
+  new Promise((resolve): any =>
+    setTimeout(resolve, ms))
 
 export default sleep
