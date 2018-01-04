@@ -8,7 +8,7 @@ import toBool from './to-bool'
  * toBoolInverse(1) // => false
  */
 
-const toBoolInverse = (val: any): bool =>
+const toBoolInverse = (val: mixed): bool =>
   !toBool(val)
 
 export default toBoolInverse

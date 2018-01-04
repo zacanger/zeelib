@@ -6,7 +6,9 @@
  * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
  */
 
-const objectFromEntries = (arr: any[]): Object =>
-  arr.reduce((res, [ k, v ]) => ({ ...res, [k]: v }), {})
+// eslint-disable-next-line flowtype/no-weak-types
+const objectFromEntries = <O: {+[string]: mixed}, K: $Keys<O>>(arr: [K, mixed][]): O =>
+  // eslint-disable-next-line flowtype/no-weak-types
+  arr.reduce((res, [ k, v ]) => ({ ...res, [k]: v }), (({}: any): O))
 
 export default objectFromEntries

@@ -1,7 +1,5 @@
 // @flow
 
-import zip from './zip'
-
 /**
  * Takes a function and two lists
  *
@@ -11,10 +9,18 @@ import zip from './zip'
  * zipWith(increment, [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2 ]
  */
 
-const zipWith = (
-  fn: (any) => any,
-  ...xs: any[]
-): any[] =>
-  zip(...xs).map((a) => a.reduce(fn))
+const zipWith = <A, B, T>(
+  fn: (A, B) => T,
+  xs: A[],
+  ys: B[]
+): T[] => {
+  const length = Math.min(xs.length, ys.length)
+  // eslint-disable-next-line flowtype/no-weak-types
+  const result: T[] = (Array.from({ length }): any)
+  for (let i: number = 0; i < length; i++) {
+    result[i] = fn(xs[i], ys[i])
+  }
+  return result
+}
 
 export default zipWith

@@ -6,7 +6,7 @@
  * timeTest(1, () => true) // time: 0.166ms ; true
  */
 
-const timeTest = (n: any, cb: any): any => {
+const timeTest = <A, B>(n: A, cb: (A) => B): B => {
   console.time('time')
   const r = cb(n)
   console.timeEnd('time')

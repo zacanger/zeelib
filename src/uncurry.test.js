@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import uncurry from './uncurry'
 
-test('uncurry', (t) => {
+test('uncurry', (t): void => {
   const ac2 = (a) => (b) => a + b
   const ac4 = (a) => (b) => (c) => (d) => a + b + c + d
   t.equal(uncurry(ac2)(1, 2), 3, 'works for two')

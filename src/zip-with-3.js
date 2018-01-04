@@ -10,22 +10,19 @@
  * zipWith3(increment, [ 1, 1 ], [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2, 2 ]
  */
 
-const zipWith3 = (
-  fn: (...args: any[]) => any,
-  xs: any[],
-  ys: any[],
-  zs: any[]
-): any[] => {
-  const res = []
-  const yslen = ys.length
-  const zslen = zs.length
-  xs.forEach((_, i) => {
-    if (i >= yslen || i >= zslen) {
-      return res
-    }
-    res.push(fn(xs[i], ys[i], zs[i]))
-  })
-  return res
+const zipWith3 = <A, B, C, T>(
+  fn: (A, B, C) => T,
+  xs: A[],
+  ys: B[],
+  zs: C[]
+): T[] => {
+  const length = Math.min(xs.length, ys.length, zs.length)
+  // eslint-disable-next-line flowtype/no-weak-types
+  const result: T[] = (Array.from({ length }): any)
+  for (let i: number = 0; i < length; i++) {
+    result[i] = fn(xs[i], ys[i], zs[i])
+  }
+  return result
 }
 
 export default zipWith3

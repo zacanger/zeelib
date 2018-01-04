@@ -10,10 +10,10 @@ import takeWhile from './take-while'
  * span(lessThanThree, [ 1, 2, 3, 4 ]) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
-const span = (
-  pred: () => bool,
-  arr: any[]
-): any[] => {
+const span = <A>(
+  pred: (A) => bool,
+  arr: A[]
+): [A[], A[]] => {
   const sat = takeWhile(pred, arr)
   return [ sat, arr.slice(sat.length) ]
 }

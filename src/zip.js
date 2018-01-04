@@ -1,6 +1,7 @@
 // @flow
 
 import pair from './pair'
+import zipWith from './zip-with'
 
 /**
  * Makes a list of tuples
@@ -11,7 +12,7 @@ import pair from './pair'
  * zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
  */
 
-const zip = (xs: any[], ys: any[]): any[] =>
-  xs.map((x, i) => pair(x, ys[i]))
+const zip = <A, B>(xs: A[], ys: B[]): [A, B][] =>
+  zipWith(pair, xs, ys)
 
 export default zip

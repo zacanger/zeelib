@@ -9,11 +9,7 @@
  * sortBy(({ id }) => id, list) // => [ { id: 1 }, { id: 2 }, { id: 3 } ]
  */
 
-const sortBy = <T> (
-  f: (a: T) => any,
-  xs: Array<T>
-): Array<T> =>
-  xs.sort((a, b) =>
-    f(a) - f(b))
+const sortBy = <A>(f: (a: A) => number, xs: A[]): A[] =>
+  xs.slice().sort((a, b) => f(a) - f(b))
 
 export default sortBy
