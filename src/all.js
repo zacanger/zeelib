@@ -9,7 +9,7 @@ import curry from './curry'
  * all(lessThanThree, [ 1, 2, 3 ]) // => false
  */
 
-const all = curry((predicate, list): bool =>
+const all = curry(<A>(predicate: (A) => bool, list: A[]): bool =>
   !!list.reduce && (typeof predicate === 'function') && list.reduce((result, current) =>
     !result ? false : !!predicate(current)
     , true))

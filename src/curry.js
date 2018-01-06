@@ -1,5 +1,7 @@
 // @flow
 
+import id from './id'
+
 /**
  * Takes a function and returns a function that takes
  * any number of arguments
@@ -13,8 +15,19 @@
  * curry(addThree)(1)(1)(1) // => 3
  */
 
-const curry = (fn: (...any) => any) => {
-  const getFunctionArguments = (fn) => {
+/* eslint-disable no-redeclare, max-len, flowtype/require-return-type */
+declare function curry<T>(() => T): () => T
+declare function curry<A, T>((A) => T): (A) => T
+declare function curry<A, B, T>((A, B) => T): (A) => (B) => T
+declare function curry<A, B, C, T>((A, B, C) => T): (A) => (B) => (C) => T
+declare function curry<A, B, C, D, T>((A, B, C, D) => T): (A) => (B) => (C) => (D) => T
+declare function curry<A, B, C, D, E, T>((A, B, C, D, E) => T): (A) => (B) => (C) => (D) => (E) => T
+declare function curry<A, B, C, D, E, F, T>((A, B, C, D, E, F) => T): (A) => (B) => (C) => (D) => (E) => (F) => T
+declare function curry<A, B, C, D, E, F, G, T>((A, B, C, D, E, F, G) => T): (A) => (B) => (C) => (D) => (E) => (F) => (G) => T
+declare function curry(Function): Function // eslint-disable-line flowtype/no-weak-types
+
+function curry (fn) {
+  const getFunctionArguments = (fn): string[] => {
     if (typeof fn !== 'function') {
       throw new TypeError(`Expected argument to be a function! Received a ${typeof fn}.`)
     }
@@ -29,20 +42,23 @@ const curry = (fn: (...any) => any) => {
           .replace(/\s/gi, '') // remove all whitespace
           .split(',') // split on the commas
 
-        return args.filter((a) => a) // remove possible empty string from the result
+        return args.filter(id) // remove possible empty string from the result
       }
     }
+    return []
   }
 
-  const originalArguments = getFunctionArguments(fn) || []
+  const originalArguments = getFunctionArguments(fn)
 
-  const makeCurriedFunc = (...args: any[]) => {
+  const makeCurriedFunc = (...args) => {
     const givenArguments = args || []
     return givenArguments.length < originalArguments.length
-      ? (...rest: any[]) => makeCurriedFunc(...givenArguments, ...rest)
+      ? (...rest) => makeCurriedFunc(...givenArguments, ...rest)
       : fn(...givenArguments)
   }
 
-  return (...args: any[]) => makeCurriedFunc(...args)
+  return (...args) => makeCurriedFunc(...args)
 }
+/* eslint-enable no-redeclare, max-len, flowtype/require-return-type */
+
 export default curry

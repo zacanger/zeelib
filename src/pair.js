@@ -6,7 +6,7 @@
  * pair('a', 'b') // => [ 'a', 'b' ]
  */
 
-const pair = (first: any, second: any): any[] =>
+const pair = <A, B>(first: A, second: B): [A, B] =>
   [ first, second ]
 
 export default pair

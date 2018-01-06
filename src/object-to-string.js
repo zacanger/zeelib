@@ -6,7 +6,7 @@
  * objectToString({}) // => '[object Object]'
  */
 
-const objectToString = (v: any): string =>
+const objectToString = (v: mixed): string =>
   Object.prototype.toString.call(v)
 
 export default objectToString

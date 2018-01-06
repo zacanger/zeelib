@@ -9,10 +9,10 @@ import { writeFileSync } from 'fs'
  * writeJsonSync('foo.json', someObject, 4)
  */
 
-const writeJsonSync = (
+const writeJsonSync = <A>(
   file: string,
-  data: any,
-  indent: ?number = 2
+  data: A,
+  indent?: number = 2
 ): void => {
   if (typeof indent !== 'number') {
     indent = 0

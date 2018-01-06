@@ -8,13 +8,13 @@ import { readFile } from 'fs'
  * readJson('./foo.json', (err, data) => {})
  */
 
-const readJson = (file: string, cb: any): ?any => {
-  readFile(file, 'utf8', (err, json) => {
+const readJson = <A>(file: string, cb: (?Error, ?A) => void): void => {
+  readFile(file, 'utf8', (err, json): void => {
     if (err) {
       cb(err)
       return
     }
-    let data
+    let data: A
     try {
       data = JSON.parse(json)
     } catch (e) {

@@ -7,7 +7,7 @@
  * id() // => undefined
  */
 
-const id = <T> (a: T): T =>
+const id = <A>(a: A): A =>
   a
 
 export default id

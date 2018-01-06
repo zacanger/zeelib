@@ -11,7 +11,7 @@ import isRegExp from './is-reg-exp'
  * typeOf(new Date()) // => 'date'
  */
 
-const typeOf = (a: any): string => {
+const typeOf = (a: mixed): string => {
   if (typeof a === 'object') {
     if (a === null) return 'null'
     if (a && a.nodeType === 1) return 'dom'

@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import removeNonAlphaNumeric from './remove-non-alpha-numeric'
 
-test('removeNonAlphaNumeric', (t) => {
+test('removeNonAlphaNumeric', (t): void => {
   t.equal(
     removeNonAlphaNumeric('asdlfkjsdf92r 2\n239wjefs ff!!sdf'),
     'asdlfkjsdf92r 2239wjefs ffsdf',

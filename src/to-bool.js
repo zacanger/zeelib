@@ -6,7 +6,7 @@
  * toBool(1) // => true
  */
 
-const toBool = (val: any): bool =>
+const toBool = (val: mixed): bool =>
   !!val
 
 export default toBool

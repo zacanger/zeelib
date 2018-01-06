@@ -7,7 +7,7 @@ import objectToString from './object-to-string'
  * isError(new Error()) // => true
  */
 
-const isError = (a: any): bool =>
+const isError = (a: mixed): bool =>
   a instanceof Error || objectToString(a) === '[object Error]'
 
 export default isError

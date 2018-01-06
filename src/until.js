@@ -6,10 +6,13 @@
  * until(equals5, increment)(2) // => 5
  */
 
-const until = (p: (any) => bool, f: (any) => any) =>
-  (...args: any[]) => {
-    const r = f(...args)
-    return p(r) ? r : until(p, f)(r)
+const until = <A>(p: (A) => bool, f: (A) => A) =>
+  (t: A): A => {
+    let r: A = f(t)
+    do {
+      r = f(t)
+    } while (!p(r))
+    return r
   }
 
 export default until
