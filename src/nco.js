@@ -1,5 +1,6 @@
 // @flow
 
+import isNullOrUndefined from './is-null-or-undefined'
 /**
  * nco
  * @example
@@ -7,7 +8,7 @@
  * nco(1, 2) // => 1
  */
 
-const nco = (variable: any, defaultValue: any): any =>
-  (variable === null || typeof variable === 'undefined') ? defaultValue : variable
+const nco = <A, B> (variable: A, defaultValue: B): A | B =>
+  isNullOrUndefined(variable) ? defaultValue : variable
 
 export default nco

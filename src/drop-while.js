@@ -11,7 +11,7 @@ import span from './span'
  */
 
 const dropWhile = (
-  pred: () => bool,
+  pred: (mixed) => bool,
   arr: any[]
 ): any[] =>
   span(pred, arr)[1] || []

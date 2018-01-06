@@ -6,7 +6,7 @@
  * isUndefined(undefined) // => true
  */
 
-const isUndefined = (v: any): bool =>
+const isUndefined = (v: mixed): bool =>
   v === undefined
 
 export default isUndefined

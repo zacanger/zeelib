@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isMap(new Map()) // => true
  */
 
-const isMap = (v: any): bool =>
+const isMap = (v: mixed): bool =>
   objectToString(v) === '[object Map]'
 
 export default isMap

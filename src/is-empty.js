@@ -14,7 +14,7 @@ import isNullOrUndefined from './is-null-or-undefined'
  * isEmpty(null) // => true
  */
 
-const isEmpty = (v: any): bool => {
+const isEmpty = (v: mixed): bool => {
   if (isNullOrUndefined(v)) return true
   if (isString(v)) return /^\s*$/.test(v)
   // /^[ \t\s]*$/.test(v)

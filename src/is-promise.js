@@ -6,7 +6,9 @@
  * isPromise(Promise.resolve())
  */
 
-const isPromise = (a: any): bool =>
-  a && typeof a.then === 'function'
+const isPromise = (a: mixed): bool => {
+  if (a && typeof a.then === 'function') return true
+  return false
+}
 
 export default isPromise

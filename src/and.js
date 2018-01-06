@@ -7,7 +7,7 @@
  * and([ 1, 2, 3, false ]) // => false
  */
 
-const and = (a: any[]): bool =>
+const and = (a: mixed[]): bool =>
   a.every((e) => e !== false)
 
 export default and

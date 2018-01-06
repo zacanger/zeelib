@@ -6,7 +6,11 @@
  * isGenerator(2) // => false
  */
 
-const isGenerator = (v: any): bool =>
-  v && typeof v.next === 'function' && typeof v.throw === 'function'
+const isGenerator = (v: mixed): bool => {
+  if (v && typeof v.next === 'function' && typeof v.throw === 'function') {
+    return true
+  }
+  return false
+}
 
 export default isGenerator

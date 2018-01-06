@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * Get an object from an array of entries
+ * Get an object from an array of entries (the opposite of Object.entries)
  * @example
  * objectFromEntries([ [ 'a', 'b' ] ]) // => { a: 'b' }
  */

@@ -11,7 +11,7 @@ import elem from './elem'
  * notElem('b', 'asdf') // => true
  */
 
-const notElem = (el: any, ls: string | any[]): bool =>
+const notElem = <T> (el: T, ls: string | T[]): bool =>
   !elem(el, ls)
 
 export default notElem

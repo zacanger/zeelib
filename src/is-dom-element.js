@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isDomElement(document.getElementById('foo')) // => true
  */
 
-const isDomElement = (v: any): bool =>
+const isDomElement = (v: mixed): bool =>
   objectToString(v).slice(8, 12) === 'HTML'
 
 export default isDomElement

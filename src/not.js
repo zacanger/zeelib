@@ -8,8 +8,8 @@
  * not(1)(2) // => true
  */
 
-const not = (a: any) =>
-  (b: any): bool =>
+const not = <A, B> (a: A) =>
+  (b: B): bool =>
     a !== b
 
 export default not

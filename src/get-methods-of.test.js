@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import getMethodsOf from './get-methods-of'
 
-test('getMethodsOf', (t) => {
+test('getMethodsOf', (t): void => {
   const o = {
     foo: () => true,
     bar () { return false },

@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import keep from './keep'
 
-test('keep', (t) => {
+test('keep', (t): void => {
   const withF = [ 'a', null, '', 2 ]
   const withoutF = [ 1, 2, 'a', 'b' ]
   const o = { a: '', b: null, c: 2 }

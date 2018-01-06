@@ -10,11 +10,11 @@
  */
 
 const lightenOrDarken = (col: string, amt: number): string => {
-  let useHash = false
-  let num = parseInt(col, 16)
-  let r = (num >> 16) + amt
-  let b = ((num >> 8) & 0x00FF) + amt
-  let g = (num & 0x0000FF) + amt
+  let useHash: bool = false
+  let num: number = parseInt(col, 16)
+  let r: number = (num >> 16) + amt
+  let b: number = ((num >> 8) & 0x00FF) + amt
+  let g: number = (num & 0x0000FF) + amt
 
   if (col[0] === '#') {
     col = col.slice(1)

@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isDate(new Date()) // => true
  */
 
-const isDate = (v: any): bool =>
+const isDate = (v: mixed): bool =>
   objectToString(v) === '[object Date]'
 
 export default isDate

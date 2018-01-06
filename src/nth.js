@@ -6,7 +6,7 @@
  * nth(2, [ 1, 2 3 ]) // => 3
  */
 
-const nth = (n: number, arr: any[]): any =>
+const nth = <T> (n: number, arr: T[]): T =>
   arr[n]
 
 export default nth

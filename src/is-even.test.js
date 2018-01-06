@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import isEven from './is-even'
 
-test('isEven', (t) => {
+test('isEven', (t): void => {
   t.false(isEven(1), 'returns false for odd int')
   t.false(isEven(1.1), 'returns false for odd float')
   t.true(isEven(2), 'returns true for even int')

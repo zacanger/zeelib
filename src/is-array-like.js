@@ -9,7 +9,11 @@ import isNumber from './is-number'
  * isArrayLike([ 1, 2 ]) // => true
  */
 
-const isArrayLike = (v: any): bool =>
-  v && isNumber(v.length)
+const isArrayLike = (v: mixed): bool => {
+  if (v && v.length) {
+    return isNumber(v.length)
+  }
+  return false
+}
 
 export default isArrayLike

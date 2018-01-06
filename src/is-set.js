@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isSet(new Set()) // => true
  */
 
-const isSet = (v: any): bool =>
+const isSet = (v: mixed): bool =>
   objectToString(v) === '[object Set]'
 
 export default isSet
