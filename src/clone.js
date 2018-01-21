@@ -12,7 +12,7 @@ import isRegExp from './is-reg-exp'
  * clone(1) // => 1
  */
 
-const clone = <T> (obj: T): T => {
+const clone = <T: *> (obj: T): T => {
   // Number, String, Boolean, Function, null, undefined
   if (obj === null || typeof obj !== 'object') {
     return obj
@@ -23,6 +23,7 @@ const clone = <T> (obj: T): T => {
     return new obj.constructor(obj)
   // Array and Object
   } else {
+    // $FlowFixMe -- flow doesn't know you can do Object.create(some.prototype)
     let copy: T = isArray(obj) ? [] : Object.create(Object.getPrototypeOf(obj))
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
