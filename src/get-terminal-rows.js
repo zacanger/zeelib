@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Get current terminal rows
  * @returns {number} rows
@@ -5,7 +7,7 @@
  * getTerminalRows()
  */
 
-const getTerminalRows = () =>
-  process.stdout.rows
+// $FlowFixMe
+const getTerminalRows = () => process.stdout.rows
 
 export default getTerminalRows
