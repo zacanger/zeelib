@@ -2,11 +2,12 @@
 
 A small lib of FP, Node, and DOM utils.
 
-* [Full documentation](https://zacanger.github.io/zeelib)
+* [Documentation](https://zacanger.github.io/zeelib)
 * [npm](https://npmjs.com/package/zeelib)
 * [Changes](./CHANGELOG.md)
 * [Roadmap](./ROADMAP.md)
 * [Contributing](./CONTRIBUTING.md)
+* [License (MIT)](./LICENSE.md)
 
 --------
 
@@ -20,7 +21,7 @@ if (z.isEven(process.argv[2])) // do things
 z.camelCaseToLispCase('thisString')
 ```
 
-You can also import individual functions.
+You can also import individual functions (recommended).
 
 ```javascript
 import c from 'zeelib/lib/colorize'
@@ -48,20 +49,4 @@ node: {
 }
 ```
 
-Or, just import the functions you need (like
-`import words from 'zeelib/lib/words'`).
-
-See [the full documentation](https://zacanger.github.io/zeelib).
-
-## License
-
-[WTFPL](./LICENSE.md)
-
-## Contributing
-
-* This project uses Flow.
-* Please run `npm test`.
-* If you can, please _add_ a test.
-* Please add your thing in `src/index.js` in the appropriate place
-* Make sure you run `npm run build`
-  * (This also runs `test`, which also runs `flow` and `eslint`)
+Or, just import the functions you need.
