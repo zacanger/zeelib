@@ -10,7 +10,7 @@ import isNumber from './is-number'
  */
 
 const isArrayLike = (v: mixed): bool => {
-  if (v && v.length) {
+  if (v && v.length != null) {
     return isNumber(v.length)
   }
   return false
