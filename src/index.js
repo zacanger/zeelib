@@ -233,7 +233,6 @@ export { default as typeOf } from './type-of'
 // misc
 export { default as assert } from './assert'
 export { default as average } from './average'
-export { default as calc } from './calc'
 export { default as chunk } from './chunk'
 export { default as cloneWithout } from './clone-without'
 export { default as countIn } from './count-in'

@@ -3,6 +3,7 @@
     (use `countIn`)
   * `range` now only takes numbers; use `'c'.charCodeAt(0)` (for example)
   * Add `objectFromKeys`
+  * Remove `calc` (use `apply`)
 * `5.0.0` &mdash; **2017-12-28**
   * Remove `sleep` and rename `sleepAsync` to `sleep`
 * `4.0.0` &mdash; **2017-10-08**
