@@ -1,3 +1,5 @@
+// @flow
+
 import isArray from './is-array'
 import isDate from './is-date'
 import isRegExp from './is-reg-exp'
@@ -10,7 +12,7 @@ import isRegExp from './is-reg-exp'
  * clone(1) // => 1
  */
 
-const clone = (obj) => {
+const clone = <T> (obj: T): T => {
   // Number, String, Boolean, Function, null, undefined
   if (obj === null || typeof obj !== 'object') {
     return obj

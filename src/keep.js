@@ -1,3 +1,5 @@
+// @flow
+
 import id from './id'
 import filter from './filter'
 

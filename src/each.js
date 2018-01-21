@@ -1,3 +1,5 @@
+// @flow
+
 import isDefined from './is-defined'
 import isArrayLike from './is-array-like'
 
