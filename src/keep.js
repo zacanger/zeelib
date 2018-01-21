@@ -1,3 +1,5 @@
+// @flow
+
 import id from './id'
 import filter from './filter'
 
@@ -10,7 +12,7 @@ import filter from './filter'
  * keep({ a: '', b: null, c: 2 }) // => { c: 2 }
  */
 
-const keep = (a) =>
-  filter(id, a)
+// $FlowFixMe
+const keep = (a) => filter(id, a)
 
 export default keep

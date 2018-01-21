@@ -1,7 +1,5 @@
 // @flow
 
-import filter from './filter'
-
 /**
  * Takes a predicate and an array
  *
@@ -12,10 +10,9 @@ import filter from './filter'
  * findWhere(lessThanThree, [ 3, 2, 1 ]) // => 2
  */
 
-const findWhere = (
-  f: () => bool,
-  arr: any[]
-): any =>
-  filter(f, arr)[0] || null
+const findWhere = <T> (
+  f: (T) => bool,
+  arr: T[]
+): T | null => arr.filter(f)[0] || null
 
 export default findWhere

@@ -1,6 +1,7 @@
 // @flow
 
 import isArray from './is-array'
+import isArrayLike from './is-array-like'
 import isMap from './is-map'
 import isObject from './is-object'
 import isSet from './is-set'
@@ -18,7 +19,7 @@ import isFunction from './is-function'
  */
 
 const length = (val: any): number => {
-  if (isArray(val) || isString(val) || isFunction(val)) return val.length
+  if (isArray(val) || isString(val) || isFunction(val) || isArrayLike(val)) return val.length
   if (isMap(val) || isSet(val)) return val.size
   if (isObject(val)) return Object.keys(val).length
   return 0
