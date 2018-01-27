@@ -1,7 +1,6 @@
 // @flow
 
 import { execFile } from 'child_process'
-import isArray from './is-array'
 
 /**
  * Opens things. Works on Linux, Mac, and Windows
