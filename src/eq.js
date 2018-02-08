@@ -7,7 +7,7 @@
  * eq({ a: 'b' }, { b: 'a' }) // => false
  */
 
-const eq = (a: any, b: any): bool =>
+const eq = (a: mixed, b: mixed): bool =>
   a === b
     ? true
     : (a === undefined || b === undefined)

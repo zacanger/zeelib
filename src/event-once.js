@@ -10,7 +10,7 @@
 const eventOnce = (
   el: HTMLElement,
   t: string,
-  handler: () => any
+  handler: () => void
 ): void => {
   const f = (e: Event): void => {
     e.target.removeEventListener(t, f)
