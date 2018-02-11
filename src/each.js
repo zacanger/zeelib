@@ -1,3 +1,5 @@
+// @flow
+
 import isDefined from './is-defined'
 import isArrayLike from './is-array-like'
 
@@ -33,6 +35,7 @@ const iterateObject = (obj, fn) => {
  * each() // => undefined
  */
 
+// $FlowFixMe
 const each = (list, fn) =>
   isArrayLike(list)
     ? iterateArray(list, fn)

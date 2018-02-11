@@ -6,7 +6,7 @@
  * isSymbol(Symbol.for('foo')) // => true
  */
 
-const isSymbol = (a: any): bool =>
+const isSymbol = (a: mixed): bool =>
   typeof a === 'symbol'
 
 export default isSymbol

@@ -6,7 +6,7 @@
  * slice([ 1, 2, 3 ], 1, 2) // => [ 2 ]
  */
 
-const slice = (arr: any[], from: number, to: ?number): any[] =>
-  [].slice.call(arr, from, to || 1)
+const slice = <A>(arr: A[], from: number, to?: number = -1): A[] =>
+  arr.slice(from, to)
 
 export default slice

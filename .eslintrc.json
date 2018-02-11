@@ -1,10 +1,32 @@
 {
   "extends": [ "eslint-config-jane", "plugin:flowtype/recommended" ],
-  "plugins": [ "babel", "flowtype" ],
+  "plugins": [ "babel", "flowtype", "flowtype-errors" ],
   "parser": "babel-eslint",
   "rules": {
-    "flowtype/boolean-style": [ 2, "bool" ],
-    "flowtype/no-weak-types": [ 0 ],
-    "flowtype/no-types-missing-file-annotation": [ 0 ]
+    "flowtype-errors/show-errors": [ 1 ],
+    "flowtype-errors/enforce-min-coverage": [ 1, 80 ],
+    "flowtype/boolean-style": [ 1, "bool" ],
+    "flowtype/no-weak-types": [ 1 ],
+    "flowtype/space-after-type-colon": [ 1 ],
+    "flowtype/no-types-missing-file-annotation": [ 1 ],
+    "flowtype/require-parameter-type": [ 0 ],
+    "flowtype/require-return-type": [
+      1,
+      "always",
+      {
+        "annotateUndefined": "always",
+        "excludeArrowFunctions": "expressionsOnly"
+      }
+    ],
+    "flowtype/require-variable-type": [
+      1,
+      {
+        "excludeVariableTypes": {
+          "const": true,
+          "let": false,
+          "var": false
+        }
+      }
+    ]
   }
 }

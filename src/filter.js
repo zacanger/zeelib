@@ -12,9 +12,9 @@ import each from './each'
  */
 
 const filter = (
-  fn: ((any) => bool, ?number) => bool,
-  list: any[]
-): Object | any[] => {
+  fn: ((mixed) => bool, ?number) => bool,
+  list: mixed[] | Object
+): Object | mixed[] => {
   const isArr = isArrayLike(list)
   const filtered = isArr ? [] : {}
 

@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isRegExp(/a/) // => true
  */
 
-const isRegExp = (v: any): bool =>
+const isRegExp = (v: mixed): bool =>
   objectToString(v) === '[object RegExp]'
 
 export default isRegExp

@@ -8,7 +8,7 @@ import objectToString from './object-to-string'
  * isArray([]) // => true
  */
 
-const isArray = Array.isArray || ((v: any): bool =>
+const isArray = Array.isArray || ((v: mixed): bool =>
   objectToString(v) === '[object Array]')
 
 export default isArray

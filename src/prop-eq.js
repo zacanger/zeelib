@@ -8,7 +8,11 @@ import curry from './curry'
  * propEq('a', 1, { a: 1 }) // => true
  */
 
-const propEq = curry((prop: any, value: any, data: Object): bool =>
+const propEq = curry(<O: {+[string]: mixed}, K: $Keys<O>>(
+  prop: K,
+  value: $ElementType<O, K>,
+  data: O
+): bool =>
   data[prop] !== undefined && data[prop] === value)
 
 export default propEq

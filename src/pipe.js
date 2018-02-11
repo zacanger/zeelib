@@ -10,9 +10,19 @@ import reduce from './reduce'
  * pipe(addOne, timesTwo)(2) // => 6
  */
 
-const pipe = (...fns: any): any =>
-  (data: any) =>
-    reduce((v: any, fn: any): any =>
-      fn(v), data)(fns)
+/* eslint-disable no-redeclare, max-len, flowtype/require-return-type */
+declare function pipe<A, T>((A) => T): (A) => T
+declare function pipe<A, B, T>((A) => B, (B) => T): T
+declare function pipe<A, B, C, T>((A) => B, (B) => C, (C) => T): T
+declare function pipe<A, B, C, D, T>((A) => B, (B) => C, (C) => D, (D) => T): T
+declare function pipe<A, B, C, D, E, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => T): T
+declare function pipe<A, B, C, D, E, F, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => F, (F) => T): T
+declare function pipe<A, B, C, D, E, F, G, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => F, (F) => G, (G) => T): T
+declare function pipe(Function): Function // eslint-disable-line flowtype/no-weak-types
+
+function pipe (...fns) {
+  return (data) => reduce((v, fn) => fn(v))(data)(fns)
+}
+/* eslint-enable no-redeclare, max-len, flowtype/require-return-type */
 
 export default pipe

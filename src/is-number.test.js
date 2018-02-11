@@ -1,8 +1,10 @@
+// @flow
+
 import test from 'tape'
 import isNumber from './is-number'
 
-test('isNumber', (t) => {
-  const f = () => 2
+test('isNumber', (t): void => {
+  const f = (): number => 2
   t.false(isNumber('2'), 'returns false for string')
   t.false(isNumber({ one: 2 }), 'returns false for obj')
   t.false(isNumber([2]), 'returns false for arr')

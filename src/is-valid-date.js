@@ -8,7 +8,7 @@ import isDate from './is-date'
  * isValidDate('1234') // => false
  */
 
-const isValidDate = (d: any): bool =>
+const isValidDate = (d: Date): bool =>
   isDate(d) && d.toString() !== 'Invalid Date'
 
 export default isValidDate

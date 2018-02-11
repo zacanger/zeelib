@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Get columns of current terminal
  * @returns {number} columns
@@ -5,7 +7,7 @@
  * getTerminalColumns()
  */
 
-const getTerminalColumns = () =>
-  process.stdout.columns
+// $FlowFixMe
+const getTerminalColumns = () => process.stdout.columns
 
 export default getTerminalColumns

@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import safeGet from './safe-get'
 
-test('safeGet', (t) => {
+test('safeGet', (t): void => {
   const o = { a: { b: { c: 'd' } } }
   t.equal(safeGet('a.b.c')(o), 'd', 'works')
   t.equal(safeGet('a.b.e')(o), undefined, 'returns undefined if not there')

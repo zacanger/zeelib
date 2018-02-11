@@ -11,8 +11,8 @@ import { createInterface } from 'readline'
  * prompt('Do the thing?', true) // with 'yes' default
  */
 
-const termPrompt = (question: string, isYesDefault: ?bool): Promise<any> =>
-  new Promise((resolve: any): ?bool => {
+const termPrompt = (question: string, isYesDefault?: bool = false): Promise<bool> =>
+  new Promise((resolve: (bool) => void): void => {
     const rlInterface = createInterface({
       input: process.stdin,
       output: process.stdout
@@ -21,14 +21,14 @@ const termPrompt = (question: string, isYesDefault: ?bool): Promise<any> =>
     const hint = isYesDefault ? '[Y/n]' : '[y/N]'
     const message = `${question} ${hint}\n`
 
-    rlInterface.question(message, (answer) => {
+    rlInterface.question(message, (answer): void => {
       rlInterface.close()
 
       const useDefault = answer.trim().length === 0
       if (useDefault) return resolve(isYesDefault)
 
       const isYes = answer.match(/^(yes|y)$/i)
-      return resolve(isYes)
+      return resolve(!!isYes)
     })
   })
 

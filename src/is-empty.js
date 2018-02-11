@@ -1,8 +1,6 @@
 // @flow
 
-import isString from './is-string'
-import isArrayLike from './is-array-like'
-import isObject from './is-object'
+import length from './length'
 import isNullOrUndefined from './is-null-or-undefined'
 
 /**
@@ -14,13 +12,7 @@ import isNullOrUndefined from './is-null-or-undefined'
  * isEmpty(null) // => true
  */
 
-const isEmpty = (v: any): bool => {
-  if (isNullOrUndefined(v)) return true
-  if (isString(v)) return /^\s*$/.test(v)
-  // /^[ \t\s]*$/.test(v)
-  if (isArrayLike(v)) return !v.length
-  if (isObject(v)) return !Object.keys(v).length
-  return !v
-}
+const isEmpty = (v: mixed): bool =>
+  isNullOrUndefined(v) || length(v) === 0 || !v
 
 export default isEmpty

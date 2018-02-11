@@ -8,7 +8,7 @@
  * flip(minus)(2, 1) // => -1
  */
 
-const flip = (f: (any) => any) =>
+const flip = (f: (...any) => any) =>
   (...args: any[]) =>
     f.apply(this, args.reverse())
 

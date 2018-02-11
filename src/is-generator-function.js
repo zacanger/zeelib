@@ -6,7 +6,11 @@
  * isGeneratorFunction(2) // => false
  */
 
-const isGeneratorFunction = (v: any): bool =>
-  v && v.constructor && v.constructor.name === 'GeneratorFunction'
+const isGeneratorFunction = (v: mixed): bool => {
+  if (v && v.constructor && v.constructor.name) {
+    return v.constructor.name === 'GeneratorFunction'
+  }
+  return false
+}
 
 export default isGeneratorFunction

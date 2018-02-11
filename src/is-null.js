@@ -6,7 +6,7 @@
  * isNull(null) // => true
  */
 
-const isNull = (v: any): bool =>
+const isNull = (v: mixed): bool =>
   v === null
 
 export default isNull

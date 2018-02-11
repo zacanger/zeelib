@@ -6,7 +6,7 @@
  * isBoolean(true) // => true
  */
 
-const isBoolean = (v: any): bool =>
+const isBoolean = (v: mixed): bool =>
   typeof v === 'boolean'
 
 export default isBoolean

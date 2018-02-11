@@ -8,14 +8,15 @@ import { execFile } from 'child_process'
  * open('http://zacanger.com')
  */
 
-const open = (args: any, opts: any, cb: any): any => {
-  args = [ args ]
-  const cmd = process.platform === 'win32'
+// eslint-disable-next-line flowtype/no-weak-types
+const open = (args: string, opts: Object, cb: Function): child_process$ChildProcess => {
+  const as: string[] = [ args ]
+  const cmd: string = process.platform === 'win32'
     ? 'cmd'
     : process.platform === 'darwin'
       ? 'open'
       : 'xdg-open'
-  return execFile(cmd, args, opts, cb)
+  return execFile(cmd, as, opts, cb)
 }
 
 export default open

@@ -6,9 +6,9 @@
  * reverse([ 1, 2, 3 ]) // => [ 3, 2, 1 ]
  */
 
-const reverse = (items: any[]): any[] => {
-  let result = []
-  for (let i = items.length - 1; i >= 0; i--) {
+const reverse = <A>(items: A[]): A[] => {
+  const result = []
+  for (let i: number = items.length - 1; i >= 0; i--) {
     result.push(items[i])
   }
   return result

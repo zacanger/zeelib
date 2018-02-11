@@ -9,7 +9,7 @@ import isUndefined from './is-undefined'
  * isNullOrUndefined(null) // => true
  */
 
-const isNullOrUndefined = (v: any): bool =>
+const isNullOrUndefined = (v: mixed): bool =>
   isNull(v) || isUndefined(v)
 
 export default isNullOrUndefined

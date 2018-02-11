@@ -12,7 +12,7 @@ import drop from './drop'
  * splitAt(1, [ [ 'a', 'b' ], 'c' ]) // => [ [ [ 'a', 'b' ] ], [ 'c' ] ]
  */
 
-const splitAt = (num: number, arr: any[]): any[] =>
+const splitAt = <A>(num: number, arr: A[]): [A[], A[]] =>
   [ take(num, arr), drop(num, arr) ]
 
 export default splitAt

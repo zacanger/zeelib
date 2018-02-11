@@ -9,7 +9,7 @@
  * replicate(4, (a) => a + 1) // => [ 5, 5, 5, 5 ]
  */
 
-const replicate = (n: number, p: any): any[] =>
+const replicate = <A>(n: number, p: A | (n: number, i: number) => A): A[] =>
   Array(n).fill().map((_, i) =>
     typeof p === 'function' ? p(n, i) : p)
 

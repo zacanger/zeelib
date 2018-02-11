@@ -11,5 +11,4 @@ const until = (p: (any) => bool, f: (any) => any) =>
     const r = f(...args)
     return p(r) ? r : until(p, f)(r)
   }
-
 export default until

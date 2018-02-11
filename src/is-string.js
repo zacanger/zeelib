@@ -6,7 +6,7 @@
  * isString('a') // => true
  */
 
-const isString = (v: any): bool =>
+const isString = (v: mixed): bool =>
   typeof v === 'string'
 
 export default isString

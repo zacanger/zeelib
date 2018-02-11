@@ -7,7 +7,7 @@
  * isBuffer(Buffer.from('asdf')) // => true
  */
 
-const isBuffer = (a: any): bool => {
+const isBuffer = (a: mixed): bool => {
   try {
     return Buffer.isBuffer(a)
   } catch (_) {

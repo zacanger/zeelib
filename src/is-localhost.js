@@ -6,7 +6,7 @@
  * isLocalhost() // => true
  */
 
-const isLocalhost = () => {
+const isLocalhost = (): bool => {
   const h = window && window.location && window.location.hostname
   return !!(
     [ 'localhost', '[::1]'].includes(h) ||

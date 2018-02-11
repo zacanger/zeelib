@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Returns size of the current terminal
  * @returns {object} columns, rows
@@ -6,7 +8,10 @@
  */
 
 const getTerminalSize = () => ({
+  // $FlowFixMe
   columns: process.stdout.columns,
+  // $FlowFixMe
   rows: process.stdout.rows
 })
+
 export default getTerminalSize

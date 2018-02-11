@@ -6,10 +6,8 @@
  * isPrimitive(1) // => true
  */
 
-const isPrimitive = (v: any): bool => {
-  if (v === null) {
-    return true
-  }
+const isPrimitive = (v: mixed): bool => {
+  if (v === null) return true
   const t = typeof v
   return t !== 'object' && t !== 'function'
 }

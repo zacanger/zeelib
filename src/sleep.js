@@ -9,8 +9,9 @@
  * sleep(1000).then(doAThing)
  */
 
-const sleep = (ms: number): Promise<*> =>
-  new Promise((resolve): any =>
-    setTimeout(resolve, ms))
+const sleep = (ms: number): Promise<void> =>
+  new Promise((resolve): void => {
+    setTimeout(resolve, ms)
+  })
 
 export default sleep

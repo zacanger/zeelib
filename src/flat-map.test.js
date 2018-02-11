@@ -1,7 +1,9 @@
+// @flow
+
 import test from 'tape'
 import flatMap from './flat-map'
 
-test('flatMap', (t) => {
+test('flatMap', (t): void => {
   const ns = [
     { name: 'Zacary', nicks: [ 'Zac', 'Zac Anger' ] },
     { name: 'Foo', nicks: [ 'Baz', 'Bar' ] }

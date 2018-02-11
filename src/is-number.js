@@ -9,7 +9,7 @@ import isNan from './is-nan'
  * isNumber(NaN) // => false
  */
 
-const isNumber = (v: any): bool =>
+const isNumber = (v: mixed): bool =>
   typeof v === 'number' && !isNan(v)
 
 export default isNumber

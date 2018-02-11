@@ -1,7 +1,5 @@
 // @flow
 
-type AnyF = (any) => any
-
 /**
  * Uncurry a function
  * @example
@@ -10,13 +8,10 @@ type AnyF = (any) => any
  * add(1, 2) // => 3
  */
 
-const uncurry = (f: AnyF): AnyF => {
-  if (typeof f !== 'function' || f.length === 0) {
-    return f
-  }
-
-  return (...args) => {
-    for (let arg of args) {
+// eslint-disable-next-line flowtype/no-weak-types
+const uncurry = (f: Function): Function =>
+  (...args: mixed[]): mixed => {
+    for (let arg: mixed of args) {
       if (typeof f !== 'function') {
         return f
       }
@@ -24,6 +19,5 @@ const uncurry = (f: AnyF): AnyF => {
     }
     return f
   }
-}
 
 export default uncurry

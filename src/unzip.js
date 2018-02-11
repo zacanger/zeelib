@@ -7,14 +7,15 @@
  * unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
  */
 
-const unzip = (xs: any[]): Array<any[]> => {
-  const a2 = []
-  const a3 = []
-  xs.forEach((_, i) => {
-    a2.push(xs[i][0])
-    a3.push(xs[i][1])
+const unzip = <A, B>(xs: [A, B][]): [A[], B[]] => {
+  const length = xs.length
+  const as: A[] = (Array.from({ length }): any) // eslint-disable-line flowtype/no-weak-types
+  const bs: B[] = (Array.from({ length }): any) // eslint-disable-line flowtype/no-weak-types
+  xs.forEach((x, i): void => {
+    as[i] = x[0]
+    bs[i] = x[1]
   })
-  return [ a2, a3 ]
+  return [ as, bs ]
 }
 
 export default unzip

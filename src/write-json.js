@@ -1,3 +1,5 @@
+// @flow
+
 import { writeFile } from 'fs'
 
 /**
@@ -8,15 +10,18 @@ import { writeFile } from 'fs'
 
 const writeJson = (
   file: string,
-  data: any,
-  indent: ?number = 2,
-  cb: () => any
-) => {
-  if (typeof cb !== 'function') {
+  data: mixed,
+  indent?: number | (?Error) => void = 2,
+  cb?: (?Error) => void
+): void => {
+  if (typeof indent === 'function') {
     cb = indent
     indent = 0
   }
-  let json
+  if (!cb) {
+    throw new Error('cb is required')
+  }
+  let json: string
   try {
     json = JSON.stringify(data, null, indent)
   } catch (e) {

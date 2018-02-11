@@ -10,7 +10,7 @@ import isError from './is-error'
  * foo().then(something).catch(throwError)
  */
 
-const throwError = (err: any): Error => {
+const throwError = (err: mixed): void => {
   throw isError(err) ? err : new Error(err)
 }
 

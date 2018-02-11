@@ -11,11 +11,11 @@ import { resolve } from 'path'
 
 const watchFile = (
   filePath: string,
-  cb: () => any
+  cb: (event: string, filename: string) => void
 ): void => {
   const file = resolve(filePath)
   try {
-    watch(file, cb)
+    watch(file, {}, cb)
     console.log('watching', file)
   } catch (e) {
     if (e.errno === 'ENOENT') {

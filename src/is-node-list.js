@@ -8,7 +8,11 @@ import isArrayLike from './is-array-like'
  * isNodeList(document.getElementsByTagName('span')) // => true
  */
 
-const isNodeList = (v: any): bool =>
-  isArrayLike(v) && /^\[object (HTMLCollection|NodeList)\]$/.test(v + '')
+const isNodeList = (v: mixed): bool => {
+  if (v && isArrayLike(v) && typeof v.toString === 'function') {
+    return /^\[object (HTMLCollection|NodeList)\]$/.test(v.toString())
+  }
+  return false
+}
 
 export default isNodeList
