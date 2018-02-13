@@ -7,7 +7,7 @@
  */
 
 const getRegexFlags = (r: RegExp): Array<string | null> => {
-  let flags = []
+  let flags: Array<string | null> = []
   if (r.global) flags.push('g')
   if (r.ignoreCase) flags.push('i')
   if (r.multiline) flags.push('m')

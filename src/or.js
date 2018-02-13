@@ -7,7 +7,7 @@
  * or([ 1, 2, 3, true ]) // => true
  */
 
-const or = (a: any[]): bool =>
+const or = <T> (a: T[]): bool =>
   a.some((e) => e === true)
 
 export default or

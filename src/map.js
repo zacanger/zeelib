@@ -11,7 +11,7 @@ const map = (fn: (any) => any, arr: ?any[]): any => {
     return (h) => map(fn, h)
   }
 
-  let ix = -1
+  let ix: number = -1
   const len = (arr && arr.length) || 0
   const toReturn = Array(len)
 

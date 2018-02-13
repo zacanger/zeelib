@@ -14,7 +14,7 @@ const mapObject = (
   ctx: any = this
 ): Object => {
   const res = {}
-  Object.keys(o).forEach((k) => {
+  Object.keys(o).forEach((k): void => {
     res[k] = f.call(ctx, o[k], k, o)
   })
   return res

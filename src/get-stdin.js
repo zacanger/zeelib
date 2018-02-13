@@ -8,8 +8,8 @@
  * })
  */
 
-const getStdin = (f: (a: string) => any): any => {
-  let b = ''
+const getStdin = (f: (a: string) => void): void => {
+  let b: string = ''
   process.stdin.setEncoding('utf8')
   process.stdin.on('data', (s) => { b += s })
   process.stdin.on('end', () => { f(b) }).resume()
