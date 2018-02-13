@@ -14,10 +14,8 @@ const writeJsonSync = <A>(
   data: A,
   indent?: number = 2
 ): void => {
-  if (typeof indent !== 'number') {
-    indent = 0
-  }
-  writeFileSync(file, JSON.stringify(data, null, indent), 'utf8')
+  const ind = typeof indent !== 'number' ? 0 : indent
+  writeFileSync(file, JSON.stringify(data, null, ind), 'utf8')
 }
 
 export default writeJsonSync

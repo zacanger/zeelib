@@ -12,10 +12,11 @@ const foldr = (
   s: any,
   a: any[]
 ): any => {
+  let inc = s
   for (let i = a.length - 1; i >= 0; i--) {
-    s = f(s, a[i])
+    inc = f(inc, a[i])
   }
-  return s
+  return inc
 }
 
 export default foldr

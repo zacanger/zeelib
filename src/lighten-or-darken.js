@@ -17,7 +17,6 @@ const lightenOrDarken = (col: string, amt: number): string => {
   let g: number = (num & 0x0000FF) + amt
 
   if (col[0] === '#') {
-    col = col.slice(1)
     useHash = true
   }
   if (r > 255) {
