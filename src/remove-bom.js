@@ -11,9 +11,10 @@
 
 const removeBOM = (content: string): string => {
   if (content.charCodeAt(0) === 0xFEFF) {
-    content = content.slice(1)
+    return content.slice(1)
+  } else {
+    return content
   }
-  return content
 }
 
 export default removeBOM

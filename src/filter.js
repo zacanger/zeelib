@@ -20,10 +20,8 @@ const filter = (
 
   each(list, (item, index) => {
     if (fn(item, index)) {
-      if (isArr) {
-        index = filtered.length
-      }
-      filtered[index] = item
+      const idx = isArr ? filtered.length : index
+      filtered[idx] = item
     }
   })
 
