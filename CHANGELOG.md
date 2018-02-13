@@ -1,3 +1,5 @@
+* `6.0.1` &mdash; **2018-02-13**
+  * Flow fixes, use const params (@TomPridham)
 * `6.0.0` &mdash; **2018-02-10** **breaking**
   * Remove `getLengthOfItemsInArray` and `getLengthOfCharactersInString`
     (use `countIn`)
