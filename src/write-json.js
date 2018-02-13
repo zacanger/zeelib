@@ -19,6 +19,8 @@ const writeJson = (
   if (typeof indent === 'function') {
     callback = indent
     ind = 0
+  } else {
+    ind = indent
   }
   if (!callback) {
     throw new Error('cb is required')
