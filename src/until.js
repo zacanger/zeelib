@@ -6,8 +6,8 @@
  * until(equals5, increment)(2) // => 5
  */
 
-const until = (p: (any) => bool, f: (any) => any) =>
-  (...args: any[]) => {
+const until = <T>(p: (T[]) => bool, f: (*) => T[]) =>
+  (...args: *): * => {
     const r = f(...args)
     return p(r) ? r : until(p, f)(r)
   }
