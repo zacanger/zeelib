@@ -7,9 +7,9 @@
  * any(lessThanThree, [ 4, 5, 6 ]) // => false
  */
 
-const any = (f: (any) => any, a: any[]): bool => {
+const any = <T>(f: (T) => bool, a: T[]): bool => {
   let r: bool = false
-  a.forEach((e) => {
+  a.forEach((e): void => {
     if (f(e) === true) {
       r = true
     }
