@@ -18,9 +18,9 @@ const colorize = (color: string, text: string): string => {
   return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
 }
 
-const colors = (): any => {
+const colors = (): {[string]: ((string) => string)} => {
   const val = {}
-  Object.keys(inspect.colors).forEach((color) => {
+  Object.keys(inspect.colors).forEach((color: string): void => {
     val[color] = (text: string) => colorize(color, text)
   })
   return val

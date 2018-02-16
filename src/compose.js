@@ -11,7 +11,7 @@ import reverse from './reverse'
  * compose(addOne, timesTwo)(2) // => 5
  */
 
-const compose = (...fns: any): any =>
+const compose = <T>(...fns: ((T) => T)[]): ((T) => T) =>
   pipe(...reverse(fns))
 
 export default compose

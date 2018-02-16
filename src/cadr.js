@@ -9,7 +9,7 @@ import cdr from './cdr'
  * cadr([ 1, 2, 3 ]) // => 2
  */
 
-const cadr = (a: any[]): any =>
+const cadr = <T>(a: T[]): T =>
   car(cdr(a))
 
 export default cadr
