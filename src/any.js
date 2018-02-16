@@ -8,7 +8,7 @@
  */
 
 const any = (f: (any) => any, a: any[]): bool => {
-  let r = false
+  let r: bool = false
   a.forEach((e) => {
     if (f(e) === true) {
       r = true

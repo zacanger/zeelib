@@ -4,7 +4,7 @@ import isDefined from './is-defined'
 import isArrayLike from './is-array-like'
 
 const iterateArray = (arr, fn) => {
-  for (let index = 0, len = arr.length; index < len; index++) {
+  for (let index: number = 0, len: number = arr.length; index < len; index++) {
     const exit = fn(arr[index], index)
     if (isDefined(exit)) {
       return exit
@@ -13,7 +13,7 @@ const iterateArray = (arr, fn) => {
 }
 
 const iterateObject = (obj, fn) => {
-  for (let prop in obj) {
+  for (let prop: string in obj) {
     if (obj.hasOwnProperty(prop)) {
       const exit = fn(obj[prop], prop)
       if (isDefined(exit)) {
@@ -35,8 +35,7 @@ const iterateObject = (obj, fn) => {
  * each() // => undefined
  */
 
-// $FlowFixMe
-const each = (list, fn) =>
+const each = (list: any, fn: any) =>
   isArrayLike(list)
     ? iterateArray(list, fn)
     : iterateObject(list, fn)

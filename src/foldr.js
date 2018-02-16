@@ -12,7 +12,7 @@ const foldr = (
   s: any,
   a: any[]
 ): any => {
-  for (let i = a.length - 1; i >= 0; i--) {
+  for (let i: number = a.length - 1; i >= 0; i--) {
     s = f(s, a[i])
   }
   return s

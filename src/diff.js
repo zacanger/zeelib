@@ -8,7 +8,7 @@
 
 const diff = (a: any[], b: ?any[]): any[] => {
   const arr = []
-  let len = a.length
+  let len: number = a.length
 
   if (!b) {
     return a

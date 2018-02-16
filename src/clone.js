@@ -25,7 +25,7 @@ const clone = <T: *> (obj: T): T => {
   } else {
     // $FlowFixMe -- flow doesn't know you can do Object.create(some.prototype)
     let copy: T = isArray(obj) ? [] : Object.create(Object.getPrototypeOf(obj))
-    for (let key in obj) {
+    for (let key: string in obj) {
       if (obj.hasOwnProperty(key)) {
         copy[key] = clone(obj[key])
       }
