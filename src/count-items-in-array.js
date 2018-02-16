@@ -8,7 +8,9 @@
 
 const countItemsInArray = (arr: *[]): {[string]: number} =>
   arr.reduce((a, c): {[string]: number} => {
-    if (!a[c.toString()]++) {
+    if (a[c.toString()]) {
+      a[c.toString()]++
+    } else {
       a[c.toString()] = 1
     }
     return a

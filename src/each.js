@@ -34,9 +34,15 @@ const iterateObject = <T>(obj: {[string]: *}, fn: ((*, string) => T)): (T | void
  * each() // => void
  */
 
-const each = <T>(list: (*[] | {[string]: *}), fn: ((?*, (number | string)) => T)) =>
-  list && Array.isArray(list)
-    ? iterateArray(list, fn)
-    : iterateObject(list, fn)
+const each = <T>(list: ?(*[] | {[string]: *}), fn: ?((?*, (number | string)) => T)) => {
+  if (list && fn) {
+    if (Array.isArray(list)
+    ) {
+      return iterateArray(list, fn)
+    } else {
+      return iterateObject(list, fn)
+    }
+  } else return undefined
+}
 
 export default each
