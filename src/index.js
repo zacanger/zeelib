@@ -295,3 +295,5 @@ export { default as uniq } from './uniq'
 export { default as uniqBy } from './uniq-by'
 export { default as unless } from './unless'
 export { default as xor } from './xor'
+
+export { default as until } from './until'
