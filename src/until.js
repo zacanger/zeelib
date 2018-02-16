@@ -8,6 +8,7 @@
 
 const until = (p: (any) => bool, f: (any) => any) =>
   (...args: any[]) => {
+    console.warn('`until` is deprecated and will be removed in the next major version.')
     const r = f(...args)
     return p(r) ? r : until(p, f)(r)
   }
