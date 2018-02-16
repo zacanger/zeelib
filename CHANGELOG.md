@@ -1,8 +1,10 @@
+* `6.0.3` &mdash; **2018-02-16**
+  * Loads more Flow improvments ([@TomPridham](https://github.com/TomPridham))
 * `6.0.2` &mdash; **2018-02-15**
   * Deprecate `until`
 * `6.0.1` &mdash; **2018-02-13**
   * Fix `lightenOrDarken` when called with a string with a `#`
-  * Flow fixes, use const params (@TomPridham)
+  * Flow fixes, use const params ([@TomPridham](https://github.com/TomPridham))
 * `6.0.0` &mdash; **2018-02-10** **breaking**
   * Remove `getLengthOfItemsInArray` and `getLengthOfCharactersInString`
     (use `countIn`)
@@ -12,6 +14,8 @@
   * `all` is no longer auto-curried (wrap in `curry` if you need that)
   * Remove `juxt`, which was incorrect
   * Loads of improvements to Flow and tests
+  * Huge thanks to [@spicydonuts](https://github.com/spicydonuts) for all the
+    work on this
 * `5.0.0` &mdash; **2017-12-28**
   * Remove `sleep` and rename `sleepAsync` to `sleep`
 * `4.0.0` &mdash; **2017-10-08**
