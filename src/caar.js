@@ -8,7 +8,7 @@ import car from './car'
  * caar([ [ 1 ] ]) // => 1
  */
 
-const caar = <T>(a: T[][]): T =>
+const caar = (a: *[]): * =>
   car(car(a))
 
 export default caar

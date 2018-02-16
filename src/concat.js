@@ -10,9 +10,9 @@ import isArray from './is-array'
  * concat(nested) // => [ 1, 2, 3, [ 4, 5, 6 ] ]
  */
 
-const concat = (a: Array<any[]>): any[] => {
-  let res = []
-  a.forEach((e) => {
+const concat = (a: Array<*[]>): *[] => {
+  let res: *[] = []
+  a.forEach((e): void => {
     if (isArray(e)) {
       res = res.concat(e)
     }

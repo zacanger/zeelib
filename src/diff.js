@@ -6,7 +6,7 @@
  * diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
  */
 
-const diff = (a: any[], b: ?any[]): any[] => {
+const diff = <T>(a: T[], b: ?T[]): T[] => {
   const arr = []
   let len: number = a.length
 

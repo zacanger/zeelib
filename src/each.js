@@ -1,9 +1,8 @@
 // @flow
 
 import isDefined from './is-defined'
-import isArrayLike from './is-array-like'
 
-const iterateArray = (arr, fn) => {
+const iterateArray = <T>(arr: *[], fn: ((*, number) => T)): (T | void) => {
   for (let index: number = 0, len: number = arr.length; index < len; index++) {
     const exit = fn(arr[index], index)
     if (isDefined(exit)) {
@@ -12,7 +11,7 @@ const iterateArray = (arr, fn) => {
   }
 }
 
-const iterateObject = (obj, fn) => {
+const iterateObject = <T>(obj: {[string]: *}, fn: ((*, string) => T)): (T | void) => {
   for (let prop: string in obj) {
     if (obj.hasOwnProperty(prop)) {
       const exit = fn(obj[prop], prop)
@@ -24,7 +23,7 @@ const iterateObject = (obj, fn) => {
 }
 
 /**
- * Takes a an array or object
+ * Takes an array or object
  * and a function, and runs the function
  * on each element
  * @param {array|object} list
@@ -32,11 +31,11 @@ const iterateObject = (obj, fn) => {
  * @returns {any}
  * @example
  * each([ 'a', 'b', 'c' ], id) // => 'a'
- * each() // => undefined
+ * each() // => void
  */
 
-const each = (list: any, fn: any) =>
-  isArrayLike(list)
+const each = <T>(list: (*[] | {[string]: *}), fn: ((?*, (number | string)) => T)) =>
+  list && Array.isArray(list)
     ? iterateArray(list, fn)
     : iterateObject(list, fn)
 
