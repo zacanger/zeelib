@@ -1,8 +1,9 @@
 // @flow
 
+import isArrayLike from './is-array-like'
 import isDefined from './is-defined'
 
-const iterateArray = <T>(arr: *[], fn: ((*, string) => T)): (T | void) => {
+const iterateArray = <T>(arr: *[] | string, fn: ((*, string) => T)): (T | void) => {
   for (let index: number = 0, len: number = arr.length; index < len; index++) {
     const exit = fn(arr[index], index.toString())
     if (isDefined(exit)) {
@@ -34,12 +35,15 @@ const iterateObject = <T>(obj: {[string]: *}, fn: ((*, string) => T)): (T | void
  * each() // => void
  */
 
-const each = <T>(list: ?(*[] | {[string]: *}), fn: ?((?*, (number | string)) => T)) => {
+const each = <T>(list: ?(*[] | {[string]: *} | string), fn: ?((?*, (number | string)) => T)) => {
   if (list && fn) {
-    if (Array.isArray(list)
-    ) {
+    if (isArrayLike(list)) {
+      // we need to have a more explicit way to narrow type here so that flow knows this will only ever be an array
+      // $FlowFixMe
       return iterateArray(list, fn)
     } else {
+      // same here
+      // $FlowFixMe
       return iterateObject(list, fn)
     }
   } else return undefined

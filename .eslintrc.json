@@ -4,6 +4,7 @@
   "parser": "babel-eslint",
   "rules": {
     "flowtype-errors/show-errors": [ 1 ],
+    "flowtype-errors/enforce-min-coverage": [ 1, 80 ],
     "flowtype/boolean-style": [ 1, "bool" ],
     "flowtype/no-weak-types": [ 1 ],
     "flowtype/space-after-type-colon": [ 1 ],

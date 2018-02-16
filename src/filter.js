@@ -12,7 +12,7 @@ import each from './each'
 
 const filter = (
   fn: (*, (string | number)) => bool,
-  list: mixed[] | Object
+  list: mixed[] | Object | string
 ): Object | mixed[] => {
   const isArr = Array.isArray(list)
   const filtered = isArr ? [] : {}
