@@ -1,7 +1,5 @@
 // @flow
 
-type res = void | Error
-
 /**
  * Takes a value and an optional failure message
  * and asserts truthiness
@@ -12,9 +10,9 @@ type res = void | Error
  */
 
 const assert = (
-  exp: any,
+  exp: *,
   message: string = 'Assertion Failed:'
-): res => {
+): void => {
   if (!exp) {
     throw new Error(message + ' ' + exp.toString())
   }
