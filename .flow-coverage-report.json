@@ -8,6 +8,5 @@
   "includeGlob": [
     "src/**/*.js"
   ],
-  "threshold": 70,
   "type": "text"
 }
