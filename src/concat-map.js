@@ -14,9 +14,9 @@ import concat from './concat'
  */
 
 const concatMap = (
-  f: (any) => any,
-  a: Array<any[]>
-): any[] =>
+  f: (*) => *,
+  a: Array<*[]>
+): *[] =>
   concat(a.map(f))
 
 export default concatMap

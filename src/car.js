@@ -6,7 +6,7 @@
  * car([ 1, 2, 3 ]) // => 1
  */
 
-const car = (arr: any[]): any =>
+const car = (arr: *[]): * =>
   arr[0]
 
 export default car

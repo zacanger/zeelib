@@ -9,7 +9,7 @@ import cdr from './cdr'
  * cdar([ [ 1, 2 ], 3 ]) // => [ 2 ]
  */
 
-const cdar = (a: any[]): any =>
+const cdar = (a: *[]): *[] =>
   cdr(car(a))
 
 export default cdar

@@ -16,9 +16,11 @@ import each from './each'
 const mix = (...args: any[]): Object => {
   const mixed = {}
   each(args, (obj) => {
-    each(obj, (item, index) => {
-      mixed[index] = item
-    })
+    if (obj) {
+      each(obj, (item, index) => {
+        mixed[index] = item
+      })
+    }
   })
   return mixed
 }

@@ -6,8 +6,8 @@
  * constant(1)(() => {}) // => 1
  */
 
-const constant = (a: any) =>
-  (_: any) =>
+const constant = <T>(a: T) =>
+  () =>
     a
 
 export default constant

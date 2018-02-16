@@ -7,7 +7,7 @@
  * cloneWithout({ a: 1, b: 2 }, 'a', 'b') // => {}
  */
 
-const cloneWithout = (source: Object, ...keys: string[]): Object => {
+const cloneWithout = (source: {[string]: *}, ...keys: string[]): {[string]: *} => {
   const copy = Object.assign({}, source)
   for (const key of keys) {
     delete copy[key]

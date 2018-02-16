@@ -11,14 +11,14 @@ const formatMs = (ms: number): string => {
   const min = 60000
   const sec = 1000
 
-  let hours = Math.floor(ms / hr)
-  let minutes = Math.floor((ms - (hours * hr)) / min)
-  let seconds = Math.round((ms - (hours * hr) - (minutes * min)) / sec)
+  const hours = Math.floor(ms / hr)
+  const minutes = Math.floor((ms - (hours * hr)) / min)
+  const seconds = Math.round((ms - (hours * hr) - (minutes * min)) / sec)
 
-  if (hours && minutes < 10) minutes = '0' + minutes
-  if (seconds < 10) seconds = '0' + seconds
+  const minutesString = hours && minutes < 10 ? '0' + minutes : minutes.toString()
+  const secondString = seconds < 10 ? '0' + seconds : seconds.toString()
 
-  let str = minutes + ':' + seconds
+  let str: string = minutesString + ':' + secondString
   if (hours) str = hours + ':' + str
 
   return str

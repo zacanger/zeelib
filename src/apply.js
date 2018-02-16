@@ -1,12 +1,12 @@
 // @flow
 
 /**
- * Applys f to any number of args
+ * Applies f to any number of args
  * @example
  * apply(lessThanThree, 1) // => true
  */
 
-const apply = (f: (any) => any, ...args: any[]): any =>
+const apply = <T>(f: (*) => T, ...args: *[]): T =>
   f(...args)
 
 export default apply

@@ -20,7 +20,7 @@ import id from './id'
  */
 
 const safeGet = <A>(path: string, fallback?: A) =>
-  (obj: Object): ?A => // eslint-disable-line flowtype/no-weak-types
+  (obj: Object): ?A =>
     (path.split(/[.[\]]/)
       .filter(id)
       // eslint-disable-next-line flowtype/no-weak-types

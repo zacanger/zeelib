@@ -8,7 +8,7 @@ import isNode from './is-node'
  * dir({ foo: 'bar' }) // => { foo: 'bar' }
  */
 
-const dir = (obj: Object): void =>
+const dir = (obj: {[string]: *}): void =>
   isNode()
     ? console.dir(obj, { colors: true })
     : typeof console.dir === 'function'

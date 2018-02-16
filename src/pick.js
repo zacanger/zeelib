@@ -14,7 +14,7 @@ function pick (ks: any, o: Object): Object {
   }
 
   const r = {}
-  let c = 0
+  let c: number = 0
   while (c < ks.length) {
     if (ks[c] in o) {
       r[ks[c]] = o[ks[c]]

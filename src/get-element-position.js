@@ -12,8 +12,8 @@ type p = {
  */
 
 const getElementPosition = (el: any): p => {
-  let x = 0
-  let y = 0
+  let x: number = 0
+  let y: number = 0
 
   let element = el
   while (element) {

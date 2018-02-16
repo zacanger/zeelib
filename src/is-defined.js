@@ -6,7 +6,7 @@
  * isDefined(null) // => true
  */
 
-const isDefined = (v: mixed): bool =>
+const isDefined = (v: *): bool =>
   typeof v !== 'undefined'
 
 export default isDefined
