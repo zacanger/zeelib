@@ -1,6 +1,5 @@
 // @flow
 
-import isArrayLike from './is-array-like'
 import each from './each'
 
 /**
@@ -12,10 +11,10 @@ import each from './each'
  */
 
 const filter = (
-  fn: ((mixed) => bool, ?number) => bool,
+  fn: (*, (string | number)) => bool,
   list: mixed[] | Object
 ): Object | mixed[] => {
-  const isArr = isArrayLike(list)
+  const isArr = Array.isArray(list)
   const filtered = isArr ? [] : {}
 
   each(list, (item, index) => {
@@ -23,6 +22,7 @@ const filter = (
       if (isArr) {
         index = filtered.length
       }
+      // $FlowFixMe
       filtered[index] = item
     }
   })

@@ -2,9 +2,9 @@
 
 import isDefined from './is-defined'
 
-const iterateArray = <T>(arr: *[], fn: ((*, number) => T)): (T | void) => {
+const iterateArray = <T>(arr: *[], fn: ((*, string) => T)): (T | void) => {
   for (let index: number = 0, len: number = arr.length; index < len; index++) {
-    const exit = fn(arr[index], index)
+    const exit = fn(arr[index], index.toString())
     if (isDefined(exit)) {
       return exit
     }
