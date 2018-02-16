@@ -1,3 +1,5 @@
+* `6.1.0` &mdash; **2018-02-16**
+  * Change `union` to accept any number of arrays
 * `6.0.3` &mdash; **2018-02-16**
   * Loads more Flow improvments ([@TomPridham](https://github.com/TomPridham))
 * `6.0.2` &mdash; **2018-02-15**
