@@ -8,10 +8,9 @@
  */
 
 const unzip3 = <A, B, C>(xs: [A, B, C][]): [A[], B[], C[]] => {
-  const length = xs.length
-  const as: A[] = (Array.from({ length }): any)
-  const bs: B[] = (Array.from({ length }): any)
-  const cs: C[] = (Array.from({ length }): any)
+  const as: A[] = []
+  const bs: B[] = []
+  const cs: C[] = []
   xs.forEach((x, i): void => {
     as[i] = x[0]
     bs[i] = x[1]
