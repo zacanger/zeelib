@@ -17,7 +17,7 @@ declare function promisify<A, B, C, D, T>((A, B, C, D, Callback<T>) => void): (A
 declare function promisify<A, B, C, D, E, T>((A, B, C, D, E, Callback<T>) => void): (A, B, C, D, E) => Promise<T>
 declare function promisify<A, B, C, D, E, F, T>((A, B, C, D, E, F, Callback<T>) => void): (A, B, C, D, E, F) => Promise<T>
 declare function promisify<A, B, C, D, E, F, G, T>((A, B, C, D, E, F, G, Callback<T>) => void): (A, B, C, D, E, F, G) => Promise<T>
-declare function promisify(Function): Function // eslint-disable-line flowtype/no-weak-types
+declare function promisify(Function): Function
 
 function promisify (f) {
   return (...args: mixed[]) =>

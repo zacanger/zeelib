@@ -9,9 +9,9 @@
 
 const unzip3 = <A, B, C>(xs: [A, B, C][]): [A[], B[], C[]] => {
   const length = xs.length
-  const as: A[] = (Array.from({ length }): any) // eslint-disable-line flowtype/no-weak-types
-  const bs: B[] = (Array.from({ length }): any) // eslint-disable-line flowtype/no-weak-types
-  const cs: C[] = (Array.from({ length }): any) // eslint-disable-line flowtype/no-weak-types
+  const as: A[] = (Array.from({ length }): any)
+  const bs: B[] = (Array.from({ length }): any)
+  const cs: C[] = (Array.from({ length }): any)
   xs.forEach((x, i): void => {
     as[i] = x[0]
     bs[i] = x[1]

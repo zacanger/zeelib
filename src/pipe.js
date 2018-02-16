@@ -18,7 +18,7 @@ declare function pipe<A, B, C, D, T>((A) => B, (B) => C, (C) => D, (D) => T): T
 declare function pipe<A, B, C, D, E, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => T): T
 declare function pipe<A, B, C, D, E, F, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => F, (F) => T): T
 declare function pipe<A, B, C, D, E, F, G, T>((A) => B, (B) => C, (C) => D, (D) => E, (E) => F, (F) => G, (G) => T): T
-declare function pipe(Function): Function // eslint-disable-line flowtype/no-weak-types
+declare function pipe(Function): Function
 
 function pipe (...fns) {
   return (data) => reduce((v, fn) => fn(v))(data)(fns)

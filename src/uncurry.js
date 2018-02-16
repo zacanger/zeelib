@@ -8,7 +8,6 @@
  * add(1, 2) // => 3
  */
 
-// eslint-disable-next-line flowtype/no-weak-types
 const uncurry = (f: Function): Function =>
   (...args: mixed[]): mixed => {
     for (let arg: mixed of args) {

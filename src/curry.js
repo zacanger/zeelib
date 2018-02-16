@@ -24,7 +24,7 @@ declare function curry<A, B, C, D, T>((A, B, C, D) => T): (A) => (B) => (C) => (
 declare function curry<A, B, C, D, E, T>((A, B, C, D, E) => T): (A) => (B) => (C) => (D) => (E) => T
 declare function curry<A, B, C, D, E, F, T>((A, B, C, D, E, F) => T): (A) => (B) => (C) => (D) => (E) => (F) => T
 declare function curry<A, B, C, D, E, F, G, T>((A, B, C, D, E, F, G) => T): (A) => (B) => (C) => (D) => (E) => (F) => (G) => T
-declare function curry(Function): Function // eslint-disable-line flowtype/no-weak-types
+declare function curry(Function): Function
 
 function curry (fn) {
   const getFunctionArguments = (fn): string[] => {
