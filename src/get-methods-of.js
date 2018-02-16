@@ -1,5 +1,7 @@
 // @flow
 
+type Obj = { [key: string]: mixed }
+
 /**
  * Get list of methods in an object
  * @example
@@ -7,8 +9,8 @@
  * getMethodsOf(o) // => [ 'foo', 'bar' ]
  */
 
-const getMethodsOf = (o: Object): string[] => {
-  const r = []
+const getMethodsOf = (o: Obj): string[] => {
+  const r: string[] = []
   for (let m: string in o) {
     if (o.hasOwnProperty(m)) {
       if (typeof o[m] === 'function') {

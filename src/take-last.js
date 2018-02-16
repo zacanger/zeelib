@@ -7,12 +7,12 @@
  */
 
 const takeLast = <A>(num: number, arr: A[]): A[] => {
-  arr = arr.reverse()
-  const alen = arr.length
-  if (num > alen) return arr
+  const array = arr.reverse()
+  const alen = array.length
+  if (num > alen) return array
   const a1 = []
   for (let i: number = 0; i < num && i < alen; i++) {
-    a1.push(arr[i])
+    a1.push(array[i])
   }
   return a1.reverse()
 }

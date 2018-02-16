@@ -1,3 +1,8 @@
+* `6.0.2` &mdash; **2018-02-15**
+  * Deprecate `until`
+* `6.0.1` &mdash; **2018-02-13**
+  * Fix `lightenOrDarken` when called with a string with a `#`
+  * Flow fixes, use const params (@TomPridham)
 * `6.0.0` &mdash; **2018-02-10** **breaking**
   * Remove `getLengthOfItemsInArray` and `getLengthOfCharactersInString`
     (use `countIn`)

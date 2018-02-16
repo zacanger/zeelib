@@ -12,10 +12,11 @@ const foldl = (
   s: any,
   a: any[]
 ): any => {
+  let inc = s
   a.forEach((el) => {
-    s = f(s, el)
+    inc = f(inc, el)
   })
-  return s
+  return inc
 }
 
 export default foldl

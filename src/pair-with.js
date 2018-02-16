@@ -7,11 +7,11 @@
  * pairWith(increment, 1, 1) // => [ 2, 2 ]
  */
 
-const pairWith = (
-  f: (any) => any,
-  a: any,
-  b: any
-): any[] =>
+const pairWith = <T> (
+  f: (T) => T,
+  a: T,
+  b: T
+): T[] =>
   [ f(a), f(b) ]
 
 export default pairWith

@@ -19,11 +19,9 @@ const filter = (
 
   each(list, (item, index) => {
     if (fn(item, index)) {
-      if (isArr) {
-        index = filtered.length
-      }
+      const idx = isArr ? filtered.length : index
       // $FlowFixMe
-      filtered[index] = item
+      filtered[idx] = item
     }
   })
 

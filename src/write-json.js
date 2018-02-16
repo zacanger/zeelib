@@ -14,21 +14,25 @@ const writeJson = (
   indent?: number | (?Error) => void = 2,
   cb?: (?Error) => void
 ): void => {
+  let callback = cb
+  let ind
   if (typeof indent === 'function') {
-    cb = indent
-    indent = 0
+    callback = indent
+    ind = 0
+  } else {
+    ind = indent
   }
-  if (!cb) {
+  if (!callback) {
     throw new Error('cb is required')
   }
   let json: string
   try {
-    json = JSON.stringify(data, null, indent)
+    json = JSON.stringify(data, null, ind)
   } catch (e) {
-    cb(e)
+    callback(e)
     return
   }
-  writeFile(file, json, 'utf8', cb)
+  writeFile(file, json, 'utf8', callback)
 }
 
 export default writeJson

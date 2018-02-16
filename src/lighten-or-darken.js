@@ -10,16 +10,13 @@
  */
 
 const lightenOrDarken = (col: string, amt: number): string => {
-  let useHash: bool = false
-  let num: number = parseInt(col, 16)
+  const useHash = col[0] === '#'
+  const c = useHash ? col.slice(1) : col
+  let num: number = parseInt(c, 16)
   let r: number = (num >> 16) + amt
   let b: number = ((num >> 8) & 0x00FF) + amt
   let g: number = (num & 0x0000FF) + amt
 
-  if (col[0] === '#') {
-    col = col.slice(1)
-    useHash = true
-  }
   if (r > 255) {
     r = 255
   } else if (r < 0) {
