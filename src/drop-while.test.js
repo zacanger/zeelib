@@ -6,5 +6,6 @@ import dropWhile from './drop-while'
 test('dropWhile', (t): void => {
   const f = (a: mixed): bool => typeof a === 'number' && a < 10
   t.deepEqual(dropWhile(f, [ 3, 6, 9, 12 ]), [ 12 ], 'drops while')
+  t.deepEqual(dropWhile(f, [ 1, 2, 3 ]), [], 'returns empty arr')
   t.end()
 })
