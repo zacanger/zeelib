@@ -1,7 +1,8 @@
 // @flow
 
 import { homedir } from 'os'
-const { env } = process
+
+const env = (typeof process !== 'undefined' && process.env) || {}
 
 /**
  * Get current user's home directory
