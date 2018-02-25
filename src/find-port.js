@@ -8,23 +8,25 @@ import { createServer } from 'net'
  * findPort(8000, (err, port) => console.log(`${port} is open`))
  */
 
-const findPort = (port: number, cb: any): any => {
-  const server = createServer(() => {})
-  const onListen = () => {
+const findPort = (port: number, cb: (Error | null, ?number) => void): void => {
+  const server = createServer((): void => {})
+  const onListen = (): void => {
     server.removeListener('error', onError) // eslint-disable-line no-use-before-define
     server.close()
     cb(null, port)
   }
-  const onError = (err) => {
+
+  server.once('error', onError)
+  server.once('listening', onListen)
+  server.listen(port)
+
+  function onError (err: Error): void {
     server.removeListener('listening', onListen)
     if (err.code && [ 'EADDRINUSE', 'EACCESS' ].includes(err.code)) {
       return cb(err)
     }
     findPort(port + 1, cb)
   }
-  server.once('error', onError)
-  server.once('listening', onListen)
-  server.listen(port)
 }
 
 export default findPort
