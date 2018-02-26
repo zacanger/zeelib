@@ -1,3 +1,5 @@
+* `6.1.6` &mdash; **2018-02-26**
+  * Add `hasLocalStorage`
 * `6.1.4` &mdash; **2018-02-22**
   * Add `clamp`
 * `6.1.3` &mdash; **2018-02-22**
