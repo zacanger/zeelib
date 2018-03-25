@@ -6,10 +6,9 @@
  * unless(() => true, false) // => true
  */
 
-const unless = <A>(
+const unless = <A> (
   cond: bool,
   fn: () => A
-): ?A =>
-  !cond ? fn() : null
+): ?A => !cond ? fn() : null
 
 export default unless

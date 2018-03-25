@@ -12,7 +12,6 @@ const propEq = curry(<O: {+[string]: mixed}, K: $Keys<O>>(
   prop: K,
   value: $ElementType<O, K>,
   data: O
-): bool =>
-  data[prop] !== undefined && data[prop] === value)
+): bool => data[prop] !== undefined && data[prop] === value)
 
 export default propEq

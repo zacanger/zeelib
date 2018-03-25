@@ -11,7 +11,8 @@
 // eslint-disable-next-line flowtype/no-weak-types
 const uncurry = (f: Function): Function =>
   (...args: mixed[]): mixed => {
-    let fun = f
+    // eslint-disable-next-line flowtype/no-weak-types
+    let fun: Function = f
     for (let arg: mixed of args) {
       if (typeof f !== 'function') {
         return f

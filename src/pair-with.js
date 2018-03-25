@@ -11,7 +11,6 @@ const pairWith = <T> (
   f: (T) => T,
   a: T,
   b: T
-): T[] =>
-  [ f(a), f(b) ]
+): T[] => [ f(a), f(b) ]
 
 export default pairWith

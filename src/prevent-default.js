@@ -10,7 +10,7 @@
  * }
  */
 
-const preventDefault = (e: EventTarget): void => {
+const preventDefault = (e: Event): void => {
   if (e) {
     if (typeof e.preventDefault === 'function') {
       e.preventDefault()

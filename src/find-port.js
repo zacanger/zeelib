@@ -2,6 +2,10 @@
 
 import { createServer } from 'net'
 
+type NodeError = {
+  code: string
+} & Error
+
 /**
  * Find next open port
  * @example
@@ -20,7 +24,7 @@ const findPort = (port: number, cb: (Error | null, ?number) => void): void => {
   server.once('listening', onListen)
   server.listen(port)
 
-  function onError (err: Error): void {
+  function onError (err: NodeError): void {
     server.removeListener('listening', onListen)
     if (err.code && [ 'EADDRINUSE', 'EACCESS' ].includes(err.code)) {
       return cb(err)
