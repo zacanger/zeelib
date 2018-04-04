@@ -8,7 +8,7 @@
  * isFunction(noop) // => true
  */
 
-const isFunction = (v: any): bool =>
+const isFunction = (v: mixed): bool =>
   typeof v === 'function'
 
 export default isFunction

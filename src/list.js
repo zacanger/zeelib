@@ -6,7 +6,7 @@
  * list(1, 2, 3) // => [ 1, 2, 3 ]
  */
 
-const list = (...args: any): any[] =>
+const list = <T>(...args: T[]): T[] =>
   [ ...args ]
 
 export default list

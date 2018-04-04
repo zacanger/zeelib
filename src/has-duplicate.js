@@ -7,7 +7,7 @@
  * hasDuplicate([ 1, 1, 2 ]) // => true
  */
 
-const hasDuplicate = (arr: any[]): bool =>
+const hasDuplicate = <T>(arr: T[]): bool =>
   arr.some((v, i, s) => s.indexOf(v) !== i)
 
 export default hasDuplicate

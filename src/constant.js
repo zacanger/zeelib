@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * Similar to `id` but takes another `any`
+ * Similar to `id` but takes another `T`
  * @example
  * constant(1)(() => {}) // => 1
  */
