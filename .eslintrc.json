@@ -1,8 +1,9 @@
 {
-  "extends": [ "eslint-config-jane", "plugin:flowtype/recommended" ],
+  "extends": [ "eslint-config-zacanger", "plugin:flowtype/recommended" ],
   "plugins": [ "babel", "flowtype", "flowtype-errors" ],
   "parser": "babel-eslint",
   "rules": {
+    "func-style": 0,
     "flowtype-errors/show-errors": [ 1 ],
     "flowtype/boolean-style": [ 1, "bool" ],
     "flowtype/no-weak-types": [ 1 ],

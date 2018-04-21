@@ -9,7 +9,7 @@
 const isLocalhost = (): bool => {
   const h = window && window.location && window.location.hostname
   return !!(
-    [ 'localhost', '[::1]'].includes(h) ||
+    [ 'localhost', '[::1]' ].includes(h) ||
     h.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   )
 }

@@ -8,7 +8,7 @@ import { execFile } from 'child_process'
  * open('http://zacanger.com')
  */
 
-// eslint-disable-next-line flowtype/no-weak-types
+// eslint-disable-next-line flowtype/no-weak-types, camelcase
 const open = (args: string, opts: Object, cb: Function): child_process$ChildProcess => {
   const as: string[] = [ args ]
   const cmd: string = process.platform === 'win32'

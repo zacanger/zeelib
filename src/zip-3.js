@@ -12,6 +12,6 @@ import zipWith3 from './zip-with-3'
  */
 
 const zip3 = <A, B, C>(xs: A[], ys: B[], zs: C[]): [A, B, C][] =>
-  zipWith3((x, y, z) => [x, y, z], xs, ys, zs)
+  zipWith3((x, y, z) => [ x, y, z ], xs, ys, zs)
 
 export default zip3

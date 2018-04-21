@@ -8,7 +8,7 @@ test('flatMap', (t): void => {
     { name: 'Zacary', nicks: [ 'Zac', 'Zac Anger' ] },
     { name: 'Foo', nicks: [ 'Baz', 'Bar' ] }
   ]
-  const f = (a) => [a.name].concat(a.nicks)
+  const f = (a) => [ a.name ].concat(a.nicks)
   const e = [ 'Zacary', 'Zac', 'Zac Anger', 'Foo', 'Baz', 'Bar' ]
 
   t.deepEqual(flatMap(f, ns), e, 'works')

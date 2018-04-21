@@ -8,6 +8,6 @@
  */
 
 const intersection = <T>(xs: T[], ys: T[]): T[] =>
-  [...new Set(xs.filter((el) => ys.includes(el)))]
+  [ ...new Set(xs.filter((el) => ys.includes(el))) ]
 
 export default intersection
