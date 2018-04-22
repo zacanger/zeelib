@@ -29,10 +29,12 @@ import c from 'zeelib/lib/colorize'
 console.log(c.bold(c.blue('HELLO THERE')))
 ```
 
-If you're using `require` with individual files you'll need to use `default`:
+Require also works:
 
 ```javascript
-const c = require('zeelib/lib/colorize').default
+const z = require('zeelib')
+const { exit } = require('zeelib')
+const exit = require('zeelib/lib/exit')
 ```
 
 If you get errors when using `zeelib` in a front-end build, you may need to use
@@ -49,4 +51,4 @@ node: {
 }
 ```
 
-Or, just import the functions you need.
+But I highly recommend just importing/requiring the functions you need.

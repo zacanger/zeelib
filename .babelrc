@@ -2,7 +2,7 @@
   "presets": [ "stage-3", "env" ],
   "plugins": [
     "transform-flow-strip-types",
-    "transform-es2015-modules-commonjs"
+    "add-module-exports"
   ],
   "comments": false
 }
