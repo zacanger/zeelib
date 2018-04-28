@@ -9,6 +9,11 @@ A small lib of FP, Node, and DOM utils.
 * [Contributing](./CONTRIBUTING.md)
 * [License (MIT)](./LICENSE.md)
 
+
+[![CircleCI](https://circleci.com/gh/zacanger/zeelib/tree/master.svg?style=svg)](https://circleci.com/gh/zacanger/zeelib/tree/master)
+
+[![npm version](https://badge.fury.io/js/zeelib.svg)](https://badge.fury.io/js/zeelib)
+
 --------
 
 ## Usage
