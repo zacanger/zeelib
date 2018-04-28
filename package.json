@@ -19,7 +19,7 @@
     "doc": "documentation build -g src/index.js -f html -o docs",
     "fixpack": "fixpack",
     "postbuild": "npm run copy-flow",
-    "postpublish": "npm run doc && git commit -am doc && git push",
+    "postpublish": "npm run doc && git commit -am doc [skip ci] && git push",
     "prebuild": "run-s clean test cover fixpack",
     "preversion": "npm run build",
     "test": "npm run test:flow && npm run test:lint && npm run test:tape",
