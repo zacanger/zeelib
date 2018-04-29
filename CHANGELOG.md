@@ -1,3 +1,7 @@
+* `7.0.0` &mdash; **2018-04-29**
+  * Republish because the fix for cjs was a breaking change. Sorry!
+* `6.2.0` &mdash; **2018-04-22**
+  * Provide `module.exports = exports.default` for cjs
 * `6.1.6` &mdash; **2018-02-26**
   * Add `hasLocalStorage`
 * `6.1.4` &mdash; **2018-02-22**
