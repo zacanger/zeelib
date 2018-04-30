@@ -53,7 +53,7 @@
     "babel-tape-runner": "2.0.1",
     "documentation": "6.3.2",
     "eslint": "4.19.1",
-    "eslint-config-zacanger": "3.1.1",
+    "eslint-config-zacanger": "3.1.2",
     "eslint-plugin-babel": "5.1.0",
     "eslint-plugin-flowtype": "2.46.3",
     "eslint-plugin-flowtype-errors": "3.5.1",

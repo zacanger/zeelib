@@ -7,7 +7,7 @@
  */
 
 const removeSubdomain = (str: string): string =>
-  str.split('').filter((c: string) => c === '.').length > 2
+  str.split('').filter((c: string) => c === '.').length > 1
     ? str.replace(/^[^.]+\./g, '')
     : str
 

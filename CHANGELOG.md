@@ -1,3 +1,5 @@
+* `7.0.1` &mdash; **2018-04-30**
+  * Fix `removeSubdomain`
 * `7.0.0` &mdash; **2018-04-29**
   * Republish because the fix for cjs was a breaking change. Sorry!
 * `6.2.0` &mdash; **2018-04-22**
