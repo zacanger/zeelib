@@ -5,7 +5,7 @@
  * @example
  * isCssUnit('100px') // => true
  * isCssUnit('auto') // => true
- * isCssUnit(0) // => false
+ * isCssUnit(0) // => true
  * isCssUnit('90') // => false
  * isCssUnit(90) // => false
  */
