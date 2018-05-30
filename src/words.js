@@ -7,6 +7,6 @@
  */
 
 const words = (str: string): string[] =>
-  str.split(' ')
+  str ? str.split(' ') : []
 
 export default words

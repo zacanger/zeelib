@@ -22,7 +22,7 @@
     "postpublish": "npm run doc && git commit -am 'doc [skip ci]' && git push",
     "prebuild": "run-s clean fixpack test:build",
     "preversion": "npm run build",
-    "test": "run-s test:flow npm run test:lint npm run test:tape",
+    "test": "run-s test:flow test:lint test:tape",
     "test:build": "run-s test:lint test:flow cover:flow cover:tape",
     "test:flow": "flow check",
     "test:lint": "eslint -c .eslintrc.json src",
