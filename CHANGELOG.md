@@ -1,3 +1,5 @@
+* `7.0.3` &mdash; **2018-05-30**
+  * Fix `words` to return empty array from empty string ([@TomPridham](https://github.com/TomPridham))
 * `7.0.1` &mdash; **2018-04-30**
   * Fix `removeSubdomain`
 * `7.0.0` &mdash; **2018-04-29**
