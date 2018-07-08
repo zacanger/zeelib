@@ -1,4 +1,12 @@
-## zeelib
+# zeelib
+
+## _*IMPORTANT*_
+
+All functional-style utils will be removed in an upcoming release. I strongly
+recommend migrating to Ramda (or Lodash, or even Underscore). `zeelib` will
+stick around as a library of Node and DOM utils.
+
+--------
 
 A small lib of FP, Node, and DOM utils.
 
