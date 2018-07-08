@@ -73,7 +73,8 @@
     "tape": "4.9.1"
   },
   "files": [
-    "lib"
+    "lib",
+    "warning.js"
   ],
   "nyc": {
     "include": [
