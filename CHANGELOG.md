@@ -1,3 +1,58 @@
+* `8.0.0` &mdash; **2018-08-03** **breaking**
+  * Remove all functional-style utils. I recommend using Ramda or Lodash for FP,
+    since those libraries are better tested and maintained. Removed functions:
+    * all.js
+    * and.js
+    * any.js
+    * apply.js
+    * caar.js
+    * cadr.js
+    * cdar.js
+    * cddr.js
+    * clone-without.js
+    * clone.js
+    * concat-map.js
+    * concat.js
+    * cons.js
+    * constant.js
+    * drop-while.js
+    * drop.js
+    * elem.js
+    * eq.js
+    * find-where.js
+    * flat-map.js
+    * foldl.js
+    * foldl1.js
+    * foldr.js
+    * foldr1.js
+    * group-by.js
+    * init.js
+    * last.js
+    * list.js
+    * memoize.js
+    * not-elem.js
+    * not.js
+    * once.js
+    * or.js
+    * pair-with.js
+    * pair.js
+    * pick.js
+    * pluck.js
+    * prop-eq.js
+    * replicate.js
+    * span.js
+    * split-at.js
+    * take-last.js
+    * take-while.js
+    * take.js
+    * uncurry.js
+    * unzip-3.js
+    * unzip.js
+    * xor.js
+    * zip-3.js
+    * zip-with-3.js
+    * zip-with.js
+    * zip.js
 * `7.0.3` &mdash; **2018-05-30**
   * Fix `words` to return empty array from empty string ([@TomPridham](https://github.com/TomPridham))
 * `7.0.1` &mdash; **2018-04-30**

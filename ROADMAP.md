@@ -5,7 +5,6 @@ Roadmap/TODO list (for no release in particular):
 * 100% test coverage
 * Remove all weak types
 * Build TS libdefs
-* Maybe deprecate all fp utils and suggest using Ramda instead?
 * Remove all `$FlowFixMe`s
 * `import foo from 'zeelib/foo'` instead of `'zeelib/lib/foo'`
 * Doc
