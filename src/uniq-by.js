@@ -8,7 +8,9 @@
  * uniqBy('foo', a) // => [ { foo: 'foo' }, { foo: 'bar' } ]
  */
 
+/* eslint-disable max-len */
 // $FlowFixMe
-const uniqBy = (el: string, xs: Array<{+[string]: mixed}>) => xs.filter((e: mixed, i: number) => xs.findIndex((a: mixed) => a[el] === e[el]) === i)
+const uniqBy = (el: string, xs: Array<{+[string]: mixed}>) =>
+  xs.filter((e: mixed, i: number) => xs.findIndex((a: mixed) => a[el] === e[el]) === i)
 
 export default uniqBy
