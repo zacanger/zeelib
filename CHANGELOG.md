@@ -1,5 +1,6 @@
 * `8.0.0` &mdash; **2018-08-03** **breaking**
   * Change `uniqBy` to work as expected. See docs.
+  * Remove `until` (previously deprecated).
   * Remove all functional-style utils. I recommend using Ramda or Lodash for FP,
     since those libraries are better tested and maintained. Removed functions:
     * all.js
