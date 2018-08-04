@@ -18,7 +18,7 @@
     "cover:tape": "nyc npm run test:tape",
     "doc": "documentation build -g src/index.js -f html -o docs",
     "fixpack": "fixpack",
-    "postbuild": "run-s -s copy-flow doc",
+    "postbuild": "npm run copy-flow",
     "postpublish": "npm run doc && git commit -am 'doc [skip ci]' && git push",
     "prebuild": "run-s -s clean fixpack test:build",
     "preversion": "npm run build",
