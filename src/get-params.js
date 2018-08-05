@@ -7,7 +7,7 @@
  * getParams(thing) // => [ 'a', 'b', 'c' ]
  */
 
-const getParams = (fn: (any) => any): string[] => {
+const getParams = (fn: (mixed) => mixed): string[] => {
   const s = fn.toString()
   return s.slice(s.indexOf('(') + 1, s.indexOf(')')).match(/([^\s,]+)/g) || []
 }

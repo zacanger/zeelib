@@ -35,7 +35,10 @@ const iterateObject = <T>(obj: {[string]: *}, fn: ((*, string) => T)): (T | void
  * each() // => void
  */
 
-const each = <T>(list: ?(*[] | {[string]: *} | string), fn: ?((?*, (number | string)) => T)) => {
+const each = <T>(
+  list: ?(*[] | {[string]: *} | string),
+  fn: ?((?*, (number | string)) => T)
+): Object | Array<mixed> | void => {
   if (list && fn) {
     if (isArrayLike(list)) {
       // we need to have a more explicit way to narrow type here so that flow knows this will only ever be an array

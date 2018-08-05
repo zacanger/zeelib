@@ -6,7 +6,7 @@
  * getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
  */
 
-const getKeyByValue = (value: any, object: Object): ?string =>
-  Object.keys(object).find((key) => object[key] === value)
+const getKeyByValue = (value: mixed, object: Object): ?string =>
+  Object.keys(object).find((key: string) => object[key] === value)
 
 export default getKeyByValue

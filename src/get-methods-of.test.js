@@ -6,9 +6,9 @@ import getMethodsOf from './get-methods-of'
 test('getMethodsOf', (t): void => {
   const o = {
     foo: () => true,
-    bar () { return false },
+    bar (): bool { return false },
     a: 'b',
-    baz: function (whatever) { return whatever }
+    baz: function <T> (whatever: T): T { return whatever }
   }
   t.deepEqual(getMethodsOf(o), [ 'foo', 'bar', 'baz' ])
   t.end()

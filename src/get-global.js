@@ -6,7 +6,7 @@
  * getGlobal() // => window, global, whatever
  */
 
-const getGlobal = (): any => {
+const getGlobal = (): Object => {
   if (typeof self !== 'undefined') return self
   if (typeof window !== 'undefined') return window
   if (typeof global !== 'undefined') return global

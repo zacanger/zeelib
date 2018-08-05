@@ -7,7 +7,7 @@
  */
 
 const findIndices = (el: mixed, arr: mixed[]): number[] =>
-  arr.reduce((a, e, i) => {
+  arr.reduce((a, e, i): number[] => {
     if (e === el) {
       a.push(i)
     }
