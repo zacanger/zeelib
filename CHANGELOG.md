@@ -1,3 +1,5 @@
+* `8.2.0` &mdash; **2018-08-19**
+  * Add back `take`
 * `8.1.0` &mdash; **2018-08-04**
   * Add `isRoot`
 * `8.0.0` &mdash; **2018-08-03** **breaking**
