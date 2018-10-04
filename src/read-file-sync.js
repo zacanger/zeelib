@@ -1,6 +1,6 @@
 // @flow
 
-import { readFileSync } from 'fs'
+import { readFileSync as _readFileSync } from 'fs'
 import { resolve } from 'path'
 
 /**
@@ -10,10 +10,10 @@ import { resolve } from 'path'
  * if (fooContents != null) doThings(fooContents)
  */
 
-const readFileS = (str: string): ?string => {
+const readFileSync = (str: string): ?string => {
   try {
-    return readFileSync(resolve(str), { encoding: 'utf8' })
+    return _readFileSync(resolve(str), { encoding: 'utf8' })
   } catch (_) { }
 }
 
-export default readFileS
+export default readFileSync
