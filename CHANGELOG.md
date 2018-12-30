@@ -1,3 +1,5 @@
+* `8.4.0` &mdash; **2018-12-30**
+  * Add `escapeForRegex`
 * `8.3.0` &mdash; **2018-12-07**
   * Add `isInteger`
 * `8.2.1` &mdash; **2018-09-01**

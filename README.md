@@ -15,7 +15,7 @@ A small lib of Node, string, and DOM utils.
 
 ## Usage
 
-`zeelib` is a collection of over 250 utility functions.
+`zeelib` is a collection of over 200 utility functions.
 See the [docs](https://zacanger.github.io/zeelib) for details.
 
 Example usage:
