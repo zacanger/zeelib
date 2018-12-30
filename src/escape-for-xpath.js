@@ -9,7 +9,7 @@
 const escapeForXpath = (str: string): ?string => {
   let parts = str.match(/[^'"]+|['"]/g)
   if (parts) {
-    parts = parts.map((part) => {
+    parts = parts.map((part): string => {
       if (part === "'") {
         return '"\'"'
       }
