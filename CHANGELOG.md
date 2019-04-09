@@ -1,4 +1,7 @@
+* `8.6.0` &mdash; **2019-04-09**
+  * Add `isHiddenFile`, `moveFile`, and `removeExtension`
 * `8.5.0` &mdash; **2019-01-09**
+  * Add `getLocalIp`
 * `8.4.0` &mdash; **2018-12-30**
   * Add `escapeForRegex`
 * `8.3.0` &mdash; **2018-12-07**
