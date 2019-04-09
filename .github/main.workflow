@@ -9,7 +9,7 @@ action "Install" {
 }
 
 action "Build" {
-  needs = "Build"
+  needs = "Install"
   uses = "actions/npm@master"
   args = "run build"
 }
