@@ -1,6 +1,6 @@
 # zeelib
 
-A small lib of Node, string, and DOM utils.
+A small lib of Node and string utils.
 
 * [Documentation](https://zacanger.github.io/zeelib)
 * [npm](https://npmjs.com/package/zeelib)

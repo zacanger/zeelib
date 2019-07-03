@@ -1,6 +1,6 @@
 {
   "name": "zeelib",
-  "description": "A small lib of FP, Node, and DOM utils.",
+  "description": "A small lib of Node and string utils.",
   "version": "8.6.1",
   "author": {
     "email": "zac@zacanger.com",

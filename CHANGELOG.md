@@ -1,3 +1,23 @@
+* `9.0.0` &mdash; **2019-07-02**
+  * Remove DOM utils (I recommend using a FE lib or framework):
+    * `eventOnce`
+    * `getCookie`
+    * `getElementOffset`
+    * `getElementPosition`
+    * `getElementText`
+    * `getHeight`
+    * `getLengthOfElements`
+    * `getReferrer`
+    * `getScrollBarWidth`
+    * `getScrollPosition`
+    * `hasLocalStorage`
+    * `isLocalhost`
+    * `preventDefault`
+    * `removeAttribute`
+    * `restoreScrollPosition`
+    * `scrollTop`
+    * `setAttribute`
+    * `setDescription`
 * `8.6.0` &mdash; **2019-04-09**
   * Add `isHiddenFile`, `moveFile`, and `removeExtension`
 * `8.5.0` &mdash; **2019-01-09**
