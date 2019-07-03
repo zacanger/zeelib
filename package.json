@@ -1,7 +1,7 @@
 {
   "name": "zeelib",
   "description": "A small lib of Node and string utils.",
-  "version": "8.6.1",
+  "version": "9.0.0",
   "author": {
     "email": "zac@zacanger.com",
     "name": "Zac Anger",
