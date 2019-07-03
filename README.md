@@ -5,7 +5,6 @@ A small lib of Node and string utils.
 * [Documentation](https://zacanger.github.io/zeelib)
 * [npm](https://npmjs.com/package/zeelib)
 * [Changes](./CHANGELOG.md)
-* [Roadmap](./ROADMAP.md)
 * [Contributing](./CONTRIBUTING.md)
 * [License (MIT)](./LICENSE.md)
 
@@ -58,3 +57,9 @@ node: {
   child_process: 'empty'
 }
 ```
+
+## TODO
+
+* Convert to TS (breaking)
+* Convert all Node callback style async fns to return Promises
+* Remove most of the misc string/type/regex fns
