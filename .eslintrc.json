@@ -1,32 +1,23 @@
 {
-  "extends": [ "eslint-config-zacanger", "plugin:flowtype/recommended" ],
-  "plugins": [ "babel", "flowtype", "flowtype-errors" ],
-  "parser": "babel-eslint",
+  "root": true,
+  "plugins": [
+    "jane"
+  ],
+  "extends": [
+    "plugin:jane/recommended",
+    "plugin:jane/typescript",
+    "plugin:jane/prettier-ts",
+    "plugin:jane/jest"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true
+  },
   "rules": {
-    "func-style": 0,
-    "flowtype-errors/show-errors": [ 1 ],
-    "flowtype/boolean-style": [ 1, "bool" ],
-    "flowtype/no-weak-types": [ 1 ],
-    "flowtype/space-after-type-colon": [ 1 ],
-    "flowtype/no-types-missing-file-annotation": [ 1 ],
-    "flowtype/require-parameter-type": [ 0 ],
-    "flowtype/require-return-type": [
-      1,
-      "always",
-      {
-        "annotateUndefined": "always",
-        "excludeArrowFunctions": "expressionsOnly"
-      }
-    ],
-    "flowtype/require-variable-type": [
-      1,
-      {
-        "excludeVariableTypes": {
-          "const": true,
-          "let": false,
-          "var": false
-        }
-      }
-    ]
+    "no-console": 0,
+    "@typescript-eslint/no-explicit-any": 0
   }
 }

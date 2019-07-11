@@ -1,8 +1,0 @@
-{
-  "presets": [ "stage-3", "env" ],
-  "plugins": [
-    "transform-flow-strip-types",
-    "add-module-exports"
-  ],
-  "comments": false
-}
