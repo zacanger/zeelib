@@ -1,3 +1,10 @@
+* `10.0.0` &mdash; **2019-07-12**
+  * _Major Changes_
+  * Rewrite in TypeScript. Flow will no longer be supported.
+  * Remove all remaining FP, DOM, String, Regex, and Type related functions.
+  * Convert all functions with Node-style callbacks to return Promises
+  * This is a _huge_ amount of changes to focus on just being a utility library
+    for Node. Please see the new [docs](https://zacanger.github.io/zeelib).
 * `9.0.0` &mdash; **2019-07-02**
   * Remove DOM utils (I recommend using a FE lib or framework):
     * `eventOnce`
