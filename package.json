@@ -36,12 +36,12 @@
   },
   "bugs": "https://github.com/zacanger/zeelib/issues",
   "keywords": [
-    "dom",
-    "fp",
     "lib",
     "library",
+    "micro-library",
     "node",
-    "utils"
+    "util",
+    "utility"
   ],
   "dependencies": {},
   "devDependencies": {
