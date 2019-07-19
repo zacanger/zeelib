@@ -30,3 +30,11 @@ if (!module.parent) {
   }
 }
 ```
+
+If you're using Node `require`, you'll need to access `default`:
+
+```javascript
+const zeelib = require('zeelib')
+
+zeelib.getArgs.default()
+```
