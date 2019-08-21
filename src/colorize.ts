@@ -11,17 +11,17 @@ import { inspect } from 'util'
  * console.log(colorize.bold(colorize.blue('foo'))) // => '\'\\u001b[34mfoo\\u001b[39m\''
  */
 
-const colorize = (color: string, text: string): string => {
+const cols = (color: string, text: string): string => {
   const codes = inspect.colors[color]
   return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
 }
 
-const colors = (): {} => {
+const colorize = (): {} => {
   const val = {}
   Object.keys(inspect.colors).forEach((color: string): void => {
-    val[color] = (text: string) => colorize(color, text)
+    val[color] = (text: string) => cols(color, text)
   })
   return val
 }
 
-export default colors()
+export default colorize()

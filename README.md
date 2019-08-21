@@ -23,11 +23,12 @@ Example usage:
 import * as z from 'zeelib'
 
 if (!module.parent) {
-  const args = z.getArgs()
-  if (!args.length) {
-    console.log('Usage: my-thing some-command')
-    z.exit(1)
-  }
+  z.termPrompt('do the thing?')
+    .then((yes) => {
+      if (yes) {
+        console.log(z.colorize.blue('said yes!'))
+      }
+    })
 }
 ```
 
