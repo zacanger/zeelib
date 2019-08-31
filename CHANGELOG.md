@@ -1,3 +1,5 @@
+* `11.0.0` &mdash; **2019-08-30**
+  * Switch from MIT license to LGPL-3.0.
 * `10.0.0` &mdash; **2019-07-12**
   * _Major Changes_
   * Rewrite in TypeScript. Flow will no longer be supported.
