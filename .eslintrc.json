@@ -1,13 +1,13 @@
 {
   "root": true,
   "plugins": [
-    "jane"
+    "zacanger"
   ],
   "extends": [
-    "plugin:jane/recommended",
-    "plugin:jane/typescript",
-    "plugin:jane/prettier-ts",
-    "plugin:jane/jest"
+    "plugin:zacanger/recommended",
+    "plugin:zacanger/typescript",
+    "plugin:zacanger/prettier-ts",
+    "plugin:zacanger/jest"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,6 +18,10 @@
   },
   "rules": {
     "no-console": 0,
-    "@typescript-eslint/no-explicit-any": 0
+    "@typescript-eslint/no-explicit-any": 0,
+    "fp/no-nil": 0,
+    "fp/no-unused-expression": 0,
+    "fp/no-mutation": 0,
+    "fp/no-let": 0
   }
 }
