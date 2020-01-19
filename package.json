@@ -45,19 +45,19 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "12.12.17",
+    "@types/node": "13.1.8",
     "@types/tape": "4.2.33",
-    "eslint": "6.7.2",
-    "eslint-plugin-jane": "7.0.1",
+    "eslint": "6.8.0",
+    "eslint-plugin-jane": "7.0.2",
     "npm-run-all": "4.1.5",
-    "nyc": "14.1.1",
+    "nyc": "15.0.0",
     "prettier": "1.19.1",
     "sortpack": "2.0.4",
     "tap-spec": "5.0.0",
-    "tape": "4.11.0",
-    "ts-node": "8.5.4",
-    "typedoc": "0.15.4",
-    "typescript": "3.7.3"
+    "tape": "4.13.0",
+    "ts-node": "8.6.2",
+    "typedoc": "0.16.7",
+    "typescript": "3.7.5"
   },
   "engines": {
     "node": ">=12.0.0"
