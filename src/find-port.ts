@@ -14,6 +14,7 @@ const findPort = (
   port: number,
   cb: (x: Error | null, y?: number) => void
 ): void => {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   const server = createServer((): void => {})
   const onListen = (): void => {
     server.close()
