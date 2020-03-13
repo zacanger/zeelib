@@ -11,7 +11,7 @@ const getFreeDisk = (): number => {
     .toString()
     .trim()
     .split('\n')
-  const strDiskInfo = lines[lines.length - 1].replace(/[\s\n\r]+/g, ' ')
+  const strDiskInfo = lines[lines.length - 1].replace(/\s+/g, ' ')
   const diskInfo = strDiskInfo.split(' ')
   const total = +diskInfo[1] * 1024
   const free = +diskInfo[3] * 1024
