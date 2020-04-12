@@ -7,10 +7,7 @@ import { execSync } from 'child_process'
  */
 
 const getFreeDisk = (): number => {
-  const lines = execSync('df -k /')
-    .toString()
-    .trim()
-    .split('\n')
+  const lines = execSync('df -k /').toString().trim().split('\n')
   const strDiskInfo = lines[lines.length - 1].replace(/\s+/g, ' ')
   const diskInfo = strDiskInfo.split(' ')
   const total = +diskInfo[1] * 1024

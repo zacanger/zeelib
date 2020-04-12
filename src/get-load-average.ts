@@ -1,6 +1,6 @@
 import { loadavg } from 'os'
 
-const average = (xs: number[]): number => {
+const average = (xs: Array<number>): number => {
   const t = xs.reduce((a, b) => a + b, 0)
   return t / xs.length
 }

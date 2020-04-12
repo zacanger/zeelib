@@ -7,7 +7,7 @@ import { execFile } from 'child_process'
  */
 
 const open = (args: string, opts: {}, cb: Function): void => {
-  const as: string[] = [args]
+  const as: Array<string> = [args]
   const cmd: string =
     process.platform === 'win32'
       ? 'cmd'

@@ -6,6 +6,7 @@ import { resolve } from 'path'
  * resolveFiles([ 'foo', 'bar' ])
  */
 
-const resolveFiles = (ls: string[]): string[] => ls.map((e) => resolve(e))
+const resolveFiles = (ls: Array<string>): Array<string> =>
+  ls.map((e) => resolve(e))
 
 export default resolveFiles
