@@ -14,8 +14,7 @@
   "license": "LGPL-3.0",
   "main": "lib/index.js",
   "files": [
-    "lib",
-    "warning.js"
+    "lib"
   ],
   "scripts": {
     "build": "tsc",
