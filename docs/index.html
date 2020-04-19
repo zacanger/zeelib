@@ -2801,6 +2801,9 @@ img {
 			<a href="globals.html#getnodemodules" class="tsd-kind-icon">get<wbr>Node<wbr>Modules</a>
 		</li>
 		<li class=" tsd-kind-function">
+			<a href="globals.html#getprojectroot" class="tsd-kind-icon">get<wbr>Project<wbr>Root</a>
+		</li>
+		<li class=" tsd-kind-function">
 			<a href="globals.html#getstdin" class="tsd-kind-icon">get<wbr>Stdin</a>
 		</li>
 		<li class=" tsd-kind-function">
@@ -2997,6 +3000,7 @@ zeelib.getArgs.default()</code></pre>
 							<li class="tsd-kind-function"><a href="globals.html#getlocalip" class="tsd-kind-icon">get<wbr>Local<wbr>Ip</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getmemoryusage" class="tsd-kind-icon">get<wbr>Memory<wbr>Usage</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getnodemodules" class="tsd-kind-icon">get<wbr>Node<wbr>Modules</a></li>
+							<li class="tsd-kind-function"><a href="globals.html#getprojectroot" class="tsd-kind-icon">get<wbr>Project<wbr>Root</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getstdin" class="tsd-kind-icon">get<wbr>Stdin</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getterminalcolumns" class="tsd-kind-icon">get<wbr>Terminal<wbr>Columns</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#getterminalrows" class="tsd-kind-icon">get<wbr>Terminal<wbr>Rows</a></li>
@@ -3048,8 +3052,8 @@ zeelib.getArgs.default()</code></pre>
 				<div class="tsd-signature tsd-kind-icon">Node<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Error</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/find-port.ts#L3">find-port.ts:3</a></li>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/mv.ts#L3">mv.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/find-port.ts#L3">find-port.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/mv.ts#L3">mv.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3059,7 +3063,7 @@ zeelib.getArgs.default()</code></pre>
 				<div class="tsd-signature tsd-kind-icon">Res<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>family<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-local-ip.ts#L5">get-local-ip.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-local-ip.ts#L5">get-local-ip.ts:5</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3083,18 +3087,18 @@ zeelib.getArgs.default()</code></pre>
 				<div class="tsd-signature tsd-kind-icon">SEPARATOR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">";"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">":"</span><span class="tsd-signature-symbol"> = process.platform &#x3D;&#x3D;&#x3D; &#x27;win32&#x27; ? &#x27;;&#x27; : &#x27;:&#x27;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/execute.ts#L4">execute.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/execute.ts#L4">execute.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="env" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> env</h3>
-				<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ProcessEnv</span><span class="tsd-signature-symbol"> = (typeof process !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; process.env) || {}</span></div>
+				<div class="tsd-signature tsd-kind-icon">env<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dict</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = (typeof process !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; process.env) || {}</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/execute.ts#L5">execute.ts:5</a></li>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-user-home.ts#L3">get-user-home.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/execute.ts#L5">execute.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-user-home.ts#L3">get-user-home.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3104,7 +3108,7 @@ zeelib.getArgs.default()</code></pre>
 				<div class="tsd-signature tsd-kind-icon">file<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WriteStream</span><span class="tsd-signature-symbol"> = createWriteStream(&#x60;${__dirname}/${fn}&#x60;, { flags: &#x27;w&#x27; })</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/write-error.ts#L5">write-error.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/write-error.ts#L5">write-error.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3114,7 +3118,7 @@ zeelib.getArgs.default()</code></pre>
 				<div class="tsd-signature tsd-kind-icon">fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = process.argv[2] || process.env.ERR_FILE || &#x27;err.log&#x27;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/write-error.ts#L4">write-error.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/write-error.ts#L4">write-error.ts:4</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3131,7 +3135,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/atob.ts#L7">atob.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/atob.ts#L7">atob.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3164,7 +3168,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-load-average.ts#L3">get-load-average.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-load-average.ts#L3">get-load-average.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3187,7 +3191,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/basename.ts#L9">basename.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/basename.ts#L9">basename.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3220,7 +3224,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/btoa.ts#L7">btoa.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/btoa.ts#L7">btoa.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3253,7 +3257,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/colorize.ts#L19">colorize.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/colorize.ts#L19">colorize.ts:19</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span></h4>
@@ -3272,7 +3276,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/colorize.ts#L14">colorize.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/colorize.ts#L14">colorize.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3311,7 +3315,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/console-clear.ts#L7">console-clear.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/console-clear.ts#L7">console-clear.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3338,7 +3342,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/dir.ts#L7">dir.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/dir.ts#L7">dir.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3371,7 +3375,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/execute.ts#L15">execute.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/execute.ts#L15">execute.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3404,7 +3408,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/file-exists.ts#L10">file-exists.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/file-exists.ts#L10">file-exists.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3437,7 +3441,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/find-port.ts#L13">find-port.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/find-port.ts#L13">find-port.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3494,7 +3498,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-args.ts#L7">get-args.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-args.ts#L7">get-args.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3521,7 +3525,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-file-ext.ts#L9">get-file-ext.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-file-ext.ts#L9">get-file-ext.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3554,7 +3558,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-free-disk.ts#L9">get-free-disk.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-free-disk.ts#L9">get-free-disk.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3581,7 +3585,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-free-memory.ts#L9">get-free-memory.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-free-memory.ts#L9">get-free-memory.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3608,7 +3612,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-global.ts#L9">get-global.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-global.ts#L9">get-global.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3637,7 +3641,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-load-average.ts#L14">get-load-average.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-load-average.ts#L14">get-load-average.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3664,7 +3668,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-local-ip.ts#L12">get-local-ip.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-local-ip.ts#L12">get-local-ip.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3688,7 +3692,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-memory-usage.ts#L9">get-memory-usage.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-memory-usage.ts#L9">get-memory-usage.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3715,7 +3719,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-node-modules.ts#L10">get-node-modules.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-node-modules.ts#L10">get-node-modules.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3734,6 +3738,33 @@ zeelib.getArgs.default()</code></pre>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="getprojectroot" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Project<wbr>Root</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Project<wbr>Root<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-project-root.ts#L10">get-project-root.ts:10</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Get project root</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><p>getProjectRoot() // /path/to/project</p>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="getstdin" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Stdin</h3>
 				<ul class="tsd-signatures tsd-kind-function">
@@ -3743,7 +3774,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-stdin.ts#L9">get-stdin.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-stdin.ts#L9">get-stdin.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3796,7 +3827,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-terminal-columns.ts#L8">get-terminal-columns.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-terminal-columns.ts#L8">get-terminal-columns.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3824,7 +3855,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-terminal-rows.ts#L8">get-terminal-rows.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-terminal-rows.ts#L8">get-terminal-rows.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3852,7 +3883,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-terminal-size.ts#L8">get-terminal-size.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-terminal-size.ts#L8">get-terminal-size.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3888,7 +3919,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-user-home.ts#L11">get-user-home.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-user-home.ts#L11">get-user-home.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3915,7 +3946,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/get-user-shell.ts#L8">get-user-shell.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/get-user-shell.ts#L8">get-user-shell.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3943,7 +3974,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/has-color.ts#L14">has-color.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/has-color.ts#L14">has-color.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3970,7 +4001,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/id.ts#L8">id.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/id.ts#L8">id.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4010,7 +4041,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/has-color.ts#L3">has-color.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/has-color.ts#L3">has-color.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -4027,7 +4058,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-directory.ts#L10">is-directory.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-directory.ts#L10">is-directory.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4061,7 +4092,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-file.ts#L10">is-file.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-file.ts#L10">is-file.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4095,7 +4126,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-hidden-file.ts#L7">is-hidden-file.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-hidden-file.ts#L7">is-hidden-file.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4126,7 +4157,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-installed.ts#L7">is-installed.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-installed.ts#L7">is-installed.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4159,7 +4190,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-json.ts#L7">is-json.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-json.ts#L7">is-json.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4192,7 +4223,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-root.ts#L7">is-root.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-root.ts#L7">is-root.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4219,7 +4250,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/is-sym-link.ts#L9">is-sym-link.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/is-sym-link.ts#L9">is-sym-link.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4252,7 +4283,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/has-color.ts#L1">has-color.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/has-color.ts#L1">has-color.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -4269,7 +4300,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/log-with-info.ts#L12">log-with-info.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/log-with-info.ts#L12">log-with-info.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4302,7 +4333,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/mv.ts#L7">mv.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/mv.ts#L7">mv.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4349,7 +4380,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/noop.ts#L8">noop.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/noop.ts#L8">noop.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4376,7 +4407,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/open.ts#L9">open.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/open.ts#L9">open.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4417,7 +4448,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/read-file-sync.ts#L11">read-file-sync.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/read-file-sync.ts#L11">read-file-sync.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4451,7 +4482,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/read-json.ts#L9">read-json.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/read-json.ts#L9">read-json.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4514,7 +4545,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/read-json-sync.ts#L9">read-json-sync.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/read-json-sync.ts#L9">read-json-sync.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4547,7 +4578,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/remove-bom.ts#L10">remove-bom.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/remove-bom.ts#L10">remove-bom.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4583,7 +4614,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/remove-extension.ts#L3">remove-extension.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/remove-extension.ts#L3">remove-extension.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4606,7 +4637,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/resolve-files.ts#L9">resolve-files.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/resolve-files.ts#L9">resolve-files.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4639,7 +4670,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/safe-decode-uri.ts#L7">safe-decode-uri.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/safe-decode-uri.ts#L7">safe-decode-uri.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4672,7 +4703,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/safe-decode-uri-component.ts#L7">safe-decode-uri-component.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/safe-decode-uri-component.ts#L7">safe-decode-uri-component.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4705,7 +4736,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/sleep.ts#L10">sleep.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/sleep.ts#L10">sleep.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4740,7 +4771,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/tap.ts#L8">tap.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/tap.ts#L8">tap.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4774,7 +4805,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/term-prompt.ts#L12">term-prompt.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/term-prompt.ts#L12">term-prompt.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4812,7 +4843,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/touch.ts#L11">touch.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/touch.ts#L11">touch.ts:11</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4849,7 +4880,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/watch.ts#L10">watch.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/watch.ts#L10">watch.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4906,7 +4937,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/log-with-info.ts#L3">log-with-info.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/log-with-info.ts#L3">log-with-info.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4929,7 +4960,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/write-error.ts#L15">write-error.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/write-error.ts#L15">write-error.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4963,7 +4994,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/write-json.ts#L9">write-json.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/write-json.ts#L9">write-json.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -5023,7 +5054,7 @@ zeelib.getArgs.default()</code></pre>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/fe9c2ca/src/write-json-sync.ts#L10">write-json-sync.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/f5a0db1/src/write-json-sync.ts#L10">write-json-sync.ts:10</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
