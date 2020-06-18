@@ -11,7 +11,7 @@ import { resolve } from 'path'
 const readFileSync = (str: string): string | void => {
   try {
     return _readFileSync(resolve(str), { encoding: 'utf8' })
-  } catch (_) {}
+  } catch {}
 }
 
 export default readFileSync

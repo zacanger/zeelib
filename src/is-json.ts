@@ -8,7 +8,7 @@ const isJson = (str: string): boolean => {
   try {
     JSON.parse(str)
     return true
-  } catch (_) {
+  } catch {
     return false
   }
 }

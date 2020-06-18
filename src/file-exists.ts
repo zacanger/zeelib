@@ -11,7 +11,7 @@ const fileExists = (filePath: string): boolean => {
   try {
     statSync(resolve(filePath))
     return true
-  } catch (_) {
+  } catch {
     return false
   }
 }

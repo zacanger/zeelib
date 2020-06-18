@@ -7,7 +7,7 @@
 const safeDecodeURI = (str: string): string => {
   try {
     return decodeURI(str)
-  } catch (_) {
+  } catch {
     return str
   }
 }

@@ -7,7 +7,7 @@
 const safeDecodeURIComponent = (str: string): string => {
   try {
     return decodeURIComponent(str)
-  } catch (_) {
+  } catch {
     return str
   }
 }

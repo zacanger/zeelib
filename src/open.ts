@@ -6,6 +6,7 @@ import { execFile } from 'child_process'
  * open('http://zacanger.com')
  */
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 const open = (args: string, opts: {}, cb: Function): void => {
   const as: Array<string> = [args]
   const cmd: string =

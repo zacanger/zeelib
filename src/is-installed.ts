@@ -8,7 +8,7 @@ const isInstalled = (pkgName: string): boolean => {
   try {
     require.resolve(pkgName)
     return true
-  } catch (_) {
+  } catch {
     return false
   }
 }

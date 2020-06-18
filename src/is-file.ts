@@ -10,7 +10,7 @@ import { statSync } from 'fs'
 const isFile = (filePath: string): boolean => {
   try {
     return statSync(filePath).isFile()
-  } catch (_) {
+  } catch {
     return false
   }
 }

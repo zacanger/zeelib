@@ -9,7 +9,7 @@ import { lstatSync } from 'fs'
 const isSymLink = (filePath: string): boolean => {
   try {
     return lstatSync(filePath).isSymbolicLink()
-  } catch (_) {
+  } catch {
     return false
   }
 }

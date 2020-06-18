@@ -12,7 +12,7 @@ const touch = (filePath: string, contents: string = ''): void => {
   const fl = resolve(filePath)
   try {
     statSync(fl)
-  } catch (_) {
+  } catch {
     writeFileSync(fl, contents)
   }
 }

@@ -16,6 +16,7 @@ const cols = (color: string, text: string): string => {
   return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 const colorize = (): {} => {
   const val = {}
   Object.keys(inspect.colors).forEach((color: string): void => {

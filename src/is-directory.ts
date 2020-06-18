@@ -10,7 +10,7 @@ import { statSync } from 'fs'
 const isDirectory = (filePath: string): boolean => {
   try {
     return statSync(filePath).isDirectory()
-  } catch (_) {
+  } catch {
     return false
   }
 }
