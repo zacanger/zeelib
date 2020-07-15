@@ -48,10 +48,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "14.0.13",
+    "@types/node": "14.0.23",
     "@types/tape": "4.13.0",
-    "eslint": "7.2.0",
-    "eslint-plugin-zacanger": "2.0.3",
+    "eslint": "7.4.0",
+    "eslint-plugin-zacanger": "2.0.4",
     "npm-run-all": "4.1.5",
     "nyc": "15.1.0",
     "prettier": "2.0.5",
@@ -59,8 +59,8 @@
     "tap-spec": "5.0.0",
     "tape": "5.0.1",
     "ts-node": "8.10.2",
-    "typedoc": "0.17.7",
-    "typescript": "3.9.5"
+    "typedoc": "0.17.8",
+    "typescript": "3.9.6"
   },
   "engines": {
     "node": ">=12.0.0"
