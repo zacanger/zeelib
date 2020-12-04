@@ -7,12 +7,7 @@
  * removeBOM(someContent)
  */
 
-const removeBOM = (content: string): string => {
-  if (content.charCodeAt(0) === 0xfeff) {
-    return content.slice(1)
-  } else {
-    return content
-  }
-}
+const removeBOM = (content: string): string =>
+  content.charCodeAt(0) === 0xfe_ff ? content.slice(1) : content
 
 export default removeBOM
