@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>zeelib | zeelib</title>
+	<title>has-color | zeelib</title>
 	<meta name="description" content="Documentation for zeelib">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2646,7 +2646,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">zeelib</a></strong>
+					<strong><a href="../index.html">zeelib</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2676,126 +2676,54 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-function tsd-parent-kind-module">
+			<a href="has_color.html#default" class="tsd-kind-icon">default</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<a href="#zeelib" id="zeelib" style="color: inherit; text-decoration: none;">
-				<h1>zeelib</h1>
-			</a>
-			<p>Node utility library.</p>
-			<ul>
-				<li><a href="https://zacanger.github.io/zeelib">Documentation</a></li>
-				<li><a href="https://npmjs.com/package/zeelib">npm</a></li>
-				<li><a href="./CHANGELOG.md">Changes</a></li>
-				<li><a href="./CONTRIBUTING.md">Contributing</a></li>
-				<li><a href="./LICENSE.md">License (LGPL-3.0)</a></li>
-			</ul>
-			<p><a href="https://npm.im/zeelib"><img src="https://img.shields.io/npm/v/zeelib.svg" alt="npm version"></a> <a href="https://circleci.com/gh/zacanger/zeelib/tree/master"><img src="https://circleci.com/gh/zacanger/zeelib/tree/master.svg?style=svg" alt="CircleCI"></a> <a href="https://codecov.io/gh/zacanger/zeelib"><img src="https://codecov.io/gh/zacanger/zeelib/branch/master/graph/badge.svg" alt="codecov"></a> <a href="https://www.patreon.com/zacanger"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon"></a> <a href="https://ko-fi.com/U7U2110VB"><img src="https://img.shields.io/badge/donate-KoFi-yellow.svg" alt="ko-fi"></a> <a href="https://paypal.me/zacanger"><img src="https://img.shields.io/badge/paypal-donate-yellow.png" alt="Support with PayPal"></a></p>
-			<hr>
-			<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-				<h2>Usage</h2>
-			</a>
-			<p><code>zeelib</code> is a collection of utility functions. Think Lodash, but for Node. See
-			the <a href="https://zacanger.github.io/zeelib">docs</a> for details.</p>
-			<p>Example usage:</p>
-			<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #0000FF">*</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">z</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;zeelib&#039;</span>
-
-<span style="color: #AF00DB">if</span><span style="color: #000000"> (!</span><span style="color: #267F99">module</span><span style="color: #000000">.</span><span style="color: #267F99">parent</span><span style="color: #000000">) {</span>
-<span style="color: #000000">  </span><span style="color: #001080">z</span><span style="color: #000000">.</span><span style="color: #795E26">termPrompt</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;do the thing?&#039;</span><span style="color: #000000">)</span>
-<span style="color: #000000">    .</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">yes</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">      </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">yes</span><span style="color: #000000">) {</span>
-<span style="color: #000000">        </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">z</span><span style="color: #000000">.</span><span style="color: #001080">colorize</span><span style="color: #000000">.</span><span style="color: #795E26">blue</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;said yes!&#039;</span><span style="color: #000000">))</span>
-<span style="color: #000000">      }</span>
-<span style="color: #000000">    })</span>
-<span style="color: #000000">}</span>
-</code></pre>
-			<p>If you&#39;re using Node <code>require</code>, you&#39;ll need to access <code>default</code>:</p>
-			<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">zeelib</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;zeelib&#039;</span><span style="color: #000000">)</span>
-
-<span style="color: #001080">zeelib</span><span style="color: #000000">.</span><span style="color: #001080">getArgs</span><span style="color: #000000">.</span><span style="color: #795E26">default</span><span style="color: #000000">()</span>
-</code></pre>
-		</div>
-		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Modules</h3>
+						<h3>Functions</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-module"><a href="modules/atob.html" class="tsd-kind-icon">atob</a></li>
-							<li class="tsd-kind-module"><a href="modules/atob_test.html" class="tsd-kind-icon">atob.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/basename.html" class="tsd-kind-icon">basename</a></li>
-							<li class="tsd-kind-module"><a href="modules/basename_test.html" class="tsd-kind-icon">basename.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/btoa.html" class="tsd-kind-icon">btoa</a></li>
-							<li class="tsd-kind-module"><a href="modules/btoa_test.html" class="tsd-kind-icon">btoa.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/colorize.html" class="tsd-kind-icon">colorize</a></li>
-							<li class="tsd-kind-module"><a href="modules/colorize_test.html" class="tsd-kind-icon">colorize.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/console_clear.html" class="tsd-kind-icon">console-<wbr>clear</a></li>
-							<li class="tsd-kind-module"><a href="modules/dir.html" class="tsd-kind-icon">dir</a></li>
-							<li class="tsd-kind-module"><a href="modules/execute.html" class="tsd-kind-icon">execute</a></li>
-							<li class="tsd-kind-module"><a href="modules/file_exists.html" class="tsd-kind-icon">file-<wbr>exists</a></li>
-							<li class="tsd-kind-module"><a href="modules/file_exists_test.html" class="tsd-kind-icon">file-<wbr>exists.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/find_port.html" class="tsd-kind-icon">find-<wbr>port</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_args.html" class="tsd-kind-icon">get-<wbr>args</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_file_ext.html" class="tsd-kind-icon">get-<wbr>file-<wbr>ext</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_file_ext_test.html" class="tsd-kind-icon">get-<wbr>file-<wbr>ext.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_free_disk.html" class="tsd-kind-icon">get-<wbr>free-<wbr>disk</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_free_memory.html" class="tsd-kind-icon">get-<wbr>free-<wbr>memory</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_global.html" class="tsd-kind-icon">get-<wbr>global</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_load_average.html" class="tsd-kind-icon">get-<wbr>load-<wbr>average</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_local_ip.html" class="tsd-kind-icon">get-<wbr>local-<wbr>ip</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_memory_usage.html" class="tsd-kind-icon">get-<wbr>memory-<wbr>usage</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_node_modules.html" class="tsd-kind-icon">get-<wbr>node-<wbr>modules</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_project_root.html" class="tsd-kind-icon">get-<wbr>project-<wbr>root</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_project_root_test.html" class="tsd-kind-icon">get-<wbr>project-<wbr>root.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_stdin.html" class="tsd-kind-icon">get-<wbr>stdin</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_terminal_columns.html" class="tsd-kind-icon">get-<wbr>terminal-<wbr>columns</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_terminal_rows.html" class="tsd-kind-icon">get-<wbr>terminal-<wbr>rows</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_terminal_size.html" class="tsd-kind-icon">get-<wbr>terminal-<wbr>size</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_user_home.html" class="tsd-kind-icon">get-<wbr>user-<wbr>home</a></li>
-							<li class="tsd-kind-module"><a href="modules/get_user_shell.html" class="tsd-kind-icon">get-<wbr>user-<wbr>shell</a></li>
-							<li class="tsd-kind-module"><a href="modules/has_color.html" class="tsd-kind-icon">has-<wbr>color</a></li>
-							<li class="tsd-kind-module"><a href="modules/id.html" class="tsd-kind-icon">id</a></li>
-							<li class="tsd-kind-module"><a href="modules/id_test.html" class="tsd-kind-icon">id.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/index.html" class="tsd-kind-icon">index</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_directory.html" class="tsd-kind-icon">is-<wbr>directory</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_file.html" class="tsd-kind-icon">is-<wbr>file</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_hidden_file.html" class="tsd-kind-icon">is-<wbr>hidden-<wbr>file</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_hidden_file_test.html" class="tsd-kind-icon">is-<wbr>hidden-<wbr>file.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_installed.html" class="tsd-kind-icon">is-<wbr>installed</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_json.html" class="tsd-kind-icon">is-<wbr>json</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_json_test.html" class="tsd-kind-icon">is-<wbr>json.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_root.html" class="tsd-kind-icon">is-<wbr>root</a></li>
-							<li class="tsd-kind-module"><a href="modules/is_sym_link.html" class="tsd-kind-icon">is-<wbr>sym-<wbr>link</a></li>
-							<li class="tsd-kind-module"><a href="modules/log_with_info.html" class="tsd-kind-icon">log-<wbr>with-<wbr>info</a></li>
-							<li class="tsd-kind-module"><a href="modules/mv.html" class="tsd-kind-icon">mv</a></li>
-							<li class="tsd-kind-module"><a href="modules/noop.html" class="tsd-kind-icon">noop</a></li>
-							<li class="tsd-kind-module"><a href="modules/noop_test.html" class="tsd-kind-icon">noop.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/open.html" class="tsd-kind-icon">open</a></li>
-							<li class="tsd-kind-module"><a href="modules/read_file_sync.html" class="tsd-kind-icon">read-<wbr>file-<wbr>sync</a></li>
-							<li class="tsd-kind-module"><a href="modules/read_file_sync_test.html" class="tsd-kind-icon">read-<wbr>file-<wbr>sync.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/read_json.html" class="tsd-kind-icon">read-<wbr>json</a></li>
-							<li class="tsd-kind-module"><a href="modules/read_json_sync.html" class="tsd-kind-icon">read-<wbr>json-<wbr>sync</a></li>
-							<li class="tsd-kind-module"><a href="modules/remove_bom.html" class="tsd-kind-icon">remove-<wbr>bom</a></li>
-							<li class="tsd-kind-module"><a href="modules/remove_extension.html" class="tsd-kind-icon">remove-<wbr>extension</a></li>
-							<li class="tsd-kind-module"><a href="modules/remove_extension_test.html" class="tsd-kind-icon">remove-<wbr>extension.test</a></li>
-							<li class="tsd-kind-module"><a href="modules/resolve_files.html" class="tsd-kind-icon">resolve-<wbr>files</a></li>
-							<li class="tsd-kind-module"><a href="modules/safe_decode_uri.html" class="tsd-kind-icon">safe-<wbr>decode-<wbr>uri</a></li>
-							<li class="tsd-kind-module"><a href="modules/safe_decode_uri_component.html" class="tsd-kind-icon">safe-<wbr>decode-<wbr>uri-<wbr>component</a></li>
-							<li class="tsd-kind-module"><a href="modules/sleep.html" class="tsd-kind-icon">sleep</a></li>
-							<li class="tsd-kind-module"><a href="modules/tap.html" class="tsd-kind-icon">tap</a></li>
-							<li class="tsd-kind-module"><a href="modules/term_prompt.html" class="tsd-kind-icon">term-<wbr>prompt</a></li>
-							<li class="tsd-kind-module"><a href="modules/touch.html" class="tsd-kind-icon">touch</a></li>
-							<li class="tsd-kind-module"><a href="modules/watch.html" class="tsd-kind-icon">watch</a></li>
-							<li class="tsd-kind-module"><a href="modules/write_error.html" class="tsd-kind-icon">write-<wbr>error</a></li>
-							<li class="tsd-kind-module"><a href="modules/write_json.html" class="tsd-kind-icon">write-<wbr>json</a></li>
-							<li class="tsd-kind-module"><a href="modules/write_json_sync.html" class="tsd-kind-icon">write-<wbr>json-<wbr>sync</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-module"><a href="has_color.html#default" class="tsd-kind-icon">default</a></li>
 						</ul>
 					</section>
 				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+				<a name="default" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> default</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/zacanger/zeelib/blob/ad89e7b/src/has-color.ts#L14">has-color.ts:14</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Returns true if the current terminal supports color</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><p>hasColor()</p>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
