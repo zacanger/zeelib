@@ -1,3 +1,5 @@
+* `11.2.0` &mdash; **2022-06-04**
+  * Switch license back to MIT.
 * `11.0.0` &mdash; **2019-08-30**
   * Switch from MIT license to LGPL-3.0.
 * `10.0.0` &mdash; **2019-07-12**
