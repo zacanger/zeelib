@@ -1,10 +1,10 @@
 /**
  * Get current terminal rows
- * @returns {number} rows
  * @example
  * getTerminalRows()
  */
 
-const getTerminalRows = () => process.stdout.rows
+const getTerminalRows = (): number =>
+  process.stdout.rows
 
 export default getTerminalRows

@@ -1,4 +1,4 @@
-import { createServer } from 'net'
+import { createServer } from 'node:net'
 
 type NodeError = {
   code: string
@@ -12,7 +12,7 @@ type NodeError = {
 
 const findPort = (
   port: number,
-  cb: (x: Error | null, y?: number) => void
+  cb: (x: Error | null, y?: number) => void,
 ): void => {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   const server = createServer((): void => {})
@@ -27,9 +27,9 @@ const findPort = (
   server.listen(port)
 
   // eslint-disable-next-line func-style
-  function onError(err: NodeError): void {
+  function onError (err: NodeError): void {
     server.removeListener('listening', onListen)
-    if (err.code && ['EADDRINUSE', 'EACCESS'].includes(err.code)) {
+    if (err.code && [ 'EADDRINUSE', 'EACCESS' ].includes(err.code)) {
       return cb(err)
     }
     findPort(port + 1, cb)

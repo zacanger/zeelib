@@ -10,7 +10,7 @@ const getStdin = (f: (a: string) => void): void => {
   let b: string = ''
   process.stdin.setEncoding('utf8')
   process.stdin.on('data', (s) => {
-    b += s
+    b += s.toString()
   })
   process.stdin
     .on('end', () => {

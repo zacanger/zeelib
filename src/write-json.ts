@@ -1,36 +1,18 @@
-import { writeFile } from 'fs'
+import { writeFile } from 'node:fs/promises'
 
 /**
  * Write JSON from a stringifiable value
  * @example
- * writeJson('foo.json', someObject, 4, (err) => {})
+ * await writeJson('foo.json', someObject, 4)
  */
 
-const writeJson = (
-  file: string,
+const writeJson = async (
+  path: string,
   data: any,
-  indent: number | ((x: Error | void) => void) = 2,
-  cb?: (y: Error | void) => void
-): void => {
-  let callback = cb
-  let ind
-  if (typeof indent === 'function') {
-    callback = indent
-    ind = 0
-  } else {
-    ind = indent
-  }
-  if (!callback) {
-    throw new Error('cb is required')
-  }
-  let json: string
-  try {
-    json = JSON.stringify(data, null, ind)
-  } catch (e) {
-    callback(e)
-    return
-  }
-  writeFile(file, json, 'utf8', callback)
+  indent: number,
+): Promise<void> => {
+  const json = JSON.stringify(data, null, indent)
+  await writeFile(path, json)
 }
 
 export default writeJson

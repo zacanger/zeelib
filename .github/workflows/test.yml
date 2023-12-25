@@ -15,6 +15,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 21.x
-      - run: echo 'disabled for now'
-    # - run: npm ci
-    # - run: npm t
+      - run: npm ci
+      - run: npm t

@@ -1,4 +1,6 @@
-import { execFile } from 'child_process'
+import * as c from 'node:child_process'
+
+type Cb = (error: c.ExecFileException | null, stdout: string | Buffer, stderr: string | Buffer) => void
 
 /**
  * Opens things. Works on Linux, Mac, and Windows
@@ -7,16 +9,15 @@ import { execFile } from 'child_process'
  */
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-const open = (args: string, opts: {}, cb: Function): void => {
-  const as: Array<string> = [args]
+const open = (args: string, opts: {}, cb: Cb): void => {
+  const as: string[] = [ args ]
   const cmd: string =
     process.platform === 'win32'
       ? 'cmd'
       : process.platform === 'darwin'
-      ? 'open'
-      : 'xdg-open'
-  // @ts-ignore
-  return execFile(cmd, as, opts, cb)
+        ? 'open'
+        : 'xdg-open'
+  c.execFile(cmd, as, opts, cb)
 }
 
 export default open

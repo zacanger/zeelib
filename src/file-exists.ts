@@ -1,10 +1,10 @@
-import { statSync } from 'fs'
-import { resolve } from 'path'
+import { statSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 /**
  * Returns bool based on if passed path exists
  * @example
- * fileExists('./foo') // => bool
+ * fileExists('./foo') // => boolean
  */
 
 const fileExists = (filePath: string): boolean => {

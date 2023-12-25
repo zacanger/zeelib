@@ -1,11 +1,12 @@
+interface Size { columns: number, rows: number }
+
 /**
  * Returns size of the current terminal
- * @returns {object} columns, rows
  * @example
  * getTerminalSize() // => { columns: number, rows: number }
  */
 
-const getTerminalSize = () => ({
+const getTerminalSize = (): Size => ({
   columns: process.stdout.columns,
   rows: process.stdout.rows,
 })

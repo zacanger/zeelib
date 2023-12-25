@@ -1,11 +1,11 @@
-import * as test from 'tape'
+import { test } from 'node:test'
+import * as assert from 'node:assert'
 import fileExists from './file-exists'
 
-test('fileExists', (t): void => {
-  t.true(fileExists('./README.md'), 'returns true for file that exists')
-  t.false(
-    fileExists('./totally-fake-file-name'),
-    'returns false for file that does not exist'
+void test('fileExists', (): void => {
+  assert.ok(fileExists('./README.md'), 'returns true for file that exists')
+  assert.ok(
+    !fileExists('./totally-fake-file-name'),
+    'returns false for file that does not exist',
   )
-  t.end()
 })

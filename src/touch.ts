@@ -1,5 +1,5 @@
-import { statSync, writeFileSync } from 'fs'
-import { resolve } from 'path'
+import { statSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 /**
  * Make a file if it doesn't exist already

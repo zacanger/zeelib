@@ -1,4 +1,4 @@
-import { statSync } from 'fs'
+import { statSync } from 'node:fs'
 
 /**
  * Returns true if the path is a file

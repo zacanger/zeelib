@@ -1,7 +1,7 @@
-import * as test from 'tape'
+import { test } from 'node:test'
+import * as assert from 'node:assert'
 import noop from './noop'
 
-test('noop', (t): void => {
-  t.equal(noop(), undefined, 'returns undefined')
-  t.end()
+void test('noop', (): void => {
+  assert.equal(noop(), undefined, 'returns undefined')
 })

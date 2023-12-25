@@ -1,4 +1,4 @@
-import { freemem } from 'os'
+import { freemem } from 'node:os'
 
 /**
  * Get free memory

@@ -1,5 +1,5 @@
-import { existsSync } from 'fs'
-import { resolve, join } from 'path'
+import { existsSync } from 'node:fs'
+import { resolve, join } from 'node:path'
 
 /**
  * Get project root
@@ -7,7 +7,7 @@ import { resolve, join } from 'path'
  * getProjectRoot() // /path/to/project
  */
 
-const getProjectRoot = () => {
+const getProjectRoot = (): string => {
   const mainFileName = require.main ? require.main.filename : __dirname
 
   if (mainFileName.indexOf('node_modules') > 0) {
@@ -17,7 +17,6 @@ const getProjectRoot = () => {
   let currentPath: string = join(mainFileName, '../')
   let result = ''
 
-  // eslint-disable-next-line fp/no-loops
   while (currentPath !== '/') {
     if (existsSync(currentPath + '/package.json')) {
       result = currentPath

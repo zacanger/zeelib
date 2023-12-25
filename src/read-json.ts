@@ -1,26 +1,17 @@
-import { readFile } from 'fs'
+import { readFile } from 'node:fs/promises'
+
+type AnyMap = Record<string, any>
+type AnyJson = AnyMap | any[]
 
 /**
- * Read json file, parse it, call cb with obj or err
+ * Read json file and parse it
  * @example
- * readJson('./foo.json', (err, data) => {})
+ * const json = await readJson('./foo.json')
  */
 
-const readJson = <A>(file: string, cb: (x?: Error, y?: A) => void): void => {
-  readFile(file, 'utf8', (err, json): void => {
-    if (err) {
-      cb(err)
-      return
-    }
-    let data: A
-    try {
-      data = JSON.parse(json)
-    } catch (e) {
-      cb(e)
-      return
-    }
-    cb(null, data)
-  })
+const readJson = async (file: string): Promise<AnyJson> => {
+  const data = await readFile(file, 'utf8')
+  return JSON.parse(data)
 }
 
 export default readJson

@@ -1,5 +1,5 @@
-import { watch } from 'fs'
-import { resolve } from 'path'
+import { watch } from 'node:fs'
+import { resolve } from 'node:path'
 
 /**
  * Watch a file for changes, and call the function
@@ -9,14 +9,14 @@ import { resolve } from 'path'
 
 const watchFile = (
   filePath: string,
-  cb: (event: string, filename: string) => void
+  cb: (event: string, filename: string | null) => void,
 ): void => {
   const file = resolve(filePath)
   try {
-    watch(file, {}, cb)
+    watch(file, cb)
     console.log('watching', file)
   } catch (e) {
-    if (e.errno === 'ENOENT') {
+    if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
       console.error('Error, no such file', file)
     } else {
       console.error(e)

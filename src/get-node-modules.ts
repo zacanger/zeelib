@@ -7,7 +7,7 @@ import { readdirSync } from 'fs'
  * getNodeModules()
  */
 
-const getNodeModules = (): Array<string> =>
+const getNodeModules = (): string[] =>
   readdirSync('node_modules').filter((n) => n !== '.bin')
 
 export default getNodeModules

@@ -1,8 +1,8 @@
-import * as test from 'tape'
+import { test } from 'node:test'
+import * as assert from 'node:assert'
 import isJson from './is-json'
 
-test('isJson', (t): void => {
-  t.false(isJson('{"foo":"bar",baz:2}'), 'returns false for invalid JSON')
-  t.true(isJson(JSON.stringify({ a: 'a' })), 'returns true for valid JSON')
-  t.end()
+void test('isJson', (): void => {
+  assert.ok(!isJson('{"foo":"bar",baz:2}'), 'returns false for invalid JSON')
+  assert.ok(isJson(JSON.stringify({ a: 'a' })), 'returns true for valid JSON')
 })

@@ -4,6 +4,6 @@
  * getArgs() // => Array<?string>
  */
 
-const getArgs = (): Array<string> => process.argv.slice(2)
+const getArgs = (): string[] => process.argv.slice(2)
 
 export default getArgs

@@ -4,23 +4,19 @@
  * getGlobal() // => window, global, whatever
  */
 
-/* eslint-disable no-undef */
-
-// eslint-disable-next-line @typescript-eslint/ban-types
-const getGlobal = (): {} => {
-  // @ts-ignore
-  if (typeof self !== 'undefined') {
-    // @ts-ignore
-    return self
-  }
-  // @ts-ignore
+const getGlobal = (): typeof global | undefined => {
+  // @ts-expect-error expected
   if (typeof window !== 'undefined') {
-    // @ts-ignore
+    // @ts-expect-error expected
     return window
   }
-  // @ts-ignore
   if (typeof global !== 'undefined') {
     return global
+  }
+  // @ts-expect-error expected
+  if (typeof self !== 'undefined') {
+    // @ts-expect-error expected
+    return self
   }
 }
 

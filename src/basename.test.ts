@@ -1,7 +1,7 @@
-import * as test from 'tape'
+import { test } from 'node:test'
+import * as assert from 'node:assert'
 import basename from './basename'
 
-test('basename', (t): void => {
-  t.equal(basename('foo/bar'), 'bar', 'works')
-  t.end()
+void test('basename', (): void => {
+  assert.equal(basename('foo/bar'), 'bar', 'works')
 })
