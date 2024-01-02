@@ -4,7 +4,5 @@
  * isRoot() // => true
  */
 
-const isRoot = (): boolean =>
+export const isRoot = (): boolean =>
   process.env.USER === 'root' || !!(process.getuid && process.getuid() === 0)
-
-export default isRoot

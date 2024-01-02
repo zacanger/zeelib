@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isBoolean from './is-boolean'
+import { isBoolean } from './is-boolean'
 
 void test('isBoolean', (): void => {
   assert.ok(!isBoolean(1), 'returns false for 1')

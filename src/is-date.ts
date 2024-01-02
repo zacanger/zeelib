@@ -1,4 +1,4 @@
-import objectToString from './object-to-string'
+import { objectToString } from './object-to-string'
 
 /**
  * Returns true if the value is a date
@@ -6,7 +6,5 @@ import objectToString from './object-to-string'
  * isDate(new Date()) // => true
  */
 
-const isDate = (v: any): boolean =>
+export const isDate = (v: any): boolean =>
   objectToString(v) === '[object Date]'
-
-export default isDate

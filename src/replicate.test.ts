@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import replicate from './replicate'
+import { replicate } from './replicate'
 
 void test('replicate', (): void => {
   assert.deepEqual(replicate(4, 1), [ 1, 1, 1, 1 ], 'works for simple elements')

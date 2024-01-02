@@ -16,7 +16,7 @@ interface Store {
   update: (n: AnyMap | Updater) => void
 }
 
-const store = (state: AnyMap = {}): Store => {
+export const store = (state: AnyMap = {}): Store => {
   const ls: Listener[] = []
 
   return {
@@ -41,5 +41,3 @@ const store = (state: AnyMap = {}): Store => {
     },
   }
 }
-
-export default store

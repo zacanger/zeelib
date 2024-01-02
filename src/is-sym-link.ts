@@ -1,4 +1,5 @@
-import { lstatSync } from 'node:fs'
+import { lstat } from 'node:fs/promises'
+import { resolve } from 'node:path'
 
 /**
  * Returns true if path is a symlink
@@ -6,12 +7,11 @@ import { lstatSync } from 'node:fs'
  * isSymLink('.') // => false
  */
 
-const isSymLink = (filePath: string): boolean => {
+export const isSymLink = async (filePath: string): Promise<boolean> => {
   try {
-    return lstatSync(filePath).isSymbolicLink()
+    const l = await lstat(resolve(filePath))
+    return l.isSymbolicLink()
   } catch {
     return false
   }
 }
-
-export default isSymLink

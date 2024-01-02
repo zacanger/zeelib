@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import drop from './drop'
+import { drop } from './drop'
 
 void test('drop', (): void => {
   assert.deepEqual(drop(2, [ 1, 2, 3 ]), [ 3 ], 'works')

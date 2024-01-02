@@ -1,4 +1,4 @@
-import filter from './filter'
+import { filter } from './filter'
 
 type R = string | any[] | Record<string, any>
 
@@ -9,7 +9,5 @@ type R = string | any[] | Record<string, any>
  * keep({ a: '', b: null, c: 2 }) // => { c: 2 }
  */
 
-const keep = (x: R): R =>
+export const keep = (x: R): R =>
   filter((y) => !!y, x)
-
-export default keep

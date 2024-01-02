@@ -5,10 +5,8 @@
  * groupBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }
  */
 
-const groupBy = (p: string) =>
+export const groupBy = (p: string) =>
   (a: any[]): Record<string, any> =>
     a.reduce((c, i) => ({
       ...c, [i[p]]: i,
     }), {})
-
-export default groupBy

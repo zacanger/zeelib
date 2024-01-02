@@ -1,19 +1,17 @@
-import { statSync } from 'node:fs'
+import { stat } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 /**
  * Returns bool based on if passed path exists
  * @example
- * fileExists('./foo') // => boolean
+ * await fileExists('./foo') // => Promise<true>
  */
 
-const fileExists = (filePath: string): boolean => {
+export const fileExists = async (filePath: string): Promise<boolean> => {
   try {
-    statSync(resolve(filePath))
+    await stat(resolve(filePath))
     return true
   } catch {
     return false
   }
 }
-
-export default fileExists

@@ -4,7 +4,5 @@
  * isUndefined(undefined) // => true
  */
 
-const isUndefined = (v: any): boolean =>
+export const isUndefined = (v: any): boolean =>
   v === undefined
-
-export default isUndefined

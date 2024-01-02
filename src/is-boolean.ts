@@ -4,7 +4,5 @@
  * isBoolean(true) // => true
  */
 
-const isBoolean = (v: any): boolean =>
+export const isBoolean = (v: any): boolean =>
   typeof v === 'boolean'
-
-export default isBoolean

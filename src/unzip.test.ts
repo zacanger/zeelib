@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import unzip from './unzip'
+import { unzip } from './unzip'
 
 void test('unzip', (): void => {
   const expected = [ [ 1, 2 ], [ 1, 2 ] ]

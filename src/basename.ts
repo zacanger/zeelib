@@ -6,7 +6,5 @@ import { parse } from 'node:path'
  * basename() // => string
  */
 
-const basename = (str: string = ''): string =>
+export const basename = (str: string = ''): string =>
   parse(str).base
-
-export default basename

@@ -1,4 +1,4 @@
-import pipe from './pipe'
+import { pipe } from './pipe'
 
 /**
  * Right to left composition
@@ -8,7 +8,5 @@ import pipe from './pipe'
  * compose(addOne, timesTwo)(2) // => 5
  */
 
-const compose = <T>(...fns: Array<(t: T) => T>): ((t: T) => T) =>
+export const compose = <T>(...fns: Array<(t: T) => T>): ((t: T) => T) =>
   pipe(...[ ...fns ].reverse())
-
-export default compose

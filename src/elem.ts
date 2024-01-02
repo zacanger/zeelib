@@ -5,7 +5,5 @@
  * elem('a', 'asdf'.split('')) // => true
  */
 
-const elem = <T>(el: string & T, ls: string | T[]): boolean =>
+export const elem = <T>(el: string & T, ls: string | T[]): boolean =>
   ls.includes(el)
-
-export default elem

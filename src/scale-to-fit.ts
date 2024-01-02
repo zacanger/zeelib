@@ -7,7 +7,7 @@
  * scaleToFit(1400, 1200, 2000, 200) // => { width: 233.33333333333331, height: 200 }
  */
 
-const scaleToFit = (
+export const scaleToFit = (
   width: number,
   height: number,
   maxWidth?: number,
@@ -26,5 +26,3 @@ const scaleToFit = (
 
   return output
 }
-
-export default scaleToFit

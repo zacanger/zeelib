@@ -1,5 +1,5 @@
 import { inspect } from 'node:util'
-import hasColor from './has-color'
+import { hasColor } from './has-color'
 
 type ColMap = Record<string, (t: string) => string>
 
@@ -23,7 +23,7 @@ const cols = (color: string, text: string): string => {
  * console.log(colorize.bold(colorize.blue('foo'))) // => '\'\\u001b[34mfoo\\u001b[39m\''
  */
 
-const colorize = (): ColMap => {
+const _colorize = (): ColMap => {
   const val: ColMap = {}
   Object.keys(inspect.colors).forEach((color: string): void => {
     val[color] = (text) => useColor ? cols(color, text) : text
@@ -31,4 +31,4 @@ const colorize = (): ColMap => {
   return val
 }
 
-export default colorize()
+export const colorize = _colorize()

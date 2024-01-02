@@ -1,9 +1,11 @@
 /**
  * Returns elements that pass predicate,
  * until failure (ignores matches after failure)
+ * @example
+ * takeWhile((x) => x < 3, [ 1, 2, 3, 4 ]) // => [ 1, 2 ]
  */
 
-const takeWhile = <A>(
+export const takeWhile = <A>(
   pred: (a: A, n: number) => boolean,
   arr: A[],
 ): A[] => {
@@ -12,5 +14,3 @@ const takeWhile = <A>(
     pred(n, idx) ? false : ((stop = idx), true))
   return arr.slice(0, stop)
 }
-
-export default takeWhile

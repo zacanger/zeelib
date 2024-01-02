@@ -4,7 +4,5 @@
  * camelCaseToPascalCase('fooBar') // => 'FooBar'
  */
 
-const camelCaseToPascalCase = (str: string): string =>
+export const camelCaseToPascalCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1)
-
-export default camelCaseToPascalCase

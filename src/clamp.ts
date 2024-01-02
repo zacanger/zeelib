@@ -8,7 +8,5 @@
  * clamp(100, 0, 99) // => 00
  */
 
-const clamp = (val: number, min: number, max: number): number =>
+export const clamp = (val: number, min: number, max: number): number =>
   val < min ? min : val > max ? max : val
-
-export default clamp

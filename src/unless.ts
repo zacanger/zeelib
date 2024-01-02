@@ -4,9 +4,7 @@
  * unless(() => true, false) // => true
  */
 
-const unless = <A>(
+export const unless = <A>(
   cond: boolean,
   fn: () => A,
 ): A | null => !cond ? fn() : null
-
-export default unless

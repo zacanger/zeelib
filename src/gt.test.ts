@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import gt from './gt'
+import { gt } from './gt'
 
 void test('gt', (): void => {
   assert.ok(gt(2, 1), 'returns true for 2 and 1')

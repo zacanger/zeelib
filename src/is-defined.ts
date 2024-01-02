@@ -4,7 +4,5 @@
  * isDefined(null) // => true
  */
 
-const isDefined = (v: any): boolean =>
+export const isDefined = (v: any): boolean =>
   typeof v !== 'undefined'
-
-export default isDefined

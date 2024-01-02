@@ -1,4 +1,4 @@
-import isArrayLike from './is-array-like'
+import { isArrayLike } from './is-array-like'
 
 const iterateArray = <T>(
   arr: T[],
@@ -29,7 +29,8 @@ const iterateObject = <T>(
  * @example
  * each([ 'a', 'b', 'c' ], id) // => 'a'
  */
-const each = <T>(
+
+export const each = <T>(
   xs: (any[] | Record<string, any> | string),
   fn: ((a: any | null | undefined, b: number | string) => T),
 ): Record<string, any> | T[] => {
@@ -39,5 +40,3 @@ const each = <T>(
 
   return iterateObject((xs as Record<string, any>), fn as IOFn<T>)
 }
-
-export default each

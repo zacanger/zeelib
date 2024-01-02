@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isBetween from './is-between'
+import { isBetween } from './is-between'
 
 void test('isBetween', (): void => {
   assert.ok(isBetween(1, 3, 2), 'returns true for 1, 3, and 2')

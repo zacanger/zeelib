@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import tryJson from './try-json'
+import { tryJson } from './try-json'
 
 void test('tryJson', (): void => {
   const goodInput = [ 1, 2, 3 ]

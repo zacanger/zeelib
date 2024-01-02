@@ -5,7 +5,5 @@
  * and([ 1, 2, 3, false ]) // => false
  */
 
-const and = <T>(a: T[]): boolean =>
+export const and = <T>(a: T[]): boolean =>
   a.every((e) => e !== false)
-
-export default and

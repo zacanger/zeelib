@@ -5,10 +5,8 @@
  * pairWith(increment, 1, 1) // => [ 2, 2 ]
  */
 
-const pairWith = <T> (
+export const pairWith = <T> (
   f: (x: T) => T,
   a: T,
   b: T,
 ): T[] => [ f(a), f(b) ]
-
-export default pairWith

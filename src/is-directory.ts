@@ -1,18 +1,18 @@
-import { statSync } from 'node:fs'
+import { stat } from 'node:fs/promises'
+import { resolve } from 'node:path'
 
 /**
  * Returns true if the path is a directory
  * @example
- * isDirectory('.') // => true
- * isDirectory('./fake-path') // => false
+ * await isDirectory('.') // => true
+ * await isDirectory('./fake-path') // => false
  */
 
-const isDirectory = (filePath: string): boolean => {
+export const isDirectory = async (filePath: string): Promise<boolean> => {
   try {
-    return statSync(filePath).isDirectory()
+    const s = await stat(resolve(filePath))
+    return s.isDirectory()
   } catch {
     return false
   }
 }
-
-export default isDirectory

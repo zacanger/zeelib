@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import union from './union'
+import { union } from './union'
 
 void test('union', (): void => {
   assert.deepEqual(union([], [ 1, 2 ]), [ 1, 2 ], 'works with one empty array')

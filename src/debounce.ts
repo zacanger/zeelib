@@ -7,7 +7,7 @@ type R = (...args: any[]) => Timer
  * debounce(() => console.log('hi'), 5000)
  */
 
-const debounce = (fn: (...args: any) => any, ms: number): R => {
+export const debounce = (fn: (...args: any) => any, ms: number): R => {
   let timeout: Timer
 
   return (...args: any[]) => {
@@ -24,5 +24,3 @@ const debounce = (fn: (...args: any) => any, ms: number): R => {
     return timeout
   }
 }
-
-export default debounce

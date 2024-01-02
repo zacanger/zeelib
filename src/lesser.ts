@@ -4,7 +4,5 @@
  * lesser(1, 2) // => 1
  */
 
-const lesser = (a: number, b: number): number =>
+export const lesser = (a: number, b: number): number =>
   (a < b) ? a : b
-
-export default lesser

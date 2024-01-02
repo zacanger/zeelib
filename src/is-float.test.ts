@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isFloat from './is-float'
+import { isFloat } from './is-float'
 
 void test('isFloat', (): void => {
   assert.ok(isFloat(2.2), 'returns true for float')

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import zipWith from './zip-with'
+import { zipWith } from './zip-with'
 
 void test('zipWith', (): void => {
   const inc = (a: number): number => a + 1

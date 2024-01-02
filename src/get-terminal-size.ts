@@ -6,9 +6,7 @@ interface Size { columns: number, rows: number }
  * getTerminalSize() // => { columns: number, rows: number }
  */
 
-const getTerminalSize = (): Size => ({
+export const getTerminalSize = (): Size => ({
   columns: process.stdout.columns,
   rows: process.stdout.rows,
 })
-
-export default getTerminalSize

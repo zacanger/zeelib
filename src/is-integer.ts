@@ -5,7 +5,5 @@
  * isInteger(1.1) // => false
  */
 
-const isInteger = (v: any): boolean =>
+export const isInteger = (v: any): boolean =>
   typeof v === 'number' && !Number.isNaN(v) && v % 1 === 0
-
-export default isInteger

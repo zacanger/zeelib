@@ -4,12 +4,10 @@
  * doubleUntil(2)([ 'hi' ]) // => [ 'hi', 'hi' ]
  */
 
-const doubleUntil = (minSize: number = 0) =>
+export const doubleUntil = (minSize: number = 0) =>
   function double<T> (arr: T[]): T[] {
     if (arr.length >= minSize) {
       return arr
     }
     return double([ ...arr, ...arr ])
   }
-
-export default doubleUntil

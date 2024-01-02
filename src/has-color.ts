@@ -11,6 +11,4 @@ const isColor = (): boolean => {
  * hasColor()
  */
 
-const hasColor = (): boolean => isWin() ?? isColor()
-
-export default hasColor
+export const hasColor = (): boolean => isWin() ?? isColor()

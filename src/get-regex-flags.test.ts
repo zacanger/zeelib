@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import getRegexFlags from './get-regex-flags'
+import { getRegexFlags } from './get-regex-flags'
 
 void test('getRegexFlags', (): void => {
   assert.deepEqual(getRegexFlags(/foo/ig), [ 'g', 'i' ], 'works')

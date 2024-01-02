@@ -4,7 +4,7 @@
  * isInstalled('zeelib') // => true
  */
 
-const isInstalled = (pkgName: string): boolean => {
+export const isInstalled = (pkgName: string): boolean => {
   try {
     require.resolve(pkgName)
     return true
@@ -12,5 +12,3 @@ const isInstalled = (pkgName: string): boolean => {
     return false
   }
 }
-
-export default isInstalled

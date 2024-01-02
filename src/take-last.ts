@@ -4,7 +4,7 @@
  * takeLast(2, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
-const takeLast = <A>(num: number, arr: A[]): A[] => {
+export const takeLast = <A>(num: number, arr: A[]): A[] => {
   const array = arr.reverse()
   const alen = array.length
   if (num > alen) return array
@@ -14,5 +14,3 @@ const takeLast = <A>(num: number, arr: A[]): A[] => {
   }
   return a1.reverse()
 }
-
-export default takeLast

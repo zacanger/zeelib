@@ -1,4 +1,4 @@
-import isDate from './is-date'
+import { isDate } from './is-date'
 
 /**
  * Returns true if the passed object is a valid Date
@@ -6,7 +6,5 @@ import isDate from './is-date'
  * isValidDate('1234') // => false
  */
 
-const isValidDate = (d: Date): boolean =>
+export const isValidDate = (d: Date): boolean =>
   isDate(d) && d.toString() !== 'Invalid Date'
-
-export default isValidDate

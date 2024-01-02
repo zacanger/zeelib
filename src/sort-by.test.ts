@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import sortBy from './sort-by'
+import { sortBy } from './sort-by'
 
 void test('sortBy', (): void => {
   interface A { id: number }

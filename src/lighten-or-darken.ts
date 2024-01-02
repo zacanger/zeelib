@@ -7,7 +7,7 @@
  * const newCol = lightenOrDarken('#F06D06', -20)
  */
 
-const lightenOrDarken = (col: string, amt: number): string => {
+export const lightenOrDarken = (col: string, amt: number): string => {
   const useHash = col[0] === '#'
   const c = useHash ? col.slice(1) : col
   const num: number = parseInt(c, 16)
@@ -32,5 +32,3 @@ const lightenOrDarken = (col: string, amt: number): string => {
   }
   return (useHash ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16)
 }
-
-export default lightenOrDarken

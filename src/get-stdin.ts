@@ -6,7 +6,7 @@
  * })
  */
 
-const getStdin = (f: (a: string) => void): void => {
+export const getStdin = (f: (a: string) => void): void => {
   let b: string = ''
   process.stdin.setEncoding('utf8')
   process.stdin.on('data', (s) => {
@@ -18,5 +18,3 @@ const getStdin = (f: (a: string) => void): void => {
     })
     .resume()
 }
-
-export default getStdin

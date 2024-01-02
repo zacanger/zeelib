@@ -5,7 +5,5 @@
  * lte(1, 1) // => true
  */
 
-const lte = (a: number, b: number): boolean =>
+export const lte = (a: number, b: number): boolean =>
   a <= b
-
-export default lte

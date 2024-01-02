@@ -1,4 +1,4 @@
-import { statSync, writeFileSync } from 'node:fs'
+import { stat, writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 /**
@@ -8,13 +8,14 @@ import { resolve } from 'node:path'
  * touch('foo.txt', 'contentx')
  */
 
-const touch = (filePath: string, contents: string = ''): void => {
+export const touch = async (
+  filePath: string,
+  contents: string = '',
+): Promise<void> => {
   const fl = resolve(filePath)
   try {
-    statSync(fl)
+    await stat(fl)
   } catch {
-    writeFileSync(fl, contents)
+    await writeFile(fl, contents)
   }
 }
-
-export default touch

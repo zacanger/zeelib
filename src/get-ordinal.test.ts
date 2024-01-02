@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import getOrdinal from './get-ordinal'
+import { getOrdinal } from './get-ordinal'
 
 void test('getOrdinal', (): void => {
   assert.equal(getOrdinal(1), '1st', 'returns 1st for 1')

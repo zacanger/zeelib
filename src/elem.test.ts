@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import elem from './elem'
+import { elem } from './elem'
 
 void test('elem', (): void => {
   assert.ok(elem('a', 'asdf'), 'works for strings')

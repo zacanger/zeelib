@@ -8,7 +8,7 @@ import { createInterface } from 'node:readline/promises'
  * if (answer.toLowercase() === 'y') { doTheThing() }
  */
 
-const prompt = async (question: string): Promise<string> => {
+export const prompt = async (question: string): Promise<string> => {
   const rl = createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -17,5 +17,3 @@ const prompt = async (question: string): Promise<string> => {
   const answer = await rl.question(question)
   return answer
 }
-
-export default prompt

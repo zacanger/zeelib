@@ -1,4 +1,4 @@
-import objectToString from './object-to-string'
+import { objectToString } from './object-to-string'
 
 /**
  * Returns true if value is a RegExp
@@ -6,7 +6,5 @@ import objectToString from './object-to-string'
  * isRegExp(/a/) // => true
  */
 
-const isRegExp = (v: any): boolean =>
+export const isRegExp = (v: any): boolean =>
   objectToString(v) === '[object RegExp]'
-
-export default isRegExp

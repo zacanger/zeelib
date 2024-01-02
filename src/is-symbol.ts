@@ -4,7 +4,5 @@
  * isSymbol(Symbol.for('foo')) // => true
  */
 
-const isSymbol = (a: any): boolean =>
+export const isSymbol = (a: any): boolean =>
   typeof a === 'symbol'
-
-export default isSymbol

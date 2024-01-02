@@ -4,7 +4,5 @@
  * snakeCaseToLispCase('foo_bar') // => 'foo-bar'
  */
 
-const snakeCaseToLispCase = (str: string): string =>
+export const snakeCaseToLispCase = (str: string): string =>
   str.replace(/_/g, '-')
-
-export default snakeCaseToLispCase

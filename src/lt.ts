@@ -4,7 +4,5 @@
  * lt(2, 1) // => false
  */
 
-const lt = (a: number, b: number): boolean =>
+export const lt = (a: number, b: number): boolean =>
   a < b
-
-export default lt

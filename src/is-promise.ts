@@ -4,9 +4,7 @@
  * isPromise(Promise.resolve())
  */
 
-const isPromise = (a: any): boolean => {
+export const isPromise = (a: any): boolean => {
   if (a && typeof a.then === 'function') return true
   return false
 }
-
-export default isPromise

@@ -4,7 +4,7 @@
  * diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
  */
 
-const diff = <T>(a: T[], b: T[]): T[] => {
+export const diff = <T>(a: T[], b: T[]): T[] => {
   const arr = []
   let len: number = a.length
 
@@ -16,5 +16,3 @@ const diff = <T>(a: T[], b: T[]): T[] => {
 
   return arr
 }
-
-export default diff

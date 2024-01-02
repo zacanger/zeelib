@@ -10,9 +10,7 @@ const fnBody = (fn: () => any): string =>
  * isClass(noop) // => false
  */
 
-const isClass = (fn: () => any): boolean =>
+export const isClass = (fn: () => any): boolean =>
   (typeof fn === 'function' &&
     (/^class\s/.test(toString.call(fn)) ||
       (/^.*classCallCheck\(/.test(fnBody(fn)))))
-
-export default isClass

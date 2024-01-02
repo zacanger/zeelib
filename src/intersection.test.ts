@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import intersection from './intersection'
+import { intersection } from './intersection'
 
 void test('intersection', (): void => {
   assert.deepEqual(intersection([], [ 1, 2 ]), [], 'returns empty array if either is empty')

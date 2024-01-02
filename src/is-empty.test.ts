@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isEmpty from './is-empty'
+import { isEmpty } from './is-empty'
 
 void test('isEmpty', (): void => {
   assert.ok(isEmpty(0), 'number empty')

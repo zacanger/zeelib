@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import lt from './lt'
+import { lt } from './lt'
 
 void test('lt', (): void => {
   assert.ok(!lt(2, 1), 'returns false for 2 and 1')

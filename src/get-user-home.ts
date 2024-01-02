@@ -9,7 +9,7 @@ const env = (typeof process !== 'undefined' && process.env) ?? {}
  * getUserHome() // => /home/z
  */
 
-const getUserHome = (): string => {
+export const getUserHome = (): string => {
   const e = env as NodeJS.ProcessEnv
   return e.HOME ??
   e.USERPROFILE ??
@@ -17,5 +17,3 @@ const getUserHome = (): string => {
   (e.HOMEDRIVE && e.HOMEPATH && e.HOMEDRIVE + e.HOMEPATH) ??
   ''
 }
-
-export default getUserHome

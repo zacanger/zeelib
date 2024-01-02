@@ -4,7 +4,7 @@
  * shuffle([ 1, 2, 3, 4 ])
  */
 
-const shuffle = <A>(arr: A[]): A[] => {
+export const shuffle = <A>(arr: A[]): A[] => {
   for (let i: number = arr.length - 1; i >= 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
     const temp = arr[i]
@@ -13,5 +13,3 @@ const shuffle = <A>(arr: A[]): A[] => {
   }
   return arr
 }
-
-export default shuffle

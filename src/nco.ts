@@ -1,4 +1,4 @@
-import isNullOrUndefined from './is-null-or-undefined'
+import { isNullOrUndefined } from './is-null-or-undefined'
 /**
  * nco
  * @example
@@ -6,7 +6,5 @@ import isNullOrUndefined from './is-null-or-undefined'
  * nco(1, 2) // => 1
  */
 
-const nco = <A, B> (variable: A, defaultValue: B): A | B =>
+export const nco = <A, B> (variable: A, defaultValue: B): A | B =>
   isNullOrUndefined(variable) ? defaultValue : variable
-
-export default nco

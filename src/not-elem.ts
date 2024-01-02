@@ -1,4 +1,4 @@
-import elem from './elem'
+import { elem } from './elem'
 
 /**
  * The opposite of `elem`
@@ -9,7 +9,5 @@ import elem from './elem'
  * notElem('b', 'asdf') // => true
  */
 
-const notElem = <T> (el: T & string, ls: string | T[]): boolean =>
+export const notElem = <T> (el: T & string, ls: string | T[]): boolean =>
   !elem(el, ls)
-
-export default notElem

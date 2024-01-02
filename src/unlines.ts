@@ -4,7 +4,5 @@
  * unlines([ 'foo', 'bar' ]) // => 'foo\nbar'
  */
 
-const unlines = (arr: string[]): string =>
+export const unlines = (arr: string[]): string =>
   arr.join('\n')
-
-export default unlines

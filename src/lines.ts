@@ -4,7 +4,5 @@
  * lines('foo\nbar') // => [ 'foo', 'bar' ]
  */
 
-const lines = (str: string): string[] =>
+export const lines = (str: string): string[] =>
   str.split('\n')
-
-export default lines

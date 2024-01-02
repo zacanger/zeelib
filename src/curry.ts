@@ -1,5 +1,3 @@
-import id from './id'
-
 type F = (...args: any[]) => any
 
 /**
@@ -12,7 +10,7 @@ type F = (...args: any[]) => any
  * curry(addThree)(1)(1)(1) // => 3
  */
 
-function curry<T> (fn: F): F {
+export function curry<T> (fn: F): F {
   const getFunctionArguments = (fn: F): string[] => {
     if (typeof fn !== 'function') {
       throw new TypeError(`Expected argument to be a function! Received a ${typeof fn}.`)
@@ -28,7 +26,8 @@ function curry<T> (fn: F): F {
           .replace(/\s/gi, '') // remove all whitespace
           .split(',') // split on the commas
 
-        return args.filter(id) // remove possible empty string from the result
+        // remove possible empty string from the result
+        return args.filter((x) => x)
       }
     }
     return []
@@ -45,5 +44,3 @@ function curry<T> (fn: F): F {
 
   return (...args: T[]) => makeCurriedFunc(...args)
 }
-
-export default curry

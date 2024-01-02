@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isEven from './is-even'
+import { isEven } from './is-even'
 
 void test('isEven', (): void => {
   assert.ok(!isEven(1), 'returns false for odd int')

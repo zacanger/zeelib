@@ -5,7 +5,5 @@
  * isNumber(NaN) // => false
  */
 
-const isNumber = (v: any): boolean =>
+export const isNumber = (v: any): boolean =>
   typeof v === 'number' && !Number.isNaN(v)
-
-export default isNumber

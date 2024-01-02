@@ -5,9 +5,7 @@
  * logger(2) // => this is the thing 2 ; 2
  */
 
-const tap = (msg: string) => <A>(a: A): A => {
+export const tap = (msg: string) => <A>(a: A): A => {
   console.log(msg, a)
   return a
 }
-
-export default tap

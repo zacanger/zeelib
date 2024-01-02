@@ -6,7 +6,7 @@ import { writeFile } from 'node:fs/promises'
  * await writeJson('foo.json', someObject, 4)
  */
 
-const writeJson = async (
+export const writeJson = async (
   path: string,
   data: any,
   indent: number,
@@ -14,5 +14,3 @@ const writeJson = async (
   const json = JSON.stringify(data, null, indent)
   await writeFile(path, json)
 }
-
-export default writeJson

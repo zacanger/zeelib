@@ -1,4 +1,4 @@
-import typeOf from './type-of'
+import { typeOf } from './type-of'
 
 /**
  * Get monadic empty/zero value for a type
@@ -7,7 +7,7 @@ import typeOf from './type-of'
  * mzero([1]) // => []
  */
 
-const mzero = (v?: any): any => {
+export const mzero = (v?: any): any => {
   switch (typeOf(v)) {
     case 'null': return null
     case 'array': return []
@@ -23,5 +23,3 @@ const mzero = (v?: any): any => {
   }
   return undefined
 }
-
-export default mzero

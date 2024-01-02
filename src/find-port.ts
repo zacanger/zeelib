@@ -10,7 +10,7 @@ type NodeError = {
  * findPort(8000, (err, port) => console.log(`${port} is open`))
  */
 
-const findPort = (
+export const findPort = (
   port: number,
   cb: (x: Error | null, y?: number) => void,
 ): void => {
@@ -35,5 +35,3 @@ const findPort = (
     findPort(port + 1, cb)
   }
 }
-
-export default findPort

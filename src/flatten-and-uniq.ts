@@ -1,4 +1,4 @@
-import uniq from './uniq'
+import { uniq } from './uniq'
 
 /**
  * Recursively flatten arrays
@@ -7,7 +7,5 @@ import uniq from './uniq'
  * flattenAndUniq([ 1, 2, 3, [ 1, 2, 3 ]]) // =>  [ 1, 2, 3 ]
  */
 
-const flattenAndUniq = <T>(arr: T[]): T[] =>
+export const flattenAndUniq = <T>(arr: T[]): T[] =>
   uniq(arr.flat(Infinity) as T[])
-
-export default flattenAndUniq

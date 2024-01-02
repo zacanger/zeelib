@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import product from './product'
+import { product } from './product'
 
 void test('product', (): void => {
   assert.equal(product([ 1, 2, 3, 4 ]), 24, 'on array of ints')

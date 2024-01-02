@@ -1,7 +1,7 @@
-import isSet from './is-set'
-import isMap from './is-map'
-import isDate from './is-date'
-import isRegExp from './is-reg-exp'
+import { isSet } from './is-set'
+import { isMap } from './is-map'
+import { isDate } from './is-date'
+import { isRegExp } from './is-reg-exp'
 
 /**
  * Enhanced `typeof`
@@ -10,7 +10,7 @@ import isRegExp from './is-reg-exp'
  * typeOf(new Date()) // => 'date'
  */
 
-const typeOf = (a: any): string => {
+export const typeOf = (a: any): string => {
   if (typeof a === 'object') {
     if (a === null) return 'null'
     if (a && a.nodeType === 1) return 'dom'
@@ -23,5 +23,3 @@ const typeOf = (a: any): string => {
   }
   return typeof a
 }
-
-export default typeOf

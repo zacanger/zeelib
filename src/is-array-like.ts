@@ -1,4 +1,4 @@
-import isNumber from './is-number'
+import { isNumber } from './is-number'
 
 /**
  * Returns true if the passed value is array-like
@@ -7,11 +7,9 @@ import isNumber from './is-number'
  * isArrayLike([ 1, 2 ]) // => true
  */
 
-const isArrayLike = (v: any): boolean => {
+export const isArrayLike = (v: any): boolean => {
   if (v?.length != null) {
     return isNumber(v.length)
   }
   return false
 }
-
-export default isArrayLike

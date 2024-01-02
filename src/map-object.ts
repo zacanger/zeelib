@@ -1,5 +1,3 @@
-type O = Record<string, any>
-
 /**
  * Map for objects
  * @example
@@ -8,16 +6,14 @@ type O = Record<string, any>
  * mapObject(f, d) // => { a: 'hello world', b: 'sup world' }
  */
 
-const mapObject = (
+export const mapObject = (
   f: (a: any, b: string, c: any) => any,
-  o: O,
+  o: Record<string, any>,
   ctx: any = this,
-): O => {
-  const res: O = {}
+): Record<string, any> => {
+  const res: Record<string, any> = {}
   Object.keys(o).forEach((k): void => {
     res[k] = f.call(ctx, o[k], k, o)
   })
   return res
 }
-
-export default mapObject

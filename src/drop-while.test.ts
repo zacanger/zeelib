@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import dropWhile from './drop-while'
+import { dropWhile } from './drop-while'
 
 void test('dropWhile', (): void => {
   const f = (a: any): boolean => typeof a === 'number' && a < 10

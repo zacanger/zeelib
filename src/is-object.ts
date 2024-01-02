@@ -4,9 +4,7 @@
  * isObject('asdf') // => false
  */
 
-const isObject = (v: any): boolean =>
+export const isObject = (v: any): boolean =>
   v !== null &&
   typeof v === 'object' &&
   Object.getPrototypeOf(v) === Object.prototype
-
-export default isObject

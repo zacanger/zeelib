@@ -4,8 +4,6 @@
  * snakeCaseToCamelCase('foo_bar') // => 'fooBar'
  */
 
-const snakeCaseToCamelCase = (str: string): string =>
+export const snakeCaseToCamelCase = (str: string): string =>
   str.replace(/(_\w)/g, (match) =>
     match[1].toUpperCase())
-
-export default snakeCaseToCamelCase

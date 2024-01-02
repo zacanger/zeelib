@@ -4,8 +4,6 @@
  * camelCaseToSnakeCase('fooBar') // => 'foo_bar'
  */
 
-const camelCaseToSnakeCase = (str: string): string =>
+export const camelCaseToSnakeCase = (str: string): string =>
   str.replace(/[A-Z]/g, (match) =>
     '_' + match.toLowerCase()).toLowerCase()
-
-export default camelCaseToSnakeCase

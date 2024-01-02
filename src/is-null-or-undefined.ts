@@ -1,5 +1,5 @@
-import isNull from './is-null'
-import isUndefined from './is-undefined'
+import { isNull } from './is-null'
+import { isUndefined } from './is-undefined'
 
 /**
  * Returns true if the value is null or undefined
@@ -7,7 +7,5 @@ import isUndefined from './is-undefined'
  * isNullOrUndefined(null) // => true
  */
 
-const isNullOrUndefined = (v: any): boolean =>
+export const isNullOrUndefined = (v: any): boolean =>
   isNull(v) || isUndefined(v)
-
-export default isNullOrUndefined

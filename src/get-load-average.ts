@@ -1,9 +1,5 @@
 import { loadavg } from 'node:os'
-
-const average = (xs: number[]): number => {
-  const t = xs.reduce((a, b) => a + b, 0)
-  return t / xs.length
-}
+import { average } from './average'
 
 /**
  * Get load average
@@ -11,10 +7,5 @@ const average = (xs: number[]): number => {
  * getLoadAverage()
  */
 
-const getLoadAverage = (): number =>
-  parseFloat(average([ ...loadavg() ]).toFixed(2))
-
-// the above line is weird because loadavg() is a tuple
-// but average expects an array. ¯\_(ツ)_/¯
-
-export default getLoadAverage
+export const getLoadAverage = (): number =>
+  parseFloat(average(loadavg()).toFixed(2))

@@ -1,4 +1,4 @@
-import objectToString from './object-to-string'
+import { objectToString } from './object-to-string'
 
 /**
  * Returns true if value is a map
@@ -6,7 +6,5 @@ import objectToString from './object-to-string'
  * isMap(new Map()) // => true
  */
 
-const isMap = (v: any): boolean =>
+export const isMap = (v: any): boolean =>
   objectToString(v) === '[object Map]'
-
-export default isMap

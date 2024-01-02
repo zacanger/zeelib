@@ -8,8 +8,6 @@
 
 type AnyMap = Record<string, any>
 
-const uniqBy = (el: string, xs: AnyMap[]): AnyMap[] =>
+export const uniqBy = (el: string, xs: AnyMap[]): AnyMap[] =>
   xs.filter((e: any, i: number) =>
     xs.findIndex((a: any) => a[el] === e[el]) === i)
-
-export default uniqBy

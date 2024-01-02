@@ -1,0 +1,8 @@
+{
+  "theme": "hierarchy",
+  "plugin": ["typedoc-theme-hierarchy", "typedoc-plugin-missing-exports"],
+  "includeVersion": true,
+  "out": "docs/",
+  "entryPoints": [ "src/index.ts" ],
+  "exclude": ["**/*+(.test).ts"]
+}

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import mzero from './mzero'
+import { mzero } from './mzero'
 
 void test('mzero', (): void => {
   assert.equal(mzero('a'), '', 'string')

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import mapObject from './map-object'
+import { mapObject } from './map-object'
 
 void test('mapObject', (): void => {
   const f = (a: string): string => a + ' world'

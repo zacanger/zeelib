@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import safeGet from './safe-get'
+import { safeGet } from './safe-get'
 
 void test('safeGet', (): void => {
   const o = { a: { b: { c: 'd' } } }

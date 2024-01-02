@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import each from './each'
+import { each } from './each'
 
 void test('each', (): void => {
   const doubleString = (s: string): string => s + s

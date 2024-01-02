@@ -9,7 +9,7 @@ type Cb = (error: c.ExecFileException | null, stdout: string | Buffer, stderr: s
  */
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-const open = (args: string, opts: {}, cb: Cb): void => {
+export const open = (args: string, opts: {}, cb: Cb): void => {
   const as: string[] = [ args ]
   const cmd: string =
     process.platform === 'win32'
@@ -19,5 +19,3 @@ const open = (args: string, opts: {}, cb: Cb): void => {
         : 'xdg-open'
   c.execFile(cmd, as, opts, cb)
 }
-
-export default open

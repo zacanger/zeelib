@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isNumber from './is-number'
+import { isNumber } from './is-number'
 
 void test('isNumber', (): void => {
   const f = (): number => 2

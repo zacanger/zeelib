@@ -1,6 +1,6 @@
-import len from './len'
-import isNullOrUndefined from './is-null-or-undefined'
-import mzero from './mzero'
+import { len } from './len'
+import { isNullOrUndefined } from './is-null-or-undefined'
+import { mzero } from './mzero'
 
 /**
  * Returns true if the value is empty
@@ -11,7 +11,5 @@ import mzero from './mzero'
  * isEmpty(null) // => true
  */
 
-const isEmpty = (v: any): boolean =>
+export const isEmpty = (v: any): boolean =>
   isNullOrUndefined(v) || len(v) === 0 || !v || mzero(v) === v
-
-export default isEmpty

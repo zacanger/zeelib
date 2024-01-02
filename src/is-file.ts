@@ -1,4 +1,5 @@
-import { statSync } from 'node:fs'
+import { stat } from 'node:fs/promises'
+import { resolve } from 'node:path'
 
 /**
  * Returns true if the path is a file
@@ -7,12 +8,11 @@ import { statSync } from 'node:fs'
  * isFile('.') // => false
  */
 
-const isFile = (filePath: string): boolean => {
+export const isFile = async (filePath: string): Promise<boolean> => {
   try {
-    return statSync(filePath).isFile()
+    const f = await stat(resolve(filePath))
+    return f.isFile()
   } catch {
     return false
   }
 }
-
-export default isFile

@@ -4,7 +4,5 @@
  * pair('a', 'b') // => [ 'a', 'b' ]
  */
 
-const pair = <A, B>(first: A, second: B): [A, B] =>
+export const pair = <A, B>(first: A, second: B): [A, B] =>
   [ first, second ]
-
-export default pair

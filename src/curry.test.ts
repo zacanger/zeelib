@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import curry from './curry'
+import { curry } from './curry'
 
 void test('curry', (): void => {
   const a2 = (a: number, b: number): number => a + b

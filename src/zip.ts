@@ -1,5 +1,5 @@
-import pair from './pair'
-import zipWith from './zip-with'
+import { pair } from './pair'
+import { zipWith } from './zip-with'
 
 // TODO: make variadic
 /**
@@ -11,7 +11,5 @@ import zipWith from './zip-with'
  * zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
  */
 
-const zip = <A, B>(xs: A[], ys: B[]): Array<[A, B]> =>
+export const zip = <A, B>(xs: A[], ys: B[]): Array<[A, B]> =>
   zipWith(pair, xs, ys)
-
-export default zip

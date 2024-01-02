@@ -8,7 +8,7 @@
  */
 
 // TODO: make variadic
-const zipWith = <A, B, T>(
+export const zipWith = <A, B, T>(
   fn: (a: A, b: B) => T,
   xs: A[],
   ys: B[],
@@ -20,5 +20,3 @@ const zipWith = <A, B, T>(
   }
   return result
 }
-
-export default zipWith

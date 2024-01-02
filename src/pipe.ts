@@ -1,4 +1,4 @@
-import reduce from './reduce'
+import { reduce } from './reduce'
 
 type AnyFn = (...args: any[]) => any
 
@@ -10,8 +10,6 @@ type AnyFn = (...args: any[]) => any
  * pipe(addOne, timesTwo)(2) // => 6
  */
 
-const pipe = <T>(...fns: AnyFn[]) =>
+export const pipe = <T>(...fns: AnyFn[]) =>
   (data: T) =>
     reduce((v: T, fn: AnyFn) => fn(v), data, fns)
-
-export default pipe

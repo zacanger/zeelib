@@ -1,4 +1,4 @@
-import takeWhile from './take-while'
+import { takeWhile } from './take-while'
 
 /**
  * Similar to `takeWhile`: returns a tuple
@@ -8,12 +8,10 @@ import takeWhile from './take-while'
  * span(lessThanThree, [ 1, 2, 3, 4 ]) // => [ [ 1, 2 ], [ 3, 4 ] ]
  */
 
-const span = <A>(
+export const span = <A>(
   pred: (a: A) => boolean,
   arr: A[],
 ): [A[], A[]] => {
   const sat = takeWhile(pred, arr)
   return [ sat, arr.slice(sat.length) ]
 }
-
-export default span

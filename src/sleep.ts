@@ -5,9 +5,7 @@
  * sleep(1000).then(doAThing)
  */
 
-const sleep = async (ms: number): Promise<void> =>
+export const sleep = async (ms: number): Promise<void> =>
   await new Promise((resolve): void => {
     setTimeout(resolve, ms)
   })
-
-export default sleep

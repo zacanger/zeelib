@@ -4,7 +4,7 @@
  * getGlobal() // => window, global, whatever
  */
 
-const getGlobal = (): typeof global | undefined => {
+export const getGlobal = (): typeof global | undefined => {
   // @ts-expect-error expected
   if (typeof window !== 'undefined') {
     // @ts-expect-error expected
@@ -19,5 +19,3 @@ const getGlobal = (): typeof global | undefined => {
     return self
   }
 }
-
-export default getGlobal

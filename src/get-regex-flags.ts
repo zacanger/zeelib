@@ -4,7 +4,7 @@
  * getRegexFlags(/foo/ig) // => [ 'g', 'i' ]
  */
 
-const getRegexFlags = (r: RegExp): string[] => {
+export const getRegexFlags = (r: RegExp): string[] => {
   const flags: string[] = []
   if (r.global) flags.push('g')
   if (r.ignoreCase) flags.push('i')
@@ -13,5 +13,3 @@ const getRegexFlags = (r: RegExp): string[] => {
   if (r.sticky) flags.push('y')
   return flags
 }
-
-export default getRegexFlags

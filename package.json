@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "if [ -d lib ] ; then rm -r lib/ ; fi && mkdir -p lib/",
-    "doc": "typedoc --includeVersion --out docs/ src/*.ts --exclude '**/*+(index|.test).ts'",
+    "doc": "typedoc",
     "postpublish": "npm run doc && git commit -am 'doc [skip ci]' && git push origin master",
     "prebuild": "run-s -s sortpack clean test:build",
     "preversion": "npm run build",
@@ -52,7 +52,9 @@
     "npm-run-all": "4.1.5",
     "sortpack": "2.3.5",
     "ts-node": "10.9.2",
-    "typedoc": "0.25.4",
+    "typedoc": "0.25.6",
+    "typedoc-plugin-missing-exports": "2.1.0",
+    "typedoc-theme-hierarchy": "4.1.2",
     "typescript": "5.3.3"
   },
   "engines": {

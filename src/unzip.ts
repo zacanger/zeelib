@@ -7,7 +7,7 @@
  * unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
  */
 
-const unzip = <A, B>(xs: Array<[A, B]>): [A[], B[]] => {
+export const unzip = <A, B>(xs: Array<[A, B]>): [A[], B[]] => {
   const as: A[] = []
   const bs: B[] = []
   xs.forEach((x, i): void => {
@@ -16,5 +16,3 @@ const unzip = <A, B>(xs: Array<[A, B]>): [A[], B[]] => {
   })
   return [ as, bs ]
 }
-
-export default unzip

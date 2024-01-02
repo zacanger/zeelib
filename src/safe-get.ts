@@ -1,4 +1,4 @@
-import id from './id'
+import { id } from './id'
 
 /**
  * Like `_.get`: takes an access string and an optional fallback,
@@ -9,12 +9,10 @@ import id from './id'
  * safeGet('a.b.e', 'f')({ a: { b: { c: 'd' } } }) // => 'f'
  */
 
-const safeGet = <A>(path: string, fallback?: A) => (
+export const safeGet = <A>(path: string, fallback?: A) => (
   obj: Record<string, any>,
 ): A | null | undefined =>
   (path
     .split(/[.[\]]/)
     .filter(id)
     .reduce((o, prop) => o?.[prop], obj) as any) || fallback
-
-export default safeGet

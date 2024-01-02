@@ -5,7 +5,5 @@
  * gt(1, 2) // => false
  */
 
-const gt = (a: number, b: number): boolean =>
+export const gt = (a: number, b: number): boolean =>
   a > b
-
-export default gt

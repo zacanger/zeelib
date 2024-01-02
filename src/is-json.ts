@@ -4,7 +4,7 @@
  * isJson(JSON.stringify({ a: 'b' })) // => true
  */
 
-const isJson = (str: string): boolean => {
+export const isJson = (str: string): boolean => {
   try {
     JSON.parse(str)
     return true
@@ -12,5 +12,3 @@ const isJson = (str: string): boolean => {
     return false
   }
 }
-
-export default isJson

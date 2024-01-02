@@ -4,7 +4,5 @@
  * isOdd(1) // => true
  */
 
-const isOdd = (n: number): boolean =>
+export const isOdd = (n: number): boolean =>
   (n & 1) !== 0
-
-export default isOdd

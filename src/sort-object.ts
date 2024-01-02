@@ -1,4 +1,4 @@
-import isObject from './is-object'
+import { isObject } from './is-object'
 
 /**
  * Sort an object (recursively)
@@ -8,7 +8,7 @@ import isObject from './is-object'
 
 type AnyMap = Record<string, any>
 
-const sortObject = (o: AnyMap): AnyMap => {
+export const sortObject = (o: AnyMap): AnyMap => {
   if (!isObject(o)) throw new Error('Expected an object')
   const ks = Object.keys(o)
   ks.sort()
@@ -20,5 +20,3 @@ const sortObject = (o: AnyMap): AnyMap => {
   }
   return Object.fromEntries(vals)
 }
-
-export default sortObject

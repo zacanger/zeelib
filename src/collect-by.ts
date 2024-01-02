@@ -6,10 +6,8 @@
  * collectBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }
  */
 
-const collectBy = (p: string) =>
+export const collectBy = (p: string) =>
   (a: any[]): Record<string, any> =>
     a.reduce((c, i) => ({
       ...c, [i[p]]: i,
     }), {})
-
-export default collectBy

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import typeOf from './type-of'
+import { typeOf } from './type-of'
 
 void test('typeOf', (): void => {
   assert.equal(typeOf('a'), 'string', 'string')

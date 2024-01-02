@@ -6,7 +6,5 @@
  * isFunction(noop) // => true
  */
 
-const isFunction = (v: any): boolean =>
+export const isFunction = (v: any): boolean =>
   typeof v === 'function'
-
-export default isFunction

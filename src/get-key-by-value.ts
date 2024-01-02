@@ -4,7 +4,8 @@
  * getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
  */
 
-const getKeyByValue = (value: any, object: Record<string, any>): string | undefined =>
+export const getKeyByValue = (
+  value: any,
+  object: Record<string, any>,
+): string | undefined =>
   Object.keys(object).find((key: string) => object[key] === value)
-
-export default getKeyByValue

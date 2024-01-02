@@ -7,9 +7,10 @@
  * replicate(4, (a) => a + 1) // => [ 5, 5, 5, 5 ]
  */
 
-const replicate = <A>(n: number, p: A | ((n: number, i: number) => A)): A[] =>
-  Array(n).fill(undefined).map((_, i) =>
+export const replicate = <A>(
+  n: number,
+  p: A | ((n: number, i: number) => A),
+): A[] =>
+    Array(n).fill(undefined).map((_, i) =>
     // @ts-expect-error typescript is wrong here
-    typeof p === 'function' ? p(n, i) : p)
-
-export default replicate
+      typeof p === 'function' ? p(n, i) : p)

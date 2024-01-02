@@ -5,6 +5,4 @@
  * id() // => undefined
  */
 
-const id = <A>(a: A): A => a
-
-export default id
+export const id = <A>(a: A): A => a

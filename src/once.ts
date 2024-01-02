@@ -1,5 +1,3 @@
-type AnyFn = <T>(...args: T[]) => T
-
 /**
  * Only calls fn once; subsequent calls just return first val
  * @example
@@ -9,7 +7,7 @@ type AnyFn = <T>(...args: T[]) => T
  * o(2) // => 1
  */
 
-const once = <U>(fn: AnyFn): (...args: U[]) => U => {
+export const once = <U>(fn: (<T>(...args: T[]) => T)): (...args: U[]) => U => {
   let returnValue: U
   return (...args: U[]): U => {
     if (!returnValue) {
@@ -18,5 +16,3 @@ const once = <U>(fn: AnyFn): (...args: U[]) => U => {
     return returnValue
   }
 }
-
-export default once

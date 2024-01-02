@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import keep from './keep'
+import { keep } from './keep'
 
 void test('keep', (): void => {
   const withF = [ 'a', null, '', 2 ]

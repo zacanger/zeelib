@@ -4,7 +4,5 @@
  * head([ 1, 2, 3 ]) // => 1
  */
 
-const head = <T>(arr: T[]): T =>
+export const head = <T>(arr: T[]): T =>
   arr[0]
-
-export default head

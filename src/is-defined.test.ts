@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isDefined from './is-defined'
+import { isDefined } from './is-defined'
 
 void test('isDefined', (): void => {
   let un

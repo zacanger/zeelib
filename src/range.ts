@@ -11,7 +11,7 @@
  * range(1, 10, 3) // => [ 1, 4, 7, 10 ]
  */
 
-const range = (a: number, b: number, step: number = 1): number[] => {
+export const range = (a: number, b: number, step: number = 1): number[] => {
   const length = Math.floor((b - a) / step)
 
   if (length < 0) {
@@ -26,5 +26,3 @@ const range = (a: number, b: number, step: number = 1): number[] => {
 
   return arr
 }
-
-export default range

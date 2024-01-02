@@ -6,8 +6,6 @@
  * flip(minus)(2, 1) // => -1
  */
 
-const flip = (f: (...xs: any[]) => any) =>
+export const flip = (f: (...xs: any[]) => any) =>
   (...args: any[]) =>
     f.apply(this, args.reverse())
-
-export default flip

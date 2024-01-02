@@ -4,7 +4,5 @@
  * isNode()
  */
 
-const isNode = (): boolean =>
-  process && !!process.version
-
-export default isNode
+export const isNode = (): boolean =>
+  typeof process !== 'undefined' && !!process.version

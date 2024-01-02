@@ -6,7 +6,5 @@
  * gte(2, 3) // => false
  */
 
-const gte = (a: number, b: number): boolean =>
+export const gte = (a: number, b: number): boolean =>
   a >= b
-
-export default gte

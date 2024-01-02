@@ -4,7 +4,5 @@
  * getTerminalRows()
  */
 
-const getTerminalRows = (): number =>
+export const getTerminalRows = (): number =>
   process.stdout.rows
-
-export default getTerminalRows

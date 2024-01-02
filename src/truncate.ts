@@ -5,7 +5,7 @@
  * truncate('asdf asdf asdf asdf', 8, ' etc.') // => 'asd etc.'
  */
 
-const truncate = (
+export const truncate = (
   str: string,
   limit: number,
   tail: string = '…',
@@ -13,5 +13,3 @@ const truncate = (
   str.length > limit
     ? `${str.substr(0, limit - tail.length)}${tail}`
     : str
-
-export default truncate

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import takeWhile from './take-while'
+import { takeWhile } from './take-while'
 
 void test('takeWhile', (): void => {
   const lt3 = (a: number): boolean => a < 3

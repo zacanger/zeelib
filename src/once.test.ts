@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import once from './once'
-import id from './id'
+import { once } from './once'
+import { id } from './id'
 
 void test('once', (): void => {
   const o = once(id)

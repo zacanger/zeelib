@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import stripAnsi from './strip-ansi'
+import { stripAnsi } from './strip-ansi'
 
 void test('stripAnsi', (): void => {
   const plain = 'hello'

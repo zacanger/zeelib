@@ -1,5 +1,5 @@
-import take from './take'
-import drop from './drop'
+import { take } from './take'
+import { drop } from './drop'
 
 /**
  * Like Haskell's `splitAt`
@@ -10,7 +10,5 @@ import drop from './drop'
  * splitAt(1, [ [ 'a', 'b' ], 'c' ]) // => [ [ [ 'a', 'b' ] ], [ 'c' ] ]
  */
 
-const splitAt = <A>(num: number, arr: A[]): [A[], A[]] =>
+export const splitAt = <A>(num: number, arr: A[]): [A[], A[]] =>
   [ take(num, arr), drop(num, arr) ]
-
-export default splitAt

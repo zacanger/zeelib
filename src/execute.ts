@@ -12,11 +12,9 @@ env.PATH = resolve('./node_modules/.bin') + SEPARATOR + env.PATH
  * execute('standard-format -w')
  */
 
-const execute = (cmd: string): void => {
+export const execute = (cmd: string): void => {
   execSync(cmd, {
     cwd: process.cwd(),
     env,
   })
 }
-
-export default execute

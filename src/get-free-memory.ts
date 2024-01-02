@@ -6,7 +6,5 @@ import { freemem } from 'node:os'
  * getFreeMemory()
  */
 
-const getFreeMemory = (): number =>
+export const getFreeMemory = (): number =>
   parseFloat((freemem() / 1024 / 1024).toFixed(2))
-
-export default getFreeMemory

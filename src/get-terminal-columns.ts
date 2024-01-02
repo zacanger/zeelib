@@ -4,7 +4,5 @@
  * getTerminalColumns()
  */
 
-const getTerminalColumns = (): number =>
+export const getTerminalColumns = (): number =>
   process.stdout.columns
-
-export default getTerminalColumns

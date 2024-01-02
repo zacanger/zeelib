@@ -7,7 +7,7 @@ import { resolve, join } from 'node:path'
  * getProjectRoot() // /path/to/project
  */
 
-const getProjectRoot = (): string => {
+export const getProjectRoot = (): string => {
   const mainFileName = require.main ? require.main.filename : __dirname
 
   if (mainFileName.indexOf('node_modules') > 0) {
@@ -28,5 +28,3 @@ const getProjectRoot = (): string => {
 
   return result
 }
-
-export default getProjectRoot

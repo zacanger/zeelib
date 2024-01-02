@@ -4,7 +4,5 @@
  * isNull(null) // => true
  */
 
-const isNull = (v: any): boolean =>
+export const isNull = (v: any): boolean =>
   v === null
-
-export default isNull

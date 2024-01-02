@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import pick from './pick'
+import { pick } from './pick'
 
 void test('pick', (): void => {
   assert.deepEqual(pick('a', { a: 'a', b: 'b' }), { a: 'a' }, 'works for string arg')

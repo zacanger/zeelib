@@ -5,7 +5,5 @@
  * getUserShell()
  */
 
-const getUserShell = (): string =>
+export const getUserShell = (): string =>
   (process?.env.SHELL) ?? ''
-
-export default getUserShell

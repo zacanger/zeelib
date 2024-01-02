@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import isInteger from './is-integer'
+import { isInteger } from './is-integer'
 
 void test('isInteger', (): void => {
   const f = (): number => 2

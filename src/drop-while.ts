@@ -1,4 +1,4 @@
-import span from './span'
+import { span } from './span'
 
 /**
  * The opposite of `takeWhile`:
@@ -8,10 +8,8 @@ import span from './span'
  * dropWhile(lessThanThree, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
  */
 
-const dropWhile = <T>(
+export const dropWhile = <T>(
   pred: (x: T) => boolean,
   arr: T[],
 ): T[] =>
     span(pred, arr)[1] || []
-
-export default dropWhile

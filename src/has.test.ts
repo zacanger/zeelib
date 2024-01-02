@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import has from './has'
+import { has } from './has'
 
 void test('has', (): void => {
   assert.ok(!has('a', { b: 'c' }), 'returns false if object does not have prop')

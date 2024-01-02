@@ -5,7 +5,5 @@
  * hasDuplicate([ 1, 1, 2 ]) // => true
  */
 
-const hasDuplicate = <T>(arr: T[]): boolean =>
+export const hasDuplicate = <T>(arr: T[]): boolean =>
   arr.some((v, i, s) => s.indexOf(v) !== i)
-
-export default hasDuplicate

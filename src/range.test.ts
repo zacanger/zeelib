@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
-import range from './range'
+import { range } from './range'
 
 void test('range', (): void => {
   assert.deepEqual(range(0, 10), [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ], 'generates arr')

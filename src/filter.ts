@@ -1,4 +1,4 @@
-import each from './each'
+import { each } from './each'
 
 type AnyMapOrArr = Record<string, any> | any[]
 
@@ -10,7 +10,7 @@ type AnyMapOrArr = Record<string, any> | any[]
  * filter(lessThanThree, { a: 1, b: 4 }) // =>  { a: 1 }
  */
 
-const filter = <T>(
+export const filter = <T>(
   fn: (x: T, y: string | number) => boolean,
   list: T[] | string | Record<string, any>,
 ): Record<string, T> | T[] => {
@@ -28,5 +28,3 @@ const filter = <T>(
 
   return filtered
 }
-
-export default filter

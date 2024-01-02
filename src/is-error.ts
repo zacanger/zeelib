@@ -1,4 +1,4 @@
-import objectToString from './object-to-string'
+import { objectToString } from './object-to-string'
 
 /**
  * Returns true if value is an error
@@ -6,7 +6,5 @@ import objectToString from './object-to-string'
  * isError(new Error()) // => true
  */
 
-const isError = (a: any): boolean =>
+export const isError = (a: any): boolean =>
   a instanceof Error || objectToString(a) === '[object Error]'
-
-export default isError

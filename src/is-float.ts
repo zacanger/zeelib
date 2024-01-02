@@ -5,7 +5,5 @@
  * isFloat(2.2) // => true
  */
 
-const isFloat = (n: number): boolean =>
+export const isFloat = (n: number): boolean =>
   (n | 0) !== n
-
-export default isFloat

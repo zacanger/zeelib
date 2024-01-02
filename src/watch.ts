@@ -1,4 +1,4 @@
-import { watch } from 'node:fs'
+import { watch as w } from 'node:fs'
 import { resolve } from 'node:path'
 
 /**
@@ -7,14 +7,13 @@ import { resolve } from 'node:path'
  * watch('./foo', console.log)
  */
 
-const watchFile = (
+export const watch = (
   filePath: string,
   cb: (event: string, filename: string | null) => void,
 ): void => {
   const file = resolve(filePath)
   try {
-    watch(file, cb)
-    console.log('watching', file)
+    w(file, cb)
   } catch (e) {
     if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
       console.error('Error, no such file', file)
@@ -23,5 +22,3 @@ const watchFile = (
     }
   }
 }
-
-export default watchFile

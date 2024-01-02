@@ -5,7 +5,7 @@
  * memoize((a) => a)(1) // => 1
  */
 
-const memoize = (fn: any): any => {
+export const memoize = (fn: any): any => {
   const results = new Map()
   return (...args: any): any => {
     const key = args.toString()
@@ -15,5 +15,3 @@ const memoize = (fn: any): any => {
     return results.get(key)
   }
 }
-
-export default memoize
