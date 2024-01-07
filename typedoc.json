@@ -1,6 +1,6 @@
 {
-  "theme": "hierarchy",
-  "plugin": ["typedoc-theme-hierarchy", "typedoc-plugin-missing-exports"],
+  "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
+  "themeColor": "#20cb9b",
   "includeVersion": true,
   "out": "docs/",
   "entryPoints": [ "src/index.ts" ],
