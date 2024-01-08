@@ -1,3 +1,5 @@
+import { type AnyMap } from './types'
+
 /**
  * Collect an an array of objects by string key
  * cred: gh:uniqname
@@ -7,7 +9,7 @@
  */
 
 export const collectBy = (p: string) =>
-  (a: any[]): Record<string, any> =>
+  (a: any[]): AnyMap =>
     a.reduce((c, i) => ({
       ...c, [i[p]]: i,
     }), {})

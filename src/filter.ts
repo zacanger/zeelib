@@ -1,6 +1,7 @@
 import { each } from './each'
+import { type AnyMap } from './types'
 
-type AnyMapOrArr = Record<string, any> | any[]
+type AnyMapOrArr = AnyMap | any[]
 
 /**
  * `filter` for array and object
@@ -12,7 +13,7 @@ type AnyMapOrArr = Record<string, any> | any[]
 
 export const filter = <T>(
   fn: (x: T, y: string | number) => boolean,
-  list: T[] | string | Record<string, any>,
+  list: T[] | string | AnyMap,
 ): Record<string, T> | T[] => {
   const isArr = Array.isArray(list)
   const filtered: AnyMapOrArr = isArr ? [] : {}

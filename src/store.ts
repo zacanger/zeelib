@@ -1,12 +1,5 @@
-/**
- * A very simple store implementation (think Redux-like)
- * @example
- * const state = store()
- * state.subscribe((next, prev) => next.foo)
- * state.update({ foo: 'bar' })
- */
+import { type AnyMap } from './types'
 
-type AnyMap = Record<string, any>
 type Listener = (a: AnyMap, b: AnyMap) => any
 type Updater = (a: AnyMap) => AnyMap
 
@@ -15,6 +8,14 @@ interface Store {
   unsubscribe: (l: Listener) => void
   update: (n: AnyMap | Updater) => void
 }
+
+/**
+ * A very simple store implementation (think Redux-like)
+ * @example
+ * const state = store()
+ * state.subscribe((next, prev) => next.foo)
+ * state.update({ foo: 'bar' })
+ */
 
 export const store = (state: AnyMap = {}): Store => {
   const ls: Listener[] = []

@@ -1,3 +1,5 @@
+import { type AnyMap } from './types'
+
 /**
  * Get the key for a value
  * @example
@@ -6,6 +8,6 @@
 
 export const getKeyByValue = (
   value: any,
-  object: Record<string, any>,
+  object: AnyMap,
 ): string | undefined =>
   Object.keys(object).find((key: string) => object[key] === value)

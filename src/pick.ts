@@ -1,3 +1,5 @@
+import { type AnyMap } from './types'
+
 /**
  * `pick`
  * as it is in rambda (not ramda)
@@ -8,9 +10,9 @@
 
 export const pick = (
   ks: string | string[],
-  o: Record<string, any>,
-): Record<string, any> => {
-  const r: Record<string, any> = {}
+  o: AnyMap,
+): AnyMap => {
+  const r: AnyMap = {}
   let c: number = 0
   while (c < ks.length) {
     if (ks[c] in o) {

@@ -1,3 +1,5 @@
+import { type AnyMap } from './types'
+
 /**
  * Map for objects
  * @example
@@ -8,10 +10,10 @@
 
 export const mapObject = (
   f: (a: any, b: string, c: any) => any,
-  o: Record<string, any>,
+  o: AnyMap,
   ctx: any = this,
-): Record<string, any> => {
-  const res: Record<string, any> = {}
+): AnyMap => {
+  const res: AnyMap = {}
   Object.keys(o).forEach((k): void => {
     res[k] = f.call(ctx, o[k], k, o)
   })

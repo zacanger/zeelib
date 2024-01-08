@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises'
+import { type AnyMap } from './types'
 
-type AnyMap = Record<string, any>
 type AnyJson = AnyMap | any[]
 
 /**

@@ -1,6 +1,7 @@
 import { filter } from './filter'
+import { type AnyMap } from './types'
 
-type R = string | any[] | Record<string, any>
+type R = string | any[] | AnyMap
 
 /**
  * Returns an array or object with all falsey values removed

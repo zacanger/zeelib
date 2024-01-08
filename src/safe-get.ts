@@ -1,4 +1,5 @@
 import { id } from './id'
+import { type AnyMap } from './types'
 
 /**
  * Like `_.get`: takes an access string and an optional fallback,
@@ -10,7 +11,7 @@ import { id } from './id'
  */
 
 export const safeGet = <A>(path: string, fallback?: A) => (
-  obj: Record<string, any>,
+  obj: AnyMap,
 ): A | null | undefined =>
   (path
     .split(/[.[\]]/)

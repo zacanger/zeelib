@@ -1,3 +1,5 @@
+import { type AnyMap } from './types'
+
 /**
  * Collect an an array of objects by string key
  * @example
@@ -6,7 +8,7 @@
  */
 
 export const groupBy = (p: string) =>
-  (a: any[]): Record<string, any> =>
+  (a: any[]): AnyMap =>
     a.reduce((c, i) => ({
       ...c, [i[p]]: i,
     }), {})

@@ -1,12 +1,11 @@
 import { isObject } from './is-object'
+import { type AnyMap } from './types'
 
 /**
  * Sort an object (recursively)
  * @example
  * sortObject({ b: 'c', a: 'd' }) // => { a: 'd', b: 'c' }
  */
-
-type AnyMap = Record<string, any>
 
 export const sortObject = (o: AnyMap): AnyMap => {
   if (!isObject(o)) throw new Error('Expected an object')
