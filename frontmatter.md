@@ -28,3 +28,7 @@ if (z.isEmpty(answer)) process.exit(1)
 ```
 
 ----
+
+<details>
+  <summary>Full Docs</summary>
+
