@@ -11,3 +11,4 @@ npx typedoc
 cat docs/README.md docs/modules.md > README.md
 $_sed -i 's/modules\.md//g' README.md
 rm -rf docs/
+git commit -am 'docs: generate [skip ci]'
