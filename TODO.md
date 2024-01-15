@@ -1,3 +1,4 @@
+* Consolidate docs generation into version commit
 * Remove anything that can be done with plain JS now
 * Minimize extraneous imports (avoid the lodash problem)
 * Fix test coverage, and aim for > 90%
