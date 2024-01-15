@@ -17,17 +17,15 @@
     "lib"
   ],
   "scripts": {
-    "_test:node": "node --test --test-reporter=tap --experimental-test-coverage -r ts-node/register src/",
+    "__test:node__": "node --test --test-reporter=tap --experimental-test-coverage -r ts-node/register -r src/zip.test.ts",
     "build": "tsc",
-    "clean": "if [ -d lib ] ; then rm -r lib/ ; fi && mkdir -p lib/",
+    "clean": "./clean.sh",
     "doc": "typedoc",
     "postpublish": "npm run doc && git commit -am 'doc [skip ci]' && git push origin master",
-    "prebuild": "run-s -s sortpack clean test:build",
+    "prebuild": "run-s clean test",
     "preversion": "npm run build",
-    "sortpack": "sortpack",
-    "test": "run-s -s test:ts test:lint test:node",
-    "test:build": "run-s -s test:lint test:ts cover",
-    "test:lint": "eslint -c .eslintrc.js src/*.ts --fix",
+    "test": "run-s test:ts test:lint test:node",
+    "test:lint": "sortpack && eslint -c .eslintrc.js src/*.ts --fix",
     "test:node": "node --test -r ts-node/register src/*.test.ts",
     "test:ts": "tsc --noEmit"
   },
@@ -49,15 +47,15 @@
     "node": ">=21.0.0"
   },
   "devDependencies": {
-    "@types/node": "20.10.7",
+    "@types/node": "20.11.0",
     "eslint": "8.56.0",
     "eslint-config-standard-with-typescript": "43.0.0",
     "npm-run-all": "4.1.5",
     "sortpack": "2.4.0",
     "ts-node": "10.9.2",
-    "typedoc": "0.25.6",
+    "typedoc": "0.25.7",
     "typedoc-material-theme": "1.0.2",
-    "typedoc-plugin-missing-exports": "2.1.0",
+    "typedoc-plugin-missing-exports": "2.2.0",
     "typescript": "5.3.3"
   }
 }
