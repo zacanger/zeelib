@@ -1,8 +1,16 @@
 {
-  "plugin": ["typedoc-material-theme", "typedoc-plugin-missing-exports"],
-  "themeColor": "#20cb9b",
-  "includeVersion": true,
+  "plugin": [
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-missing-exports"
+  ],
   "out": "docs/",
-  "entryPoints": [ "src/index.ts" ],
-  "exclude": ["**/*+(.test).ts"]
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "readme": "./frontmatter.md",
+  "exclude": [
+    "**/*+(.test).ts"
+  ],
+  "excludeExternals": true,
+  "placeInternalsInOwningModule": true
 }

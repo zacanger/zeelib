@@ -20,16 +20,15 @@
     "__test:node__": "node --test --test-reporter=tap --experimental-test-coverage -r ts-node/register -r src/zip.test.ts",
     "build": "tsc",
     "clean": "./clean.sh",
-    "doc": "typedoc",
-    "postpublish": "npm run doc && git commit -am 'doc [skip ci]' && git push origin master",
-    "prebuild": "run-s clean test",
-    "preversion": "npm run build",
+    "docs": "./docs.sh",
+    "prebuild": "run-s clean test docs",
+    "preversion": "run-s build",
     "test": "run-s test:ts test:lint test:node",
     "test:lint": "sortpack && eslint -c .eslintrc.js src/*.ts --fix",
     "test:node": "node --test -r ts-node/register src/*.test.ts",
     "test:ts": "tsc --noEmit"
   },
-  "homepage": "https://zacanger.github.io/zeelib",
+  "homepage": "https://github.com/zacanger/zeelib",
   "repository": {
     "type": "git",
     "url": "https://github.com/zacanger/zeelib.git"
@@ -54,7 +53,7 @@
     "sortpack": "2.4.0",
     "ts-node": "10.9.2",
     "typedoc": "0.25.7",
-    "typedoc-material-theme": "1.0.2",
+    "typedoc-plugin-markdown": "3.17.1",
     "typedoc-plugin-missing-exports": "2.2.0",
     "typescript": "5.3.3"
   }
