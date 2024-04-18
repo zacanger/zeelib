@@ -18,11 +18,11 @@ export const filter = <T>(
   const isArr = Array.isArray(list)
   const filtered: AnyMapOrArr = isArr ? [] : {}
 
-  // @ts-expect-error gotta figure that out
+  // @ts-expect-error this is fine
   each(list, (item: T, index: number) => {
     if (fn(item, index)) {
       const idx: number | string = isArr ? filtered.length : index
-      // @ts-expect-error gotta figure that out
+      // @ts-expect-error this is fine
       filtered[idx] = item
     }
   })

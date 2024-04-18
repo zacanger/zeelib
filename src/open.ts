@@ -1,4 +1,5 @@
 import * as c from 'node:child_process'
+import { type AnyMap } from './types'
 
 type Cb = (error: c.ExecFileException | null, stdout: string | Buffer, stderr: string | Buffer) => void
 
@@ -8,8 +9,7 @@ type Cb = (error: c.ExecFileException | null, stdout: string | Buffer, stderr: s
  * open('http://zacanger.com')
  */
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export const open = (args: string, opts: {}, cb: Cb): void => {
+export const open = (args: string, opts: AnyMap, cb: Cb): void => {
   const as: string[] = [ args ]
   const cmd: string =
     process.platform === 'win32'

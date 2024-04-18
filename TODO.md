@@ -6,5 +6,4 @@
     * https://www.npmjs.com/package/source-map-support
     * https://github.com/TypeStrong/ts-node/issues/807
     * https://github.com/privatenumber/tsx/issues/437
-* Minimal `any` and `ts-expect-error`
-* Minimal `eslint-disable`
+* Minimal `any`s

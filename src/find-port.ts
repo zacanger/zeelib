@@ -21,17 +21,15 @@ export const findPort = (
     cb(null, port)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
-  server.once('error', onError)
-  server.once('listening', onListen)
-  server.listen(port)
-
-  // eslint-disable-next-line func-style
-  function onError (err: NodeError): void {
+  const onError = (err: NodeError): void => {
     server.removeListener('listening', onListen)
     if (err.code && [ 'EADDRINUSE', 'EACCESS' ].includes(err.code)) {
       return cb(err)
     }
     findPort(port + 1, cb)
   }
+
+  server.once('error', onError)
+  server.once('listening', onListen)
+  server.listen(port)
 }
