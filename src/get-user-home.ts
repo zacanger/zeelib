@@ -1,7 +1,6 @@
 import { homedir } from 'node:os'
 
-// eslint-disable-next-line @typescript-eslint/prefer-optional-chain
-const env = (typeof process !== 'undefined' && process.env) ?? {}
+const env = process?.env ?? {}
 
 /**
  * Get current user's home directory
@@ -10,7 +9,7 @@ const env = (typeof process !== 'undefined' && process.env) ?? {}
  */
 
 export const getUserHome = (): string => {
-  const e = env as NodeJS.ProcessEnv
+  const e = env
   return e.HOME ??
   e.USERPROFILE ??
   homedir() ??
