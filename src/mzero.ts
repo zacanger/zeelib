@@ -16,7 +16,7 @@ export const mzero = (v?: any): any => {
     case 'date': return new Date()
     case 'object': return {}
     case 'number': return 0
-    case 'string': return 0
+    case 'string': return ''
     case 'map': return new Map()
     case 'set': return new Set()
     case 'bigint': return BigInt(0)
