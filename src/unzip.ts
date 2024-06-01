@@ -1,4 +1,4 @@
-// TODO?: make variadic
+// TODO: make variadic
 
 /**
  * Takes a list of pairs
