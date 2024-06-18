@@ -1,10 +1,10 @@
 * `12.0.0` &mdash; *2024-01-14
     * Bring it back!
     * It's been a while. This version should be treated as a ground-up rewrite.
-    * There are still some TODOs. Any breaking changes there will show up in
-        v13. I need to publish this because I need to use it. If you use `*` as
-        a version specifier in your package.json, don't do that (for anything,
-        ever).
+    * There's still some work in progress. Any breaking changes there will
+        show up in v13. I need to publish this because I need to use it.
+        If you use `*` as a version specifier in your package.json,
+        don't do that (for anything, ever).
     * Too many breaking changes here to list, so it's best to treat this as a
         new library (it's been two years, after all). Check the docs for
         details.
