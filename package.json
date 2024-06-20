@@ -17,7 +17,7 @@
     "lib"
   ],
   "scripts": {
-    "__test:node__": "node --test --test-reporter=tap --experimental-test-coverage -r ts-node/register -r src/zip.test.ts",
+    "_test:node": "tsx --test --experimental-test-coverage src/*.test.ts",
     "build": "tsc",
     "clean": "./clean.sh",
     "docs": "./docs.sh",
@@ -25,7 +25,7 @@
     "preversion": "run-s build",
     "test": "run-s test:ts test:lint test:node",
     "test:lint": "sortpack && eslint src/*.ts --fix",
-    "test:node": "node --test -r ts-node/register src/*.test.ts",
+    "test:node": "tsx --test src/*.test.ts",
     "test:ts": "tsc --noEmit"
   },
   "homepage": "https://github.com/zacanger/zeelib",
@@ -46,12 +46,12 @@
     "node": ">=20.0.0"
   },
   "devDependencies": {
-    "@types/node": "20.12.7",
+    "@types/node": "20.14.6",
     "eslint": "8.57.0",
-    "eslint-config-love": "52.0.0",
+    "eslint-config-love": "53.0.0",
     "npm-run-all": "4.1.5",
     "sortpack": "2.4.0",
-    "ts-node": "10.9.2",
+    "tsx": "4.15.6",
     "typedoc": "0.25.13",
     "typedoc-plugin-markdown": "3.17.1",
     "typedoc-plugin-missing-exports": "2.2.0",
