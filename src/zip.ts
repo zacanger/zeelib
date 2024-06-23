@@ -1,7 +1,6 @@
 import { pair } from './pair'
 import { zipWith } from './zip-with'
 
-// TODO: make variadic
 /**
  * Makes a list of tuples
  *
@@ -11,5 +10,6 @@ import { zipWith } from './zip-with'
  * zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
  */
 
+/** @deprecated will be removed in v13 */
 export const zip = <A, B>(xs: A[], ys: B[]): Array<[A, B]> =>
   zipWith(pair, xs, ys)

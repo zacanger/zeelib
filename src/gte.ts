@@ -6,5 +6,6 @@
  * gte(2, 3) // => false
  */
 
+/** @deprecated will be removed in v13 */
 export const gte = (a: number, b: number): boolean =>
   a >= b

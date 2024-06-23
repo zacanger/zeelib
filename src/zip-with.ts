@@ -7,7 +7,7 @@
  * zipWith(increment, [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2 ]
  */
 
-// TODO: make variadic
+/** @deprecated will be removed in v13 */
 export const zipWith = <A, B, T>(
   fn: (a: A, b: B) => T,
   xs: A[],

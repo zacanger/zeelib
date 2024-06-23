@@ -1,4 +1,6 @@
 * Remove anything that can be done with plain JS now
+* Remove anything marked deprecated
+* Replace all the foo-case-to-bar-case with a single case fn
 * Minimize extraneous imports (avoid the lodash problem)
 * Unit tests
     * Fix test coverage, and aim for > 90%

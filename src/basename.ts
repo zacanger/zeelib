@@ -6,5 +6,6 @@ import { parse } from 'node:path'
  * basename() // => string
  */
 
+/** @deprecated will be removed in v13 */
 export const basename = (str: string = ''): string =>
   parse(str).base

@@ -1,4 +1,3 @@
-import { isJson } from './is-json'
 import { type AnyMap } from './types'
 
 /**
@@ -10,8 +9,9 @@ import { type AnyMap } from './types'
 
 export const tryJson = <T>(o: T): T | AnyMap => {
   const m = o as unknown as string
-  if (isJson(m)) {
+  try {
     return JSON.parse(m)
+  } catch {
+    return o
   }
-  return o
 }

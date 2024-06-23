@@ -5,5 +5,6 @@
  * gt(1, 2) // => false
  */
 
+/** @deprecated will be removed in v13 */
 export const gt = (a: number, b: number): boolean =>
   a > b

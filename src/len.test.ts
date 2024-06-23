@@ -1,10 +1,10 @@
 import { test } from 'node:test'
 import * as assert from 'node:assert'
 import { len } from './len'
-import { noop } from './noop'
 import { sum } from './sum'
 
 void test('length', (): void => {
+  const noop = (): void => {}
   const addTwo = (a: number, b: number): number => sum([ a, b ])
   const addFour = (a: number, b: number, c: number, d: number): number =>
     sum([ a, b, c, d ])

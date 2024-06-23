@@ -1,5 +1,3 @@
-// TODO: make variadic
-
 /**
  * Takes a list of pairs
  * and returns two lists of first and second elements
@@ -7,6 +5,7 @@
  * unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
  */
 
+/** @deprecated will be removed in v13 */
 export const unzip = <A, B>(xs: Array<[A, B]>): [A[], B[]] => {
   const as: A[] = []
   const bs: B[] = []

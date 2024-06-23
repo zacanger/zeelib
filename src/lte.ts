@@ -5,5 +5,6 @@
  * lte(1, 1) // => true
  */
 
+/** @deprecated will be removed in v13 */
 export const lte = (a: number, b: number): boolean =>
   a <= b

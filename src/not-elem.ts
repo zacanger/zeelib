@@ -9,5 +9,6 @@ import { elem } from './elem'
  * notElem('b', 'asdf') // => true
  */
 
+/** @deprecated will be removed in v13 */
 export const notElem = <T> (el: T & string, ls: string | T[]): boolean =>
   !elem(el, ls)
