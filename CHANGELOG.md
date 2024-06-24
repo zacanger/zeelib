@@ -10,6 +10,9 @@
         * `zip`, `zipWith`, `unzip`, `pair`, and `pairWith` were never quite correct
         * `noop` was just `() => {}`
         * `nco` is useless now that we have the `??` operator
+        * `isPow2` just seemed silly
+        * `doubleUntil` seems a little useless
+        * `countItemsInArray` is both a bad name and function I never once used
 * `12.0.0` &mdash; **2024-01-14**
     * Bring it back!
     * It's been a while. This version should be treated as a ground-up rewrite.
