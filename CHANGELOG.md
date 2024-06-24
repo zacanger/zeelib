@@ -1,4 +1,16 @@
-* `12.0.0` &mdash; *2024-01-14
+* `13.0.0` &mdash; **2024-06-23**
+    * Finishing all the cleanup from reviving this library
+    * Removed fns:
+        * `*-case-to-*-case`: there are good libraries out there for string case conversion, use one of those
+        * `gt`, `gte`, `lt`, `lte`: it's shorter to just write `<` and so on
+        * `basename` is just `path.parse(x).base`
+        * `xor` I have never once actually used, but if you need it, it's just `!a !== !b`
+        * `elem` and `notElem` are `x.includes` and `!x.includes`
+        * `get-random-string` isn't really random, use a uuid lib
+        * `zip`, `zipWith`, `unzip`, `pair`, and `pairWith` were never quite correct
+        * `noop` was just `() => {}`
+        * `nco` is useless now that we have the `??` operator
+* `12.0.0` &mdash; **2024-01-14**
     * Bring it back!
     * It's been a while. This version should be treated as a ground-up rewrite.
     * There's still some work in progress. Any breaking changes there will

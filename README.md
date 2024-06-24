@@ -54,7 +54,6 @@ if (z.isEmpty(answer)) process.exit(1)
 - [Listener](#listener)
 - [R](#r)
 - [R](#r-1)
-- [R](#r-2)
 - [Timer](#timer)
 - [Updater](#updater)
 
@@ -66,10 +65,6 @@ if (z.isEmpty(answer)) process.exit(1)
 
 - [and](#and)
 - [average](#average)
-- [basename](#basename)
-- [camelCaseToLispCase](#camelcasetolispcase)
-- [camelCaseToPascalCase](#camelcasetopascalcase)
-- [camelCaseToSnakeCase](#camelcasetosnakecase)
 - [capitalizeFirstChar](#capitalizefirstchar)
 - [chunk](#chunk)
 - [clamp](#clamp)
@@ -79,16 +74,13 @@ if (z.isEmpty(answer)) process.exit(1)
 - [combineRegex](#combineregex)
 - [compose](#compose)
 - [countIn](#countin)
-- [countItemsInArray](#countitemsinarray)
 - [curry](#curry)
 - [debounce](#debounce)
 - [diff](#diff)
 - [div](#div)
-- [doubleUntil](#doubleuntil)
 - [drop](#drop)
 - [dropWhile](#dropwhile)
 - [each](#each)
-- [elem](#elem)
 - [escapeForRegex](#escapeforregex)
 - [execute](#execute)
 - [fileExists](#fileexists)
@@ -108,7 +100,6 @@ if (z.isEmpty(answer)) process.exit(1)
 - [getMemoryUsage](#getmemoryusage)
 - [getOrdinal](#getordinal)
 - [getProjectRoot](#getprojectroot)
-- [getRandomString](#getrandomstring)
 - [getRegexFlags](#getregexflags)
 - [getStdin](#getstdin)
 - [getTerminalColumns](#getterminalcolumns)
@@ -118,8 +109,6 @@ if (z.isEmpty(answer)) process.exit(1)
 - [getUserShell](#getusershell)
 - [greater](#greater)
 - [groupBy](#groupby)
-- [gt](#gt)
-- [gte](#gte)
 - [has](#has)
 - [hasColor](#hascolor)
 - [hasDuplicate](#hasduplicate)
@@ -154,7 +143,6 @@ if (z.isEmpty(answer)) process.exit(1)
 - [isNumber](#isnumber)
 - [isObject](#isobject)
 - [isOdd](#isodd)
-- [isPow2](#ispow2)
 - [isPrimitive](#isprimitive)
 - [isPromise](#ispromise)
 - [isRegExp](#isregexp)
@@ -172,25 +160,12 @@ if (z.isEmpty(answer)) process.exit(1)
 - [lesser](#lesser)
 - [lightenOrDarken](#lightenordarken)
 - [lines](#lines)
-- [lispCaseToCamelCase](#lispcasetocamelcase)
-- [lispCaseToPascalCase](#lispcasetopascalcase)
-- [lispCaseToSnakeCase](#lispcasetosnakecase)
-- [lt](#lt)
-- [lte](#lte)
 - [mapObject](#mapobject)
 - [memoize](#memoize)
 - [mzero](#mzero)
-- [nco](#nco)
-- [noop](#noop)
-- [notElem](#notelem)
 - [objectToString](#objecttostring)
 - [once](#once)
 - [open](#open)
-- [pair](#pair)
-- [pairWith](#pairwith)
-- [pascalCaseToCamelCase](#pascalcasetocamelcase)
-- [pascalCaseToLispCase](#pascalcasetolispcase)
-- [pascalCaseToSnakeCase](#pascalcasetosnakecase)
 - [pick](#pick)
 - [pipe](#pipe)
 - [pluck](#pluck)
@@ -206,9 +181,6 @@ if (z.isEmpty(answer)) process.exit(1)
 - [scaleToFit](#scaletofit)
 - [shuffle](#shuffle)
 - [sleep](#sleep)
-- [snakeCaseToCamelCase](#snakecasetocamelcase)
-- [snakeCaseToLispCase](#snakecasetolispcase)
-- [snakeCaseToPascalCase](#snakecasetopascalcase)
 - [sortBy](#sortby)
 - [sortObject](#sortobject)
 - [span](#span)
@@ -233,13 +205,9 @@ if (z.isEmpty(answer)) process.exit(1)
 - [unlines](#unlines)
 - [until](#until)
 - [unwords](#unwords)
-- [unzip](#unzip)
 - [watch](#watch)
 - [words](#words)
 - [writeJson](#writejson)
-- [xor](#xor)
-- [zip](#zip)
-- [zipWith](#zipwith)
 
 ## Type Aliases
 
@@ -263,7 +231,7 @@ if (z.isEmpty(answer)) process.exit(1)
 
 #### Defined in
 
-[pipe.ts:3](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pipe.ts#L3)
+[pipe.ts:3](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/pipe.ts#L3)
 
 ___
 
@@ -273,7 +241,7 @@ ___
 
 #### Defined in
 
-[types.ts:1](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/types.ts#L1)
+[types.ts:1](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/types.ts#L1)
 
 ___
 
@@ -299,7 +267,7 @@ ___
 
 #### Defined in
 
-[open.ts:4](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/open.ts#L4)
+[open.ts:4](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/open.ts#L4)
 
 ___
 
@@ -309,7 +277,7 @@ ___
 
 #### Defined in
 
-[colorize.ts:4](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/colorize.ts#L4)
+[colorize.ts:4](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/colorize.ts#L4)
 
 ___
 
@@ -333,7 +301,7 @@ ___
 
 #### Defined in
 
-[curry.ts:1](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/curry.ts#L1)
+[curry.ts:1](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/curry.ts#L1)
 
 ___
 
@@ -358,17 +326,7 @@ ___
 
 #### Defined in
 
-[store.ts:3](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/store.ts#L3)
-
-___
-
-### R
-
-Ƭ **R**: `Record`\<`string`, `number`\>
-
-#### Defined in
-
-[count-items-in-array.ts:1](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/count-items-in-array.ts#L1)
+[store.ts:3](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/store.ts#L3)
 
 ___
 
@@ -392,7 +350,7 @@ ___
 
 #### Defined in
 
-[debounce.ts:2](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/debounce.ts#L2)
+[debounce.ts:2](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/debounce.ts#L2)
 
 ___
 
@@ -402,7 +360,7 @@ ___
 
 #### Defined in
 
-[keep.ts:4](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/keep.ts#L4)
+[keep.ts:4](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/keep.ts#L4)
 
 ___
 
@@ -412,7 +370,7 @@ ___
 
 #### Defined in
 
-[debounce.ts:1](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/debounce.ts#L1)
+[debounce.ts:1](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/debounce.ts#L1)
 
 ___
 
@@ -436,7 +394,7 @@ ___
 
 #### Defined in
 
-[store.ts:4](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/store.ts#L4)
+[store.ts:4](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/store.ts#L4)
 
 ## Variables
 
@@ -446,7 +404,7 @@ ___
 
 #### Defined in
 
-[colorize.ts:34](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/colorize.ts#L34)
+[colorize.ts:34](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/colorize.ts#L34)
 
 ## Functions
 
@@ -481,7 +439,7 @@ and([ 1, 2, 3, false ]) // => false
 
 #### Defined in
 
-[and.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/and.ts#L8)
+[and.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/and.ts#L8)
 
 ___
 
@@ -509,119 +467,7 @@ average([ 2, 4, 6, 8 ]) // => 5
 
 #### Defined in
 
-[average.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/average.ts#L7)
-
-___
-
-### basename
-
-▸ **basename**(`str?`): `string`
-
-`basename` for Node
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `str` | `string` | `''` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-basename() // => string
-```
-
-#### Defined in
-
-[basename.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/basename.ts#L9)
-
-___
-
-### camelCaseToLispCase
-
-▸ **camelCaseToLispCase**(`str`): `string`
-
-Takes a camelCase string and returns one in lisp-case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-camelCaseToLispCase('fooBar') // => 'foo-bar'
-```
-
-#### Defined in
-
-[camel-case-to-lisp-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/camel-case-to-lisp-case.ts#L7)
-
-___
-
-### camelCaseToPascalCase
-
-▸ **camelCaseToPascalCase**(`str`): `string`
-
-Takes a camelCase string and returns one in PascalCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-camelCaseToPascalCase('fooBar') // => 'FooBar'
-```
-
-#### Defined in
-
-[camel-case-to-pascal-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/camel-case-to-pascal-case.ts#L7)
-
-___
-
-### camelCaseToSnakeCase
-
-▸ **camelCaseToSnakeCase**(`str`): `string`
-
-Takes a camelCase string and returns one in snake_case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-camelCaseToSnakeCase('fooBar') // => 'foo_bar'
-```
-
-#### Defined in
-
-[camel-case-to-snake-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/camel-case-to-snake-case.ts#L7)
+[average.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/average.ts#L7)
 
 ___
 
@@ -649,7 +495,7 @@ capitalizeFirstChar('things and stuff') // => 'Things and stuff'
 
 #### Defined in
 
-[capitalize-first-char.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/capitalize-first-char.ts#L7)
+[capitalize-first-char.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/capitalize-first-char.ts#L7)
 
 ___
 
@@ -684,7 +530,7 @@ chunk([1, 2, 3, 4 ], 2) // => [ [ 1, 2 ], [ 3, 4 ] ]
 
 #### Defined in
 
-[chunk.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/chunk.ts#L7)
+[chunk.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/chunk.ts#L7)
 
 ___
 
@@ -718,7 +564,7 @@ clamp(100, 0, 99) // => 00
 
 #### Defined in
 
-[clamp.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/clamp.ts#L11)
+[clamp.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/clamp.ts#L11)
 
 ___
 
@@ -746,7 +592,7 @@ collapseNewlines('\n\n\n\n') // => '\n\n'
 
 #### Defined in
 
-[collapse-newlines.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/collapse-newlines.ts#L7)
+[collapse-newlines.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/collapse-newlines.ts#L7)
 
 ___
 
@@ -774,7 +620,7 @@ collapseWhitespace('a\n\r\t\nb') // => 'a b'
 
 #### Defined in
 
-[collapse-whitespace.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/collapse-whitespace.ts#L7)
+[collapse-whitespace.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/collapse-whitespace.ts#L7)
 
 ___
 
@@ -816,7 +662,7 @@ collectBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', 
 
 #### Defined in
 
-[collect-by.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/collect-by.ts#L11)
+[collect-by.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/collect-by.ts#L11)
 
 ___
 
@@ -845,7 +691,7 @@ combineRegex([/[a-z]/, /[0-9]], 'g') ==> /[a-z][0-9]/g
 
 #### Defined in
 
-[combine-regex.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/combine-regex.ts#L7)
+[combine-regex.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/combine-regex.ts#L7)
 
 ___
 
@@ -893,7 +739,7 @@ compose(addOne, timesTwo)(2) // => 5
 
 #### Defined in
 
-[compose.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/compose.ts#L11)
+[compose.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/compose.ts#L11)
 
 ___
 
@@ -930,41 +776,7 @@ countIn('a', [ 'a', 'b', 'c' ]) // => 1
 
 #### Defined in
 
-[count-in.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/count-in.ts#L9)
-
-___
-
-### countItemsInArray
-
-▸ **countItemsInArray**\<`T`\>(`arr`): [`R`](#r)
-
-Get an object of items in an array with count
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `arr` | `T`[] |
-
-#### Returns
-
-[`R`](#r)
-
-**`Example`**
-
-```ts
-countItemsInArray([ 1, 1, 2, 3, 4 ]) // => { '1': 2, '2': 1, '3': 1, '4': 1 }
-```
-
-#### Defined in
-
-[count-items-in-array.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/count-items-in-array.ts#L9)
+[count-in.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/count-in.ts#L9)
 
 ___
 
@@ -1002,13 +814,13 @@ curry(addThree)(1)(1)(1) // => 3
 
 #### Defined in
 
-[curry.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/curry.ts#L13)
+[curry.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/curry.ts#L13)
 
 ___
 
 ### debounce
 
-▸ **debounce**(`fn`, `ms`): [`R`](#r-1)
+▸ **debounce**(`fn`, `ms`): [`R`](#r)
 
 Simple debounce
 
@@ -1021,7 +833,7 @@ Simple debounce
 
 #### Returns
 
-[`R`](#r-1)
+[`R`](#r)
 
 **`Example`**
 
@@ -1031,7 +843,7 @@ debounce(() => console.log('hi'), 5000)
 
 #### Defined in
 
-[debounce.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/debounce.ts#L10)
+[debounce.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/debounce.ts#L10)
 
 ___
 
@@ -1066,7 +878,7 @@ diff([ 1, 2, 3 ], [ 2, 3 ]) // => [ 1 ]
 
 #### Defined in
 
-[diff.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/diff.ts#L7)
+[diff.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/diff.ts#L7)
 
 ___
 
@@ -1094,53 +906,7 @@ div([ 4, 2, 1 ]) // => 2
 
 #### Defined in
 
-[div.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/div.ts#L7)
-
-___
-
-### doubleUntil
-
-▸ **doubleUntil**(`minSize?`): \<T\>(`arr`: `T`[]) => `T`[]
-
-Double an array until it's n long
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `minSize` | `number` | `0` |
-
-#### Returns
-
-`fn`
-
-▸ \<`T`\>(`arr`): `T`[]
-
-##### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `arr` | `T`[] |
-
-##### Returns
-
-`T`[]
-
-**`Example`**
-
-```ts
-doubleUntil(2)([ 'hi' ]) // => [ 'hi', 'hi' ]
-```
-
-#### Defined in
-
-[double-until.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/double-until.ts#L7)
+[div.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/div.ts#L7)
 
 ___
 
@@ -1175,7 +941,7 @@ drop(2, [ 1, 2, 3 ]) // => 3
 
 #### Defined in
 
-[drop.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/drop.ts#L7)
+[drop.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/drop.ts#L7)
 
 ___
 
@@ -1212,7 +978,7 @@ dropWhile(lessThanThree, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
 
 #### Defined in
 
-[drop-while.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/drop-while.ts#L11)
+[drop-while.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/drop-while.ts#L11)
 
 ___
 
@@ -1249,43 +1015,7 @@ each([ 'a', 'b', 'c' ], id) // => 'a'
 
 #### Defined in
 
-[each.ts:33](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/each.ts#L33)
-
-___
-
-### elem
-
-▸ **elem**\<`T`\>(`el`, `ls`): `boolean`
-
-Check if a string or array contains an element
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `el` | `string` & `T` |
-| `ls` | `string` \| `T`[] |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-elem('a', 'asdf') // => true
-elem('a', 'asdf'.split('')) // => true
-```
-
-#### Defined in
-
-[elem.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/elem.ts#L8)
+[each.ts:33](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/each.ts#L33)
 
 ___
 
@@ -1312,7 +1042,7 @@ escapeForRegex('1 \\ {} []|') // => '1 \\\\ \{\} \\[\\]\\|'
 
 #### Defined in
 
-[escape-for-regex.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/escape-for-regex.ts#L7)
+[escape-for-regex.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/escape-for-regex.ts#L7)
 
 ___
 
@@ -1340,7 +1070,7 @@ execute('standard-format -w')
 
 #### Defined in
 
-[execute.ts:15](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/execute.ts#L15)
+[execute.ts:15](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/execute.ts#L15)
 
 ___
 
@@ -1368,7 +1098,7 @@ await fileExists('./foo') // => Promise<true>
 
 #### Defined in
 
-[file-exists.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/file-exists.ts#L10)
+[file-exists.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/file-exists.ts#L10)
 
 ___
 
@@ -1405,7 +1135,7 @@ filter(lessThanThree, { a: 1, b: 4 }) // =>  { a: 1 }
 
 #### Defined in
 
-[filter.ts:14](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/filter.ts#L14)
+[filter.ts:14](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/filter.ts#L14)
 
 ___
 
@@ -1434,7 +1164,7 @@ findIndices(1, [ 1, 2, 1 ]) // => [ 0, 2 ]
 
 #### Defined in
 
-[find-indices.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/find-indices.ts#L7)
+[find-indices.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/find-indices.ts#L7)
 
 ___
 
@@ -1463,7 +1193,7 @@ findPort(8000, (err, port) => console.log(`${port} is open`))
 
 #### Defined in
 
-[find-port.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/find-port.ts#L13)
+[find-port.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/find-port.ts#L13)
 
 ___
 
@@ -1498,7 +1228,7 @@ flattenAndUniq([ 1, 2, 3, [ 1, 2, 3 ]]) // =>  [ 1, 2, 3 ]
 
 #### Defined in
 
-[flatten-and-uniq.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/flatten-and-uniq.ts#L10)
+[flatten-and-uniq.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/flatten-and-uniq.ts#L10)
 
 ___
 
@@ -1540,7 +1270,7 @@ flip(minus)(2, 1) // => -1
 
 #### Defined in
 
-[flip.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/flip.ts#L9)
+[flip.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/flip.ts#L9)
 
 ___
 
@@ -1576,7 +1306,7 @@ foldl1(increment, [ 1, 1, 1 ]) // => 3
 
 #### Defined in
 
-[fold.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/fold.ts#L8)
+[fold.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/fold.ts#L8)
 
 ___
 
@@ -1598,7 +1328,7 @@ getFreeDisk()
 
 #### Defined in
 
-[get-free-disk.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-free-disk.ts#L9)
+[get-free-disk.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-free-disk.ts#L9)
 
 ___
 
@@ -1620,7 +1350,7 @@ getFreeMemory()
 
 #### Defined in
 
-[get-free-memory.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-free-memory.ts#L9)
+[get-free-memory.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-free-memory.ts#L9)
 
 ___
 
@@ -1642,7 +1372,7 @@ getGlobal() // => window, global, whatever
 
 #### Defined in
 
-[get-global.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-global.ts#L7)
+[get-global.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-global.ts#L7)
 
 ___
 
@@ -1664,7 +1394,7 @@ getHashFromDate()
 
 #### Defined in
 
-[get-hash-from-date.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-hash-from-date.ts#L7)
+[get-hash-from-date.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-hash-from-date.ts#L7)
 
 ___
 
@@ -1686,7 +1416,7 @@ getHashFromSystem()
 
 #### Defined in
 
-[get-hash-from-system.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-hash-from-system.ts#L10)
+[get-hash-from-system.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-hash-from-system.ts#L10)
 
 ___
 
@@ -1715,7 +1445,7 @@ getKeyByValue('bar', { foo: 'bar' }) // => 'foo'
 
 #### Defined in
 
-[get-key-by-value.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-key-by-value.ts#L9)
+[get-key-by-value.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-key-by-value.ts#L9)
 
 ___
 
@@ -1737,7 +1467,7 @@ getLoadAverage()
 
 #### Defined in
 
-[get-load-average.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-load-average.ts#L10)
+[get-load-average.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-load-average.ts#L10)
 
 ___
 
@@ -1759,7 +1489,7 @@ getMemoryUsage()
 
 #### Defined in
 
-[get-memory-usage.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-memory-usage.ts#L9)
+[get-memory-usage.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-memory-usage.ts#L9)
 
 ___
 
@@ -1789,7 +1519,7 @@ getOrdinal(1) // => '1st'
 
 #### Defined in
 
-[get-ordinal.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-ordinal.ts#L9)
+[get-ordinal.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-ordinal.ts#L9)
 
 ___
 
@@ -1811,36 +1541,7 @@ getProjectRoot() // /path/to/project
 
 #### Defined in
 
-[get-project-root.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-project-root.ts#L10)
-
-___
-
-### getRandomString
-
-▸ **getRandomString**(`n?`): `string`
-
-Returns random string of n length (defaults to 8)
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `n` | `number` | `8` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-getRandomString()
-getRandomString(32)
-```
-
-#### Defined in
-
-[get-random-string.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-random-string.ts#L8)
+[get-project-root.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-project-root.ts#L10)
 
 ___
 
@@ -1868,7 +1569,7 @@ getRegexFlags(/foo/ig) // => [ 'g', 'i' ]
 
 #### Defined in
 
-[get-regex-flags.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-regex-flags.ts#L7)
+[get-regex-flags.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-regex-flags.ts#L7)
 
 ___
 
@@ -1898,7 +1599,7 @@ getStdin((str) => {
 
 #### Defined in
 
-[get-stdin.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-stdin.ts#L9)
+[get-stdin.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-stdin.ts#L9)
 
 ___
 
@@ -1920,7 +1621,7 @@ getTerminalColumns()
 
 #### Defined in
 
-[get-terminal-columns.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-terminal-columns.ts#L7)
+[get-terminal-columns.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-terminal-columns.ts#L7)
 
 ___
 
@@ -1942,7 +1643,7 @@ getTerminalRows()
 
 #### Defined in
 
-[get-terminal-rows.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-terminal-rows.ts#L7)
+[get-terminal-rows.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-terminal-rows.ts#L7)
 
 ___
 
@@ -1964,7 +1665,7 @@ getTerminalSize() // => { columns: number, rows: number }
 
 #### Defined in
 
-[get-terminal-size.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-terminal-size.ts#L9)
+[get-terminal-size.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-terminal-size.ts#L9)
 
 ___
 
@@ -1986,7 +1687,7 @@ getUserHome() // => /home/z
 
 #### Defined in
 
-[get-user-home.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-user-home.ts#L11)
+[get-user-home.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-user-home.ts#L11)
 
 ___
 
@@ -2009,7 +1710,7 @@ getUserShell()
 
 #### Defined in
 
-[get-user-shell.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/get-user-shell.ts#L8)
+[get-user-shell.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/get-user-shell.ts#L8)
 
 ___
 
@@ -2038,7 +1739,7 @@ greater(1, 2) // => 2
 
 #### Defined in
 
-[greater.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/greater.ts#L7)
+[greater.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/greater.ts#L7)
 
 ___
 
@@ -2079,68 +1780,7 @@ groupBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', ba
 
 #### Defined in
 
-[group-by.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/group-by.ts#L10)
-
-___
-
-### gt
-
-▸ **gt**(`a`, `b`): `boolean`
-
-Returns true if first param is greater than second param
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
-| `b` | `number` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-gt(2, 1) // => true
-gt(1, 2) // => false
-```
-
-#### Defined in
-
-[gt.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/gt.ts#L8)
-
-___
-
-### gte
-
-▸ **gte**(`a`, `b`): `boolean`
-
-Returns true if first param is greater than or equal to second param
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
-| `b` | `number` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-gte(2, 2) // => true
-gte(2, 1) // => true
-gte(2, 3) // => false
-```
-
-#### Defined in
-
-[gte.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/gte.ts#L9)
+[group-by.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/group-by.ts#L10)
 
 ___
 
@@ -2169,7 +1809,7 @@ has('a' { b: 'c' }) // => false
 
 #### Defined in
 
-[has.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/has.ts#L9)
+[has.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/has.ts#L9)
 
 ___
 
@@ -2191,7 +1831,7 @@ hasColor()
 
 #### Defined in
 
-[has-color.ts:14](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/has-color.ts#L14)
+[has-color.ts:14](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/has-color.ts#L14)
 
 ___
 
@@ -2226,7 +1866,7 @@ hasDuplicate([ 1, 1, 2 ]) // => true
 
 #### Defined in
 
-[has-duplicate.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/has-duplicate.ts#L8)
+[has-duplicate.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/has-duplicate.ts#L8)
 
 ___
 
@@ -2260,7 +1900,7 @@ head([ 1, 2, 3 ]) // => 1
 
 #### Defined in
 
-[head.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/head.ts#L7)
+[head.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/head.ts#L7)
 
 ___
 
@@ -2295,7 +1935,7 @@ id() // => undefined
 
 #### Defined in
 
-[id.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/id.ts#L8)
+[id.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/id.ts#L8)
 
 ___
 
@@ -2323,7 +1963,7 @@ init([ 1, 2, 3 ]) // => [ 1, 2 ]
 
 #### Defined in
 
-[init.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/init.ts#L7)
+[init.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/init.ts#L7)
 
 ___
 
@@ -2351,7 +1991,7 @@ initials('Zac Anger') // => 'ZA'
 
 #### Defined in
 
-[initials.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/initials.ts#L7)
+[initials.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/initials.ts#L7)
 
 ___
 
@@ -2387,7 +2027,7 @@ intersection([ 1, 2, 3 ], [1, 2]) // => [ 1, 2 ]
 
 #### Defined in
 
-[intersection.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/intersection.ts#L8)
+[intersection.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/intersection.ts#L8)
 
 ___
 
@@ -2416,7 +2056,7 @@ is('number', 2) // => true
 
 #### Defined in
 
-[is.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is.ts#L7)
+[is.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is.ts#L7)
 
 ___
 
@@ -2445,7 +2085,7 @@ isArrayLike([ 1, 2 ]) // => true
 
 #### Defined in
 
-[is-array-like.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-array-like.ts#L10)
+[is-array-like.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-array-like.ts#L10)
 
 ___
 
@@ -2476,7 +2116,7 @@ isBetween(2, 1, 2) // => false
 
 #### Defined in
 
-[is-between.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-between.ts#L13)
+[is-between.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-between.ts#L11)
 
 ___
 
@@ -2504,7 +2144,7 @@ isBoolean(true) // => true
 
 #### Defined in
 
-[is-boolean.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-boolean.ts#L7)
+[is-boolean.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-boolean.ts#L7)
 
 ___
 
@@ -2532,7 +2172,7 @@ isClass(noop) // => false
 
 #### Defined in
 
-[is-class.ts:12](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-class.ts#L12)
+[is-class.ts:12](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-class.ts#L12)
 
 ___
 
@@ -2560,7 +2200,7 @@ isDate(new Date()) // => true
 
 #### Defined in
 
-[is-date.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-date.ts#L9)
+[is-date.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-date.ts#L9)
 
 ___
 
@@ -2588,7 +2228,7 @@ isDefined(null) // => true
 
 #### Defined in
 
-[is-defined.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-defined.ts#L7)
+[is-defined.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-defined.ts#L7)
 
 ___
 
@@ -2617,7 +2257,7 @@ await isDirectory('./fake-path') // => false
 
 #### Defined in
 
-[is-directory.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-directory.ts#L11)
+[is-directory.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-directory.ts#L11)
 
 ___
 
@@ -2648,7 +2288,7 @@ isEmpty(null) // => true
 
 #### Defined in
 
-[is-empty.ts:14](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-empty.ts#L14)
+[is-empty.ts:14](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-empty.ts#L14)
 
 ___
 
@@ -2676,7 +2316,7 @@ isError(new Error()) // => true
 
 #### Defined in
 
-[is-error.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-error.ts#L9)
+[is-error.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-error.ts#L9)
 
 ___
 
@@ -2704,7 +2344,7 @@ isEven(2) // => true
 
 #### Defined in
 
-[is-even.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-even.ts#L7)
+[is-even.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-even.ts#L7)
 
 ___
 
@@ -2733,7 +2373,7 @@ isFile('.') // => false
 
 #### Defined in
 
-[is-file.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-file.ts#L11)
+[is-file.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-file.ts#L11)
 
 ___
 
@@ -2762,7 +2402,7 @@ isFloat(2.2) // => true
 
 #### Defined in
 
-[is-float.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-float.ts#L8)
+[is-float.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-float.ts#L8)
 
 ___
 
@@ -2792,7 +2432,7 @@ isFunction(noop) // => true
 
 #### Defined in
 
-[is-function.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-function.ts#L9)
+[is-function.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-function.ts#L9)
 
 ___
 
@@ -2820,7 +2460,7 @@ isGenerator(2) // => false
 
 #### Defined in
 
-[is-generator.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-generator.ts#L7)
+[is-generator.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-generator.ts#L7)
 
 ___
 
@@ -2848,7 +2488,7 @@ isGeneratorFunction(2) // => false
 
 #### Defined in
 
-[is-generator-function.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-generator-function.ts#L7)
+[is-generator-function.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-generator-function.ts#L7)
 
 ___
 
@@ -2876,7 +2516,7 @@ isInstalled('zeelib') // => true
 
 #### Defined in
 
-[is-installed.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-installed.ts#L7)
+[is-installed.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-installed.ts#L7)
 
 ___
 
@@ -2905,7 +2545,7 @@ isInteger(1.1) // => false
 
 #### Defined in
 
-[is-integer.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-integer.ts#L8)
+[is-integer.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-integer.ts#L8)
 
 ___
 
@@ -2933,7 +2573,7 @@ isJson(JSON.stringify({ a: 'b' })) // => true
 
 #### Defined in
 
-[is-json.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-json.ts#L7)
+[is-json.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-json.ts#L7)
 
 ___
 
@@ -2961,7 +2601,7 @@ isMap(new Map()) // => true
 
 #### Defined in
 
-[is-map.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-map.ts#L9)
+[is-map.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-map.ts#L9)
 
 ___
 
@@ -2983,7 +2623,7 @@ isNode()
 
 #### Defined in
 
-[is-node.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-node.ts#L7)
+[is-node.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-node.ts#L7)
 
 ___
 
@@ -3011,7 +2651,7 @@ isNull(null) // => true
 
 #### Defined in
 
-[is-null.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-null.ts#L7)
+[is-null.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-null.ts#L7)
 
 ___
 
@@ -3039,7 +2679,7 @@ isNullOrUndefined(null) // => true
 
 #### Defined in
 
-[is-null-or-undefined.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-null-or-undefined.ts#L10)
+[is-null-or-undefined.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-null-or-undefined.ts#L10)
 
 ___
 
@@ -3068,7 +2708,7 @@ isNumber(NaN) // => false
 
 #### Defined in
 
-[is-number.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-number.ts#L8)
+[is-number.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-number.ts#L8)
 
 ___
 
@@ -3096,7 +2736,7 @@ isObject('asdf') // => false
 
 #### Defined in
 
-[is-object.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-object.ts#L7)
+[is-object.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-object.ts#L7)
 
 ___
 
@@ -3124,35 +2764,7 @@ isOdd(1) // => true
 
 #### Defined in
 
-[is-odd.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-odd.ts#L7)
-
-___
-
-### isPow2
-
-▸ **isPow2**(`n`): `boolean`
-
-Returns true if number is a power of two
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-isPow2(16) // => true
-```
-
-#### Defined in
-
-[is-pow-2.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-pow-2.ts#L7)
+[is-odd.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-odd.ts#L7)
 
 ___
 
@@ -3180,7 +2792,7 @@ isPrimitive(1) // => true
 
 #### Defined in
 
-[is-primitive.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-primitive.ts#L7)
+[is-primitive.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-primitive.ts#L7)
 
 ___
 
@@ -3208,7 +2820,7 @@ isPromise(Promise.resolve())
 
 #### Defined in
 
-[is-promise.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-promise.ts#L7)
+[is-promise.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-promise.ts#L7)
 
 ___
 
@@ -3236,7 +2848,7 @@ isRegExp(/a/) // => true
 
 #### Defined in
 
-[is-reg-exp.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-reg-exp.ts#L9)
+[is-reg-exp.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-reg-exp.ts#L9)
 
 ___
 
@@ -3258,7 +2870,7 @@ isRoot() // => true
 
 #### Defined in
 
-[is-root.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-root.ts#L7)
+[is-root.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-root.ts#L7)
 
 ___
 
@@ -3287,7 +2899,7 @@ isSemver("0.") // => false
 
 #### Defined in
 
-[is-semver.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-semver.ts#L8)
+[is-semver.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-semver.ts#L8)
 
 ___
 
@@ -3315,7 +2927,7 @@ isSet(new Set()) // => true
 
 #### Defined in
 
-[is-set.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-set.ts#L9)
+[is-set.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-set.ts#L9)
 
 ___
 
@@ -3343,7 +2955,7 @@ isString('a') // => true
 
 #### Defined in
 
-[is-string.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-string.ts#L7)
+[is-string.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-string.ts#L7)
 
 ___
 
@@ -3371,7 +2983,7 @@ isSymLink('.') // => false
 
 #### Defined in
 
-[is-sym-link.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-sym-link.ts#L10)
+[is-sym-link.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-sym-link.ts#L10)
 
 ___
 
@@ -3399,7 +3011,7 @@ isSymbol(Symbol.for('foo')) // => true
 
 #### Defined in
 
-[is-symbol.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-symbol.ts#L7)
+[is-symbol.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-symbol.ts#L7)
 
 ___
 
@@ -3427,7 +3039,7 @@ isUndefined(undefined) // => true
 
 #### Defined in
 
-[is-undefined.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-undefined.ts#L7)
+[is-undefined.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-undefined.ts#L7)
 
 ___
 
@@ -3455,13 +3067,13 @@ isValidDate('1234') // => false
 
 #### Defined in
 
-[is-valid-date.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/is-valid-date.ts#L9)
+[is-valid-date.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/is-valid-date.ts#L9)
 
 ___
 
 ### keep
 
-▸ **keep**(`x`): [`R`](#r-2)
+▸ **keep**(`x`): [`R`](#r-1)
 
 Returns an array or object with all falsey values removed
 
@@ -3469,11 +3081,11 @@ Returns an array or object with all falsey values removed
 
 | Name | Type |
 | :------ | :------ |
-| `x` | [`R`](#r-2) |
+| `x` | [`R`](#r-1) |
 
 #### Returns
 
-[`R`](#r-2)
+[`R`](#r-1)
 
 **`Example`**
 
@@ -3484,7 +3096,7 @@ keep({ a: '', b: null, c: 2 }) // => { c: 2 }
 
 #### Defined in
 
-[keep.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/keep.ts#L13)
+[keep.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/keep.ts#L13)
 
 ___
 
@@ -3518,7 +3130,7 @@ last([ 1, 2, 3 ]) // => 3
 
 #### Defined in
 
-[last.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/last.ts#L7)
+[last.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/last.ts#L7)
 
 ___
 
@@ -3550,7 +3162,7 @@ len((a, b) => a + b) // => 2
 
 #### Defined in
 
-[len.ts:19](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/len.ts#L19)
+[len.ts:19](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/len.ts#L19)
 
 ___
 
@@ -3579,7 +3191,7 @@ lesser(1, 2) // => 1
 
 #### Defined in
 
-[lesser.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lesser.ts#L7)
+[lesser.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/lesser.ts#L7)
 
 ___
 
@@ -3611,7 +3223,7 @@ const newCol = lightenOrDarken('#F06D06', -20)
 
 #### Defined in
 
-[lighten-or-darken.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lighten-or-darken.ts#L10)
+[lighten-or-darken.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/lighten-or-darken.ts#L10)
 
 ___
 
@@ -3639,150 +3251,7 @@ lines('foo\nbar') // => [ 'foo', 'bar' ]
 
 #### Defined in
 
-[lines.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lines.ts#L7)
-
-___
-
-### lispCaseToCamelCase
-
-▸ **lispCaseToCamelCase**(`str`): `string`
-
-From lisp-case to camelCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-lispCaseToCamelCase('foo-bar') // => 'fooBar'
-```
-
-#### Defined in
-
-[lisp-case-to-camel-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lisp-case-to-camel-case.ts#L7)
-
-___
-
-### lispCaseToPascalCase
-
-▸ **lispCaseToPascalCase**(`str`): `string`
-
-From lisp-case to PascalCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-lispCaseToPascalCase('foo-bar') // => 'FooBar'
-```
-
-#### Defined in
-
-[lisp-case-to-pascal-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lisp-case-to-pascal-case.ts#L7)
-
-___
-
-### lispCaseToSnakeCase
-
-▸ **lispCaseToSnakeCase**(`str`): `string`
-
-From lisp-case to snake_case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-lispCaseToSnakeCase('foo-bar') // => 'foo_bar'
-```
-
-#### Defined in
-
-[lisp-case-to-snake-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lisp-case-to-snake-case.ts#L7)
-
-___
-
-### lt
-
-▸ **lt**(`a`, `b`): `boolean`
-
-Returns true if first param is less than second param
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
-| `b` | `number` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-lt(2, 1) // => false
-```
-
-#### Defined in
-
-[lt.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lt.ts#L7)
-
-___
-
-### lte
-
-▸ **lte**(`a`, `b`): `boolean`
-
-Returns true if first param is less than or equal to second param
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `number` |
-| `b` | `number` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-lte(2, 1) // => false
-lte(1, 1) // => true
-```
-
-#### Defined in
-
-[lte.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/lte.ts#L8)
+[lines.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/lines.ts#L7)
 
 ___
 
@@ -3814,7 +3283,7 @@ mapObject(f, d) // => { a: 'hello world', b: 'sup world' }
 
 #### Defined in
 
-[map-object.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/map-object.ts#L11)
+[map-object.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/map-object.ts#L11)
 
 ___
 
@@ -3843,7 +3312,7 @@ memoize((a) => a)(1) // => 1
 
 #### Defined in
 
-[memoize.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/memoize.ts#L8)
+[memoize.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/memoize.ts#L8)
 
 ___
 
@@ -3872,104 +3341,7 @@ mzero([1]) // => []
 
 #### Defined in
 
-[mzero.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/mzero.ts#L10)
-
-___
-
-### nco
-
-▸ **nco**\<`A`, `B`\>(`variable`, `defaultValue`): `A` \| `B`
-
-nco
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `variable` | `A` |
-| `defaultValue` | `B` |
-
-#### Returns
-
-`A` \| `B`
-
-**`Example`**
-
-```ts
-nco(null, 1) // => 1
-nco(1, 2) // => 1
-```
-
-#### Defined in
-
-[nco.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/nco.ts#L9)
-
-___
-
-### noop
-
-▸ **noop**(): `void`
-
-noop
-
-#### Returns
-
-`void`
-
-**`Example`**
-
-```ts
-noop() // => undefined
-```
-
-#### Defined in
-
-[noop.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/noop.ts#L8)
-
-___
-
-### notElem
-
-▸ **notElem**\<`T`\>(`el`, `ls`): `boolean`
-
-The opposite of `elem`
-
-Returns true if the element is not in the string or array
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `el` | `T` & `string` |
-| `ls` | `string` \| `T`[] |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-notElem('a', 'asdf') // => false
-notElem('b', 'asdf') // => true
-```
-
-#### Defined in
-
-[not-elem.ts:12](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/not-elem.ts#L12)
+[mzero.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/mzero.ts#L10)
 
 ___
 
@@ -3997,7 +3369,7 @@ objectToString({}) // => '[object Object]'
 
 #### Defined in
 
-[object-to-string.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/object-to-string.ts#L7)
+[object-to-string.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/object-to-string.ts#L7)
 
 ___
 
@@ -4046,7 +3418,7 @@ o(2) // => 1
 
 #### Defined in
 
-[once.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/once.ts#L10)
+[once.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/once.ts#L10)
 
 ___
 
@@ -4076,164 +3448,7 @@ open('http://zacanger.com')
 
 #### Defined in
 
-[open.ts:12](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/open.ts#L12)
-
-___
-
-### pair
-
-▸ **pair**\<`A`, `B`\>(`first`, `second`): [`A`, `B`]
-
-Make a pair out of any two values
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `first` | `A` |
-| `second` | `B` |
-
-#### Returns
-
-[`A`, `B`]
-
-**`Example`**
-
-```ts
-pair('a', 'b') // => [ 'a', 'b' ]
-```
-
-#### Defined in
-
-[pair.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pair.ts#L7)
-
-___
-
-### pairWith
-
-▸ **pairWith**\<`T`\>(`f`, `a`, `b`): `T`[]
-
-Returns an array made by calling
-f on a and b.
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `f` | (`x`: `T`) => `T` |
-| `a` | `T` |
-| `b` | `T` |
-
-#### Returns
-
-`T`[]
-
-**`Example`**
-
-```ts
-pairWith(increment, 1, 1) // => [ 2, 2 ]
-```
-
-#### Defined in
-
-[pair-with.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pair-with.ts#L8)
-
-___
-
-### pascalCaseToCamelCase
-
-▸ **pascalCaseToCamelCase**(`str`): `string`
-
-PascalCase to camelCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-pascalCaseToCamelCase('FooBar') // => 'fooBar'
-```
-
-#### Defined in
-
-[pascal-case-to-camel-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pascal-case-to-camel-case.ts#L7)
-
-___
-
-### pascalCaseToLispCase
-
-▸ **pascalCaseToLispCase**(`str`): `string`
-
-PascalCase to lisp-case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-pascalCaseToLispCase('FooBar') // => 'foo-bar'
-```
-
-#### Defined in
-
-[pascal-case-to-lisp-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pascal-case-to-lisp-case.ts#L7)
-
-___
-
-### pascalCaseToSnakeCase
-
-▸ **pascalCaseToSnakeCase**(`str`): `string`
-
-PascalCase to snake_case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-pascalCaseToSnakeCase('FooBar') // => 'foo_bar'
-```
-
-#### Defined in
-
-[pascal-case-to-snake-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pascal-case-to-snake-case.ts#L7)
+[open.ts:12](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/open.ts#L12)
 
 ___
 
@@ -4264,7 +3479,7 @@ pick([ 'a', 'b' ], { a: 'a', b: 'b', c: 'c' }) // => { a: 'a', b: 'b' }
 
 #### Defined in
 
-[pick.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pick.ts#L11)
+[pick.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/pick.ts#L11)
 
 ___
 
@@ -4312,7 +3527,7 @@ pipe(addOne, timesTwo)(2) // => 6
 
 #### Defined in
 
-[pipe.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pipe.ts#L13)
+[pipe.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/pipe.ts#L13)
 
 ___
 
@@ -4341,7 +3556,7 @@ pluck('a', [ { a: 'a' }, { a: 'b' } ]) // => [ 'a', 'b' ]
 
 #### Defined in
 
-[pluck.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/pluck.ts#L7)
+[pluck.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/pluck.ts#L7)
 
 ___
 
@@ -4369,7 +3584,7 @@ product([ 1, 2, 3, 4 ]) // => 24
 
 #### Defined in
 
-[product.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/product.ts#L7)
+[product.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/product.ts#L7)
 
 ___
 
@@ -4398,7 +3613,7 @@ if (answer.toLowercase() === 'y') { doTheThing() }
 
 #### Defined in
 
-[prompt.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/prompt.ts#L11)
+[prompt.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/prompt.ts#L11)
 
 ___
 
@@ -4435,7 +3650,7 @@ range(1, 10, 3) // => [ 1, 4, 7, 10 ]
 
 #### Defined in
 
-[range.ts:14](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/range.ts#L14)
+[range.ts:14](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/range.ts#L14)
 
 ___
 
@@ -4463,7 +3678,7 @@ const json = await readJson('./foo.json')
 
 #### Defined in
 
-[read-json.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/read-json.ts#L10)
+[read-json.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/read-json.ts#L10)
 
 ___
 
@@ -4500,7 +3715,7 @@ reduce((a, b) => a + b, 0, [ 1, 2, 3, 4 ]) // => 10
 
 #### Defined in
 
-[reduce.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/reduce.ts#L7)
+[reduce.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/reduce.ts#L7)
 
 ___
 
@@ -4531,7 +3746,7 @@ removeBOM(someContent)
 
 #### Defined in
 
-[remove-bom.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/remove-bom.ts#L10)
+[remove-bom.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/remove-bom.ts#L10)
 
 ___
 
@@ -4569,7 +3784,7 @@ replicate(4, (a) => a + 1) // => [ 5, 5, 5, 5 ]
 
 #### Defined in
 
-[replicate.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/replicate.ts#L10)
+[replicate.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/replicate.ts#L10)
 
 ___
 
@@ -4599,7 +3814,7 @@ rgbToHex(255, 255, 255) // => '#ffffff'
 
 #### Defined in
 
-[rgb-to-hex.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/rgb-to-hex.ts#L7)
+[rgb-to-hex.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/rgb-to-hex.ts#L7)
 
 ___
 
@@ -4649,7 +3864,7 @@ safeGet('a.b.e', 'f')({ a: { b: { c: 'd' } } }) // => 'f'
 
 #### Defined in
 
-[safe-get.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/safe-get.ts#L13)
+[safe-get.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/safe-get.ts#L13)
 
 ___
 
@@ -4688,7 +3903,7 @@ scaleToFit(1400, 1200, 2000, 200) // => { width: 233.33333333333331, height: 200
 
 #### Defined in
 
-[scale-to-fit.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/scale-to-fit.ts#L10)
+[scale-to-fit.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/scale-to-fit.ts#L10)
 
 ___
 
@@ -4722,7 +3937,7 @@ shuffle([ 1, 2, 3, 4 ])
 
 #### Defined in
 
-[shuffle.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/shuffle.ts#L7)
+[shuffle.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/shuffle.ts#L7)
 
 ___
 
@@ -4751,91 +3966,7 @@ sleep(1000).then(doAThing)
 
 #### Defined in
 
-[sleep.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/sleep.ts#L8)
-
-___
-
-### snakeCaseToCamelCase
-
-▸ **snakeCaseToCamelCase**(`str`): `string`
-
-snake_case to camelCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-snakeCaseToCamelCase('foo_bar') // => 'fooBar'
-```
-
-#### Defined in
-
-[snake-case-to-camel-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/snake-case-to-camel-case.ts#L7)
-
-___
-
-### snakeCaseToLispCase
-
-▸ **snakeCaseToLispCase**(`str`): `string`
-
-snake_case to lisp-case
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-snakeCaseToLispCase('foo_bar') // => 'foo-bar'
-```
-
-#### Defined in
-
-[snake-case-to-lisp-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/snake-case-to-lisp-case.ts#L7)
-
-___
-
-### snakeCaseToPascalCase
-
-▸ **snakeCaseToPascalCase**(`str`): `string`
-
-snake_case to PascalCase
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `str` | `string` |
-
-#### Returns
-
-`string`
-
-**`Example`**
-
-```ts
-snakeCaseToPascalCase('foo_bar') // => 'FooBar'
-```
-
-#### Defined in
-
-[snake-case-to-pascal-case.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/snake-case-to-pascal-case.ts#L7)
+[sleep.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/sleep.ts#L8)
 
 ___
 
@@ -4873,7 +4004,7 @@ sortBy(({ id }) => id, list) // => [ { id: 1 }, { id: 2 }, { id: 3 } ]
 
 #### Defined in
 
-[sort-by.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/sort-by.ts#L10)
+[sort-by.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/sort-by.ts#L10)
 
 ___
 
@@ -4901,7 +4032,7 @@ sortObject({ b: 'c', a: 'd' }) // => { a: 'd', b: 'c' }
 
 #### Defined in
 
-[sort-object.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/sort-object.ts#L10)
+[sort-object.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/sort-object.ts#L10)
 
 ___
 
@@ -4938,7 +4069,7 @@ span(lessThanThree, [ 1, 2, 3, 4 ]) // => [ [ 1, 2 ], [ 3, 4 ] ]
 
 #### Defined in
 
-[span.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/span.ts#L11)
+[span.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/span.ts#L11)
 
 ___
 
@@ -4976,7 +4107,7 @@ splitAt(1, [ [ 'a', 'b' ], 'c' ]) // => [ [ [ 'a', 'b' ] ], [ 'c' ] ]
 
 #### Defined in
 
-[split-at.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/split-at.ts#L13)
+[split-at.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/split-at.ts#L13)
 
 ___
 
@@ -5006,7 +4137,7 @@ state.update({ foo: 'bar' })
 
 #### Defined in
 
-[store.ts:20](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/store.ts#L20)
+[store.ts:20](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/store.ts#L20)
 
 ___
 
@@ -5034,7 +4165,7 @@ stripAnsi(colorize.blue('hello')) // => 'hello'
 
 #### Defined in
 
-[strip-ansi.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/strip-ansi.ts#L7)
+[strip-ansi.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/strip-ansi.ts#L7)
 
 ___
 
@@ -5062,7 +4193,7 @@ sub([ 4, 3, 2, 1 ]) // => -2
 
 #### Defined in
 
-[sub.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/sub.ts#L7)
+[sub.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/sub.ts#L7)
 
 ___
 
@@ -5090,7 +4221,7 @@ sum([ 1, 2, 3, 4 ]) // => 10
 
 #### Defined in
 
-[sum.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/sum.ts#L7)
+[sum.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/sum.ts#L7)
 
 ___
 
@@ -5124,7 +4255,7 @@ tail([ 1, 2, 3, 4 ]) // => [ 2, 3, 4 ]
 
 #### Defined in
 
-[tail.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/tail.ts#L7)
+[tail.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/tail.ts#L7)
 
 ___
 
@@ -5159,7 +4290,7 @@ take(2, [ 1, 2, 3 ]) // => [ 1, 2 ]
 
 #### Defined in
 
-[take.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/take.ts#L7)
+[take.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/take.ts#L7)
 
 ___
 
@@ -5194,7 +4325,7 @@ takeLast(2, [ 1, 2, 3, 4 ]) // => [ 3, 4 ]
 
 #### Defined in
 
-[take-last.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/take-last.ts#L7)
+[take-last.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/take-last.ts#L7)
 
 ___
 
@@ -5230,7 +4361,7 @@ takeWhile((x) => x < 3, [ 1, 2, 3, 4 ]) // => [ 1, 2 ]
 
 #### Defined in
 
-[take-while.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/take-while.ts#L8)
+[take-while.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/take-while.ts#L8)
 
 ___
 
@@ -5277,7 +4408,7 @@ logger(2) // => this is the thing 2 ; 2
 
 #### Defined in
 
-[tap.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/tap.ts#L8)
+[tap.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/tap.ts#L8)
 
 ___
 
@@ -5307,7 +4438,7 @@ touch('foo.txt', 'contentx')
 
 #### Defined in
 
-[touch.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/touch.ts#L11)
+[touch.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/touch.ts#L11)
 
 ___
 
@@ -5338,7 +4469,7 @@ truncate('asdf asdf asdf asdf', 8, ' etc.') // => 'asd etc.'
 
 #### Defined in
 
-[truncate.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/truncate.ts#L8)
+[truncate.ts:8](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/truncate.ts#L8)
 
 ___
 
@@ -5373,7 +4504,7 @@ tryJson([ 1, 2 ]) // => [ 1, 2 ]
 
 #### Defined in
 
-[try-json.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/try-json.ts#L11)
+[try-json.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/try-json.ts#L10)
 
 ___
 
@@ -5402,7 +4533,7 @@ typeOf(new Date()) // => 'date'
 
 #### Defined in
 
-[type-of.ts:13](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/type-of.ts#L13)
+[type-of.ts:13](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/type-of.ts#L13)
 
 ___
 
@@ -5436,7 +4567,7 @@ union([ 1, 2, 3 ], [ 2, 3, 4 ]) // => [ 1, 2, 3, 4 ]
 
 #### Defined in
 
-[union.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/union.ts#L9)
+[union.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/union.ts#L9)
 
 ___
 
@@ -5470,7 +4601,7 @@ uniq([ 1, 1, 2, 3 ]) // => [ 1, 2, 3 ]
 
 #### Defined in
 
-[uniq.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/uniq.ts#L7)
+[uniq.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/uniq.ts#L7)
 
 ___
 
@@ -5501,7 +4632,7 @@ uniqBy('foo', a) // => [ { foo: 'foo' }, { foo: 'bar' } ]
 
 #### Defined in
 
-[uniq-by.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/uniq-by.ts#L11)
+[uniq-by.ts:11](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/uniq-by.ts#L11)
 
 ___
 
@@ -5536,7 +4667,7 @@ unless(() => true, false) // => true
 
 #### Defined in
 
-[unless.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/unless.ts#L7)
+[unless.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/unless.ts#L7)
 
 ___
 
@@ -5564,7 +4695,7 @@ unlines([ 'foo', 'bar' ]) // => 'foo\nbar'
 
 #### Defined in
 
-[unlines.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/unlines.ts#L7)
+[unlines.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/unlines.ts#L7)
 
 ___
 
@@ -5611,7 +4742,7 @@ until(equals5, increment)(2) // => 5
 
 #### Defined in
 
-[until.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/until.ts#L7)
+[until.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/until.ts#L7)
 
 ___
 
@@ -5639,43 +4770,7 @@ unwords([ 'foo', bar ]) // => 'foo bar'
 
 #### Defined in
 
-[unwords.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/unwords.ts#L7)
-
-___
-
-### unzip
-
-▸ **unzip**\<`A`, `B`\>(`xs`): [`A`[], `B`[]]
-
-Takes a list of pairs
-and returns two lists of first and second elements
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `xs` | [`A`, `B`][] |
-
-#### Returns
-
-[`A`[], `B`[]]
-
-**`Example`**
-
-```ts
-unzip([ [ 1, 1 ], [ 2, 2 ]]) // => [ [ 1, 2 ], [ 1, 2 ] ]
-```
-
-#### Defined in
-
-[unzip.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/unzip.ts#L10)
+[unwords.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/unwords.ts#L7)
 
 ___
 
@@ -5704,7 +4799,7 @@ watch('./foo', console.log)
 
 #### Defined in
 
-[watch.ts:10](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/watch.ts#L10)
+[watch.ts:10](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/watch.ts#L10)
 
 ___
 
@@ -5732,7 +4827,7 @@ words('foo bar') // => [ 'foo', 'bar' ]
 
 #### Defined in
 
-[words.ts:7](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/words.ts#L7)
+[words.ts:7](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/words.ts#L7)
 
 ___
 
@@ -5762,122 +4857,5 @@ await writeJson('foo.json', someObject, 4)
 
 #### Defined in
 
-[write-json.ts:9](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/write-json.ts#L9)
-
-___
-
-### xor
-
-▸ **xor**\<`A`, `B`\>(`a`, `b`): `boolean`
-
-Simple xor
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `a` | `A` |
-| `b` | `B` |
-
-#### Returns
-
-`boolean`
-
-**`Example`**
-
-```ts
-xor(1, 1) // => false
-xor(1, !1) // => true
-```
-
-#### Defined in
-
-[xor.ts:8](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/xor.ts#L8)
-
-___
-
-### zip
-
-▸ **zip**\<`A`, `B`\>(`xs`, `ys`): [`A`, `B`][]
-
-Makes a list of tuples
-
-Each tuple is the elements of each passed array
-at the same position
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `xs` | `A`[] |
-| `ys` | `B`[] |
-
-#### Returns
-
-[`A`, `B`][]
-
-**`Example`**
-
-```ts
-zip([ 1, 2 ], [ 3, 4 ]) // => [ [ 1, 3 ], [ 2, 4 ] ]
-```
-
-#### Defined in
-
-[zip.ts:14](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/zip.ts#L14)
-
-___
-
-### zipWith
-
-▸ **zipWith**\<`A`, `B`, `T`\>(`fn`, `xs`, `ys`): `T`[]
-
-Takes a function and two lists
-
-Returns a list made by calling the function
-on the elements of each list in the same position
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `A` |
-| `B` |
-| `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `fn` | (`a`: `A`, `b`: `B`) => `T` |
-| `xs` | `A`[] |
-| `ys` | `B`[] |
-
-#### Returns
-
-`T`[]
-
-**`Example`**
-
-```ts
-zipWith(increment, [ 1, 1 ], [ 1, 1 ]) // => [ 2, 2 ]
-```
-
-#### Defined in
-
-[zip-with.ts:11](https://github.com/zacanger/zeelib/blob/3a787c19907c3a98e36c8080c7849421553fc046/src/zip-with.ts#L11)
+[write-json.ts:9](https://github.com/zacanger/zeelib/blob/bcae594a50ea16068c01ee8341f7d20a90a70ede/src/write-json.ts#L9)
 </details>
