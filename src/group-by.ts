@@ -7,6 +7,7 @@ import { type AnyMap } from './types'
  * groupBy('foo')(data) // => { a: { foo: 'a', bar: 'whatever' }, b: { foo: 'b', bar: 'quux' } }
  */
 
+/** @deprecated we have this in es2024 now */
 export const groupBy = (p: string) =>
   (a: any[]): AnyMap =>
     a.reduce((c, i) => ({
